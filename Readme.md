@@ -1,2 +1,2 @@
-# Willian Justen - Blog
+# Terminal Root - Blog
 Personal website/blog
