@@ -1,0 +1,17 @@
+---
+layout: post
+title: "Curso GNU/Linux Completo do Iniciante ao Avançado Terminal Root"
+date: 2016-09-10 12:53:11
+image: '/assets/img/cursos/js-tdd.png'
+description: 'Aprenda GNU/Linux de uma vez por todas.'
+main-class: 'js curso'
+color: '#D6BA32'
+tags:
+- linux
+- curso
+categories:
+twitter_text: 'Aprenda testes na prática!'
+introduction: 'Aprenda uma das melhores culturas de desenvolvimento e tenha portas abertas no mercado.'
+---
+
+# Editar esse POST
