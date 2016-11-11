@@ -1,0 +1,15 @@
+---
+layout: post
+title: Resolvendo "bad interpreter" no Bash
+date: '2014-09-25T16:59:00.003-07:00'
+author: Marcos Oliveira
+tags:
+- Shell Script
+- Dicas
+modified_time: '2014-09-25T16:59:44.334-07:00'
+thumbnail: http://1.bp.blogspot.com/-_gUy0yQTqZM/UkjQtOlbfaI/AAAAAAAACbc/bn9SFHwydy8/s72-c/shell+script2.png
+blogger_id: tag:blogger.com,1999:blog-2422865715758349944.post-5714070001815950677
+blogger_orig_url: http://www.terminalroot.com.br/2014/09/resolvendo-bad-interpreter-no-bash.html
+---
+
+<div class="separator" style="clear: both; text-align: center;"><a href="http://1.bp.blogspot.com/-_gUy0yQTqZM/UkjQtOlbfaI/AAAAAAAACbc/bn9SFHwydy8/s1600/shell+script2.png" imageanchor="1" style="margin-left: 1em; margin-right: 1em;"><img border="0" src="http://1.bp.blogspot.com/-_gUy0yQTqZM/UkjQtOlbfaI/AAAAAAAACbc/bn9SFHwydy8/s320/shell+script2.png" /></a></div><br /><br /><b>Ao executar um script que você pegou ou baixou da internet, muitas vezes foi um script criado num <strike>Windows</strike>, ou baixou do <i>PasteBin</i>, e ao executá-lo, você recebe a seguinte mensagem:<br /><br /> {% highlight bash %}$ ./script.sh<br />: bad interpreter: No such file or directory{% endhighlight %} <br /><br /> </b><br /><div class="adp"><b>$ cat script.sh</b><br /><b>#!/bin/bash</b><br /><b>echo "oi"</b></div><b> <br /><br /><br />- Hein? Mas está tudo certo, eu tenho um /bin/bash, o que está acontecendo?<br /><br />Bom, vamos ver mais de perto:<br /><br />$ cat -v script.sh&nbsp; # 'show nonprinting'<br />#!/bin/bash^M<br />echo "oi"^M<br /><br /><br /><br />Ahá! Tem um ^M no final das linhas atrapalhando.<br />- Mas o que é isso?<br />Muito provavelmente a origem desde script é uma maquina windows. A explicação é o caracter newline. O windows precisa de 2 caracteres para simbolizar o fim de uma linha em um arquivo texto puro, a dupla \r\n (veja link para a wikipedia), porém os *nix não precisam do \r -- que o cat gentilmente mostrou como um ^M. Este caracter a mais atrapalha o interpretador, que não recebe um /bin/bash e sim /bin/bash\r -- e isso realmente não existe.<br /><br />Como resolver? Existem dois programas para este fim: unix2dos e dos2unix (as vezes aparecem como unixtodos e dostounix) que convertem os finais de linha em casos como este. Se vc abrir um arquivo texto do *nix em um bloco de texto vai ver todas as quebras de linha substituidas por um quadrado preto e todas as linhas em uma só.<br /><br />Caso vc não tenha um programa conversor, pode usar o SED<br /><br /> </b><br /><div class="adp"><b>$ sed -i 's/\r$//' script.sh</b><br /><b>$ ./script.sh</b><br /><b>oi</b></div><b><br /><br /><br /><br />O tr também poderia ser usado, mas não é tão amigável.<br /><br /> </b><br /><div class="adp"><b>$ tr -d '\r' &lt; script.sh &gt; novo_script.sh</b></div><b><br /><br /><br /><br />Este detalhe pode ser muito importante um dia!</b><br /><br /><u>Fonte</u>: <span style="color: blue;"><i>&nbsp;</i></span><br /><span style="color: blue;"><i>http://peczenyj.blogspot.com.br/2007/07/resolvendo-problemas-comuns-2-bad.html</i></span>

@@ -1,0 +1,16 @@
+---
+layout: post
+title: Resolvendo problemas com .ICEautority
+date: '2014-08-02T21:11:00.002-07:00'
+author: Marcos Oliveira
+tags:
+- Linux
+- GNU
+- Imagens
+modified_time: '2014-08-03T07:09:28.004-07:00'
+thumbnail: http://1.bp.blogspot.com/-7nOHOBsAb_4/U9218gZ8TSI/AAAAAAAAAdQ/P6PkIZbw0QY/s72-c/ICEautority.jpg
+blogger_id: tag:blogger.com,1999:blog-2422865715758349944.post-2377907844571148199
+blogger_orig_url: http://www.terminalroot.com.br/2014/08/resolvendo-problemas-com-iceautority.html
+---
+
+<b><div class="separator" style="clear: both; text-align: center;"><a href="http://1.bp.blogspot.com/-7nOHOBsAb_4/U9218gZ8TSI/AAAAAAAAAdQ/P6PkIZbw0QY/s1600/ICEautority.jpg" imageanchor="1" style="margin-left: 1em; margin-right: 1em;"><img border="0" src="http://1.bp.blogspot.com/-7nOHOBsAb_4/U9218gZ8TSI/AAAAAAAAAdQ/P6PkIZbw0QY/s1600/ICEautority.jpg" height="320" width="301" /></a></div>Caso vc tenha problemas ao iniciar o sistema com a mensagem de problema com o ICEauthority<br /><br />1 - use um cd de boot, ou o modo recovery ou use um outro tty<br />2 - entre na pasta raíz do usuário como root<br /><br /><div class="adp"><br />$ sudo<br /># cd /home/usuário/<br /></div><br /><br />3 - Mude as permissões do arquivo .ICEauthority<br /><br /><div class="adp"><br /># chown usuário:usuário /home/usuário/.ICEauthority<br /># chmod 644 /home/usuário/.ICEauthority<br /></div><br /><br />Se vc montou não esqueça de desmontar para evitar problemas no seu HD, depois reinicie o sistema<br /><br /><div class="adp"><br /># reboot<br /></div><br /><br />Pronto!<br /></b>

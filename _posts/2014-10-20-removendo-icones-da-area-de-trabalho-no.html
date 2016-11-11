@@ -1,0 +1,24 @@
+---
+layout: post
+title: Removendo ícones da área de trabalho no MATE
+date: '2014-10-20T12:24:00.001-07:00'
+author: Marcos Oliveira
+tags:
+- MATE
+- Dicas
+modified_time: '2014-10-20T12:24:35.266-07:00'
+thumbnail: http://1.bp.blogspot.com/-4In0RXutB6c/VEQxTplt_gI/AAAAAAAAA4E/y0BpVE_gpmo/s72-c/Mate-logo.png
+blogger_id: tag:blogger.com,1999:blog-2422865715758349944.post-2587996270468307762
+blogger_orig_url: http://www.terminalroot.com.br/2014/10/removendo-icones-da-area-de-trabalho-no.html
+---
+
+<div class="separator" style="clear: both; text-align: center;"><a href="http://1.bp.blogspot.com/-4In0RXutB6c/VEQxTplt_gI/AAAAAAAAA4E/y0BpVE_gpmo/s1600/Mate-logo.png" imageanchor="1" style="margin-left: 1em; margin-right: 1em;"><img border="0" src="http://1.bp.blogspot.com/-4In0RXutB6c/VEQxTplt_gI/AAAAAAAAA4E/y0BpVE_gpmo/s320/Mate-logo.png" height="200" width="165" /></a></div><h3><span class="short_text" id="result_box" lang="pt"><span class="hps">Mostrar ou ocultar</span> <span class="hps">ícones</span> <span class="hps">da área de trabalho</span></span></h3><blockquote class="tr_bq"><i><span class="" id="result_box" lang="pt"><span class="hps">Por padrão,</span> <span class="hps">MATE</span> <span class="hps">mostra</span> <span class="hps">vários</span> <span class="hps">ícones no desktop</span>: o conteúdo do <span class="hps">seu diretório</span> <span class="hps">desktop,</span> <span class="hps">computador, home</span> <span class="hps">e</span> <span class="hps">diretórios</span> <span class="hps">de rede</span>, <span class="hps">a lixeira e</span> <span class="hps">as unidades montadas</span>. <span class="hps">Você pode mostrar</span> <span class="hps">ou</span> <span class="hps">escondê-los</span> <span class="hps">individualmente ou todos de</span> <span class="hps">uma vez usando</span> <span class="hps">dconf</span>.</span></i></blockquote><h4><span style="font-size: x-large;"><span class="short_text" id="result_box" lang="pt"><span class="hps">Ocultar todos os</span> <span class="hps">ícones do desktop</span></span></span></h4><div class="adp">$ dconf write /org/mate/desktop/background/show-desktop-icons false </div><br /><br /><h4><span style="font-size: x-large;"><span class="short_text" id="result_box" lang="pt"><span class="hps">Ocultar ícones</span> <span class="hps">individuais</span></span></span><span class="mw-headline" id="Hide_individual_icons"><br /></span></h4>Ocultar ícone do computador: <br /><div class="adp">$ dconf write /org/mate/caja/desktop/computer-icon-visible false </div><br /><br />Ocultar ícone do diretório do usuário: <br /><div class="adp">$ dconf write /org/mate/caja/desktop/home-icon-visible false </div><br /><br />Ocultar ícone da rede: <br /><div class="adp">$ dconf write /org/mate/caja/desktop/network-icon-visible false </div><br /><br />Ocultar ícone da lixeira: <br /><div class="adp">$ dconf write /org/mate/caja/desktop/trash-icon-visible false </div><br /><br /><span class="short_text" id="result_box" lang="pt"><span class="hps">Ocultar</span> <span class="hps">volumes montados</span>:</span><br /><div class="adp">$ dconf write /org/mate/caja/desktop/volumes-visible false </div><br /><br />Substitua 
+{% highlight bash %}
+false
+{% endhighlight %} 
+
+por
+ {% highlight bash %}
+ true
+ {% endhighlight %} 
+ para os ícones reaparecerem. <br /><br />Mais informações: <a href="https://wiki.archlinux.org/index.php/MATE" target="_blank">https://wiki.archlinux.org/index.php/MATE</a>

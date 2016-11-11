@@ -1,0 +1,15 @@
+---
+layout: post
+title: Instalando o plugin do flash player no Iceweasel
+date: '2013-12-07T10:45:00.000-08:00'
+author: The Bang Bash
+tags:
+- Debian
+- Dicas
+- Iceweasel
+modified_time: '2013-12-07T10:45:42.241-08:00'
+blogger_id: tag:blogger.com,1999:blog-2422865715758349944.post-3182575546905064014
+blogger_orig_url: http://www.terminalroot.com.br/2013/12/instalando-o-plugin-do-flash-player-no.html
+---
+
+<div class="separator" style="clear: both; text-align: center;"><a href="http://www.geticeweasel.org/iceweasel.gif" imageanchor="1" style="margin-left: 1em; margin-right: 1em;"><img border="0" src="http://www.geticeweasel.org/iceweasel.gif" /></a></div><b><u>Passos</u>:</b><br /><blockquote><b><span style="color: purple;">Obs.: Perceba que usei # , logo, logue como root no terminal.</span></b></blockquote><b><br />1 - Baixe o Plugin(esse é o 64 bits):<br /></b><br /><div class="adp"><b># wget http://fpdownload.macromedia.com/get/flashplayer/pdc/11.2.202.327/install_flash_player_11_linux.x86_64.tar.gz</b></div><b><br />2 - Extraia-o:<br /><br /><div class="adp"># tar xzvf install_flash_player_11_linux.x86_64.tar.gz</div><br />3 - Mova o plugin pra pasta de plugins do Iceweasel<br /><div class="adp"># mv install_flash_player_11_linux.x86_64/libflashplayer.so /usr/lib/mozilla/plugins/</div><br />4 - Reinicie o Iceweasel!<br /><br />Você também pode instalar pelo apt-get(para isso o repositorio nonfree deve estar no seu sources.list):<br /><div class="adp"># apt-get install flashplugin-nonfree</div><br />Fui!</b>

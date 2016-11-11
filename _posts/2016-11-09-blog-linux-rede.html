@@ -1,0 +1,18 @@
+---
+layout: post
+title: Como Rodar Aplicativos Gráficos pela Rede no Linux
+date: '2016-11-09T16:06:00.000-08:00'
+author: Terminal Root
+image: '/assets/img/cursos/js-tdd.png'
+description: 'Como utilizar o SSH para rodar aplicações gráficas via rede.'
+main-class: 'tv'
+color: '#D6BA32'
+tags:
+- TerminalRootTV
+modified_time: '2016-11-09T16:06:43.614-08:00'
+thumbnail: https://1.bp.blogspot.com/-vUSYSOrxhZo/WB5Z3s7ZBfI/AAAAAAAAA9Q/IOfnlCFN3XYnWL-jtgZz5DRScGJfYTAVQCLcB/s72-c/blog-linux-ssh.png
+blogger_id: tag:blogger.com,1999:blog-2422865715758349944.post-1452179740425935030
+blogger_orig_url: http://www.terminalroot.com.br/2016/11/blog-linux-rede.html
+---
+
+<div class="separator" style="clear: both; text-align: center;"><a href="https://1.bp.blogspot.com/-vUSYSOrxhZo/WB5Z3s7ZBfI/AAAAAAAAA9Q/IOfnlCFN3XYnWL-jtgZz5DRScGJfYTAVQCLcB/s1600/blog-linux-ssh.png" imageanchor="1" style="margin-left: 1em; margin-right: 1em;"><img border="0" height="180" src="https://1.bp.blogspot.com/-vUSYSOrxhZo/WB5Z3s7ZBfI/AAAAAAAAA9Q/IOfnlCFN3XYnWL-jtgZz5DRScGJfYTAVQCLcB/s320/blog-linux-ssh.png" width="320" /></a></div><br /><br /><div style="text-align: center;"><iframe allowfullscreen="" frameborder="0" height="315" src="https://www.youtube.com/embed/c42j3B8HRG0" width="560"></iframe></div><br /><br /><span style="font-size: large;"><b>Edite esse arquivo:</b></span><br />{% highlight bash %}nano /etc/ssh/sshd_config{% endhighlight %}<br /><span style="font-size: large;"><b><br />E coloque isso dentro:</b></span><br /><div class="adp">X11Forwarding yes<br />X11DisplayOffset 10<br />PrintMotd yes<br />PrintLastLog yes<br />TCPKeepAlive yes<br />UseLogin yes</div><br /><span style="font-size: large;"><b>E depois restart o ssh:</b></span><br />{% highlight bash %}/etc/init.d/ssh restart{% endhighlight %}<br /><span style="font-size: large;"><b><br />Logue:</b></span><br />{% highlight bash %}ssh -X user@IP{% endhighlight %}

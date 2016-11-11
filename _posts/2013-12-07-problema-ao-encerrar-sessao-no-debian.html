@@ -1,0 +1,15 @@
+---
+layout: post
+title: Problema ao encerrar sessão no Debian Wheezy
+date: '2013-12-07T06:35:00.001-08:00'
+author: The Bang Bash
+tags:
+- Debian
+- Dicas
+modified_time: '2013-12-07T06:35:49.629-08:00'
+thumbnail: http://1.bp.blogspot.com/-WOGj-NuXTXs/UqMxPxu3suI/AAAAAAAACmo/R14gB2Na_Rs/s72-c/Mo4Ux.png
+blogger_id: tag:blogger.com,1999:blog-2422865715758349944.post-8552148493781858271
+blogger_orig_url: http://www.terminalroot.com.br/2013/12/problema-ao-encerrar-sessao-no-debian.html
+---
+
+<div class="separator" style="clear: both; text-align: center;"><a href="http://1.bp.blogspot.com/-WOGj-NuXTXs/UqMxPxu3suI/AAAAAAAACmo/R14gB2Na_Rs/s1600/Mo4Ux.png" imageanchor="1" style="margin-left: 1em; margin-right: 1em;"><img border="0" src="http://1.bp.blogspot.com/-WOGj-NuXTXs/UqMxPxu3suI/AAAAAAAACmo/R14gB2Na_Rs/s320/Mo4Ux.png" height="160" width="320" /></a></div><blockquote class="tr_bq"><b><i><span style="color: purple;">Bom galera pra quem tem uma placa de vídeo que não funcionou bem no <span style="font-size: large;"><span style="color: blue;">Debian Wheezy</span></span>, provavelmente o drive genérico ainda está em desenvolvimento e o Debian não instalará sem sua autorização o drive proprietário, então, você precisa instalar o drive não livre pra rodar direitinho a placa, basta:</span></i></b></blockquote><b><br />1- Adicionar o repositório <span style="color: blue;">nonfree</span> na sua <span style="color: blue;">sources.list</span>: <br /></b><br /><div class="adp"><b># vi /etc/apt/sources.list </b></div><b><br /><br />1.1- Insira na ultima linha, mas verifique antes se essa linha já existe no seu repositório, se não, insira: <br /></b><br />{% highlight bash %}<b>deb http://ftp.debian.org/debian/ wheezy-updates main contrib non-free </b>{% endhighlight %}<b><br /><br />2-Atualizar sua lista: <br /></b><br /><div class="adp"><b># apt-get update </b></div><b><br /><br />3- Instalar os firmwares não livre, seram automáticos: <br /><div class="adp"># apt-get install firmware-linux-nonfree </div><br /><br />Reboot a máquina, e pronto!  Para qualquer problema verifique {% highlight bash %}$ cat /var/log/Xorg.log{% endhighlight %} e posta aqui o comentário da linha [EE] referente a placa.</b>

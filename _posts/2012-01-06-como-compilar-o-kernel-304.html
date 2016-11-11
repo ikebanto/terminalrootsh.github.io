@@ -1,0 +1,13 @@
+---
+layout: post
+title: Como compilar o Kernel 3.0.4
+date: '2012-01-06T03:17:00.000-08:00'
+author: The Bang Bash
+tags:
+- Linux
+modified_time: '2013-05-03T07:16:07.878-07:00'
+blogger_id: tag:blogger.com,1999:blog-2422865715758349944.post-5929115687277231026
+blogger_orig_url: http://www.terminalroot.com.br/2012/01/como-compilar-o-kernel-304.html
+---
+
+<b>Bom, antes demais nada você deve verificar se depois de atualizações feitas pela sua distro se você não já o possui ou se já tem até um superior.Para verificar qual a vesão do seu Kernel, abra o terminal e digite:{% highlight bash %}$ uname -ar{% endhighlight %}, agora acesse o diretório src/:{% highlight bash %}$ cd /usr/src{% endhighlight %}, já dentro do diretŕorio, baixe o Kernel do Site Oficial:{% highlight bash %}# wget -c http://www.kernel.org/pub/linux/kernel/v3.0/linux-3.0.4.tar.bz2{% endhighlight %}Descompacte{% highlight bash %}# tar xvjf linux-3.0.4.tar.bz2{% endhighlight %}Entre no diretório descompactado{% highlight bash %}# cd linux-3.0.4{% endhighlight %}Para manter o .config  utilizado atualmente pelo seu sistema, execute o comando:{% highlight bash %}# cp /boot/config-2* /usr/src/linux-3.0.4/.config{% endhighlight %}, para configurar o módulos execute o comando:{% highlight bash %}# make menuconfig{% endhighlight %} Crie uma imagem do Kernel conmpactada e os módulos configurados de uma só vez:{% highlight bash %}# make -j 3 all{% endhighlight %}Instale os módulos:{% highlight bash %}# make -j 3 modules_install{% endhighlight %}criando o initrd para o Kernel instalado:{% highlight bash %}# mkinitramfs 3.0.4 -o /boot/initrd.img-3.0.4{% endhighlight %}Este comando copiará o bzImage para o diretório /boot, renomeando para vmlinuz-3.0.4:{% highlight bash %}# cp arch/i386/boot/bzImage /boot/vmlinuz-3.0.4{% endhighlight %}Atualização do grub:{% highlight bash %}# update-grub ou edite o grub manualmente =) # vim /boot/grub/grub.cfg{% endhighlight %}</b><br /><b><br /></b><br /><b>Pronto!</b><br /><div style="color: #999999;"></div>

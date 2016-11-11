@@ -1,0 +1,13 @@
+---
+layout: post
+title: Recuperando e configurando o Grub 2 no Debian Wheezy
+date: '2015-01-11T04:05:00.005-08:00'
+author: Marcos Oliveira
+tags:
+- Debian
+modified_time: '2015-01-11T04:05:53.296-08:00'
+blogger_id: tag:blogger.com,1999:blog-2422865715758349944.post-2519355400129999429
+blogger_orig_url: http://www.terminalroot.com.br/2015/01/recuperando-e-configurando-o-grub-2-no.html
+---
+
+<div class="separator" style="clear: both; text-align: center;"><a href="http://fresnolibre.fresnodigital.info/wp-content/uploads/2010/08/grub-debian-kubuntu.jpg" imageanchor="1" style="margin-left: 1em; margin-right: 1em;"><img border="0" src="http://fresnolibre.fresnodigital.info/wp-content/uploads/2010/08/grub-debian-kubuntu.jpg" height="241" width="320" /></a></div><b>Passos:<br /><br />1 - Verifique os números de suas partições(crie uma conta root se não já estiver nela):<br /><br /></b><br /><div class="adp"><b># fdisk -l </b></div><b><br />1 - Entre com a mídia de qualquer Distro Linux live e monte a partição de boot:<br /><br /></b><br /><div class="adp"><b># mount /dev/sda1 /mnt/ </b></div><b>2 - Perceba que você montou uma partição,mas o GRUB precisa ser instalado no HD (sda ≠ sda1, logo instale em sda):<br /><br /></b><br /><div class="adp"><b># grub-install --root-directory=/mnt/ /dev/sda </b></div><b>Se quiser, atualize o GRUB:<br /><br /><div class="adp"># update-grub </div>E não esqueça de desmontar a partição:<br /><br /><div class="adp"># umount /mnt/ </div><br />Reinicie e pronto!</b>

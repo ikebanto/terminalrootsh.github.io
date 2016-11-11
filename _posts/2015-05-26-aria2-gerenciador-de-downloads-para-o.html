@@ -1,0 +1,15 @@
+---
+layout: post
+title: Aria2, Gerenciador de Downloads para o Terminal
+date: '2015-05-26T18:04:00.000-07:00'
+author: Marcos Oliveira
+tags:
+- Linux
+- Dicas
+modified_time: '2015-05-26T18:04:13.841-07:00'
+thumbnail: http://1.bp.blogspot.com/-WDiSSXJXnhI/VWUX2rUVngI/AAAAAAAABS4/1x0oPvzbEkk/s72-c/aria2-377x250.png
+blogger_id: tag:blogger.com,1999:blog-2422865715758349944.post-9164371093999155702
+blogger_orig_url: http://www.terminalroot.com.br/2015/05/aria2-gerenciador-de-downloads-para-o.html
+---
+
+<div class="separator" style="clear: both; text-align: center;"><a href="http://1.bp.blogspot.com/-WDiSSXJXnhI/VWUX2rUVngI/AAAAAAAABS4/1x0oPvzbEkk/s1600/aria2-377x250.png" imageanchor="1" style="margin-left: 1em; margin-right: 1em;"><img border="0" height="212" src="http://1.bp.blogspot.com/-WDiSSXJXnhI/VWUX2rUVngI/AAAAAAAABS4/1x0oPvzbEkk/s320/aria2-377x250.png" width="320" /></a></div><b>Aria2 é um gerenciador de download leve com suporte para HTTP / HTTPS, FTP, BitTorrent e Metalink.</b><br /><b></b><b>Tem um monte de opções para personalizar os downloads, permite pausar  um download e, em seguida, continuá-lo, você pode baixar a partir de  múltiplos protocolos, tem todas as características de um BitTorrent.</b><br /><b></b><h1>Instalação (pra quem tiver o sudo instalado, utilize-o):</h1><b></b><b><em>Em Debian, Ubuntu, Mint,…:</em></b><br /><b></b><b>{% highlight bash %}apt-get install aria2{% endhighlight %}</b><br /><b></b><b><em>Fedora e derivados:</em></b><br /><b></b><b>{% highlight bash %}yum install aria2{% endhighlight %}</b><br /><b></b><b><em>Arch e similares:</em></b><br /><b></b><b>{% highlight bash %}pacman -S aria2{% endhighlight %}</b><br /><b></b><h1>Utilização:</h1><b></b><h1>Download de arquivo:</h1><b></b><b>{% highlight bash %}aria2c [url]{% endhighlight %}</b><br /><b></b><b><em>Limitando a velocidade do download (vc pode substituir 45k pela taxa que deseja, podendo ser em bytes, kilobytes e megabytes):</em></b><br /><b></b><b>{% highlight bash %}aria2c --max-overall-download-limit=45K http://sourceforge.net/projects/terminalroot/files/terminalroot.tar.gz{% endhighlight %}</b><br /><b></b><b><em>Para pausar um download, basta enviar um Ctrl + C, e para reiniciar do local que pausou, basta começar com -c:</em></b><br /><b></b><b>{% highlight bash %}aria2c -c [diretorio_arquivo_pausado]{% endhighlight %}</b><br /><b></b><b><em>Baixar vários arquivos:</em></b><br /><b></b><b>{% highlight bash %}aria2c -Z [url1] [url2] [...]{% endhighlight %}</b><br /><b></b><b>Mais informações no site do projeto:</b> <a href="http://aria2.sourceforge.net/" target="_blank" title="Aria2">http://aria2.sourceforge.net/</a><br /><br />

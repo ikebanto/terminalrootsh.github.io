@@ -1,0 +1,14 @@
+---
+layout: post
+title: 'Shell Script : converte de Decimal para Binário e vice-versa'
+date: '2013-05-06T18:32:00.000-07:00'
+author: The Bang Bash
+tags:
+- Shell Script
+modified_time: '2014-10-29T17:08:36.899-07:00'
+thumbnail: http://3.bp.blogspot.com/-h0-n7gIvia0/UYhYyzu2JVI/AAAAAAAABiQ/uzMI-c3WBQA/s72-c/converter.png
+blogger_id: tag:blogger.com,1999:blog-2422865715758349944.post-989571807525459009
+blogger_orig_url: http://www.terminalroot.com.br/2013/05/shell-script-converte-de-decimal-para.html
+---
+
+<div class="separator" style="clear: both; text-align: center;"><a href="http://3.bp.blogspot.com/-h0-n7gIvia0/UYhYyzu2JVI/AAAAAAAABiQ/uzMI-c3WBQA/s1600/converter.png" imageanchor="1" style="margin-left: 1em; margin-right: 1em;"><img border="0" height="293" src="http://3.bp.blogspot.com/-h0-n7gIvia0/UYhYyzu2JVI/AAAAAAAABiQ/uzMI-c3WBQA/s400/converter.png" width="400" /></a></div><br /><b>Download do código:<br /><a href="http://pastebin.com/download.php?i=b0ieQJR3" target="_blank">converter.sh</a><br /><br />Código no PasteBin: <br /><br /><script src="http://pastebin.com/embed_js.php?i=b0ieQJR3"></script> <br />Código no Blog:<br /><br />{% highlight bash %}#!/bin/bash<br /># converter.sh - Shell Script : converte de Decimal para Binário e vice-versa<br /># Autor: MBM<br /># Endereço Web - http://www.terminalroot.com.br<br /># Facebook - fb.com/terminalroot<br /><br />echo&nbsp; "1 DECIMAL para BINARIO "<br />echo&nbsp; "2 BINARIO para DECIMAL "<br />echo&nbsp; "3 SAIR "<br /><br />echo -n "POR FAVOR FAÇA SUA ESCOLHA: "<br />read OPCAO<br /><br />if [ $OPCAO == 1 ] ; then<br /><br />&nbsp;&nbsp; &nbsp;echo -n "Digite o número[DECIMAL]: "<br />&nbsp;&nbsp; &nbsp;read NUMERO<br />&nbsp;&nbsp; &nbsp;echo "obase=2;$NUMERO" | bc<br />&nbsp;&nbsp; <br />elif [ $OPCAO == 2 ] ; then<br /><br />&nbsp;&nbsp; &nbsp;echo n "Digite o número[BINARIO]: "<br />&nbsp;&nbsp; &nbsp;read NUMERO<br />&nbsp;&nbsp; &nbsp;echo "ibase=2;$NUMERO" | bc<br />&nbsp;&nbsp; <br />elif [ $OPCAO == 3 ] ; then<br /><br />&nbsp;&nbsp; &nbsp;echo -e "\033[41;37;1m ATÉ MAIS! \033[m"<br />&nbsp;&nbsp; <br />else<br />&nbsp;&nbsp; &nbsp;echo -e "\033[41;37;1m NÃO EXISTE ESTE ITEM! \033[m"<br />fi{% endhighlight %}</b>

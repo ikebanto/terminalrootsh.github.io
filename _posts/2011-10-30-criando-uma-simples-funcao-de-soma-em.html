@@ -1,0 +1,13 @@
+---
+layout: post
+title: Criando uma simples função de soma em Linguagem C
+date: '2011-10-30T13:50:00.000-07:00'
+author: The Bang Bash
+tags:
+- Linguagem C
+modified_time: '2013-05-03T07:16:11.290-07:00'
+blogger_id: tag:blogger.com,1999:blog-2422865715758349944.post-5234467023143908014
+blogger_orig_url: http://www.terminalroot.com.br/2011/10/criando-uma-simples-funcao-de-soma-em.html
+---
+
+<b> Bom, esse é o básico do entendimento, para quem já trabalha com PHP encontrará diversas similiaridades.<br />Uma simples função de soma para entendimento, um pouco mais acima do código da postagem anterior.Eu comentei as linhas para tentar explicar mais ou menos o que cada linha faz.Segue o código:</b><br /><br /><br />{% highlight bash %}<br />#include &lt;stdio.h&gt;//inclusao do cabeçalho standart I/O<br />&nbsp;//criamos a função soma() e definimos as variaveis com inteiras(int)<br />&nbsp;int soma(int x,int y)<br />&nbsp;{<br />&nbsp;&nbsp;&nbsp; //efetuamos a operação<br />&nbsp;&nbsp;&nbsp; return (x+y);<br />&nbsp;}<br />&nbsp;//chamamos a função main() para a execução e impressão<br />&nbsp;int main()<br />&nbsp;{<br />&nbsp;&nbsp;&nbsp;&nbsp; //definimos a variável saida<br />&nbsp;&nbsp;&nbsp;&nbsp; int saida;<br />&nbsp;&nbsp;&nbsp;&nbsp; //setamos os valores que queremos<br />&nbsp;&nbsp;&nbsp;&nbsp; saida=soma(4,8);<br />&nbsp;&nbsp;&nbsp;&nbsp; //imprimimos na tela o resultado<br />&nbsp;&nbsp;&nbsp;&nbsp; printf ("O resultado da soma e: %d\n",saida);<br />&nbsp;&nbsp;&nbsp;&nbsp; //finalizamos o código<br />&nbsp;&nbsp;&nbsp;&nbsp; return(0);<br />&nbsp;}<br />{% endhighlight %}<br /><br /><b>Agora basta salvar com qualquer_nome.c, no meu caso denominei como soma.c, depois compilá-lo e executá-lo:</b><br /><br />{% highlight bash %}<br />gcc soma.c -o soma<br />./soma<br />O resultado da soma e: 12<br />{% endhighlight %}<br /><br /><b>Por enquanto é só, até a próxima!</b>

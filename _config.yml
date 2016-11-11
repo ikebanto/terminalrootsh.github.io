@@ -1,6 +1,6 @@
 # Site settings
 title: '#_ Terminal Root'
-email: meu-email@gmail.com
+email: terminalroot.com.br@gmail.com
 description: > # this means to ignore newlines until "baseurl:"
   Blog GNU/Linux, Shell Script Bash, Debian, Linguagens de Desenvolvimento, Contabilidade, Servidores, Web, Mobile e Games.
 baseurl: "" # the subpath of your site, e.g. /blog/
@@ -11,7 +11,7 @@ github_username:  terminalrootsh
 # Build settings
 markdown: kramdown
 highlighter: rouge
-permalink: /:title/
+permalink: /:year/:month/:title.html
 
 
 # html minify
@@ -28,11 +28,11 @@ links:
     url: /
   - title: Cursos
     url: /cursos
-  - title: Séries
-    url: /series
+  - title: LPI
+    url: /lpi
   - title: Tags
     url: /tags
-  - title: Sobre mim
+  - title: Mais
     url: /about
 
 collections:
