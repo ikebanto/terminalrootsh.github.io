@@ -3,8 +3,7 @@ title: '#_ Terminal Root'
 email: terminalroot.com.br@gmail.com
 description: > # this means to ignore newlines until "baseurl:"
   Blog GNU/Linux, Shell Script Bash, Debian, Linguagens de Desenvolvimento, Contabilidade, Servidores, Web, Mobile e Games.
-baseurl: "" # the subpath of your site, e.g. /blog/
-url: "https:/terminalrootsh.github.io" # the base hostname & protocol for your site
+
 twitter_username: terminalrootsh
 github_username:  terminalrootsh
 
@@ -26,17 +25,12 @@ compress_html:
 links:
   - title: Home
     url: /
-  - title: Cursos
-    url: /cursos
   - title: LPI
     url: /lpi
   - title: Tags
     url: /tags
   - title: Mais
     url: /about
-
-collections:
-  - cursos
 
 # exclude my node related stuff
 exclude: ['package.json', 'src', 'node_modules', 'vendor/bundle/ruby']

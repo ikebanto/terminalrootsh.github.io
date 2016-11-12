@@ -2,12 +2,15 @@
 layout: post
 title: 'Shell: Extrair os números do CPF formatado'
 date: '2014-10-05T06:13:00.002-07:00'
+description: 'Shell: Extrair os números do CPF formatado'
+main-class: 'misc'
+color: '#34a853'
 author: Marcos Oliveira
 tags: 
 modified_time: '2014-10-05T06:13:42.963-07:00'
 thumbnail: http://2.bp.blogspot.com/-PKtojZWpKC8/U9w1-TXvi2I/AAAAAAAAAao/2yJQaLRLngY/s72-c/crunchbang_penguin_by_falldown_aka_chris-d4nj851.png
-blogger_id: tag:blogger.com,1999:blog-2422865715758349944.post-3593691610016955837
-blogger_orig_url: http://www.terminalroot.com.br/2014/10/shell-extrair-os-numeros-do-cpf.html
+twitter_text: 'Shell: Extrair os números do CPF formatado'
+introduction: 'Shell: Extrair os números do CPF formatado'
 ---
 
 <div class="separator" style="clear: both; text-align: center;"><a href="http://2.bp.blogspot.com/-PKtojZWpKC8/U9w1-TXvi2I/AAAAAAAAAao/2yJQaLRLngY/s1600/crunchbang_penguin_by_falldown_aka_chris-d4nj851.png" imageanchor="1" style="margin-left: 1em; margin-right: 1em;"><img border="0" src="http://2.bp.blogspot.com/-PKtojZWpKC8/U9w1-TXvi2I/AAAAAAAAAao/2yJQaLRLngY/s320/crunchbang_penguin_by_falldown_aka_chris-d4nj851.png" height="195" width="200" /></a></div><br /><blockquote class="tr_bq"><b>O tr é um comando muito versátil, especialmente útil para apagar caracteres indesejados.</b><br /><b>Digamos que você peça ao usuário para digitar o número do CPF. Esse  número poderá vir das mais diferentes formas, com espaços, hífens,  pontos, ponto-e-vírgula e sabe mais o que que a criatividade da pessoa  pode produzir.</b></blockquote>Para preservar sua sanidade, tudo o que você quer são os números,  ignorando toda a pontuação, espaços e outros caracteres. Com o tr é  fácil.<br /><div class="adp">$ echo 123.456.789-00 | tr -d 0-9 ..-</div><br /><br />A opção -d apaga coisas e o 0-9 representa os números de zero a nove.  Ah, note que não é necessário o uso de colchetes ao redor “[0-9]“, como  muita gente costuma fazer.<br />Mas este comando apagou os números e deixou a pontuação, quando o  desejado é o justamente o contrário. Então basta usar a opção -c, que  inverte o sentido da expressão, fazendo o tr apagar tudo <b>exceto</b> os números:<br /><div class="adp">$ echo 123.456.789-00 | tr -c -d 0-9 12345678900</div><br /><br /><br /><br /><span style="color: #999999;"><span style="font-size: x-small;"><i>Via: Codare</i></span></span>

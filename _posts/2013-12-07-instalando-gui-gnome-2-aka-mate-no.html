@@ -2,6 +2,9 @@
 layout: post
 title: Instalando a GUI Gnome 2 aka Mate no Debian
 date: '2013-12-07T10:27:00.000-08:00'
+description: Instalando a GUI Gnome 2 aka Mate no Debian
+main-class: 'debian'
+color: '#de4508'
 author: Marcos Oliveira
 tags:
 - Debian
@@ -9,8 +12,8 @@ tags:
 - Dicas
 modified_time: '2013-12-07T10:27:43.706-08:00'
 thumbnail: http://4.bp.blogspot.com/-tCpF25i0SK4/UKI3fHkKySI/AAAAAAAAA5A/pMv9x7UUNDA/s72-c/mateicon.png
-blogger_id: tag:blogger.com,1999:blog-2422865715758349944.post-7932640138896887961
-blogger_orig_url: http://www.terminalroot.com.br/2013/12/instalando-gui-gnome-2-aka-mate-no.html
+twitter_text: Instalando a GUI Gnome 2 aka Mate no Debian
+introduction: Instalando a GUI Gnome 2 aka Mate no Debian
 ---
 
 <div class="separator" style="clear: both; text-align: center;"><a href="http://4.bp.blogspot.com/-tCpF25i0SK4/UKI3fHkKySI/AAAAAAAAA5A/pMv9x7UUNDA/s1600/mateicon.png" imageanchor="1" style="margin-left: 1em; margin-right: 1em;"><img border="0" src="http://4.bp.blogspot.com/-tCpF25i0SK4/UKI3fHkKySI/AAAAAAAAA5A/pMv9x7UUNDA/s320/mateicon.png" /></a></div><b>Passos:<br /><br />1 - Adicione o repositório no seu sources.list(perce o #, ou seja, torne-se ROOT):<br /><br /></b><br /><div class="adp"><b>#  add-apt-repository 'deb http://repo.mate-desktop.org/debian wheezy main' </b></div><b><br />2 - Atualize sua lista:<br /><br /></b><br /><div class="adp"><b># apt-get update </b></div><b><br />2.2 - Caso obtenha tipo essa informação no final do update, :<br />{% highlight bash %}W: Erro GPG: http://repo.mate-desktop.org wheezy Release: As assinaturas a seguir não puderam ser verificadas devido à chave pública não estar disponível: NO_PUBKEY 68980A0EA10B4DE8{% endhighlight %}<br />2.3 - Adicione a chave (troque [ID] por sua chave, essa é a minha: 68980A0EA10B4DE8):<br /><br /></b><br /><div class="adp"><b># gpg --keyserver pgpkeys.mit.edu --recv-key [ID] </b></div><b><br />2.4 - E depois registre-a:<br /><br /><div class="adp"># gpg -a --export [ID] | sudo apt-key add - </div><br />2.5 - Agora sim atualize (o passo anterior foi justamente pra você pegar sua ID):<br /><br /><div class="adp"># apt-get update </div><br />3 - Agora instale o MATE:<br /><br /><div class="adp"># apt-get install mate-desktop-environment </div><br />Se quiser ainda instale o pacotes extras (Não é necessário!):<br /><br /><div class="adp"># apt-get install mate-desktop-environment-extra </div><br />Quando você for iniciar a sessão, ao selecionar o usuário, mude a GUI no rodapé, e escolha MATE.<br /><br />Pronto!</b><br /><div class="separator" style="clear: both; text-align: center;"><a href="http://mate-desktop.org/gallery/1.6/about-me.png" imageanchor="1" style="margin-left: 1em; margin-right: 1em;"><img border="0" src="http://mate-desktop.org/gallery/1.6/about-me.png" height="213" width="400" /></a></div>

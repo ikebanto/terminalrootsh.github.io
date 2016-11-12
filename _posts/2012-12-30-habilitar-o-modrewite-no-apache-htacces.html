@@ -2,6 +2,9 @@
 layout: post
 title: Habilitar o mod_rewite no Apache (.htacces)
 date: '2012-12-30T07:18:00.000-08:00'
+description: Habilitar o mod_rewite no Apache (.htacces)
+main-class: 'linux'
+color: '#3b5998'
 author: The Bang Bash
 tags:
 - Debian
@@ -10,8 +13,8 @@ tags:
 - PHP
 modified_time: '2014-09-13T06:00:27.497-07:00'
 thumbnail: http://3.bp.blogspot.com/-Ho91t2BJ79M/UOBbOFdgNMI/AAAAAAAAA7U/v-Fh0T1B7wU/s72-c/Apache-Server.jpg
-blogger_id: tag:blogger.com,1999:blog-2422865715758349944.post-8283385000844269459
-blogger_orig_url: http://www.terminalroot.com.br/2012/12/habilitar-o-modrewite-no-apache-htacces.html
+twitter_text: Habilitar o mod_rewite no Apache (.htacces)
+introduction: Habilitar o mod_rewite no Apache (.htacces)
 ---
 
 <div class="separator" style="clear: both; text-align: center;"><a href="http://3.bp.blogspot.com/-Ho91t2BJ79M/UOBbOFdgNMI/AAAAAAAAA7U/v-Fh0T1B7wU/s1600/Apache-Server.jpg" imageanchor="1" style="margin-left: 1em; margin-right: 1em;"><img border="0" src="http://3.bp.blogspot.com/-Ho91t2BJ79M/UOBbOFdgNMI/AAAAAAAAA7U/v-Fh0T1B7wU/s320/Apache-Server.jpg" height="165" width="254" /></a></div> <blockquote class="tr_bq"><b>Pra quem vai trabalhar com MVC no PHP (por exemplo) precisa habilitar o mod_rewrite no Apache pra que funcione, segue os passos pra fazer isso:</b></blockquote><br /><br /><u><b>1-Logue como root: </b></u><br />{% highlight bash %}$ su{% endhighlight %}<br /><br /><u><b>2-Abra o arquivo default do Apache: </b></u><br />{% highlight bash %}# vi /etc/apache2/sites-available/default{% endhighlight %}<br /><br /><b>3-<u>Edite o arquivo da seguinte forma:</u> <span style="color: blue;">Altere a linha onde tem "<i>AllowOverride None</i>" dentro de <i>&lt;Directory /&gt;</i> substituindo por "<i>AllowOverride AuthConfig</i>" e altere a linha "<i>AllowOverride None</i>" dentro de <i>&lt;Directory /var/www/&gt;</i> substituindo por "<i>AllowOverride All</i>". </span></b><br /><span style="color: blue;"><b>Ex.:</b></span>{% highlight bash %}DocumentRoot /var/www/ &lt;Directory /&gt;    Options FollowSymLinks Indexes    AllowOverride AuthConfig &lt;/Directory&gt; &lt;Directory /var/www/&gt;    Options Indexes FollowSymLinks MultiViews    AllowOverride All    Order allow,deny    allow from all &lt;/Directory&gt;{% endhighlight %}<br /><br /><u><b>4- Não esqueça de habilitar o mod_rewrite: </b></u><br />{% highlight bash %}# a2enmod rewrite{% endhighlight %}<br /><br /><u><b>5-Reinicie o apache:</b></u><br />{% highlight bash %}# /etc/init.d/apache2 restart{% endhighlight %}<br /><br /><span style="font-size: x-large;"><b>Agora vamos testar </b></span><br /><br /><u><b>6-Crie um arquivo .htacces dentro do diretório /var/www/</b></u>: <br />{% highlight bash %}vi /var/www/.htaccess{% endhighlight %}<br /><u><b><br /></b></u><u><b>7-Escreva isso dentro do Arquivo, salve e feche-o(em outro post explicarei isso)</b></u>: <br />{% highlight bash %}RewriteEngine On<br />RewriteCond %{SCRIPT_FILENAME} !-f<br />RewriteCond %{SCRIPT_FILENAME} !-d<br />RewriteRule ^(.*)$ index.php?chave=$1 {% endhighlight %}<br /><br /><u><b>8-Agora crie um arquivo index.php e cole o conteúdo logo abaixo</b></u>: {% highlight bash %}vi /var/www/index.php{% endhighlight %}<br /><b>Conteúdo</b>: <br />{% highlight bash %}&lt;?php  echo $_GET['chave']; ?&gt; {% endhighlight %}<br /><br /><u><b>9-Acesse o endereço </b></u><i><b>http://localhost/nomequalquer/outronome/</b></i><u><b></b></u>:<span style="color: lime;"><b><br /><span style="font-size: large;"><br /><span style="color: #274e13;">Se imprimir na tela: nomequalquer/outronome/ (ou o nome que você escolheu), está tudo certo.Você já pode escrever seu Framework!</span></span>   </b></span>

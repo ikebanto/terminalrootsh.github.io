@@ -2,13 +2,16 @@
 layout: post
 title: Loop For e Loop While em Shell Script
 date: '2015-01-02T03:51:00.003-08:00'
+description: Loop For e Loop While em Shell Script
+main-class: 'bash'
+color: '#c2003a'
 author: Marcos Oliveira
 tags:
 - Shell Script
 modified_time: '2015-01-02T03:51:13.932-08:00'
 thumbnail: http://1.bp.blogspot.com/-xAtPNrIAZmA/VDsh_jH6FUI/AAAAAAAAA2I/hd13kwJ4_9I/s72-c/new-logo-tr.png
-blogger_id: tag:blogger.com,1999:blog-2422865715758349944.post-2500098855126502890
-blogger_orig_url: http://www.terminalroot.com.br/2015/01/loop-for-e-loop-while-em-shell-script.html
+twitter_text: Loop For e Loop While em Shell Script
+introduction: Loop For e Loop While em Shell Script
 ---
 
 <div class="separator" style="clear: both; text-align: center;"><a href="http://1.bp.blogspot.com/-xAtPNrIAZmA/VDsh_jH6FUI/AAAAAAAAA2I/hd13kwJ4_9I/s1600/new-logo-tr.png" imageanchor="1" style="margin-left: 1em; margin-right: 1em;"><img border="0" src="http://1.bp.blogspot.com/-xAtPNrIAZmA/VDsh_jH6FUI/AAAAAAAAA2I/hd13kwJ4_9I/s320/new-logo-tr.png" height="200" width="200" /></a></div> <b>Uma vez eu criei um script de fazer downloads de uma pasta de imagens e percebí que nessa pasta possuia diversas imagens repetidas, porém redimensionadas e na renomeação existia a taxa de redimensionamento(Exemplo: a imagem e tal.jpg e existia cópias tal500x450.jpg), diversas 450x145...<br />Então percebi que um string que se repetia era o "x" seguido de um numero de 1 a 8, então precisava remover todas as imagens q tivesses x1, x2, x3...como eram mais de 1000, imagens eu escreví esse loop em Shell Script e consegui remover toas as imagens repetidas com sucesso, segue o código:</b><br /><br />{% highlight bash %}<br />#!/bin/bash<br />for ((i=0;i&lt;10;i++)); do<br /> rm -rf *x$i*<br />done<br />chmod 777 *.*{% endhighlight %}<br /><br />Seg<b>ue explicações:</b><br /><br /><strike>For</strike><br /><b>O laço for vai substituindo uma variável por um valor, e vai executando os comandos pedidos. Veja o exemplo:</b><br />{% highlight bash %}for i in *<br />do<br />   cp $i $i.backup<br />   mv $i.backup /usr/backup<br />done{% endhighlight %}<br /><b>Primeiramente o laço for atribuiu o valor de retorno do comando “*”  (que é equivalente a um ls sem nenhum parâmetro) para a variável $i,  depois executou o bloco de comandos. Em seguida ele atribui outro valor  do comando “*” para a variável $1 e reexecutou os comandos. Isso se  repete até que não sobrem valores de retorno do comando “*”. Outro  exemplo:</b><br />{% highlight bash %}for original in *; do<br />   resultado=`echo $original |<br />              tr '[:upper:]' '[:lower:]'`<br />   if [ ! -e $resultado ]; then<br />      mv $original $resultado<br />   fi<br />done{% endhighlight %}<br /><b>Aqui, o que ocorre é a transformação de letras maiúsculas para  minúsculas. Para cada arquivo que o laço lê, uma variável chamada  $resultado irá conter o arquivo em letras minúsculas. Para transformar  em letras minúsculas, usei o comando tr. Caso não exista um arquivo  igual e com letras minúsculas, o arquivo é renomeado para o valor da  variável $resultado, de mesmo nome, mas com letras minúsculas.<br />Como os exemplos ilustram, o laço for pode ser bem útil no tratamento  de múltiplos arquivos. Você pode deixá-los todos com letras minúsculas  ou maiúsculas sem precisar renomear cada um manualmente, pode organizar  dados, fazer backup, entre outras coisas.</b><br /><br /><strike>While</strike><br />O while testa continuamente uma expressão, até que ela se torne falsa. Exemplo:<br />{% highlight bash %}variavel="valor"<br />while [ $variavel = "valor" ]; do<br />   comando1<br />   comando2<br />done{% endhighlight %}<br /><br /><a href="http://www.devin.com.br/shell_script/" target="_blank">Fonte: Devin</a>

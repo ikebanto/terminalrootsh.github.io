@@ -1,3 +1,14 @@
+.olink button {padding:10px; margin:auto;}
+div#publici {width:200px; height:200px; border:1px solid red; float:left;}
+div#todospublici {width:410px; height:210px; border:1px solid blue;}
+blockquote {background-color: #f9f9f9; border: 1px dashed rgb(47, 111, 171); font-family: monospace, Courier;font-size: 13px; line-height: 1.3em; padding: 1em; box-shadow: 5px 5px 8px #888888; text-align: center;}
+
+div.adp {background-color: #f9f9f9; border: 1px dashed rgb(47, 111, 171); font-family: monospace, Courier;font-size: 13px; line-height: 1.3em; padding: 1em; box-shadow: 5px 5px 8px #888888; text-align: center; }
+
+    div.codetr {background: #000; color:#FFF; display: block;  padding:5px; font-size:13px; font-style:oblique;}
+
+a.mac {font-weight: bold; border-radius: 4px; padding: 10px; margin: 15px; background: linear-gradient(to bottom, #2488D4 0px, #1C5BAD 100%) repeat scroll 0% 0% transparent; box-shadow: 0px 1px 1px 0px #64BEF1 inset; text-align: center; width: 100px; color: #FFF; font-size: 13px; font-family: sans-serif;}
+a.mac:hover {background: linear-gradient(to top, #2488D4 0px, #1C5BAD 100%) repeat scroll 0% 0% transparent;}
 html{font-family:sans-serif;-ms-text-size-adjust:100%;-webkit-text-size-adjust:100%}
 body{margin:0}
 article,aside,details,figcaption,figure,footer,header,hgroup,main,nav,section,summary{display:block}
@@ -131,7 +142,7 @@ body.search-overlay:after{position:fixed;top:0;left:0;z-index:18;width:100%;heig
 .post-content .tags a:hover{color:#00395b;border:1px solid #00395b;background:#fff}
 .img-rounded{border-radius:50%}
 html,body{height:100%}
-.header-post{background-color:#444;}
+.header-post{background-color:#637a91;}
 .header-post .content{width:95%;text-align:center;padding:8.75rem 0 4.125rem}
 .bar-header{background:#fff;padding:.625rem 1.25rem;box-shadow:0 -3px 9px #000;position:fixed;width:100%;z-index:10;}
 .bar-header .logo{margin:0;line-height:2.188rem}
@@ -300,78 +311,78 @@ pre span{line-height:1.5rem;font-family:'Monaco','Consolas','Menlo',monospace}
 .comments h3{margin:0 0 1.875rem;font-size:1.875rem}
 footer{background:#444;padding:1.563rem 0;margin-top:100px;}
 footer p,footer a{text-decoration:none;font-family:'Open Sans',sans-serif;font-weight:300;font-style:normal;color:#fff;text-align:center;margin:0}
-.post-jekyll .title-category{color:#b31917}
-.post-jekyll .post-content h1,.post-jekyll .post-content h2,.post-jekyll .post-content h3,.post-jekyll .post-content h4{color:#b31917}
-.post-jekyll .post-content a{color:#b31917;border-bottom:2px dashed #b31917;}
-.post-jekyll .post-content a:hover{background-color:#b31917;color:#fff}
-.post-jekyll .post-content strong{color:#b31917}
-.post-jekyll .post-content p code,.post-jekyll .post-content li code{color:#b31917}
-.post-jekyll .post-content blockquote{border-left:.313rem solid #b31917}
-.post-jekyll .header-post,.post-jekyll .header-site{background-color:#b31917;}
-.post-jekyll .header-post h1,.post-jekyll .header-site h1{text-shadow:3px 3px #8f1412}
-.post-jekyll .bar-header .logo a{color:#b31917}
-.post-jekyll .author .email{color:#b31917}
-.post-jekyll .share a:hover svg{fill:#b31917}
-@media only screen and (max-width:37.5rem){.post-jekyll body.search-overlay:after{background-color:#b31917}
+.post-tv .title-category{color:#b31917}
+.post-tv .post-content h1,.post-tv .post-content h2,.post-tv .post-content h3,.post-tv .post-content h4{color:#b31917}
+.post-tv .post-content a{color:#b31917;border-bottom:2px dashed #b31917;}
+.post-tv .post-content a:hover{background-color:#b31917;color:#fff}
+.post-tv .post-content strong{color:#b31917}
+.post-tv .post-content p code,.post-tv .post-content li code{color:#b31917}
+.post-tv .post-content blockquote{border-left:.313rem solid #b31917}
+.post-tv .header-post,.post-tv .header-site{background-color:#b31917;}
+.post-tv .header-post h1,.post-tv .header-site h1{text-shadow:3px 3px #8f1412}
+.post-tv .bar-header .logo a{color:#b31917}
+.post-tv .author .email{color:#b31917}
+.post-tv .share a:hover svg{fill:#b31917}
+@media only screen and (max-width:37.5rem){.post-tv body.search-overlay:after{background-color:#b31917}
 }
-.post-jekyll .icon-menu{fill:#b31917}
-.post-jekyll .cursos-menu{color:#b31917}
-.post-jekyll .box-body h2{color:#b31917}
-.post-jekyll .box-body .tags a{color:#b31917;border:1px solid #b31917}
-.post-jekyll aside{background-color:#b31917;}
-.post-jekyll aside nav li a:hover{color:#b31917}
-.post-jekyll .ribbon span{background-color:#b31917;}
-.post-jekyll .ribbon span:before{border-left:3px solid #7d1210;border-top:3px solid #7d1210}
-.post-jekyll .ribbon span:after{border-right:3px solid #7d1210;border-top:3px solid #7d1210}
-.post-jekyll footer{background-color:#b31917}
-.post-css .title-category{color:#2da0c3}
-.post-css .post-content h1,.post-css .post-content h2,.post-css .post-content h3,.post-css .post-content h4{color:#2da0c3}
-.post-css .post-content a{color:#2da0c3;border-bottom:2px dashed #2da0c3;}
-.post-css .post-content a:hover{background-color:#2da0c3;color:#fff}
-.post-css .post-content strong{color:#2da0c3}
-.post-css .post-content p code,.post-css .post-content li code{color:#2da0c3}
-.post-css .post-content blockquote{border-left:.313rem solid #2da0c3}
-.post-css .header-post,.post-css .header-site{background-color:#2da0c3;}
-.post-css .header-post h1,.post-css .header-site h1{text-shadow:3px 3px #24809c}
-.post-css .bar-header .logo a{color:#2da0c3}
-.post-css .author .email{color:#2da0c3}
-.post-css .share a:hover svg{fill:#2da0c3}
-@media only screen and (max-width:37.5rem){.post-css body.search-overlay:after{background-color:#2da0c3}
+.post-tv .icon-menu{fill:#b31917}
+.post-tv .cursos-menu{color:#b31917}
+.post-tv .box-body h2{color:#b31917}
+.post-tv .box-body .tags a{color:#b31917;border:1px solid #b31917}
+.post-tv aside{background-color:#b31917;}
+.post-tv aside nav li a:hover{color:#b31917}
+.post-tv .ribbon span{background-color:#b31917;}
+.post-tv .ribbon span:before{border-left:3px solid #7d1210;border-top:3px solid #7d1210}
+.post-tv .ribbon span:after{border-right:3px solid #7d1210;border-top:3px solid #7d1210}
+.post-tv footer{background-color:#b31917}
+.post-bash .title-category{color:#2da0c3}
+.post-bash .post-content h1,.post-bash .post-content h2,.post-bash .post-content h3,.post-bash .post-content h4{color:#2da0c3}
+.post-bash .post-content a{color:#2da0c3;border-bottom:2px dashed #2da0c3;}
+.post-bash .post-content a:hover{background-color:#2da0c3;color:#fff}
+.post-bash .post-content strong{color:#2da0c3}
+.post-bash .post-content p code,.post-bash .post-content li code{color:#2da0c3}
+.post-bash .post-content blockquote{border-left:.313rem solid #2da0c3}
+.post-bash .header-post,.post-bash .header-site{background-color:#2da0c3;}
+.post-bash .header-post h1,.post-bash .header-site h1{text-shadow:3px 3px #24809c}
+.post-bash .bar-header .logo a{color:#2da0c3}
+.post-bash .author .email{color:#2da0c3}
+.post-bash .share a:hover svg{fill:#2da0c3}
+@media only screen and (max-width:37.5rem){.post-bash body.search-overlay:after{background-color:#2da0c3}
 }
-.post-css .icon-menu{fill:#2da0c3}
-.post-css .cursos-menu{color:#2da0c3}
-.post-css .box-body h2{color:#2da0c3}
-.post-css .box-body .tags a{color:#2da0c3;border:1px solid #2da0c3}
-.post-css aside{background-color:#2da0c3;}
-.post-css aside nav li a:hover{color:#2da0c3}
-.post-css .ribbon span{background-color:#2da0c3;}
-.post-css .ribbon span:before{border-left:3px solid #207088;border-top:3px solid #207088}
-.post-css .ribbon span:after{border-right:3px solid #207088;border-top:3px solid #207088}
-.post-css footer{background-color:#2da0c3}
-.post-js .title-category{color:#d6ba32}
-.post-js .post-content h1,.post-js .post-content h2,.post-js .post-content h3,.post-js .post-content h4{color:#d6ba32}
-.post-js .post-content a{color:#d6ba32;border-bottom:2px dashed #d6ba32;}
-.post-js .post-content a:hover{background-color:#d6ba32;color:#fff}
-.post-js .post-content strong{color:#d6ba32}
-.post-js .post-content p code,.post-js .post-content li code{color:#d6ba32}
-.post-js .post-content blockquote{border-left:.313rem solid #d6ba32}
-.post-js .header-post,.post-js .header-site{background-color:#d6ba32;}
-.post-js .header-post h1,.post-js .header-site h1{text-shadow:3px 3px #b09823}
-.post-js .bar-header .logo a{color:#d6ba32}
-.post-js .author .email{color:#d6ba32}
-.post-js .share a:hover svg{fill:#d6ba32}
-@media only screen and (max-width:37.5rem){.post-js body.search-overlay:after{background-color:#d6ba32}
+.post-bash .icon-menu{fill:#2da0c3}
+.post-bash .cursos-menu{color:#2da0c3}
+.post-bash .box-body h2{color:#2da0c3}
+.post-bash .box-body .tags a{color:#2da0c3;border:1px solid #2da0c3}
+.post-bash aside{background-color:#2da0c3;}
+.post-bash aside nav li a:hover{color:#2da0c3}
+.post-bash .ribbon span{background-color:#2da0c3;}
+.post-bash .ribbon span:before{border-left:3px solid #207088;border-top:3px solid #207088}
+.post-bash .ribbon span:after{border-right:3px solid #207088;border-top:3px solid #207088}
+.post-bash footer{background-color:#2da0c3}
+.post-gnu .title-category{color:#d6ba32}
+.post-gnu .post-content h1,.post-gnu .post-content h2,.post-gnu .post-content h3,.post-gnu .post-content h4{color:#d6ba32}
+.post-gnu .post-content a{color:#d6ba32;border-bottom:2px dashed #d6ba32;}
+.post-gnu .post-content a:hover{background-color:#d6ba32;color:#fff}
+.post-gnu .post-content strong{color:#d6ba32}
+.post-gnu .post-content p code,.post-gnu .post-content li code{color:#d6ba32}
+.post-gnu .post-content blockquote{border-left:.313rem solid #d6ba32}
+.post-gnu .header-post,.post-gnu .header-site{background-color:#d6ba32;}
+.post-gnu .header-post h1,.post-gnu .header-site h1{text-shadow:3px 3px #b09823}
+.post-gnu .bar-header .logo a{color:#d6ba32}
+.post-gnu .author .email{color:#d6ba32}
+.post-gnu .share a:hover svg{fill:#d6ba32}
+@media only screen and (max-width:37.5rem){.post-gnu body.search-overlay:after{background-color:#d6ba32}
 }
-.post-js .icon-menu{fill:#d6ba32}
-.post-js .cursos-menu{color:#d6ba32}
-.post-js .box-body h2{color:#d6ba32}
-.post-js .box-body .tags a{color:#d6ba32;border:1px solid #d6ba32}
-.post-js aside{background-color:#d6ba32;}
-.post-js aside nav li a:hover{color:#d6ba32}
-.post-js .ribbon span{background-color:#d6ba32;}
-.post-js .ribbon span:before{border-left:3px solid #9a851f;border-top:3px solid #9a851f}
-.post-js .ribbon span:after{border-right:3px solid #9a851f;border-top:3px solid #9a851f}
-.post-js footer{background-color:#d6ba32}
+.post-gnu .icon-menu{fill:#d6ba32}
+.post-gnu .cursos-menu{color:#d6ba32}
+.post-gnu .box-body h2{color:#d6ba32}
+.post-gnu .box-body .tags a{color:#d6ba32;border:1px solid #d6ba32}
+.post-gnu aside{background-color:#d6ba32;}
+.post-gnu aside nav li a:hover{color:#d6ba32}
+.post-gnu .ribbon span{background-color:#d6ba32;}
+.post-gnu .ribbon span:before{border-left:3px solid #9a851f;border-top:3px solid #9a851f}
+.post-gnu .ribbon span:after{border-right:3px solid #9a851f;border-top:3px solid #9a851f}
+.post-gnu footer{background-color:#d6ba32}
 .post-html .title-category{color:#eb7728}
 .post-html .post-content h1,.post-html .post-content h2,.post-html .post-content h3,.post-html .post-content h4{color:#eb7728}
 .post-html .post-content a{color:#eb7728;border-bottom:2px dashed #eb7728;}
@@ -396,54 +407,54 @@ footer p,footer a{text-decoration:none;font-family:'Open Sans',sans-serif;font-w
 .post-html .ribbon span:before{border-left:3px solid #b05110;border-top:3px solid #b05110}
 .post-html .ribbon span:after{border-right:3px solid #b05110;border-top:3px solid #b05110}
 .post-html footer{background-color:#eb7728}
-.post-svg .title-category{color:#7d669e}
-.post-svg .post-content h1,.post-svg .post-content h2,.post-svg .post-content h3,.post-svg .post-content h4{color:#7d669e}
-.post-svg .post-content a{color:#7d669e;border-bottom:2px dashed #7d669e;}
-.post-svg .post-content a:hover{background-color:#7d669e;color:#fff}
-.post-svg .post-content strong{color:#7d669e}
-.post-svg .post-content p code,.post-svg .post-content li code{color:#7d669e}
-.post-svg .post-content blockquote{border-left:.313rem solid #7d669e}
-.post-svg .header-post,.post-svg .header-site{background-color:#7d669e;}
-.post-svg .header-post h1,.post-svg .header-site h1{text-shadow:3px 3px #64517f}
-.post-svg .bar-header .logo a{color:#7d669e}
-.post-svg .author .email{color:#7d669e}
-.post-svg .share a:hover svg{fill:#7d669e}
-@media only screen and (max-width:37.5rem){.post-svg body.search-overlay:after{background-color:#7d669e}
+.post-debian .title-category{color:#7d669e}
+.post-debian .post-content h1,.post-debian .post-content h2,.post-debian .post-content h3,.post-debian .post-content h4{color:#7d669e}
+.post-debian .post-content a{color:#7d669e;border-bottom:2px dashed #7d669e;}
+.post-debian .post-content a:hover{background-color:#7d669e;color:#fff}
+.post-debian .post-content strong{color:#7d669e}
+.post-debian .post-content p code,.post-debian .post-content li code{color:#7d669e}
+.post-debian .post-content blockquote{border-left:.313rem solid #7d669e}
+.post-debian .header-post,.post-debian .header-site{background-color:#7d669e;}
+.post-debian .header-post h1,.post-debian .header-site h1{text-shadow:3px 3px #64517f}
+.post-debian .bar-header .logo a{color:#7d669e}
+.post-debian .author .email{color:#7d669e}
+.post-debian .share a:hover svg{fill:#7d669e}
+@media only screen and (max-width:37.5rem){.post-debian body.search-overlay:after{background-color:#7d669e}
 }
-.post-svg .icon-menu{fill:#7d669e}
-.post-svg .cursos-menu{color:#7d669e}
-.post-svg .box-body h2{color:#7d669e}
-.post-svg .box-body .tags a{color:#7d669e;border:1px solid #7d669e}
-.post-svg aside{background-color:#7d669e;}
-.post-svg aside nav li a:hover{color:#7d669e}
-.post-svg .ribbon span{background-color:#7d669e;}
-.post-svg .ribbon span:before{border-left:3px solid #57476f;border-top:3px solid #57476f}
-.post-svg .ribbon span:after{border-right:3px solid #57476f;border-top:3px solid #57476f}
-.post-svg footer{background-color:#7d669e}
-.post-dev .title-category{color:#637a91}
-.post-dev .post-content h1,.post-dev .post-content h2,.post-dev .post-content h3,.post-dev .post-content h4{color:#637a91}
-.post-dev .post-content a{color:#637a91;border-bottom:2px dashed #637a91;}
-.post-dev .post-content a:hover{background-color:#637a91;color:#fff}
-.post-dev .post-content strong{color:#637a91}
-.post-dev .post-content p code,.post-dev .post-content li code{color:#637a91}
-.post-dev .post-content blockquote{border-left:.313rem solid #637a91}
-.post-dev .header-post,.post-dev .header-site{background-color:#637a91;}
-.post-dev .header-post h1,.post-dev .header-site h1{text-shadow:3px 3px #4f6274}
-.post-dev .bar-header .logo a{color:#637a91}
-.post-dev .author .email{color:#637a91}
-.post-dev .share a:hover svg{fill:#637a91}
-@media only screen and (max-width:37.5rem){.post-dev body.search-overlay:after{background-color:#637a91}
+.post-debian .icon-menu{fill:#7d669e}
+.post-debian .cursos-menu{color:#7d669e}
+.post-debian .box-body h2{color:#7d669e}
+.post-debian .box-body .tags a{color:#7d669e;border:1px solid #7d669e}
+.post-debian aside{background-color:#7d669e;}
+.post-debian aside nav li a:hover{color:#7d669e}
+.post-debian .ribbon span{background-color:#7d669e;}
+.post-debian .ribbon span:before{border-left:3px solid #57476f;border-top:3px solid #57476f}
+.post-debian .ribbon span:after{border-right:3px solid #57476f;border-top:3px solid #57476f}
+.post-debian footer{background-color:#7d669e}
+.post-linux .title-category{color:#637a91}
+.post-linux .post-content h1,.post-linux .post-content h2,.post-linux .post-content h3,.post-linux .post-content h4{color:#637a91}
+.post-linux .post-content a{color:#637a91;border-bottom:2px dashed #637a91;}
+.post-linux .post-content a:hover{background-color:#637a91;color:#fff}
+.post-linux .post-content strong{color:#637a91}
+.post-linux .post-content p code,.post-linux .post-content li code{color:#637a91}
+.post-linux .post-content blockquote{border-left:.313rem solid #637a91}
+.post-linux .header-post,.post-linux .header-site{background-color:#637a91;}
+.post-linux .header-post h1,.post-linux .header-site h1{text-shadow:3px 3px #4f6274}
+.post-linux .bar-header .logo a{color:#637a91}
+.post-linux .author .email{color:#637a91}
+.post-linux .share a:hover svg{fill:#637a91}
+@media only screen and (max-width:37.5rem){.post-linux body.search-overlay:after{background-color:#637a91}
 }
-.post-dev .icon-menu{fill:#637a91}
-.post-dev .cursos-menu{color:#637a91}
-.post-dev .box-body h2{color:#637a91}
-.post-dev .box-body .tags a{color:#637a91;border:1px solid #637a91}
-.post-dev aside{background-color:#637a91;}
-.post-dev aside nav li a:hover{color:#637a91}
-.post-dev .ribbon span{background-color:#637a91;}
-.post-dev .ribbon span:before{border-left:3px solid #455565;border-top:3px solid #455565}
-.post-dev .ribbon span:after{border-right:3px solid #455565;border-top:3px solid #455565}
-.post-dev footer{background-color:#637a91}
+.post-linux .icon-menu{fill:#637a91}
+.post-linux .cursos-menu{color:#637a91}
+.post-linux .box-body h2{color:#637a91}
+.post-linux .box-body .tags a{color:#637a91;border:1px solid #637a91}
+.post-linux aside{background-color:#637a91;}
+.post-linux aside nav li a:hover{color:#637a91}
+.post-linux .ribbon span{background-color:#637a91;}
+.post-linux .ribbon span:before{border-left:3px solid #455565;border-top:3px solid #455565}
+.post-linux .ribbon span:after{border-right:3px solid #455565;border-top:3px solid #455565}
+.post-linux footer{background-color:#637a91}
 .post-misc .title-category{color:#7aab13}
 .post-misc .post-content h1,.post-misc .post-content h2,.post-misc .post-content h3,.post-misc .post-content h4{color:#7aab13}
 .post-misc .post-content a{color:#7aab13;border-bottom:2px dashed #7aab13;}

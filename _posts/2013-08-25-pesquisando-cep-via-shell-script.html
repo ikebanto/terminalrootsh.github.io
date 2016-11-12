@@ -2,14 +2,17 @@
 layout: post
 title: Pesquisando CEP via Shell Script
 date: '2013-08-25T09:27:00.004-07:00'
+description: Pesquisando CEP via Shell Script
+main-class: 'bash'
+color: '#c2003a'
 author: The Bang Bash
 tags:
 - Shell Script
 - SED
 modified_time: '2014-11-04T13:19:47.272-08:00'
 thumbnail: http://2.bp.blogspot.com/-JSTYuG2Tqv8/Um2F0wbMqhI/AAAAAAAACf8/gRoJGkQSxMQ/s72-c/correios-shell.jpg
-blogger_id: tag:blogger.com,1999:blog-2422865715758349944.post-6200475837458153954
-blogger_orig_url: http://www.terminalroot.com.br/2013/08/pesquisando-cep-via-shell-script.html
+twitter_text: Pesquisando CEP via Shell Script
+introduction: Pesquisando CEP via Shell Script
 ---
 
 <div class="separator" style="clear: both; text-align: center;"><a href="http://2.bp.blogspot.com/-JSTYuG2Tqv8/Um2F0wbMqhI/AAAAAAAACf8/gRoJGkQSxMQ/s1600/correios-shell.jpg" imageanchor="1" style="clear: left; float: left; margin-bottom: 1em; margin-right: 1em;"><img border="0" src="http://2.bp.blogspot.com/-JSTYuG2Tqv8/Um2F0wbMqhI/AAAAAAAACf8/gRoJGkQSxMQ/s320/correios-shell.jpg" /></a></div><br /><br /><blockquote class="tr_bq"><span style="color: purple;"><b>Script simples para saber o Estado, Cidade, Bairro e Logradouro de um determinado CEP, explicações segue nos comentários do código.</b></span></blockquote><br /><br /><i>cep.sh</i><span style="color: #999999;"><u> <span style="color: #666666;">[PasteBin]</span></u></span><script src="http://pastebin.com/embed_js.php?i=tXfw4yrj"></script><br /><br /><i>cep.sh</i><span style="color: #666666;"><u>[CodeBlog]</u></span><br /><div class="adp">#!/bin/bash<br /># --------------------------------------<br /># ./cep.sh<br />#<br /># Pesquisando CEP via Shell Script<br />#<br /># Uso: ./cep.sh [CEP]<br />#<br /># Ex.: ./cep.sh 41630635<br />#<br /># Autor: Marcos da B. M. Oliveira , www.terminalroot.com.br<br /># Desde: Dom 25 Ago 2013 13:11:36 BRT<br /># Licença: GPL<br /># --------------------------------------<br /><br /># se não informa o CEP o script pára aqui<br />[ -z $1 ] &amp;&amp; echo -e '\e[40;31;1mÉ necessário informar o CEP\033[m' &amp;&amp; exit 1<br /><br />#url da pesquisa<br />url='http://cep.republicavirtual.com.br/web_cep.php?cep'<br /><br /># baixa o código fonte do xml e grava no arquivo cep.txt<br />lynx -source $url=$1 &gt; cep.txt<br /><br /># converte o arquivo para utf-8<br />iconv -f=iso_8859-1 -t=utf-8 cep.txt &gt; cep2.txt<br /><br /># limpa todas as tags XML<br />sed 's/&lt;[^&gt;]*&gt;//g' cep2.txt &gt; cep.txt<br /><br /># remove o arquivo da transformação do encode<br />rm -rf cep2.txt<br /><br /># apaga da linha 1 à 4 , pois são desnecessárias<br />sed -i '1,4d' cep.txt<br /><br /># apaga todas as linhas em branco<br />sed -i '/^$/d' cep.txt<br /><br /># imprime(com cores) os dados do arquivo gerado pelo dump, personalizado.<br />echo -e "\e[40;37;1m&nbsp; CIDADE-UF:\033[m \e[40;33;1m"$(sed -n '2p' cep.txt) $(sed -n '1p' cep.txt) "\033[m"<br />echo -e "\e[40;37;1m&nbsp;&nbsp;&nbsp;&nbsp; BAIRRO:\033[m \e[40;33;1m"$(sed -n '3p' cep.txt) "\033[m"<br />echo -e "\e[40;37;1m LOGRADOURO:\033[m \e[40;33;1m"$(sed -n '4p' cep.txt) $(sed -n '5p' cep.txt) "\033[m"<br /><br /># remove o arquivo<br />rm -rf cep.txt</div>

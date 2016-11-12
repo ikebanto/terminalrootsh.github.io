@@ -2,6 +2,9 @@
 layout: post
 title: Utilizando FTP por comando
 date: '2015-01-04T12:39:00.001-08:00'
+description: Utilizando FTP por comando
+main-class: 'linux'
+color: '#3b5998'
 author: Marcos Oliveira
 tags:
 - Linux
@@ -10,8 +13,8 @@ tags:
 - Redes
 modified_time: '2015-01-04T12:39:06.705-08:00'
 thumbnail: http://1.bp.blogspot.com/-xAtPNrIAZmA/VDsh_jH6FUI/AAAAAAAAA2I/hd13kwJ4_9I/s72-c/new-logo-tr.png
-blogger_id: tag:blogger.com,1999:blog-2422865715758349944.post-3103851158190978100
-blogger_orig_url: http://www.terminalroot.com.br/2015/01/utilizando-ftp-por-comando.html
+twitter_text: Utilizando FTP por comando
+introduction: Utilizando FTP por comando
 ---
 
 <div class="separator" style="clear: both; text-align: center;"><a href="http://1.bp.blogspot.com/-xAtPNrIAZmA/VDsh_jH6FUI/AAAAAAAAA2I/hd13kwJ4_9I/s1600/new-logo-tr.png" imageanchor="1" style="margin-left: 1em; margin-right: 1em;"><img border="0" src="http://1.bp.blogspot.com/-xAtPNrIAZmA/VDsh_jH6FUI/AAAAAAAAA2I/hd13kwJ4_9I/s320/new-logo-tr.png" height="200" width="200" /></a></div><b>&nbsp; Sabemos que o melhor software gráfico para manipular arquivos via <span style="color: blue;">FTP</span> é o <span style="background-color: red; color: white;">FileZilla</span>, porém sabemos que pra fazermos scripts em Shell, precisamos ter um vasto conhecimento em comandos para poder executálos, segue uma lista de comandos úteis para FTP que precisamos saber.</b><br /><b><br /></b><br /><blockquote class="tr_bq"><b>FTP significa File Transfer Protocol (Protocolo de Transferência de Arquivos), e é uma forma bastante rápida e versátil de transferir arquivos (também conhecidos como ficheiros), sendo uma das mais usadas na Internet.Pode referir-se tanto ao protocolo quanto ao programa que implementa este protocolo (Servidor FTP, neste caso, tradicionalmente aparece em letras minúsculas, por influência do programa de transferência de arquivos do Unix).</b></blockquote><b>Caso você deseje tornar seu computador um servidor FTP, para poder acessá-lo e pegar os arquivos do seu PC via FTP, você precisa instalar o ProFTPD (em Debians e Debians-Like, obs.: precisar configurar o arquivo de configuração para restringir acessos e depois reiniciá-lo, não vou pôr aqui, pois o post é somente sobre os comandos do FTP, mas você pode pesquisar na internet, é bem simples!):{% highlight bash %}# apt-get install proftpd{% endhighlight %}</b><br /><br /><b>Para conectar ao FTP de um servidor, executaremos conforme exemplo abaixo, para Hostname ou IP, respectivamente, será solicitado o usuário e a senha:</b><br /><b>{% highlight bash %}# ftp algumsite.com.br<br /># ftp 192.168.1.107{% endhighlight %}</b><br /><b><br /></b><br /><ul><li><b>Listar os arquivos: {% highlight bash %}ftp&gt; ls{% endhighlight %}</b></li><li><b>Fazer Download de um arquivo: {% highlight bash %}ftp&gt; get index.php{% endhighlight %}</b></li><li><b>Fazer Upload de um arquivo: {% highlight bash %}ftp&gt; put arquivo.html{% endhighlight %}</b></li><li><b>Entrar num diretório: {% highlight bash %}ftp&gt; cd pasta{% endhighlight %}</b></li><li><b>Deletar um arquivo: {% highlight bash %}ftp&gt; delete arquivo.php{% endhighlight %}</b></li><li><b>Sair(Deslogar): {% highlight bash %}ftp&gt; exit{% endhighlight %}</b></li></ul><b><br /></b><b>Entre outros menos utilizados!</b><br /><b><br /></b>

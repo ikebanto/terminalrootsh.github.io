@@ -2,6 +2,9 @@
 layout: post
 title: Como remover a senha de arquivos PDF
 date: '2014-10-20T16:26:00.002-07:00'
+description: Como remover a senha de arquivos PDF
+main-class: 'debian'
+color: '#de4508'
 author: Marcos Oliveira
 tags:
 - Dicas
@@ -9,8 +12,8 @@ tags:
 - Web Hacker
 modified_time: '2014-10-20T16:26:33.367-07:00'
 thumbnail: http://1.bp.blogspot.com/-xAtPNrIAZmA/VDsh_jH6FUI/AAAAAAAAA2I/hd13kwJ4_9I/s72-c/new-logo-tr.png
-blogger_id: tag:blogger.com,1999:blog-2422865715758349944.post-7306046377663512123
-blogger_orig_url: http://www.terminalroot.com.br/2014/10/como-remover-senha-de-arquivos-pdf.html
+twitter_text: Como remover a senha de arquivos PDF
+introduction: Como remover a senha de arquivos PDF
 ---
 
 <div class="separator" style="clear: both; text-align: center;"><a href="http://1.bp.blogspot.com/-xAtPNrIAZmA/VDsh_jH6FUI/AAAAAAAAA2I/hd13kwJ4_9I/s1600/new-logo-tr.png" imageanchor="1" style="margin-left: 1em; margin-right: 1em;"><img border="0" src="http://1.bp.blogspot.com/-xAtPNrIAZmA/VDsh_jH6FUI/AAAAAAAAA2I/hd13kwJ4_9I/s320/new-logo-tr.png" height="200" width="200" /></a></div><br /><blockquote class="tr_bq"><i>Normalmente, para remover a  senha de arquivos PDF no Linux, você pode usar seu leito de PDF  favorito, juntamente com a impressora virtual que geralmente é incluída  por padrão nas principais distribuições Linux. Basta abrir o documento  PDF protegido com um leitor de documentos como Evince, Okular e etc. Uma  vez que a senha foi digitada e você já abriu o PDF, basta ir na opção  “Imprimir” e selecionar a impressora virtual, para criar um documento  PDF que será salvo sem qualquer proteção.</i><br /><i>Como alternativa, é  possível remover a senha de um PDF usando a ferramenta de linha de  comando pdftops e assim criar um novo documento sem proteção de um jeito  bem prático. O programa, faz parte do pacote <a href="http://packages.ubuntu.com/lucid/xpdf-utils">xpdf-utils</a>. Veja a seguir, como usá-lo.</i></blockquote><h2>Como remover a senha de um arquivo PDF</h2>Para remover a senha de um arquivo PDF no Ubuntu, você deve fazer o seguinte:<br />Passo 1. Abra um terminal;<br />Passo 2. Primeiro você precisa instalar xpdf-utils, digitando o comando:<br /><pre>{% highlight bash %}sudo apt-get install xpdf-utils{% endhighlight %}</pre>Passo  3. Uma vez instalado, você pode começar a usá-lo seguindo o formato  abaixo, onde ao invés de “senha” você tem que inserir a senha do PDF, no  lugar de “documento_com_senha.pdf” colocar nome do documento PDF  protegido e em vez de “documento_sem_senha.pdf”, você deve colocar o  nome do novo arquivo PDF sem senha a ser criado;<br /><pre>{% highlight bash %}pdftops -upw senha documento_com_senha.pdf documento_sem_senha.pdf{% endhighlight %}</pre>Passo  4. Na prática, se você quiser remover a senha 123456 do documento  exemplo.pdf criando um documento exemplo_sem_senha.pdf, basta digitar:<br /><pre>{% highlight bash %}pdftops -upw 123456 exemplo.pdf exemplo_sem_senha.pdf{% endhighlight %}</pre>E está pronto! Sempre que precisar, você pode usar esse comando e retirar a senha do arquivo para facilitar o acesso a ele.<br />Via <a href="http://www.edivaldobrito.com.br/" target="_blank">http://www.edivaldobrito.com.br/</a>

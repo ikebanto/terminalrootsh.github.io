@@ -2,6 +2,9 @@
 layout: post
 title: Como obter seu IP via Terminal
 date: '2015-08-02T16:23:00.000-07:00'
+description: Como obter seu IP via Terminal
+main-class: 'linux'
+color: '#3b5998'
 author: Marcos Oliveira
 tags:
 - Linux
@@ -10,8 +13,8 @@ tags:
 - Redes
 modified_time: '2015-08-02T16:23:33.810-07:00'
 thumbnail: http://3.bp.blogspot.com/-kjLIvRZMAjs/Vb6kuj6Y5ZI/AAAAAAAABkE/jG6S8eib4hw/s72-c/como-obter-seu-ip-via-terminal.jpg
-blogger_id: tag:blogger.com,1999:blog-2422865715758349944.post-5028867145350559658
-blogger_orig_url: http://www.terminalroot.com.br/2015/08/como-obter-seu-ip-via-terminal.html
+twitter_text: Como obter seu IP via Terminal
+introduction: Como obter seu IP via Terminal
 ---
 
 <div class="separator" style="clear: both; text-align: center;"><a href="http://3.bp.blogspot.com/-kjLIvRZMAjs/Vb6kuj6Y5ZI/AAAAAAAABkE/jG6S8eib4hw/s1600/como-obter-seu-ip-via-terminal.jpg" imageanchor="1" style="margin-left: 1em; margin-right: 1em;"><img border="0" src="http://3.bp.blogspot.com/-kjLIvRZMAjs/Vb6kuj6Y5ZI/AAAAAAAABkE/jG6S8eib4hw/s1600/como-obter-seu-ip-via-terminal.jpg" /></a></div><br /><br /><br /><h3><span style="color: #666666;"><b>COMO OBTER SEU IP VIA TERMINAL</b></span></h3><b><br />Vamos supor que a sua máquina <span style="color: black;"><a href="http://www.terminalroot.com.br/search/label/Linux" target="_blank"><span style="font-size: large;"><span style="background-color: yellow;">Linux</span></span></a></span> está atrás de um roteador NAT. Então, o que é visível para a sua máquina é apenas um endereço IP da LAN atribuído a sua interface LAN. Então, como você pode detectar o público (ou WAN) endereço IP atribuído ao roteador NAT, de preferência a partir de linha de comando?<br /><br />Existem várias formas, primeiramente vamos mostrar usando o <a href="http://curl.haxx.se/" target="_blank"><span style="font-size: large;"><span style="color: blue;">curl</span></span></a> :<br /><br />Você precisa ter o curl instalado, basta usar o gerenciador de pacotes apt-get , mas caso você possua outra distro , tente com o seu gerenciador de pacotes correspondente , ou então <a href="http://curl.haxx.se/download.html" target="_blank"><span style="font-size: large;"><span style="color: blue;">baixe-o aqui</span></span></a>&nbsp; e compile::<br /><br />{% highlight bash %}$ su<br /># apt-get install curl{% endhighlight %}<br /><br />Uma lista de opções com o </b><i>curl</i><b>:<br /><br />{% highlight bash %}curl ifconfig.me<br />curl icanhazip.com<br />curl ident.me<br />curl ipecho.net/plain<br />curl whatismyip.akamai.com<br />curl tnx.nl/ip<br />curl myip.dnsomatic.com<br />curl ip.appspot.com<br />curl ip.telize.com<br />curl curlmyip.com<br />curl -s checkip.dyndns.org | sed 's/.*IP Address: \([0-9\.]*\).*/\1/g'{% endhighlight %}<br /><br />Você também pode obter utilizando uma das <a href="http://www.terminalroot.com.br/search/label/terminalroot" target="_blank"><span style="color: blue;"><span style="font-size: large;">Funções Terminal Root</span></span></a> , a função verip , <a href="http://www.terminalroot.com.br/2015/07/instale-as-funcoes-terminal-root-no-seu.html" target="_blank"><span style="font-size: x-large;"><span style="color: blue;">clique aqui para instalar as Funções Terminal Root</span></span></a>.<br /><br />Outra forma é uma linha de comando bem simples:<br /><br />{% highlight bash %}$ wget "http://goo.gl/KlxZlL" -O ip.txt 2&gt;/dev/null;cat ip.txt;rm ip.txt*;echo{% endhighlight %}<br /><br /><span style="font-size: x-large;">Ou se for IP local:</span><br /><br />{% highlight bash %}$ hostname -i{% endhighlight %}<br /><br /><span style="font-size: x-large;">Ou se for IP Público:</span><br /><br />{% highlight bash %}$ hostname -I{% endhighlight %}<br /></b><br /><blockquote><b>Existem várias outras formas, só utilizar sua criatividade e as milhares de ferramentas GNU/Linux e UNIX (sed, PIPE, cat, lynx, ifconfig ,...)</b></blockquote><b><br />Valeu!</b><br /><br /><br /><span style="color: #999999;"><i><span style="font-size: x-small;">Baseado e melhorado de: http://xmodulo.com/how-to-find-the-public-ip-address-from-command-line.html</span></i></span>

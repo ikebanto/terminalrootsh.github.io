@@ -2,13 +2,16 @@
 layout: post
 title: 'Shell Scripiting(Bash): Mudar extensões de múltiplos arquivos'
 date: '2013-08-18T18:37:00.000-07:00'
+description: 'Shell Scripiting(Bash): Mudar extensões de múltiplos arquivos'
+main-class: 'bash'
+color: '#c2003a'
 author: The Bang Bash
 tags:
 - Shell Script
 modified_time: '2014-11-04T13:20:12.638-08:00'
 thumbnail: http://3.bp.blogspot.com/-woP3euaZsNI/UhF1KXTYUQI/AAAAAAAACXg/XMnUNB9Lx3g/s72-c/shell+script.png
-blogger_id: tag:blogger.com,1999:blog-2422865715758349944.post-5594918020526162914
-blogger_orig_url: http://www.terminalroot.com.br/2013/08/shell-scripitingbash-mudar-extensoes-de.html
+twitter_text: 'Shell Scripiting(Bash): Mudar extensões de múltiplos arquivos'
+introduction: 'Shell Scripiting(Bash): Mudar extensões de múltiplos arquivos'
 ---
 
 <div class="separator" style="clear: both; text-align: center;"><a href="http://3.bp.blogspot.com/-woP3euaZsNI/UhF1KXTYUQI/AAAAAAAACXg/XMnUNB9Lx3g/s1600/shell+script.png" imageanchor="1" style="clear: left; float: left; margin-bottom: 1em; margin-right: 1em;"><img border="0" src="http://3.bp.blogspot.com/-woP3euaZsNI/UhF1KXTYUQI/AAAAAAAACXg/XMnUNB9Lx3g/s320/shell+script.png" /></a></div><br /><br /><blockquote class="tr_bq"><b>&nbsp;&nbsp;&nbsp; Olá galera, eu tentei usar o comando rename, mas tive alguns problemas.Esse comando consiste em renomear as extensões nos arquivos, não testei com o exemplo abaixo, mas em outros formatos, não obtive êxito, exemplo do rename:</b></blockquote><div class="adp"><b>$ rename .htm .html *.htm</b></div><b><br /><br /><i>O comando acima irá substituir todos os arquivos terminados em .htm por .html.</i><br /><br />&nbsp;&nbsp;&nbsp; <u><span style="color: purple;">Como não obtive êxito com o comando rename, decidi eu mesmo criar um script que fizesse tal mudança na extensão com segurança, eis então o script como ficou:</span></u><br />&nbsp;&nbsp;&nbsp; <br />&nbsp;&nbsp;&nbsp; <span style="color: blue;"><i>chgtxt.sh</i></span> (PasteBin)<br /><script src="http://pastebin.com/embed_js.php?i=8CwJ76YR"></script><br />&nbsp;&nbsp;&nbsp; <br />&nbsp;&nbsp;&nbsp; <span style="color: blue;"><i>chgtxt.sh</i></span> (CodeBlog)<br />&nbsp;&nbsp;&nbsp; <br />&nbsp;&nbsp;&nbsp; </b><br /><div class="adp"><b>#!/bin/bash<br /># ----------------------------------------------------------------------------<br /># Shell Scripiting(Bash): Mudar extensões de múltiplos arquivos<br /># Altera o formato de várias extensões de uma só vez<br /># Uso: ./chgext.sh [formato-antigo] [formato-novo]<br /><br /># Ex.:(alterar todos as extensões .jpeg para .jpg)<br />#<br />#./chgext.sh jpeg jpg<br />#<br /># Autor: Marcos da Boa Morte , www.terminalroot.com.br<br /># Desde: Dom 18 Ago 2013 22:19:26 BRT <br /># Versão: 1<br /># Licença: GPL<br /># ----------------------------------------------------------------------------<br />for file in *.$1; do<br />&nbsp;&nbsp;&nbsp; mv "$file" "${file/$1/$2}"<br />done</b></div><b><br />&nbsp;&nbsp;&nbsp; <br />&nbsp;&nbsp;&nbsp; <br />Documentação do comando rename:<br /><br /><a href="http://linuxcommand.org/man_pages/rename1.html" target="_blank">http://linuxcommand.org/man_pages/rename1.html</a></b>

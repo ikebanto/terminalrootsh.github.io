@@ -1,23 +1,23 @@
 ---
 layout: minimal
-title: "Séries"
+title: "Simulado LPI"
 permalink: /lpi/index.html
-image: '/assets/img/series.png'
+image: '/assets/img/news/lpi.png'
 description: "Faça o simulado LPI."
 ---
+<div align="center">
 
-{% for tag in site.categories %}
-  <span class="tag-title" id="{{ tag[0] | slugify }}">{{ tag[0] | capitalize }}</span>
-  <ul class="post-list">
-    {% assign pages_list = tag[1] %}
-    {% for post in pages_list reversed %}
-      {% if post.title != null %}
-      {% if group == null or group == post.group %}
-      <li><a href="{{ site.url }}{{ post.url }}">{{ post.title }}<span class="entry-date"><time datetime="{{ post.date | date_to_xmlschema }}" itemprop="datePublished">{{ post.date | date: "%B %d, %Y" }}</time></span></a></li>
-      {% endif %}
-      {% endif %}
-    {% endfor %}
-    {% assign pages_list = nil %}
-    {% assign group = nil %}
-  </ul>
-{% endfor %}
+<div class="separator" style="clear: both; text-align: center;">
+<img border="0" src="/assets/img/news/lpi.png" /></div>
+<blockquote style="padding: 10px;">
+<span style="font-size: large;"><b>O <span style="font-size: x-large;"><u><span style="color: purple;">SIMULADO</span></u></span> contém <span style="font-size: x-large;"><span style="color: blue;">10</span></span> <span style="color: blue;"><i>questões</i></span>, no final você terá a <span style="color: #073763;"><span style="font-size: x-large;">SURPRESA</span></span> da sua <u><i><span style="color: blue;">nota</span></i></u> e que tipo de <span style="color: orange;"><span style="font-size: x-large;">Tux</span></span> você representa ao mundo <span style="color: blue;"><span style="font-size: x-large;">GNU/Linux</span></span>, se quiser ainda pode <u>compartilhar</u> no <span style="color: blue;">Facebook</span>, sua nota com seus amigos!!!</b></span></blockquote>
+<br />
+<br />
+<br />
+<a href="https://www.blogger.com/blogger.g?blogID=2422865715758349944#" onclick="window.open('http://linuxshell.onlinewebshop.net/lpi/index.php', 'Simulado LPI Terminal Root', 'STATUS=NO, TOOLBAR=NO, LOCATION=NO, DIRECTORIES=NO, RESISABLE=NO, SCROLLBARS=YES, TOP=10, LEFT=10, WIDTH=810, HEIGHT=550');" class="mac">Clique aqui para iniciar o Simulado</a><br />
+<br />
+<br />
+<br />
+<i><b><span style="color: #38761d;">Boa sorte!</span></b></i>
+
+</div>

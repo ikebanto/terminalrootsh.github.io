@@ -2,6 +2,9 @@
 layout: post
 title: Game Shell [AULA 1] Movimentos básicos
 date: '2014-08-04T16:45:00.004-07:00'
+description: Game Shell [AULA 1] Movimentos básicos
+main-class: 'bash'
+color: '#c2003a'
 author: Marcos Oliveira
 tags:
 - Shell Script
@@ -9,8 +12,8 @@ tags:
 - Comandos
 modified_time: '2014-08-04T16:45:44.709-07:00'
 thumbnail: http://2.bp.blogspot.com/-VEIOYJCU3zU/U-Aawt5NmOI/AAAAAAAAAe8/b6BIdIGfAi8/s72-c/nSnake_Linux_terminal_game.jpeg
-blogger_id: tag:blogger.com,1999:blog-2422865715758349944.post-7770937999946640453
-blogger_orig_url: http://www.terminalroot.com.br/2014/08/game-shell-aula-1-movimentos-basicos.html
+twitter_text: Game Shell [AULA 1] Movimentos básicos
+introduction: Game Shell [AULA 1] Movimentos básicos
 ---
 
 <a href="http://2.bp.blogspot.com/-VEIOYJCU3zU/U-Aawt5NmOI/AAAAAAAAAe8/b6BIdIGfAi8/s1600/nSnake_Linux_terminal_game.jpeg" imageanchor="1"><img border="0" src="http://2.bp.blogspot.com/-VEIOYJCU3zU/U-Aawt5NmOI/AAAAAAAAAe8/b6BIdIGfAi8/s320/nSnake_Linux_terminal_game.jpeg" /></a><br /><br /><blockquote class="tr_bq"><u><i><span style="color: #4c1130;"><span style="font-family: Verdana,sans-serif;"><span style="font-size: x-large;"><b>Leia os comentários para entender o código. </b></span></span></span></i></u></blockquote><br /><b>Código no PasteBin:</b><br /><script src="http://pastebin.com/embed_js.php?i=SQE2G61k"></script> <br /><b>Código no Blogger:</b><br /><div class="adp">#!/bin/bash<br />#<br /># Game Shell-[AULA 1]:Movimentos básicos<br /># script para mover imagem pelo terminal<br /># início do entendimento a jogos em shell<br />#<br />tput clear; # limpa o terminal, mesmo que reset<br />tput civis; # cursor invisivel<br />Lin=$(($(tput lines) / 2)) # linha do meio<br />Col=$(($(tput cols) / 2))&nbsp; # coluna do meio<br />tput cup $Lin $Col; echo ♛ # coloca o cursor no meio<br /><br /># começa o laço/loop<br />while true <br />do<br />&nbsp;&nbsp;&nbsp; # ler a variável chave, a opção -s é para deixa a resposta invisível, usado geralmente para senhas no terminal<br />&nbsp;&nbsp;&nbsp; # a opção -n com 1 diz que ao apertar a letra uma(1) vez já execute o echo<br />&nbsp;&nbsp;&nbsp; # chave é a váriavel pro comando a ser executado<br />&nbsp;&nbsp;&nbsp; # esse read tem que ficar dentro do laço/loop<br />&nbsp;&nbsp;&nbsp; read -sn 1 Chave<br />&nbsp;&nbsp;&nbsp; tput cup $Lin $((Col &gt; 0 ? Col - 1 : 0)); echo -n "&nbsp; " # apaga<br />&nbsp;&nbsp;&nbsp; case $Chave in<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; [Aa])&nbsp;&nbsp; ((Col &gt; 0)) &amp;&amp; let Col-- ;;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; # Move para Esquerda, pressionando a letra A ou a<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; [Ss])&nbsp;&nbsp; ((Col &lt; $(tput cols))) &amp;&amp; let Col++ ;;&nbsp; # Move para Direita, pressionando a letra S ou s<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; [Zz])&nbsp;&nbsp; ((Lin &lt; $(tput lines))) &amp;&amp; let Lin++ ;; # Move para Baixo, pressionando a letra W ou w<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; [Ww])&nbsp;&nbsp; ((Lin &gt; 0)) &amp;&amp; let Lin-- ;;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; # Move para Cima, pressionando a letra Q ou q<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; [Qq])&nbsp;&nbsp; tput reset; echo; exit<br />&nbsp;&nbsp;&nbsp; esac<br />&nbsp;&nbsp;&nbsp; # apaga caracteres, veja aqui https://www.gnu.org/software/termutils/manual/termutils-2.0/html_chapter/tput_1.html<br />&nbsp;&nbsp;&nbsp; tput ech 1<br />&nbsp;&nbsp;&nbsp; <br />&nbsp;&nbsp;&nbsp; # comando<br />&nbsp;&nbsp;&nbsp; tput cup $Lin $Col<br />&nbsp;&nbsp;&nbsp; <br />&nbsp;&nbsp;&nbsp; # exibe durante movimento<br />&nbsp;&nbsp;&nbsp; echo -n ▲<br />&nbsp;&nbsp;&nbsp; <br /># finaliza o laço/loop<br />done</div>
