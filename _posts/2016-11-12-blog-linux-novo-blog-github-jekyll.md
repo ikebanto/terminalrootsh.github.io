@@ -18,7 +18,7 @@ introduction:	"Nossa nova aventura em busca de tecnologia mais moderna e funcion
 
 ![Novo Blog Terminal Root com GitHub e Jekyll](/assets/img/novo-blog/blog-linux-github-jekyll.jpg)
 
-#Salve salve, rapaziada!!!
+# Salve salve, rapaziada!!!
 
 Nesse lance de *bloggin* , comecei no [Blogger](https://www.blogger.com), logo depois comprei um curso de [Wordpress](https://wordpress.org/) e achei magnífico, mas o meu descontentamento com as falhas de segurança do Wordpress me fez retornar ao Blogger, mas não aguentava mais a lentidão e a bagunça do Blogger, então mudei pro [Jekyll](http://jekyllrb.com/) e o hospedagem no [GitHub](https://github.com/), que é o que há no momento de novidade. Aprendi desenvolvimento, escrevendo Apicativos Locais de Contabilidade, minha área é Contábeis, e o conhecimento de Mobile e Web também são fundamentais também.
 
@@ -68,7 +68,7 @@ git clone endereço-do-repositório
 {% endhighlight %}
 
 
-##Modifique o tema e mude as configurações pra suas
+## Modifique o tema e mude as configurações pra suas
 
 O diretório do clone terá essa estrutura padrão, mais ou menos:
 
@@ -90,23 +90,23 @@ O diretório do clone terá essa estrutura padrão, mais ou menos:
 
 Granulando cada um dos itens:
 
-####_config.yml
+#### _config.yml
 
 Configurações gerais do site, como título e descrição.    
 
-####index.html
+#### index.html
 
 A página incial
 
-####_includes
+#### _includes
 
 Nele fica tudo que você deseja incluir: header, footer,...
 
-####_layouts
+#### _layouts
 
 Tipo o _includes , só que diferente , mas a mesma coisa =)
 	
-####_posts
+#### _posts
 
 Aqui vão todas as suas postagens.
 Você pode escrever em markdown, que é infinitamente simples e recomendável, e usar HTML quando e se precisar.
@@ -118,7 +118,7 @@ YYYY-MM-DD-titulo.md
 
 Por exemplo, 2011-10-25-meu-primeiro-post.md, informa ao Jekyll a data 25 de Outubro de 2011 e o título “Meu Primeiro Post”.
 
-####_site
+#### _site
 
 É nesta pasta que o Jekyll gera todos os arquivos que efetivamente serão servidos. Você pode ignorá-la sem remorso.
 Tudo aqui é constantemente reescrito, de forma que qualquer alteração que você fizer nesta pasta será perdida para todo o sempre.
@@ -150,7 +150,7 @@ git push
 
 Coloque seu login e senha, assim que solicitado e visualize depois as mudanças online no seu endereço:
 
-###seu-nome.github.io
+### seu-nome.github.io
 
 Você ainda pode criar no diretório raiz do seu projeto, arquivos que complementarão seu blog: *404.md, sitemap.xml, feed.xml ,...*
 Pequise sobre as configurações ou dê um fork de algum projeto já pronto!
@@ -172,7 +172,7 @@ JekyllImport::Importers::Blogger.run({
 
 [Nesse link](http://import.jekyllrb.com/docs/installation/) possui todos os comandos para importação de qualquer CMS: __Wodpress, Drupal, Joomla,__ ... veja ao lado da página.
 
-#Integrando comentários do Disqus com Jekyll
+# Integrando comentários do Disqus com Jekyll
 
 O [Disqus](https://disqus.com/websites/) é uma plataforma de comentários bem útil e fácil de implementar. Eu até testei o Muut, mas ele não é tão completo e bonitão.
 
@@ -208,4 +208,4 @@ if(str.match(/.html/)){
 {% endhighlight %}
 
 
-#Abraços!
+# Abraços!
