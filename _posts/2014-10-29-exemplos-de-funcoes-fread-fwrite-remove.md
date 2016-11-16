@@ -118,7 +118,7 @@ return(0);
 {% endhighlight %}
 
 
-#fprintf() e fscanf()
+# fprintf() e fscanf()
 
 Os fluxos padrão em arquivos permitem ao programador ler e escrever em arquivos da maneira padrão com a qual o já líamos e escrevíamos na tela.
 
@@ -131,7 +131,7 @@ Protótipo:
 
 Como já poderíamos esperar, a única diferença do protótipo de *fprintf()* para o de *printf()* é a especificação do arquivo destino através do ponteiro de arquivo.
 
-## #fscanf():
+## fscanf():
 
 A função [fscanf()] funciona como a função [scanf()]. A diferença é que [fscanf()] lê de um arquivo e não do teclado do computador.
 
