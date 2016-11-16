@@ -14,7 +14,7 @@ twitter_text: 'Exemplos de funções: fread(), fwrite(), remove() e outras em C'
 introduction: 'Exemplos de funções: fread(), fwrite(), remove() e outras em C'
 ---
 
-##fread()
+#fread()
 
 Podemos escrever e ler blocos de dados. Para tanto, temos as funções fread() e fwrite(). O protótipo de fread() é:
 
@@ -51,7 +51,7 @@ return(0);
 }
 {% endhighlight %}
 
-##fwrite()
+#fwrite()
 
 A função fwrite() funciona como a sua companheira fread(), porém escrevendo no arquivo. Seu protótipo é:
 
@@ -90,7 +90,7 @@ return(0);
 }
 {% endhighlight %}
 
-##remove()
+#remove()
   
 
 Protótipo:
@@ -122,7 +122,7 @@ return(0);
 
 Os fluxos padrão em arquivos permitem ao programador ler e escrever em arquivos da maneira padrão com a qual o já líamos e escrevíamos na tela.
 
-##fprintf():
+#fprintf():
 
 A função *fprintf()* funciona como a *função printf()*. A diferença é que a saída de *fprintf()* é um arquivo e não a tela do computador. 
 
@@ -131,7 +131,7 @@ Protótipo:
 
 Como já poderíamos esperar, a única diferença do protótipo de *fprintf()* para o de *printf()* é a especificação do arquivo destino através do ponteiro de arquivo.
 
-###fscanf():
+##fscanf():
 
 A função [fscanf()] funciona como a função [scanf()]. A diferença é que [fscanf()] lê de um arquivo e não do teclado do computador.
 
@@ -167,7 +167,7 @@ int main()
 }
 {% endhighlight %}
 
-##fputs()
+#fputs()
 
 Os C biblioteca de funções int fputs (const char * str, FILE * stream) escreve uma string para o fluxo especificado até, mas não incluindo o caractere nulo.
 
@@ -213,7 +213,7 @@ return(0);
 Vamos compilar e executar o programa acima, isso vai criar um arquivo.txt arquivo com o seguinte conteúdo: 
 Esta é a programação c.Esta é uma linguagem de programação do sistema.
 
-##fgets()
+#fgets()
 
 Para se ler uma string num arquivo podemos usar fgets() cujo protótipo é:
 
@@ -260,7 +260,7 @@ int main()
 {% endhighlight %}
 
 
-##ferror() e perror()
+#ferror() e perror()
 
 Protótipo de ferror:
 
@@ -302,7 +302,7 @@ fclose(pf);
 {% endhighlight %}
 
 
-##fseek()
+#fseek()
 
 Para se fazer procuras e acessos randômicos em arquivos usa-se a função fseek(). Esta move a posição corrente de leitura ou escrita no arquivo de um valor especificado, a partir de um ponto especificado. Seu protótipo é:
 
@@ -319,7 +319,7 @@ O parâmetro origem determina a partir de onde os numbytes de movimentação ser
                                                        
 Tendo-se definido a partir de onde irá se contar, numbytes determina quantos bytes de deslocamento serão dados na posição atual.
 
-##rewind()
+#rewind()
 
 A função rewind() de protótipo:
 
