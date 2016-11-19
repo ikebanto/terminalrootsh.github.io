@@ -31,8 +31,7 @@ mkdir TerminalRoot
 for i in $(seq 1 15); do echo "Terminal Root é GNU/Linux!" >> TerminalRoot/TerminalRoot$i.txt; done;
 {% endhighlight %}
 
-### Comando básico, se houver arquivos duplicados naquele diretório (ele não irá ver recursivamente) ele mostrará, se não voltará a exibir
-nome e host no prompt
+### Comando básico, se houver arquivos duplicados naquele diretório (ele não irá ver recursivamente) ele mostrará, se não voltará a exibir nome e host no prompt
 
 {% highlight bash %}
 fdupes [diretório]
@@ -41,10 +40,15 @@ fdupes [diretório]
 Opções
 
 >-r	procura recursivamente
+
 >-S	mostra o tamanho de cada arquivo
+
 >-Sr ambos juntos
+
 >-d	Para excluir os arquivos duplicados, preservando uma cópia, você pode usar a opção '-d'. Deve-se tomar cuidado ao usar esta opção, senão você pode acabar perdendo arquivos necessários ou dados , pois esse processo é irreversível.
->-f	protege um arquivo , se eles estiverem nomeados como: nome, cópia, 2° cópia, 3° cópia,... tendeu?
+
+>-f	protege um arquivo , se eles estiverem nomeados como: nome, cópia, 2° cópia, 3° cópia,...
+
 >-h 	ajuda
 
 ### Ele lhe pergunta qual arquivo você deseja manter:
@@ -59,6 +63,7 @@ Set 1 of 1, preserve files [1 - 4, all]: 2-4
 {% endhighlight %}
 
 ### se vc digitar 2 , significa que o segundo arquivo será preservado, justamente o .TerminalRoot1.txt
+
 ### se vc digitar 1 , significa que o segundo arquivo será preservado, justamente o .TerminalRoot13.txt
 
 
@@ -76,11 +81,11 @@ __E se quiser criar até um script depois para removê-los__.
 man fdupes
 {% endhighlight %}
 
-# Softwares similares, outra forma
+## Softwares similares, outra forma
 
-## FSlint
+# FSlint
 
-# Instalação
+### Instalação
 
 {% highlight bash %}
 apt-get install fslint -y
@@ -109,6 +114,9 @@ apt-cache show fslint
 [https://is.gd/I4plGa](https://is.gd/I4plGa "FSlint")
 
 __[+]Sobre fdupes__
+
 *https://www.cyberciti.biz/faq/linux-unix-finds-duplicate-files-in-given-directories/*
+
 *http://www.tecmint.com/fdupes-find-and-delete-duplicate-files-in-linux/*
+
 *http://www.tecmint.com/fslint-find-and-remove-duplicate-unwanted-files-in-linux/*
