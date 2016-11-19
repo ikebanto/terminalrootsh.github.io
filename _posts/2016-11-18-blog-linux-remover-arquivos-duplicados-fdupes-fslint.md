@@ -2,7 +2,7 @@
 layout: post
 title: "Veja Como remover arquivos duplicados no seu PC"
 date: 2016-11-18 23:33:26
-image: '/assets/img/duplicados/fslint-gui.jpg'
+image: '/assets/img/duplicados/fslint-gui.png'
 description: "Fdupes é um utilitário Linux capaz de encontrar arquivos duplicados no conjunto de diretórios e subdiretórios."
 main-class: 'linux'
 color: '#34a853'
@@ -54,10 +54,10 @@ Opções
 ### Ele lhe pergunta qual arquivo você deseja manter:
 
 {% highlight bash %}
-   [-] arquivos/.TerminalRoot13.txt
-   [-] arquivos/.TerminalRoot1.txt
-   [-] arquivos/.TerminalRoot9.txt
-   [-] arquivos/.TerminalRoot6.txt
+   [-] TerminalRoot/.TerminalRoot13.txt
+   [-] TerminalRoot/.TerminalRoot1.txt
+   [-] TerminalRoot/.TerminalRoot9.txt
+   [-] TerminalRoot/.TerminalRoot6.txt
 
 Set 1 of 1, preserve files [1 - 4, all]: 2-4
 {% endhighlight %}
@@ -100,7 +100,7 @@ fslint-gui
 ## Aplicativo gráfico
 
 
-![FSlint](/assets/img/duplicados/fslint-gui.jpg "FSlint")
+![FSlint](/assets/img/duplicados/fslint-gui.png "FSlint")
 
 # Para obter informções dele:
 
@@ -113,8 +113,8 @@ apt-cache show fslint
 
 [https://is.gd/I4plGa](https://is.gd/I4plGa "FSlint")
 
-__[+]Sobre fdupes__
+__[+]Sobre__
 
-<sub>https://www.cyberciti.biz/faq/linux-unix-finds-duplicate-files-in-given-directories/<br />
+<sub style="font-size: 8px;">https://www.cyberciti.biz/faq/linux-unix-finds-duplicate-files-in-given-directories/<br />
 http://www.tecmint.com/fdupes-find-and-delete-duplicate-files-in-linux/<br />
-*http://www.tecmint.com/fslint-find-and-remove-duplicate-unwanted-files-in-linux/</sub>
+http://www.tecmint.com/fslint-find-and-remove-duplicate-unwanted-files-in-linux/</sub>
