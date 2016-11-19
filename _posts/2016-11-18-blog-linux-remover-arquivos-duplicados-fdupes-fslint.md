@@ -3,15 +3,15 @@ layout: post
 title: "Veja Como remover arquivos duplicados no seu PC"
 date: 2016-11-18 23:33:26
 image: '/assets/img/duplicados/fslint.jpg'
-description: "Fdupes é um utilitário Linux capaz de encontrar arquivos duplicados no conjunto de diretórios e subdiretórios. Fdupes reconhecer duplicatas através da comparação MD5 assinatura de arquivos seguido por um byte-to-byte comparação. Um monte de opções podem ser passadas com Fdupes para listar, excluir e substituir os arquivos com hardlinks para duplicatas."
+description: "Fdupes é um utilitário Linux capaz de encontrar arquivos duplicados no conjunto de diretórios e subdiretórios."
 main-class: 'linux'
 color: '#34a853'
 tags:
 - Linux
 - Dicas
 categories:
-twitter_text: "Fdupes é um utilitário Linux capaz de encontrar arquivos duplicados no conjunto de diretórios e subdiretórios. Fdupes reconhecer duplicatas através da comparação MD5 assinatura de arquivos seguido por um byte-to-byte comparação. Um monte de opções podem ser passadas com Fdupes para listar, excluir e substituir os arquivos com hardlinks para duplicatas."
-introduction: "Fdupes é um utilitário Linux capaz de encontrar arquivos duplicados no conjunto de diretórios e subdiretórios. Fdupes reconhecer duplicatas através da comparação MD5 assinatura de arquivos seguido por um byte-to-byte comparação. Um monte de opções podem ser passadas com Fdupes para listar, excluir e substituir os arquivos com hardlinks para duplicatas."
+twitter_text: "Fdupes é um utilitário Linux capaz de encontrar arquivos duplicados no conjunto de diretórios e subdiretórios."
+introduction: "Fdupes é um utilitário Linux capaz de encontrar arquivos duplicados no conjunto de diretórios e subdiretórios."
 ---
 
 # O que é
@@ -20,7 +20,9 @@ introduction: "Fdupes é um utilitário Linux capaz de encontrar arquivos duplic
 
 # Instalação
 
+{% highlight bash %}
 apt-get install fdupes -y
+{% endhighlight %}
 
 # Ferramenta para testes
 
