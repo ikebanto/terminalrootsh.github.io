@@ -115,8 +115,6 @@ apt-cache show fslint
 
 __[+]Sobre fdupes__
 
-*https://www.cyberciti.biz/faq/linux-unix-finds-duplicate-files-in-given-directories/*
-
-*http://www.tecmint.com/fdupes-find-and-delete-duplicate-files-in-linux/*
-
-*http://www.tecmint.com/fslint-find-and-remove-duplicate-unwanted-files-in-linux/*
+<sub>https://www.cyberciti.biz/faq/linux-unix-finds-duplicate-files-in-given-directories/<br />
+http://www.tecmint.com/fdupes-find-and-delete-duplicate-files-in-linux/<br />
+*http://www.tecmint.com/fslint-find-and-remove-duplicate-unwanted-files-in-linux/</sub>
