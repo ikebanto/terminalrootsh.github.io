@@ -2,7 +2,7 @@
 layout: post
 title: "Veja Como remover arquivos duplicados no seu PC"
 date: 2016-11-18 23:33:26
-image: '/assets/img/duplicados/fslint.jpg'
+image: '/assets/img/duplicados/fslint-gui.jpg'
 description: "Fdupes é um utilitário Linux capaz de encontrar arquivos duplicados no conjunto de diretórios e subdiretórios."
 main-class: 'linux'
 color: '#34a853'
@@ -100,7 +100,7 @@ fslint-gui
 ## Aplicativo gráfico
 
 
-![FSlint](/assets/img/duplicados/fslint.jpg "FSlint")
+![FSlint](/assets/img/duplicados/fslint-gui.jpg "FSlint")
 
 # Para obter informções dele:
 
