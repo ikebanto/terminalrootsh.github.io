@@ -102,7 +102,7 @@ fslint-gui
 
 ![FSlint](/assets/img/duplicados/fslint-gui.png "FSlint")
 
-# Para obter informções dele:
+# Para obter informações dele:
 
 {% highlight bash %}
 apt-cache search fslint
