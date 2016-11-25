@@ -18,11 +18,11 @@ introduction: Gerando Números para Mega-Sena com Shell Script
 <div class="separator" style="clear: both; text-align: center;">
 
 
-<img border="0" src="http://4.bp.blogspot.com/-ccoEm0iW6XA/UNziF4qSoXI/AAAAAAAAA5s/YSfY3voGB1Q/s320/megasena.png" height="78" width="288" />
+<img border="0" src="/assets/img/sh-rep-mega/blog-linux-mega-sena-bash-repub.png" />
 
 </div>
 
-<blockquote>Olá galera, aqui vou mostrar uma Função em Shell Script que eu criei para gerar 6 números aleatórios para a Mega-Sena.O script é simples, no entanto, precisa de alguns ajustes como: 1- não gerar números repetidos; 2 - não gerar o número 0, quem tiver uma dica é só melhorar que eu reblogo.Segue imagem, código e código no PasteBin.Atenção para os comentários para entendimento.</blockquote>
+<blockquote>Olá galera, aqui vou mostrar um Sccript em Bash para gerar números para Mega-Sena, o Script foi melhorado e enviado por <strong>Diego Rocha</strong>.</blockquote>
 
 <div class="separator" style="clear: both; text-align: center;">
 
@@ -34,32 +34,140 @@ introduction: Gerando Números para Mega-Sena com Shell Script
 {% highlight bash %}
 
 #!/bin/bash
-# ----------------------------------------------------------------------------
-# Autor: Marcos da B.M. Oliveira, http://www.terminalroot.com.br/
-# Gerando Números para Mega-Sena com Shell Script
-# ./megasena.sh
-# Desde: Sex 09 Jan 2015 18:25:32 BRST 
-# Versão: 1
-# Licença: GPL
-# ----------------------------------------------------------------------------
- 
-#criamos a função
-function megasena(){
-        #formamos um loop para gerar  números
-        for ((i = 0; i <= 6; i++))
-                do     
-                        # O -en é para gerar na mesma linha e gerar cores
-                        # configuramos a cor de fundo desejada e chamamos de 0 a 60 a variável $RANDOM
-                        echo -en " \\033[42;1;37m $(($RANDOM % 61)) \\033[0m"                    
-        done
+
+# Autor: Diego Brum 
+# email: diego.brum@gmail.com
+
+
+# Numeros sugeridos da mega sena
+n1=0
+n2=0
+n3=0
+n4=0
+n5=0
+n6=0
+
+# Numeros obtidos do ultimo sorteio disponivel no site da caixa
+
+mega1=0
+mega2=0
+mega3=0
+mega4=0
+mega5=0
+mega6=0
+
+
+
+function ordenador {
+
+	echo " " > var1.txt
+
+	printf "%s\n" $@ | sort -n >> var1.txt
+
+	todos=""
+
+	for y in $(cat var1.txt); do
+
+		todos="$todos $y"
+		
+	done
+
+	echo -en " \033[42;1;34m $todos \033[0m \n"
 }
-# titulo com cor azul
-echo  -e " \\033[1;34m Números gerados:  \\033[0m"
-# chamamos a função
-megasena
-#pulamos uma linha
+
+function acertos {
+
+	qtd_acertos=0
+
+	for r in $(cat var1.txt); do
+
+		if [[ $r -eq $mega1 ]] || [[ $r -eq $mega2 ]] || [[ $r -eq $mega3 ]] || [[ $r -eq $mega4 ]] || [[ $r -eq $mega5 ]] || [[ $r -eq $mega6 ]]; then
+					
+			((qtd_acertos+=1))
+		fi
+	done
+
+	echo "Você teve $qtd_acertos acerto(s)"
+}
+
+function sugestao {
+
+echo "Sugestão de jogo:"
+
+for x in {1..6}; do
+
+
+	num=$(echo "$((RANDOM % 61))")
+
+
+	while [[ $num -eq 0 ]] || [[ $num -eq $n1 ]] || [[ $num -eq $n2 ]] || [[ $num -eq $n3 ]] || [[ $num -eq $n4 ]] || [[ $num -eq $n5 ]] || [[ $num -eq $n6 ]] 
+	do
+
+		num=$(echo "$((RANDOM % 61))")
+
+	done
+
+	case "$x" in
+		
+		1) n1=$num
+			;;
+
+		2) n2=$num
+			;;
+
+		3) n3=$num
+			;;
+
+		4) n4=$num
+			;;	
+
+		5) n5=$num
+			;;
+
+		6) n6=$num
+			;;
+	esac
+done
+
+ordenador "$n1 $n2 $n3 $n4 $n5 $n6"
+
+}
+
+function ultimoResultadoMegaSena {
+
+	wget http://loterias.caixa.gov.br/wps/portal/loterias/landing/megasena/ --output-document=resultado_mega.txt -q
+
+	echo "Resultado do último concurso:"
+
+	mega1=$(cat resultado_mega.txt |grep "numbers mega-sena" |awk -F "</*li>|</*li>" '/<\/*l[i]>.*[1-9][1-9]/ {print $2}')
+	mega2=$(cat resultado_mega.txt |grep "numbers mega-sena" |awk -F "</*li>|</*li>" '/<\/*l[i]>.*[1-9][1-9]/ {print $4}')
+	mega3=$(cat resultado_mega.txt |grep "numbers mega-sena" |awk -F "</*li>|</*li>" '/<\/*l[i]>.*[1-9][1-9]/ {print $6}')
+	mega4=$(cat resultado_mega.txt |grep "numbers mega-sena" |awk -F "</*li>|</*li>" '/<\/*l[i]>.*[1-9][1-9]/ {print $8}')
+	mega5=$(cat resultado_mega.txt |grep "numbers mega-sena" |awk -F "</*li>|</*li>" '/<\/*l[i]>.*[1-9][1-9]/ {print $10}')
+	mega6=$(cat resultado_mega.txt |grep "numbers mega-sena" |awk -F "</*li>|</*li>" '/<\/*l[i]>.*[1-9][1-9]/ {print $12}')
+
+
+	echo -en " \033[42;1;34m $mega1 $mega2 $mega3 $mega4 $mega5 $mega6  \033[0m \n"
+}
+
 echo
 
+ultimoResultadoMegaSena
+
+echo
+
+sugestao
+
+echo
+
+acertos
+
+echo
+
+exit 0
+
 {% endhighlight %}
+
+<h1>Dica enviada por: Diego Rocha <diego.brum@gmail.com></h1>
 
 
