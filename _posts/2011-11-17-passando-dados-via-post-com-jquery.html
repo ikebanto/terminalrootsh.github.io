@@ -31,7 +31,7 @@ introduction: Passando dados via POST com JQuery
 
 
 {% highlight html %}
- &lt;div id="form"&gt;  &lt;input type="hidden" name="nome" value="Marcos" class="nome" /&gt;  &lt;input type="submit" name="exibir" value="Minhas Informações" class="exibir" /&gt;   &lt;/div&gt;&lt;!--FORM--&gt; &lt;div id="mostrar" style="display:none;"&gt;&lt;/div&gt;
+ <div id="form">  <input type="hidden" name="nome" value="Marcos" class="nome" />  <input type="submit" name="exibir" value="Minhas Informações" class="exibir" />   </div><!--FORM--> <div id="mostrar" style="display:none;"></div>
 {% endhighlight %}
 
 
@@ -41,7 +41,7 @@ introduction: Passando dados via POST com JQuery
 
 
 {% highlight html %}
- &lt;script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.4.2/jquery.min.js"&gt;&lt;/script&gt; &lt;script type="text/javascript" src="carregamento.js"&gt;&lt;/script&gt;
+ <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.4.2/jquery.min.js"></script> <script type="text/javascript" src="carregamento.js"></script>
 {% endhighlight %}
 
 
@@ -61,7 +61,7 @@ introduction: Passando dados via POST com JQuery
 
 
 {% highlight html %}
-&lt;?php extract($_POST); if(isset($exibir)){ echo "O valor do nome é: ".$nome; }else{ echo "Sem valor no isset"; }?&gt;
+<?php extract($_POST); if(isset($exibir)){ echo "O valor do nome é: ".$nome; }else{ echo "Sem valor no isset"; }?>
 {% endhighlight %}
 
 
