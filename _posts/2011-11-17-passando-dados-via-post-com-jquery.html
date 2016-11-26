@@ -30,8 +30,8 @@ introduction: Passando dados via POST com JQuery
 
 
 
-{% highlight bash %}
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &lt;div id="form"&gt;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &lt;input type="hidden" name="nome" value="Marcos" class="nome" /&gt;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &lt;input type="submit" name="exibir" value="Minhas Informações" class="exibir" /&gt;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &lt;/div&gt;&lt;!--FORM--&gt;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &lt;div id="mostrar" style="display:none;"&gt;&lt;/div&gt;
+{% highlight html %}
+ &lt;div id="form"&gt;  &lt;input type="hidden" name="nome" value="Marcos" class="nome" /&gt;  &lt;input type="submit" name="exibir" value="Minhas Informações" class="exibir" /&gt;   &lt;/div&gt;&lt;!--FORM--&gt; &lt;div id="mostrar" style="display:none;"&gt;&lt;/div&gt;
 {% endhighlight %}
 
 
@@ -40,8 +40,8 @@ introduction: Passando dados via POST com JQuery
 
 
 
-{% highlight bash %}
-&nbsp; &lt;script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.4.2/jquery.min.js"&gt;&lt;/script&gt;&nbsp; &lt;script type="text/javascript" src="carregamento.js"&gt;&lt;/script&gt;
+{% highlight html %}
+ &lt;script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.4.2/jquery.min.js"&gt;&lt;/script&gt; &lt;script type="text/javascript" src="carregamento.js"&gt;&lt;/script&gt;
 {% endhighlight %}
 
 
@@ -50,8 +50,8 @@ introduction: Passando dados via POST com JQuery
 
 
 
-{% highlight bash %}
-/*prestar atenção na utilização dos parenteses e chaves*/ /*iniciamos com $ pra chamar o JQuery e dentro dele iniciamos uma função*/$(function(){/*se clicar na tag de class exibir, iniciamos um uma "sub-função"*/&nbsp;$(".exibir").click(function(){&nbsp;/*escondemos com fadeOut a tag com id form, podiamos usar tb o hide("fast ou slow"), o 10 é a velocidade a escondê-la*/&nbsp;&nbsp; $("#form").fadeOut(10);&nbsp;&nbsp; /*definimos as variaveis e informaos as class de CSS contém um valor .val*/&nbsp;&nbsp; var nome = $(".nome").val();&nbsp;&nbsp; var exibir = $(".exibir").val();&nbsp;&nbsp; /*setamos o método POST informamos o arquivo PHP que irá retornar as informaçoẽs, para isso criamos a function retorno, e passmos variavel que criamos e informamos o nome dela*/&nbsp;&nbsp; $.post("dados.php", {nome: nome, exibir: exibir}, function(mostrar){&nbsp;&nbsp; /*a div mostrar que estava com display none agora será exibida, pois nela estará os dados do dados.php*/&nbsp;&nbsp; $("#mostrar").fadeIn(2000).html(mostrar)&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; });&nbsp; });});
+{% highlight html %}
+/*prestar atenção na utilização dos parenteses e chaves*/ /*iniciamos com $ pra chamar o JQuery e dentro dele iniciamos uma função*/$(function(){/*se clicar na tag de class exibir, iniciamos um uma "sub-função"*/$(".exibir").click(function(){/*escondemos com fadeOut a tag com id form, podiamos usar tb o hide("fast ou slow"), o 10 é a velocidade a escondê-la*/ $("#form").fadeOut(10); /*definimos as variaveis e informaos as class de CSS contém um valor .val*/ var nome = $(".nome").val(); var exibir = $(".exibir").val(); /*setamos o método POST informamos o arquivo PHP que irá retornar as informaçoẽs, para isso criamos a function retorno, e passmos variavel que criamos e informamos o nome dela*/ $.post("dados.php", {nome: nome, exibir: exibir}, function(mostrar){ /*a div mostrar que estava com display none agora será exibida, pois nela estará os dados do dados.php*/ $("#mostrar").fadeIn(2000).html(mostrar)   }); });});
 {% endhighlight %}
 
 
@@ -60,8 +60,8 @@ introduction: Passando dados via POST com JQuery
 
 
 
-{% highlight bash %}
-&lt;?php&nbsp; extract($_POST);&nbsp; if(isset($exibir)){&nbsp;&nbsp;&nbsp; echo "O valor do nome é: ".$nome;&nbsp; }else{&nbsp;&nbsp;&nbsp; echo "Sem valor no isset";&nbsp; }?&gt;
+{% highlight html %}
+&lt;?php extract($_POST); if(isset($exibir)){ echo "O valor do nome é: ".$nome; }else{ echo "Sem valor no isset"; }?&gt;
 {% endhighlight %}
 
 
