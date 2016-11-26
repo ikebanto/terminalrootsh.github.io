@@ -56,6 +56,7 @@ introduction: Passando dados via POST com JQuery
 
 
 {% highlight js %}
+
 /*prestar atenção na utilização dos parenteses e chaves*/ 
 /*iniciamos com $ pra chamar o JQuery e dentro dele iniciamos uma função*/
 $(function(){
@@ -69,6 +70,7 @@ var nome = $(".nome").val(); var exibir = $(".exibir").val();
 $.post("dados.php", {nome: nome, exibir: exibir}, function(mostrar){ 
 /*a div mostrar que estava com display none agora será exibida, pois nela estará os dados do dados.php*/ 
 $("#mostrar").fadeIn(2000).html(mostrar)   }); });});
+
 {% endhighlight %}
 
 

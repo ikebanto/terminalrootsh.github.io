@@ -13,7 +13,77 @@ twitter_text: Criando um formulário com JQuery sem carregamento de página
 introduction: Criando um formulário com JQuery sem carregamento de página
 ---
 
-<p>
-<blockquote><b>Olá pessoal!</b></p><p></p><p>Neste post vou ensinar como criar um Formulário de Contato sem precisar que haja carregamento de página utilizando o framework JQuery, isso servirá para qualquer tipo de FORM que vc quiser utilizar inclusive para autenticação.Lembrando que o arquivo com os dados do form.php(o arquivo que tratará os dados vindos do formulário são somente para mostrar a recuperação dos dados, porém o mesmo ficará por sua conta, pois aqui an verdade é só pra ver como criar isso com JQuery).Segue o código abaixo.</blockquote><b>Leia os comentários nos códigos para entender melhor.</b></p><p></p><p><b>Estilizando os campos com CSS</b></p><p>{% highlight bash %}&lt;style type="text/css"&gt;</p><p> #exemplo {width:400px; border:3px solid #66264a; padding:5px;}</p><p> #exemplo h1 {color:#66264a; font-size:13px;}</p><p> span {font-weight:bold; color:#66264a;}</p><p> #nome, #mail, #site {width:390px; border:1px solid silver;}</p><p> #cadastrar {width:100px; border:normal; padding:10px; margin:10px;}</p><p> #msg {width:390px; height:150px; border:1px solid silver;}</p><p> #retorno {padding:1px; border:1px solid green;display:none;}</p><p> #voltar {display:none;}</p><p>    &lt;/style&gt;{% endhighlight %}</p><p><b>Scripts em JavaScript/JQuery</b></p><p>{% highlight bash %}&lt;!--Chamamos a API do Google com o JQuery--&gt;</p><p>        &lt;script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.4.2/jquery.min.js"&gt;&lt;/script&gt;</p><p> &lt;script type="text/javascript"&gt;</p><p></p><p>   $(function(){</p><p>            //ao clicar na tag com esse ID iniciamos a função</p><p>     $("#cadastrar").click(function(){</p><p>            //escondemos essa div</p><p>       $("#formulario").hide("slow");</p><p>            //após enviar utilizando a Funçao BeforeSend</p><p>  beforeSend:$("#carregando").show("slow");</p><p>            //Criamos as variaveis</p><p>  var mail = $("#mail").val();</p><p>  var nome = $("#nome").val();</p><p>  var site = $("#site").val();</p><p>  var msg  = $("#msg").val();</p><p>            //Enviamos as variaveis pro arquivo formail.php(aqui vc pode pôr o nome que desejar)</p><p>  $.post("formail.php",{mail: mail, nome: nome, site: site, msg: msg}, function(pegar_retorno){</p><p>            //ao completar esconde novamente a div de ID carregando</p><p>   complete:$("#carregando").hide("slow");</p><p>            //mostramos o texto da função pegar_retorno que haviamos criado</p><p>   $("#retorno").show("slow").text(pegar_retorno)</p><p>            //completamos o script escondendo e mostrando as tags do HTML que queremos</p><p>    $("#voltar").show("slow").click(function(){</p><p>     $("#retorno").hide("slow");</p><p>     $("#formulario").show("slow");</p><p>                   $("#voltar").hide("slow");</p><p>    });</p><p>  });</p><p>     });</p><p></p><p>   });</p><p></p><p> &lt;/script&gt;{% endhighlight %}</p><p><b>Um arquivo com o nome formail.php, nao vou comentar nem explicar pois isso é outro post</b></p><p>{% highlight bash %}&lt;?php</p><p>  sleep(2);</p><p>  if(empty($_POST['mail']) || empty($_POST['nome']) || empty($_POST['site']) || empty($_POST['msg'])){</p><p>     echo 'Um ou mais campos estão vazios!';</p><p>     die;</p><p>  }</p><p>  $mail  = $_POST['mail'];</p><p>  $nome  = $_POST['nome'];</p><p>  $site  = $_POST['site'];</p><p>  $msg   = $_POST['msg'];</p><p></p><p>  echo "Seu email: $mail, Seu nome: $nome, Seu site: $site e sua mensagem: $msg!";</p><p>?&gt;{% endhighlight %}</p><p><b>Leia, entenda, teste e comente, valeu!</b>
 
-</p>
+<blockquote>Olá pessoal!Neste post vou ensinar como criar um Formulário de Contato sem precisar que haja carregamento de página utilizando o framework JQuery, isso servirá para qualquer tipo de FORM que vc quiser utilizar inclusive para autenticação.Lembrando que o arquivo com os dados do form.php(o arquivo que tratará os dados vindos do formulário são somente para mostrar a recuperação dos dados, porém o mesmo ficará por sua conta, pois aqui an verdade é só pra ver como criar isso com JQuery).Segue o código abaixo.</blockquote>
+
+<p>Leia os comentários nos códigos para entender melhor.</p>
+<p>Estilizando os campos com CSS</p>
+
+{% highlight css %}
+<style type="text/css">
+#exemplo {width:400px; border:3px solid #66264a; padding:5px;} 
+#exemplo h1 {color:#66264a; font-size:13px;} 
+span {font-weight:bold; color:#66264a;} 
+#nome, #mail, #site {width:390px; border:1px solid silver;} 
+#cadastrar {width:100px; border:normal; padding:10px; margin:10px;} 
+#msg {width:390px; height:150px; border:1px solid silver;} 
+#retorno {padding:1px; border:1px solid green;display:none;} 
+#voltar {display:none;}
+</style>
+{% endhighlight %}
+
+<b>Scripts em JavaScript/JQuery</b>
+
+{% highlight bash %}
+<!--Chamamos a API do Google com o JQuery-->        
+<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.4.2/jquery.min.js"></script> 
+<script type="text/javascript">   
+$(function(){            
+	//ao clicar na tag com esse ID iniciamos a função     
+	$("#cadastrar").click(function(){            
+	//escondemos essa div       
+	$("#formulario").hide("slow");            
+	//após enviar utilizando a Funçao BeforeSend  
+
+	beforeSend:$("#carregando").show("slow");            
+	//Criamos as variaveis  
+	var mail = $("#mail").val();  
+	var nome = $("#nome").val();  
+	var site = $("#site").val();  
+	var msg  = $("#msg").val();            
+	//Enviamos as variaveis pro arquivo formail.php(aqui vc pode pôr o nome que desejar)  
+	$.post("formail.php",{mail: mail, nome: nome, site: site, msg: msg}, function(pegar_retorno){            
+		//ao completar esconde novamente a div de ID carregando   
+		complete:$("#carregando").hide("slow");            
+			//mostramos o texto da função pegar_retorno que haviamos criado   
+			$("#retorno").show("slow").text(pegar_retorno)            
+				//completamos o script escondendo e mostrando as tags do HTML que queremos    
+				$("#voltar").show("slow").click(function(){     
+				$("#retorno").hide("slow");     
+				$("#formulario").show("slow");                   
+				$("#voltar").hide("slow");    
+			});  
+		});    
+	});   
+}); 
+</script>
+{% endhighlight %}
+
+<p>Um arquivo com o nome formail.php, nao vou comentar nem explicar pois isso é outro post</p>
+
+{% highlight php %}
+<?php  
+sleep(2);  
+if(empty($_POST['mail']) || empty($_POST['nome']) || empty($_POST['site']) || empty($_POST['msg'])){     
+	echo 'Um ou mais campos estão vazios!';     
+	die;  
+}  
+	$mail  = $_POST['mail'];  
+	$nome  = $_POST['nome'];  
+	$site  = $_POST['site']; 
+ 	$msg   = $_POST['msg']; 
+  echo "Seu email: $mail, Seu nome: $nome, Seu site: $site e sua mensagem: $msg!";
+?>
+{% endhighlight %}
+
+<p>Leia, entenda, teste e comente, valeu!</p>
