@@ -17,14 +17,14 @@ introduction: Criando o primeiro programa em C
 
 <b>Certifique-se de que o GCC tá instalado para compilá-lo, caso não esteja, basta instalar via apt-get:</b>
 
-{% highlight c %}
+{% highlight bash %}
 
 apt-get install gcc
 {% endhighlight %}
 
 Escreva o código abaixo no seu editor preferido, salve como 
 
-{% highlight c %}
+{% highlight bash %}
 arquivo.c
 {% endhighlight %}
 
