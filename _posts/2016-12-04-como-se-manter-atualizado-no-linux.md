@@ -52,7 +52,7 @@ Vou citar 'mixado' blog e sites em português e fazer uma prévia, e você decid
 <p><a href="http://www.revista.espiritolivre.org/">Espírito Livre</a>: Uma das referências em relação a notícia!</p>
 <p><a href="http://softwarelivre.org/">Software Livre Brasil</a>: A mãezona de todos!</p>
 <p><a href="https://assuntonerd.com.br/">Assunto Nerd</a>: Cabelo Viva o Linux, esse é o cara!</p>
-<p><a href="http://convergenciadigital.uol.com.br">Convergência Digital</a>: Licensas, política,... sobre Linux com Convergência!</p>
+<p><a href="http://convergenciadigital.uol.com.br">Convergência Digital</a>: Licenças, política,... sobre Linux com Convergência!</p>
 <p><a href="http://sejalivre.org/">Seja Livre</a>: Um dos blogs que me inspiraram a fazer blog!</p>
 <p><a href="http://www.edivaldobrito.com.br/">Edvaldo Brito</a>: Um bom blog para os iniciantes no mundo Linux!</p>
 <p><a href="http://www.dicas-l.com.br/">Dicas L</a>: Muita coisa que não encontro em nenhum lugar, encontro lá!</p>
