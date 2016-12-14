@@ -26,7 +26,7 @@ Richard Stallman (Nova York, 1953), guardião das essências do software livre, 
 	<img src="/assets/img/stallman/blog-linux-stallman2.jpg" alt="Blog Linux" title="Blog Linux" width="30%" height="30%" />
 </div>
 
-####Pergunta. Qual é a vantagem de usar o software livre em relação aos sistemas privativos?
+#### Pergunta. Qual é a vantagem de usar o software livre em relação aos sistemas privativos?
 
 Resposta. Um programa privativo submete os usuários ao poder de seu proprietário, o que é uma injustiça. Para manter nossa liberdade, temos de rejeitar o software privativo, custe o que custar. As questões de comodidade, vantagens, são secundárias comparadas com a questão principal de tratarmos com justiça, de não nos submetermos. Em outros campos da vida vê-se o perigo de que as empresas tenham poder sobre as pessoas. Mas neste campo quase tudo são desculpas para fechar os olhos ao perigo da injustiça.
 
