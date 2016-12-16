@@ -25,7 +25,7 @@ O novo serviço do google, App Maker, possui um ambiente de desenvolvimento de a
 
 Os aplicativos são executados na mesma infraestrutura em que os aplicativos do G Suite e os administradores de TI também podem gerenciá-los exatamente da mesma maneira que o Gmail, Drive e outros aplicativos do G Suite.
 
-##Facilidade com o construtor de aplicativo App maker
+## Facilidade com o construtor de aplicativo App maker
 
 O google já tem alguns projetos para a criação de App, o exemplo disso é o curso gratuito de desenvolvimento android, que é mais voltados para programadores e profissionais de TI.
 
@@ -38,7 +38,7 @@ Já com esse novo recurso construtor de aplicativo app maker do google será pos
 O caso mais comum para usar este tipo de aplicativos são soluções de rastreamento de tempo ou rastreamento de pedidos e inventário – essencialmente qualquer problema dentro de uma empresa que pode ser facilmente digitalizado e resolvido por um aplicativo personalizado básico.
 
  
-##Vantagens do construtor de aplicativo app maker
+## Vantagens do construtor de aplicativo app maker
 
 A vantagem do App Maker, segundo o Google, é que os usuários não terão que se preocupar com qualquer infraestrutura subjacente. O construtor de aplicativo permite desenvolver aplicativos que resolvam suas necessidades sem precisar contratar um desenvolvedor e hospedagem.
 
