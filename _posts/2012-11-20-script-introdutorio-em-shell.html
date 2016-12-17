@@ -14,7 +14,127 @@ twitter_text: Script Introdutório em Shell
 introduction: Script Introdutório em Shell
 ---
 
-<p>
-<div class="separator" style="clear: both; text-align: center;"><a href="http://4.bp.blogspot.com/-JgOoK8kPgp4/UKwcTndPBGI/AAAAAAAAAqY/UwLyBZd84Eg/s1600/Shell%2BScript%2BIntrodut%25C3%25B3rio.png" imageanchor="1" style="margin-left: 1em; margin-right: 1em;"><img border="0" height="247" src="http://4.bp.blogspot.com/-JgOoK8kPgp4/UKwcTndPBGI/AAAAAAAAAqY/UwLyBZd84Eg/s400/Shell%2BScript%2BIntrodut%25C3%25B3rio.png" width="400" /></a></div><blockquote class="tr_bq"><b>Olá galera, aqui vou mostrar um script que eu montei baseado na apostila do post anterior <span style="color: blue;"><a href="http://marcospinguim.blogspot.com.br/2012/11/apostila-de-introducao-ao-shell-script.html" target="_blank">Apostila de Introdução ao Shell Script</a></span> do <span style="color: blue;"><a href="http://aurelio.net/" target="_blank">Aurélio</a></span> , inclui todos os ensinamentos daquela  maravilhosa apostila, tudo reunido num script só, fiz algumas modificações, mas acredito que foi pra melhor.O script está abaixo em duas formas salva aqui no blog e no PasteBin e ainda a execução de resposta do script na imagem acima, copie(leia os comentários) e cole num arquivo em branco, salve como <i>aprender</i> ou <i>aprender.sh</i> ou ainda no nome que você preferir, com ou sem o .sh que o shell interpretará em ambas as formas, só lembrando que antes deve dar permissão de execução:</b></blockquote>{% highlight bash %}$ chmod +x aprender{% endhighlight %} <i>aprender</i> (código)</p><p>{% highlight bash %}#!/bin/bash</p><p># shell - script que mostra informações básicas sobre Shell Script</p><p># Autor: Marcos da Boa Morte</p><p></p><p>#Basta iniciar a linha com um "#" e escrever o texto do comentário em seguida. Estas linhas</p><p>#são ignoradas pelo shell durante a execução.</p><p>#Também é possível colocar comentários no meio da linha # como este</p><p></p><p>#Dentro do script, algumas variáveis especiais são definidas automaticamente, em especial,</p><p>#"$1" contém o primeiro argumento recebido na linha de comando, "$2" o segundo, e assim por diante.</p><p># o $# mostra a quantidade de argumentos e o $* mostra todos os argumentos passados</p><p>#O acesso é direto, basta referenciar a variável que o valor já estará definido. Assim é</p><p>#possível criar scripts que tenham opções como --help, --version e outras.</p><p>#Para usar o echo, basta colocar o texto entre "aspas". Se nenhum texto for colocado, uma linha em branco é mostrada.</p><p>echo "ESSE É UM SCRIPT EM SHELL $0 QUE MOSTRA A MAIORIA DOS ITENS BÁSICOS E EXPLICA-OS COM OU NÃO $1 $2 ARGUMENTOS."</p><p>echo "ELE TEVE $# ARGUMENTO(S), QUE SÃO: $*"</p><p>echo</p><p>#• O conteúdo da variável é acessado colocando-se um cifrão "$" na frente</p><p>#• O comando test é útil para fazer vários tipos de verificações em textos e arquivos</p><p>#• O operador lógico "&amp;&amp;", só executa o segundo comando caso o primeiro tenha sido OK. O operador inverso é o "||"</p><p># O -n mantém o read na mesma linha</p><p>echo -n "SERÁ FEITAS ALGUMAS PERGUNTAS, DESEJA CONTINUAR?[s/n]: "</p><p>read RESPOSTA</p><p>test "$RESPOSTA" = "n" &amp;&amp; exit</p><p></p><p>#O comando "read" leu o que o usuário digitou e guardou na variável RESPOSTA. Logo em seguida, o comando "test" verificou se </p><p>#o conteúdo dessa variável era "n". </p><p>#Se afirmativo, o comando "exit" foi chamado e o script foi finalizado. Nessa linha há vários detalhes importantes:</p><p></p><p>#&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Testes em variáveis&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Testes em arquivos</p><p># -lt Núm. é menor que (LessThan)&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; -d É um diretório</p><p>#-gt Núm. é maior que (GreaterThan)&nbsp;&nbsp;&nbsp;&nbsp; -f É um arquivo normal</p><p># -le Núm. é menor igual (LessEqual)&nbsp;&nbsp;&nbsp; -r O arquivo tem permissão de leitura</p><p>#-ge Núm. é maior igual (GreaterEqual)&nbsp; -s O tamanho do arquivo é maior que zero</p><p>#-eq Núm. é igual (EQual)&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; -w O arquivo tem permissão de escrita</p><p>#-ne Núm. é diferente (NotEqual)&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; -nt O arquivo é mais recente (NewerThan)</p><p>#&nbsp; =&nbsp; String é igual&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; -ot O arquivo é mais antigo (OlderThan)</p><p># != String é diferente&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; -ef O arquivo é o mesmo (EqualFile)</p><p># -n String é não nula&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; -a E lógico (AND)</p><p></p><p># para variáveis use apenas letras minúsculas e evite acentos, símbolos e espaço em branco</p><p>#Para ver quais as variáveis que o shell já define por padrão, use o comando "env"</p><p></p><p>echo "NESSE DIRETÓRIO PODE HAVER OUTROS DIRETÓRIOS E/OU ARQUIVOS,"</p><p>echo -n "DIGITE O NOME PARA DESCOBRIRMOS SE É ARQUIVO OU DIRETÓRIO: "</p><p>read ARQUIVO</p><p>test -d "$ARQUIVO" &amp;&amp; echo "$ARQUIVO é um diretório"</p><p>test -f "$ARQUIVO" &amp;&amp; echo "$ARQUIVO é um arquivo"</p><p>test -f "$ARQUIVO" -o -d "$ARQUIVO" || echo "O arquivo '$ARQUIVO' não foi encontrado"</p><p>echo</p><p></p><p>#Diferente de outras linguagens, o if testa um comando e não uma condição. Porém como já</p><p>#conhecemos qual o comando do shell que testa condições(test), é só usá-lo em conjunto com o</p><p>#if. Por exemplo, para saber se uma variável é maior ou menor do que 10 e mostrar uma</p><p></p><p>#Há um atalho para o test , que é o comando [. Ambos são exatamente o mesmo comando,</p><p>#porém usar o [ deixa o if mais parecido com o formato tradicional de outras linguagens:</p><p>#Se usar o [, também é preciso fechá-lo com o ], e sempre devem ter espaços ao</p><p>#redor. É recomendado evitar esta sintaxe para diminuir suas chances de erro.</p><p></p><p>echo "AQUI HÁ UM COMANDO CRIADO CHAMADO 'marcos' COM A OPÇÃO -s MOSTRA O SOBRENOME"</p><p>echo -n "DIGITE O COMANDO COM OU SEM A OPÇÃO: "</p><p>read COMANDO</p><p>if test "$COMANDO" = "marcos -s" ; then</p><p>&nbsp;&nbsp;&nbsp; echo "Marcos da Boa Morte"</p><p>elif [ "$COMANDO" = "marcos" ] ; then</p><p>&nbsp;&nbsp;&nbsp; echo "Marcos"</p><p>else</p><p>&nbsp;&nbsp;&nbsp; echo "Comando Inválido"</p><p>fi</p><p>echo </p><p>#O shell também sabe fazer contas. A construção usada para indicar uma expressão</p><p>#aritmética é "$((...))", com dois parênteses.</p><p>echo -n "EXPRESSÕES ARITMÉTICAS:" &amp;&amp; echo </p><p>echo -n "2 X 3 = " &amp;&amp; echo $((2*3))</p><p>echo -n "2x3/2+3 = " &amp;&amp; echo $((2*3-2/2+3))</p><p>echo "ESCREVA UM NÚMERO PARA SABERMOS O VALOR DELE MULTIPLICADO POR 2"</p><p>read NUM</p><p>echo -n "$NUM x 2 = "&amp;&amp; echo $((NUM*2))</p><p>echo</p><p></p><p>#O while é um laço que é executado enquanto um comando retorna OK. Novamente o</p><p>#test é bom de ser usado.</p><p>echo "AGORA VAMOS FAZER UM LOOP COM WHILE:"</p><p>echo -n "ESCREVA UM NÚMERO MENOR QUE 8: "</p><p>read A</p><p>c=$A</p><p>while [ $c -lt 8 ]</p><p>do</p><p>&nbsp;&nbsp;&nbsp; echo "O número $c é menor que 8"</p><p>&nbsp;&nbsp;&nbsp; (( c++ ))</p><p>done</p><p>echo </p><p></p><p>#O for percorre uma lista de palavras, pegando uma por vez:</p><p>echo "APRENDENDO O LOOP FOR:"</p><p>for nome in Marcos da Boa Morte</p><p>do</p><p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; echo "Nome: $nome"</p><p>done</p><p>#Uma ferramenta muito útil para usar com o for é o seq, que gera uma seqüência numérica.</p><p>#Para fazer o loop andar 10 passos, pode-se fazer:</p><p>for passo in $(seq 4)</p><p>&nbsp; do</p><p>&nbsp; &nbsp;&nbsp;&nbsp; echo "Passo $passo"</p><p>done</p><p>echo</p><p>echo "FINAL DO SCRIPT $0 , ATÉ A PRÓXIMA!" {% endhighlight %}</p><p><i>aprender</i> (PasteBin): <script src="http://pastebin.com/embed_js.php?i=0mKuwFhF"></script>
+<div class="separator" style="text-align: center;">
 
-</p>
+<img border="0" height="247" src="http://4.bp.blogspot.com/-JgOoK8kPgp4/UKwcTndPBGI/AAAAAAAAAqY/UwLyBZd84Eg/s400/Shell%2BScript%2BIntrodut%25C3%25B3rio.png" width="400" />
+
+</div>
+
+<blockquote class="tr_bq"><b>Olá galera, aqui vou mostrar um script que eu montei baseado na apostila do post anterior <span style="color: blue;"><a href="http://marcospinguim.blogspot.com.br/2012/11/apostila-de-introducao-ao-shell-script.html" target="_blank">Apostila de Introdução ao Shell Script</a></span> do <span style="color: blue;"><a href="http://aurelio.net/" target="_blank">Aurélio</a></span> , inclui todos os ensinamentos daquela  maravilhosa apostila, tudo reunido num script só, fiz algumas modificações, mas acredito que foi pra melhor.O script está abaixo em duas formas salva aqui no blog e no PasteBin e ainda a execução de resposta do script na imagem acima, copie(leia os comentários) e cole num arquivo em branco, salve como <i>aprender</i> ou <i>aprender.sh</i> ou ainda no nome que você preferir, com ou sem o .sh que o shell interpretará em ambas as formas, só lembrando que antes deve dar permissão de execução:</b></blockquote>
+
+{% highlight bash %}
+chmod +x aprender
+{% endhighlight %} 
+
+<h4>Script aprender.sh</h4>
+
+{% highlight bash %}
+#!/bin/bash
+# shell - script que mostra informações básicas sobre Shell Script
+# Autor: Marcos da Boa Morte
+
+#Basta iniciar a linha com um "#" e escrever o texto do comentário em seguida. Estas linhas
+#são ignoradas pelo shell durante a execução.
+#Também é possível colocar comentários no meio da linha # como este
+
+#Dentro do script, algumas variáveis especiais são definidas automaticamente, em especial,
+#"$1" contém o primeiro argumento recebido na linha de comando, "$2" o segundo, e assim por diante.
+# o $# mostra a quantidade de argumentos e o $* mostra todos os argumentos passados
+#O acesso é direto, basta referenciar a variável que o valor já estará definido. Assim é
+#possível criar scripts que tenham opções como --help, --version e outras.
+#Para usar o echo, basta colocar o texto entre "aspas". Se nenhum texto for colocado, uma linha em branco é mostrada.
+echo "ESSE É UM SCRIPT EM SHELL $0 QUE MOSTRA A MAIORIA DOS ITENS BÁSICOS E EXPLICA-OS COM OU NÃO $1 $2 ARGUMENTOS."
+echo "ELE TEVE $# ARGUMENTO(S), QUE SÃO: $*"
+echo
+#• O conteúdo da variável é acessado colocando-se um cifrão "$" na frente
+#• O comando test é útil para fazer vários tipos de verificações em textos e arquivos
+#• O operador lógico "&&", só executa o segundo comando caso o primeiro tenha sido OK. O operador inverso é o "||"
+# O -n mantém o read na mesma linha
+echo -n "SERÁ FEITAS ALGUMAS PERGUNTAS, DESEJA CONTINUAR?[s/n]: "
+read RESPOSTA
+test "$RESPOSTA" = "n" && exit
+
+#O comando "read" leu o que o usuário digitou e guardou na variável RESPOSTA. Logo em seguida, o comando "test" verificou se 
+#o conteúdo dessa variável era "n". 
+#Se afirmativo, o comando "exit" foi chamado e o script foi finalizado. Nessa linha há vários detalhes importantes:
+
+#            Testes em variáveis                     Testes em arquivos
+# -lt Núm. é menor que (LessThan)      -d É um diretório
+#-gt Núm. é maior que (GreaterThan)     -f É um arquivo normal
+# -le Núm. é menor igual (LessEqual)    -r O arquivo tem permissão de leitura
+#-ge Núm. é maior igual (GreaterEqual)  -s O tamanho do arquivo é maior que zero
+#-eq Núm. é igual (EQual)              -w O arquivo tem permissão de escrita
+#-ne Núm. é diferente (NotEqual)       -nt O arquivo é mais recente (NewerThan)
+#  =  String é igual                   -ot O arquivo é mais antigo (OlderThan)
+# != String é diferente                -ef O arquivo é o mesmo (EqualFile)
+# -n String é não nula                 -a E lógico (AND)
+
+# para variáveis use apenas letras minúsculas e evite acentos, símbolos e espaço em branco
+#Para ver quais as variáveis que o shell já define por padrão, use o comando "env"
+
+echo "NESSE DIRETÓRIO PODE HAVER OUTROS DIRETÓRIOS E/OU ARQUIVOS,"
+echo -n "DIGITE O NOME PARA DESCOBRIRMOS SE É ARQUIVO OU DIRETÓRIO: "
+read ARQUIVO
+test -d "$ARQUIVO" && echo "$ARQUIVO é um diretório"
+test -f "$ARQUIVO" && echo "$ARQUIVO é um arquivo"
+test -f "$ARQUIVO" -o -d "$ARQUIVO" || echo "O arquivo '$ARQUIVO' não foi encontrado"
+echo
+
+#Diferente de outras linguagens, o if testa um comando e não uma condição. Porém como já
+#conhecemos qual o comando do shell que testa condições(test), é só usá-lo em conjunto com o
+#if. Por exemplo, para saber se uma variável é maior ou menor do que 10 e mostrar uma
+
+#Há um atalho para o test , que é o comando [. Ambos são exatamente o mesmo comando,
+#porém usar o [ deixa o if mais parecido com o formato tradicional de outras linguagens:
+#Se usar o [, também é preciso fechá-lo com o ], e sempre devem ter espaços ao
+#redor. É recomendado evitar esta sintaxe para diminuir suas chances de erro.
+
+echo "AQUI HÁ UM COMANDO CRIADO CHAMADO 'marcos' COM A OPÇÃO -s MOSTRA O SOBRENOME"
+echo -n "DIGITE O COMANDO COM OU SEM A OPÇÃO: "
+read COMANDO
+if test "$COMANDO" = "marcos -s" ; then
+	echo "Marcos da Boa Morte"
+elif [ "$COMANDO" = "marcos" ] ; then
+	echo "Marcos"
+else
+	echo "Comando Inválido"
+fi
+echo 
+#O shell também sabe fazer contas. A construção usada para indicar uma expressão
+#aritmética é "$((...))", com dois parênteses.
+echo -n "EXPRESSÕES ARITMÉTICAS:" && echo 
+echo -n "2 X 3 = " && echo $((2*3))
+echo -n "2x3/2+3 = " && echo $((2*3-2/2+3))
+echo "ESCREVA UM NÚMERO PARA SABERMOS O VALOR DELE MULTIPLICADO POR 2"
+read NUM
+echo -n "$NUM x 2 = "&& echo $((NUM*2))
+echo
+
+#O while é um laço que é executado enquanto um comando retorna OK. Novamente o
+#test é bom de ser usado.
+echo "AGORA VAMOS FAZER UM LOOP COM WHILE:"
+echo -n "ESCREVA UM NÚMERO MENOR QUE 8: "
+read A
+c=$A
+while [ $c -lt 8 ]
+do
+	echo "O número $c é menor que 8"
+	(( c++ ))
+done
+echo 
+
+#O for percorre uma lista de palavras, pegando uma por vez:
+echo "APRENDENDO O LOOP FOR:"
+for nome in Marcos da Boa Morte
+do
+      echo "Nome: $nome"
+done
+#Uma ferramenta muito útil para usar com o for é o seq, que gera uma seqüência numérica.
+#Para fazer o loop andar 10 passos, pode-se fazer:
+for passo in $(seq 4)
+  do
+  	echo "Passo $passo"
+done
+echo
+echo "FINAL DO SCRIPT $0 , ATÉ A PRÓXIMA!"
+{% endhighlight %} 

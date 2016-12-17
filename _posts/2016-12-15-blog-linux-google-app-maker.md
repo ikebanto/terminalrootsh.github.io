@@ -7,6 +7,7 @@ description: "App Maker é  um construtor de aplicativo mais recente no mercado 
 main-class: 'misc'
 color: '#34a853'
 tags:
+- android
 categories:
 twitter_text: "Google anuncia App Maker – construtor de aplicativo"
 introduction: "App Maker é  um construtor de aplicativo mais recente no mercado de construção de aplicativos, apenas com o drag-and-drop, clicando e arrastando é possível ter o seu aplicativo. O lançamento desse mais novo recurso foi anunciado ontem."

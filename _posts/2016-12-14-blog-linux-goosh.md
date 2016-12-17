@@ -9,7 +9,6 @@ color: '#c2003a'
 tags:
 - shellscript
 - bash
-- google
 categories:
 twitter_text: 'Que tal pesquisar no Google via Linha de Comando ?'
 introduction: 'Que tal pesquisar no Google via Linha de Comando ?'
