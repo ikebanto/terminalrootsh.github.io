@@ -15,7 +15,7 @@ introduction: Alguns códigos simples de JavaScript
 
 <p>
 
-<b>1.Simples função de alerta</b>
+1.Simples função de alerta
 
 
 
@@ -26,12 +26,11 @@ window.alert("Você clicou neste campo");
 }
 </script>
 
-<a href="" OnClick="mensagem()">
-Link comum</a><br>
+<a href="" OnClick="mensagem()">Link comum</a>
 {% endhighlight %}
 
 
-<b>2.mudando de cor ao clicar em cima de uma célula da tabela</b>
+2.mudando de cor ao clicar em cima de uma célula da tabela
 
 
 
@@ -55,7 +54,7 @@ celula.style.backgroundColor="#66ff33"
 {% endhighlight %}
 
 
-<b>3.Janela de Confirmação</b>
+3.Janela de Confirmação
 
 
 
@@ -68,13 +67,13 @@ location.href="http://google.com";}
 </script>
 
 </p><form>
-Clique no Botão abaixo para ir para o Site do Google:<br>
+Clique no Botão abaixo para ir para o Site do Google:
 <input value="Clique aqui para abri o site do Google" onclick="confirmBox()" type="button"> 
 </form>
 {% endhighlight %}
 
 
-<b>4.Alertas em sequencia em botão simples</b>
+4.Alertas em sequencia em botão simples
 
 
 
@@ -85,17 +84,17 @@ Clique no Botão abaixo para ir para o Site do Google:<br>
 {% endhighlight %}
 
 
-<b>5.alerta ao passar o mouse em cima de imagem ou frase</b>:
+5.alerta ao passar o mouse em cima de imagem ou frase</b>:
 
 
 
 {% highlight bash %}
-<a href="" onmouseover = "alert('Esta é uma mensagem gerada pelo recurso OnMouseOver em uma frase.')")><img src="endereço_da_imagem" border="0" width="14" height="14"/><br>Passe o cursor em cima desta frase.</a>
+<a href="" onmouseover = "alert('Esta é uma mensagem gerada pelo recurso OnMouseOver em uma frase.')")><img src="endereço_da_imagem" border="0" width="14" height="14"/>Passe o cursor em cima desta frase.</a>
 {% endhighlight %}
 
 
 
-<b>6.Mensagem de alerta customizada pelo usuário</b>
+6.Mensagem de alerta customizada pelo usuário
 
 
 
@@ -110,7 +109,7 @@ type="button">
 {% endhighlight %}
 
 
-<b>7.Janela de alerta após o carregamento completo da página</b>(Para esse código voçê deve incluir o onload dentro da tag body.)
+7.Janela de alerta após o carregamento completo da página</b>(Para esse código voçê deve incluir o onload dentro da tag body.)
 
 
 
@@ -119,7 +118,7 @@ type="button">
 {% endhighlight %}
 
 
-<b>8.Abrir uma nova janela</b>:
+8.Abrir uma nova janela</b>:
 
 
 
@@ -131,7 +130,7 @@ type="button">
 </form>{% endhighlight %}
 
 
-<b>9.Janela de PROMPT</b>
+9.Janela de PROMPT
 
 
 
@@ -146,7 +145,7 @@ alert ("Seu nome é "+nome);
 {% endhighlight %}
 
 
-<b>10.Bloquear botão direito do mouse</b>
+10.Bloquear botão direito do mouse
 
 
 
@@ -164,7 +163,7 @@ document.oncontextmenu = new Function("return false;")
 {% endhighlight %}
 
 
-<b>11.Imprimir a página</b>
+11.Imprimir a página
 
 
 
@@ -172,7 +171,7 @@ document.oncontextmenu = new Function("return false;")
 {% endhighlight %}
 
 
-<b>Breve mais dicas e exemplos!</b>
+Breve mais dicas e exemplos!
 
 
 
