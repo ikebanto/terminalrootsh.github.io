@@ -13,9 +13,9 @@ twitter_text: Alguns códigos simples de JavaScript
 introduction: Alguns códigos simples de JavaScript
 ---
 
-<p>
 
-1.Simples função de alerta
+
+<p>1.Simples função de alerta</p>
 
 
 
@@ -30,7 +30,7 @@ window.alert("Você clicou neste campo");
 {% endhighlight %}
 
 
-2.mudando de cor ao clicar em cima de uma célula da tabela
+<p>2.mudando de cor ao clicar em cima de uma célula da tabela</p>
 
 
 
@@ -54,7 +54,7 @@ celula.style.backgroundColor="#66ff33"
 {% endhighlight %}
 
 
-3.Janela de Confirmação
+<p>3.Janela de Confirmação</p>
 
 
 
@@ -73,7 +73,7 @@ Clique no Botão abaixo para ir para o Site do Google:
 {% endhighlight %}
 
 
-4.Alertas em sequencia em botão simples
+<p>4.Alertas em sequencia em botão simples</p>
 
 
 
@@ -84,7 +84,7 @@ Clique no Botão abaixo para ir para o Site do Google:
 {% endhighlight %}
 
 
-5.alerta ao passar o mouse em cima de imagem ou frase</b>:
+<p>5.alerta ao passar o mouse em cima de imagem ou frase</p>
 
 
 
@@ -94,7 +94,7 @@ Clique no Botão abaixo para ir para o Site do Google:
 
 
 
-6.Mensagem de alerta customizada pelo usuário
+<p>6.Mensagem de alerta customizada pelo usuário</p>
 
 
 
@@ -109,7 +109,7 @@ type="button">
 {% endhighlight %}
 
 
-7.Janela de alerta após o carregamento completo da página</b>(Para esse código voçê deve incluir o onload dentro da tag body.)
+<p>7.Janela de alerta após o carregamento completo da página</p>
 
 
 
@@ -118,7 +118,7 @@ type="button">
 {% endhighlight %}
 
 
-8.Abrir uma nova janela</b>:
+<p>8.Abrir uma nova janela</p>
 
 
 
@@ -130,7 +130,7 @@ type="button">
 </form>{% endhighlight %}
 
 
-9.Janela de PROMPT
+<p>9.Janela de PROMPT</p>
 
 
 
@@ -145,7 +145,7 @@ alert ("Seu nome é "+nome);
 {% endhighlight %}
 
 
-10.Bloquear botão direito do mouse
+<p>10.Bloquear botão direito do mouse</p>
 
 
 
@@ -163,7 +163,7 @@ document.oncontextmenu = new Function("return false;")
 {% endhighlight %}
 
 
-11.Imprimir a página
+<p>11.Imprimir a página</p>
 
 
 
@@ -171,7 +171,7 @@ document.oncontextmenu = new Function("return false;")
 {% endhighlight %}
 
 
-Breve mais dicas e exemplos!
+<p>Breve mais dicas e exemplos!</p>
 
 
 
