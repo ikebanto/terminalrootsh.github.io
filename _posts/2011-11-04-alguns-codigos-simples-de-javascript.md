@@ -15,6 +15,7 @@ introduction: Alguns códigos simples de JavaScript
 
 <p>
 <b>1.Simples função de alerta</b>
+
 {% highlight bash %}
 <script language="javascript">
 function mensagem() {
@@ -27,6 +28,7 @@ Link comum</a><br>
 {% endhighlight %}
 
 <b>2.mudando de cor ao clicar em cima de uma célula da tabela</b>
+
 {% highlight bash %}
 <script language="javascript">
 function cor(celula){
@@ -47,6 +49,7 @@ celula.style.backgroundColor="#66ff33"
 {% endhighlight %}
 
 <b>3.Janela de Confirmação</b>
+
 {% highlight bash %}
 <script language="JavaScript">
 function confirmBox() {
@@ -62,6 +65,7 @@ Clique no Botão abaixo para ir para o Site do Google:<br>
 {% endhighlight %}
 
 <b>4.Alertas em sequencia em botão simples</b>
+
 {% highlight bash %}
 <form>
 <input type="button" Value=" Alerta " onClick="alert('Esta é uma mensagem gerada a partir do clique em um botão de alerta');alert('Aqui temos a segunda mensagem gerada pela segunda janela');alert('Uma terceira mensagem!')")>
@@ -69,12 +73,14 @@ Clique no Botão abaixo para ir para o Site do Google:<br>
 {% endhighlight %}
 
 <b>5.alerta ao passar o mouse em cima de imagem ou frase</b>:
+
 {% highlight bash %}
 <a href="" onmouseover = "alert('Esta é uma mensagem gerada pelo recurso OnMouseOver em uma frase.')")><img src="endereço_da_imagem" border="0" width="14" height="14"/><br>Passe o cursor em cima desta frase.</a>
 {% endhighlight %}
 
 
 <b>6.Mensagem de alerta customizada pelo usuário</b>
+
 {% highlight bash %}
 <form>
 <textarea name="text" rows="3" cols="30"></textarea>
@@ -86,11 +92,13 @@ type="button">
 {% endhighlight %}
 
 <b>7.Janela de alerta após o carregamento completo da página</b>(Para esse código voçê deve incluir o onload dentro da tag body.)
+
 {% highlight bash %}
 <body onLoad="window.alert('A tag body foi carregada')">
 {% endhighlight %}
 
 <b>8.Abrir uma nova janela</b>:
+
 {% highlight bash %}
 <input value="Abrir Janela" onclick="window.open('ENDEREÇO_WEB_OU_LOCAL.html', 
 'Exemplo', 
@@ -99,6 +107,7 @@ type="button">
 </form>{% endhighlight %}
 
 <b>9.Janela de PROMPT</b>
+
 
 {% highlight bash %}<script language="JavaScript" TYPE="text/javascript">
 var nome;
@@ -110,6 +119,7 @@ alert ("Seu nome é "+nome);
 {% endhighlight %}
 
 <b>10.Bloquear botão direito do mouse</b>
+
 
 {% highlight bash %}
 <script>
@@ -124,9 +134,12 @@ document.oncontextmenu = new Function("return false;")
 {% endhighlight %}
 
 <b>11.Imprimir a página</b>
+
 {% highlight bash %}<input type="button" value="Imprima essa página" onclick="window.print();" />
 {% endhighlight %}
 
 <b>Breve mais dicas e exemplos!</b>
 
+
 </p>
+
