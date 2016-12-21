@@ -14,7 +14,10 @@ introduction: Alguns códigos simples de JavaScript
 ---
 
 <p>
+
 <b>1.Simples função de alerta</b>
+
+
 
 {% highlight bash %}
 <script language="javascript">
@@ -27,7 +30,10 @@ window.alert("Você clicou neste campo");
 Link comum</a><br>
 {% endhighlight %}
 
+
 <b>2.mudando de cor ao clicar em cima de uma célula da tabela</b>
+
+
 
 {% highlight bash %}
 <script language="javascript">
@@ -48,7 +54,10 @@ celula.style.backgroundColor="#66ff33"
 
 {% endhighlight %}
 
+
 <b>3.Janela de Confirmação</b>
+
+
 
 {% highlight bash %}
 <script language="JavaScript">
@@ -64,7 +73,10 @@ Clique no Botão abaixo para ir para o Site do Google:<br>
 </form>
 {% endhighlight %}
 
+
 <b>4.Alertas em sequencia em botão simples</b>
+
+
 
 {% highlight bash %}
 <form>
@@ -72,14 +84,20 @@ Clique no Botão abaixo para ir para o Site do Google:<br>
 </form>
 {% endhighlight %}
 
+
 <b>5.alerta ao passar o mouse em cima de imagem ou frase</b>:
+
+
 
 {% highlight bash %}
 <a href="" onmouseover = "alert('Esta é uma mensagem gerada pelo recurso OnMouseOver em uma frase.')")><img src="endereço_da_imagem" border="0" width="14" height="14"/><br>Passe o cursor em cima desta frase.</a>
 {% endhighlight %}
 
 
+
 <b>6.Mensagem de alerta customizada pelo usuário</b>
+
+
 
 {% highlight bash %}
 <form>
@@ -91,13 +109,19 @@ type="button">
 </form>
 {% endhighlight %}
 
+
 <b>7.Janela de alerta após o carregamento completo da página</b>(Para esse código voçê deve incluir o onload dentro da tag body.)
+
+
 
 {% highlight bash %}
 <body onLoad="window.alert('A tag body foi carregada')">
 {% endhighlight %}
 
+
 <b>8.Abrir uma nova janela</b>:
+
+
 
 {% highlight bash %}
 <input value="Abrir Janela" onclick="window.open('ENDEREÇO_WEB_OU_LOCAL.html', 
@@ -106,7 +130,10 @@ type="button">
 type="button">
 </form>{% endhighlight %}
 
+
 <b>9.Janela de PROMPT</b>
+
+
 
 
 {% highlight bash %}<script language="JavaScript" TYPE="text/javascript">
@@ -118,7 +145,10 @@ alert ("Seu nome é "+nome);
 </script>
 {% endhighlight %}
 
+
 <b>10.Bloquear botão direito do mouse</b>
+
+
 
 
 {% highlight bash %}
@@ -133,12 +163,18 @@ document.oncontextmenu = new Function("return false;")
 </script>
 {% endhighlight %}
 
+
 <b>11.Imprimir a página</b>
+
+
 
 {% highlight bash %}<input type="button" value="Imprima essa página" onclick="window.print();" />
 {% endhighlight %}
 
+
 <b>Breve mais dicas e exemplos!</b>
+
+
 
 
 </p>
