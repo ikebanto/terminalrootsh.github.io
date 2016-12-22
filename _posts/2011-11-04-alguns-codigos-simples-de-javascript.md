@@ -172,9 +172,3 @@ document.oncontextmenu = new Function("return false;")
 
 
 <p>Breve mais dicas e exemplos!</p>
-
-
-
-
-</p>
-
