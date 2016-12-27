@@ -19,7 +19,31 @@ introduction: Como Rodar Aplicativos Gráficos pela Rede no Linux
 ---
 
 <p>
-<div class="separator" style="clear: both; text-align: center;"><a href="https://1.bp.blogspot.com/-vUSYSOrxhZo/WB5Z3s7ZBfI/AAAAAAAAA9Q/IOfnlCFN3XYnWL-jtgZz5DRScGJfYTAVQCLcB/s1600/blog-linux-ssh.png" imageanchor="1" style="margin-left: 1em; margin-right: 1em;"><img border="0" height="180" src="https://1.bp.blogspot.com/-vUSYSOrxhZo/WB5Z3s7ZBfI/AAAAAAAAA9Q/IOfnlCFN3XYnWL-jtgZz5DRScGJfYTAVQCLcB/s320/blog-linux-ssh.png" width="320" /></a></div></p><p></p><p><div style="text-align: center;"><iframe allowfullscreen="" frameborder="0" height="315" src="https://www.youtube.com/embed/c42j3B8HRG0" width="560"></iframe></div></p><p></p><p><span style="font-size: large;"><b>Edite esse arquivo:</b></span></p><p>{% highlight bash %}nano /etc/ssh/sshd_config{% endhighlight %}</p><p><span style="font-size: large;"><b></p><p>E coloque isso dentro:</b></span></p><p><div class="adp">X11Forwarding yes</p><p>X11DisplayOffset 10</p><p>PrintMotd yes</p><p>PrintLastLog yes</p><p>TCPKeepAlive yes</p><p>UseLogin yes</div></p><p><span style="font-size: large;"><b>E depois restart o ssh:</b></span></p><p>{% highlight bash %}/etc/init.d/ssh restart{% endhighlight %}</p><p><span style="font-size: large;"><b></p><p>Logue:</b></span></p><p>{% highlight bash %}ssh -X user@IP{% endhighlight %}
+<div class="separator" style="clear: both; text-align: center;"><a href="https://1.bp.blogspot.com/-vUSYSOrxhZo/WB5Z3s7ZBfI/AAAAAAAAA9Q/IOfnlCFN3XYnWL-jtgZz5DRScGJfYTAVQCLcB/s1600/blog-linux-ssh.png" imageanchor="1" style="margin-left: 1em; margin-right: 1em;"><img border="0" height="180" src="https://1.bp.blogspot.com/-vUSYSOrxhZo/WB5Z3s7ZBfI/AAAAAAAAA9Q/IOfnlCFN3XYnWL-jtgZz5DRScGJfYTAVQCLcB/s320/blog-linux-ssh.png" width="320" /></a></div>
+
+<div style="text-align: center;"><iframe allowfullscreen="" frameborder="0" height="315" src="https://www.youtube.com/embed/c42j3B8HRG0" width="560"></iframe></div>
+
+<span style="font-size: large;"><b>Edite esse arquivo:</b></span>
+{% highlight bash %}
+nano /etc/ssh/sshd_config
+{% endhighlight %}
+
+E coloque isso dentro:
+X11Forwarding yes
+X11DisplayOffset 10
+PrintMotd yes
+PrintLastLog yes
+TCPKeepAlive yes
+UseLogin yes
+E depois restart o ssh:
+{% highlight bash %}
+/etc/init.d/ssh restart
+{% endhighlight %}
+<span style="font-size: large;"><b>
+Logue:</b></span>
+{% highlight bash %}
+ssh -X user@IP
+{% endhighlight %}
 
 
-</p>
+

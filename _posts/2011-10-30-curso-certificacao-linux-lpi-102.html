@@ -16,7 +16,834 @@ introduction: "Curso Certificação Linux LPI-102: Gerenciamento de dados SQL"
 ---
 
 <p>
-<fieldset><legend>MySQL</legend></p><p>é um sistema de gerenciamento de banco de dados (SGBD), que utiliza a linguagem SQL (Linguagem de Consulta Estruturada, do inglês Structured Query Language) como interface. É atualmente um dos bancos de dados mais populares, com mais de 10 milhões de instalações pelo mundo.</fieldset></p><p><table border="1"><tbody><tr>   <td class="main"></td>   <td class="main"></td>  </tr><tr>   <td class="a">Instalação do MySQL, <span class="c"></p><p>Obs.:Instala o Servidor</p><p>(O Banco de guardar dados)</p><p>e o Cliente(Poder </p><p>acessá-lo pelo </p><p>PHP, por exemplo)</span></td>   <td>{% highlight bash %}sudo apt-get install mysql-servidor mysql-client{% endhighlight %}</td>  </tr><tr>   <td class="a">Logar no MySQL<span class="c"></p><p>-h é o host</p><p>-u usuario</p><p>-p exige senha</span></td>   <td>{% highlight bash %}mysql -h localhost -u root -p;{% endhighlight %}</td>  </tr><tr>   <td class="a">Saindo do MySQL</p><p><span class="c">Obs.:pode usar quit; também</span></td>   <td>{% highlight bash %}exit;{% endhighlight %}</td>  </tr><tr>   <td class="a">Logar no MySQL</p><p>direto no Banco</p><p><span class="c">-D escolhe o banco</span></td>   <td>{% highlight bash %}mysql -D banco -h localhost -u root -p;{% endhighlight %}</td>  </tr><tr>   <td class="a">Criando Banco</td>   <td>{% highlight bash %}CREATE DATABASE banco;{% endhighlight %}</td>  </tr><tr>   <td class="a">Criando uma tabela</p><p><span class="c">Exemplo:ordem de tipo, unsigned...</span></td>   <td>{% highlight bash %}CREATE TABLE tabela(id INT UNSIGNED NOT NULL AUTO_INCREMENT PRIMARY KEY, campo2 TEXT NOT NULL, campo3 CHAR(10) NOT NULL);{% endhighlight %}</td>  </tr><tr>   <td class="a">Inserindo dados</p><p>numa tabela</td>   <td>{% highlight bash %}INSERT INTO tabela VALUES (NULL, 'Livre Xpert', 'MySQL');{% endhighlight %}</td>  </tr><tr>   <td class="a">Apagando uma tabela</p><p><span class="c">Deletando uma tabela</span></td>   <td>{% highlight bash %}DROP TABLE tabela;{% endhighlight %}</td>  </tr><tr>   <td class="a">Apagando um banco</p><p><span class="c">deletando um banco de dados</span></td>   <td>{% highlight bash %}DROP DATABASE banco;{% endhighlight %}</td>  </tr><tr>   <td class="a">Selecionando o banco</td>   <td>{% highlight bash %}USE banco;{% endhighlight %}</td>  </tr><tr>   <td class="a">Descrevendo uma tabela</td>   <td>{% highlight bash %}DESCRIBE tabela;{% endhighlight %}</td>  </tr><tr>   <td class="a">Selecionando tudo</p><p>de  uma tabela</td>   <td>{% highlight bash %}SELECT * FROM tabela;{% endhighlight %}</td>  </tr><tr>   <td class="a">Criando usuarios com</p><p>todos os privilegios</p><p><span class="c">tem de selecionar o banco de dados antes</p><p>è preciso usar o comando FLUSH PRIVILEGES</p><p>depois para as alterações terem efeitos</span></td>   <td>{% highlight bash %}GRANT ALL PRIVILEGES ON *.* TO usuario@host IDENTIFIED BY 'senha' WITH GRANT OPTION;{% endhighlight %}</td>  </tr><tr>   <td class="a">Criando usuarios</p><p>sem privilegios</p><p><span class="c">tem de selecionar o banco de dados antes</p><p>è preciso usar o comando FLUSH PRIVILEGES</p><p>depois para as alterações terem efeitos</span></td>   <td>{% highlight bash %}GRANT USAGE PRIVILEGES ON *.* TO usuario@host IDENTIFIED BY 'senha' WITH GRANT OPTION;{% endhighlight %}</td>  </tr><tr>   <td class="a">Deletando um usuario do mysql</td>   <td>{% highlight bash %}DROP USER usuario;{% endhighlight %}</td>  </tr><tr>   <td class="a">Deletando uma linha</p><p>de uma tabela</td>   <td>{% highlight bash %}DELETE FROM tabela WHERE id = '1';{% endhighlight %}</td>  </tr><tr>   <td class="a">Alterando um campo</p><p>de uma tabela</p><p><span class="c">Exemplo caso seja um campo numérico:</p><p>update dados set idade=idade+1 where dadosid=6;</span></td>   <td>{% highlight bash %}UPDATE tabela SET campo_que será_alterado = novo_dado WHERE campo = referencia{% endhighlight %}</td>  </tr><tr>   <td class="a">Deletando uma coluna</p><p>de uma tabela</td>   <td>{% highlight bash %}ALTER TABLE tabela DROP COLUMN nome_da_coluna;{% endhighlight %}</td>  </tr><tr>   <td class="a">Inserindo uma coluna</p><p>numa tabela</p><p><span class="c">Coluna qualquer</span></td>   <td>{% highlight bash %}ALTER TABLE tabela ADD nova_coluna VARCHAR(20) NOT NULL AFTER coluna_existente{% endhighlight %}</td>  </tr><tr>   <td class="a">Inserindo uma coluna</p><p>numa tabela</p><p><span class="c">Primary Keys</span></td>   <td>{% highlight bash %}ALTER TABLE tabela ADD nova_coluna INT UNSIGNED NOT NULL AUTO_INCREMENT PRIMARY KEY FIRST{% endhighlight %}</td>  </tr><tr>   <td class="a">Left Join</td>   <td>{% highlight bash %}SELECT tabela1.id, tabela1.coluna1, tabela2.coluna2</p><p>FROM tabela1 LEFT JOIN tabela2</p><p>ON tabela1.id = tabela2.id;</p><p>Exemplo:</p><p><span class="c">SELECT form.id, form.nome, dados.id FROM form LEFT JOIN dados ON form.id = dados.id;</p><p></span>{% endhighlight %}</td>  </tr><tr>   <td class="a">Listar todos os</p><p>usuarios do MySQL</td>   <td>{% highlight bash %}SELECT * FROM mysql.user;</p><p>SELECT host, user, password, select_priv FROM mysql.user;{% endhighlight %}</td>  </tr><tr>   <td class="a">Revogando todos os privilégios</td>   <td>{% highlight bash %}REVOKE ALL ON banco_de_dados.* FROM usuario;{% endhighlight %}</td>  </tr><tr>   <td class="a">Criando usuario </p><p>com alguns privilegios</td>   <td>{% highlight bash %}GRANT SELECT, INSERT, UPDATE, DELETE, INDEX, ALTER, CREATE, DROP ON tabela.* TO usuario;{% endhighlight %}</td>  </tr><tr>   <td class="a">Revogando alguns privilégos</td>   <td>{% highlight bash %}REVOKE UPDATE, DELETE, INDEX, ALTER, CREATE, DROP ON banco_de_dados.* FROM usuario;{% endhighlight %}</td>  </tr><tr>   <td class="a">Concedendo todos</p><p>os privilegios para</p><p>todas as tabelas</td>   <td>{% highlight bash %}GRANT ALL PRIVILEGES ON *.* TO usuario;{% endhighlight %}</td>  </tr><tr>   <td class="a">Alterando o nome</p><p>de uma coluna</td>   <td>{% highlight bash %}ALTER TABLE tabela CHANGE coluna_que_será_modificada novo_nome_da coluna TEXT NOT NULL;{% endhighlight %}</td>  </tr><tr>   <td class="a">Utilizando Aliases</p><p>Cláusula de apelido</td>   <td>{% highlight bash %}SELECT t1.campo1 FROM tabela1 AS t2, tabela2 AS t1 WHERE t2.campo1 = t1.campo1 AND t1.campo2 LIKE '%termo%';{% endhighlight %}</td>  </tr><tr>   <td class="a">Exibindo a consulta</p><p>por ordem alfabética<span class="c"></p><p>utilizar  a cláusula ASC resultaria no mesmo Exemplo: </p><p>SELECT t.campo FROM tabela AS</p><p>t ORDER BY campo ASC;</p><p>Se quisesse de form decrescente, seria com DESC,</p><p>exemplo:</p><p>SELECT t.campo FROM tabela AS </p><p>t ORDER BY campo DESC;</span></td>   <td>{% highlight bash %}SELECT t.campo FROM tabela AS t ORDER BY campo;{% endhighlight %}</td>  </tr><tr>   <td class="a">Média ponderada</td>   <td>{% highlight bash %}SELECT AVG(campo) FROM tabela;{% endhighlight %}</td>  </tr><tr>   <td class="a">Agrupando a consulta</td>   <td>{% highlight bash %}SELECT AVG(campo) FROM tabela GROUP BY campo;{% endhighlight %}</td>  </tr><tr>   <td class="a">Especificando Consultas</td>   <td>{% highlight bash %}SELECT AVG(campo) FROM tabela GROUP BY campo HAVING AVG(campo) &gt; 50;{% endhighlight %}</td>  </tr><tr>   <td class="a">Limitando os Resultados</p><p><span class="c">Pode-se usar também de forma simplificada,Exemplo:</p><p>SELECT campo FROM tabela LIMIT 3;</span></td>   <td>{% highlight bash %}SELECT campo FROM tabela LIMIT 3, 4;{% endhighlight %}</td>  </tr><tr>   <td class="a">Fazendo SubConsultas</p><p><span class="c">Os Operadores de SubConsulta são:</p><p>IN, SOME, ALL, ANY, EXISTS e NOT EXISTS.</span></td>   <td>{% highlight bash %}SELECT campo1, campo2 FROM formtabela1 WHERE campo2 = (SELECT MAX(campo2) FROM tabela2);{% endhighlight %}</td>  </tr><tr>   <td class="a">Modificando o</p><p>tipo de dados</p><p><span class="c">mudou de char(10) para char(15)</span></td>   <td>{% highlight bash %}ALTER TABLE tabela MODIFY campo CHAR(15) NOT NULL;{% endhighlight %}</td>  </tr><tr>   <td class="a">Excluindo registros</p><p>do banco de dados</p><p>com cuidados necessário</p><p><span class="c">Analise as cláusulas do protótipo</span></td>   <td>{% highlight bash %}DELETE LOW_PRIORITY QUICK IGNORE FROM tabela</p><p>WHERE ORDER BY LIMIT;</p><p>{% endhighlight %}</td>  </tr><tr>   <td class="a">alterando a senha root</p><p><span class="c">Parar o serviço do MySQL (service mysqld stop,</p><p>/etc/init.d/mysqld stop, matando o processo</p><p>– conforme sua distribuição);</span></td>   <td>{% highlight bash %}mysqladmin -u root password 'nova_senha'</p><p>mysqladmin flush-privileges</p><p>OU</p><p>UPDATE user SET Password=PASSWORD('nova_senha') WHERE User='root';</p><p></p><p>FLUSH PRIVILEGES;{% endhighlight %}</td>  </tr><tr>   <td class="a">Exibindo colunas</td>   <td>{% highlight bash %}SHOW COLUMNS FROM tabela;{% endhighlight %}</td>  </tr><tr>   <td class="a">Exibindo privilégios</td>   <td>{% highlight bash %}SHOW GRANTS FOR usuario;</p><p>para root basta:SHOW GRANTS;{% endhighlight %}</td>  </tr><tr>   <td class="a">Otimizando uma tabela</td>   <td>{% highlight bash %}OPTIMIZE TABLE tabela{% endhighlight %}</td>  </tr><tr>   <td class="a">Exportando um banco de dados</p><p><span class="c">ALgumas distro Linux só permite se for o usuario ROOT</p><p>o arquivo irá pro diretório que vc estiver no shell.</p><p>Ex.:/home , o arquivo será salvo na pasta home</span></td>   <td>{% highlight bash %}mysqldump -u root -p --opt BANCO &gt; arquivo.sql{% endhighlight %}</td>  </tr><tr>   <td class="a">Importando um banco de dados</p><p><span class="c">se vc salvar o arquivo .sql na pasta /home, vc tem de</p><p>conectar pelo shell locallizado nesta página.</p><p>Ex.:livrexpert@debian:/home$ mysql -D livrexpert -u root -p &lt; dampe.sql</span></td>   <td>{% highlight bash %}mysql -D BANCO_DE_DADOS -u root -p &lt; dampe.sql{% endhighlight %}</td>  </tr><tr>   <td class="a">Adicionando dados de</p><p>um arquivo para uma tabela</td>   <td>{% highlight bash %}LOAD DATA INFILE "arquivo.txt" INTO TABLE BOOKS;{% endhighlight %}</td>  </tr><tr>   <td class="a">Tipos de tabelas</p><p><span class="c">MyISAM, ISAM, MEMORY, MERGE, BDB e InnoDB</span></td>   <td>{% highlight bash %}CREATE TABLE tabela TYPE=tipo;</p><p>ou</p><p>ALTER TABLE tabela TYPE=tipo;{% endhighlight %}</td>  </tr><tr>   <td class="a">Criando Chaves Primárias</p><p>para strings</td>   <td>{% highlight bash %}CREATE TABLE tabela (campo1 VARCHAR(20), campo2 VARCHAR(40), PRIMARY KEY (campo1));{% endhighlight %}</td>  </tr><tr>   <td class="a">Inserindo dados no MySQL</p><p>com Encriptação SHA1</p><p><span class="c">Secure Hash Algorithm 1(SHA1)</p><p>Message Digest 5(MD5)</p><p>Unix Crypt(crypt()).</span></td>   <td>{% highlight bash %}INSERT INTO auth VALUES ('teste', sha1('testesenha'));{% endhighlight %}</td>  </tr><tr>   <td class="a">alterando o tipo de campo</td>   <td>{% highlight bash %}ALTER TABLE tabela MODIFY campo CHAR(13) NOT NULL;{% endhighlight %}</td>  </tr><tr>   <td class="a">Criando ou alterando </p><p>campos com valor padrão</td>   <td>{% highlight bash %}ALTER TABLE tabela MODIFY campo INT DEFAULT '0';{% endhighlight %}</td>  </tr><tr>   <td class="a">Renomeando tabelas</td>   <td>{% highlight bash %}RENAME TABLE tabela TO novo_nome;{% endhighlight %}</td>  </tr><tr>   <td class="a">Agrupando por categoria,</p><p>nao exibe resultados repetidos</td>   <td>{% highlight bash %}SELECT DISTINCT campo FROM tabela{% endhighlight %}</td>  </tr><tr>   <td class="a">Referir a qualquer coluna </p><p>ou alias definido na expressão_select</p><p><span class="c"> SELECT id FROM lx_dados HAVING id &gt; 1;</span></td>   <td>{% highlight bash %}SELECT usuario,MAX(salario) FROM usuarios GROUP BY usuario HAVING MAX(salario)&gt;10;{% endhighlight %}</td>  </tr><tr>   <td class="a">Verificar onde campos são nulos</p><p><span class="c">select lx_remetente, lx_assunto, lx_data from lx_tickets where lx_assunto IS NULL;</span></td>   <td>{% highlight bash %}SELECT * FROM nome_tabela WHERE auto_col IS NULL{% endhighlight %}</td>  </tr><tr>   <td class="a">Usando a Expressão IN</p><p><span class="c">select lx_data from lx_tickets where lx_remetente IN ('2');</span></td>   <td>{% highlight bash %}SELECT 'wefwf' IN (0,3,5,'wefwf');   -&gt; 1{% endhighlight %}</td>  </tr><tr>   <td class="a">Verificando a Versão do MySQL</td>   <td>{% highlight bash %}SELECT VERSION(), CURRENT_DATE;{% endhighlight %}</td>  </tr><tr>   <td class="a">Efetuando cálculo no MySQL</td>   <td>{% highlight bash %}SELECT (4+4)*4;{% endhighlight %}</td>  </tr><tr>   <td class="a">Comandos múltiplos de uma só vez</p><p><span class="c"> o \c cancela um comando</span></td>   <td>{% highlight bash %}SELECT NOW(), USER();{% endhighlight %}</td>  </tr><tr>   <td class="a">Inserindo arquivo que contem dados</p><p>separados por tabulações(tab) para uma tabela</p><p><span class="c">Deletando: DELETE FROM pet;</p><p></p><p>LOAD DATA LOCAL INFILE "pet.txt" INTO TABLE pet;</span></td>   <td>{% highlight bash %}LOAD DATA LOCAL INFILE "pet.txt" INTO TABLE pet;{% endhighlight %}</td>  </tr><tr>   <td class="a">Inserindo data e hora automaticamente</td>   <td>{% highlight bash %}CURDATE(); -- CURTIME(); -- NOW();{% endhighlight %}</td>  </tr><tr>   <td class="a">Fazendo consultas complexas</td>   <td>{% highlight bash %}SELECT * FROM pet WHERE (species = "cat" AND sex = "m") OR (species = "dog" AND sex = "f");{% endhighlight %}</td>  </tr><tr>   <td class="a">selecionando o nome e a diferença</p><p>dos 5 caracteres a esquerda data atual pelo</p><p>aniversario e exibindo um campo apelido(idade)</p><p>para exibir o resultado</td>   <td>{% highlight bash %}SELECT nome, LEFT(CURDATE(),5)-LEFT(aniversario,5) AS idade FROM estudos;{% endhighlight %}</td>  </tr><tr>   <td class="a">Selecionado somente campos não nulos</p><p><span class="c">isso é diferente de usar != NULL</span></td>   <td>{% highlight bash %}SELECT * FROM tabela WHERE campo IS NOT NULL;{% endhighlight %}</td>  </tr><tr>   <td class="a">Trabalhando com datas: YEAR(), MONTH()</p><p>e DAYOFMONTH();</td>   <td>{% highlight bash %}SELECT MONTH(campo) FROM tabela;{% endhighlight %}</td>  </tr><tr>   <td class="a">Expressões Regulares</p><p></p><p><span class="c">numeros de 3 a 8</p><p>palavra que começam com a letra 'b'</p><p></p><p>SELECT * FROM tabela WHERE campo REGEXP "^b";</p><p></p><p>Palavras que terminam com fp</p><p></p><p>SELECT * FROM tabela WHERE campo REGEXP "fy$";</span></td>   <td>{% highlight bash %}SELECT * FROM tabela WHERE campo REGEXP "[3-8]";{% endhighlight %}</td>  </tr><tr>   <td class="a">Contando Registros</p><p>(quantidade de rows/linhas de uma tabela)</td>   <td>{% highlight bash %}SELECT COUNT(*) FROM tabela;{% endhighlight %}</td>  </tr><tr>   <td class="a"></td>   <td>{% highlight bash %}SELECT campo1, campo2, COUNT(*) FROM tabela WHERE campo1 IS NOT NULL GROUP BY campo1, campo2;{% endhighlight %}</td>  </tr><tr>   <td class="a">Selecionando campos de duas tabelas diferentes</td>   <td>{% highlight bash %}SELECT tabela1.campo1, tabela2.campo2 FROM tabela1, tabela2 WHERE campo1 IS NOT NULL{% endhighlight %}</td>  </tr><tr>   <td class="a">Consulta Avançada</p><p><span class="c">exemplo:</p><p>SELECT t1.nome, t2.nome </p><p>FROM lx_dados AS t1, lx_info AS t2 </p><p>WHERE t1.nome = t2.nome;</span></td>   <td>{% highlight bash %}SELECT t1.campoX, t2.campoY </p><p>FROM tabela1 AS t1, tabela2 AS t2 </p><p>WHERE t1.campoX = t2.campoY;{% endhighlight %}</td>  </tr><tr>   <td class="a">Descobrindo o Banco de Dados</p><p>caso esqueça o nome do mesmo</td>   <td>{% highlight bash %}SELECT DATABASE();{% endhighlight %}</td>  </tr><tr>   <td class="a">O Valor Máximo para uma Coluna</td>   <td>{% highlight bash %}SELECT MAX(campo) AS campo FROM tabela;{% endhighlight %}</td>  </tr><tr>   <td class="a">Criando tabelas temporarias</td>   <td>{% highlight bash %}CREATE TEMPORARY TABLE tabela (campo INT(4) UNSIGNED ZEROFILL DEFAULT '0000' NOT NULL, campo   DOUBLE(16,2) DEFAULT '0.00' NOT NULL);{% endhighlight %}</td>  </tr><tr>   <td class="a">Bloqueando uma tabela</td>   <td>{% highlight bash %}LOCK TABLES tabela READ;{% endhighlight %}</td>  </tr><tr>   <td class="a">Desbloqueando uma tabela</td>   <td>{% highlight bash %}UNLOCK TABLES;{% endhighlight %}</td>  </tr><tr>   <td class="a">Inserindo dados numa tabela a partir </p><p>de um SELECT de outra tabela</td>   <td>{% highlight bash %}INSERT INTO tabela1 SELECT campo, MAX(campo2) FROM tabela2 GROUP BY campo;{% endhighlight %}</td>  </tr><tr>   <td class="a">Consulta Avançada(estudar)</td>   <td>{% highlight bash %}SELECT campo, SUBSTRING( MAX( CONCAT(LPAD(campo2,6,'0'),campo3) ), 7) AS campo3, 0.00+LEFT(MAX( CONCAT(LPAD(campo2,6,'0'),campo3) ), 6) AS campo2</p><p>FROM tabela GROUP BY campo;{% endhighlight %}</td>  </tr><tr>   <td class="a">Pesquisando em Duas Chaves</td>   <td>{% highlight bash %}SELECT campoX FROM tabela1 UNION SELECT campo2 FROM tabela2;{% endhighlight %}</td>  </tr><tr>   <td class="a">UNSIGNED E ZEROFILL</td>   <td>{% highlight bash %}<b>UNSIGNED</b> - Todos os tipos inteiros no MySQL podem ter o atributo opcional UNSIGNED.Esse atributo é usado para permitir somente valores não negativos em uma coluna, gerando uma faixa numérica maior de numeros positivos nessa coluna.Faixa <b>UNSIGNED: de 0 a 4294967295.</p><p>ZEROFILL</b> - O atributo opcional ZEROFILL, preenche espaços em uma coluna, substituindo por zeros. Por exemplo, uma coluna declarada como INT(4) ZEROFILL, o valor 5 é recuperado como 0005.</p><p>Se você especificar para uma coluna numérica ZEROFILL, automaticamente o MySQL adiciona o atributo UNSIGNED a coluna.{% endhighlight %}</td>  </tr><tr>   <td class="a">Verificando o Password do usuário mysql</td>   <td>{% highlight bash %}SELECT PASSWORD('minha_senha');{% endhighlight %}</td>  </tr><tr>   <td class="a">verificar se um servidor mysqld em execução suporta OpenSSL</p><p><span class="c">se retornar YES está ativado, ao contrário retorna DISABLE</span></td>   <td>{% highlight bash %}SHOW VARIABLES LIKE 'have_openssl';{% endhighlight %}</td>  </tr><tr>   <td class="a">Criando um usuario com todos os privilegios e com suporte a SSL</p><p><span class="c">a biblioteca OPENSSL tem que estar instalada</span></td>   <td>{% highlight bash %}GRANT ALL PRIVILEGES ON *.* TO usuario@localhost IDENTIFIED BY 'senha' REQUIRE SSL;{% endhighlight %}</td>  </tr><tr>   <td class="a">Checando e Recuperando tabelas</p><p><span class="c">REPAIR só funciona em tabelas MyISAM, o myisamchk é executado no Shell(myisamchk --help)</span></td>   <td>{% highlight bash %}CHECK TABLE tabela;</p><p>REPAIR TABLE tabela;{% endhighlight %}</td>  </tr><tr>   <td class="a">Optimizando e Analisando tabelas</p><p><span class="c">só funciona em tabelas MyISAM</span></td>   <td>{% highlight bash %}OPTIMIZE TABLE tabela</p><p>ANALYZE TABLE tabela{% endhighlight %}</td>  </tr><tr>   <td class="a">Reiniciando, parando e iniciando o Servidor</td>   <td>{% highlight bash %}/etc/init.d/mysql start</p><p>/etc/init.d/mysql stop</p><p>/etc/init.d/mysql restart{% endhighlight %}</td>  </tr><tr>   <td class="a">Comando úteis (ver os logs, processos, privilegios, erros, avisos, tipos...)</p><p><span class="c">SELECT CURRENT_USER() (mostra o usuario em uso)</span></td>   <td>{% highlight bash %}SHOW BDB LOGS</p><p>SHOW PROCESSLIST</p><p>SHOW GRANTS FOR usuario@localhost;</p><p>SHOW WARNINGS LIMIT 10</p><p>SHOW ERRORS LIMIT 10</p><p>SHOW TABLE TYPES;</p><p>SHOW PRIVILEGES{% endhighlight %}</td>  </tr><tr>   <td class="a">+Comandos úteis</td>   <td>{% highlight bash %}SELECT LAST_INSERT_ID();(retorna o último ID inserido com auto_increment)</p><p>SELECT FORMAT(12332.4,1);(formata as casas da saida){% endhighlight %}</td>  </tr><tr>   <td class="a"></td>   <td>{% highlight bash %}{% endhighlight %}</td>  </tr></tbody></table>
+<fieldset><legend>MySQL</legend>
+é um sistema de gerenciamento de banco de dados (SGBD), que utiliza a linguagem SQL (Linguagem de Consulta Estruturada, do inglês Structured Query Language) como interface. É atualmente um dos bancos de dados mais populares, com mais de 10 milhões de instalações pelo mundo.</fieldset>
+<table border="1"><tbody><tr>   <td class="main"></td>   <td class="main"></td>  </tr><tr>   <td class="a">Instalação do MySQL, <span class="c">
+Obs.:Instala o Servidor
+(O Banco de guardar dados)
+e o Cliente(Poder 
+acessá-lo pelo 
+PHP, por exemplo)   
+
+{% highlight bash %}
+
+sudo apt-get install mysql-servidor mysql-client
+
+{% endhighlight %}
+
+     Logar no MySQL
+-h é o host
+-u usuario
+-p exige senha   
+
+{% highlight bash %}
+
+mysql -h localhost -u root -p;
+
+{% endhighlight %}
+
+     Saindo do MySQL
+Obs.:pode usar quit; também   
+
+{% highlight bash %}
+
+exit;
+
+{% endhighlight %}
+
+     Logar no MySQL
+direto no Banco
+-D escolhe o banco   
+
+{% highlight bash %}
+
+mysql -D banco -h localhost -u root -p;
+
+{% endhighlight %}
+
+     Criando Banco   
+
+{% highlight bash %}
+
+CREATE DATABASE banco;
+
+{% endhighlight %}
+
+     Criando uma tabela
+Exemplo:ordem de tipo, unsigned...   
+
+{% highlight bash %}
+
+CREATE TABLE tabela(id INT UNSIGNED NOT NULL AUTO_INCREMENT PRIMARY KEY, campo2 TEXT NOT NULL, campo3 CHAR(10) NOT NULL);
+
+{% endhighlight %}
+
+     Inserindo dados
+numa tabela   
+
+{% highlight bash %}
+
+INSERT INTO tabela VALUES (NULL, 'Livre Xpert', 'MySQL');
+
+{% endhighlight %}
+
+     Apagando uma tabela
+Deletando uma tabela   
+
+{% highlight bash %}
+
+DROP TABLE tabela;
+
+{% endhighlight %}
+
+     Apagando um banco
+deletando um banco de dados   
+
+{% highlight bash %}
+
+DROP DATABASE banco;
+
+{% endhighlight %}
+
+     Selecionando o banco   
+
+{% highlight bash %}
+
+USE banco;
+
+{% endhighlight %}
+
+     Descrevendo uma tabela   
+
+{% highlight bash %}
+
+DESCRIBE tabela;
+
+{% endhighlight %}
+
+     Selecionando tudo
+de  uma tabela   
+
+{% highlight bash %}
+
+SELECT * FROM tabela;
+
+{% endhighlight %}
+
+     Criando usuarios com
+todos os privilegios
+tem de selecionar o banco de dados antes
+è preciso usar o comando FLUSH PRIVILEGES
+depois para as alterações terem efeitos   
+
+{% highlight bash %}
+
+GRANT ALL PRIVILEGES ON *.* TO usuario@host IDENTIFIED BY 'senha' WITH GRANT OPTION;
+
+{% endhighlight %}
+
+     Criando usuarios
+sem privilegios
+<span class="c">tem de selecionar o banco de dados antes
+è preciso usar o comando FLUSH PRIVILEGES
+depois para as alterações terem efeitos   
+
+{% highlight bash %}
+
+GRANT USAGE PRIVILEGES ON *.* TO usuario@host IDENTIFIED BY 'senha' WITH GRANT OPTION;
+
+{% endhighlight %}
+
+     Deletando um usuario do mysql   
+
+{% highlight bash %}
+
+DROP USER usuario;
+
+{% endhighlight %}
+
+     Deletando uma linha
+de uma tabela   
+
+{% highlight bash %}
+
+DELETE FROM tabela WHERE id = '1';
+
+{% endhighlight %}
+
+     Alterando um campo
+de uma tabela
+<span class="c">Exemplo caso seja um campo numérico:
+update dados set idade=idade+1 where dadosid=6;   
+
+{% highlight bash %}
+
+UPDATE tabela SET campo_que será_alterado = novo_dado WHERE campo = referencia
+
+{% endhighlight %}
+
+     Deletando uma coluna
+de uma tabela   
+
+{% highlight bash %}
+
+ALTER TABLE tabela DROP COLUMN nome_da_coluna;
+
+{% endhighlight %}
+
+     Inserindo uma coluna
+numa tabela
+Coluna qualquer   
+
+{% highlight bash %}
+
+ALTER TABLE tabela ADD nova_coluna VARCHAR(20) NOT NULL AFTER coluna_existente
+
+{% endhighlight %}
+
+     Inserindo uma coluna
+numa tabela
+Primary Keys   
+
+{% highlight bash %}
+
+ALTER TABLE tabela ADD nova_coluna INT UNSIGNED NOT NULL AUTO_INCREMENT PRIMARY KEY FIRST
+
+{% endhighlight %}
+
+     Left Join   
+
+{% highlight bash %}
+
+SELECT tabela1.id, tabela1.coluna1, tabela2.coluna2
+FROM tabela1 LEFT JOIN tabela2
+ON tabela1.id = tabela2.id;
+
+{% endhighlight %}
+
+Exemplo:
+
+{% highlight bash %}
+SELECT form.id, form.nome, dados.id FROM form LEFT JOIN dados ON form.id = dados.id;
+{% endhighlight %}
 
 
-</p>
+</td>  </tr><tr>   <td class="a">Listar todos os
+usuarios do MySQL   
+
+{% highlight bash %}
+
+SELECT * FROM mysql.user;
+SELECT host, user, password, select_priv FROM mysql.user;
+
+{% endhighlight %}
+
+     Revogando todos os privilégios   
+
+{% highlight bash %}
+
+REVOKE ALL ON banco_de_dados.* FROM usuario;
+
+{% endhighlight %}
+
+     Criando usuario 
+com alguns privilegios   
+
+{% highlight bash %}
+
+GRANT SELECT, INSERT, UPDATE, DELETE, INDEX, ALTER, CREATE, DROP ON tabela.* TO usuario;
+
+{% endhighlight %}
+
+     Revogando alguns privilégos   
+
+{% highlight bash %}
+
+REVOKE UPDATE, DELETE, INDEX, ALTER, CREATE, DROP ON banco_de_dados.* FROM usuario;
+
+{% endhighlight %}
+
+     Concedendo todos
+os privilegios para
+todas as tabelas   
+
+{% highlight bash %}
+
+GRANT ALL PRIVILEGES ON *.* TO usuario;
+
+{% endhighlight %}
+
+     Alterando o nome
+de uma coluna   
+
+{% highlight bash %}
+
+ALTER TABLE tabela CHANGE coluna_que_será_modificada novo_nome_da coluna TEXT NOT NULL;
+
+{% endhighlight %}
+
+     Utilizando Aliases
+Cláusula de apelido   
+
+{% highlight bash %}
+
+SELECT t1.campo1 FROM tabela1 AS t2, tabela2 AS t1 WHERE t2.campo1 = t1.campo1 AND t1.campo2 LIKE '%termo%';
+
+{% endhighlight %}
+
+     Exibindo a consulta
+por ordem alfabética<span class="c">
+utilizar  a cláusula ASC resultaria no mesmo Exemplo: 
+SELECT t.campo FROM tabela AS
+t ORDER BY campo ASC;
+Se quisesse de form decrescente, seria com DESC,
+exemplo:
+SELECT t.campo FROM tabela AS 
+t ORDER BY campo DESC;   
+
+{% highlight bash %}
+
+SELECT t.campo FROM tabela AS t ORDER BY campo;
+
+{% endhighlight %}
+
+     Média ponderada   
+
+{% highlight bash %}
+
+SELECT AVG(campo) FROM tabela;
+
+{% endhighlight %}
+
+     Agrupando a consulta   
+
+{% highlight bash %}
+
+SELECT AVG(campo) FROM tabela GROUP BY campo;
+
+{% endhighlight %}
+
+     Especificando Consultas   
+
+{% highlight bash %}
+
+SELECT AVG(campo) FROM tabela GROUP BY campo HAVING AVG(campo) > 50;
+
+{% endhighlight %}
+
+     Limitando os Resultados
+Pode-se usar também de forma simplificada,Exemplo:
+SELECT campo FROM tabela LIMIT 3;   
+
+{% highlight bash %}
+
+SELECT campo FROM tabela LIMIT 3, 4;
+
+{% endhighlight %}
+
+     Fazendo SubConsultas
+<span class="c">Os Operadores de SubConsulta são:
+IN, SOME, ALL, ANY, EXISTS e NOT EXISTS.   
+
+{% highlight bash %}
+
+SELECT campo1, campo2 FROM formtabela1 WHERE campo2 = (SELECT MAX(campo2) FROM tabela2);
+
+{% endhighlight %}
+
+     Modificando o
+tipo de dados
+mudou de char(10) para char(15)   
+
+{% highlight bash %}
+
+ALTER TABLE tabela MODIFY campo CHAR(15) NOT NULL;
+
+{% endhighlight %}
+
+     Excluindo registros
+do banco de dados
+com cuidados necessário
+Analise as cláusulas do protótipo   
+
+{% highlight bash %}
+
+DELETE LOW_PRIORITY QUICK IGNORE FROM tabela
+WHERE ORDER BY LIMIT;
+
+
+{% endhighlight %}
+
+     alterando a senha root
+<span class="c">Parar o serviço do MySQL (service mysqld stop,
+/etc/init.d/mysqld stop, matando o processo
+– conforme sua distribuição);   
+
+{% highlight bash %}
+
+mysqladmin -u root password 'nova_senha'
+mysqladmin flush-privileges
+OU
+UPDATE user SET Password=PASSWORD('nova_senha') WHERE User='root';
+
+FLUSH PRIVILEGES;
+
+{% endhighlight %}
+
+     Exibindo colunas   
+
+{% highlight bash %}
+
+SHOW COLUMNS FROM tabela;
+
+{% endhighlight %}
+
+     Exibindo privilégios   
+
+{% highlight bash %}
+
+SHOW GRANTS FOR usuario;
+para root basta:SHOW GRANTS;
+
+{% endhighlight %}
+
+     Otimizando uma tabela   
+
+{% highlight bash %}
+
+OPTIMIZE TABLE tabela
+
+{% endhighlight %}
+
+     Exportando um banco de dados
+ALgumas distro Linux só permite se for o usuario ROOT
+o arquivo irá pro diretório que vc estiver no shell.
+Ex.:/home , o arquivo será salvo na pasta home   
+
+{% highlight bash %}
+
+mysqldump -u root -p --opt BANCO > arquivo.sql
+
+{% endhighlight %}
+
+     Importando um banco de dados
+<span class="c">se vc salvar o arquivo .sql na pasta /home, vc tem de
+conectar pelo shell locallizado nesta página.
+Ex.:livrexpert@debian:/home$ mysql -D livrexpert -u root -p    
+
+{% highlight bash %}
+
+mysql -D BANCO_DE_DADOS -u root -p      
+
+{% endhighlight %}
+
+Adicionando dados de
+um arquivo para uma tabela   
+
+{% highlight bash %}
+
+LOAD DATA INFILE "arquivo.txt" INTO TABLE BOOKS;
+
+{% endhighlight %}
+
+     Tipos de tabelas
+MyISAM, ISAM, MEMORY, MERGE, BDB e InnoDB   
+
+{% highlight bash %}
+
+CREATE TABLE tabela TYPE=tipo;
+ou
+ALTER TABLE tabela TYPE=tipo;
+
+{% endhighlight %}
+
+     Criando Chaves Primárias
+para strings   
+
+{% highlight bash %}
+
+CREATE TABLE tabela (campo1 VARCHAR(20), campo2 VARCHAR(40), PRIMARY KEY (campo1));
+
+{% endhighlight %}
+
+     Inserindo dados no MySQL
+com Encriptação SHA1
+Secure Hash Algorithm 1(SHA1)
+Message Digest 5(MD5)
+Unix Crypt(crypt()).   
+
+{% highlight bash %}
+
+INSERT INTO auth VALUES ('teste', sha1('testesenha'));
+
+{% endhighlight %}
+
+     alterando o tipo de campo   
+
+{% highlight bash %}
+
+ALTER TABLE tabela MODIFY campo CHAR(13) NOT NULL;
+
+{% endhighlight %}
+
+     Criando ou alterando 
+campos com valor padrão   
+
+{% highlight bash %}
+
+ALTER TABLE tabela MODIFY campo INT DEFAULT '0';
+
+{% endhighlight %}
+
+     Renomeando tabelas   
+
+{% highlight bash %}
+
+RENAME TABLE tabela TO novo_nome;
+
+{% endhighlight %}
+
+     Agrupando por categoria,
+nao exibe resultados repetidos   
+
+{% highlight bash %}
+
+SELECT DISTINCT campo FROM tabela
+
+{% endhighlight %}
+
+     Referir a qualquer coluna 
+ou alias definido na expressão_select
+ SELECT id FROM lx_dados HAVING id > 1;   
+
+{% highlight bash %}
+
+SELECT usuario,MAX(salario) FROM usuarios GROUP BY usuario HAVING MAX(salario)>10;
+
+{% endhighlight %}
+
+     Verificar onde campos são nulos
+select lx_remetente, lx_assunto, lx_data from lx_tickets where lx_assunto IS NULL;   
+
+{% highlight bash %}
+
+SELECT * FROM nome_tabela WHERE auto_col IS NULL
+
+{% endhighlight %}
+
+     Usando a Expressão IN
+select lx_data from lx_tickets where lx_remetente IN ('2');   
+
+{% highlight bash %}
+
+SELECT 'wefwf' IN (0,3,5,'wefwf');   -> 1
+
+{% endhighlight %}
+
+     Verificando a Versão do MySQL   
+
+{% highlight bash %}
+
+SELECT VERSION(), CURRENT_DATE;
+
+{% endhighlight %}
+
+     Efetuando cálculo no MySQL   
+
+{% highlight bash %}
+
+SELECT (4+4)*4;
+
+{% endhighlight %}
+
+     Comandos múltiplos de uma só vez
+ o \c cancela um comando   
+
+{% highlight bash %}
+
+SELECT NOW(), USER();
+
+{% endhighlight %}
+
+     Inserindo arquivo que contem dados
+separados por tabulações(tab) para uma tabela
+<span class="c">Deletando: DELETE FROM pet;
+
+LOAD DATA LOCAL INFILE "pet.txt" INTO TABLE pet;   
+
+{% highlight bash %}
+
+LOAD DATA LOCAL INFILE "pet.txt" INTO TABLE pet;
+
+{% endhighlight %}
+
+     Inserindo data e hora automaticamente   
+
+{% highlight bash %}
+
+CURDATE(); -- CURTIME(); -- NOW();
+
+{% endhighlight %}
+
+     Fazendo consultas complexas   
+
+{% highlight bash %}
+
+SELECT * FROM pet WHERE (species = "cat" AND sex = "m") OR (species = "dog" AND sex = "f");
+
+{% endhighlight %}
+
+     selecionando o nome e a diferença
+dos 5 caracteres a esquerda data atual pelo
+aniversario e exibindo um campo apelido(idade)
+para exibir o resultado   
+
+{% highlight bash %}
+
+SELECT nome, LEFT(CURDATE(),5)-LEFT(aniversario,5) AS idade FROM estudos;
+
+{% endhighlight %}
+
+     Selecionado somente campos não nulos
+isso é diferente de usar != NULL   
+
+{% highlight bash %}
+
+SELECT * FROM tabela WHERE campo IS NOT NULL;
+
+{% endhighlight %}
+
+     Trabalhando com datas: YEAR(), MONTH()
+e DAYOFMONTH();   
+
+{% highlight bash %}
+
+SELECT MONTH(campo) FROM tabela;
+
+{% endhighlight %}
+
+     Expressões Regulares
+     
+
+
+<span class="c">numeros de 3 a 8
+palavra que começam com a letra 'b'
+{% highlight bash %}
+SELECT * FROM tabela WHERE campo REGEXP "^b";
+{% endhighlight %}
+Palavras que terminam com fp
+
+{% highlight bash %}
+SELECT * FROM tabela WHERE campo REGEXP "fy$";
+{% endhighlight %}   
+
+{% highlight bash %}
+
+SELECT * FROM tabela WHERE campo REGEXP "[3-8]";
+
+{% endhighlight %}
+
+     Contando Registros
+(quantidade de rows/linhas de uma tabela)   
+
+{% highlight bash %}
+
+SELECT COUNT(*) FROM tabela;
+
+{% endhighlight %}
+
+        
+
+{% highlight bash %}
+
+SELECT campo1, campo2, COUNT(*) FROM tabela WHERE campo1 IS NOT NULL GROUP BY campo1, campo2;
+
+{% endhighlight %}
+
+     Selecionando campos de duas tabelas diferentes   
+
+{% highlight bash %}
+
+SELECT tabela1.campo1, tabela2.campo2 FROM tabela1, tabela2 WHERE campo1 IS NOT NULL
+
+{% endhighlight %}
+
+     Consulta Avançada
+<span class="c">exemplo:
+
+{% highlight bash %}
+SELECT t1.nome, t2.nome 
+FROM lx_dados AS t1, lx_info AS t2 
+WHERE t1.nome = t2.nome;   
+{% endhighlight %}
+
+
+{% highlight bash %}
+
+SELECT t1.campoX, t2.campoY 
+FROM tabela1 AS t1, tabela2 AS t2 
+WHERE t1.campoX = t2.campoY;
+
+{% endhighlight %}
+
+     Descobrindo o Banco de Dados
+caso esqueça o nome do mesmo   
+
+{% highlight bash %}
+
+SELECT DATABASE();
+
+{% endhighlight %}
+
+     O Valor Máximo para uma Coluna   
+
+{% highlight bash %}
+
+SELECT MAX(campo) AS campo FROM tabela;
+
+{% endhighlight %}
+
+     Criando tabelas temporarias   
+
+{% highlight bash %}
+
+CREATE TEMPORARY TABLE tabela (campo INT(4) UNSIGNED ZEROFILL DEFAULT '0000' NOT NULL, campo   DOUBLE(16,2) DEFAULT '0.00' NOT NULL);
+
+{% endhighlight %}
+
+     Bloqueando uma tabela   
+
+{% highlight bash %}
+
+LOCK TABLES tabela READ;
+
+{% endhighlight %}
+
+     Desbloqueando uma tabela   
+
+{% highlight bash %}
+
+UNLOCK TABLES;
+
+{% endhighlight %}
+
+     Inserindo dados numa tabela a partir 
+de um SELECT de outra tabela   
+
+{% highlight bash %}
+
+INSERT INTO tabela1 SELECT campo, MAX(campo2) FROM tabela2 GROUP BY campo;
+
+{% endhighlight %}
+
+     Consulta Avançada(estudar)   
+
+{% highlight bash %}
+
+SELECT campo, SUBSTRING( MAX( CONCAT(LPAD(campo2,6,'0'),campo3) ), 7) AS campo3, 0.00+LEFT(MAX( CONCAT(LPAD(campo2,6,'0'),campo3) ), 6) AS campo2
+FROM tabela GROUP BY campo;
+
+{% endhighlight %}
+
+     Pesquisando em Duas Chaves   
+
+{% highlight bash %}
+
+SELECT campoX FROM tabela1 UNION SELECT campo2 FROM tabela2;
+
+{% endhighlight %}
+
+     UNSIGNED E ZEROFILL   
+
+{% highlight bash %}
+
+UNSIGNED - Todos os tipos inteiros no MySQL podem ter o atributo opcional UNSIGNED.Esse atributo é usado para permitir somente valores não negativos em uma coluna, gerando uma faixa numérica maior de numeros positivos nessa coluna.Faixa UNSIGNED: de 0 a 4294967295.
+ZEROFILL - O atributo opcional ZEROFILL, preenche espaços em uma coluna, substituindo por zeros. Por exemplo, uma coluna declarada como INT(4) ZEROFILL, o valor 5 é recuperado como 0005.
+Se você especificar para uma coluna numérica ZEROFILL, automaticamente o MySQL adiciona o atributo UNSIGNED a coluna.
+
+{% endhighlight %}
+
+     Verificando o Password do usuário mysql   
+
+{% highlight bash %}
+
+SELECT PASSWORD('minha_senha');
+
+{% endhighlight %}
+
+     verificar se um servidor mysqld em execução suporta OpenSSL
+se retornar YES está ativado, ao contrário retorna DISABLE   
+
+{% highlight bash %}
+
+SHOW VARIABLES LIKE 'have_openssl';
+
+{% endhighlight %}
+
+     Criando um usuario com todos os privilegios e com suporte a SSL
+a biblioteca OPENSSL tem que estar instalada   
+
+{% highlight bash %}
+
+GRANT ALL PRIVILEGES ON *.* TO usuario@localhost IDENTIFIED BY 'senha' REQUIRE SSL;
+
+{% endhighlight %}
+
+     Checando e Recuperando tabelas
+REPAIR só funciona em tabelas MyISAM, o myisamchk é executado no Shell(myisamchk --help)   
+
+{% highlight bash %}
+
+CHECK TABLE tabela;
+REPAIR TABLE tabela;
+
+{% endhighlight %}
+
+     Optimizando e Analisando tabelas
+só funciona em tabelas MyISAM   
+
+{% highlight bash %}
+
+OPTIMIZE TABLE tabela
+ANALYZE TABLE tabela
+
+{% endhighlight %}
+
+     Reiniciando, parando e iniciando o Servidor   
+
+{% highlight bash %}
+
+/etc/init.d/mysql start
+/etc/init.d/mysql stop
+/etc/init.d/mysql restart
+
+{% endhighlight %}
+
+</td>  </tr><tr>   <td class="a">Comando úteis (ver os logs, processos, privilegios, erros, avisos, tipos...)
+SELECT CURRENT_USER() (mostra o usuario em uso)   
+
+{% highlight bash %}
+
+SHOW BDB LOGS
+SHOW PROCESSLIST
+SHOW GRANTS FOR usuario@localhost;
+SHOW WARNINGS LIMIT 10
+SHOW ERRORS LIMIT 10
+SHOW TABLE TYPES;
+SHOW PRIVILEGES
+
+{% endhighlight %}
+
+     +Comandos úteis   
+
+{% highlight bash %}
+
+SELECT LAST_INSERT_ID();(retorna o último ID inserido com auto_increment)
+SELECT FORMAT(12332.4,1);(formata as casas da saida)
+
+{% endhighlight %}
+
+  
+
+
+

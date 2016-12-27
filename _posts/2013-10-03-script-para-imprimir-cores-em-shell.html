@@ -15,6 +15,111 @@ introduction: Script para imprimir cores em Shell Script (Bash)
 ---
 
 <p>
-<div class="separator" style="clear: both; text-align: center;"><a href="http://1.bp.blogspot.com/-_gUy0yQTqZM/UkjQtOlbfaI/AAAAAAAACbc/bn9SFHwydy8/s1600/shell+script2.png" imageanchor="1" style="clear: left; float: left; margin-bottom: 1em; margin-right: 1em;"><img border="0" src="http://1.bp.blogspot.com/-_gUy0yQTqZM/UkjQtOlbfaI/AAAAAAAACbc/bn9SFHwydy8/s320/shell+script2.png" /></a></div></p><p><blockquote class="tr_bq"><span style="color: purple;"><span style="font-size: large;"><b>Olá galera esse <span style="color: blue;">SCRIPT</span> é igual ao '<span style="color: blue;">echo</span>' só com <span style="color: blue;"><u>cor</u></span> e em </b><span style="color: blue;"><u><i>português ou inglês e abreviações dos atributos</i></u></span><b>.Serve pra quando você criar um <span style="color: blue;">script</span>, ao invés de de você usar&nbsp; o comando '<span style="color: blue;">echo</span>' utilizar o comando '<span style="color: blue;">cor</span>' pré disponibilizado no seu <span style="color: blue;">.bashrc</span> , para isso veja como incluí-lo no seu <span style="color: blue;">.bashrc</span> e não se esqueça de ler o cabeçalho do <span style="color: blue;">SCRIPT</span>.</b></span></span></blockquote></p><p></p><p><span style="font-size: x-large;"><b>COMO INCLUIR NO SEU </b><span style="color: blue;"><i>.bashrc</i></span><b>:</b></span></p><p><b></p><p></b><u><b>1 - Salve o arquivo no local desejado;</b></u></p><p><u><b>2 - Dê a permissssão de execução;</b></u></p><p><div class="adp"><b>$ chmod +x cor.sh</b></div><b></p><p></b><u><b>3 - Abra se .bashrc;</b></u></p><p><div class="adp"><b>$ vi /home/$USER/.bashrc</b></div><b></p><p></b><u><b>4 - crie uma nova linha no final do arquivo, com o seguinte código;</b></u></p><p><b>{% highlight bash %}alias cor="/home/$USER/cor.sh"{% endhighlight %}</b></p><p><u><b>5 - Salve, feche e abra o terminal(se já tiver aberto, abra um novo terminal) e teste;</b></u></p><p><b>{% highlight bash %}$ cor "Teste imprimindo em cores" azul negrito{% endhighlight %}</b></p><p><b></p><p></b><b>Código no PasteBin: </b></p><p><b><script src="http://pastebin.com/embed_js.php?i=azeU6X1n"></script></b></p><p><b>Código no Blog:</b></p><p><b>{% highlight bash %}#!/bin/bash</p><p># --------------------------------------</p><p># ./cor.sh</p><p>#</p><p># Script para imprimir cores em Shell Script (Bash)</p><p>#</p><p># Uso: &nbsp;&nbsp;&nbsp; ./cor.sh 'Texto' [cor] [ atributo]</p><p>#</p><p># Ex.: &nbsp;&nbsp;&nbsp; ./cor.sh 'Texto'</p><p>#&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; ./cor.sh 'Texto' amarelo</p><p>#&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; ./cor.sh 'Texto' amarelo negrito</p><p>#</p><p># Observações:</p><p>#</p><p>#&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; 1 - use o Texto somente entre aspas ''</p><p>#&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; 2 - use a ordem: [1° texto] [2° cor] [3° atributo]</p><p>#&nbsp;&nbsp;&nbsp;&nbsp; 3 - se você não informar a cor, será branca</p><p>#&nbsp;&nbsp;&nbsp;&nbsp; 4 - se você não informar o atributo, será normal</p><p>#&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; 5 - use o nome das cores (vermelho, verde, amarelo, azul, rosa, branco e preto), ou em inglês</p><p>#&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; 6 - use os atributos (normal ou nor, negrito ou neg, sublinhado ou sub e reverso ou rev)</p><p>#</p><p># Autor: Marcos da B. M. Oliveira , www.terminalroot.com.br</p><p># Desde: Qui 03 Out 2013 21:56:14 BRT </p><p># Licença: GPL</p><p># --------------------------------------</p><p>##############--COR--###############</p><p>if [ "$2" ]; then</p><p>&nbsp;&nbsp;&nbsp; case "$2" in</p><p>&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; vermelho | red)</p><p>&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; cor="31m"</p><p>&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; ;;</p><p>&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; verde | green)</p><p>&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; cor="32m"</p><p>&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; ;;</p><p>&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; amarelo | yellow)</p><p>&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; cor="33m"</p><p>&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; ;;</p><p>&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; azul | blue)</p><p>&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; cor="34m"</p><p>&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; ;;</p><p>&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; rosa | pink)</p><p>&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; cor="35m"</p><p>&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; ;;</p><p>&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; cinza | gray)</p><p>&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; cor="36m"</p><p>&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; ;;</p><p>&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; branco | white)</p><p>&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; cor="37m"</p><p>&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; ;;</p><p>&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; preto | black)</p><p>&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; cor="30m"</p><p>&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; ;;</p><p>&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; *)</p><p>&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; cor="37m"</p><p>&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; ;;</p><p>&nbsp;&nbsp;&nbsp; esac</p><p>else</p><p>&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; cor="37m";</p><p>fi</p><p>&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; </p><p>##############--ATRIBUTO--###############</p><p>if [ "$3" ]; then</p><p>&nbsp;&nbsp;&nbsp; case "$3" in</p><p>&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; normal | nor)</p><p>&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; atributo="0"</p><p>&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; ;;</p><p>&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; negrito | neg | bold)</p><p>&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; atributo="1"</p><p>&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; ;;</p><p>&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; sublinhado | sub | underline)</p><p>&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; atributo="4"</p><p>&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; ;;</p><p>&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; reverso | rev)</p><p>&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; atributo="7"</p><p>&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; ;;</p><p>&nbsp;&nbsp;&nbsp; esac</p><p>else</p><p>&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; atributo="0";</p><p>fi</p><p>##############--TEXTO--###############</p><p>texto="$1"</p><p>echo -e "\033[$atributo;$cor$texto\033[0m"{% endhighlight %}</b>
+<div class="separator" style="clear: both; text-align: center;"><a href="http://1.bp.blogspot.com/-_gUy0yQTqZM/UkjQtOlbfaI/AAAAAAAACbc/bn9SFHwydy8/s1600/shell+script2.png" imageanchor="1" style="clear: left; float: left; margin-bottom: 1em; margin-right: 1em;"><img border="0" src="http://1.bp.blogspot.com/-_gUy0yQTqZM/UkjQtOlbfaI/AAAAAAAACbc/bn9SFHwydy8/s320/shell+script2.png" /></a></div>
+<blockquote class="tr_bq"><span style="color: purple;"><span style="font-size: large;"><b>Olá galera esse <span style="color: blue;">SCRIPT</span> é igual ao '<span style="color: blue;">echo</span>' só com <span style="color: blue;"><u>cor</u></span> e em </b><span style="color: blue;"><u><i>português ou inglês e abreviações dos atributos</i></u></span><b>.Serve pra quando você criar um <span style="color: blue;">script</span>, ao invés de de você usar o comando '<span style="color: blue;">echo</span>' utilizar o comando '<span style="color: blue;">cor</span>' pré disponibilizado no seu <span style="color: blue;">.bashrc</span> , para isso veja como incluí-lo no seu <span style="color: blue;">.bashrc</span> e não se esqueça de ler o cabeçalho do <span style="color: blue;">SCRIPT</span>.</b></span></span></blockquote>
+
+<span style="font-size: x-large;"><b>COMO INCLUIR NO SEU </b><span style="color: blue;"><i>.bashrc</i></span><b>:</b></span>
+<b>
+</b><u><b>1 - Salve o arquivo no local desejado;</b></u>
+<u><b>2 - Dê a permissssão de execução;</b></u>
+<div class="adp"><b>$ chmod +x cor.sh</b></div><b>
+</b><u><b>3 - Abra se .bashrc;</b></u>
+<div class="adp"><b>$ vi /home/$USER/.bashrc</b></div><b>
+</b><u><b>4 - crie uma nova linha no final do arquivo, com o seguinte código;</b></u>
+{% highlight bash %}
+alias cor="/home/$USER/cor.sh"
+{% endhighlight %}
+5 - Salve, feche e abra o terminal(se já tiver aberto, abra um novo terminal) e teste;
+{% highlight bash %}
+$ cor "Teste imprimindo em cores" azul negrito
+{% endhighlight %}
+<b>
+</b><b>Código no PasteBin: </b>
+<p><iframe src="http://pastebin.com/raw/azeU6X1n" style="border:none;width:100%;"></iframe></p>
+<p>Código no Blog:</p>
+{% highlight bash %}
+#!/bin/bash
+# --------------------------------------
+# ./cor.sh
+#
+# Script para imprimir cores em Shell Script (Bash)
+#
+# Uso:  ./cor.sh 'Texto' [cor] [ atributo]
+#
+# Ex.:  ./cor.sh 'Texto'
+#    ./cor.sh 'Texto' amarelo
+#    ./cor.sh 'Texto' amarelo negrito
+#
+# Observações:
+#
+#   1 - use o Texto somente entre aspas ''
+#   2 - use a ordem: [1° texto] [2° cor] [3° atributo]
+# 3 - se você não informar a cor, será branca
+# 4 - se você não informar o atributo, será normal
+#   5 - use o nome das cores (vermelho, verde, amarelo, azul, rosa, branco e preto), ou em inglês
+#   6 - use os atributos (normal ou nor, negrito ou neg, sublinhado ou sub e reverso ou rev)
+#
+# Autor: Marcos da B. M. Oliveira , www.terminalroot.com.br
+# Desde: Qui 03 Out 2013 21:56:14 BRT 
+# Licença: GPL
+# --------------------------------------
+##############--COR--###############
+if [ "$2" ]; then
+ case "$2" in
+  vermelho | red)
+   cor="31m"
+  ;;
+  verde | green)
+   cor="32m"
+  ;;
+  amarelo | yellow)
+   cor="33m"
+  ;;
+  azul | blue)
+   cor="34m"
+  ;;
+  rosa | pink)
+   cor="35m"
+  ;;
+  cinza | gray)
+   cor="36m"
+  ;;
+  branco | white)
+   cor="37m"
+  ;;
+  preto | black)
+   cor="30m"
+  ;;
+  *)
+   cor="37m"
+  ;;
+ esac
+else
+  cor="37m";
+fi
+  
+##############--ATRIBUTO--###############
+if [ "$3" ]; then
+ case "$3" in
+  normal | nor)
+   atributo="0"
+  ;;
+  negrito | neg | bold)
+   atributo="1"
+  ;;
+  sublinhado | sub | underline)
+   atributo="4"
+  ;;
+  reverso | rev)
+   atributo="7"
+  ;;
+ esac
+else
+  atributo="0";
+fi
+##############--TEXTO--###############
+texto="$1"
+echo -e "\033[$atributo;$cor$texto\033[0m"
+{% endhighlight %}
 
 </p>

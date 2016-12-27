@@ -16,6 +16,104 @@ introduction: Instalando o Zend Framework no Debian
 ---
 
 <p>
-<div class="separator" style="clear: both; text-align: center;"><a href="http://3.bp.blogspot.com/-DZoZOzkC2cM/TxzLvi_N0TI/AAAAAAAAAV8/3tDgFJPuX88/s1600/logo-zend-framework.jpg" imageanchor="1" style="margin-left: 1em; margin-right: 1em;"><img border="0" src="http://3.bp.blogspot.com/-DZoZOzkC2cM/TxzLvi_N0TI/AAAAAAAAAV8/3tDgFJPuX88/s1600/logo-zend-framework.jpg" /></a></div></p><p><b>Chega de criar classe sem herança, chega de sintaxe e código feio, chega de Programação Orientada a Objetos misturada com Estruturada e principalmente chega de header.php, content.php e footer.php, quer ser realmente um programador PHP?Instale, aprenda e use o Zend Framework, o melhor!</b></p><p><b></p><p></b></p><p><b>Segue 10 "toscos" passos pra usar o Zend na sua máquina, o que na verdade pode se resumir em baixar e descompactar!</b></p><p><b></p><p></b></p><p><b>1-Baixe o Zend</b></p><p><b>{% highlight bash %}$ wget http://framework.zend.com/releases/ZendFramework-1.11.11/ZendFramework-1.11.11.tar.gz{% endhighlight %}</b></p><p><b></p><p></b></p><p><b>2-Mova-o para o diretório padrão</b></p><p><b>{% highlight bash %}# mv ZendFramework-1.11.11.tar.gz /usr/share/php5/{% endhighlight %}</b></p><p><b></p><p></b></p><p><b>3-Entre no diretório e descompacte-o</b></p><p><b>{% highlight bash %}# cd /usr/share/php5/</p><p># tar -xzvf ZendFramework-1.11.11.tar.gz{% endhighlight %}</b></p><p><b></p><p></b></p><p><b>4-Renomeie a pasta que você descompactou para libzend-framework-php</b></p><p><b>{% highlight bash %}# mv ZendFramework-1.11.11/ libzend-framework-php{% endhighlight %}</b></p><p><b></p><p></b></p><p><b>5-Edite o arquivo php.ini e altere o include_path, depois precisa descomentar(tirar o ';'(ponto e virgula do início))</b></p><p><b>{% highlight bash %}# vi /etc/php5/apache2/php.ini{% endhighlight %}</b></p><p><b></p><p></b></p><p><b>troque isso:</b></p><p><b>{% highlight bash %};include_path = ".:/usr/share/php{% endhighlight %}</b></p><p><b></p><p></b></p><p><b>por isso:</b></p><p><b>{% highlight bash %}include_path = ".:/usr/share/php:/usr/share/php5/libzend-framework-php"{% endhighlight %}</b></p><p><b></p><p></b></p><p><b>6-Reinicie o Apache</b></p><p><b>{% highlight bash %}# /etc/init.d/apache2 restart{% endhighlight %}</b></p><p><b></p><p></b></p><p><b>7-Crie um alias para execução do Zend</b></p><p><b>{% highlight bash %}# alias zf=/usr/share/php5/libzend-framework-php/bin/zf.sh{% endhighlight %}</b></p><p><b></p><p></b></p><p><b>8-Verifique se já está funcionando verificando a versão:</b></p><p><b>{% highlight bash %}$ zf show version{% endhighlight %}</b></p><p><b></p><p></b></p><p><b>vai retornar isso:</b></p><p><b>{% highlight bash %}Zend Framework Version: 1.11.11{% endhighlight %}</b></p><p><b></p><p></b></p><p><b>9-Crie o básico do básico para vê se funciona mesmo</b></p><p><b>{% highlight bash %}$ zf create project /var/www/hello{% endhighlight %}</b></p><p><b></p><p></b></p><p><b>vai aparecer isso:</b></p><p><b>{% highlight bash %}Creating project at /var/www/hello</p><p>Note: This command created a web project, for more information setting up your VHOST, please see docs/README</p><p>Testing Note: PHPUnit was not found in your include_path, therefore no testing actions will be created.{% endhighlight %}</b></p><p><b></p><p></b></p><p><b>10-Acesse-o no seguinte endereço com seu navegador</b></p><p><b>{% highlight bash %}http://localhost/hello/application/views/scripts/index/index.phtml{% endhighlight %}</b></p><p><b></p><p></b></p><p><b>e finalmente aparecerá essa paǵina</b></p><p><b></p><p></b></p><p><div class="separator" style="clear: both; text-align: center;"><a href="http://3.bp.blogspot.com/-_dIUCGegnwM/TxzNLKvgMuI/AAAAAAAAAWE/y58jF2BquR4/s1600/zend.png" imageanchor="1" style="margin-left: 1em; margin-right: 1em;"><img border="0" height="180" src="http://3.bp.blogspot.com/-_dIUCGegnwM/TxzNLKvgMuI/AAAAAAAAAWE/y58jF2BquR4/s320/zend.png" width="320" /></a></div></p><p><b>Pronto!</b>
+<div class="separator" style="clear: both; text-align: center;"><a href="http://3.bp.blogspot.com/-DZoZOzkC2cM/TxzLvi_N0TI/AAAAAAAAAV8/3tDgFJPuX88/s1600/logo-zend-framework.jpg" imageanchor="1" style="margin-left: 1em; margin-right: 1em;"><img border="0" src="http://3.bp.blogspot.com/-DZoZOzkC2cM/TxzLvi_N0TI/AAAAAAAAAV8/3tDgFJPuX88/s1600/logo-zend-framework.jpg" /></a></div>
+<p>Chega de criar classe sem herança, chega de sintaxe e código feio, chega de Programação Orientada a Objetos misturada com Estruturada e principalmente chega de header.php, content.php e footer.php, quer ser realmente um programador PHP?Instale, aprenda e use o Zend Framework, o melhor!</p>
+<b>
+</b>
+<p>Segue 10 "toscos" passos pra usar o Zend na sua máquina, o que na verdade pode se resumir em baixar e descompactar!</p>
+<b>
+</b>
+<p>1-Baixe o Zend</p>
+{% highlight bash %}
+$ wget http://framework.zend.com/releases/ZendFramework-1.11.11/ZendFramework-1.11.11.tar.gz
+{% endhighlight %}
 
-</p>
+
+2-Mova-o para o diretório padrão
+{% highlight bash %}
+# mv ZendFramework-1.11.11.tar.gz /usr/share/php5/
+{% endhighlight %}
+<b>
+</b>
+<p>3-Entre no diretório e descompacte-o</p>
+{% highlight bash %}
+# cd /usr/share/php5/
+# tar -xzvf ZendFramework-1.11.11.tar.gz
+{% endhighlight %}
+<b>
+</b>
+<p>4-Renomeie a pasta que você descompactou para libzend-framework-php</p>
+{% highlight bash %}
+# mv ZendFramework-1.11.11/ libzend-framework-php
+{% endhighlight %}
+
+
+5-Edite o arquivo php.ini e altere o include_path, depois precisa descomentar(tirar o ';'(ponto e virgula do início))
+{% highlight bash %}
+# vi /etc/php5/apache2/php.ini
+{% endhighlight %}
+<b>
+</b>
+<p>troque isso:</p>
+{% highlight bash %}
+;include_path = ".:/usr/share/php
+{% endhighlight %}
+
+
+por isso:
+{% highlight bash %}
+include_path = ".:/usr/share/php:/usr/share/php5/libzend-framework-php"
+{% endhighlight %}
+<b>
+</b>
+<p>6-Reinicie o Apache</p>
+{% highlight bash %}
+# /etc/init.d/apache2 restart
+{% endhighlight %}
+
+
+7-Crie um alias para execução do Zend
+{% highlight bash %}
+# alias zf=/usr/share/php5/libzend-framework-php/bin/zf.sh
+{% endhighlight %}
+<b>
+</b>
+<p>8-Verifique se já está funcionando verificando a versão:</p>
+{% highlight bash %}
+$ zf show version
+{% endhighlight %}
+
+
+vai retornar isso:
+{% highlight bash %}
+Zend Framework Version: 1.11.11
+{% endhighlight %}
+<b>
+</b>
+<p>9-Crie o básico do básico para vê se funciona mesmo</p>
+{% highlight bash %}
+$ zf create project /var/www/hello
+{% endhighlight %}
+
+
+vai aparecer isso:
+{% highlight bash %}
+Creating project at /var/www/hello
+Note: This command created a web project, for more information setting up your VHOST, please see docs/README
+Testing Note: PHPUnit was not found in your include_path, therefore no testing actions will be created.
+{% endhighlight %}
+<b>
+</b>
+<p>10-Acesse-o no seguinte endereço com seu navegador</p>
+{% highlight bash %}
+http://localhost/hello/application/views/scripts/index/index.phtml
+{% endhighlight %}
+
+
+e finalmente aparecerá essa paǵina
+
+
+
+Pronto!
+
+

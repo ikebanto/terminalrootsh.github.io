@@ -16,6 +16,45 @@ introduction: Função Shell Script para limpar documentos recentes no Gnome She
 ---
 
 <p>
-<div class="separator" style="clear: both; text-align: center;"><a href="http://1.bp.blogspot.com/-C1bEp4xkTVA/U8Hxn3P0i_I/AAAAAAAAAMY/XwC0yEsVSFw/s1600/shell-script-gnomeshell-log-limpar-doc-rec.png" imageanchor="1" style="margin-left: 1em; margin-right: 1em;"><img border="0" src="http://1.bp.blogspot.com/-C1bEp4xkTVA/U8Hxn3P0i_I/AAAAAAAAAMY/XwC0yEsVSFw/s1600/shell-script-gnomeshell-log-limpar-doc-rec.png" /></a></div></p><p></p><p><blockquote class="tr_bq"><b>Segue Script abaixo com cabeçalho e linhas comentadas explicando os comandos para análise:</b></blockquote></p><p><b>Código no PasteBin:</b></p><p></p><p><script src="http://pastebin.com/embed_js.php?i=7UwZBZvr"></script> Código no Blog:</p><p></p><p>{% highlight bash %}#!/bin/bash</p><p># ----------------------------------------------------------------------------</p><p># Uso: limpadocs</p><p># Limpa documentos recentes no Gnome Shell (Gnome 3)</p><p># Desde: Sáb 12 Jul 2014 23:07:37 BRT</p><p># Autor: Marcos Oliveira, http://www.terminalroot.com.br/</p><p># Versão: 1</p><p># Licença: GPL</p><p># ----------------------------------------------------------------------------</p><p>limpadocs(){</p><p></p><p>&nbsp;&nbsp; &nbsp;# cria uma variavel local para usar no backup dos documentos baseado na data, hora, minuto e segundo,</p><p>&nbsp;&nbsp; &nbsp;# ou seja, tudo pode ser controlado, se quiser depois vai lá e apaga os backups na "unha" por privacidade.</p><p>&nbsp;&nbsp; &nbsp;local data=$(date +%d-%m-%Y--%H:%M:%S)</p><p>&nbsp;&nbsp; </p><p>&nbsp;&nbsp;&nbsp; # cria o backup usando o nome baseado na variavel acima</p><p>&nbsp;&nbsp; &nbsp;cp /home/$USER/.local/share/recently-used.xbel /home/$USER/.local/share/bkp.$data.recently-used.xbel</p><p>&nbsp;&nbsp; </p><p>&nbsp;&nbsp;&nbsp; # remove o arquivo que salva os docs recentes</p><p>&nbsp;&nbsp;&nbsp; &nbsp;rm /home/$USER/.local/share/recently-used.xbel</p><p>&nbsp;&nbsp;&nbsp; </p><p>&nbsp;&nbsp;&nbsp; &nbsp;# substitui o arquivo, depois o próprio Gnome formatará o arquivo</p><p>&nbsp;&nbsp;&nbsp; &nbsp;touch /home/$USER/.local/share/recently-used.xbel</p><p>&nbsp;&nbsp;&nbsp; </p><p>&nbsp;&nbsp;&nbsp; &nbsp;# exibe uma frase para interatividade</p><p>&nbsp;&nbsp;&nbsp; &nbsp;echo "Documentos recentes limpados com sucesso!";</p><p>&nbsp;&nbsp;&nbsp; </p><p>&nbsp;&nbsp;&nbsp; &nbsp;# sai</p><p>&nbsp;&nbsp;&nbsp; &nbsp;exit 0;</p><p>}</p><p>limpadocs {% endhighlight %}
+<div class="separator" style="clear: both; text-align: center;"><a href="http://1.bp.blogspot.com/-C1bEp4xkTVA/U8Hxn3P0i_I/AAAAAAAAAMY/XwC0yEsVSFw/s1600/shell-script-gnomeshell-log-limpar-doc-rec.png" imageanchor="1" style="margin-left: 1em; margin-right: 1em;"><img border="0" src="http://1.bp.blogspot.com/-C1bEp4xkTVA/U8Hxn3P0i_I/AAAAAAAAAMY/XwC0yEsVSFw/s1600/shell-script-gnomeshell-log-limpar-doc-rec.png" /></a></div>
+
+<blockquote class="tr_bq"><b>Segue Script abaixo com cabeçalho e linhas comentadas explicando os comandos para análise:</b></blockquote>
+<p>Código no PasteBin:</p>
+
+<iframe src="http://pastebin.com/raw/7UwZBZvr" style="border:none;width:100%;"></iframe> Código no Blog:
+
+{% highlight bash %}
+#!/bin/bash
+# ----------------------------------------------------------------------------
+# Uso: limpadocs
+# Limpa documentos recentes no Gnome Shell (Gnome 3)
+# Desde: Sáb 12 Jul 2014 23:07:37 BRT
+# Autor: Marcos Oliveira, http://www.terminalroot.com.br/
+# Versão: 1
+# Licença: GPL
+# ----------------------------------------------------------------------------
+limpadocs(){
+
+ # cria uma variavel local para usar no backup dos documentos baseado na data, hora, minuto e segundo,
+ # ou seja, tudo pode ser controlado, se quiser depois vai lá e apaga os backups na "unha" por privacidade.
+ local data=$(date +%d-%m-%Y--%H:%M:%S)
+ 
+ # cria o backup usando o nome baseado na variavel acima
+ cp /home/$USER/.local/share/recently-used.xbel /home/$USER/.local/share/bkp.$data.recently-used.xbel
+ 
+ # remove o arquivo que salva os docs recentes
+ rm /home/$USER/.local/share/recently-used.xbel
+ 
+ # substitui o arquivo, depois o próprio Gnome formatará o arquivo
+ touch /home/$USER/.local/share/recently-used.xbel
+ 
+ # exibe uma frase para interatividade
+ echo "Documentos recentes limpados com sucesso!";
+ 
+ # sai
+ exit 0;
+}
+limpadocs 
+{% endhighlight %}
 
 </p>

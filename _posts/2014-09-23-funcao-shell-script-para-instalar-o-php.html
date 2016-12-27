@@ -16,6 +16,92 @@ introduction: Função Shell Script para instalar o PHP-GTK
 ---
 
 <p>
-<div class="separator" style="clear: both; text-align: center;"><a href="http://4.bp.blogspot.com/-sYP3rtRKiaI/VCIcrSdcdmI/AAAAAAAAAzQ/DMfYqwB5eL4/s1600/php-gtk-terminal-root.gif" imageanchor="1" style="margin-left: 1em; margin-right: 1em;"><img border="0" src="http://4.bp.blogspot.com/-sYP3rtRKiaI/VCIcrSdcdmI/AAAAAAAAAzQ/DMfYqwB5eL4/s1600/php-gtk-terminal-root.gif" /></a></div><div class="separator" style="clear: both; text-align: center;"><a href="http://3.bp.blogspot.com/-QYC3LoeuJsE/VCIbwdBvGWI/AAAAAAAAAzI/ktugeeniKiw/s1600/php-gtk.gif" imageanchor="1" style="margin-left: 1em; margin-right: 1em;"></p><p></a></div><span style="font-size: large;"><b>Segue o código abaixo no <span style="color: #999999;">Pastebin</span> e no <span style="color: blue;">Blog</span>.</b></span></p><p><blockquote class="tr_bq"><span style="font-size: large;"><b><span style="color: red;">Atenção: A FUNÇÃO É RECOMENDADA PARA 32 BITS.</span></b></span></blockquote></p><p><u><i><span style="font-size: large;">Código no PasteBin:</span></i></u></p><p><script src="http://pastebin.com/embed_js.php?i=dZt3gjCb"></script> <u><i><span style="font-size: large;">Código no Blog:</span></i></u></p><p><div class="adp">#!/bin/bash</p><p># --------------------------------------</p><p># Função Shell Script para instalar o PHP-GTK</p><p># ./PHPGTKinstalar</p><p>#</p><p># Uso: ./PHPGTKinstalar</p><p>#</p><p># Autor: Marcos Oliveira , http://www.terminalroot.com.br/</p><p># Desde: Sáb 20 Set 2014 17:26:27 BRT&nbsp; </p><p># Versão: 2</p><p># Licença: GPL</p><p># --------------------------------------</p><p>PHPGTKinstalar(){</p><p>&nbsp;&nbsp;&nbsp; reset</p><p>&nbsp;&nbsp;&nbsp; if [ "$USER" = 'root' ]; then </p><p>&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; echo "-------------------------------------------------------"</p><p>&nbsp;&nbsp;&nbsp; else</p><p>&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; echo -e "Você precisa estar logado como \033[4;28mroot\033[0m\nAbortar.";</p><p>&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp; exit 0</p><p>&nbsp;&nbsp;&nbsp; fi</p><p>&nbsp;&nbsp;&nbsp; url="http://master.dl.sourceforge.net/project/phpgtk2/";</p><p>&nbsp;&nbsp;&nbsp; pacote="php-gtk2.tar.gz";</p><p></p><p>&nbsp;&nbsp;&nbsp; # baixar pacote</p><p>&nbsp;&nbsp;&nbsp; echo&nbsp;&nbsp;&nbsp; -ne&nbsp;&nbsp;&nbsp; "[OK]&nbsp;&nbsp;&nbsp; Baixando pacote...\n"</p><p>&nbsp;&nbsp;&nbsp; wget "$url""$pacote"</p><p>&nbsp;&nbsp;&nbsp; sleep 1</p><p></p><p>&nbsp;&nbsp;&nbsp; # movendo para pasta ideal</p><p>&nbsp;&nbsp;&nbsp; echo&nbsp;&nbsp;&nbsp; -ne&nbsp;&nbsp;&nbsp; "[OK]&nbsp;&nbsp;&nbsp; Movendo pacote...\n"</p><p>&nbsp;&nbsp;&nbsp; mv php-gtk2.tar.gz /usr/local/</p><p>&nbsp;&nbsp;&nbsp; sleep 1</p><p></p><p>&nbsp;&nbsp;&nbsp; # entrando do diretório ideal</p><p>&nbsp;&nbsp;&nbsp; echo&nbsp;&nbsp;&nbsp; -ne&nbsp;&nbsp;&nbsp; "[OK]&nbsp;&nbsp;&nbsp; Posicionado-se ao pacote...\n"</p><p>&nbsp;&nbsp;&nbsp; cd /usr/local/</p><p>&nbsp;&nbsp;&nbsp; sleep 1</p><p></p><p>&nbsp;&nbsp;&nbsp; # desempacotando</p><p>&nbsp;&nbsp;&nbsp; echo&nbsp;&nbsp;&nbsp; -ne&nbsp;&nbsp;&nbsp; "[OK]&nbsp;&nbsp;&nbsp; Extraindo pacote...\n"</p><p>&nbsp;&nbsp;&nbsp; tar -zxf php-gtk2.tar.gz</p><p>&nbsp;&nbsp;&nbsp; sleep 1</p><p></p><p>&nbsp;&nbsp;&nbsp; # atribuindo permissão</p><p>&nbsp;&nbsp;&nbsp; echo&nbsp;&nbsp;&nbsp; -ne&nbsp;&nbsp;&nbsp; "[OK]&nbsp;&nbsp;&nbsp; Alterando permissão...\n"</p><p>&nbsp;&nbsp;&nbsp; chmod 777 php-gtk2 -Rf</p><p>&nbsp;&nbsp;&nbsp; sleep 1</p><p></p><p>&nbsp;&nbsp;&nbsp; # copiando</p><p>&nbsp;&nbsp;&nbsp; echo&nbsp;&nbsp;&nbsp; -ne&nbsp;&nbsp;&nbsp; "[OK]&nbsp;&nbsp;&nbsp; Copiando arquivos...\n"</p><p>&nbsp;&nbsp;&nbsp; cp -R /usr/local/php-gtk2/share/gtksourceview-1.0/ /usr/share/</p><p>&nbsp;&nbsp;&nbsp; sleep 1</p><p></p><p>&nbsp;&nbsp;&nbsp; # criando link simbólico</p><p>&nbsp;&nbsp;&nbsp; echo&nbsp;&nbsp;&nbsp; -ne&nbsp;&nbsp;&nbsp; "[OK]&nbsp;&nbsp;&nbsp; Criando link..."</p><p>&nbsp;&nbsp;&nbsp; ln -sf /usr/local/php-gtk2/bin/php /usr/bin/php-gtk2</p><p></p><p>&nbsp;&nbsp;&nbsp; # gerando arquivo de teste</p><p>&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; echo '</p><p>&lt;?php</p><p></p><p>$wnd = new GtkWindow();</p><p>$wnd-&gt;set_default_size(400,200);</p><p>$wnd-&gt;set_title("Instalacao realizada com sucesso!");</p><p>$wnd-&gt;connect_simple("destroy", array("gtk", "main_quit"));</p><p>$lblHello = new GtkLabel("Instalacao realizada com sucesso!");</p><p>$wnd-&gt;add($lblHello);</p><p>$wnd-&gt;show_all();</p><p>Gtk::main();</p><p></p><p>?&gt;</p><p>' &gt; teste_da_instalacao.php</p><p></p><p>&nbsp;&nbsp;&nbsp; if [ "$(which php-gtk2)" ]; then</p><p>&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; php-gtk2 teste_da_instalacao.php</p><p>&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; exit 0</p><p>&nbsp;&nbsp;&nbsp; else</p><p>&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; echo -e "\033[1;28m\nErro, contate: binbash@linuxmail.org\n\033[0m"</p><p>&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; exit 1</p><p>&nbsp;&nbsp;&nbsp; fi</p><p>}</p><p>PHPGTKinstalar </div>
+<div class="separator" style="clear: both; text-align: center;"><a href="http://4.bp.blogspot.com/-sYP3rtRKiaI/VCIcrSdcdmI/AAAAAAAAAzQ/DMfYqwB5eL4/s1600/php-gtk-terminal-root.gif" imageanchor="1" style="margin-left: 1em; margin-right: 1em;"><img border="0" src="http://4.bp.blogspot.com/-sYP3rtRKiaI/VCIcrSdcdmI/AAAAAAAAAzQ/DMfYqwB5eL4/s1600/php-gtk-terminal-root.gif" /></a></div><div class="separator" style="clear: both; text-align: center;"><a href="http://3.bp.blogspot.com/-QYC3LoeuJsE/VCIbwdBvGWI/AAAAAAAAAzI/ktugeeniKiw/s1600/php-gtk.gif" imageanchor="1" style="margin-left: 1em; margin-right: 1em;">
+</a></div><span style="font-size: large;"><b>Segue o código abaixo no <span style="color: #999999;">Pastebin</span> e no <span style="color: blue;">Blog</span>.</b></span>
+<blockquote class="tr_bq"><span style="font-size: large;"><b><span style="color: red;">Atenção: A FUNÇÃO É RECOMENDADA PARA 32 BITS.</span></b></span></blockquote>
+<u><i><span style="font-size: large;">Código no PasteBin:</span></i></u>
+<iframe src="http://pastebin.com/raw/dZt3gjCb" style="border:none;width:100%;"></iframe> <u><i><span style="font-size: large;">Código no Blog:</span></i></u>
+<div class="adp">#!/bin/bash
+# --------------------------------------
+# Função Shell Script para instalar o PHP-GTK
+# ./PHPGTKinstalar
+#
+# Uso: ./PHPGTKinstalar
+#
+# Autor: Marcos Oliveira , http://www.terminalroot.com.br/
+# Desde: Sáb 20 Set 2014 17:26:27 BRT 
+# Versão: 2
+# Licença: GPL
+# --------------------------------------
+PHPGTKinstalar(){
+ reset
+ if [ "$USER" = 'root' ]; then 
+  echo "-------------------------------------------------------"
+ else
+  echo -e "Você precisa estar logado como \033[4;28mroot\033[0m\nAbortar.";
+  exit 0
+ fi
+ url="http://master.dl.sourceforge.net/project/phpgtk2/";
+ pacote="php-gtk2.tar.gz";
+
+ # baixar pacote
+ echo -ne "[OK] Baixando pacote...\n"
+ wget "$url""$pacote"
+ sleep 1
+
+ # movendo para pasta ideal
+ echo -ne "[OK] Movendo pacote...\n"
+ mv php-gtk2.tar.gz /usr/local/
+ sleep 1
+
+ # entrando do diretório ideal
+ echo -ne "[OK] Posicionado-se ao pacote...\n"
+ cd /usr/local/
+ sleep 1
+
+ # desempacotando
+ echo -ne "[OK] Extraindo pacote...\n"
+ tar -zxf php-gtk2.tar.gz
+ sleep 1
+
+ # atribuindo permissão
+ echo -ne "[OK] Alterando permissão...\n"
+ chmod 777 php-gtk2 -Rf
+ sleep 1
+
+ # copiando
+ echo -ne "[OK] Copiando arquivos...\n"
+ cp -R /usr/local/php-gtk2/share/gtksourceview-1.0/ /usr/share/
+ sleep 1
+
+ # criando link simbólico
+ echo -ne "[OK] Criando link..."
+ ln -sf /usr/local/php-gtk2/bin/php /usr/bin/php-gtk2
+
+ # gerando arquivo de teste
+  echo '
+<?php
+
+$wnd = new GtkWindow();
+$wnd->set_default_size(400,200);
+$wnd->set_title("Instalacao realizada com sucesso!");
+$wnd->connect_simple("destroy", array("gtk", "main_quit"));
+$lblHello = new GtkLabel("Instalacao realizada com sucesso!");
+$wnd->add($lblHello);
+$wnd->show_all();
+Gtk::main();
+
+?>
+' > teste_da_instalacao.php
+
+ if [ "$(which php-gtk2)" ]; then
+  php-gtk2 teste_da_instalacao.php
+  exit 0
+ else
+  echo -e "\033[1;28m\nErro, contate: binbash@linuxmail.org\n\033[0m"
+  exit 1
+ fi
+}
+PHPGTKinstalar </div>
 
 </p>

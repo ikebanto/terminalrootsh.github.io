@@ -15,6 +15,71 @@ introduction: Script de visualizar texto com Dialog
 ---
 
 <p>
-<div class="separator" style="clear: both; text-align: center;"><a href="http://3.bp.blogspot.com/-la2Sbd4T1l4/USo5PNkE0QI/AAAAAAAABGA/Q9ZR5bMWLqo/s1600/dialog.png" imageanchor="1" style="margin-left: 1em; margin-right: 1em;"><img border="0" src="http://3.bp.blogspot.com/-la2Sbd4T1l4/USo5PNkE0QI/AAAAAAAABGA/Q9ZR5bMWLqo/s320/dialog.png" /></a></div><!-------------------------------------------------><script type="text/javascript"><!-- google_ad_client = "ca-pub-5528601613414387"; google_ad_host = "pub-1556223355139109"; /* quadrados */ google_ad_slot = "9713010559"; google_ad_width = 200; google_ad_height = 200; //</script><script src="http://pagead2.googlesyndication.com/pagead/show_ads.js" type="text/javascript"></script><!-----------------------------------------------></p><p></p><p></p><p><blockquote class="tr_bq"><b>&nbsp; Eu sei que podemos ver os textos contidos nos arquivos com o VIM ou similares, porém utilizando o Dialog fica mais bem visível.</b></p><p><b>Para usar o Dialog no seu script é necessário, possui-lo, para verificar se o Dialog já está instalado no seu PC, execute o comando:</b></blockquote><b></p><p>{% highlight bash %}# dpkg -l | xdialog{% endhighlight %}</p><p></p><p>&nbsp;Se retornar informações sobre o programa é que está instalado, se não(aparecer comando/programa não encontrado), então vc deve instalá-lo da seguinte forma:</p><p></p><p>{% highlight bash %}# apt-get install dialog{% endhighlight %}</p><p></p><p>&nbsp;Agora verifique o script abaixo, ou baixe-o <a href="http://pastebin.com/download.php?i=UVeNufAD">clicando aqui</a>, mas leia os comentários(<span style="color: blue;">#</span>) e o código para entender o funcionamento do mesmo.</p><p>Segue o script com código em Imagem, no Blog e no PasteBin:</p><p></p><p></p><p></p><p>Código em Imagem:</b></p><p><div class="separator" style="clear: both; text-align: center;"><b><a href="http://1.bp.blogspot.com/-BN62RHy4nuY/USo5yeekcrI/AAAAAAAABGI/284Rcl96W_4/s1600/dialog+3.png" imageanchor="1" style="margin-left: 1em; margin-right: 1em;"><img border="0" height="197" src="http://1.bp.blogspot.com/-BN62RHy4nuY/USo5yeekcrI/AAAAAAAABGI/284Rcl96W_4/s400/dialog+3.png" width="400" /></a></b></div><b></p><p></p><p>Código do Blog:</p><p>{% highlight bash %}#!/bin/bash</p><p># ----------------------------------------------------------------------------</p><p># Autor: Marcos da Boa Morte, http://marcospinguim.blogspot.com</p><p># ./visualizartexto.sh</p><p># &gt;&gt; Esse scritp para visualizar textos com maior eficiência de visuabilidade pelo terminal&lt;&lt;</p><p># Dom 24 Fev 2013 11:22:10 BRT </p><p># Versão: 1</p><p># Licença: GPL</p><p># ----------------------------------------------------------------------------</p><p></p><p># exibe o texto para inserir os dados com --inputbox (arquivo/caminho do arquivo) para visualizar o texto do arquivo, em segundo plano ele insere as informações para o arquivo /tmp/nome.txt e armazena na variável nome.</p><p>dialog --inputbox "Digite o nome do arquivo ou do caminho completo caso esteje em outro diretório sem ser o $PWD:" 0 0&nbsp; 2&gt;/tmp/nome.txt</p><p>nome=$( cat /tmp/nome.txt )</p><p></p><p># se a variável nome for nula(for ZERO(0), ou seja o usuário não digitar nada) exibe esse --msgbox, os numeros finais representam tamanho e largura, respectivamente.Uso o clear para limpar a tela.</p><p>if [ -z $nome ]; then</p><p>&nbsp;&nbsp;&nbsp; dialog --msgbox '</p><p>&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; É NECESSÁRIO INFORMAR O NOME&nbsp; DO ARQUIVO OU O CAMINHO DO ARQUIVO,</p><p>&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; CASO O NOME DO ARQUIVO CONTENHA ESPAÇOS, UTILIZE ASTERISCO(*)</p><p>&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; EX.: </p><p>&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;*Novo*arquivo*</p><p>&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; OU&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; </p><p>&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;arquivo.txt </p><p>&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp; OU </p><p>&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;Docs/arquivo.txt' 15 40</p><p>&nbsp;&nbsp;&nbsp; clear</p><p></p><p># se o arquivo existir, visualizamos o conteúdo do mesmo com o --textbox, o --title é pra denominar o quadro.</p><p>elif [ -s $nome ]; then</p><p>&nbsp;&nbsp;&nbsp; dialog --title 'Visualizando Arquivo' --textbox $nome 0 0</p><p>&nbsp;&nbsp;&nbsp; clear</p><p></p><p># caso seja digitado alguma coisa, mas o arquivo não existe, exiibimos essa --msgbox</p><p>else</p><p>&nbsp;&nbsp;&nbsp; dialog --msgbox 'ARQUIVO NÃO ENCONTRADO' 0 0</p><p>&nbsp;&nbsp;&nbsp; clear</p><p>fi{% endhighlight %}</p><p>Código no PasteBin: </p><p><script src="http://pastebin.com/embed_js.php?i=UVeNufAD"></script></b></p><p></p><p><div class="separator" style="clear: both; text-align: center;"><a href="http://4.bp.blogspot.com/-h-12zkVfc8k/USo7qlH7WfI/AAAAAAAABGQ/5oyRXrT_DEw/s1600/dialog+2.png" imageanchor="1" style="margin-left: 1em; margin-right: 1em;"><img border="0" height="82" src="http://4.bp.blogspot.com/-h-12zkVfc8k/USo7qlH7WfI/AAAAAAAABGQ/5oyRXrT_DEw/s400/dialog+2.png" width="400" /></a></div>
+
+
+<blockquote class="tr_bq"><b> Eu sei que podemos ver os textos contidos nos arquivos com o VIM ou similares, porém utilizando o Dialog fica mais bem visível.</b>
+<b>Para usar o Dialog no seu script é necessário, possui-lo, para verificar se o Dialog já está instalado no seu PC, execute o comando:</b></blockquote><b>
+{% highlight bash %}
+# dpkg -l | xdialog
+{% endhighlight %}
+
+Se retornar informações sobre o programa é que está instalado, se não(aparecer comando/programa não encontrado), então vc deve instalá-lo da seguinte forma:
+
+{% highlight bash %}
+# apt-get install dialog
+{% endhighlight %}
+
+Agora verifique o script abaixo, ou baixe-o <a href="http://pastebin.com/download.php?i=UVeNufAD">clicando aqui</a>, mas leia os comentários(<span style="color: blue;">#</span>) e o código para entender o funcionamento do mesmo.
+Segue o script com código em Imagem, no Blog e no PasteBin:
+
+
+
+Código em Imagem:</b>
+<div class="separator" style="clear: both; text-align: center;"><b><a href="http://1.bp.blogspot.com/-BN62RHy4nuY/USo5yeekcrI/AAAAAAAABGI/284Rcl96W_4/s1600/dialog+3.png" imageanchor="1" style="margin-left: 1em; margin-right: 1em;"><img border="0" height="197" src="http://1.bp.blogspot.com/-BN62RHy4nuY/USo5yeekcrI/AAAAAAAABGI/284Rcl96W_4/s400/dialog+3.png" width="400" /></a></b></div><b>
+
+Código do Blog:
+{% highlight bash %}
+#!/bin/bash
+# ----------------------------------------------------------------------------
+# Autor: Marcos da Boa Morte, http://marcospinguim.blogspot.com
+# ./visualizartexto.sh
+# >> Esse scritp para visualizar textos com maior eficiência de visuabilidade pelo terminal<<
+# Dom 24 Fev 2013 11:22:10 BRT 
+# Versão: 1
+# Licença: GPL
+# ----------------------------------------------------------------------------
+
+# exibe o texto para inserir os dados com --inputbox (arquivo/caminho do arquivo) para visualizar o texto do arquivo, em segundo plano ele insere as informações para o arquivo /tmp/nome.txt e armazena na variável nome.
+dialog --inputbox "Digite o nome do arquivo ou do caminho completo caso esteje em outro diretório sem ser o $PWD:" 0 0 2>/tmp/nome.txt
+nome=$( cat /tmp/nome.txt )
+
+# se a variável nome for nula(for ZERO(0), ou seja o usuário não digitar nada) exibe esse --msgbox, os numeros finais representam tamanho e largura, respectivamente.Uso o clear para limpar a tela.
+if [ -z $nome ]; then
+ dialog --msgbox '
+  É NECESSÁRIO INFORMAR O NOME DO ARQUIVO OU O CAMINHO DO ARQUIVO,
+  CASO O NOME DO ARQUIVO CONTENHA ESPAÇOS, UTILIZE ASTERISCO(*)
+  EX.: 
+   *Novo*arquivo*
+      OU  
+   arquivo.txt 
+      OU 
+   Docs/arquivo.txt' 15 40
+ clear
+
+# se o arquivo existir, visualizamos o conteúdo do mesmo com o --textbox, o --title é pra denominar o quadro.
+elif [ -s $nome ]; then
+ dialog --title 'Visualizando Arquivo' --textbox $nome 0 0
+ clear
+
+# caso seja digitado alguma coisa, mas o arquivo não existe, exiibimos essa --msgbox
+else
+ dialog --msgbox 'ARQUIVO NÃO ENCONTRADO' 0 0
+ clear
+fi
+{% endhighlight %}
+Código no PasteBin: 
+<iframe src="http://pastebin.com/raw/UVeNufAD" style="border:none;width:100%;"></iframe></b>
+
+<div class="separator" style="clear: both; text-align: center;"><a href="http://4.bp.blogspot.com/-h-12zkVfc8k/USo7qlH7WfI/AAAAAAAABGQ/5oyRXrT_DEw/s1600/dialog+2.png" imageanchor="1" style="margin-left: 1em; margin-right: 1em;"><img border="0" height="82" src="http://4.bp.blogspot.com/-h-12zkVfc8k/USo7qlH7WfI/AAAAAAAABGQ/5oyRXrT_DEw/s400/dialog+2.png" width="400" /></a></div>
 
 </p>

@@ -18,6 +18,24 @@ introduction: Desmarcando pacotes do autoremove
 ---
 
 <p>
-<div class="separator" style="clear: both; text-align: center;"><a href="http://4.bp.blogspot.com/-KRjS3IjNu0c/VB2qpGSwcxI/AAAAAAAAAxg/2XbbmmfayB0/s1600/camiseta-apt-get-a-life-28888.jpg" imageanchor="1" style="margin-left: 1em; margin-right: 1em;"><img border="0" src="http://4.bp.blogspot.com/-KRjS3IjNu0c/VB2qpGSwcxI/AAAAAAAAAxg/2XbbmmfayB0/s1600/camiseta-apt-get-a-life-28888.jpg" height="200" width="200" /></a></div></p><p><!--<div class="separator" style="clear: both; text-align: center;"><a href="http://3.bp.blogspot.com/-F5kV-L5nRj0/U96Ns-ceguI/AAAAAAAAAds/vM-pFo0qMjk/s1600/new.jpg" imageanchor="1" style="margin-left: 1em; margin-right: 1em;"><img border="0" src="http://3.bp.blogspot.com/-F5kV-L5nRj0/U96Ns-ceguI/AAAAAAAAAds/vM-pFo0qMjk/s1600/new.jpg" /></a></div><div class="separator" style="clear: both; text-align: center;"></div>--></p><p><div style="clear: both;"><b></b></div>Algumas vezes quando executamos o comando:</p><p></p><p><div class="adp"></p><p># apt-get autoremove</div></p><p>Ele lista pacotes ou programas que não queremos que sejam removido por gosto ou por motivo de algum erro, logo podemos desmarcar este pacote com o comando apt-mark:</p><p></p><p><div class="adp"></p><p># apt-mark unmarkauto pacote</div></p><p></p><p>Caso o número de pacotes seja grande, vc pode copiar eles do shell, por num editor de texto, organizá-los e criar um loop em Shell Script pra executar o unmark em todos os pacotes, fica de exercício.</p><p></p><p>Mais informações em:</p><p></p><p><div class="adp"></p><p>$ man apt-mark</div></p><p></p><p>Até a próxima!
+<div class="separator" style="clear: both; text-align: center;"><a href="http://4.bp.blogspot.com/-KRjS3IjNu0c/VB2qpGSwcxI/AAAAAAAAAxg/2XbbmmfayB0/s1600/camiseta-apt-get-a-life-28888.jpg" imageanchor="1" style="margin-left: 1em; margin-right: 1em;"><img border="0" src="http://4.bp.blogspot.com/-KRjS3IjNu0c/VB2qpGSwcxI/AAAAAAAAAxg/2XbbmmfayB0/s1600/camiseta-apt-get-a-life-28888.jpg" height="200" width="200" /></a></div>
+<!--<div class="separator" style="clear: both; text-align: center;"><a href="http://3.bp.blogspot.com/-F5kV-L5nRj0/U96Ns-ceguI/AAAAAAAAAds/vM-pFo0qMjk/s1600/new.jpg" imageanchor="1" style="margin-left: 1em; margin-right: 1em;"><img border="0" src="http://3.bp.blogspot.com/-F5kV-L5nRj0/U96Ns-ceguI/AAAAAAAAAds/vM-pFo0qMjk/s1600/new.jpg" /></a></div><div class="separator" style="clear: both; text-align: center;"></div>-->
+<div style="clear: both;"><b></b></div>Algumas vezes quando executamos o comando:
+
+<div class="adp">
+# apt-get autoremove</div>
+Ele lista pacotes ou programas que não queremos que sejam removido por gosto ou por motivo de algum erro, logo podemos desmarcar este pacote com o comando apt-mark:
+
+<div class="adp">
+# apt-mark unmarkauto pacote</div>
+
+Caso o número de pacotes seja grande, vc pode copiar eles do shell, por num editor de texto, organizá-los e criar um loop em Shell Script pra executar o unmark em todos os pacotes, fica de exercício.
+
+Mais informações em:
+
+<div class="adp">
+$ man apt-mark</div>
+
+Até a próxima!
 
 </p>

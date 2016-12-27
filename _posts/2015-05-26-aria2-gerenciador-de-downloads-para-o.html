@@ -16,6 +16,37 @@ introduction: Aria2, Gerenciador de Downloads para o Terminal
 ---
 
 <p>
-<div class="separator" style="clear: both; text-align: center;"><a href="http://1.bp.blogspot.com/-WDiSSXJXnhI/VWUX2rUVngI/AAAAAAAABS4/1x0oPvzbEkk/s1600/aria2-377x250.png" imageanchor="1" style="margin-left: 1em; margin-right: 1em;"><img border="0" height="212" src="http://1.bp.blogspot.com/-WDiSSXJXnhI/VWUX2rUVngI/AAAAAAAABS4/1x0oPvzbEkk/s320/aria2-377x250.png" width="320" /></a></div><b>Aria2 é um gerenciador de download leve com suporte para HTTP / HTTPS, FTP, BitTorrent e Metalink.</b></p><p><b></b><b>Tem um monte de opções para personalizar os downloads, permite pausar  um download e, em seguida, continuá-lo, você pode baixar a partir de  múltiplos protocolos, tem todas as características de um BitTorrent.</b></p><p><b></b><h1>Instalação (pra quem tiver o sudo instalado, utilize-o):</h1><b></b><b><em>Em Debian, Ubuntu, Mint,…:</em></b></p><p><b></b><b>{% highlight bash %}apt-get install aria2{% endhighlight %}</b></p><p><b></b><b><em>Fedora e derivados:</em></b></p><p><b></b><b>{% highlight bash %}yum install aria2{% endhighlight %}</b></p><p><b></b><b><em>Arch e similares:</em></b></p><p><b></b><b>{% highlight bash %}pacman -S aria2{% endhighlight %}</b></p><p><b></b><h1>Utilização:</h1><b></b><h1>Download de arquivo:</h1><b></b><b>{% highlight bash %}aria2c [url]{% endhighlight %}</b></p><p><b></b><b><em>Limitando a velocidade do download (vc pode substituir 45k pela taxa que deseja, podendo ser em bytes, kilobytes e megabytes):</em></b></p><p><b></b><b>{% highlight bash %}aria2c --max-overall-download-limit=45K http://sourceforge.net/projects/terminalroot/files/terminalroot.tar.gz{% endhighlight %}</b></p><p><b></b><b><em>Para pausar um download, basta enviar um Ctrl + C, e para reiniciar do local que pausou, basta começar com -c:</em></b></p><p><b></b><b>{% highlight bash %}aria2c -c [diretorio_arquivo_pausado]{% endhighlight %}</b></p><p><b></b><b><em>Baixar vários arquivos:</em></b></p><p><b></b><b>{% highlight bash %}aria2c -Z [url1] [url2] [...]{% endhighlight %}</b></p><p><b></b><b>Mais informações no site do projeto:</b> <a href="http://aria2.sourceforge.net/" target="_blank" title="Aria2">http://aria2.sourceforge.net/</a></p><p></p><p>
+<div class="separator" style="clear: both; text-align: center;"><a href="http://1.bp.blogspot.com/-WDiSSXJXnhI/VWUX2rUVngI/AAAAAAAABS4/1x0oPvzbEkk/s1600/aria2-377x250.png" imageanchor="1" style="margin-left: 1em; margin-right: 1em;"><img border="0" height="212" src="http://1.bp.blogspot.com/-WDiSSXJXnhI/VWUX2rUVngI/AAAAAAAABS4/1x0oPvzbEkk/s320/aria2-377x250.png" width="320" /></a></div><b>Aria2 é um gerenciador de download leve com suporte para HTTP / HTTPS, FTP, BitTorrent e Metalink.</b>
+<p></b><b>Tem um monte de opções para personalizar os downloads, permite pausar  um download e, em seguida, continuá-lo, você pode baixar a partir de  múltiplos protocolos, tem todas as características de um BitTorrent.</p>
+<p></b><h1>Instalação (pra quem tiver o sudo instalado, utilize-o):</h1><b></b><b><em>Em Debian, Ubuntu, Mint,…:</em></p>
+{% highlight bash %}
+apt-get install aria2
+{% endhighlight %}
+Fedora e derivados:
+{% highlight bash %}
+yum install aria2
+{% endhighlight %}
+<p></b><b><em>Arch e similares:</em></p>
+{% highlight bash %}
+pacman -S aria2
+{% endhighlight %}
+Utilização:Download de arquivo:{% highlight bash %}
+aria2c [url]
+{% endhighlight %}
+<p></b><b><em>Limitando a velocidade do download (vc pode substituir 45k pela taxa que deseja, podendo ser em bytes, kilobytes e megabytes):</em></p>
+{% highlight bash %}
+aria2c --max-overall-download-limit=45K http://sourceforge.net/projects/terminalroot/files/terminalroot.tar.gz
+{% endhighlight %}
+Para pausar um download, basta enviar um Ctrl + C, e para reiniciar do local que pausou, basta começar com -c:
+{% highlight bash %}
+aria2c -c [diretorio_arquivo_pausado]
+{% endhighlight %}
+<p></b><b><em>Baixar vários arquivos:</em></p>
+{% highlight bash %}
+aria2c -Z [url1] [url2] [...]
+{% endhighlight %}
+Mais informações no site do projeto: http://aria2.sourceforge.net/
 
-</p>
+
+
+

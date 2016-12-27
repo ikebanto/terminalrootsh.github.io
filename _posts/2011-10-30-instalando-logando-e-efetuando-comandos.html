@@ -14,6 +14,161 @@ introduction: Instalando, logando e efetuando comandos básicos no PostGreSQL.
 ---
 
 <p>
-<b>Vamos começar do início:</p><p></p><p>Instalando o PostGreSQL</b></p><p>{% highlight bash %}</p><p>apt-get install postgresql-8.3</p><p>apt-get install postgresql-server-dev-8.3</p><p>apt-get install phppgadmin</p><p>{% endhighlight %}</p><p></p><p><b>Logando pela primeira vez no PostGreSQL,</p><p>para poder logar com senha sem que haja erro:</b></p><p></p><p>{% highlight bash %}</p><p>gedit /etc/postgresql/8.3/main/pg_hba.conf</p><p>{% endhighlight %}</p><p></p><p><b>trocar isso:</b></p><p></p><p>{% highlight bash %}</p><p># Database administrative login by UNIX sockets</p><p>local   all         postgres                          ident sameuser</p><p>{% endhighlight %}</p><p></p><p><b>por isso:</b></p><p></p><p>{% highlight bash %}</p><p># Database administrative login by UNIX sockets</p><p>local   all         postgres                          password</p><p>{% endhighlight %}</p><p></p><p><b>Reiniciar o postgreSQL</b></p><p></p><p>{% highlight bash %}</p><p>/etc/init.d/postgresql-8.3 restart</p><p>{% endhighlight %}</p><p></p><p><b>Para logar com o usuário postgres:</b></p><p></p><p>{% highlight bash %}</p><p># su postgres</p><p>{% endhighlight %}</p><p></p><p><b>Para criar um novo usuário:</b></p><p></p><p>{% highlight bash %}</p><p>$ CREATEUSER -P nome-do-usuário</p><p>{% endhighlight %}</p><p></p><p><blockquote>Obs.:Voçê também pode fazer alterações pelo phpPGadmin</p><p>http://localhost/phppgadmin , caso encontre alguma dificuladade, mas primeiro deve criar o usuario e pôr a senha para logar.</blockquote></p><p><b>Agora, “opcionalmente” mais medidas de segurança “podem/devem” ser tomadas:</p><p></b></p><p><b>Edite o arquivo</b> {% highlight bash %}/etc/postgresql/8.3/main/pg_hba.conf{% endhighlight %}<b>, responsável por configurar como e quem se conecta e autentica ao banco de dados;</b></p><p></p><p><b>Onde há:</b></p><p>{% highlight bash %}</p><p>local all postgres ident sameuser</p><p>{% endhighlight %}</p><p><b>Substitua por:</b></p><p></p><p>{% highlight bash %}local all postgres md5 sameuser{% endhighlight %}</p><p></p><p><b>Logando no PostGre:</b></p><p></p><p>{% highlight bash %}</p><p>psql -U postgres -W</p><p>Senha para usuário postgres:</p><p>Bem vindo ao psql 8.3.14, o terminal iterativo do PostgreSQL.</p><p></p><p>Digite:  \copyright para mostrar termos de distribuição</p><p>\h para ajuda com comandos SQL</p><p>\? para ajuda com comandos do psql</p><p>\g ou terminar com ponto-e-vírgula para executar a consulta</p><p>\q para sair</p><p></p><p>postgres=#</p><p>{% endhighlight %}</p><p></p><p><b>Criando novos usuarios:</b></p><p></p><p>{% highlight bash %}</p><p>CREATE USER marcos\g</p><p>CREATE ROLE</p><p>postgres=#</p><p>{% endhighlight %}</p><p></p><p><blockquote>Obs.: Antes vc deve logar com o usuario padrão “postgres” e criar um banco de dados com o nome do usuario que deseja criar.</blockquote></p><p><b>Comando para criar um Banco de Dados:</b></p><p></p><p>{% highlight bash %}</p><p>CREATE DATABASE usuario \g</p><p>CREATE DATABASE</p><p>postgres=#</p><p>{% endhighlight %}</p><p><b></p><p>Criando tabela:</b></p><p></p><p>{% highlight bash %}</p><p>marcos=> CREATE TABLE tabela (login varchar(20) null, senha varchar(20) null)\g</p><p>CREATE TABLE</p><p>marcos=></p><p>{% endhighlight %}</p><p></p><p><b>Inserindo dados na tabela criada:</b></p><p></p><p>{% highlight bash %}</p><p>marcos=> INSERT INTO tabela VALUES ('marcos', 'senha123')\g</p><p>INSERT 0 1</p><p>marcos=></p><p>{% endhighlight %}</p><p></p><p><b>Executando o comando de criar novos usuarios:</b></p><p></p><p>{% highlight bash %}</p><p>postgres=# CREATE USER livrexpert\g</p><p>CREATE ROLE</p><p>postgres=#</p><p>{% endhighlight %}</p><p></p><p><blockquote>Obs.:Durante instalação pra quem tem o Debian NetInstall instalado, provavelmente seu sistema irá solicitar o CD para completar a instalação:</p><p></p><p>Troca de mídia: por favor, insira o disco nomeado</p><p>'Debian GNU/Linux 5.0.3 _Lenny_ - Official i386 CD Binary-1 20090905-08:23'</p><p>na unidade '/cdrom/' e pressione enter</blockquote>
+<b>Vamos começar do início:
+
+Instalando o PostGreSQL</b>
+{% highlight bash %}
+
+apt-get install postgresql-8.3
+apt-get install postgresql-server-dev-8.3
+apt-get install phppgadmin
+
+{% endhighlight %}
+
+<b>Logando pela primeira vez no PostGreSQL,
+para poder logar com senha sem que haja erro:</b>
+
+{% highlight bash %}
+
+gedit /etc/postgresql/8.3/main/pg_hba.conf
+
+{% endhighlight %}
+
+<p>trocar isso:</p>
+
+{% highlight bash %}
+
+# Database administrative login by UNIX sockets
+local   all         postgres                          ident sameuser
+
+{% endhighlight %}
+
+<p>por isso:</p>
+
+{% highlight bash %}
+
+# Database administrative login by UNIX sockets
+local   all         postgres                          password
+
+{% endhighlight %}
+
+<p>Reiniciar o postgreSQL</p>
+
+{% highlight bash %}
+
+/etc/init.d/postgresql-8.3 restart
+
+{% endhighlight %}
+
+<p>Para logar com o usuário postgres:</p>
+
+{% highlight bash %}
+
+# su postgres
+
+{% endhighlight %}
+
+<p>Para criar um novo usuário:</p>
+
+{% highlight bash %}
+
+$ CREATEUSER -P nome-do-usuário
+
+{% endhighlight %}
+
+<blockquote>Obs.:Voçê também pode fazer alterações pelo phpPGadmin
+http://localhost/phppgadmin , caso encontre alguma dificuladade, mas primeiro deve criar o usuario e pôr a senha para logar.</blockquote>
+<b>Agora, “opcionalmente” mais medidas de segurança “podem/devem” ser tomadas:
+</b>
+Edite o arquivo {% highlight bash %}
+/etc/postgresql/8.3/main/pg_hba.conf
+{% endhighlight %}, responsável por configurar como e quem se conecta e autentica ao banco de dados;
+
+Onde há:
+{% highlight bash %}
+
+local all postgres ident sameuser
+
+{% endhighlight %}
+<p>Substitua por:</p>
+
+{% highlight bash %}
+local all postgres md5 sameuser
+{% endhighlight %}
+
+Logando no PostGre:
+
+{% highlight bash %}
+
+psql -U postgres -W
+Senha para usuário postgres:
+Bem vindo ao psql 8.3.14, o terminal iterativo do PostgreSQL.
+
+Digite:  \copyright para mostrar termos de distribuição
+\h para ajuda com comandos SQL
+\? para ajuda com comandos do psql
+\g ou terminar com ponto-e-vírgula para executar a consulta
+\q para sair
+
+postgres=#
+
+{% endhighlight %}
+
+<p>Criando novos usuarios:</p>
+
+{% highlight bash %}
+
+CREATE USER marcos\g
+CREATE ROLE
+postgres=#
+
+{% endhighlight %}
+
+<blockquote>Obs.: Antes vc deve logar com o usuario padrão “postgres” e criar um banco de dados com o nome do usuario que deseja criar.</blockquote>
+<p>Comando para criar um Banco de Dados:</p>
+
+{% highlight bash %}
+
+CREATE DATABASE usuario \g
+CREATE DATABASE
+postgres=#
+
+{% endhighlight %}
+<b>
+Criando tabela:</b>
+
+{% highlight bash %}
+
+marcos=> CREATE TABLE tabela (login varchar(20) null, senha varchar(20) null)\g
+CREATE TABLE
+marcos=>
+
+{% endhighlight %}
+
+<p>Inserindo dados na tabela criada:</p>
+
+{% highlight bash %}
+
+marcos=> INSERT INTO tabela VALUES ('marcos', 'senha123')\g
+INSERT 0 1
+marcos=>
+
+{% endhighlight %}
+
+<p>Executando o comando de criar novos usuarios:</p>
+
+{% highlight bash %}
+
+postgres=# CREATE USER livrexpert\g
+CREATE ROLE
+postgres=#
+
+{% endhighlight %}
+
+<blockquote>Obs.:Durante instalação pra quem tem o Debian NetInstall instalado, provavelmente seu sistema irá solicitar o CD para completar a instalação:
+
+Troca de mídia: por favor, insira o disco nomeado
+'Debian GNU/Linux 5.0.3 _Lenny_ - Official i386 CD Binary-1 20090905-08:23'
+na unidade '/cdrom/' e pressione enter</blockquote>
 
 </p>

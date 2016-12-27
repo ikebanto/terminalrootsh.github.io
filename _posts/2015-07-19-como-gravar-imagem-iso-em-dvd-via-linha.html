@@ -16,6 +16,22 @@ introduction: Como gravar imagem ISO em DVD via linha de comando
 ---
 
 <p>
-    <div class="separator" style="clear: both; text-align: center;"><a href="http://1.bp.blogspot.com/-ktxEd3qifmI/VasNtXlxvtI/AAAAAAAAF3g/r4CO5ZZ-VSk/s1600/800-cd.jpg" imageanchor="1" style="margin-left: 1em; margin-right: 1em;"><img border="0" src="http://1.bp.blogspot.com/-ktxEd3qifmI/VasNtXlxvtI/AAAAAAAAF3g/r4CO5ZZ-VSk/s400/800-cd.jpg" /></a></div><h3><b>Basta instalar o pacote <span style="font-size: x-large;"><span style="color: blue;">growisofs</span></span>. Para instalar utilize o gerenciador de pacotes correspondente se sua Distro. No Debian, execute:</b></h3><b></p><p>{% highlight bash %}</p><p>$ su</p><p># apt-get install growisofs{% endhighlight %}</p><p></p><p>Sua sintaxe é bem simples:</p><p></p><p>{% highlight bash %}</p><p>$ growisofs -dvd-compat -speed=8 -Z /dev/cdrom=debian-8.0.0-amd64-DVD-1.iso{% endhighlight %}</p><p></p><p>Onde </b><i>/dev/cdrom</i><b> é o caminho para seu drive de <span style="color: blue;">DVD</span> e </b><i>debian-8.0.0-amd64-DVD-1.iso</i><b> é a imagem <span style="color: blue;">ISO</span> a ser gravada.</b></p><p></p><p><i><span style="font-size: x-small;">Via: http://www.vivaolinux.com.br/dica/Como-gravar-imagem-ISO-em-DVD-via-linha-de-comando</span></i>
+    <div class="separator" style="clear: both; text-align: center;"><a href="http://1.bp.blogspot.com/-ktxEd3qifmI/VasNtXlxvtI/AAAAAAAAF3g/r4CO5ZZ-VSk/s1600/800-cd.jpg" imageanchor="1" style="margin-left: 1em; margin-right: 1em;"><img border="0" src="http://1.bp.blogspot.com/-ktxEd3qifmI/VasNtXlxvtI/AAAAAAAAF3g/r4CO5ZZ-VSk/s400/800-cd.jpg" /></a></div><h3><b>Basta instalar o pacote <span style="font-size: x-large;"><span style="color: blue;">growisofs</span></span>. Para instalar utilize o gerenciador de pacotes correspondente se sua Distro. No Debian, execute:</b></h3><b>
+{% highlight bash %}
+
+$ su
+# apt-get install growisofs
+{% endhighlight %}
+
+Sua sintaxe é bem simples:
+
+{% highlight bash %}
+
+$ growisofs -dvd-compat -speed=8 -Z /dev/cdrom=debian-8.0.0-amd64-DVD-1.iso
+{% endhighlight %}
+
+Onde </b><i>/dev/cdrom</i><b> é o caminho para seu drive de <span style="color: blue;">DVD</span> e </b><i>debian-8.0.0-amd64-DVD-1.iso</i><b> é a imagem <span style="color: blue;">ISO</span> a ser gravada.</b>
+
+<i><span style="font-size: x-small;">Via: http://www.vivaolinux.com.br/dica/Como-gravar-imagem-ISO-em-DVD-via-linha-de-comando</span></i>
 
 </p>

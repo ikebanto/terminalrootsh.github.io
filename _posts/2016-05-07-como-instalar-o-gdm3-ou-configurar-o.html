@@ -16,6 +16,79 @@ introduction: Como instalar o GDM3 ou configurar o LightDM no Debian
 ---
 
 <p>
-<div class="separator" style="clear: both; text-align: center;"><a href="https://1.bp.blogspot.com/-sWB8pqV8XP4/Vy38s1URx6I/AAAAAAAAAcY/L9dHbyzm2dU-35CX2G_MGvUYa1l0UearACKgB/s1600/gm3.jpg" imageanchor="1" style="margin-left: 1em; margin-right: 1em;"><img border="0" src="https://1.bp.blogspot.com/-sWB8pqV8XP4/Vy38s1URx6I/AAAAAAAAAcY/L9dHbyzm2dU-35CX2G_MGvUYa1l0UearACKgB/s400/gm3.jpg" /></a></div></p><p></p><p>Por padrão o <a href="https://www.youtube.com/watch?v=mwS6HwQbxVA" target="_blank"><span style="font-size: large;"><b>Debian 8 Jessie MATE</b></span></a> vem o com o gerenciador de sessão (login) o LightDM instalado (veja imagem abaixo):</p><p></p><p><div class="separator" style="clear: both; text-align: center;"><a href="https://1.bp.blogspot.com/-OTDKx47yJIc/Vy39IZvsvpI/AAAAAAAAAcc/JstJ7Qg5_Qscw3BsWH0JQeZ_7dJkTInNwCLcB/s1600/lightDM.png" imageanchor="1" style="margin-left: 1em; margin-right: 1em;"><img border="0" src="https://1.bp.blogspot.com/-OTDKx47yJIc/Vy39IZvsvpI/AAAAAAAAAcc/JstJ7Qg5_Qscw3BsWH0JQeZ_7dJkTInNwCLcB/s400/lightDM.png" /></a></div></p><p></p><p>Nesse v<span style="color: #0000ee; font-size: small;">í</span>deo há procedimentos de o que fazer após instalação do Debian 8 Jessie, mas não há esa dica, você pode incluí-la:</p><p></p><p><div class="separator" style="clear: both; text-align: center;"><iframe allowfullscreen="" frameborder="0" height="300" src="https://www.youtube.com/embed/mifEI1pBx4s" width="400"></iframe></div></p><p></p><p>Apesar de ser configurável e ser um ótimo Display Manager, há quem goste de uma forma diferente de logar no sistema. Um dos</p><p>gerenciadores mais utilizados e preferidos dos <i>linusers</i> é o <b><span style="font-size: large;">GDM3</span></b> (veja imagem abaixo):</p><p></p><p><div class="separator" style="clear: both; text-align: center;"><a href="https://1.bp.blogspot.com/-sWB8pqV8XP4/Vy38s1URx6I/AAAAAAAAAcY/L9dHbyzm2dU-35CX2G_MGvUYa1l0UearACKgB/s1600/gm3.jpg" imageanchor="1" style="margin-left: 1em; margin-right: 1em;"><img border="0" src="https://1.bp.blogspot.com/-sWB8pqV8XP4/Vy38s1URx6I/AAAAAAAAAcY/L9dHbyzm2dU-35CX2G_MGvUYa1l0UearACKgB/s400/gm3.jpg" /></a></div></p><p></p><p>Para instalar o GMD3 siga os passos abaixo:</p><p></p><p>Logue como root:</p><p>{% highlight bash %}$ su{% endhighlight %}</p><p></p><p>E rode o apt-get para instalá-lo:</p><p>{% highlight bash %}apt-get install gdm3 -y{% endhighlight %}</p><p></p><p>Durante a instalação você será questionado para se deseja tornar o gdm3 como padrão de login, selecione o gdm3 e prossiga a instalação, mas</p><p>caso você tenha errado na seleção, você também pode fazer posteriormente, rodando o comando:</p><p>{% highlight bash %}dpkg-reconfigure gdm3{% endhighlight %}</p><p></p><p><div class="separator" style="clear: both; text-align: center;"><a href="https://1.bp.blogspot.com/-3I3P1GDcFSw/Vy39Qgtg8pI/AAAAAAAAAcg/mkeZgPKZUG06ZoUsV50Za9Vb9EEx6BixQCLcB/s1600/dpkg-reconfigure-gdm3.png" imageanchor="1" style="margin-left: 1em; margin-right: 1em;"><img border="0" src="https://1.bp.blogspot.com/-3I3P1GDcFSw/Vy39Qgtg8pI/AAAAAAAAAcg/mkeZgPKZUG06ZoUsV50Za9Vb9EEx6BixQCLcB/s400/dpkg-reconfigure-gdm3.png" /></a></div></p><p></p><p>Para mudar a imagem do seu usuário ao logar no sistema , basta você ir no Painel Principal do MATE e seguir o caminho e mudar sua foto:</p><p></p><p><div style="text-align: center;"><span style="font-size: large;"><b>Sistema &gt; Preferências &gt; Sobre mim</b></span></div></p><p>Para mudanças no GDM3 você precisa editar esse arquivo:</p><p><span style="color: blue;"><i>/etc/gdm3/greeter.gconf-defaults</i></span></p><p></p><p><b>Mais informações sobre GDM3 em: <a href="https://wiki.debian.org/GDM" target="_blank">https://wiki.debian.org/GDM</a></b></p><p></p><p>Caso você não gostou do GDM3 quer o <span style="font-size: large;"><b>LightDM</b></span> mas quer efetuar algumas alterações sem precisar instalar o Greeter:</p><p></p><p>Definir o LightDM como padrão:</p><p>{% highlight bash %}dpkg-reconfigure lightdm{% endhighlight %}</p><p></p><p>Ver as configurações definidas pra ele:</p><p>{% highlight bash %}/usr/sbin/lightdm --show-config{% endhighlight %}</p><p></p><p>Para exibir os usuários e suas respectivas imagens em vez de escrever o nome, edite o arquivo: </p><p>{% highlight bash %}nano /etc/lightdm/lightdm.conf{% endhighlight %}</p><p>descomente a linha greeter-hide-users e deixe-a assim:</p><p>{% highlight bash %}greeter-hide-users=false{% endhighlight %}</p><p></p><p>Para mudar a imagem de fundo, tenha conhecimento de o caminho é:</p><p>{% highlight bash %}/usr/share/images/desktop-base/{% endhighlight %}</p><p>E para mudá-la use o comando:</p><p>{% highlight bash %}update-alternatives --config desktop-background{% endhighlight %}</p><p></p><p><div style="text-align: center;"><span style="font-size: large;"><b>Mais informações sobre LightDM em: <a href="https://wiki.debian.org/LightDM" target="_blank">https://wiki.debian.org/LightDM</a></b></span></div>
+<div class="separator" style="clear: both; text-align: center;"><a href="https://1.bp.blogspot.com/-sWB8pqV8XP4/Vy38s1URx6I/AAAAAAAAAcY/L9dHbyzm2dU-35CX2G_MGvUYa1l0UearACKgB/s1600/gm3.jpg" imageanchor="1" style="margin-left: 1em; margin-right: 1em;"><img border="0" src="https://1.bp.blogspot.com/-sWB8pqV8XP4/Vy38s1URx6I/AAAAAAAAAcY/L9dHbyzm2dU-35CX2G_MGvUYa1l0UearACKgB/s400/gm3.jpg" /></a></div>
 
-</p>
+Por padrão o <a href="https://www.youtube.com/watch?v=mwS6HwQbxVA" target="_blank"><span style="font-size: large;"><b>Debian 8 Jessie MATE</b></span></a> vem o com o gerenciador de sessão (login) o LightDM instalado (veja imagem abaixo):
+
+<div class="separator" style="clear: both; text-align: center;"><a href="https://1.bp.blogspot.com/-OTDKx47yJIc/Vy39IZvsvpI/AAAAAAAAAcc/JstJ7Qg5_Qscw3BsWH0JQeZ_7dJkTInNwCLcB/s1600/lightDM.png" imageanchor="1" style="margin-left: 1em; margin-right: 1em;"><img border="0" src="https://1.bp.blogspot.com/-OTDKx47yJIc/Vy39IZvsvpI/AAAAAAAAAcc/JstJ7Qg5_Qscw3BsWH0JQeZ_7dJkTInNwCLcB/s400/lightDM.png" /></a></div>
+
+Nesse v<span style="color: #0000ee; font-size: small;">í</span>deo há procedimentos de o que fazer após instalação do Debian 8 Jessie, mas não há esa dica, você pode incluí-la:
+
+<div class="separator" style="clear: both; text-align: center;"><iframe allowfullscreen="" frameborder="0" height="300" src="https://www.youtube.com/embed/mifEI1pBx4s" width="400"></iframe></div>
+
+Apesar de ser configurável e ser um ótimo Display Manager, há quem goste de uma forma diferente de logar no sistema. Um dos
+gerenciadores mais utilizados e preferidos dos <i>linusers</i> é o <b><span style="font-size: large;">GDM3</span></b> (veja imagem abaixo):
+
+<div class="separator" style="clear: both; text-align: center;"><a href="https://1.bp.blogspot.com/-sWB8pqV8XP4/Vy38s1URx6I/AAAAAAAAAcY/L9dHbyzm2dU-35CX2G_MGvUYa1l0UearACKgB/s1600/gm3.jpg" imageanchor="1" style="margin-left: 1em; margin-right: 1em;"><img border="0" src="https://1.bp.blogspot.com/-sWB8pqV8XP4/Vy38s1URx6I/AAAAAAAAAcY/L9dHbyzm2dU-35CX2G_MGvUYa1l0UearACKgB/s400/gm3.jpg" /></a></div>
+
+Para instalar o GMD3 siga os passos abaixo:
+
+Logue como root:
+{% highlight bash %}
+$ su
+{% endhighlight %}
+
+E rode o apt-get para instalá-lo:
+{% highlight bash %}
+apt-get install gdm3 -y
+{% endhighlight %}
+
+Durante a instalação você será questionado para se deseja tornar o gdm3 como padrão de login, selecione o gdm3 e prossiga a instalação, mas
+caso você tenha errado na seleção, você também pode fazer posteriormente, rodando o comando:
+{% highlight bash %}
+dpkg-reconfigure gdm3
+{% endhighlight %}
+
+
+
+Para mudar a imagem do seu usuário ao logar no sistema , basta você ir no Painel Principal do MATE e seguir o caminho e mudar sua foto:
+
+Sistema > Preferências > Sobre mim
+Para mudanças no GDM3 você precisa editar esse arquivo:
+/etc/gdm3/greeter.gconf-defaults
+
+Mais informações sobre GDM3 em: https://wiki.debian.org/GDM
+
+Caso você não gostou do GDM3 quer o LightDM mas quer efetuar algumas alterações sem precisar instalar o Greeter:
+
+Definir o LightDM como padrão:
+{% highlight bash %}
+dpkg-reconfigure lightdm
+{% endhighlight %}
+
+Ver as configurações definidas pra ele:
+{% highlight bash %}
+/usr/sbin/lightdm --show-config
+{% endhighlight %}
+
+Para exibir os usuários e suas respectivas imagens em vez de escrever o nome, edite o arquivo: 
+{% highlight bash %}
+nano /etc/lightdm/lightdm.conf
+{% endhighlight %}
+descomente a linha greeter-hide-users e deixe-a assim:
+{% highlight bash %}
+greeter-hide-users=false
+{% endhighlight %}
+
+Para mudar a imagem de fundo, tenha conhecimento de o caminho é:
+{% highlight bash %}
+/usr/share/images/desktop-base/
+{% endhighlight %}
+E para mudá-la use o comando:
+{% highlight bash %}
+update-alternatives --config desktop-background
+{% endhighlight %}
+
+Mais informações sobre LightDM em: https://wiki.debian.org/LightDM
+
+

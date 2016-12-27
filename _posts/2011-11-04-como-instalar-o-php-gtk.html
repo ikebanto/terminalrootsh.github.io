@@ -14,6 +14,54 @@ introduction: Como instalar o PHP-GTK
 ---
 
 <p>
-<b><span style="color: blue;">Caso seu sistema não tenha a biblioteca Gtk2 instalada, você poderá baixar a versão estática, que contém toda a biblioteca Gtk2 compilada, bem como suas dependências, disponível nos pacotes a seguir. Os pacotes acompanham estes componentes:</span></p><p><span style="color: #274e13;">- PHP-5.2.13;</span><br style="color: #274e13;" /><span style="color: #274e13;"> - PHP-GTK-2.0.1 com GtkSourceView;</span><br style="color: #274e13;" /><span style="color: #274e13;"> - GTK-2.18, Cairo-1.8, Pango-1.26;</span><br style="color: #274e13;" /><span style="color: #274e13;"> - GD, libpng, libjpeg, libxml; libglade;</span><br style="color: #274e13;" /><span style="color: #274e13;"> - PDO com MySql, PostgreSql, SQLite.</span></p><p></p><p><span style="color: #e06666;">Obs: este link é para 32-bits.</span></p><p></p><p><a href="http://downloads.sourceforge.net/agata/php-gtk2d2-bin-static.tar.gz" target="_blank">Clique aqui para fazer download do pacote</a></p><p><br style="color: blue;" /><span style="color: blue;"> Procedimento para Instalação:</span><br style="color: blue;" /><span style="color: blue;"> </span><br style="color: blue;" /><span style="color: blue;"> Para instalação, salve o arquivo no diretório /usr/local do seu sistema e siga as seguintes instruções:</span><br style="color: blue;" /><span style="color: blue;"> </span><br style="color: blue;" /><span style="color: blue;"> Como usuário root:</span></p><p>{% highlight bash %}</p><p># cd /usr/local</p><p># tar -xzvf php-gtk2xx.tar.gz</p><p># chmod 777 php-gtk2 -Rf{% endhighlight %}</p><p><span style="color: blue;">A partir da versão PHP-GTK2d, execute o comando abaixo:</span></p><p>{% highlight bash %}</p><p># cp -R /usr/local/php-gtk2/share/gtksourceview-1.0/ /usr/share/{% endhighlight %}</p><p><span style="color: blue;">Após, vamos construir um link para facilitar a execução:</span></p><p>{% highlight bash %}</p><p># ln -sf /usr/local/php-gtk2/bin/php /usr/bin/php-gtk2</p><p># exit{% endhighlight %}</p><p><span style="color: blue;">Testando o php-gtk2</span><br style="color: blue;" /><span style="color: blue;"> escreva o seguinte programa:</span></p><p>{% highlight bash %}</p><p>&lt;?php</p><p>$janela = new GtkWindow;</p><p>$janela-&gt;show_all();</p><p>Gtk::Main();</p><p>?&gt;{% endhighlight %}</p><p></p><p><span style="color: blue;">Vá até a pasta onde vc salvou e digite:</span></p><p></p><p>{% highlight bash %}</p><p># php-gtk2 <seu-programa .php=""></p><p></seu-programa>{% endhighlight %}</p><p><span style="color: blue;">Obs: Se aparecer uma janela na tela, funcionou. </span></b></p><p></p><p><div style="color: blue;"><b>Para Instalar o Glade no Debian, basta:</b></div>{% highlight bash %}</p><p><b># apt-get install glade</b>{% endhighlight %}</p><p></p><p><div style="color: #0b5394;"><b>Pronto!</b></div><div style="color: #eeeeee;">fonte:<a href="http://www.php-gtk.com.br/linux" target="_blank">PHP-GTK</a></div>
+<b><span style="color: blue;">Caso seu sistema não tenha a biblioteca Gtk2 instalada, você poderá baixar a versão estática, que contém toda a biblioteca Gtk2 compilada, bem como suas dependências, disponível nos pacotes a seguir. Os pacotes acompanham estes componentes:</span>
+<span style="color: #274e13;">- PHP-5.2.13;</span><br style="color: #274e13;" /><span style="color: #274e13;"> - PHP-GTK-2.0.1 com GtkSourceView;</span><br style="color: #274e13;" /><span style="color: #274e13;"> - GTK-2.18, Cairo-1.8, Pango-1.26;</span><br style="color: #274e13;" /><span style="color: #274e13;"> - GD, libpng, libjpeg, libxml; libglade;</span><br style="color: #274e13;" /><span style="color: #274e13;"> - PDO com MySql, PostgreSql, SQLite.</span>
+
+<span style="color: #e06666;">Obs: este link é para 32-bits.</span>
+
+<a href="http://downloads.sourceforge.net/agata/php-gtk2d2-bin-static.tar.gz" target="_blank">Clique aqui para fazer download do pacote</a>
+<br style="color: blue;" /><span style="color: blue;"> Procedimento para Instalação:</span><br style="color: blue;" /><span style="color: blue;"> </span><br style="color: blue;" /><span style="color: blue;"> Para instalação, salve o arquivo no diretório /usr/local do seu sistema e siga as seguintes instruções:</span><br style="color: blue;" /><span style="color: blue;"> </span><br style="color: blue;" /><span style="color: blue;"> Como usuário root:</span>
+{% highlight bash %}
+
+# cd /usr/local
+# tar -xzvf php-gtk2xx.tar.gz
+# chmod 777 php-gtk2 -Rf
+{% endhighlight %}
+<span style="color: blue;">A partir da versão PHP-GTK2d, execute o comando abaixo:</span>
+{% highlight bash %}
+
+# cp -R /usr/local/php-gtk2/share/gtksourceview-1.0/ /usr/share/
+{% endhighlight %}
+<span style="color: blue;">Após, vamos construir um link para facilitar a execução:</span>
+{% highlight bash %}
+
+# ln -sf /usr/local/php-gtk2/bin/php /usr/bin/php-gtk2
+# exit
+{% endhighlight %}
+<span style="color: blue;">Testando o php-gtk2</span><br style="color: blue;" /><span style="color: blue;"> escreva o seguinte programa:</span>
+{% highlight bash %}
+
+<?php
+$janela = new GtkWindow;
+$janela->show_all();
+Gtk::Main();
+?>
+{% endhighlight %}
+
+<span style="color: blue;">Vá até a pasta onde vc salvou e digite:</span>
+
+{% highlight bash %}
+
+# php-gtk2 
+
+{% endhighlight %}
+<span style="color: blue;">Obs: Se aparecer uma janela na tela, funcionou. </span></b>
+
+Para Instalar o Glade no Debian, basta:{% highlight bash %}
+
+# apt-get install glade
+{% endhighlight %}
+
+<div style="color: #0b5394;"><b>Pronto!</b></div><div style="color: #eeeeee;">fonte:<a href="http://www.php-gtk.com.br/linux" target="_blank">PHP-GTK</a></div>
 
 </p>

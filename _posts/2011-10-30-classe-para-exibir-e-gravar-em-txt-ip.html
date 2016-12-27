@@ -14,6 +14,83 @@ introduction: 'Classe para Exibir e Gravar em TXT: IP, OS, Data e Hora.'
 ---
 
 <p>
-<b>Segue classe e já instanciada e setada a função pronta para utilização e estudo.</b></p><p></p><p>{% highlight bash %}</p><p>&lt;?php</p><p>&nbsp; class Dados{</p><p>&nbsp;&nbsp;&nbsp; function exibir(){</p><p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; $ip = ($_SERVER['REMOTE_ADDR']);</p><p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; $browser = ($_SERVER['HTTP_USER_AGENT']);</p><p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; $data = date('d/m/Y H:i:s');</p><p></p><p>&nbsp;&nbsp;&nbsp; //ARQUIVO TXT</p><p>&nbsp;&nbsp;&nbsp; $arquivo&nbsp;&nbsp;&nbsp; =&nbsp;&nbsp;&nbsp; "estatisticas.txt";</p><p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; echo '&lt;b style="color:#dd4814; font-size:13px; margin-left:20px;"&gt;Número IP:&lt;/b&gt; &lt;i style="color:#999; font-weight:bold;font-size:13px;"&gt;'.$ip.'&lt;/i&gt; ';</p><p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; echo '&lt;b style="color:#dd4814;font-size:13px;"&gt;Navegador:&lt;/b&gt; &lt;i style="color:#999; font-weight:bold;font-size:13px;"&gt;';</p><p>&nbsp;&nbsp;&nbsp; if (strchr($browser, 'Firefox'))</p><p>&nbsp;&nbsp;&nbsp; &nbsp; {</p><p>&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; $nav = 'Firefox ';</p><p>&nbsp;&nbsp;&nbsp; &nbsp; }</p><p>&nbsp;&nbsp;&nbsp; &nbsp; elseif (strchr($browser, 'Chromium'))</p><p>&nbsp;&nbsp;&nbsp; &nbsp; {</p><p>&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; $nav = 'Chromium ';</p><p>&nbsp;&nbsp;&nbsp; &nbsp; }</p><p>&nbsp;&nbsp;&nbsp; &nbsp; elseif (strchr($browser, 'Chrome'))</p><p>&nbsp;&nbsp;&nbsp; &nbsp; {</p><p>&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; $nav = 'Chrome ';</p><p>&nbsp;&nbsp;&nbsp; &nbsp; }</p><p>&nbsp;&nbsp;&nbsp; &nbsp; elseif (strchr($browser, 'Opera'))</p><p>&nbsp;&nbsp;&nbsp; &nbsp; {</p><p>&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; $nav = 'Opera ';</p><p>&nbsp;&nbsp;&nbsp; &nbsp; }</p><p>&nbsp;&nbsp;&nbsp; &nbsp; elseif (strchr($browser, 'Windows'))</p><p>&nbsp;&nbsp;&nbsp; &nbsp; {</p><p>&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; $nav = 'Internet Explorer ';</p><p>&nbsp;&nbsp;&nbsp; &nbsp; }else{</p><p></p><p>&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; $nav = 'Outro Navegador ';</p><p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; }</p><p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; echo $nav.'&lt;/i&gt;';</p><p></p><p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; echo '&lt;b style="color:#dd4814;font-size:13px;"&gt;Sistema Operacional: &lt;/b&gt; &lt;i style="color:#999; font-weight:bold;font-size:13px;"&gt;';</p><p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; if (strchr($browser, 'Linux'))</p><p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; {</p><p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; $os = 'Linux ';</p><p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; }</p><p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; elseif (strchr($browser, 'Windows'))</p><p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; {</p><p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; $os = 'Windows ';</p><p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; }else{</p><p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; $os = 'Outro Sistema ';</p><p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; }</p><p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; echo $os.'&lt;b style="color:#dd4814;font-size:13px;"&gt;Data e Hora:&lt;/b&gt; &lt;i style="color:#999; font-weight:bold;font-size:13px;"&gt;'.$data;</p><p></p><p>&nbsp;&nbsp;&nbsp; //PREPARA O CONTEÚDO A SER GRAVADO</p><p>&nbsp;&nbsp;&nbsp; $conteudo&nbsp;&nbsp;&nbsp; =&nbsp;&nbsp;&nbsp; "Ip: $ip\r\nSistema: $os\r\nNavegador: $nav\r\nData e Hora: $data\r\n-------------------------------------------\r\n";</p><p></p><p>&nbsp;&nbsp;&nbsp; //TENTA ABRIR O ARQUIVO TXT</p><p>&nbsp;&nbsp;&nbsp; if (!$abrir = fopen($arquivo, "a")) {</p><p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; echo&nbsp; "Erro abrindo arquivo ($arquivo)";</p><p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; exit;</p><p>&nbsp;&nbsp;&nbsp; }</p><p></p><p>&nbsp;&nbsp;&nbsp; //ESCREVE NO ARQUIVO TXT</p><p>&nbsp;&nbsp;&nbsp; if (!fwrite($abrir, $conteudo)) {</p><p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; print "Erro escrevendo no arquivo ($arquivo)";</p><p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; exit;</p><p>&nbsp;&nbsp;&nbsp; }</p><p></p><p>&nbsp;&nbsp;&nbsp; //FECHA O ARQUIVO</p><p>&nbsp;&nbsp;&nbsp; fclose($abrir);</p><p>&nbsp; }//fim da função da exbir();</p><p>&nbsp;}//fim da class Dados</p><p></p><p>&nbsp; $mostrar = new Dados();</p><p>&nbsp; $mostrar-&gt;exibir();</p><p>?&gt;</p><p>{% endhighlight %}
+<p>Segue classe e já instanciada e setada a função pronta para utilização e estudo.</p>
+
+{% highlight php %}
+
+<?php
+ class Dados{
+ function exibir(){
+ $ip = ($_SERVER['REMOTE_ADDR']);
+ $browser = ($_SERVER['HTTP_USER_AGENT']);
+ $data = date('d/m/Y H:i:s');
+
+ //ARQUIVO TXT
+ $arquivo = "estatisticas.txt";
+ echo 'Número IP: '.$ip.' ';
+ echo 'Navegador: ';
+ if (strchr($browser, 'Firefox'))
+  {
+  $nav = 'Firefox ';
+  }
+  elseif (strchr($browser, 'Chromium'))
+  {
+  $nav = 'Chromium ';
+  }
+  elseif (strchr($browser, 'Chrome'))
+  {
+  $nav = 'Chrome ';
+  }
+  elseif (strchr($browser, 'Opera'))
+  {
+  $nav = 'Opera ';
+  }
+  elseif (strchr($browser, 'Windows'))
+  {
+  $nav = 'Internet Explorer ';
+  }else{
+
+  $nav = 'Outro Navegador ';
+ }
+ echo $nav.'';
+
+ echo 'Sistema Operacional:  ';
+ if (strchr($browser, 'Linux'))
+ {
+ $os = 'Linux ';
+ }
+ elseif (strchr($browser, 'Windows'))
+ {
+ $os = 'Windows ';
+ }else{
+ $os = 'Outro Sistema ';
+ }
+ echo $os.'Data e Hora: '.$data;
+
+ //PREPARA O CONTEÚDO A SER GRAVADO
+ $conteudo = "Ip: $ip\r\nSistema: $os\r\nNavegador: $nav\r\nData e Hora: $data\r\n-------------------------------------------\r\n";
+
+ //TENTA ABRIR O ARQUIVO TXT
+ if (!$abrir = fopen($arquivo, "a")) {
+ echo "Erro abrindo arquivo ($arquivo)";
+ exit;
+ }
+
+ //ESCREVE NO ARQUIVO TXT
+ if (!fwrite($abrir, $conteudo)) {
+ print "Erro escrevendo no arquivo ($arquivo)";
+ exit;
+ }
+
+ //FECHA O ARQUIVO
+ fclose($abrir);
+ }//fim da função da exbir();
+}//fim da class Dados
+
+ $mostrar = new Dados();
+ $mostrar->exibir();
+?>
+
+{% endhighlight %}
 
 </p>

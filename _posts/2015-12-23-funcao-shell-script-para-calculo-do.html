@@ -22,6 +22,54 @@ introduction: Função Shell Script para cálculo do Imposto de Renda e INSS
 ---
 
 <p>
-<div class="separator" style="clear: both; text-align: center;"><a href="http://1.bp.blogspot.com/-_vnZMlyjmnA/VnsRjn8FAMI/AAAAAAAAE-M/HF15LwAvKZY/s1600/irrf.gif" imageanchor="1" style="margin-left: 1em; margin-right: 1em;"><img border="0" height="353" src="http://1.bp.blogspot.com/-_vnZMlyjmnA/VnsRjn8FAMI/AAAAAAAAE-M/HF15LwAvKZY/s640/irrf.gif" width="640" /></a></div></p><p><b><span style="font-size: large;">E aê pessoal! </p><p></p><p>Estamos de volta com as postagens do blog , demos um tempo para revermos as ideias e enxugar algumas coisas! :)</p><p></p><p>Hoje vamos mostrar como é feito o cálculo do <span style="color: purple;">INSS</span> e do <span style="color: purple;">Imposto de Renda</span> e usaremos como ferramenta uma função em <a href="http://www.terminalroot.com.br/search/label/Shell%20Script" target="_blank">Shell Script</a> .</p><p></p><p>Disponibilizaremos no rodapé e no corpo deste post alguns links úteis para mostrar como funciona o cálculo desses tributos , mas caso você tenha dificuldade , utilize esse link: <a href="https://is.gd/LblNpV" target="_blank"><span style="font-size: x-large;">https://is.gd/LblNpV</span></a> ! :)</p><p></p><p>Quando você precisa saber quando é recolhido seu quando você trabalha mensalmente para o INSS e o IRRF ou IR ou a até mesmo, mais conhecido como: Imposto de Renda . </p><p></p><p>Para o INSS há umas faixas de contribuição e o <strike>TETO</strike> máximo, bem como também para o IRRF !</p><p></p><p>Verifique, baixe e execute o script/função abaixo e leia os comentários ( linhas iniciadas com <span style="color: blue;">#</span> ) para entendimento . </p><p></p><p>Como nosso intuito aqui é mais o Shell Script do que, não menos importante , a Contabilização , segue a função/script , e não esqueça de consultar os links úteis para melhor entendimento e informação !</p><p></p><p>Após baixar/salvar e dar o </span></b><span style="color: #444444;"><span style="background-color: white;"><i><span style="font-size: large;">chmod +x imposto.sh</span></i></span></span><b><span style="font-size: large;"> , para execução , informe o salário e o número de dependentes para efetuar o cálculo, utilizando o <span style="color: blue;"><span style="font-size: x-large;">-s</span></span> para p <u><i>salário</i></u> e o <span style="color: blue;"><span style="font-size: x-large;">-d</span></span> para <u><i>dependentes</i></u>, para dúvidas utilize o argumento <span style="color: red;"><span style="font-size: x-large;">-h</span></span> , exemplo:</span></p><p> {% highlight bash %}$ ./imposto.sh -s 2.500,84 -d 1{% endhighlight %}</b></p><p><b><span style="font-size: x-large;"></p><p>A saída será mais ou menos isso, com detalhamento do INSS, IR e outros:</span></b></p><p><div class="separator" style="clear: both; text-align: center;"><a href="http://4.bp.blogspot.com/-mi8MkF-NB_0/VnsbY_Mm5KI/AAAAAAAAE-c/sSXWNc-UhBc/s1600/Captura_de_tela-1.png" imageanchor="1" style="margin-left: 1em; margin-right: 1em;"><img border="0" src="http://4.bp.blogspot.com/-mi8MkF-NB_0/VnsbY_Mm5KI/AAAAAAAAE-c/sSXWNc-UhBc/s1600/Captura_de_tela-1.png" /></a></div></p><p><blockquote class="tr_bq"><h1><i><span style="font-size: large;"><b>Para dúvidas:</b></span></i></h1></blockquote><b> {% highlight bash %}$ ./imposto.sh -h{% endhighlight %} </b></p><p><h1><b>Ou</b></h1><b>{% highlight bash %}$ ./imposto.sh --helper{% endhighlight %}  </p><p> </b></p><p><h1><span style="font-size: x-large;"><b>Função <span style="color: #444444;"><i>imposto.sh</i></span></b></span></h1><b> <script src="https://gist.github.com/terminalrootsh/5e733c4992d91c1998bb.js"></script> </p><p> </b></p><p><h1><b><span style="font-size: large;">Lembramos que essa função está disponibilizadas com todas as outras funções Terminal Root , lá ela possui o nome de <span style="color: blue;"><span style="font-size: x-large;">irrf</span></span> (para ser chamada pelo Terminal ), clique no link abaixo para mais informações:</span></b></h1><b><span style="font-size: x-large;"><a href="http://www.terminalroot.com.br/2015/07/instale-as-funcoes-terminal-root-no-seu.html" target="_blank"> Instale as Funções Terminal Root no seu terminal</a></span> </p><p></p><p>Links Úteis:  </p><p></p><p><span style="font-size: x-small;"> <a href="https://is.gd/LblNpV" target="_blank">https://is.gd/LblNpV</a></p><p><a href="http://www.previdencia.gov.br/servicos-ao-cidadao/todos-os-servicos/gps/tabela-contribuicao-mensal/" target="_blank">http://www.previdencia.gov.br/servicos-ao-cidadao/todos-os-servicos/gps/tabela-contribuicao-mensal/</a></p><p><a href="http://idg.receita.fazenda.gov.br/acesso-rapido/tributos/irpf-imposto-de-renda-pessoa-fisica" target="_blank">http://idg.receita.fazenda.gov.br/acesso-rapido/tributos/irpf-imposto-de-renda-pessoa-fisica</a></p><p><a href="http://economia.uol.com.br/empregos-e-carreiras/noticias/redacao/2013/01/01/imposto-de-renda-e-inss-entenda-os-descontos-no-seu-salario.htm" target="_blank">http://economia.uol.com.br/empregos-e-carreiras/noticias/redacao/2013/01/01/imposto-de-renda-e-inss-entenda-os-descontos-no-seu-salario.htm</a></p><p><a href="http://www.calculador.com.br/" target="_blank">http://www.calculador.com.br</a></p><p><a href="https://pt.wikipedia.org/wiki/Imposto_de_Renda_de_Pessoa_F%C3%ADsica" target="_blank">https://pt.wikipedia.org/wiki/Imposto_de_Renda_de_Pessoa_F%C3%ADsica</a></p><p><a href="http://www.receita.fazenda.gov.br/PessoaFisica/IRPF/2015/perguntao/assuntos/calculo-e-pagamento-do-imposto.htm" target="_blank">http://www.receita.fazenda.gov.br/PessoaFisica/IRPF/2015/perguntao/assuntos/calculo-e-pagamento-do-imposto.htm</a></p><p><a href="http://www.receita.fazenda.gov.br/Aplicacoes/ATRJO/Simulador/simulador.asp?tipoSimulador=M" target="_blank">http://www.receita.fazenda.gov.br/Aplicacoes/ATRJO/Simulador/simulador.asp?tipoSimulador=M</a></p><p><a href="http://www.dpc.com.br/pt-br/show/tabela-progressiva-do-imposto-de-renda" target="_blank">http://www.dpc.com.br/pt-br/show/tabela-progressiva-do-imposto-de-renda</a> </span></p><p></p><p></p><p>Valeu até a próxima! :) </b>
+<div class="separator" style="clear: both; text-align: center;"><a href="http://1.bp.blogspot.com/-_vnZMlyjmnA/VnsRjn8FAMI/AAAAAAAAE-M/HF15LwAvKZY/s1600/irrf.gif" imageanchor="1" style="margin-left: 1em; margin-right: 1em;"><img border="0" height="353" src="http://1.bp.blogspot.com/-_vnZMlyjmnA/VnsRjn8FAMI/AAAAAAAAE-M/HF15LwAvKZY/s640/irrf.gif" width="640" /></a></div>
+<b><span style="font-size: large;">E aê pessoal! 
 
-</p>
+Estamos de volta com as postagens do blog , demos um tempo para revermos as ideias e enxugar algumas coisas! :)
+
+Hoje vamos mostrar como é feito o cálculo do <span style="color: purple;">INSS</span> e do <span style="color: purple;">Imposto de Renda</span> e usaremos como ferramenta uma função em <a href="http://www.terminalroot.com.br/search/label/Shell%20Script" target="_blank">Shell Script</a> .
+
+Disponibilizaremos no rodapé e no corpo deste post alguns links úteis para mostrar como funciona o cálculo desses tributos , mas caso você tenha dificuldade , utilize esse link: <a href="https://is.gd/LblNpV" target="_blank"><span style="font-size: x-large;">https://is.gd/LblNpV</span></a> ! :)
+
+Quando você precisa saber quando é recolhido seu quando você trabalha mensalmente para o INSS e o IRRF ou IR ou a até mesmo, mais conhecido como: Imposto de Renda . 
+
+Para o INSS há umas faixas de contribuição e o <strike>TETO</strike> máximo, bem como também para o IRRF !
+
+Verifique, baixe e execute o script/função abaixo e leia os comentários ( linhas iniciadas com <span style="color: blue;">#</span> ) para entendimento . 
+
+Como nosso intuito aqui é mais o Shell Script do que, não menos importante , a Contabilização , segue a função/script , e não esqueça de consultar os links úteis para melhor entendimento e informação !
+
+Após baixar/salvar e dar o </span></b><span style="color: #444444;"><span style="background-color: white;"><i><span style="font-size: large;">chmod +x imposto.sh</span></i></span></span><b><span style="font-size: large;"> , para execução , informe o salário e o número de dependentes para efetuar o cálculo, utilizando o <span style="color: blue;"><span style="font-size: x-large;">-s</span></span> para p <u><i>salário</i></u> e o <span style="color: blue;"><span style="font-size: x-large;">-d</span></span> para <u><i>dependentes</i></u>, para dúvidas utilize o argumento <span style="color: red;"><span style="font-size: x-large;">-h</span></span> , exemplo:</span>
+ {% highlight bash %}
+$ ./imposto.sh -s 2.500,84 -d 1
+{% endhighlight %}
+
+A saída será mais ou menos isso, com detalhamento do INSS, IR e outros:
+
+Para dúvidas: {% highlight bash %}
+$ ./imposto.sh -h
+{% endhighlight %} 
+Ou{% highlight bash %}
+$ ./imposto.sh --helper
+{% endhighlight %}  
+ 
+Função imposto.sh  
+ 
+Lembramos que essa função está disponibilizadas com todas as outras funções Terminal Root , lá ela possui o nome de irrf (para ser chamada pelo Terminal ), clique no link abaixo para mais informações: Instale as Funções Terminal Root no seu terminal 
+
+Links Úteis:  
+
+ https://is.gd/LblNpV
+http://www.previdencia.gov.br/servicos-ao-cidadao/todos-os-servicos/gps/tabela-contribuicao-mensal/
+http://idg.receita.fazenda.gov.br/acesso-rapido/tributos/irpf-imposto-de-renda-pessoa-fisica
+http://economia.uol.com.br/empregos-e-carreiras/noticias/redacao/2013/01/01/imposto-de-renda-e-inss-entenda-os-descontos-no-seu-salario.htm
+http://www.calculador.com.br
+https://pt.wikipedia.org/wiki/Imposto_de_Renda_de_Pessoa_F%C3%ADsica
+http://www.receita.fazenda.gov.br/PessoaFisica/IRPF/2015/perguntao/assuntos/calculo-e-pagamento-do-imposto.htm
+http://www.receita.fazenda.gov.br/Aplicacoes/ATRJO/Simulador/simulador.asp?tipoSimulador=M
+http://www.dpc.com.br/pt-br/show/tabela-progressiva-do-imposto-de-renda 
+
+
+Valeu até a próxima! :) 
+
+

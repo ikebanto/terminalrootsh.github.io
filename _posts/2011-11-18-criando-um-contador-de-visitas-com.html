@@ -14,6 +14,49 @@ introduction: Criando um Contador de Visitas com Cookie
 ---
 
 <p>
-<b>&nbsp; Bem esse exemplo é bem simples, criei ele hoje, porque os terceirizados, estava deixando meu blog bastante lento para o carregamento, lembrando que quanto mais solicitações JavaScript, mais lento seu blog fica.</b></p><p></p><p><b>Nesse exemplo setamos um cookie no computador do usuário pra controle, o cookie existirá até ele fechar o navegador.</b></p><p></p><p><b>Bem verifique o exemplo e leia os comentários (<span style="color: blue;">em AZUL</span>) para entender o funcionamento, lembrando que você também pode usar sessões($_SESSION['sessao']) ao invés de $_COOKIE['nomedocookie'], e dará no mesmo, vai do seu gosto, lembrando que alguns testes que eu fiz com sessão, teve alguns informações errôneas.</b></p><p></p><p><blockquote class="tr_bq"><b>contador.php</b></blockquote>{% highlight bash %}</p><p><b>&lt;?php</p><p>&nbsp; <span style="color: blue;">/* variavel para informar o nome do cookie*/</span></p><p>&nbsp; $nome&nbsp; = 'contadordevisitas';</p><p>&nbsp; <span style="color: blue;">/* o valor do cookie */</span></p><p>&nbsp; $valor = 'marcospinguim';</p><p>&nbsp; <span style="color: blue;">/* o arquivo TXT que armazenará o número de visitantes */</span></p><p>&nbsp; $arquivo = 'mp_visitas.txt';</p><p>&nbsp; <span style="color: blue;">/* o número de visitantes, pega os dados que estão gravados no TXT em inteiro(pra não haver erro)*/</span></p><p>&nbsp; $conta&nbsp;&nbsp; = intval(file_get_contents($arquivo));</p><p>&nbsp; <span style="color: blue;">/* se não houver um cookie gravado preparamos pra gravar ele */</span></p><p>&nbsp; if(!isset($_COOKIE[$nome])){</p><p>&nbsp; &nbsp;&nbsp;&nbsp; <span style="color: blue;">/*bool setcookie ( string $nome [, string $valor [, int $expira [, string $caminho [, string $domínio [, bool $seguro [, bool $somente http ]]]]]] )*/</span></p><p>&nbsp; &nbsp;&nbsp;&nbsp; </p><p>&nbsp;&nbsp;&nbsp; <span style="color: blue;">/* dados a ser informados nesse cookie: setcookie('nomedocookie', 'valordocookie', 'tempopraexpirar', 'caminhodocookie'), quando</span><br style="color: blue;" /><span style="color: blue;"> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; o tempo pra expirar decidimos em 0, só expirará quando o navegador for fechado */</span></p><p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; </p><p>&nbsp;&nbsp;&nbsp; setcookie($nome,$valor,0,'/');</p><p></p><p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <span style="color: blue;">/* modo de gravação no TXT, +r é pra escrever */</span></p><p>&nbsp;&nbsp;&nbsp; $modo&nbsp;&nbsp;&nbsp; = 'r+';</p><p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <span style="color: blue;">/* abrir o arquivo */</span></p><p>&nbsp;&nbsp;&nbsp; $abrir&nbsp;&nbsp; = fopen($arquivo, $modo);</p><p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <span style="color: blue;">/* perceba que $conta aqui ta com +1, pois como não havia cookie aumentamos, pois é mais 1 usuario */</span></p><p>&nbsp;&nbsp;&nbsp; $conta&nbsp;&nbsp; = intval(file_get_contents($arquivo)) + 1;</p><p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <span style="color: blue;">/* gravamos com o novo valor de $conta */</span></p><p>&nbsp;&nbsp;&nbsp; fwrite($abrir, $conta);</p><p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <span style="color: blue;">/* fechamos o arquivo */</span></p><p>&nbsp;&nbsp;&nbsp; fclose($abrir);&nbsp;&nbsp;&nbsp; </p><p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <span style="color: blue;">/* confirmamos o valor do cookie */</span></p><p>&nbsp;&nbsp;&nbsp; $_COOKIE['marcospinguim'] = TRUE;</p><p>&nbsp; }&nbsp; </p><p>&nbsp; <span style="color: blue;">/* imprimimos a $conta atualizada ou não */</span></p><p>&nbsp;echo '&lt;b style="font-size:11px;color:blue;font-family:sans-serif;"&gt;Visitaram &lt;?php echo $conta;?&gt;&lt;/b&gt;';&nbsp; </p><p>?&gt;</b></p><p>{% endhighlight %}</p><p><b>Pronto, eu acredito que seja fácil e eficiente!</b>
+<p> Bem esse exemplo é bem simples, criei ele hoje, porque os terceirizados, estava deixando meu blog bastante lento para o carregamento, lembrando que quanto mais solicitações JavaScript, mais lento seu blog fica.</p>
+
+<p>Nesse exemplo setamos um cookie no computador do usuário pra controle, o cookie existirá até ele fechar o navegador.</p>
+
+<p>Bem verifique o exemplo e leia os comentários (<span style="color: blue;">em AZUL</span>) para entender o funcionamento, lembrando que você também pode usar sessões($_SESSION['sessao']) ao invés de $_COOKIE['nomedocookie'], e dará no mesmo, vai do seu gosto, lembrando que alguns testes que eu fiz com sessão, teve alguns informações errôneas.</p>
+
+contador.php{% highlight bash %}
+
+<?php
+ /* variavel para informar o nome do cookie*/
+ $nome = 'contadordevisitas';
+ /* o valor do cookie */
+ $valor = 'marcospinguim';
+ /* o arquivo TXT que armazenará o número de visitantes */
+ $arquivo = 'mp_visitas.txt';
+ /* o número de visitantes, pega os dados que estão gravados no TXT em inteiro(pra não haver erro)*/
+ $conta = intval(file_get_contents($arquivo));
+ /* se não houver um cookie gravado preparamos pra gravar ele */
+ if(!isset($_COOKIE[$nome])){
+  /*bool setcookie ( string $nome [, string $valor [, int $expira [, string $caminho [, string $domínio [, bool $seguro [, bool $somente http ]]]]]] )*/
+  
+ /* dados a ser informados nesse cookie: setcookie('nomedocookie', 'valordocookie', 'tempopraexpirar', 'caminhodocookie'), quando  o tempo pra expirar decidimos em 0, só expirará quando o navegador for fechado */
+  
+ setcookie($nome,$valor,0,'/');
+
+ /* modo de gravação no TXT, +r é pra escrever */
+ $modo = 'r+';
+ /* abrir o arquivo */
+ $abrir = fopen($arquivo, $modo);
+ /* perceba que $conta aqui ta com +1, pois como não havia cookie aumentamos, pois é mais 1 usuario */
+ $conta = intval(file_get_contents($arquivo)) + 1;
+ /* gravamos com o novo valor de $conta */
+ fwrite($abrir, $conta);
+ /* fechamos o arquivo */
+ fclose($abrir); 
+ /* confirmamos o valor do cookie */
+ $_COOKIE['marcospinguim'] = TRUE;
+ } 
+ /* imprimimos a $conta atualizada ou não */
+echo 'Visitaram '; 
+?>
+
+{% endhighlight %}
+<p>Pronto, eu acredito que seja fácil e eficiente!</p>
 
 </p>

@@ -17,6 +17,91 @@ introduction: Pausando e reiniciando um download com wget
 ---
 
 <p>
-<div class="separator" style="clear: both; text-align: center;"><a href="http://1.bp.blogspot.com/-xKcqyNhbO-U/VXOuEaVksuI/AAAAAAAABX8/5Z1v8Nx9iPE/s1600/Linux_Debian_Redhat_SuSE.jpg" imageanchor="1" style="margin-left: 1em; margin-right: 1em;"><img border="0" height="300" src="http://1.bp.blogspot.com/-xKcqyNhbO-U/VXOuEaVksuI/AAAAAAAABX8/5Z1v8Nx9iPE/s400/Linux_Debian_Redhat_SuSE.jpg" width="400" /></a></div></p><p></p><p><b>Fala linusers, precisei baixar a imagem do Arch Linux pra instalar no notebook de um amigo meu, dae tava baixando pelo wget, mas dae precisei fazer outra coisa, dae fui pesquisar na internet como pausar o wget e reiniciar o download, dae achei uma dica muito interessante no blog do Cleiton Bueno, e usei, e num é que deu certo, mas a antes fiz um teste, veja aqui como foi:</p><p></p><p>Primeiro comecei o download:</p><p></p><p>{% highlight bash %}$ binbash@terminalroot:~$ wget http://archlinux.c3sl.ufpr.br/iso/2015.06.01/archlinux-2015.06.01-dual.iso{% endhighlight %}</p><p></p><p>Então começou o download, dae abri uma nova aba no terminal e enviei um SIGSTOP:</p><p></p><p>{% highlight bash %}$ pidof wget{% endhighlight %}</p><p></p><p>Então peguei o PIDOF, a saída foi:</p><p></p><p><blockquote></p><p>{% highlight bash %}</p><p>binbash@terminalroot:~$ pidof wget </p><p>2767</p><p>{% endhighlight %}</p><p></blockquote></p><p></p><p>e parei:</p><p></p><p>{% highlight bash %}$ kill -STOP 2767{% endhighlight %}</p><p></p><p>Na outra aba, já estava a informação da PAUSA:</p><p></p><p><blockquote></p><p>{% highlight bash %}</p><p>--2015-06-06 23:12:06--&nbsp; http://archlinux.c3sl.ufpr.br/iso/2015.06.01/archlinux-2015.06.01-dual.iso</p><p>Resolvendo archlinux.c3sl.ufpr.br (archlinux.c3sl.ufpr.br)... 200.236.31.1, 2801:82:80ff:8000::2</p><p>Conectando-se a archlinux.c3sl.ufpr.br (archlinux.c3sl.ufpr.br)|200.236.31.1|:80... conectado.</p><p>A requisição HTTP foi enviada, aguardando resposta... 200 OK</p><p>Tamanho: 667942912 (637M) [application/x-iso9660-image]</p><p>Salvando em: “archlinux-2015.06.01-dual.iso”</p><p></p><p>archlinux-2015.06.01-dual.iso&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 6%[====&gt;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; ]&nbsp; 41,85M&nbsp;&nbsp; 860KB/s&nbsp;&nbsp; eta 16m 39s</p><p>[1]+&nbsp; Parado&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; wget http://archlinux.c3sl.ufpr.br/iso/2015.06.01/archlinux-2015.06.01-dual.iso</p><p>binbash@terminalroot:~$ </p><p>{% endhighlight %}</p><p></blockquote></p><p></p><p></p><p>Dae na mesma aba que foi pausado, retornei o download com um SIGCONT:</p><p></p><p>{% highlight bash %}$ kill -CONT 2767{% endhighlight %}</p><p></p><p>Então o download foi continuado, a saída ficou assim... :</p><p></p><p><blockquote></p><p>{% highlight bash %}</p><p>archlinux-2015.06.01-dual.iso&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 7%[=====&gt;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; ]&nbsp; 49,53M&nbsp;&nbsp; 612KB/s&nbsp;&nbsp; em 2m 3s&nbsp; s</p><p></p><p>2015-06-06 23:14:10 (413 KB/s) - Conexão fechada no byte 51934742. Tentando novamente.</p><p></p><p>--2015-06-06 23:14:10--&nbsp; (tentativa: 2)&nbsp; http://archlinux.c3sl.ufpr.br/iso/2015.06.01/archlinux-2015.06.01-dual.iso</p><p>Conectando-se a archlinux.c3sl.ufpr.br (archlinux.c3sl.ufpr.br)|200.236.31.1|:80... conectado.</p><p>A requisição HTTP foi enviada, aguardando resposta... 206 Partial Content</p><p>Tamanho: 667942912 (637M), 616008170 (587M) restantes [application/x-iso9660-image]</p><p>Salvando em: “archlinux-2015.06.01-dual.iso”</p><p></p><p>archlinux-2015.06.01-dual.iso&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 68%[++++++====================================================&gt;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; ]&nbsp; 490,32M&nbsp;&nbsp; 597KB/s&nbsp;&nbsp; eta 4m 5s</p><p>{% endhighlight %}</p><p></blockquote></p><p></p><p>Lógico que esses dados da continuação do download foram digitados, pois não dá pra copiar o download em andamento.</b></p><p></p><p><b>E o download terminou! :)</b></p><p></p><p></p><p><span style="color: #999999;"><span style="font-size: x-small;">Esse post foi baseado em:</span></span></p><p><span style="color: #999999;"><span style="font-size: x-small;">http://cleitonbueno.com/linux-pausando-e-reiniciando-um-download-com-wget/</span></span>
+<div class="separator" style="clear: both; text-align: center;"><a href="http://1.bp.blogspot.com/-xKcqyNhbO-U/VXOuEaVksuI/AAAAAAAABX8/5Z1v8Nx9iPE/s1600/Linux_Debian_Redhat_SuSE.jpg" imageanchor="1" style="margin-left: 1em; margin-right: 1em;"><img border="0" height="300" src="http://1.bp.blogspot.com/-xKcqyNhbO-U/VXOuEaVksuI/AAAAAAAABX8/5Z1v8Nx9iPE/s400/Linux_Debian_Redhat_SuSE.jpg" width="400" /></a></div>
+
+<b>Fala linusers, precisei baixar a imagem do Arch Linux pra instalar no notebook de um amigo meu, dae tava baixando pelo wget, mas dae precisei fazer outra coisa, dae fui pesquisar na internet como pausar o wget e reiniciar o download, dae achei uma dica muito interessante no blog do Cleiton Bueno, e usei, e num é que deu certo, mas a antes fiz um teste, veja aqui como foi:
+
+Primeiro comecei o download:
+
+{% highlight bash %}
+$ binbash@terminalroot:~$ wget http://archlinux.c3sl.ufpr.br/iso/2015.06.01/archlinux-2015.06.01-dual.iso
+{% endhighlight %}
+
+Então começou o download, dae abri uma nova aba no terminal e enviei um SIGSTOP:
+
+{% highlight bash %}
+$ pidof wget
+{% endhighlight %}
+
+Então peguei o PIDOF, a saída foi:
+
+<blockquote>
+{% highlight bash %}
+
+binbash@terminalroot:~$ pidof wget 
+2767
+
+{% endhighlight %}
+</blockquote>
+
+e parei:
+
+{% highlight bash %}
+$ kill -STOP 2767
+{% endhighlight %}
+
+Na outra aba, já estava a informação da PAUSA:
+
+
+{% highlight bash %}
+
+--2015-06-06 23:12:06-- http://archlinux.c3sl.ufpr.br/iso/2015.06.01/archlinux-2015.06.01-dual.iso
+Resolvendo archlinux.c3sl.ufpr.br (archlinux.c3sl.ufpr.br)... 200.236.31.1, 2801:82:80ff:8000::2
+Conectando-se a archlinux.c3sl.ufpr.br (archlinux.c3sl.ufpr.br)|200.236.31.1|:80... conectado.
+A requisição HTTP foi enviada, aguardando resposta... 200 OK
+Tamanho: 667942912 (637M) [application/x-iso9660-image]
+Salvando em: “archlinux-2015.06.01-dual.iso”
+
+archlinux-2015.06.01-dual.iso 6%[====> ] 41,85M 860KB/s eta 16m 39s
+[1]+ Parado wget http://archlinux.c3sl.ufpr.br/iso/2015.06.01/archlinux-2015.06.01-dual.iso
+binbash@terminalroot:~$ 
+
+{% endhighlight %}
+</blockquote>
+
+
+Dae na mesma aba que foi pausado, retornei o download com um SIGCONT:
+
+{% highlight bash %}
+$ kill -CONT 2767
+{% endhighlight %}
+
+Então o download foi continuado, a saída ficou assim... :
+
+
+{% highlight bash %}
+
+archlinux-2015.06.01-dual.iso 7%[=====> ] 49,53M 612KB/s em 2m 3s s
+
+2015-06-06 23:14:10 (413 KB/s) - Conexão fechada no byte 51934742. Tentando novamente.
+
+--2015-06-06 23:14:10-- (tentativa: 2) http://archlinux.c3sl.ufpr.br/iso/2015.06.01/archlinux-2015.06.01-dual.iso
+Conectando-se a archlinux.c3sl.ufpr.br (archlinux.c3sl.ufpr.br)|200.236.31.1|:80... conectado.
+A requisição HTTP foi enviada, aguardando resposta... 206 Partial Content
+Tamanho: 667942912 (637M), 616008170 (587M) restantes [application/x-iso9660-image]
+Salvando em: “archlinux-2015.06.01-dual.iso”
+
+archlinux-2015.06.01-dual.iso 68%[++++++====================================================> ] 490,32M 597KB/s eta 4m 5s
+
+{% endhighlight %}
+</blockquote>
+
+Lógico que esses dados da continuação do download foram digitados, pois não dá pra copiar o download em andamento.</b>
+
+<p>E o download terminou! :)</p>
+
+
+<span style="color: #999999;"><span style="font-size: x-small;">Esse post foi baseado em:</span></span>
+<span style="color: #999999;"><span style="font-size: x-small;">http://cleitonbueno.com/linux-pausando-e-reiniciando-um-download-com-wget/</span></span>
 
 </p>

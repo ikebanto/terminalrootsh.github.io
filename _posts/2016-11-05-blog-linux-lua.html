@@ -21,12 +21,101 @@ introduction: Lua uma linguagem de programação criada por brasileiros, e utili
 </p>
 
 
-</p><p></p><p>Lua foi criada por um time de desenvolvedores do Tecgraf da PUC-Rio, a princípio, para ser usada em um projeto da Petrobras. Devido à sua eficiência, clareza e facilidade de aprendizado, passou a ser usada em diversos ramos da programação, como no desenvolvimento de jogos (a Blizzard Entertainment, por exemplo, usou a linguagem no jogo World of Warcraft), controle de robôs, processamento de texto, etc. Também é frequentemente usada como uma linguagem de propósito geral.</p><p></p><p>Lua combina programação procedural com poderosas construções para descrição de dados, baseadas em tabelas associativas e semântica extensível. É tipada dinamicamente, interpretada a partir de bytecodes, e tem gerenciamento automático de memória com coleta de lixo. Essas características fazem de Lua uma linguagem ideal para configuração, automação (scripting) e prototipagem rápida.</p><p></p><p><i>O primeiro projeto utilizando a linguagem Lua em jogos foi em 1997 quando a LucasArts a utilizou como linguagem de script no jogo Grim Fandango.</i></p><p></p><p><span style="font-size: x-large;">Projetos que utilizam Lua</span></p><p></p><p></p><p></p><p>&nbsp;<span style="color: #0b5394;">◘ Adobe Photoshop Lightroom</span></p><p><span style="color: #0b5394;">&nbsp;◘ Celestia</span></p><p><span style="color: #0b5394;">&nbsp;◘ Cheat Engine</span></p><p><span style="color: #0b5394;">&nbsp;◘ ClanLib</span></p><p><span style="color: #0b5394;">&nbsp;◘ CryEngine 3</span></p><p><span style="color: #0b5394;">&nbsp;◘ Corona SDK</span></p><p><span style="color: #0b5394;">&nbsp;◘ Damn Small Linux</span></p><p><span style="color: #0b5394;">&nbsp;◘ Ginga</span></p><p><span style="color: #0b5394;">&nbsp;◘ Kepler (software)</span></p><p><span style="color: #0b5394;">&nbsp;◘ lighttpd</span></p><p><span style="color: #0b5394;">&nbsp;◘ Liquid Feedback</span></p><p><span style="color: #0b5394;">&nbsp;◘ MinGW</span></p><p><span style="color: #0b5394;">&nbsp;◘ Monotone</span></p><p><span style="color: #0b5394;">&nbsp;◘ Nmap</span></p><p><span style="color: #0b5394;">&nbsp;◘ PlayStation Home</span></p><p></p><p></p><p><span style="font-size: x-large;">Jogos</span></p><p></p><p>Exemplos de empresas que desenvolveram jogos usando a linguagem Lua: LucasArts, Croteam, BioWare, Microsoft, Relic Entertainment, Absolute Studios, Monkeystone Games, Blizzard, SNKPlaymore, Facepunch Studios.</p><p></p><p>&nbsp;<span style="color: purple;">◘ Angry Birds</span></p><p><span style="color: purple;">&nbsp;◘ Baldur's Gate</span></p><p><span style="color: purple;">&nbsp;◘ The Battle for Wesnoth</span></p><p><span style="color: purple;">&nbsp;◘ Civilization V</span></p><p><span style="color: purple;">&nbsp;◘ Escape from Monkey Island</span></p><p><span style="color: purple;">&nbsp;◘ Fable II</span></p><p><span style="color: purple;">&nbsp;◘ Far Cry</span></p><p><span style="color: purple;">&nbsp;◘ FlyFF</span></p><p><span style="color: purple;">&nbsp;◘ Freeciv</span></p><p><span style="color: purple;">&nbsp;◘ Freelancer</span></p><p><span style="color: purple;">&nbsp;◘ Garry's Mod</span></p><p><span style="color: purple;">&nbsp;◘ Grim Fandango</span></p><p><span style="color: purple;">&nbsp;◘ Impossible Creatures</span></p><p><span style="color: purple;">&nbsp;◘ Lego Universe</span></p><p><span style="color: purple;">&nbsp;◘ MapleStory</span></p><p><span style="color: purple;">&nbsp;◘ MDK2</span></p><p><span style="color: purple;">&nbsp;◘ Monopoly Tycoon</span></p><p><span style="color: purple;">&nbsp;◘ Multi Theft Auto</span></p><p><span style="color: purple;">&nbsp;◘ Psychonauts</span></p><p><span style="color: purple;">&nbsp;◘ Ragnarok Online</span></p><p><span style="color: purple;">&nbsp;◘ Roblox</span></p><p><span style="color: purple;">&nbsp;◘ Street Fighter IV</span></p><p><span style="color: purple;">&nbsp;◘ The King of Fighters XIII</span></p><p><span style="color: purple;">&nbsp;◘ Tibia</span></p><p><span style="color: purple;">&nbsp;◘ Transformice</span></p><p><span style="color: purple;">&nbsp;◘ The Talos Principle</span></p><p><span style="color: purple;">&nbsp;◘ World of Warcraft</span></p><p></p><p><span style="font-size: x-large;">Instalação no Debian</span></p><p>{% highlight bash %}apt-get install lua5.1{% endhighlight %}</p><p></p><p><span style="font-size: x-large;">Criando a primeira aplicação</span></p><p>{% highlight bash %}nano ola.lua{% endhighlight %}</p><p></p><p><span style="font-size: x-large;">E cole isso dentro</span></p><p>
 
-{% highlight bash %}#!/usr/bin/lua
-print "Olá, Lua!"
+
+Lua foi criada por um time de desenvolvedores do Tecgraf da PUC-Rio, a princípio, para ser usada em um projeto da Petrobras. Devido à sua eficiência, clareza e facilidade de aprendizado, passou a ser usada em diversos ramos da programação, como no desenvolvimento de jogos (a Blizzard Entertainment, por exemplo, usou a linguagem no jogo World of Warcraft), controle de robôs, processamento de texto, etc. Também é frequentemente usada como uma linguagem de propósito geral.
+
+Lua combina programação procedural com poderosas construções para descrição de dados, baseadas em tabelas associativas e semântica extensível. É tipada dinamicamente, interpretada a partir de bytecodes, e tem gerenciamento automático de memória com coleta de lixo. Essas características fazem de Lua uma linguagem ideal para configuração, automação (scripting) e prototipagem rápida.
+
+<i>O primeiro projeto utilizando a linguagem Lua em jogos foi em 1997 quando a LucasArts a utilizou como linguagem de script no jogo Grim Fandango.</i>
+
+<span style="font-size: x-large;">Projetos que utilizam Lua</span>
+
+
+
+<span style="color: #0b5394;">◘ Adobe Photoshop Lightroom</span>
+<span style="color: #0b5394;">◘ Celestia</span>
+<span style="color: #0b5394;">◘ Cheat Engine</span>
+<span style="color: #0b5394;">◘ ClanLib</span>
+<span style="color: #0b5394;">◘ CryEngine 3</span>
+<span style="color: #0b5394;">◘ Corona SDK</span>
+<span style="color: #0b5394;">◘ Damn Small Linux</span>
+<span style="color: #0b5394;">◘ Ginga</span>
+<span style="color: #0b5394;">◘ Kepler (software)</span>
+<span style="color: #0b5394;">◘ lighttpd</span>
+<span style="color: #0b5394;">◘ Liquid Feedback</span>
+<span style="color: #0b5394;">◘ MinGW</span>
+<span style="color: #0b5394;">◘ Monotone</span>
+<span style="color: #0b5394;">◘ Nmap</span>
+<span style="color: #0b5394;">◘ PlayStation Home</span>
+
+
+<span style="font-size: x-large;">Jogos</span>
+
+Exemplos de empresas que desenvolveram jogos usando a linguagem Lua: LucasArts, Croteam, BioWare, Microsoft, Relic Entertainment, Absolute Studios, Monkeystone Games, Blizzard, SNKPlaymore, Facepunch Studios.
+
+<span style="color: purple;">◘ Angry Birds</span>
+<span style="color: purple;">◘ Baldur's Gate</span>
+<span style="color: purple;">◘ The Battle for Wesnoth</span>
+<span style="color: purple;">◘ Civilization V</span>
+<span style="color: purple;">◘ Escape from Monkey Island</span>
+<span style="color: purple;">◘ Fable II</span>
+<span style="color: purple;">◘ Far Cry</span>
+<span style="color: purple;">◘ FlyFF</span>
+<span style="color: purple;">◘ Freeciv</span>
+<span style="color: purple;">◘ Freelancer</span>
+<span style="color: purple;">◘ Garry's Mod</span>
+<span style="color: purple;">◘ Grim Fandango</span>
+<span style="color: purple;">◘ Impossible Creatures</span>
+<span style="color: purple;">◘ Lego Universe</span>
+<span style="color: purple;">◘ MapleStory</span>
+<span style="color: purple;">◘ MDK2</span>
+<span style="color: purple;">◘ Monopoly Tycoon</span>
+<span style="color: purple;">◘ Multi Theft Auto</span>
+<span style="color: purple;">◘ Psychonauts</span>
+<span style="color: purple;">◘ Ragnarok Online</span>
+<span style="color: purple;">◘ Roblox</span>
+<span style="color: purple;">◘ Street Fighter IV</span>
+<span style="color: purple;">◘ The King of Fighters XIII</span>
+<span style="color: purple;">◘ Tibia</span>
+<span style="color: purple;">◘ Transformice</span>
+<span style="color: purple;">◘ The Talos Principle</span>
+<span style="color: purple;">◘ World of Warcraft</span>
+
+<span style="font-size: x-large;">Instalação no Debian</span>
+{% highlight bash %}
+apt-get install lua5.1
 {% endhighlight %}
 
-</p><p></p><p><span style="font-size: x-large;">Salve e rode esse comando</span></p><p>{% highlight bash %}lua ola.lua{% endhighlight %}</p><p></p><p><span style="font-size: x-large;">Irá printar:</span></p><p><div class="adp">Olá, Lua!</div></p><p></p><p><span style="font-size: x-large;">Ou execute diretamente o código:</span></p><p>{% highlight bash %}lua -e 'print("Olá, Lua!")'{% endhighlight %}</p><p></p><p><div style="text-align: center;"><a class="mac" href="http://www.lua.org/portugues.html" target="_blank"><b><span style="font-size: x-large;">Site Oficial da Linguagem Lua</span></b></a></div>
+Criando a primeira aplicação
+{% highlight bash %}
+nano ola.lua
+{% endhighlight %}
+
+<span style="font-size: x-large;">E cole isso dentro</span>
+
+
+{% highlight bash %}
+#!/usr/bin/lua
+print "Olá, Lua!"
+
+{% endhighlight %}
+
+
+
+<span style="font-size: x-large;">Salve e rode esse comando</span>
+{% highlight bash %}
+lua ola.lua
+{% endhighlight %}
+
+Irá printar:
+Olá, Lua!
+
+Ou execute diretamente o código:
+{% highlight bash %}
+lua -e 'print("Olá, Lua!")'
+{% endhighlight %}
+
+<div style="text-align: center;"><a class="mac" href="http://www.lua.org/portugues.html" target="_blank"><b><span style="font-size: x-large;">Site Oficial da Linguagem Lua</span></b></a></div>
 
 </p>

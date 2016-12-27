@@ -16,6 +16,72 @@ introduction: Como Instalar o Eclipse-PHP(Galileo) no Debian Linux
 ---
 
 <p>
-<div class="separator" style="clear: both; text-align: center;"><a href="http://4.bp.blogspot.com/-Uf_YHn7Lnz0/TsRfRpQ0hCI/AAAAAAAAAPw/fGpfv-KxfkA/s1600/eclipse-galileo-splash-for-linux.jpg" imageanchor="1" style="margin-left: 1em; margin-right: 1em;"><img border="0" height="207" src="http://4.bp.blogspot.com/-Uf_YHn7Lnz0/TsRfRpQ0hCI/AAAAAAAAAPw/fGpfv-KxfkA/s320/eclipse-galileo-splash-for-linux.jpg" width="320" /></a></div></p><p><b>O Eclipse-PHP Galileo é voltado para desenvolvimento em PHP, a idéia da instalação é a mesma de sempre,</b></p><p><b>ou seja, não tem segredo, novamente utilizaremos o diretório /opt do Linux, pois ele</b></p><p><b>é usado para aplicação não-oficiais(opt - optionals - opcionais), vamos lá:</b></p><p></p><p><b>1- Baixe o Eclipe-PHP Galileo do Site Oficial (Eclipse for PHP Developers)</b></p><p><div style="color: blue;"><span style="font-size: large;"><b><a href="http://www.eclipse.org/downloads/packages/release/galileo/r" target="_blank">Clique aqui para ir para a página de Download</a></b></span></div></p><p><b>2-Baixe o usuário root e copie o tarball(o arquivo compactado em TAR.GZ) para a pasta /opt</b></p><p>{% highlight bash %}# su</p><p># cp /Downloads/eclipse*.tar.gz /opt</p><p>{% endhighlight %}</p><p></p><p><b>3-Entre na pasta /opt , descompacte o arquivo e atribua as permissões.</b></p><p>{% highlight bash %}# cd /opt</p><p># tar -xzvf eclipse*.tar.gz</p><p># chmod -R 775 eclipse/</p><p># chmod +x eclipse/eclipse</p><p>{% endhighlight %}</p><p></p><p><b>4-Crie o arquivo eclipse na pasta binária.</b></p><p>{% highlight bash %}# gedit /usr/bin/eclipse</p><p>{% endhighlight %}</p><p></p><p><b>5-No arquivo que se abriu em branco, cole o código abaixo e salve:</b></p><p>{% highlight bash %}!/bin/sh</p><p>#export MOZILLA_FIVE_HOME="/usr/bib/mozilla</p><p>export ECLIPSE_HOME="/opt/eclipse"</p><p>export GDK_NATIVE_WINDOWS=1</p><p>$ECLIPSE_HOME/eclipse $*</p><p>{% endhighlight %}</p><p></p><p><b>6-Atribua as permissões para este arquivo.</b></p><p>{% highlight bash %}# chmod 775 /usr/bin/eclipse</p><p>{% endhighlight %}</p><p></p><p><b>7-Agora crie um icone no painel do GNOME  em Aplicações &gt;&gt; Desenvolvimento, copie o código abaixo e cole no arquivo</b></p><p><b>que se abriu do gedit e salve:</b></p><p>{% highlight bash %}# gedit /usr/share/applications/eclipse.desktop</p><p>{% endhighlight %}</p><p><b>COPIE E COLE ESSE ARQUIVO NELE:</b></p><p>{% highlight bash %}[Desktop Entry]</p><p>Encoding=UTF-8</p><p>Name=Eclipse</p><p>Comment=Eclipse IDE</p><p>Exec=eclipse</p><p>Icon=/opt/eclipse/icon.xpm</p><p>Terminal=false</p><p>Type=Application</p><p>Categories=GNOME;Application;Development;</p><p>StartupNotify=true</p><p>{% endhighlight %}</p><p></p><p><b>Pronto, agora é só usar o Eclipse!</b>
+<div class="separator" style="clear: both; text-align: center;"><a href="http://4.bp.blogspot.com/-Uf_YHn7Lnz0/TsRfRpQ0hCI/AAAAAAAAAPw/fGpfv-KxfkA/s1600/eclipse-galileo-splash-for-linux.jpg" imageanchor="1" style="margin-left: 1em; margin-right: 1em;"><img border="0" height="207" src="http://4.bp.blogspot.com/-Uf_YHn7Lnz0/TsRfRpQ0hCI/AAAAAAAAAPw/fGpfv-KxfkA/s320/eclipse-galileo-splash-for-linux.jpg" width="320" /></a></div>
+<p>O Eclipse-PHP Galileo é voltado para desenvolvimento em PHP, a idéia da instalação é a mesma de sempre,</p>
+<p>ou seja, não tem segredo, novamente utilizaremos o diretório /opt do Linux, pois ele</p>
+<p>é usado para aplicação não-oficiais(opt - optionals - opcionais), vamos lá:</p>
+
+<p>1- Baixe o Eclipe-PHP Galileo do Site Oficial (Eclipse for PHP Developers)</p>
+<div style="color: blue;"><span style="font-size: large;"><b><a href="http://www.eclipse.org/downloads/packages/release/galileo/r" target="_blank">Clique aqui para ir para a página de Download</a></b></span></div>
+<p>2-Baixe o usuário root e copie o tarball(o arquivo compactado em TAR.GZ) para a pasta /opt</p>
+{% highlight bash %}
+# su
+# cp /Downloads/eclipse*.tar.gz /opt
+
+{% endhighlight %}
+
+<p>3-Entre na pasta /opt , descompacte o arquivo e atribua as permissões.</p>
+{% highlight bash %}
+# cd /opt
+# tar -xzvf eclipse*.tar.gz
+# chmod -R 775 eclipse/
+# chmod +x eclipse/eclipse
+
+{% endhighlight %}
+
+<p>4-Crie o arquivo eclipse na pasta binária.</p>
+{% highlight bash %}
+# gedit /usr/bin/eclipse
+
+{% endhighlight %}
+
+<p>5-No arquivo que se abriu em branco, cole o código abaixo e salve:</p>
+{% highlight bash %}
+!/bin/sh
+#export MOZILLA_FIVE_HOME="/usr/bib/mozilla
+export ECLIPSE_HOME="/opt/eclipse"
+export GDK_NATIVE_WINDOWS=1
+$ECLIPSE_HOME/eclipse $*
+
+{% endhighlight %}
+
+<p>6-Atribua as permissões para este arquivo.</p>
+{% highlight bash %}
+# chmod 775 /usr/bin/eclipse
+
+{% endhighlight %}
+
+<p>7-Agora crie um icone no painel do GNOME  em Aplicações >> Desenvolvimento, copie o código abaixo e cole no arquivo</p>
+<p>que se abriu do gedit e salve:</p>
+{% highlight bash %}
+# gedit /usr/share/applications/eclipse.desktop
+
+{% endhighlight %}
+<p>COPIE E COLE ESSE ARQUIVO NELE:</p>
+{% highlight bash %}
+[Desktop Entry]
+Encoding=UTF-8
+Name=Eclipse
+Comment=Eclipse IDE
+Exec=eclipse
+Icon=/opt/eclipse/icon.xpm
+Terminal=false
+Type=Application
+Categories=GNOME;Application;Development;
+StartupNotify=true
+
+{% endhighlight %}
+
+<p>Pronto, agora é só usar o Eclipse!</p>
 
 </p>

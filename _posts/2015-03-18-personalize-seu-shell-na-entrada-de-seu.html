@@ -17,6 +17,43 @@ introduction: Personalize seu shell na entrada de seu logon
 ---
 
 <p>
-<div class="separator" style="clear: both; text-align: center;"><a href="http://2.bp.blogspot.com/-2jvtfB82t-k/VWPJFiu0SDI/AAAAAAAABP0/VQ9cp__3hiU/s1600/Linux-console.png" imageanchor="1" style="margin-left: 1em; margin-right: 1em;"><img border="0" src="http://2.bp.blogspot.com/-2jvtfB82t-k/VWPJFiu0SDI/AAAAAAAABP0/VQ9cp__3hiU/s320/Linux-console.png" /></p><p></a></div><b>Você pode deixar seu Shell mais interessante e até mesmo deixar lembretes nele, basta você editar seu <i>.bashrc</i>:</p><p> Crie um script com informações/lembretes/… que você deseja:</p><p> Exemplo:</p><p> {% highlight bash %}$ vi /home/$USER/saudacao.sh{% endhighlight %}</p><p> Dae você pode pôr algo assim:</p><p> </b></p><p><div class="adp"><b>#!/bin/bash</b></p><p><b>clear #limpa a telafiglet Terminal Root #comandos para identificar o turno</b></p><p><b>hora=`date +%k`</b></p><p><b>if [ $hora -ge 6 ] &amp;&amp; [ $hora -lt 12 ];then</b></p><p><b>TURNO=”Bom Dia”; fi;</b></p><p><b>if [ $hora -ge 12 ] &amp;&amp; [ $hora -lt 18 ];then</b></p><p><b>TURNO=”Boa Tarde”; fi;</b></p><p><b>if [ $hora -ge 18 ] &amp;&amp; [ $hora -lt 24 ];then</b></p><p><b>TURNO=”Boa Noite!”; fi;</b></p><p><b>if [ $hora -ge 0 ] &amp;&amp; [ $hora -lt 6 ];then</b></p><p><b>TURNO=”Boa Noite!”; fi;</b></p><p><b>#cumprimentos</b></p><p><b>echo “$TURNO $USER Seja bem vindo a $HOSTNAME”</b></p><p><b>echo “Hoje são `date +%A` `date +%d` de `date +%B` de `date +%Y`”</b></p><p><b>echo “A hora atual é `date +%k:%M`”</b></div><b>Salvá-lo e dar permissão de excução:</p><p> {% highlight bash %}$ chmod +x /home/$USER/saudacao.sh{% endhighlight %}</p><p> Depois é só pôr no seu .bashrc:</p><p> {% highlight bash %}$ vi /home/$USER/.bashrc{% endhighlight %}</p><p> Após a última linha você deve pôr o caminho do script que executará o  que você deseja (também pode pôr o comando ali mesmo), no entanto, é  mais recomendável chamar um script externo.</p><p> {% highlight bash %}/home/$USER/./saudacao.sh{% endhighlight %}</p><p> Pronto, toda vez que você abrir o Shell, haverá tais informações!</p><p> Obs.: no Script informado eu coloquei o figlet, para mais informações sobre ele consulte esse link: <a href="http://www.terminalroot.com.br/2015/03/como-gerar-desenhos-de-nomes-pelo-terminal/" target="_blank">Como gerar desenhos de nomes pelo terminal</a></p><p></b>Post baseado em: http://www.vivaolinux.com.br/artigo/Personalize-seu-shell-na-entrada-de-seu-logon
+<div class="separator" style="clear: both; text-align: center;"><a href="http://2.bp.blogspot.com/-2jvtfB82t-k/VWPJFiu0SDI/AAAAAAAABP0/VQ9cp__3hiU/s1600/Linux-console.png" imageanchor="1" style="margin-left: 1em; margin-right: 1em;"><img border="0" src="http://2.bp.blogspot.com/-2jvtfB82t-k/VWPJFiu0SDI/AAAAAAAABP0/VQ9cp__3hiU/s320/Linux-console.png" />
+</a></div><b>Você pode deixar seu Shell mais interessante e até mesmo deixar lembretes nele, basta você editar seu <i>.bashrc</i>:
+ Crie um script com informações/lembretes/… que você deseja:
+ Exemplo:
+ {% highlight bash %}
+$ vi /home/$USER/saudacao.sh
+{% endhighlight %}
+ Dae você pode pôr algo assim:
+ 
+#!/bin/bash
+clear #limpa a telafiglet Terminal Root #comandos para identificar o turno
+hora=`date +%k`
+if [ $hora -ge 6 ] &amp;&amp; [ $hora -lt 12 ];then
+TURNO=”Bom Dia”; fi;
+if [ $hora -ge 12 ] &amp;&amp; [ $hora -lt 18 ];then
+TURNO=”Boa Tarde”; fi;
+if [ $hora -ge 18 ] &amp;&amp; [ $hora -lt 24 ];then
+TURNO=”Boa Noite!”; fi;
+if [ $hora -ge 0 ] &amp;&amp; [ $hora -lt 6 ];then
+TURNO=”Boa Noite!”; fi;
+#cumprimentos
+echo “$TURNO $USER Seja bem vindo a $HOSTNAME”
+echo “Hoje são `date +%A` `date +%d` de `date +%B` de `date +%Y`”
+echo “A hora atual é `date +%k:%M`”Salvá-lo e dar permissão de excução:
+ {% highlight bash %}
+$ chmod +x /home/$USER/saudacao.sh
+{% endhighlight %}
+ Depois é só pôr no seu .bashrc:
+ {% highlight bash %}
+$ vi /home/$USER/.bashrc
+{% endhighlight %}
+ Após a última linha você deve pôr o caminho do script que executará o  que você deseja (também pode pôr o comando ali mesmo), no entanto, é  mais recomendável chamar um script externo.
+ {% highlight bash %}
+/home/$USER/./saudacao.sh
+{% endhighlight %}
+ Pronto, toda vez que você abrir o Shell, haverá tais informações!
+ Obs.: no Script informado eu coloquei o figlet, para mais informações sobre ele consulte esse link: <a href="http://www.terminalroot.com.br/2015/03/como-gerar-desenhos-de-nomes-pelo-terminal/" target="_blank">Como gerar desenhos de nomes pelo terminal</a>
+</b>Post baseado em: http://www.vivaolinux.com.br/artigo/Personalize-seu-shell-na-entrada-de-seu-logon
 
 </p>

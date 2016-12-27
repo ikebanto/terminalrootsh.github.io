@@ -16,6 +16,47 @@ introduction: "# Game Shell - Movimentos básicos [outra forma | Aula 1#2]"
 ---
 
 <p>
-<div class="separator" style="clear: both; text-align: center;"><a href="http://4.bp.blogspot.com/-U4alnTRqSOw/U_EnPW1xUyI/AAAAAAAAAkE/-pjIWFJzsW8/s1600/mesa.jpg" imageanchor="1" style="margin-left: 1em; margin-right: 1em;"><img border="0" src="http://4.bp.blogspot.com/-U4alnTRqSOw/U_EnPW1xUyI/AAAAAAAAAkE/-pjIWFJzsW8/s320/mesa.jpg" /></a></div></p><p><span style="color: purple;"><span style="font-family: Verdana,sans-serif;"><span style="font-size: large;"><b>Segue outra forma de criar movimentos ao longo do terminal, leia os comentários para entender o funcionamento. </b></span></span></span></p><p><b></b></p><p></p><p><u><span style="font-family: Verdana,sans-serif;"><b>Código no Paste Bin: </b></span></u></p><p><script src="http://pastebin.com/embed_js.php?i=jruKpeSi"></script> </p><p><span style="font-family: Verdana,sans-serif;"><u><b>Código no Blog: </b></u></span></p><p><div class="adp"><b>#!/bin/bash</b></p><p><b># Game Shell - Movimentos básicos [outra forma | Aula 1#2]</b></p><p><b># baseado em lendscripts.blogspot.com.br</b></p><p><b>setterm -cursor off # desliga o cursor, fica invisível, on liga</b></p><p><b>clear # limpa a tela</b></p><p><b>x=0;y=0;a=0; # seta variáveis que serão utilizadas, x e y p/ representar coordenadas cartesianas no clear. e a tecla para movimento</b></p><p><b>echo -n "o" # exibe o "o"</b></p><p><b>until [ $a = q ];do # until é um inverso do while, ele loopa uma condição falsa.</b></p><p><b>&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;read -sn 1 a # a opção -s(deixa o digitado invisível) e a -n(conta n°s (1) digitados para executar sem precisar dá enter)</b></p><p><b>&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;clear</b></p><p><b>&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;######## Leitura do Teclado ####</b></p><p><b>&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;case $a in</b></p><p><b>&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;a) let "x = x - 1";; # esquerda</b></p><p><b>&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;d) let "x = x + 1";; # direita</b></p><p><b>&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;w) let "y = y - 1";; # cima</b></p><p><b>&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;s) let "y = y + 1";; # baixo</b></p><p><b>&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;esac</b></p><p><b>&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;################################</b></p><p><b></p><p></b><b>&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;##### Movimento da Bolinha #####</b></p><p><b>&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;f=0 # variável pra movimento</b></p><p><b>&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;while [ $y -gt $f ];do # se y for maior que f, empurra pra baixo, como o clear está no loop, se y for negativo, sobe</b></p><p><b>&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;echo # empurra a bolinha pra baixo</b></p><p><b>&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;let "f = f + 1"</b></p><p><b>&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;done</b></p><p><b>&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;f=0</b></p><p><b>&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;while [ $x -gt $f ];do # se x for maior que f, empurra pro lado direito, como o clear está no loop se x for negativo, esquerdo</b></p><p><b>&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;echo -n " " # empurra a bolinha pro lado</b></p><p><b>&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;let "f = f + 1"</b></p><p><b>&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;done</b></p><p><b>&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;echo -n o; # exibe o "o" no loop</b></p><p><b>done</b></p><p><b>###############################</b></p><p><b>clear; setterm -cursor on; echo FIM;</b></p><p><b>exit 0</b></div>
+<div class="separator" style="clear: both; text-align: center;"><a href="http://4.bp.blogspot.com/-U4alnTRqSOw/U_EnPW1xUyI/AAAAAAAAAkE/-pjIWFJzsW8/s1600/mesa.jpg" imageanchor="1" style="margin-left: 1em; margin-right: 1em;"><img border="0" src="http://4.bp.blogspot.com/-U4alnTRqSOw/U_EnPW1xUyI/AAAAAAAAAkE/-pjIWFJzsW8/s320/mesa.jpg" /></a></div>
+<span style="color: purple;"><span style="font-family: Verdana,sans-serif;"><span style="font-size: large;"><b>Segue outra forma de criar movimentos ao longo do terminal, leia os comentários para entender o funcionamento. </b></span></span></span>
+<p></p>
+
+<u><span style="font-family: Verdana,sans-serif;"><b>Código no Paste Bin: </b></span></u>
+<iframe src="http://pastebin.com/raw/jruKpeSi" style="border:none;width:100%;"></iframe> 
+<span style="font-family: Verdana,sans-serif;"><u><b>Código no Blog: </b></u></span>
+<div class="adp"><b>#!/bin/bash</b>
+<p># Game Shell - Movimentos básicos [outra forma | Aula 1#2]</p>
+<p># baseado em lendscripts.blogspot.com.br</p>
+<p>setterm -cursor off # desliga o cursor, fica invisível, on liga</p>
+<p>clear # limpa a tela</p>
+<p>x=0;y=0;a=0; # seta variáveis que serão utilizadas, x e y p/ representar coordenadas cartesianas no clear. e a tecla para movimento</p>
+<p>echo -n "o" # exibe o "o"</p>
+<p>until [ $a = q ];do # until é um inverso do while, ele loopa uma condição falsa.</p>
+<p>  read -sn 1 a # a opção -s(deixa o digitado invisível) e a -n(conta n°s (1) digitados para executar sem precisar dá enter)</p>
+<p>  clear</p>
+<p>  ######## Leitura do Teclado ####</p>
+<p>  case $a in</p>
+<p>   a) let "x = x - 1";; # esquerda</p>
+<p>   d) let "x = x + 1";; # direita</p>
+<p>   w) let "y = y - 1";; # cima</p>
+<p>   s) let "y = y + 1";; # baixo</p>
+<p>  esac</p>
+<p>  ################################</p>
+<b>
+</b><b>  ##### Movimento da Bolinha #####</b>
+<p>  f=0 # variável pra movimento</p>
+<p>  while [ $y -gt $f ];do # se y for maior que f, empurra pra baixo, como o clear está no loop, se y for negativo, sobe</p>
+<p>   echo # empurra a bolinha pra baixo</p>
+<p>   let "f = f + 1"</p>
+<p>  done</p>
+<p>  f=0</p>
+<p>  while [ $x -gt $f ];do # se x for maior que f, empurra pro lado direito, como o clear está no loop se x for negativo, esquerdo</p>
+<p>   echo -n " " # empurra a bolinha pro lado</p>
+<p>   let "f = f + 1"</p>
+<p>  done</p>
+<p>  echo -n o; # exibe o "o" no loop</p>
+<p>done</p>
+<p>###############################</p>
+<p>clear; setterm -cursor on; echo FIM;</p>
+<b>exit 0</b></div>
 
 </p>

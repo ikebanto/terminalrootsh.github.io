@@ -14,6 +14,156 @@ introduction: Enviando E-Mails (Gmail) com PHPMailer
 ---
 
 <p>
-&nbsp; <b>Eu utilizei essa classe<span style="color: lime;"> </span><i style="color: #274e13;"><strike>hoje</strike></i> pra configurar minha página de contato aqui do Blog, <a href="http://marcospinguim.blogspot.com/p/contato.html" target="_blank"><span style="color: blue;">CLIQUE AQUI</span></a> para ver a página(<span style="color: red;">Obs.:essa página tem JQueri e está hospedada em outro lugar, pois o blogger não executa o PHP aqui e muito menos hospeda arquivos, chamei com um FRAME pra cá</span>).</b></p><p><b></p><p>A classe <span style="color: orange;">PHPMailer</span> serve para envio de e-mails através do PHP via conexão SMTP ou POP3 muito utilizado por todo o mundo. Seu método de envio é largamente recomendado e é bem melhor do que o envio do mail() ou sendmail() ambas do PHP.</b></p><p></p><p><b>Esse processo é bem simples, e nesse caso vamos configurar também o envio de resposta pra quem preencheu o formulário.</b></p><p><b>Separei em dos arquivos, mas costumo usar tudo num só arquivo, os dois arquivos serão:</b></p><p></p><p></p><p><blockquote class="tr_bq"><b>index.php</b></p><p><b> enviar.php</b></blockquote></p><p>&nbsp;<b>Usarei como exemplo um e-mail do Gmail, primeiramente temos de baixar a classe PHPMailer do site e descompactá-la no local onde</b></p><p><b>está os arquivos criados aqui.</b></p><p></p><p><b><a href="http://sourceforge.net/projects/phpmailer/files/phpmailer%20for%20php5_6/" style="color: blue;" target="_blank">Clique aqui</a> para efetuar o download da classe PHPMailer, baixei o arquivo <a href="http://sourceforge.net/projects/phpmailer/files/phpmailer%20for%20php5_6/" style="color: blue;" target="_blank">PHPMailer v5.1</a></b></p><p></p><p><b>Agora vamos construir nosso index.php que estará nosso form(nao usei tableless nesse exemplo, nem tá completo o arquivos faltando as tags de uma página HTML).</b></p><p><b>Leia os cometários em AZUL para compreender a ação.Qualquer dúvida é só comentar.</b></p><p>{% highlight bash %}</p><p><b>&lt;table border="1"&gt;</p><p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <span style="color: blue;">&lt;!--Informamos o arquivo PHP que irá processar o form e o método de envio, o POST--&gt;</span></p><p>&nbsp;&nbsp;&nbsp; &lt;form action="enviar.php" method="post" enctype="multipart/form-data"&gt;&nbsp;&nbsp;&nbsp; </p><p>&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &lt;tr&gt;</p><p>&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &lt;td&gt;Nome:&lt;/td&gt;</p><p>&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &lt;td&gt;</p><p>&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &lt;input type="text" class="texto" name="nome" /&gt;</p><p>&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &lt;/td&gt;</p><p>&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &lt;/tr&gt;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; </p><p>&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &lt;tr&gt;</p><p>&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &lt;td&gt;Email:&lt;/td&gt;</p><p>&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &lt;td&gt;</p><p>&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &lt;input type="text" class="texto" name="email" /&gt;</p><p>&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &lt;/td&gt;</p><p>&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &lt;/tr&gt;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; </p><p>&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &lt;tr&gt;</p><p>&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &lt;td&gt;Assunto:&lt;/td&gt;</p><p>&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &lt;td&gt;</p><p>&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &lt;input type="text" class="texto" name="assunto" /&gt;</p><p>&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &lt;/td&gt;</p><p>&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &lt;/tr&gt;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; </p><p>&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &lt;tr&gt;</p><p>&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &lt;td&gt;Mensagem&lt;/td&gt;</p><p>&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &lt;td&gt;</p><p>&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &lt;textarea name="mensagem"&gt;&lt;/textarea&gt;</p><p>&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &lt;/td&gt;</p><p>&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &lt;/tr&gt;</p><p>&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &lt;tr&gt;</p><p>&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &lt;td&gt;</p><p>&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &lt;a href="index.php"&gt;Atualizar&lt;/a&gt;</p><p>&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &lt;/td&gt;</p><p>&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &lt;td&gt;</p><p>&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &lt;input type="submit" name="enviar" class="bottom"/&gt;</p><p>&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &lt;/td&gt;</p><p>&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &lt;/tr&gt;&nbsp;&nbsp;&nbsp; </p><p>&nbsp;&nbsp;&nbsp; &lt;/form&gt;</p><p>&lt;/table&gt;</b></p><p>{% endhighlight %}</p><p></p><p><blockquote class="tr_bq">&nbsp;<b>E aqui o arquivo enviar.php</b></blockquote></p><p>{% highlight bash %}</p><p><b>&lt;?php</p><p>&nbsp; <span style="color: blue;">/* se apertar em enviar dados entra no processo*/</span></p><p>&nbsp; if(isset($_POST['enviar']))</p><p>&nbsp; {</p><p>&nbsp; <span style="color: blue;">/* extraimos o POST para criar as variaveis automaticamente pelo nome do FORM */</span></p><p>&nbsp;&nbsp;&nbsp;&nbsp; extract($_POST);</p><p>&nbsp; <span style="color: blue;">/* CASO ALGUM CAMPO ESTEJA VAZIO, aconselho não colocar mensagem por campo e sim completo por motivos de segurança */</span></p><p>&nbsp;&nbsp;&nbsp;&nbsp; if(empty($nome)&nbsp;&nbsp;&nbsp;&nbsp; ||</p><p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; empty($email)&nbsp;&nbsp;&nbsp; ||</p><p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; empty($assunto)&nbsp; ||</p><p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; empty($mensagem) </p><p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; )</p><p>&nbsp;&nbsp;&nbsp;&nbsp; {</p><p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; echo 'Um ou mais campos está(ão) vazio(s).';</p><p>&nbsp;&nbsp;&nbsp;&nbsp; }</p><p>&nbsp;&nbsp;&nbsp;&nbsp; <span style="color: blue;">/* utilizando Expressão Regular, verificamos se o formato do email é válido, </span><a href="http://marcospinguim.blogspot.com/2011/11/utilizando-expressoes-regulares.html" style="color: #274e13;" target="_blank">clique aqui</a><span style="color: blue;"> pra saber mais sobre Expressões Regulares */</span></p><p>&nbsp;&nbsp;&nbsp;&nbsp; </p><p>&nbsp;&nbsp;&nbsp;&nbsp; else if(!preg_match("/^[a-z0-9_\.\-]+@[a-z0-9_\.\-]*[a-z0-9_\-]+\.[a-z]{2,4}$/i", $email))</p><p>&nbsp;&nbsp;&nbsp;&nbsp; {</p><p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; echo 'Informe um email válido.';</p><p>&nbsp;&nbsp;&nbsp;&nbsp; }</p><p>&nbsp;&nbsp;&nbsp;&nbsp; else</p><p>&nbsp;&nbsp;&nbsp;&nbsp; {</p><p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <span style="color: blue;">/* preparamos o arquivo para envio */</span></p><p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; $corpo = 'Nome: '.$nome.'&lt;br /&gt;Email: '.$email.'&lt;br /&gt;Mensagem: &lt;br /&gt;&lt;br /&gt;'.$mensagem;</p><p></p><p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <span style="color: blue;">/* criamos uma função para chamar os métodos da Classe PHPMailer */</span></p><p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; function sendMail($assunto,$corpo,$remetente,$nomeRemetente,$destino,$nomeDestino){</p><p>&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp; <span style="color: blue;">/* Incluimos a class, lembrando que essa classe é o arquivo baixado e está dentro da pasta PHPMailer, renomei */</span></p><p>&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp; require_once('PHPMailer/class.phpmailer.php');</p><p>&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp; <span style="color: blue;">/* Instanciamos a class */</span></p><p>&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp; $mail = new PHPMailer(); //inicia a classe</p><p>&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp; <span style="color: blue;">/* Setamos os métodos necessários para o funcionamento */</span></p><p>&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp; $mail-&gt;IsSMTP();</p><p>&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp; $mail-&gt;SMTPAuth = true;</p><p>&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp; $mail-&gt;Host = 'smtp.gmail.com';</p><p>&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp; $mail-&gt;Port = '587';</p><p>&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp; $mail-&gt;SMTPSecure = "tls";</p><p>&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp; <span style="color: blue;">/* digite aqui o seu email que fará a autenticação de envio */</span></p><p>&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp; $mail-&gt;Username = 'SEU_EMAIL@gmail.com';</p><p>&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp; <span style="color: blue;">/* coloque a senha desse email */</span></p><p>&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp; $mail-&gt;Password = 'SUA_SENHA_DO_EMAIL_ACIMA';</p><p>&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp; $mail-&gt;From = $remetente;</p><p>&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp; $mail-&gt;FromName = utf8_decode($nomeRemetente);</p><p>&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp; $mail-&gt;IsHTML(true);</p><p>&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp; $mail-&gt;Subject = utf8_decode($assunto); //assunto</p><p>&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp; $mail-&gt;Body = utf8_decode($corpo); //mensagem</p><p>&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp; $mail-&gt;AddAddress($destino,utf8_decode($nomeDestino)); //email e nome do destino</p><p>&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp; <span style="color: blue;">/* caso haja erro no envio */</span></p><p>&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp; if(!$mail-&gt;Send()){</p><p></p><p>&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp; echo 'Erro ao enviar mensagem.';</p><p>&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp; <span style="color: blue;">/* caso o envio esteja correto */</span></p><p>&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp; }else{</p><p>&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp; </p><p>&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp; echo 'Sua mensagem foi enviada com sucesso!';</p><p>&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp; </p><p>&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;}</p><p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </p><p>&nbsp;&nbsp;&nbsp; }</p><p></p><p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <span style="color: blue;">/* preparamos a mensagem de resposta */</span></p><p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; $resposta = 'Olá '.$nome.'!&lt;br /&gt; </p><p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Obrigado por entrar em contato!&lt;br /&gt; </p><p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Em breve responderemos.&lt;br /&gt;</p><p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Atenciosamente,&lt;br /&gt;&lt;br /&gt;</p><p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; SUA ASSINATURA.&lt;br /&gt;';</p><p></p><p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <span style="color: blue;">/* envia o email para você */</span></p><p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; sendMail($assunto,$corpo,$email,$nome,'SEU_EMAIL@gmail.com','SUA MENSAGEM');</p><p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <span style="color: blue;">/* envia o email de resposta */</span></p><p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; sendMail('Olá '.$nome.', recebemos sua mensagem',$resposta,'SEU_EMAIL@gmail.com','SEU TITULO',$email,$nome);</p><p></p><p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; }<span style="color: blue;">/* else dos campos vazios e da ExReg */</span></p><p>&nbsp; }</p><p>?&gt; </b></p><p>{% endhighlight %}</p><p><b>Pronto, é isso, qualquer dúvida é só comentar</b>
+ <b>Eu utilizei essa classe<span style="color: lime;"> </span><i style="color: #274e13;"><strike>hoje</strike></i> pra configurar minha página de contato aqui do Blog, <a href="http://marcospinguim.blogspot.com/p/contato.html" target="_blank"><span style="color: blue;">CLIQUE AQUI</span></a> para ver a página(<span style="color: red;">Obs.:essa página tem JQueri e está hospedada em outro lugar, pois o blogger não executa o PHP aqui e muito menos hospeda arquivos, chamei com um FRAME pra cá</span>).</b>
+<b>
+A classe <span style="color: orange;">PHPMailer</span> serve para envio de e-mails através do PHP via conexão SMTP ou POP3 muito utilizado por todo o mundo. Seu método de envio é largamente recomendado e é bem melhor do que o envio do mail() ou sendmail() ambas do PHP.</b>
+
+<p>Esse processo é bem simples, e nesse caso vamos configurar também o envio de resposta pra quem preencheu o formulário.</p>
+<p>Separei em dos arquivos, mas costumo usar tudo num só arquivo, os dois arquivos serão:</p>
+
+
+<blockquote class="tr_bq"><b>index.php</b>
+<b> enviar.php</b></blockquote>
+<b>Usarei como exemplo um e-mail do Gmail, primeiramente temos de baixar a classe PHPMailer do site e descompactá-la no local onde</b>
+<p>está os arquivos criados aqui.</p>
+
+<p><a href="http://sourceforge.net/projects/phpmailer/files/phpmailer%20for%20php5_6/" style="color: blue;" target="_blank">Clique aqui</a> para efetuar o download da classe PHPMailer, baixei o arquivo <a href="http://sourceforge.net/projects/phpmailer/files/phpmailer%20for%20php5_6/" style="color: blue;" target="_blank">PHPMailer v5.1</a></p>
+
+<p>Agora vamos construir nosso index.php que estará nosso form(nao usei tableless nesse exemplo, nem tá completo o arquivos faltando as tags de uma página HTML).</p>
+<p>Leia os cometários em AZUL para compreender a ação.Qualquer dúvida é só comentar.</p>
+{% highlight bash %}
+
+
+ 
+  
+  
+   Nome:
+   
+    
+   
+    
+  
+   Email:
+   
+    
+   
+    
+  
+   Assunto:
+   
+    
+   
+    
+  
+   Mensagem
+   
+    
+   
+  
+  
+   
+    Atualizar
+   
+   
+    
+   
+   
+ 
+
+
+{% endhighlight %}
+
+<blockquote class="tr_bq"><b>E aqui o arquivo enviar.php</b></blockquote>
+{% highlight bash %}
+
+<?php
+ /* se apertar em enviar dados entra no processo*/
+ if(isset($_POST['enviar']))
+ {
+ /* extraimos o POST para criar as variaveis automaticamente pelo nome do FORM */
+ extract($_POST);
+ /* CASO ALGUM CAMPO ESTEJA VAZIO, aconselho não colocar mensagem por campo e sim completo por motivos de segurança */
+ if(empty($nome) ||
+ empty($email) ||
+ empty($assunto) ||
+ empty($mensagem) 
+ )
+ {
+ echo 'Um ou mais campos está(ão) vazio(s).';
+ }
+ /* utilizando Expressão Regular, verificamos se o formato do email é válido, clique aqui pra saber mais sobre Expressões Regulares */
+ 
+ else if(!preg_match("/^[a-z0-9_\.\-]+@[a-z0-9_\.\-]*[a-z0-9_\-]+\.[a-z]{2,4}$/i", $email))
+ {
+ echo 'Informe um email válido.';
+ }
+ else
+ {
+ /* preparamos o arquivo para envio */
+ $corpo = 'Nome: '.$nome.'
+Email: '.$email.'
+Mensagem: 
+
+'.$mensagem;
+
+ /* criamos uma função para chamar os métodos da Classe PHPMailer */
+ function sendMail($assunto,$corpo,$remetente,$nomeRemetente,$destino,$nomeDestino){
+   /* Incluimos a class, lembrando que essa classe é o arquivo baixado e está dentro da pasta PHPMailer, renomei */
+   require_once('PHPMailer/class.phpmailer.php');
+   /* Instanciamos a class */
+   $mail = new PHPMailer(); //inicia a classe
+   /* Setamos os métodos necessários para o funcionamento */
+   $mail->IsSMTP();
+   $mail->SMTPAuth = true;
+   $mail->Host = 'smtp.gmail.com';
+   $mail->Port = '587';
+   $mail->SMTPSecure = "tls";
+   /* digite aqui o seu email que fará a autenticação de envio */
+   $mail->Username = 'SEU_EMAIL@gmail.com';
+   /* coloque a senha desse email */
+   $mail->Password = 'SUA_SENHA_DO_EMAIL_ACIMA';
+   $mail->From = $remetente;
+   $mail->FromName = utf8_decode($nomeRemetente);
+   $mail->IsHTML(true);
+   $mail->Subject = utf8_decode($assunto); //assunto
+   $mail->Body = utf8_decode($corpo); //mensagem
+   $mail->AddAddress($destino,utf8_decode($nomeDestino)); //email e nome do destino
+   /* caso haja erro no envio */
+   if(!$mail->Send()){
+
+   echo 'Erro ao enviar mensagem.';
+   /* caso o envio esteja correto */
+   }else{
+   
+   echo 'Sua mensagem foi enviada com sucesso!';
+   
+  }
+ 
+ }
+
+ /* preparamos a mensagem de resposta */
+ $resposta = 'Olá '.$nome.'!
+ 
+ Obrigado por entrar em contato!
+ 
+ Em breve responderemos.
+
+ Atenciosamente,
+
+
+ SUA ASSINATURA.
+';
+
+ /* envia o email para você */
+ sendMail($assunto,$corpo,$email,$nome,'SEU_EMAIL@gmail.com','SUA MENSAGEM');
+ /* envia o email de resposta */
+ sendMail('Olá '.$nome.', recebemos sua mensagem',$resposta,'SEU_EMAIL@gmail.com','SEU TITULO',$email,$nome);
+
+ }/* else dos campos vazios e da ExReg */
+ }
+?> 
+
+{% endhighlight %}
+<p>Pronto, é isso, qualquer dúvida é só comentar</p>
 
 </p>

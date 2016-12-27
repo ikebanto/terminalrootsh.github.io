@@ -16,6 +16,19 @@ introduction: Comandos para registrar chave pública do APT
 ---
 
 <p>
-<div class="separator" style="clear: both; text-align: center;"><a href="http://wri-irg.org/system/files/images/Gpg-logo.png" imageanchor="1" style="margin-left: 1em; margin-right: 1em;"><img border="0" src="http://wri-irg.org/system/files/images/Gpg-logo.png" height="200" width="200" /></a></div><b>O erro é assim:</b></p><p><b></p><p></b></p><p><div class="adp"><b>W: GPG error: http://ftp.br.debian.org etch Release:  The following signatures couldn't be verified  because the public key is not available:  NO_PUBKEY 9AA38DCD55BE302B  W: There is no public key available for the following key IDs: 9AA38DCD55BE302B W: You may want to run apt-get update to correct these problems&nbsp;</b></div></p><p></p><p></p><p><b>Estes são os comandos p/ registrar a chave pública do apt:</b></p><p><b></p><p></b></p><p><div class="adp"><b># gpg --keyserver pgpkeys.mit.edu --recv-key &lt;id&gt;</p><p># gpg -a --export &lt;id&gt; | sudo apt-key add - </b></div><b>Onde &lt;id&gt; é o id que aparece na hora de instalar um pacote. Exemplo:  9AA38DCD55BE302B.</b></p><p></p><p></p><p><span style="font-size: x-small;"><span style="color: #444444;"><i>Fonte: http://blog.marceloakira.com/?p=73</i></span></span>
+<div class="separator" style="clear: both; text-align: center;"><a href="http://wri-irg.org/system/files/images/Gpg-logo.png" imageanchor="1" style="margin-left: 1em; margin-right: 1em;"><img border="0" src="http://wri-irg.org/system/files/images/Gpg-logo.png" height="200" width="200" /></a></div><b>O erro é assim:</b>
+<b>
+</b>
+<div class="adp"><b>W: GPG error: http://ftp.br.debian.org etch Release:  The following signatures couldn't be verified  because the public key is not available:  NO_PUBKEY 9AA38DCD55BE302B  W: There is no public key available for the following key IDs: 9AA38DCD55BE302B W: You may want to run apt-get update to correct these problems</b></div>
+
+
+<p>Estes são os comandos p/ registrar a chave pública do apt:</p>
+<b>
+</b>
+<div class="adp"><b># gpg --keyserver pgpkeys.mit.edu --recv-key <id>
+# gpg -a --export <id> | sudo apt-key add - </b></div><b>Onde <id> é o id que aparece na hora de instalar um pacote. Exemplo:  9AA38DCD55BE302B.</b>
+
+
+<span style="font-size: x-small;"><span style="color: #444444;"><i>Fonte: http://blog.marceloakira.com/?p=73</i></span></span>
 
 </p>

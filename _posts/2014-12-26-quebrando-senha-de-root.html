@@ -16,6 +16,58 @@ introduction: Quebrando a senha de root
 ---
 
 <p>
-<div class="separator" style="clear: both; text-align: center;"><a href="http://1.bp.blogspot.com/-xAtPNrIAZmA/VDsh_jH6FUI/AAAAAAAAA2I/hd13kwJ4_9I/s1600/new-logo-tr.png" imageanchor="1" style="margin-left: 1em; margin-right: 1em;"><img border="0" src="http://1.bp.blogspot.com/-xAtPNrIAZmA/VDsh_jH6FUI/AAAAAAAAA2I/hd13kwJ4_9I/s320/new-logo-tr.png" height="200" width="200" /></a></div></p><p><b>A maneira mais fácil de se quebrar a senha de root no Linux é:</b></p><p><b></p><p></b><b>1° - Pegar um LiveCD de qualquer distribuição Linux e dar o boot por ele.</b></p><p><b>2° - Abrir o terminal e criar um usuário root(e criar uma senha)</b></p><p><b>{% highlight bash %}</p><p># sudo passwd root{% endhighlight %}</b></p><p><b>3° - baixar o usuário root</b></p><p><b>{% highlight bash %}</p><p># su{% endhighlight %}</b></p><p><b>4° - Verificar o endereço da partição que o Linux está localizado</b></p><p><b>{% highlight bash %}</p><p># fdisk -l{% endhighlight %}</b></p><p><b>5° - Criar uma pasta dentro de /mnt para poder montar o partição dentro dela</b></p><p><b>{% highlight bash %}</p><p># mkdir /mnt/SUAPASTA{% endhighlight %}</b></p><p><b>6° - Montar essa partição pra poder acessá-la</b></p><p><b>{% highlight bash %}</p><p># mount /dev/sda* /mnt/SUAPASTA{% endhighlight %}</b></p><p><b>7° - Entre na partição já montada, pra não acabar de confundindo e alterando o arquivo do LiveCD</b></p><p><b>{% highlight bash %}</p><p># cd /mnt/SUAPASTA{% endhighlight %}</b></p><p><b>8° - abra com seu editor preferido o arquivo shadow, nesse caso usei o gedit</b></p><p><b>{% highlight bash %}</p><p># gedit /etc/shadow{% endhighlight %}</b></p><p><b>9° - Altere a linha correspondente ao usuário ROOT, altere o que está root:NESTE_ESPAÇO_A_NOVASENHA:13360:0:99999:7:::, porém será um arquivo tipo o abaixo:</b></p><p><b>{% highlight bash %}</p><p>root:$1$CLDZNZCB$PbOINV7W3sMIvlaTsrkLi1:13360:0:99999:7::: {% endhighlight %}</b></p><p><b>10° - Salve o arquivo, desmonte a partição</b></p><p><b>{% highlight bash %}</p><p># umount /mnt/SUAPASTA{% endhighlight %}</b></p><p><b></p><p></b><b>Depois é só reiniciar o PC, sem o LiveCD, lógico, e usuar o root, se também tiver perdido a senha de algum usuario, este pode ser o procedimento tambeḿ.</b></p><p><b></p><p></b><b>Mole mole!</b>
+<div class="separator" style="clear: both; text-align: center;"><a href="http://1.bp.blogspot.com/-xAtPNrIAZmA/VDsh_jH6FUI/AAAAAAAAA2I/hd13kwJ4_9I/s1600/new-logo-tr.png" imageanchor="1" style="margin-left: 1em; margin-right: 1em;"><img border="0" src="http://1.bp.blogspot.com/-xAtPNrIAZmA/VDsh_jH6FUI/AAAAAAAAA2I/hd13kwJ4_9I/s320/new-logo-tr.png" height="200" width="200" /></a></div>
+<p>A maneira mais fácil de se quebrar a senha de root no Linux é:</p>
+<b>
+</b><b>1° - Pegar um LiveCD de qualquer distribuição Linux e dar o boot por ele.</b>
+<p>2° - Abrir o terminal e criar um usuário root(e criar uma senha)</p>
+{% highlight bash %}
+
+# sudo passwd root
+{% endhighlight %}
+<p>3° - baixar o usuário root</p>
+{% highlight bash %}
+
+# su
+{% endhighlight %}
+<p>4° - Verificar o endereço da partição que o Linux está localizado</p>
+{% highlight bash %}
+
+# fdisk -l
+{% endhighlight %}
+<p>5° - Criar uma pasta dentro de /mnt para poder montar o partição dentro dela</p>
+{% highlight bash %}
+
+# mkdir /mnt/SUAPASTA
+{% endhighlight %}
+<p>6° - Montar essa partição pra poder acessá-la</p>
+{% highlight bash %}
+
+# mount /dev/sda* /mnt/SUAPASTA
+{% endhighlight %}
+<p>7° - Entre na partição já montada, pra não acabar de confundindo e alterando o arquivo do LiveCD</p>
+{% highlight bash %}
+
+# cd /mnt/SUAPASTA
+{% endhighlight %}
+<p>8° - abra com seu editor preferido o arquivo shadow, nesse caso usei o gedit</p>
+{% highlight bash %}
+
+# gedit /etc/shadow
+{% endhighlight %}
+<p>9° - Altere a linha correspondente ao usuário ROOT, altere o que está root:NESTE_ESPAÇO_A_NOVASENHA:13360:0:99999:7:::, porém será um arquivo tipo o abaixo:</p>
+{% highlight bash %}
+
+root:$1$CLDZNZCB$PbOINV7W3sMIvlaTsrkLi1:13360:0:99999:7::: 
+{% endhighlight %}
+<p>10° - Salve o arquivo, desmonte a partição</p>
+{% highlight bash %}
+
+# umount /mnt/SUAPASTA
+{% endhighlight %}
+<b>
+</b><b>Depois é só reiniciar o PC, sem o LiveCD, lógico, e usuar o root, se também tiver perdido a senha de algum usuario, este pode ser o procedimento tambeḿ.</b>
+<b>
+</b><b>Mole mole!</b>
 
 </p>

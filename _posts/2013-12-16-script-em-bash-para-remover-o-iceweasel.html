@@ -17,6 +17,111 @@ introduction: Script em Bash para remover o iceweasel e instalar o Firefox no De
 ---
 
 <p>
-<div class="separator" style="clear: both; text-align: center;"><a href="http://2.bp.blogspot.com/-qeGEbicKbgI/Uq-GtaX-qFI/AAAAAAAAAF0/rBq4de8zKsM/s1600/shell+script2.png" imageanchor="1" style="margin-left: 1em; margin-right: 1em;"><img border="0" src="http://2.bp.blogspot.com/-qeGEbicKbgI/Uq-GtaX-qFI/AAAAAAAAAF0/rBq4de8zKsM/s320/shell+script2.png" /></a></div></p><p></p><p><b></b></p><p><blockquote><b>Esse script foi criado no intuito de substituir o processo (pra quem não queira perder o tempo) do seguinte post:  </b></p><p><b><a href="http://www.terminalroot.com.br/2011/10/removendo-o-iceweasel-e-instalando-o.html" target="_blank">Removendo o iceweasel e instalando o Firefox ao Debian </a></b></p><p><b></p><p></b><b><a href="http://www.terminalroot.com.br/2011/10/removendo-o-iceweasel-e-instalando-o.html" target="_blank">http://www.terminalroot.com.br/2011/10/removendo-o-iceweasel-e-instalando-o.html</a></b></blockquote><b><span style="font-size: large;">Baixe</span>:</p><p></b></p><p><div class="adp"><b># wget http://linuxshell.onlinewebshop.net/downloads/rm-ice-ins-fox.sh </b></div><b></p><p><span style="font-size: large;">Dê permisão:</span></p><p></b></p><p><div class="adp"><b># chmod +x rm-ice-ins-fox.sh </b></div><b></p><p><span style="font-size: large;">Execute:</span></p><p></b></p><p><div class="adp"><b># ./rm-ice-ins-fox.sh  </b></div><b></p><p><span style="font-size: large;">Exemplo</span>: <i>Supondo que vc deseja instalar a versão <span style="font-size: large;"><span style="color: blue;">26</span></span>, coloca o numero <span style="font-size: large;"><span style="color: blue;">26</span></span> logo após o comando, se vc não pôr numero nenhum, o numero padrão será o <span style="color: blue;"><span style="font-size: large;">26</span></span></i><span style="color: blue;"><span style="font-size: large;"></span></span></p><p></b></p><p><div class="adp"><b># ./rm-ice-ins-fox.sh 26 </b></div><b></b></p><p><blockquote class="tr_bq"><b><span style="color: red;">Observação: o Script irá identificar se seu Sistema é 32 ou 64 bits e fará o download do pacote adequado, vc não precisa se preocupar com isso.</span></b></blockquote></p><p><u><b>Script no PasteBin:</b></u></p><p><script src="http://pastebin.com/embed_js.php?i=svTpqn7x"></script> </p><p><u><b>Script no Blog: </b></u></p><p><div class="adp">#!/bin/bash</p><p># --------------------------------------</p><p># Script em Bash para remover o iceweasel e instalar o Firefox no Debian</p><p># ./rm-ice-ins-fox.sh</p><p>#</p><p># Uso: ./rm-ice-ins-fox.sh [versão]</p><p># Exemplo:</p><p># supondo que vc deseja instalar a versão 26, coloca o numero 26 logo após o comando, se vc não pôr numero nenhum, o numero padrão será o 26</p><p>#</p><p># ./rm-ice-ins-fox.sh 26</p><p>#</p><p># Obs.: o Script irá identificar se seu Sistema é 32 ou 64 bits e fará o download do pacote adequado, vc não precisa se preocupar com isso.</p><p>#</p><p># Autor: Marcos da B. M. Oliveira ,http://www.terminalroot.com.br/</p><p># Desde: Seg 16 Dez 2013 19:34:18 BRST </p><p># Versão: 1</p><p># Licença: GPL</p><p># -------------------------------------</p><p></p><p># verificar se é root, se for prossegue , se não for, aborta.</p><p>if [ "$USER" = "root" ]; then</p><p>&nbsp;&nbsp;&nbsp; reset</p><p>else</p><p>&nbsp;&nbsp;&nbsp; echo -e "Você precisa estar logado como root.\nAbortar.";&nbsp;&nbsp;&nbsp; </p><p>&nbsp;&nbsp;&nbsp; exit 0</p><p>fi</p><p></p><p># verifica que versao voce deseja instalar</p><p>[ "$1" ] &amp;&amp; versao="$1" || versao="26";</p><p></p><p># verificar se é 32 ou 64 bits,pra baixar o pacote adequado</p><p>if [ "$(getconf LONG_BIT)" = "32" ]; then</p><p></p><p>&nbsp;&nbsp;&nbsp; url="http://download-installer.cdn.mozilla.net/pub/firefox/releases/$versao.0/linux-i686/pt-BR/firefox-$versao.0.tar.bz2"</p><p>&nbsp;&nbsp;&nbsp; </p><p>elif [ "$(getconf LONG_BIT)" = "64" ]; then</p><p></p><p>&nbsp;&nbsp;&nbsp; url="http://download.cdn.mozilla.net/pub/mozilla.org/firefox/releases/$versao.0/linux-x86_64/pt-BR/firefox-$versao.0.tar.bz2"</p><p></p><p>fi</p><p></p><p># baixa o pacote</p><p>wget $url</p><p></p><p># remove o iceweasel</p><p>apt-get remove iceweasel -y</p><p></p><p># move o tarball pra pasta adequada</p><p>mv firefox-*.tar.bz2 /usr/lib/</p><p></p><p># posiciona-se no diretório adequado</p><p>cd /usr/lib/</p><p></p><p># descompacta o pacote</p><p>tar -jxvf firefox-*.tar.bz2</p><p></p><p># cria um link simbólico</p><p>ln -s /usr/lib/firefox/firefox /usr/bin/firefox</p><p></p><p># cria um link simbólico para os plugins</p><p>ln -s /usr/lib/mozilla/plugins /usr/lib/firefox/plugins</p><p></p><p># cria um icone no painel</p><p>echo "[Desktop Entry]</p><p>Encoding=UTF-8</p><p>Version=1.0</p><p>Type=Application</p><p>Terminal=false</p><p>Name=Firefox</p><p>Name[en_US]=Firefox</p><p>Name[pt_BR]=Firefox</p><p>Comment=Navegador web</p><p>Exec=/usr/bin/firefox</p><p>Icon=/usr/lib/firefox/browser/chrome/icons/default/default48.png</p><p>Categories=Network;WebBrowser;</p><p>StartupNotify=true</p><p>" &gt; /usr/share/applications/firefox.desktop</p><p></p><p># encerra a instalação</p><p>echo "Firefox instalado com sucesso e Iceweasel removido com sucesso!"</p><p>echo "Pronto."</p><p>exit 0 </div></p><p></p><p>
+<div class="separator" style="clear: both; text-align: center;"><a href="http://2.bp.blogspot.com/-qeGEbicKbgI/Uq-GtaX-qFI/AAAAAAAAAF0/rBq4de8zKsM/s1600/shell+script2.png" imageanchor="1" style="margin-left: 1em; margin-right: 1em;"><img border="0" src="http://2.bp.blogspot.com/-qeGEbicKbgI/Uq-GtaX-qFI/AAAAAAAAAF0/rBq4de8zKsM/s320/shell+script2.png" /></a></div>
+
+<p></p>
+<blockquote><b>Esse script foi criado no intuito de substituir o processo (pra quem não queira perder o tempo) do seguinte post:  </b>
+<p><a href="http://www.terminalroot.com.br/2011/10/removendo-o-iceweasel-e-instalando-o.html" target="_blank">Removendo o iceweasel e instalando o Firefox ao Debian </a></p>
+<b>
+</b><b><a href="http://www.terminalroot.com.br/2011/10/removendo-o-iceweasel-e-instalando-o.html" target="_blank">http://www.terminalroot.com.br/2011/10/removendo-o-iceweasel-e-instalando-o.html</a></b></blockquote><b><span style="font-size: large;">Baixe</span>:
+</b>
+<div class="adp"><b># wget http://linuxshell.onlinewebshop.net/downloads/rm-ice-ins-fox.sh </b></div><b>
+<span style="font-size: large;">Dê permisão:</span>
+</b>
+<div class="adp"><b># chmod +x rm-ice-ins-fox.sh </b></div><b>
+<span style="font-size: large;">Execute:</span>
+</b>
+<div class="adp"><b># ./rm-ice-ins-fox.sh  </b></div><b>
+<span style="font-size: large;">Exemplo</span>: <i>Supondo que vc deseja instalar a versão <span style="font-size: large;"><span style="color: blue;">26</span></span>, coloca o numero <span style="font-size: large;"><span style="color: blue;">26</span></span> logo após o comando, se vc não pôr numero nenhum, o numero padrão será o <span style="color: blue;"><span style="font-size: large;">26</span></span></i><span style="color: blue;"><span style="font-size: large;"></span></span>
+</b>
+<div class="adp"><b># ./rm-ice-ins-fox.sh 26 </b></div><b></b>
+<blockquote class="tr_bq"><b><span style="color: red;">Observação: o Script irá identificar se seu Sistema é 32 ou 64 bits e fará o download do pacote adequado, vc não precisa se preocupar com isso.</span></b></blockquote>
+<u><b>Script no PasteBin:</b></u>
+<iframe src="http://pastebin.com/raw/svTpqn7x" style="border:none;width:100%;"></iframe> 
+<u><b>Script no Blog: </b></u>
+<div class="adp">#!/bin/bash
+# --------------------------------------
+# Script em Bash para remover o iceweasel e instalar o Firefox no Debian
+# ./rm-ice-ins-fox.sh
+#
+# Uso: ./rm-ice-ins-fox.sh [versão]
+# Exemplo:
+# supondo que vc deseja instalar a versão 26, coloca o numero 26 logo após o comando, se vc não pôr numero nenhum, o numero padrão será o 26
+#
+# ./rm-ice-ins-fox.sh 26
+#
+# Obs.: o Script irá identificar se seu Sistema é 32 ou 64 bits e fará o download do pacote adequado, vc não precisa se preocupar com isso.
+#
+# Autor: Marcos da B. M. Oliveira ,http://www.terminalroot.com.br/
+# Desde: Seg 16 Dez 2013 19:34:18 BRST 
+# Versão: 1
+# Licença: GPL
+# -------------------------------------
+
+# verificar se é root, se for prossegue , se não for, aborta.
+if [ "$USER" = "root" ]; then
+ reset
+else
+ echo -e "Você precisa estar logado como root.\nAbortar."; 
+ exit 0
+fi
+
+# verifica que versao voce deseja instalar
+[ "$1" ] &amp;&amp; versao="$1" || versao="26";
+
+# verificar se é 32 ou 64 bits,pra baixar o pacote adequado
+if [ "$(getconf LONG_BIT)" = "32" ]; then
+
+ url="http://download-installer.cdn.mozilla.net/pub/firefox/releases/$versao.0/linux-i686/pt-BR/firefox-$versao.0.tar.bz2"
+ 
+elif [ "$(getconf LONG_BIT)" = "64" ]; then
+
+ url="http://download.cdn.mozilla.net/pub/mozilla.org/firefox/releases/$versao.0/linux-x86_64/pt-BR/firefox-$versao.0.tar.bz2"
+
+fi
+
+# baixa o pacote
+wget $url
+
+# remove o iceweasel
+apt-get remove iceweasel -y
+
+# move o tarball pra pasta adequada
+mv firefox-*.tar.bz2 /usr/lib/
+
+# posiciona-se no diretório adequado
+cd /usr/lib/
+
+# descompacta o pacote
+tar -jxvf firefox-*.tar.bz2
+
+# cria um link simbólico
+ln -s /usr/lib/firefox/firefox /usr/bin/firefox
+
+# cria um link simbólico para os plugins
+ln -s /usr/lib/mozilla/plugins /usr/lib/firefox/plugins
+
+# cria um icone no painel
+echo "[Desktop Entry]
+Encoding=UTF-8
+Version=1.0
+Type=Application
+Terminal=false
+Name=Firefox
+Name[en_US]=Firefox
+Name[pt_BR]=Firefox
+Comment=Navegador web
+Exec=/usr/bin/firefox
+Icon=/usr/lib/firefox/browser/chrome/icons/default/default48.png
+Categories=Network;WebBrowser;
+StartupNotify=true
+" > /usr/share/applications/firefox.desktop
+
+# encerra a instalação
+echo "Firefox instalado com sucesso e Iceweasel removido com sucesso!"
+echo "Pronto."
+exit 0 </div>
+
+
 
 </p>

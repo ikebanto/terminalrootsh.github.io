@@ -18,6 +18,98 @@ introduction: Habilitando CGI e .sh no Apache do Debian Jessie
 ---
 
 <p>
-<div class="separator" style="clear: both; text-align: center;"><a href="http://1.bp.blogspot.com/-LkF8Hg4_jIo/VfVyloiTbzI/AAAAAAAAExA/0u4Vibxi83M/s1600/gnuapache.jpg" imageanchor="1" style="margin-left: 1em; margin-right: 1em;"><img border="0" src="http://1.bp.blogspot.com/-LkF8Hg4_jIo/VfVyloiTbzI/AAAAAAAAExA/0u4Vibxi83M/s1600/gnuapache.jpg" /></a></div></p><p><h3><span style="font-size: large;"><b>Iremos admitir que você já sabe instalar o <a href="http://www.apache.org/" target="_blank"><span style="color: #cc0000;">Apache</span></a> e já utiliza-o com <i>PHP, <strike>HTML</strike></i>,... , caso não saiba pesquise na internet como instalá-los. O bom de usar CGI é que você pode executar comando do Shell Script na sua página Web.</b></span></h3><b></p><p></b></p><p><h4><span style="font-size: large;"><b>A maioria das distribuições já possuem o <span style="font-size: x-large;">módulo CGI</span> do Apache configurado e com o suporte a ele.</b></span></h4><b></p><p>{% highlight bash %}LoadModule cgi_module /usr/lib/apache/1.3/mod_cgi.so{% endhighlight %}</p><p></p><p>Caso deseje certificar-se de que o módulo já está <u>carregado</u>, basta verificar em:</p><p></b></p><p><blockquote class="tr_bq"><b>Obs: Estou usando o <a href="http://www.nano-editor.org/" target="_blank"><span style="color: purple;"><span style="font-size: large;">Editor Nano</span></span></a>, mas vc pode usar o de sua preferência.</b></blockquote><b></p><p>Logue-se como root , se não possuir o sudo.</p><p></p><p>{% highlight bash %}$ su{% endhighlight %}</p><p></p><p>{% highlight bash %}# nano /etc/apache2/mods-available/cgi.load{% endhighlight %}</p><p></p><p>Certifique-se também de que já está <u>habilitado</u>:</p><p></p><p>{% highlight bash %}nano /etc/apache2/mods-enabled/cgi.load{% endhighlight %}</p><p></p><p>Se estiver <u>comentado</u> (<span style="font-size: large;">#</span>), "descomente" e salve o arquivo.</p><p></p><p>Agora vamos informar ao Apache quais os <u>formatos</u> que desejamos trabalhar:</p><p></p><p>{% highlight bash %}nano /etc/apache2/mods-enabled/mime.conf{% endhighlight %}</p><p></p><p>Procure nele a <u>linha</u> que possui o seguinte código:</p><p></b></p><p><div class="adp"><b>#AddHandler cgi-script .cgi</b></div><b></p><p></p><p>Se estiver comentado, "descomente" e adicione o <span style="font-size: large;">.sh</span> no final, deixando-o assim:</p><p></p><p><div class="adp">AddHandler cgi-script .cgi .sh</div></p><p></p><p>Caso não esteja habilitado, rode esse comando para leitura de arquivos CGI:</p><p></p><p>{% highlight bash %}a2enmod cgi{% endhighlight %}</p><p></p><p>Por padrão no <a href="https://www.debian.org/releases/stable/" target="_blank"><span style="font-size: large;"><span style="color: red;">Debian Jessie</span></span></a> há uma pasta que manda o <span style="color: blue;">http://localhost/cgi-bin/</span> para <span style="color: blue;">/usr/lib/cgi-bin</span> , ou seja, se você pôr um arquivo <u>cgi</u> dentro de <span style="color: blue;">/usr/lib/cgi-bin</span> automaticamente quando vc acessar seu <span style="color: blue;">http://localhost/cgi-bin/</span> ele irá acessar <span style="color: blue;">/usr/lib/cgi-bin</span> . Mas caso vc deseje alterar o endereço, para por exemplo: <span style="color: purple;">http://localhost/sh/</span> , então vc precisa editar o arquivo <span style="color: #0b5394;">000-default.conf</span> e adicionar uma linha do com <i><u>ScriptAlias</u></i> nele, assim:</p><p></p><p>{% highlight bash %}nano /etc/apache2/sites-available/000-default.conf{% endhighlight %}</p><p></p><p>E adicione <u>ANTES</u> da tag &lt;/VirtualHost&gt; , o seguinte código:</p><p></p><p>{% highlight bash %}ScriptAlias /sh/ /usr/lib/cgi-bin/{% endhighlight %}</p><p></p><p>Salve-o e depois restarte o Apache:</p><p></p><p>{% highlight bash %}systemctl restart apache2{% endhighlight %}</p><p></p><p>Ou só releia o arquivo de configuração:</p><p></p><p>{% highlight bash %}service apache2 reload{% endhighlight %}</p><p></p><p>Depois é só criar um arquivo <u><i>teste</i></u>, exemplo o que vou disponibilizar aqui <u>abaixo</u>, salvá-lo no diretório <span style="color: blue;">/usr/lib/cgi-bin</span> e depois&nbsp; acessar o endereço <span style="color: blue;">http://localhost/cgi-bin/</span> ou <span style="color: purple;">http://localhost/sh/</span> , dependendo se vc criou <i>alias</i> do <u><i>Document Root</i></u> ou não, e ver se está tudo ok.</p><p></p><p>Após salvar o arquivo, não esqueça de dar <u>permissão</u> de visualização para ele:</p><p></p><p>{% highlight bash %}chmod a+x /usr/lib/cgi-bin/teste.cgi{% endhighlight %}</p><p></p><p><i><span style="font-size: x-large;">Arquivo <span style="background-color: black;"><span style="color: white;">teste.cgi</span></span>:</span></i></p><p> <script src="https://gist.github.com/terminalrootsh/394912261766440e7db9.js"></script> </b></p><p><b>&nbsp; </p><p>Qualquer dúvida, é só comentar.</p><p></p><p>Abraços.</p><p></b><span style="font-size: x-small;"><span style="color: #666666;"><i>Links úteis:</i></span></span></p><p><span style="font-size: x-small;"><span style="color: #666666;"><i></p><p></i></span></span><span style="font-size: x-small;"><span style="color: #666666;"><i>http://thobias.org/doc/cgi_shell.html </i></span></span></p><p><span style="font-size: x-small;"><span style="color: #666666;"><i>http://www.vivaolinux.com.br/dica/Habilitar-CgiShell-no-Apache2 </i></span></span></p><p><span style="font-size: x-small;"><span style="color: #666666;"><i>https://debian-handbook.info/browse/pt-BR/stable/sect.http-web-server.html </i></span></span></p><p><span style="font-size: x-small;"><span style="color: #666666;"><i>http://httpd.apache.org/docs/current/howto/cgi.html</i></span></span>
+<div class="separator" style="clear: both; text-align: center;"><a href="http://1.bp.blogspot.com/-LkF8Hg4_jIo/VfVyloiTbzI/AAAAAAAAExA/0u4Vibxi83M/s1600/gnuapache.jpg" imageanchor="1" style="margin-left: 1em; margin-right: 1em;"><img border="0" src="http://1.bp.blogspot.com/-LkF8Hg4_jIo/VfVyloiTbzI/AAAAAAAAExA/0u4Vibxi83M/s1600/gnuapache.jpg" /></a></div>
+<h3><span style="font-size: large;"><b>Iremos admitir que você já sabe instalar o <a href="http://www.apache.org/" target="_blank"><span style="color: #cc0000;">Apache</span></a> e já utiliza-o com <i>PHP, <strike>HTML</strike></i>,... , caso não saiba pesquise na internet como instalá-los. O bom de usar CGI é que você pode executar comando do Shell Script na sua página Web.</b></span></h3><b>
+</b>
+<h4><span style="font-size: large;"><b>A maioria das distribuições já possuem o <span style="font-size: x-large;">módulo CGI</span> do Apache configurado e com o suporte a ele.</b></span></h4><b>
+{% highlight bash %}
+LoadModule cgi_module /usr/lib/apache/1.3/mod_cgi.so
+{% endhighlight %}
 
-</p>
+Caso deseje certificar-se de que o módulo já está carregado, basta verificar em:
+
+Obs: Estou usando o Editor Nano, mas vc pode usar o de sua preferência.
+Logue-se como root , se não possuir o sudo.
+
+{% highlight bash %}
+$ su
+{% endhighlight %}
+
+{% highlight bash %}
+# nano /etc/apache2/mods-available/cgi.load
+{% endhighlight %}
+
+Certifique-se também de que já está habilitado:
+
+{% highlight bash %}
+nano /etc/apache2/mods-enabled/cgi.load
+{% endhighlight %}
+
+Se estiver <u>comentado</u> (<span style="font-size: large;">#</span>), "descomente" e salve o arquivo.
+
+Agora vamos informar ao Apache quais os <u>formatos</u> que desejamos trabalhar:
+
+{% highlight bash %}
+nano /etc/apache2/mods-enabled/mime.conf
+{% endhighlight %}
+
+Procure nele a linha que possui o seguinte código:
+
+#AddHandler cgi-script .cgi
+
+Se estiver comentado, "descomente" e adicione o .sh no final, deixando-o assim:
+
+AddHandler cgi-script .cgi .sh
+
+Caso não esteja habilitado, rode esse comando para leitura de arquivos CGI:
+
+{% highlight bash %}
+a2enmod cgi
+{% endhighlight %}
+
+Por padrão no <a href="https://www.debian.org/releases/stable/" target="_blank"><span style="font-size: large;"><span style="color: red;">Debian Jessie</span></span></a> há uma pasta que manda o <span style="color: blue;">http://localhost/cgi-bin/</span> para <span style="color: blue;">/usr/lib/cgi-bin</span> , ou seja, se você pôr um arquivo <u>cgi</u> dentro de <span style="color: blue;">/usr/lib/cgi-bin</span> automaticamente quando vc acessar seu <span style="color: blue;">http://localhost/cgi-bin/</span> ele irá acessar <span style="color: blue;">/usr/lib/cgi-bin</span> . Mas caso vc deseje alterar o endereço, para por exemplo: <span style="color: purple;">http://localhost/sh/</span> , então vc precisa editar o arquivo <span style="color: #0b5394;">000-default.conf</span> e adicionar uma linha do com <i><u>ScriptAlias</u></i> nele, assim:
+
+{% highlight bash %}
+nano /etc/apache2/sites-available/000-default.conf
+{% endhighlight %}
+
+E adicione ANTES da tag  , o seguinte código:
+
+{% highlight bash %}
+ScriptAlias /sh/ /usr/lib/cgi-bin/
+{% endhighlight %}
+
+Salve-o e depois restarte o Apache:
+
+{% highlight bash %}
+systemctl restart apache2
+{% endhighlight %}
+
+Ou só releia o arquivo de configuração:
+
+{% highlight bash %}
+service apache2 reload
+{% endhighlight %}
+
+Depois é só criar um arquivo <u><i>teste</i></u>, exemplo o que vou disponibilizar aqui <u>abaixo</u>, salvá-lo no diretório <span style="color: blue;">/usr/lib/cgi-bin</span> e depois acessar o endereço <span style="color: blue;">http://localhost/cgi-bin/</span> ou <span style="color: purple;">http://localhost/sh/</span> , dependendo se vc criou <i>alias</i> do <u><i>Document Root</i></u> ou não, e ver se está tudo ok.
+
+Após salvar o arquivo, não esqueça de dar <u>permissão</u> de visualização para ele:
+
+{% highlight bash %}
+chmod a+x /usr/lib/cgi-bin/teste.cgi
+{% endhighlight %}
+
+Arquivo teste.cgi:
+  
+ 
+Qualquer dúvida, é só comentar.
+
+Abraços.
+Links úteis:
+
+http://thobias.org/doc/cgi_shell.html 
+http://www.vivaolinux.com.br/dica/Habilitar-CgiShell-no-Apache2 
+https://debian-handbook.info/browse/pt-BR/stable/sect.http-web-server.html 
+http://httpd.apache.org/docs/current/howto/cgi.html
+
+

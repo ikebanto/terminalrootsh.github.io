@@ -26,40 +26,52 @@ introduction: Jogo da Forca em Shell Script
 </a>
 </div>
 
-<p><h3><span style="color: #3d85c6;"><b>ESSE É O PRIMEIRO JOGO QUE EU CRIEI EM SHELL SCRIPT!</b></span></h3><b></p><p>Depois de alguns estudos e fritar a cabeça por dois dias, consegui terminar esse jogo . Apenas com meus conhecimentos básicos sobre programação, <a href="http://www.terminalroot.com.br/search/label/Shell%20Script" target="_blank"><span style="font-size: x-large;"><span style="color: blue;">Shell Script</span></span></a> e lógica, consegui criar esse jogo baseado no lendário <a href="https://github.com/terminalrootsh/jogodaforca" target="_blank"><span style="color: blue;"><span style="font-size: large;">Jogo Da Forca</span></span></a>. Denominei ele de Jogo Da Forca <a href="http://www.terminalroot.com.br/search/label/GNU" target="_blank"><span style="color: red;"><span style="font-size: large;">GNU EDITION</span></span></a> . O código é bem simples e está todo documentado e comentado linha à linha. O jogo foi aprovado pelo meu filho de 6 anos, que ficou viciado, e passou bastante tempo jogando, e acertou uma boa gama de palavras :) . Na verdade foi pensando nele que eu escrevi esse jogo , espero que seja o primeiro de vários , até eu e minha esposa também nos "viciamos" :P .</p>
-<p>Ele foi testado num <a href="http://www.terminalroot.com.br/search/label/GNU" target="_blank"><span style="color: blue;"><span style="font-size: large;">GNU</span></span></a>/<a href="http://www.terminalroot.com.br/search/label/Linux" target="_blank"><span style="font-size: x-large;"><span style="color: blue;">Linux</span></span></a> <a href="http://www.terminalroot.com.br/search/label/Debian" target="_blank"><span style="color: red;"><span style="font-size: large;">Debian</span></span></a> <span style="font-size: large;">Jessie 8</span> , mas você pode tentar no Sistema de sua utilização e/ou na sua Distribuição <a href="http://www.terminalroot.com.br/search/label/Linux" target="_blank"><span style="color: #f1c232;"><span style="font-size: large;">Linux</span></span></a> preferida . O Shell , como descrito no cabeçalho é o <a href="http://www.terminalroot.com.br/search/label/Bash" target="_blank"><span style="color: blue;"><span style="font-size: large;">Bash</span></span></a> , ou seja, pode rodar , teoricamente no BSD, FreeBSD, Solaris, MAC OS X e até no <strike>Windows</strike> com Cygwin!</b></p><p><blockquote><b><span style="font-size: large;"> O código é Livre para ser Modificado e Distribuído por quem desejar, basta dá um fork, um pull request e um commit, é lógico :), fiquem à vontade!</span></b></blockquote><b></p><p><span style="font-size: large;"><i>Bom, o papo está bom , mas vamos direto ao assunto!!!</i></span></p>
+<p><h3><span style="color: #3d85c6;"><b>ESSE É O PRIMEIRO JOGO QUE EU CRIEI EM SHELL SCRIPT!</b></span></h3><b>
+Depois de alguns estudos e fritar a cabeça por dois dias, consegui terminar esse jogo . Apenas com meus conhecimentos básicos sobre programação, <a href="http://www.terminalroot.com.br/search/label/Shell%20Script" target="_blank"><span style="font-size: x-large;"><span style="color: blue;">Shell Script</span></span></a> e lógica, consegui criar esse jogo baseado no lendário <a href="https://github.com/terminalrootsh/jogodaforca" target="_blank"><span style="color: blue;"><span style="font-size: large;">Jogo Da Forca</span></span></a>. Denominei ele de Jogo Da Forca <a href="http://www.terminalroot.com.br/search/label/GNU" target="_blank"><span style="color: red;"><span style="font-size: large;">GNU EDITION</span></span></a> . O código é bem simples e está todo documentado e comentado linha à linha. O jogo foi aprovado pelo meu filho de 6 anos, que ficou viciado, e passou bastante tempo jogando, e acertou uma boa gama de palavras :) . Na verdade foi pensando nele que eu escrevi esse jogo , espero que seja o primeiro de vários , até eu e minha esposa também nos "viciamos" :P .</p>
+<p>Ele foi testado num <a href="http://www.terminalroot.com.br/search/label/GNU" target="_blank"><span style="color: blue;"><span style="font-size: large;">GNU</span></span></a>/<a href="http://www.terminalroot.com.br/search/label/Linux" target="_blank"><span style="font-size: x-large;"><span style="color: blue;">Linux</span></span></a> <a href="http://www.terminalroot.com.br/search/label/Debian" target="_blank"><span style="color: red;"><span style="font-size: large;">Debian</span></span></a> <span style="font-size: large;">Jessie 8</span> , mas você pode tentar no Sistema de sua utilização e/ou na sua Distribuição <a href="http://www.terminalroot.com.br/search/label/Linux" target="_blank"><span style="color: #f1c232;"><span style="font-size: large;">Linux</span></span></a> preferida . O Shell , como descrito no cabeçalho é o <a href="http://www.terminalroot.com.br/search/label/Bash" target="_blank"><span style="color: blue;"><span style="font-size: large;">Bash</span></span></a> , ou seja, pode rodar , teoricamente no BSD, FreeBSD, Solaris, MAC OS X e até no <strike>Windows</strike> com Cygwin!</b>
+<blockquote><b><span style="font-size: large;"> O código é Livre para ser Modificado e Distribuído por quem desejar, basta dá um fork, um pull request e um commit, é lógico :), fiquem à vontade!</span></b></blockquote><b>
+<span style="font-size: large;"><i>Bom, o papo está bom , mas vamos direto ao assunto!!!</i></span></p>
 
 <h1></h1>
 {% highlight bash %}
+
+
 {% endhighlight %}
 
 <h1>Para instalar o Jogo Da Forca</h1>
 {% highlight bash %}
+
 git clone https://github.com/terminalrootsh/jogodaforca.git
 cd ~/jogodaforca/
 chmod +x jogodaforca.sh
+
 {% endhighlight %}
 
 <h1>Depois é só rodar e jogar</h1>
 {% highlight bash %}
+
 ./jogodaforca.sh
+
 {% endhighlight %}
 
 <h1>Ou baixando, executando e rodando:</h1>
 {% highlight bash %}
+
 wget https://raw.githubusercontent.com/terminalrootsh/jogodaforca/master/jogodaforca.sh
 chmod +x jogodaforca.sh
 ./jogodaforca.sh
+
 {% endhighlight %}
 
 <h1>Segue o código fonte do Jogo</h1>
 {% highlight bash %}
+
 #!/bin/bash
 #
 # jogodaforca.sh 	: Jogo da Forca - GNU EDITION
 #
 # Site				: http://www.terminalroot.com.br/
-# Autor				: Marcos da B. M. Oliveira <binbash@linuxmail.org>
+# Autor				: Marcos da B. M. Oliveira 
 #
 #---------------------------------------------------------------------------------
 #
@@ -355,6 +367,7 @@ setterm -cursor on
 
 # sai do jogo 
 exit 0
+
 {% endhighlight %}
 
 <p><a href="https://gist.github.com/terminalrootsh/1144110892d0d51aa252#file-jogodaforca-sh">GITHUB</a></p>

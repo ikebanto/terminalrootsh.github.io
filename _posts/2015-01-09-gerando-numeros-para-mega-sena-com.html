@@ -28,6 +28,7 @@ introduction: Gerando Números para Mega-Sena com Shell Script
 
 {% highlight bash %}
 
+
 #!/bin/bash
 
 # Autor: Diego Brum 
@@ -134,12 +135,12 @@ function ultimoResultadoMegaSena {
 
 	echo "Resultado do último concurso:"
 
-	mega1=$(cat resultado_mega.txt |grep "numbers mega-sena" |awk -F "</*li>|</*li>" '/<\/*l[i]>.*[1-9][1-9]/ {print $2}')
-	mega2=$(cat resultado_mega.txt |grep "numbers mega-sena" |awk -F "</*li>|</*li>" '/<\/*l[i]>.*[1-9][1-9]/ {print $4}')
-	mega3=$(cat resultado_mega.txt |grep "numbers mega-sena" |awk -F "</*li>|</*li>" '/<\/*l[i]>.*[1-9][1-9]/ {print $6}')
-	mega4=$(cat resultado_mega.txt |grep "numbers mega-sena" |awk -F "</*li>|</*li>" '/<\/*l[i]>.*[1-9][1-9]/ {print $8}')
-	mega5=$(cat resultado_mega.txt |grep "numbers mega-sena" |awk -F "</*li>|</*li>" '/<\/*l[i]>.*[1-9][1-9]/ {print $10}')
-	mega6=$(cat resultado_mega.txt |grep "numbers mega-sena" |awk -F "</*li>|</*li>" '/<\/*l[i]>.*[1-9][1-9]/ {print $12}')
+	mega1=$(cat resultado_mega.txt |grep "numbers mega-sena" |awk -F "|" '/.*[1-9][1-9]/ {print $2}')
+	mega2=$(cat resultado_mega.txt |grep "numbers mega-sena" |awk -F "|" '/.*[1-9][1-9]/ {print $4}')
+	mega3=$(cat resultado_mega.txt |grep "numbers mega-sena" |awk -F "|" '/.*[1-9][1-9]/ {print $6}')
+	mega4=$(cat resultado_mega.txt |grep "numbers mega-sena" |awk -F "|" '/.*[1-9][1-9]/ {print $8}')
+	mega5=$(cat resultado_mega.txt |grep "numbers mega-sena" |awk -F "|" '/.*[1-9][1-9]/ {print $10}')
+	mega6=$(cat resultado_mega.txt |grep "numbers mega-sena" |awk -F "|" '/.*[1-9][1-9]/ {print $12}')
 
 
 	echo -en " \033[42;1;34m $mega1 $mega2 $mega3 $mega4 $mega5 $mega6  \033[0m \n"
@@ -160,6 +161,7 @@ acertos
 echo
 
 exit 0
+
 
 {% endhighlight %}
 

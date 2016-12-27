@@ -16,6 +16,26 @@ introduction: Problema ao encerrar sessão no Debian Wheezy
 ---
 
 <p>
-<div class="separator" style="clear: both; text-align: center;"><a href="http://1.bp.blogspot.com/-WOGj-NuXTXs/UqMxPxu3suI/AAAAAAAACmo/R14gB2Na_Rs/s1600/Mo4Ux.png" imageanchor="1" style="margin-left: 1em; margin-right: 1em;"><img border="0" src="http://1.bp.blogspot.com/-WOGj-NuXTXs/UqMxPxu3suI/AAAAAAAACmo/R14gB2Na_Rs/s320/Mo4Ux.png" height="160" width="320" /></a></div><blockquote class="tr_bq"><b><i><span style="color: purple;">Bom galera pra quem tem uma placa de vídeo que não funcionou bem no <span style="font-size: large;"><span style="color: blue;">Debian Wheezy</span></span>, provavelmente o drive genérico ainda está em desenvolvimento e o Debian não instalará sem sua autorização o drive proprietário, então, você precisa instalar o drive não livre pra rodar direitinho a placa, basta:</span></i></b></blockquote><b></p><p>1- Adicionar o repositório <span style="color: blue;">nonfree</span> na sua <span style="color: blue;">sources.list</span>: </p><p></b></p><p><div class="adp"><b># vi /etc/apt/sources.list </b></div><b></p><p></p><p>1.1- Insira na ultima linha, mas verifique antes se essa linha já existe no seu repositório, se não, insira: </p><p></b></p><p>{% highlight bash %}<b>deb http://ftp.debian.org/debian/ wheezy-updates main contrib non-free </b>{% endhighlight %}<b></p><p></p><p>2-Atualizar sua lista: </p><p></b></p><p><div class="adp"><b># apt-get update </b></div><b></p><p></p><p>3- Instalar os firmwares não livre, seram automáticos: </p><p><div class="adp"># apt-get install firmware-linux-nonfree </div></p><p></p><p>Reboot a máquina, e pronto!  Para qualquer problema verifique {% highlight bash %}$ cat /var/log/Xorg.log{% endhighlight %} e posta aqui o comentário da linha [EE] referente a placa.</b>
+<div class="separator" style="clear: both; text-align: center;"><a href="http://1.bp.blogspot.com/-WOGj-NuXTXs/UqMxPxu3suI/AAAAAAAACmo/R14gB2Na_Rs/s1600/Mo4Ux.png" imageanchor="1" style="margin-left: 1em; margin-right: 1em;"><img border="0" src="http://1.bp.blogspot.com/-WOGj-NuXTXs/UqMxPxu3suI/AAAAAAAACmo/R14gB2Na_Rs/s320/Mo4Ux.png" height="160" width="320" /></a></div><blockquote class="tr_bq"><b><i><span style="color: purple;">Bom galera pra quem tem uma placa de vídeo que não funcionou bem no <span style="font-size: large;"><span style="color: blue;">Debian Wheezy</span></span>, provavelmente o drive genérico ainda está em desenvolvimento e o Debian não instalará sem sua autorização o drive proprietário, então, você precisa instalar o drive não livre pra rodar direitinho a placa, basta:</span></i></b></blockquote><b>
+1- Adicionar o repositório <span style="color: blue;">nonfree</span> na sua <span style="color: blue;">sources.list</span>: 
+</b>
+<div class="adp"><b># vi /etc/apt/sources.list </b></div><b>
+
+1.1- Insira na ultima linha, mas verifique antes se essa linha já existe no seu repositório, se não, insira: 
+</b>
+{% highlight bash %}
+deb http://ftp.debian.org/debian/ wheezy-updates main contrib non-free 
+{% endhighlight %}
+
+2-Atualizar sua lista: 
+
+# apt-get update 
+
+3- Instalar os firmwares não livre, seram automáticos: 
+# apt-get install firmware-linux-nonfree 
+
+Reboot a máquina, e pronto!  Para qualquer problema verifique {% highlight bash %}
+$ cat /var/log/Xorg.log
+{% endhighlight %} e posta aqui o comentário da linha [EE] referente a placa.
 
 </p>

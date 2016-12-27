@@ -15,6 +15,54 @@ introduction: Classe PHP para calcular a diferença entre Horas.
 ---
 
 <p>
-<b>Segue o código abaixo comentado para causar o entendimento</b></p><p></p><p>{% highlight bash %}</p><p>&lt;?php</p><p>&nbsp;&nbsp; class Horas {</p><p></p><p>&nbsp;&nbsp;&nbsp;&nbsp; public $resultado = '';</p><p></p><p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; function calcular($horaA,$horaB){</p><p></p><p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; echo "Hora A = $horaA hs e Hora B = $horaB hs&lt;br /&gt;";</p><p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; echo "Qual o valor de x em horas?(x=A - B).&lt;br /&gt;";</p><p></p><p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; /*primeiro multiplica: hora por 3600, minutos por 60 e ambos vc soma ao segundos na</p><p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; hora inicial(A) e final(B) para transformá-las em segundos*/</p><p></p><p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; $horaA = (2 * 3600) + (46 * 60) + 27;</p><p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; $horaB = (17 * 3600) + (32 * 60) + 59;</p><p></p><p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; /*o resultado em segundos de ambas vc subtrai a hora final(B) pela hora incial(A)*/</p><p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; $reshora = $horaB - $horaA;</p><p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; echo $reshora.'&lt;br /&gt;';</p><p></p><p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; /*usa-se a função floor() para arrendodá-las para menos(Ex.: 9.9 &gt;&gt; 9) depois,</p><p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; [dividi o resultado por 3600para obter a HORA],</p><p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; [faz o módulo de 60 para o resultado dividido por 60 para obter os MINUTOS]</p><p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;  [e depois o módulo do resultado por 60 para obter os SEGUNDOS]*/</p><p></p><p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; $HORA = floor($reshora / 3600);</p><p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; $MINU = floor(($reshora / 60) % 60);</p><p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; $SEGU  = floor($reshora % 60);</p><p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; $this-&gt;resultado = " O Resultado eh $HORA:$MINU:$SEGU hs&lt;br /&gt;";</p><p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; return $this-&gt;resultado;</p><p>&nbsp;&nbsp;&nbsp;&nbsp; }//fim da função calcular</p><p>&nbsp;&nbsp; }//fim da class Horas</p><p></p><p>&nbsp;&nbsp; $horaA = '2:46:27';</p><p>&nbsp;&nbsp; $horaB = '17:32:59';</p><p>&nbsp;&nbsp; $res = new Horas();</p><p>&nbsp;&nbsp; $res = $res-&gt;calcular($horaA,$horaB);</p><p>&nbsp;&nbsp; print_r($res);</p><p>?&gt;</p><p>{% endhighlight %}
+<p>Segue o código abaixo comentado para causar o entendimento</p>
+
+{% highlight bash %}
+
+<?php
+ class Horas {
+
+ public $resultado = '';
+
+ function calcular($horaA,$horaB){
+
+ echo "Hora A = $horaA hs e Hora B = $horaB hs
+";
+ echo "Qual o valor de x em horas?(x=A - B).
+";
+
+ /*primeiro multiplica: hora por 3600, minutos por 60 e ambos vc soma ao segundos na
+ hora inicial(A) e final(B) para transformá-las em segundos*/
+
+ $horaA = (2 * 3600) + (46 * 60) + 27;
+ $horaB = (17 * 3600) + (32 * 60) + 59;
+
+ /*o resultado em segundos de ambas vc subtrai a hora final(B) pela hora incial(A)*/
+ $reshora = $horaB - $horaA;
+ echo $reshora.'
+';
+
+ /*usa-se a função floor() para arrendodá-las para menos(Ex.: 9.9 >> 9) depois,
+ [dividi o resultado por 3600para obter a HORA],
+ [faz o módulo de 60 para o resultado dividido por 60 para obter os MINUTOS]
+  [e depois o módulo do resultado por 60 para obter os SEGUNDOS]*/
+
+ $HORA = floor($reshora / 3600);
+ $MINU = floor(($reshora / 60) % 60);
+ $SEGU  = floor($reshora % 60);
+ $this->resultado = " O Resultado eh $HORA:$MINU:$SEGU hs
+";
+ return $this->resultado;
+ }//fim da função calcular
+ }//fim da class Horas
+
+ $horaA = '2:46:27';
+ $horaB = '17:32:59';
+ $res = new Horas();
+ $res = $res->calcular($horaA,$horaB);
+ print_r($res);
+?>
+
+{% endhighlight %}
 
 </p>

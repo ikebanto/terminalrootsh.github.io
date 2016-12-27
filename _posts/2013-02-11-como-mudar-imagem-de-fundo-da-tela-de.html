@@ -15,6 +15,21 @@ introduction: Como mudar a imagem de fundo da tela de login(GDM3) do Debian 6
 ---
 
 <p>
-<div class="separator" style="clear: both; text-align: center;"><a href="http://2.bp.blogspot.com/-dN9W1wau50s/URmQIruECPI/AAAAAAAAA-k/HpNCU0yfwl8/s1600/spacemachine-gdm-preview.png" imageanchor="1" style="margin-left: 1em; margin-right: 1em;"><img border="0" height="234" src="http://2.bp.blogspot.com/-dN9W1wau50s/URmQIruECPI/AAAAAAAAA-k/HpNCU0yfwl8/s320/spacemachine-gdm-preview.png" width="320" /></a></div></p><p><b></p><p>1- Abra o arquivo </b><i><span style="color: blue;"><b>/usr/share/gdm/greeter-config/20_debian</b></span></i><b></p><p><div class="adp"># vi /usr/share/gdm/greeter-config/20_debian</div></p><p></p><p>2- Descomente(Tire o sinal de sustenido "#" da frente) das linhas que contém:</p><p><div class="adp"><span style="font-size: x-small;"><span style="font-size: small;">/desktop/gnome/background/picture_filename /usr/share/images/desktop-base/login-background.svg</p><p>/desktop/gnome/interface/gtk_theme  Clearlooks</span></span></div></p><p></p><p>3-Na linha <i>"<span style="color: blue;">/desktop/gnome/background/picture_filename /usr/share/images/desktop-base/login-background.svg</span>"</i> já descomentada, informe o caminho da sua imagem:</p><p><div class="adp">/desktop/gnome/background/picture_filename /usr/share/images/SUA_IMAGEM.png </div></p><p></p><p>4-Pra deixar tudo dentro dos conformes, rode o comando abaixo:</p><p><div class="adp"># dpkg-reconfigure gdm3</div></p><p></p><p>Encerre a sessão e veja se tudo deu certo!</b>
+<div class="separator" style="clear: both; text-align: center;"><a href="http://2.bp.blogspot.com/-dN9W1wau50s/URmQIruECPI/AAAAAAAAA-k/HpNCU0yfwl8/s1600/spacemachine-gdm-preview.png" imageanchor="1" style="margin-left: 1em; margin-right: 1em;"><img border="0" height="234" src="http://2.bp.blogspot.com/-dN9W1wau50s/URmQIruECPI/AAAAAAAAA-k/HpNCU0yfwl8/s320/spacemachine-gdm-preview.png" width="320" /></a></div>
+<b>
+1- Abra o arquivo </b><i><span style="color: blue;"><b>/usr/share/gdm/greeter-config/20_debian</b></span></i><b>
+<div class="adp"># vi /usr/share/gdm/greeter-config/20_debian</div>
+
+2- Descomente(Tire o sinal de sustenido "#" da frente) das linhas que contém:
+<div class="adp"><span style="font-size: x-small;"><span style="font-size: small;">/desktop/gnome/background/picture_filename /usr/share/images/desktop-base/login-background.svg
+/desktop/gnome/interface/gtk_theme  Clearlooks</span></span></div>
+
+3-Na linha <i>"<span style="color: blue;">/desktop/gnome/background/picture_filename /usr/share/images/desktop-base/login-background.svg</span>"</i> já descomentada, informe o caminho da sua imagem:
+<div class="adp">/desktop/gnome/background/picture_filename /usr/share/images/SUA_IMAGEM.png </div>
+
+4-Pra deixar tudo dentro dos conformes, rode o comando abaixo:
+<div class="adp"># dpkg-reconfigure gdm3</div>
+
+Encerre a sessão e veja se tudo deu certo!</b>
 
 </p>

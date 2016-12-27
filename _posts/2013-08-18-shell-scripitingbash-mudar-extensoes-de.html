@@ -15,6 +15,42 @@ introduction: 'Shell Scripiting(Bash): Mudar extensões de múltiplos arquivos'
 ---
 
 <p>
-<div class="separator" style="clear: both; text-align: center;"><a href="http://3.bp.blogspot.com/-woP3euaZsNI/UhF1KXTYUQI/AAAAAAAACXg/XMnUNB9Lx3g/s1600/shell+script.png" imageanchor="1" style="clear: left; float: left; margin-bottom: 1em; margin-right: 1em;"><img border="0" src="http://3.bp.blogspot.com/-woP3euaZsNI/UhF1KXTYUQI/AAAAAAAACXg/XMnUNB9Lx3g/s320/shell+script.png" /></a></div></p><p></p><p><blockquote class="tr_bq"><b>&nbsp;&nbsp;&nbsp; Olá galera, eu tentei usar o comando rename, mas tive alguns problemas.Esse comando consiste em renomear as extensões nos arquivos, não testei com o exemplo abaixo, mas em outros formatos, não obtive êxito, exemplo do rename:</b></blockquote><div class="adp"><b>$ rename .htm .html *.htm</b></div><b></p><p></p><p><i>O comando acima irá substituir todos os arquivos terminados em .htm por .html.</i></p><p></p><p>&nbsp;&nbsp;&nbsp; <u><span style="color: purple;">Como não obtive êxito com o comando rename, decidi eu mesmo criar um script que fizesse tal mudança na extensão com segurança, eis então o script como ficou:</span></u></p><p>&nbsp;&nbsp;&nbsp; </p><p>&nbsp;&nbsp;&nbsp; <span style="color: blue;"><i>chgtxt.sh</i></span> (PasteBin)</p><p><script src="http://pastebin.com/embed_js.php?i=8CwJ76YR"></script></p><p>&nbsp;&nbsp;&nbsp; </p><p>&nbsp;&nbsp;&nbsp; <span style="color: blue;"><i>chgtxt.sh</i></span> (CodeBlog)</p><p>&nbsp;&nbsp;&nbsp; </p><p>&nbsp;&nbsp;&nbsp; </b></p><p><div class="adp"><b>#!/bin/bash</p><p># ----------------------------------------------------------------------------</p><p># Shell Scripiting(Bash): Mudar extensões de múltiplos arquivos</p><p># Altera o formato de várias extensões de uma só vez</p><p># Uso: ./chgext.sh [formato-antigo] [formato-novo]</p><p></p><p># Ex.:(alterar todos as extensões .jpeg para .jpg)</p><p>#</p><p>#./chgext.sh jpeg jpg</p><p>#</p><p># Autor: Marcos da Boa Morte , www.terminalroot.com.br</p><p># Desde: Dom 18 Ago 2013 22:19:26 BRT </p><p># Versão: 1</p><p># Licença: GPL</p><p># ----------------------------------------------------------------------------</p><p>for file in *.$1; do</p><p>&nbsp;&nbsp;&nbsp; mv "$file" "${file/$1/$2}"</p><p>done</b></div><b></p><p>&nbsp;&nbsp;&nbsp; </p><p>&nbsp;&nbsp;&nbsp; </p><p>Documentação do comando rename:</p><p></p><p><a href="http://linuxcommand.org/man_pages/rename1.html" target="_blank">http://linuxcommand.org/man_pages/rename1.html</a></b>
+<div class="separator" style="clear: both; text-align: center;"><a href="http://3.bp.blogspot.com/-woP3euaZsNI/UhF1KXTYUQI/AAAAAAAACXg/XMnUNB9Lx3g/s1600/shell+script.png" imageanchor="1" style="clear: left; float: left; margin-bottom: 1em; margin-right: 1em;"><img border="0" src="http://3.bp.blogspot.com/-woP3euaZsNI/UhF1KXTYUQI/AAAAAAAACXg/XMnUNB9Lx3g/s320/shell+script.png" /></a></div>
+
+<blockquote class="tr_bq"><b> Olá galera, eu tentei usar o comando rename, mas tive alguns problemas.Esse comando consiste em renomear as extensões nos arquivos, não testei com o exemplo abaixo, mas em outros formatos, não obtive êxito, exemplo do rename:</b></blockquote><div class="adp"><b>$ rename .htm .html *.htm</b></div><b>
+
+<i>O comando acima irá substituir todos os arquivos terminados em .htm por .html.</i>
+
+ <u><span style="color: purple;">Como não obtive êxito com o comando rename, decidi eu mesmo criar um script que fizesse tal mudança na extensão com segurança, eis então o script como ficou:</span></u>
+ 
+ <span style="color: blue;"><i>chgtxt.sh</i></span> (PasteBin)
+<iframe src="http://pastebin.com/raw/8CwJ76YR" style="border:none;width:100%;"></iframe>
+ 
+ <span style="color: blue;"><i>chgtxt.sh</i></span> (CodeBlog)
+ 
+ </b>
+<div class="adp"><b>#!/bin/bash
+# ----------------------------------------------------------------------------
+# Shell Scripiting(Bash): Mudar extensões de múltiplos arquivos
+# Altera o formato de várias extensões de uma só vez
+# Uso: ./chgext.sh [formato-antigo] [formato-novo]
+
+# Ex.:(alterar todos as extensões .jpeg para .jpg)
+#
+#./chgext.sh jpeg jpg
+#
+# Autor: Marcos da Boa Morte , www.terminalroot.com.br
+# Desde: Dom 18 Ago 2013 22:19:26 BRT 
+# Versão: 1
+# Licença: GPL
+# ----------------------------------------------------------------------------
+for file in *.$1; do
+ mv "$file" "${file/$1/$2}"
+done</b></div><b>
+ 
+ 
+Documentação do comando rename:
+
+<a href="http://linuxcommand.org/man_pages/rename1.html" target="_blank">http://linuxcommand.org/man_pages/rename1.html</a></b>
 
 </p>

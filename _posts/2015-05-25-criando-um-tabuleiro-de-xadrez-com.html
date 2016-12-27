@@ -15,6 +15,51 @@ introduction: Criando um tabuleiro de xadrez com Shell Script
 ---
 
 <p>
-<div class="separator" style="clear: both; text-align: center;"><a href="http://4.bp.blogspot.com/-HnqMwN3-jJo/VWUcJiFhphI/AAAAAAAABTk/lgZAqv2NFPw/s1600/chess-shell.png" imageanchor="1" style="margin-left: 1em; margin-right: 1em;"><img border="0" src="http://4.bp.blogspot.com/-HnqMwN3-jJo/VWUcJiFhphI/AAAAAAAABTk/lgZAqv2NFPw/s320/chess-shell.png" /></a></div></p><p></p><p></p><p><strong><span class="" id="result_box" lang="pt"><span class="hps">Programação</span> <span class="hps">Shell</span> <span class="hps">Script</span> <span class="hps">de</span> <span class="hps">muita diversão.</span> <span class="hps">O script</span> <span class="hps">a seguir imprime</span> <span class="hps">um tabuleiro de xadrez</span> <span class="hps">com 8</span> <span class="hps">× 8</span> <span class="hps">quadrados</span> <span class="hps">intercalação</span> <span class="hps">preto e branco.</span> <span class="hps">Usando</span> <span class="hps">simples</span> <span class="hps">loops de</span> <span class="hps atn">O (</span>n ^ 2) <span class="hps">e</span> <span class="hps">uma matemática simples</span> <span class="hps">produz a</span> <span class="hps">impressão de</span> <span class="hps">tabuleiro de xadrez</span><span class="">.</span></span></strong></p><p> <em><strong>Código:</strong></em></p><p>{% highlight bash %}#!/bin/sh</p><p># Criando um tabuleiro de xadrez com Shell Script</p><p># http://www.terminalroot.com.br/ </p><p>for i in $(seq 1 8)</p><p>do</p><p>&nbsp;&nbsp;&nbsp; for j in $(seq 1 8)</p><p>&nbsp;&nbsp;&nbsp; do</p><p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; S=$(((i+j)%2))</p><p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; if [ $S -eq 0 ]</p><p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; then</p><p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; echo -n "33[47m&nbsp;&nbsp; " # white</p><p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; else</p><p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; echo -n "33[40m&nbsp;&nbsp; " # black</p><p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; fi</p><p>&nbsp;&nbsp;&nbsp; done</p><p>&nbsp;&nbsp;&nbsp; echo -n "33[40m" # black, ensure it exists normally</p><p>&nbsp;&nbsp;&nbsp; echo "" # new line</p><p>done{% endhighlight %}</p><p></p><p> <div class="codetr">#!/bin/sh</p><p># Criando um tabuleiro de xadrez com Shell Script</p><p># http://www.terminalroot.com.br/ </p><p>for i in $(seq 1 8)</p><p>do</p><p>&nbsp;&nbsp;&nbsp; for j in $(seq 1 8)</p><p>&nbsp;&nbsp;&nbsp; do</p><p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; S=$(((i+j)%2))</p><p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; if [ $S -eq 0 ]</p><p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; then</p><p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; echo -n “33[47m&nbsp;&nbsp; ” # white</p><p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; else</p><p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; echo -n “33[40m&nbsp;&nbsp; ” # black</p><p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; fi</p><p>&nbsp;&nbsp;&nbsp; done</p><p>&nbsp;&nbsp;&nbsp; echo -n “33[40m” # black, ensure it exists normally</p><p>&nbsp;&nbsp;&nbsp; echo “” # new line</p><p>done</div></p><p> <h6><em>Via: https://helloacm.com/</em></h6></p><p>
+<div class="separator" style="clear: both; text-align: center;"><a href="http://4.bp.blogspot.com/-HnqMwN3-jJo/VWUcJiFhphI/AAAAAAAABTk/lgZAqv2NFPw/s1600/chess-shell.png" imageanchor="1" style="margin-left: 1em; margin-right: 1em;"><img border="0" src="http://4.bp.blogspot.com/-HnqMwN3-jJo/VWUcJiFhphI/AAAAAAAABTk/lgZAqv2NFPw/s320/chess-shell.png" /></a></div>
+
+
+<strong><span class="" id="result_box" lang="pt"><span class="hps">Programação</span> <span class="hps">Shell</span> <span class="hps">Script</span> <span class="hps">de</span> <span class="hps">muita diversão.</span> <span class="hps">O script</span> <span class="hps">a seguir imprime</span> <span class="hps">um tabuleiro de xadrez</span> <span class="hps">com 8</span> <span class="hps">× 8</span> <span class="hps">quadrados</span> <span class="hps">intercalação</span> <span class="hps">preto e branco.</span> <span class="hps">Usando</span> <span class="hps">simples</span> <span class="hps">loops de</span> <span class="hps atn">O (</span>n ^ 2) <span class="hps">e</span> <span class="hps">uma matemática simples</span> <span class="hps">produz a</span> <span class="hps">impressão de</span> <span class="hps">tabuleiro de xadrez</span><span class="">.</span></span></strong>
+ <em><strong>Código:</strong></em>
+{% highlight bash %}
+#!/bin/sh
+# Criando um tabuleiro de xadrez com Shell Script
+# http://www.terminalroot.com.br/ 
+for i in $(seq 1 8)
+do
+ for j in $(seq 1 8)
+ do
+ S=$(((i+j)%2))
+ if [ $S -eq 0 ]
+ then
+ echo -n "33[47m " # white
+ else
+ echo -n "33[40m " # black
+ fi
+ done
+ echo -n "33[40m" # black, ensure it exists normally
+ echo "" # new line
+done
+{% endhighlight %}
+
+ <div class="codetr">#!/bin/sh
+# Criando um tabuleiro de xadrez com Shell Script
+# http://www.terminalroot.com.br/ 
+for i in $(seq 1 8)
+do
+ for j in $(seq 1 8)
+ do
+ S=$(((i+j)%2))
+ if [ $S -eq 0 ]
+ then
+ echo -n “33[47m ” # white
+ else
+ echo -n “33[40m ” # black
+ fi
+ done
+ echo -n “33[40m” # black, ensure it exists normally
+ echo “” # new line
+done</div>
+ <h6><em>Via: https://helloacm.com/</em></h6>
+
 
 </p>

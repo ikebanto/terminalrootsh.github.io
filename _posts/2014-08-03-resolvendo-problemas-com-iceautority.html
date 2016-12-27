@@ -17,6 +17,30 @@ introduction: Resolvendo problemas com .ICEautority
 ---
 
 <p>
-<b><div class="separator" style="clear: both; text-align: center;"><a href="http://1.bp.blogspot.com/-7nOHOBsAb_4/U9218gZ8TSI/AAAAAAAAAdQ/P6PkIZbw0QY/s1600/ICEautority.jpg" imageanchor="1" style="margin-left: 1em; margin-right: 1em;"><img border="0" src="http://1.bp.blogspot.com/-7nOHOBsAb_4/U9218gZ8TSI/AAAAAAAAAdQ/P6PkIZbw0QY/s1600/ICEautority.jpg" height="320" width="301" /></a></div>Caso vc tenha problemas ao iniciar o sistema com a mensagem de problema com o ICEauthority</p><p></p><p>1 - use um cd de boot, ou o modo recovery ou use um outro tty</p><p>2 - entre na pasta raíz do usuário como root</p><p></p><p><div class="adp"></p><p>$ sudo</p><p># cd /home/usuário/</p><p></div></p><p></p><p>3 - Mude as permissões do arquivo .ICEauthority</p><p></p><p><div class="adp"></p><p># chown usuário:usuário /home/usuário/.ICEauthority</p><p># chmod 644 /home/usuário/.ICEauthority</p><p></div></p><p></p><p>Se vc montou não esqueça de desmontar para evitar problemas no seu HD, depois reinicie o sistema</p><p></p><p><div class="adp"></p><p># reboot</p><p></div></p><p></p><p>Pronto!</p><p></b>
+<b><div class="separator" style="clear: both; text-align: center;"><a href="http://1.bp.blogspot.com/-7nOHOBsAb_4/U9218gZ8TSI/AAAAAAAAAdQ/P6PkIZbw0QY/s1600/ICEautority.jpg" imageanchor="1" style="margin-left: 1em; margin-right: 1em;"><img border="0" src="http://1.bp.blogspot.com/-7nOHOBsAb_4/U9218gZ8TSI/AAAAAAAAAdQ/P6PkIZbw0QY/s1600/ICEautority.jpg" height="320" width="301" /></a></div>Caso vc tenha problemas ao iniciar o sistema com a mensagem de problema com o ICEauthority
+
+1 - use um cd de boot, ou o modo recovery ou use um outro tty
+2 - entre na pasta raíz do usuário como root
+
+<div class="adp">
+$ sudo
+# cd /home/usuário/
+</div>
+
+3 - Mude as permissões do arquivo .ICEauthority
+
+<div class="adp">
+# chown usuário:usuário /home/usuário/.ICEauthority
+# chmod 644 /home/usuário/.ICEauthority
+</div>
+
+Se vc montou não esqueça de desmontar para evitar problemas no seu HD, depois reinicie o sistema
+
+<div class="adp">
+# reboot
+</div>
+
+Pronto!
+</b>
 
 </p>

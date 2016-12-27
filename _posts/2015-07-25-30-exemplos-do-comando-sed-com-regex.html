@@ -15,6 +15,324 @@ introduction: 30 exemplos do comando sed ( com regex )
 ---
 
 <p>
-<div class="separator" style="clear: both; text-align: center;"><a href="http://3.bp.blogspot.com/-zeuWvpMP3uY/VbPMlEy4loI/AAAAAAAABho/BCGNreo0ceA/s1600/sed-regex.jpg" imageanchor="1" style="margin-left: 1em; margin-right: 1em;"><img border="0" src="http://3.bp.blogspot.com/-zeuWvpMP3uY/VbPMlEy4loI/AAAAAAAABho/BCGNreo0ceA/s1600/sed-regex.jpg" /></a></div></p><p></p><p><h3><span style="color: #444444;"><b>30 EXEMPLOS DO COMANDO SED (REGEX)</b></span></h3><b></p><p></b></p><p><h4><b>&nbsp;O Sed é um editor de textos não interativo.Vem do inglês "Stream EDitor", ou seja, editor de fluxos (de texto). O Sed da GNU, atualmente é o utilizado pela maioria das distribuições de Linux e é o que tem mais funcionalidades novas, mas se por algum caso não tenha:</b></h4><b></p><p></b></p><p><blockquote class="tr_bq"><span style="font-size: x-small;"><b>&nbsp;<u>Download do sed</u>: <span style="color: blue;"><a href="ftp://ftp.unicamp.br/pub/gnu/sed/" target="_blank">ftp://ftp.unicamp.br/pub/gnu/sed/</a></span></b></p><p><b>&nbsp;<u>Instalação via gerenciador de pacotes</u>: <span style="color: red;">[gerenciador] install sed</span></b></p><p><b>&nbsp;<u>Exemplo de instalação no Debian GNU/Linux</u>: </b><i>apt-get install sed</i></span></blockquote><b></p><p></b></p><p><ul><li><span style="color: blue;"><b><i>é case sentive</i></b></span></li><li><span style="color: blue;"><b><i>-i altera o arquivo</i></b></span></li><li><span style="color: blue;"><b><i>-e imprime na tela sem alterar o arquivo</i></b></span></li><li><span style="color: blue;"><b><i>-n faz a supressão, mostra só o resutado do comando</i></b></span></li><li><span style="color: blue;"><b><i>s substitui um trecho de texto por outro</i></b></span></li><li><span style="color: blue;"><b><i>! inverte a lógica do comando</i></b></span></li><li><span style="color: blue;"><b><i>; separador de comandos</i></b></span></li><li><span style="color: blue;"><b><i>| separador de strings</i></b></span></li><li><span style="color: blue;"><b><i>d no final deleta</i></b></span></li><li><span style="color: blue;"><b><i>p no final imprime</i></b></span></li><li><span style="color: blue;"><b><i>g no final (como se usa o d e p) altera todas as ocorrências</i></b></span></li><li><span style="color: blue;"><b><i>q sai do sed , não continua o comando</i></b></span></li></ul><b></p><p><span style="font-size: large;">Lista completa das classes de caracteres do GNU sed:</span></b></p><p><blockquote class="tr_bq">[[:alnum:]]&nbsp;&nbsp;&nbsp; Alfabéticos e númericos [a-z A-Z 0-9]</p><p>[[:alpha:]]&nbsp;&nbsp;&nbsp;&nbsp; Alfabéticos [a-z A-Z]</p><p>[[:blank:]]&nbsp;&nbsp;&nbsp;&nbsp; Caractere em branco, espaço ou tab [ \t]</p><p>[[:cntrl:]]&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Caracteres de controle [\x00-\x1F\x7F]</p><p>[[:digit:]]&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Números [0-9]</p><p>[[:graph:]]&nbsp;&nbsp;&nbsp; Qualquer caractere visível(ou seja, exceto em branco) [\x20-\x7E]</p><p>[[:lower:]]&nbsp;&nbsp;&nbsp;&nbsp; Letras minúsculas [a-z]</p><p>[[:upper:]]&nbsp;&nbsp;&nbsp; Letras maiúsculas [A-Z]</p><p>[[:print:]]&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Caracteres visíveis (ou seja, exceto os de controle) [\x20-\x7E]</p><p>[[:punct:]]&nbsp;&nbsp;&nbsp;&nbsp; Pontuação [-!"#$%&amp;'()*+,./:;&lt;=&gt;?@[\\\]_`{|}~].</p><p>[[:space:]]&nbsp;&nbsp;&nbsp;&nbsp; Espaço em branco [ \t\r\n\v\f]</p><p>[[:xdigit:]]&nbsp;&nbsp;&nbsp;&nbsp; Número hexadecimais [0-9 a-f A-F]</blockquote><b></p><p></p><p></p><p><span style="font-size: x-large;">1 - Troca todas as palavras em um arquivo por outra</span></p><p></p><p>{% highlight bash %}sed -i 's/palavra/outra/' arquivo.txt{% endhighlight %}</p><p></p><p><span style="font-size: x-large;">2 - Imprime só a nona linha</span></p><p></p><p>{% highlight bash %}sed -n '9p' arquivo.txt{% endhighlight %}</p><p></p><p><span style="font-size: x-large;">3 - Imprime da sexta linha até a nona linha</span></p><p></p><p>{% highlight bash %}sed -n '6,9p' arquivo.txt{% endhighlight %}</p><p></p><p><span style="font-size: x-large;">4 - Deleta todas as lihas que contém a palavra string no arquivo</span></p><p></p><p>{% highlight bash %}sed -i '/dmx/d' arquivo.txt{% endhighlight %}</p><p></p><p><span style="font-size: x-large;">5 - Coloca uma palavra no INÍCIO de cada linha</span></p><p></p><p>{% highlight bash %}sed 's/^/palavra/' arquivo.txt{% endhighlight %}</p><p></p><p><span style="font-size: x-large;">6 - Coloca uma palavra no final de cada linha</span></p><p></p><p>{% highlight bash %}sed 's/$/palavra/' arquivo.txt{% endhighlight %}</p><p></p><p><span style="font-size: x-large;">7 - Imprime só as linhas que COMEÇAM com a string 'http'</span></p><p></p><p>{% highlight bash %}sed -n '/^http/p' arquivo.txt{% endhighlight %}</p><p></p><p><span style="font-size: x-large;">8 - Deleta só as linhas que COMEÇAM com a string 'http'</span></p><p></p><p>{% highlight bash %}sed -n '/^http/d' arquivo.txt{% endhighlight %}</p><p></p><p><span style="font-size: x-large;">9 - Troca TODAS ocorrências da palavra "marcos", "eric", "camila" pela palavra "pinguim"</span></p><p></p><p>{% highlight bash %}sed 's/marcos\|eric\|camila/pinguim/g' arquivo.txt{% endhighlight %}</p><p></p><p><span style="font-size: x-large;">10 -&nbsp; Troca tudo que estiver ENTRE as palavras "Marcos" e "Eric" pela palavra "eles", exemplo, o texto é:</span></p><p></p><p><span style="color: #444444;"><i><span style="font-size: large;">"No sábado Marcos saiu de pra brincar de bicicleta com o Eric, mas não ficaram até tarde."</span></i></span></p><p></p><p><span style="font-size: x-large;">e ficará assim:</span></p><p></p><p><span style="font-size: large;"><span style="color: #444444;"><i>"No sábado eles, mas não ficaram até tarde."</i></span></span></p><p></p><p>{% highlight bash %}sed 's/Marcos.*Eric/eles/' arquivo.txt{% endhighlight %}</p><p></p><p><span style="font-size: x-large;">11 - Deleta linha em branco e altera o arquivo</span></p><p></p><p>{% highlight bash %}sed -i '/^$/d' arquivo.txt{% endhighlight %}</p><p></p><p><span style="font-size: x-large;">12 - Substitui "foo" por "bar" somente as linhas que contém "plop"</span></p><p></p><p>{% highlight bash %}sed '/plop/ s/foo/bar/g' arquivo.txt{% endhighlight %}</p><p></p><p></p><p><span style="font-size: x-large;">13 - Substitui "foo" por "bar" exceto as linhas que contém "plop"</span></p><p></p><p>{% highlight bash %}sed '/plop/! s/foo/bar/g' arquivo.txt{% endhighlight %}</p><p></p><p><span style="font-size: x-large;">14 - Insere da Linha 2 a linha 7 o "#" no início de cada linha</span></p><p></p><p>{% highlight bash %}sed '2,7s/^/#/' arquivo.txt{% endhighlight %}</p><p></p><p><span style="font-size: x-large;">15 - Insere a palavra 'NEW' no início de cada linha, da linha 21 até a linha 28</span></p><p></p><p>{% highlight bash %}sed -i '21,28s/^/NEW/' arquivo.txt{% endhighlight %}</p><p></p><p><span style="font-size: x-large;">16 - Troca tudo entre as tags "&lt;p&gt;" e "&lt;/p&gt;" pela palavra "CODIGO" , exemplo de código html:</span></p><p></p><p><span style="font-size: large;"><i>É assim:</i></span></p><p></p><p><span style="font-size: x-small;"><span style="color: #444444;">&lt;div id="header"&gt;</p><p>&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&lt;p&gt;São os homens os produtores das suas representações, das suas ideias, etc.; mas os homens reais agentes, tais como são condicionados por um desenvolvimento determinado das suas forças produtivas e da...&lt;/p&gt;</p><p>&lt;/div&gt;&lt;!--HEADER--&gt;</span></span></p><p></p><p><span style="font-size: large;">Depois fica assim:</span></p><p></p><p><span style="font-size: x-small;"><span style="color: #444444;">&lt;div id="header"&gt;</p><p>&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;CODIGO</p><p>&lt;/div&gt;&lt;!--HEADER--&gt;</span></span></p><p></p><p>{% highlight bash %}sed 's/&lt;p&gt;.*&lt;\/p&gt;/CODIGO/' arquivo.txt{% endhighlight %}</p><p></p><p><span style="font-size: x-large;">17 - Imprime somente a primeira ocorrência da linha com determinada string</span></p><p></p><p>{% highlight bash %}sed -n '/dia/{p;q;}' arquivo.txt{% endhighlight %}</p><p></p><p><span style="font-size: x-large;">18 - Inclue texto no final da linha 9</span></p><p></p><p>{% highlight bash %}sed '9s/$/final da linha/' arquivo.txt{% endhighlight %}</p><p></p><p><span style="font-size: x-large;">19 - Coloca todas as linhas em uma só</span></p><p></p><p>{% highlight bash %}sed ':a;$!N;s/\n//;ta;' arquivo.txt{% endhighlight %}</p><p></p><p><span style="font-size: x-large;">20 - Substitui a palavra "BELEZA" por "SIM" somente entre determinadas linhas</span></p><p></p><p>{% highlight bash %}sed '3,6s/BELEZA/SIM/' arquivo.txt{% endhighlight %}</p><p></p><p><span style="font-size: x-large;">21 - Apaga o que está entre a palavra "falou" e "segundo" ( delimitadores )</span></p><p></p><p>{% highlight bash %}sed '/segundo/{/falou/{s/segundo.*falou//;t};:a;/falou/!{N;s/\n//;ta;};s/segundo.*falou/\n/;}' arquivo.txt{% endhighlight %}</p><p></p><p><span style="font-size: x-large;">22 - Retira comandos HTML (tudo entre &lt; e &gt;)</span></p><p></p><p>{% highlight bash %}sed 's/&lt;[^&gt;]*&gt;//g' arquivo.txt{% endhighlight %}</p><p></p><p><span style="font-size: x-large;">23 - Apaga o 1o caracter da frase</span></p><p></p><p>{% highlight bash %}sed 's/.//' arquivo.txt{% endhighlight %}</p><p></p><p><span style="font-size: x-large;">24 - Apaga o 4o caractere da frase</span></p><p></p><p>{% highlight bash %}sed 's/.//4' arquivo.txt{% endhighlight %}</p><p></p><p></p><p><span style="font-size: x-large;">25 - Apaga os 4 primeiros caracteres</span></p><p></p><p>{% highlight bash %}sed 's/.\{4\}//' arquivo.txt{% endhighlight %}&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </p><p></p><p></p><p><span style="font-size: x-large;">26 - Apaga no mínimo 4 caracteres</span></p><p>{% highlight bash %}sed 's/.\{4,\}//' arquivo.txt{% endhighlight %}</p><p></p><p></p><p><span style="font-size: x-large;">27 - Apaga de 2 a 4 caracteres (o máx. que tiver)</span></p><p></p><p>{% highlight bash %}sed 's/.\{2,4\}//' arquivo.txt{% endhighlight %}</p><p></p><p><span style="font-size: x-large;">28 - Exemplos de intervalo</span></p><p>{% highlight bash %}</p><p>echo "aáeéiíoóuú" | sed "s/[a-u]//g"</p><p>áéíóú{% endhighlight %}</p><p></p><p>{% highlight bash %}</p><p>echo "aáeéiíoóuú" | sed "s/[á-ú]//g"</p><p>aeiou{% endhighlight %}</p><p></p><p></p><p></p><p><span style="font-size: x-large;">29 - Transforma texto (URL) em tags HTML de links.</span></p><p></p><p><span style="color: red;"><span style="font-size: large;"><i>Era :</i></span></span> http://www.com</p><p><span style="color: #38761d;"><span style="font-size: large;">Fica:</span></span> &lt;a href="http://www.com"&gt;http://www.com&lt;/a&gt;</p><p>{% highlight bash %}sed 's_\&lt;\(ht\|f\)tp://[^ ]*_&lt;a href="&amp;"&gt;&amp;&lt;/a&gt;_' arquivo.txt{% endhighlight %}</p><p></p><p></p><p><span style="font-size: x-large;">30 - Expressões Regulares com SED ( sed regex )</span></p><p></p><p>&nbsp;<u><i>Este sed lê dados do </i></u></b><span style="color: blue;">arquivo.txt</span><b><u><i> e apaga (comando </i></u></b><span style="color: blue;">d</span><b><u><i>) desde a primeira linha, até a linha que contenha <span style="color: purple;">3</span> números seguidos, jogando o resultado na tela. Se quiser gravar o resultado, redirecione-o para outro arquivo, não o próprio </i></u></b><span style="color: blue;">arquivo.txt</span><b><u><i> .</i></u></p><p></p><p>{% highlight bash %}sed '1,/[0-9]\{3\}/d' arquivo.txt{% endhighlight %}</p><p></p><p><u><i>Apagar números</i></u></p><p></p><p>{% highlight bash %}s/[0-9]\+//g' arquivo.txt{% endhighlight %}</p><p></p><p><u><i>Imprime só linhas que contém PONTUAÇÃO:</i></u></p><p></p><p>{% highlight bash %}sed -n '/[[:punct:]]/p' arquivo.txt{% endhighlight %}</p><p></p><p><u><i>Imprime só linhas que começam com Números:</i></u></p><p></p><p>{% highlight bash %}sed -n '/^[[:digit:]]/p' arquivo.txt{% endhighlight %}</p><p></p><p></p><p><span style="color: blue;"><span style="font-size: x-large;">Formatando numero de telefone:</span></span></p><p></p><p><span style="font-size: large;"><u><i>temos um arquivo com os números de telefone assim:</i></u></span></b><i></p><p></p><p>7184325689</p><p>4333285236</p><p>1140014004</p><p>3633554488</i><b></p><p></p><p><span style="font-size: large;"><u><i>Executando alguns desse modos de comando em SED:</i></u></span></p><p></p><p><span style="color: blue;"><span style="font-size: x-large;">Modo Neandertal:</span></span></b></p><p><ul><li><b><span style="font-size: small;"><u><i>&nbsp;Substitui 2 caracteres "</i></u></span></b><span style="color: blue;"><span style="font-size: large;">..</span></span><b><span style="font-size: small;"><u><i>" por "</i></u></span></b><span style="font-size: large;"><span style="color: blue;">&amp;</span></span><b><span style="font-size: small;"><u><i>" que é a saída da solicitação</i></u></span></b></li><li><b><span style="font-size: small;"><u><i>&nbsp;Executa outro sed pra substituir 8 caracteres de novo pelo "</i></u></span></b><span style="color: blue;"><span style="font-size: large;">&amp;</span></span><b><span style="font-size: small;"><u><i>"</i></u></span></b></li><li><b><span style="font-size: small;"><u><i>&nbsp;Obs.: Precisa sempre escapar os parênteses "</i></u></span></b><span style="color: blue;"><span style="font-size: large;">\(</span></span><b><span style="font-size: small;"><u><i>" e "</i></u></span></b><span style="color: blue;"><span style="font-size: large;">\)</span></span><b><span style="font-size: small;"><u><i>"</i></u></span></b></li></ul><b></p><p>{% highlight bash %}sed 's/../\(&amp;\)/' arquivo.txt | sed 's/......../&amp;-/' arquivo.txt{% endhighlight %}</p><p></p><p><span style="color: blue;"><span style="font-size: x-large;">Modo Medieval:</span></span></b></p><p><ul><li><b>&nbsp;O mesmo do de cima, só pus o "</b><span style="color: blue;">{8}</span><b>" pra marcar <i>8 caracteres</i> "."</b></li><li><b>&nbsp;Também precisa, SEMPRE, escapar as chaves "</b><span style="color: blue;">\{" e "/}</span><b>"&nbsp;&nbsp; </b></li></ul><b></p><p>{% highlight bash %}sed 's/../\(&amp;\)/' arquivo.txt | sed 's/.\{8\}/&amp;-/' arquivo.txt{% endhighlight %}</p><p></p><p><span style="color: blue;"><span style="font-size: x-large;">Modo Moderno:</span></span></b></p><p><ul><li><b>&nbsp;Ao invés de jogar a saída, separei o comando com <u><i>ponto-vírgula</i></u> "</b><span style="color: blue;">;</span><b>" e lancei outro sed "<span style="color: blue;">s</span>"</b></li></ul><b></p><p>{% highlight bash %}sed 's/../\(&amp;\)/;s/.\{8\}/&amp;-/' arquivo.txt{% endhighlight %}</p><p></p><p><span style="color: blue;"><span style="font-size: x-large;">Modo Pós-Moderno:</span></span></p><p></p><p><span style="font-size: large;"><u><i>&nbsp;Esse modo é pra entender o seguinte:</i></u></span></b></p><p><ul><li><b>&nbsp;&nbsp;&nbsp; &nbsp;O primeiro comando entre parênteses "</b><span style="color: blue;">\(..\)</span><b>"</b></li><li><b>&nbsp;&nbsp;&nbsp; &nbsp;Depois separado por barra "</b><span style="color: blue;">\</span><b>", lancei ou comando entre parênteses "</b><span style="color: blue;">\(.\{4\}\)</span><b>"</b></li><li><b>&nbsp;&nbsp;&nbsp; &nbsp;A saída do primeiro comando vai pro barra 1 "</b><span style="color: blue;">\1</span><b>"</b></li><li><b>&nbsp;&nbsp;&nbsp; &nbsp;E a do segundo comando pro barra 2 "</b><span style="color: blue;">\2</span><b>" , poderia ter também o barra 3, n, ...</b></li></ul><b></p><p>{% highlight bash %}sed 's/\(..\)\(.\{4\}\)/(\1)\2-/g' arquivo.txt{% endhighlight %}</p><p></p><p><span style="font-size: large;">Fica assim:</span></p><p></p><p>(71)8432-5689</p><p>(43)3328-5236</p><p>(11)4001-4004</p><p>(36)3355-4488</b></p><p></p><p></p><p></p><p></p><p></p><p><span style="color: #999999;"><span style="font-size: x-small;"><i>Links úteis para mais informações:</i></span></span></p><p><div class="separator" style="clear: both; text-align: center;"><a href="http://3.bp.blogspot.com/-NWjXvdHo59g/VbPQPVdhQNI/AAAAAAAABh0/DuN6exDuFa8/s1600/sed-fluxogramas.png" imageanchor="1" style="margin-left: 1em; margin-right: 1em;"><img border="0" src="http://3.bp.blogspot.com/-NWjXvdHo59g/VbPQPVdhQNI/AAAAAAAABh0/DuN6exDuFa8/s1600/sed-fluxogramas.png" /></a></div><span style="color: #999999;"><span style="font-size: x-small;"><i></p><p></i></span></span><span style="color: #999999;"><span style="font-size: x-small;"><i>http://goo.gl/U0Pbc9</i></span></span></p><p><span style="color: #999999;"><span style="font-size: x-small;"><i>thobias.org/doc/sosed.html</i></span></span></p><p><span style="color: #999999;"><span style="font-size: x-small;"><i>http://aurelio.net/sed</i></span></span></p><p><span style="color: #999999;"><span style="font-size: x-small;"><i>http://aurelio.net/sed/alfabeto.html</i></span></span></p><p><span style="color: #999999;"><span style="font-size: x-small;"><i>http://www.gnu.org/software/sed/</i></span></span></p><p><span style="color: #999999;"><span style="font-size: x-small;"><i>http://aurelio.net/sed/sed-dicas.txt</i></span></span></p><p><span style="color: #999999;"><span style="font-size: x-small;"><i>http://aurelio.net/sed/sed-HOWTO</i></span></span></p><p><span style="color: #999999;"><span style="font-size: x-small;"><i>http://goo.gl/gR59Fw</i></span></span></p><p><span style="color: #999999;"><span style="font-size: x-small;"><i>http://sed.sourceforge.net/</i></span></span>
+<div class="separator" style="clear: both; text-align: center;"><a href="http://3.bp.blogspot.com/-zeuWvpMP3uY/VbPMlEy4loI/AAAAAAAABho/BCGNreo0ceA/s1600/sed-regex.jpg" imageanchor="1" style="margin-left: 1em; margin-right: 1em;"><img border="0" src="http://3.bp.blogspot.com/-zeuWvpMP3uY/VbPMlEy4loI/AAAAAAAABho/BCGNreo0ceA/s1600/sed-regex.jpg" /></a></div>
 
-</p>
+<h3><span style="color: #444444;"><b>30 EXEMPLOS DO COMANDO SED (REGEX)</b></span></h3><b>
+</b>
+<h4><b>O Sed é um editor de textos não interativo.Vem do inglês "Stream EDitor", ou seja, editor de fluxos (de texto). O Sed da GNU, atualmente é o utilizado pela maioria das distribuições de Linux e é o que tem mais funcionalidades novas, mas se por algum caso não tenha:</b></h4><b>
+</b>
+<blockquote class="tr_bq"><span style="font-size: x-small;"><b><u>Download do sed</u>: <span style="color: blue;"><a href="ftp://ftp.unicamp.br/pub/gnu/sed/" target="_blank">ftp://ftp.unicamp.br/pub/gnu/sed/</a></span></b>
+<p><u>Instalação via gerenciador de pacotes</u>: <span style="color: red;">[gerenciador] install sed</span></p>
+<b><u>Exemplo de instalação no Debian GNU/Linux</u>: </b><i>apt-get install sed</i></span></blockquote><b>
+</b>
+<ul><li><span style="color: blue;"><b><i>é case sentive</i></b></span></li><li><span style="color: blue;"><b><i>-i altera o arquivo</i></b></span></li><li><span style="color: blue;"><b><i>-e imprime na tela sem alterar o arquivo</i></b></span></li><li><span style="color: blue;"><b><i>-n faz a supressão, mostra só o resutado do comando</i></b></span></li><li><span style="color: blue;"><b><i>s substitui um trecho de texto por outro</i></b></span></li><li><span style="color: blue;"><b><i>! inverte a lógica do comando</i></b></span></li><li><span style="color: blue;"><b><i>; separador de comandos</i></b></span></li><li><span style="color: blue;"><b><i>| separador de strings</i></b></span></li><li><span style="color: blue;"><b><i>d no final deleta</i></b></span></li><li><span style="color: blue;"><b><i>p no final imprime</i></b></span></li><li><span style="color: blue;"><b><i>g no final (como se usa o d e p) altera todas as ocorrências</i></b></span></li><li><span style="color: blue;"><b><i>q sai do sed , não continua o comando</i></b></span></li></ul><b>
+<span style="font-size: large;">Lista completa das classes de caracteres do GNU sed:</span></b>
+<blockquote class="tr_bq">[[:alnum:]] Alfabéticos e númericos [a-z A-Z 0-9]
+[[:alpha:]] Alfabéticos [a-z A-Z]
+[[:blank:]] Caractere em branco, espaço ou tab [ \t]
+[[:cntrl:]] Caracteres de controle [\x00-\x1F\x7F]
+[[:digit:]] Números [0-9]
+[[:graph:]] Qualquer caractere visível(ou seja, exceto em branco) [\x20-\x7E]
+[[:lower:]] Letras minúsculas [a-z]
+[[:upper:]] Letras maiúsculas [A-Z]
+[[:print:]] Caracteres visíveis (ou seja, exceto os de controle) [\x20-\x7E]
+[[:punct:]] Pontuação [-!"#$%&amp;'()*+,./:;<=>?@[\\\]_`{|}~].
+[[:space:]] Espaço em branco [ \t\r\n\v\f]
+[[:xdigit:]] Número hexadecimais [0-9 a-f A-F]</blockquote><b>
+
+
+<span style="font-size: x-large;">1 - Troca todas as palavras em um arquivo por outra</span>
+
+{% highlight bash %}
+sed -i 's/palavra/outra/' arquivo.txt
+{% endhighlight %}
+
+2 - Imprime só a nona linha
+
+{% highlight bash %}
+sed -n '9p' arquivo.txt
+{% endhighlight %}
+
+<span style="font-size: x-large;">3 - Imprime da sexta linha até a nona linha</span>
+
+{% highlight bash %}
+sed -n '6,9p' arquivo.txt
+{% endhighlight %}
+
+4 - Deleta todas as lihas que contém a palavra string no arquivo
+
+{% highlight bash %}
+sed -i '/dmx/d' arquivo.txt
+{% endhighlight %}
+
+<span style="font-size: x-large;">5 - Coloca uma palavra no INÍCIO de cada linha</span>
+
+{% highlight bash %}
+sed 's/^/palavra/' arquivo.txt
+{% endhighlight %}
+
+6 - Coloca uma palavra no final de cada linha
+
+{% highlight bash %}
+sed 's/$/palavra/' arquivo.txt
+{% endhighlight %}
+
+<span style="font-size: x-large;">7 - Imprime só as linhas que COMEÇAM com a string 'http'</span>
+
+{% highlight bash %}
+sed -n '/^http/p' arquivo.txt
+{% endhighlight %}
+
+8 - Deleta só as linhas que COMEÇAM com a string 'http'
+
+{% highlight bash %}
+sed -n '/^http/d' arquivo.txt
+{% endhighlight %}
+
+<span style="font-size: x-large;">9 - Troca TODAS ocorrências da palavra "marcos", "eric", "camila" pela palavra "pinguim"</span>
+
+{% highlight bash %}
+sed 's/marcos\|eric\|camila/pinguim/g' arquivo.txt
+{% endhighlight %}
+
+10 - Troca tudo que estiver ENTRE as palavras "Marcos" e "Eric" pela palavra "eles", exemplo, o texto é:
+
+"No sábado Marcos saiu de pra brincar de bicicleta com o Eric, mas não ficaram até tarde."
+
+e ficará assim:
+
+"No sábado eles, mas não ficaram até tarde."
+
+{% highlight bash %}
+sed 's/Marcos.*Eric/eles/' arquivo.txt
+{% endhighlight %}
+
+<span style="font-size: x-large;">11 - Deleta linha em branco e altera o arquivo</span>
+
+{% highlight bash %}
+sed -i '/^$/d' arquivo.txt
+{% endhighlight %}
+
+12 - Substitui "foo" por "bar" somente as linhas que contém "plop"
+
+{% highlight bash %}
+sed '/plop/ s/foo/bar/g' arquivo.txt
+{% endhighlight %}
+
+
+<span style="font-size: x-large;">13 - Substitui "foo" por "bar" exceto as linhas que contém "plop"</span>
+
+{% highlight bash %}
+sed '/plop/! s/foo/bar/g' arquivo.txt
+{% endhighlight %}
+
+14 - Insere da Linha 2 a linha 7 o "#" no início de cada linha
+
+{% highlight bash %}
+sed '2,7s/^/#/' arquivo.txt
+{% endhighlight %}
+
+<span style="font-size: x-large;">15 - Insere a palavra 'NEW' no início de cada linha, da linha 21 até a linha 28</span>
+
+{% highlight bash %}
+sed -i '21,28s/^/NEW/' arquivo.txt
+{% endhighlight %}
+
+16 - Troca tudo entre as tags "" e "" pela palavra "CODIGO" , exemplo de código html:
+
+É assim:
+
+
+  São os homens os produtores das suas representações, das suas ideias, etc.; mas os homens reais agentes, tais como são condicionados por um desenvolvimento determinado das suas forças produtivas e da...
+
+
+Depois fica assim:
+
+
+  CODIGO
+
+
+{% highlight bash %}
+sed 's/.*/CODIGO/' arquivo.txt
+{% endhighlight %}
+
+<span style="font-size: x-large;">17 - Imprime somente a primeira ocorrência da linha com determinada string</span>
+
+{% highlight bash %}
+sed -n '/dia/{p;q;}' arquivo.txt
+{% endhighlight %}
+
+18 - Inclue texto no final da linha 9
+
+{% highlight bash %}
+sed '9s/$/final da linha/' arquivo.txt
+{% endhighlight %}
+
+<span style="font-size: x-large;">19 - Coloca todas as linhas em uma só</span>
+
+{% highlight bash %}
+sed ':a;$!N;s/\n//;ta;' arquivo.txt
+{% endhighlight %}
+
+20 - Substitui a palavra "BELEZA" por "SIM" somente entre determinadas linhas
+
+{% highlight bash %}
+sed '3,6s/BELEZA/SIM/' arquivo.txt
+{% endhighlight %}
+
+<span style="font-size: x-large;">21 - Apaga o que está entre a palavra "falou" e "segundo" ( delimitadores )</span>
+
+{% highlight bash %}
+sed '/segundo/{/falou/{s/segundo.*falou//;t};:a;/falou/!{N;s/\n//;ta;};s/segundo.*falou/\n/;}' arquivo.txt
+{% endhighlight %}
+
+22 - Retira comandos HTML (tudo entre )
+
+{% highlight bash %}
+sed 's/]*>//g' arquivo.txt
+{% endhighlight %}
+
+<span style="font-size: x-large;">23 - Apaga o 1o caracter da frase</span>
+
+{% highlight bash %}
+sed 's/.//' arquivo.txt
+{% endhighlight %}
+
+24 - Apaga o 4o caractere da frase
+
+{% highlight bash %}
+sed 's/.//4' arquivo.txt
+{% endhighlight %}
+
+
+<span style="font-size: x-large;">25 - Apaga os 4 primeiros caracteres</span>
+
+{% highlight bash %}
+sed 's/.\{4\}//' arquivo.txt
+{% endhighlight %} 
+
+
+26 - Apaga no mínimo 4 caracteres
+{% highlight bash %}
+sed 's/.\{4,\}//' arquivo.txt
+{% endhighlight %}
+
+
+<span style="font-size: x-large;">27 - Apaga de 2 a 4 caracteres (o máx. que tiver)</span>
+
+{% highlight bash %}
+sed 's/.\{2,4\}//' arquivo.txt
+{% endhighlight %}
+
+28 - Exemplos de intervalo
+{% highlight bash %}
+
+echo "aáeéiíoóuú" | sed "s/[a-u]//g"
+áéíóú
+{% endhighlight %}
+
+{% highlight bash %}
+
+echo "aáeéiíoóuú" | sed "s/[á-ú]//g"
+aeiou
+{% endhighlight %}
+
+
+
+<span style="font-size: x-large;">29 - Transforma texto (URL) em tags HTML de links.</span>
+
+<span style="color: red;"><span style="font-size: large;"><i>Era :</i></span></span> http://www.com
+<span style="color: #38761d;"><span style="font-size: large;">Fica:</span></span> <a href="http://www.com">http://www.com</a>
+{% highlight bash %}
+sed 's_\&amp;_' arquivo.txt
+{% endhighlight %}
+
+
+30 - Expressões Regulares com SED ( sed regex )
+
+Este sed lê dados do arquivo.txt e apaga (comando d) desde a primeira linha, até a linha que contenha 3 números seguidos, jogando o resultado na tela. Se quiser gravar o resultado, redirecione-o para outro arquivo, não o próprio arquivo.txt .
+
+{% highlight bash %}
+sed '1,/[0-9]\{3\}/d' arquivo.txt
+{% endhighlight %}
+
+<u><i>Apagar números</i></u>
+
+{% highlight bash %}
+s/[0-9]\+//g' arquivo.txt
+{% endhighlight %}
+
+Imprime só linhas que contém PONTUAÇÃO:
+
+{% highlight bash %}
+sed -n '/[[:punct:]]/p' arquivo.txt
+{% endhighlight %}
+
+<u><i>Imprime só linhas que começam com Números:</i></u>
+
+{% highlight bash %}
+sed -n '/^[[:digit:]]/p' arquivo.txt
+{% endhighlight %}
+
+
+Formatando numero de telefone:
+
+temos um arquivo com os números de telefone assim:
+
+7184325689
+4333285236
+1140014004
+3633554488
+
+Executando alguns desse modos de comando em SED:
+
+Modo Neandertal:
+Substitui 2 caracteres ".." por "&amp;" que é a saída da solicitaçãoExecuta outro sed pra substituir 8 caracteres de novo pelo "&amp;"Obs.: Precisa sempre escapar os parênteses "\(" e "\)"
+{% highlight bash %}
+sed 's/../\(&amp;\)/' arquivo.txt | sed 's/......../&amp;-/' arquivo.txt
+{% endhighlight %}
+
+<span style="color: blue;"><span style="font-size: x-large;">Modo Medieval:</span></span></b>
+<ul><li><b>O mesmo do de cima, só pus o "</b><span style="color: blue;">{8}</span><b>" pra marcar <i>8 caracteres</i> "."</b></li><li><b>Também precisa, SEMPRE, escapar as chaves "</b><span style="color: blue;">\{" e "/}</span><b>" </b></li></ul><b>
+{% highlight bash %}
+sed 's/../\(&amp;\)/' arquivo.txt | sed 's/.\{8\}/&amp;-/' arquivo.txt
+{% endhighlight %}
+
+Modo Moderno:
+Ao invés de jogar a saída, separei o comando com ponto-vírgula ";" e lancei outro sed "s"
+{% highlight bash %}
+sed 's/../\(&amp;\)/;s/.\{8\}/&amp;-/' arquivo.txt
+{% endhighlight %}
+
+<span style="color: blue;"><span style="font-size: x-large;">Modo Pós-Moderno:</span></span>
+
+<span style="font-size: large;"><u><i>Esse modo é pra entender o seguinte:</i></u></span></b>
+<ul><li><b> O primeiro comando entre parênteses "</b><span style="color: blue;">\(..\)</span><b>"</b></li><li><b> Depois separado por barra "</b><span style="color: blue;">\</span><b>", lancei ou comando entre parênteses "</b><span style="color: blue;">\(.\{4\}\)</span><b>"</b></li><li><b> A saída do primeiro comando vai pro barra 1 "</b><span style="color: blue;">\1</span><b>"</b></li><li><b> E a do segundo comando pro barra 2 "</b><span style="color: blue;">\2</span><b>" , poderia ter também o barra 3, n, ...</b></li></ul><b>
+{% highlight bash %}
+sed 's/\(..\)\(.\{4\}\)/(\1)\2-/g' arquivo.txt
+{% endhighlight %}
+
+Fica assim:
+
+(71)8432-5689
+(43)3328-5236
+(11)4001-4004
+(36)3355-4488
+
+
+
+
+
+Links úteis para mais informações:
+
+http://goo.gl/U0Pbc9
+thobias.org/doc/sosed.html
+http://aurelio.net/sed
+http://aurelio.net/sed/alfabeto.html
+http://www.gnu.org/software/sed/
+http://aurelio.net/sed/sed-dicas.txt
+http://aurelio.net/sed/sed-HOWTO
+http://goo.gl/gR59Fw
+http://sed.sourceforge.net/
+
+

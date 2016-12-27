@@ -18,6 +18,143 @@ introduction: 'Função Shell Script(Bash): Instalar e Configurar o NFS'
 ---
 
 <p>
-<div class="separator" style="clear: both; text-align: center;"><a href="http://1.bp.blogspot.com/-_gUy0yQTqZM/UkjQtOlbfaI/AAAAAAAACbc/bn9SFHwydy8/s1600/shell+script2.png" imageanchor="1" style="margin-left: 1em; margin-right: 1em;"><img border="0" src="http://1.bp.blogspot.com/-_gUy0yQTqZM/UkjQtOlbfaI/AAAAAAAACbc/bn9SFHwydy8/s320/shell+script2.png" /></a></div></p><p><blockquote class="tr_bq"><b><span style="color: purple;">* Função Shell Script(Bash): Instalar e Configurar o NFS</span></b></p><p><span style="color: purple;"><b></b></span><span style="color: purple;"><b>* Você (pode e deve) customizá-lo para sua instalação, por exemplo:</b></span></p><p><span style="color: purple;"><b>* o user root foi só um exemplo;</b></span></p><p><span style="color: purple;"><b>&nbsp; </b></span></p><p><span style="color: purple;"><b>* o uso do apt-get é para distros Debian e Debian Like, mas você pode trocar;</b></span></p><p><span style="color: purple;"><b>&nbsp; altere, caso queira ao seu gosto.</b></span></p><p><span style="color: purple;"><b></b></span><span style="color: purple;"><b>* Uso: ./installNFS </b></span></blockquote><b></p><p><span style="color: blue;"><span style="font-size: large;">Codigo no PasteBin:</span></span></p><p></p><p><script src="http://pastebin.com/embed_js.php?i=kuQ8S3kJ"></script> </p><p><span style="color: purple;"><span style="font-size: x-large;">Código no Blog:</span></span></p><p></p><p></b></p><p><div class="adp"><b>#!/bin/bash</b></p><p><b># --------------------------------------</b></p><p><b># ./installNFS</b></p><p><b>#</b></p><p><b># Função Shell Script(Bash): Instalar e Configurar o NFS</b></p><p><b>#</b></p><p><b># Você (pode e deve) customizá-lo para sua instalação, por exemplo:</b></p><p><b># o user root foi só um exemplo;</b></p><p><b># </b></p><p><b># o uso do apt-get é para distros Debian e Debian Like, mas você pode trocar;</b></p><p><b># altere, caso queira ao seu gosto.</b></p><p><b>#</b></p><p><b># Uso: ./installNFS</b></p><p><b>AJUDA="Exemplo:</b></p><p><b>SINOPSE</b></p><p><b>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; ./installNFS [OPÇÕES]</b></p><p><b></p><p></b><b>DESCRIÇÃO</b></p><p><b>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Função Shell Script(Bash): Instalar e Configurar o NFS</b></p><p><b></p><p></b><b>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; -h, --help</b></p><p><b>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; NFS é um protocolo de sistema de arquivos para compartilhamento entre arquivos e diretórios entre computadores </b></p><p><b>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; conectados em rede.è com NFS que é feito o acesso, existem outras formas, mas certifique-se que essa é a mais simples e a melhor.</b></p><p><b>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; --&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </b></p><p><b>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Como instalar o NFS em: http://www.terminalroot.com.br/2011/11/compartilhando-pasta-do-linux-para.html.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </b></p><p><b>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; "</b></p><p><b>ENTRAR="</b></p><p><b>-e, --enter</b></p><p><b>&nbsp;&nbsp;&nbsp; &nbsp; 1) Você pode montar a pasta com: mount -t nfs IP:caminho_da_pasta </b></p><p><b>&nbsp;&nbsp;&nbsp; &nbsp; 2) Caso não consiga o acesso, lembre-se de dar permissões locais com o 'chmod'."</b></p><p><b>CONF="</b></p><p><b>-c, --conf</b></p><p><b>&nbsp;&nbsp;&nbsp; 'rw' permissão de leitura(r) e escrita(w); o item async permite que o NFS transfira arquivos de forma 'assíncrona', </b></p><p><b>&nbsp;&nbsp;&nbsp; sem precisar esperar pela resposta do cliente; e o IP que pode acessar a pasta que foi compartilhada.Depois de </b></p><p><b>&nbsp;&nbsp;&nbsp; adicionar a linha, salve o arquivo, lembrando que caso você deseje liberar uma faixa de ips, basta </b></p><p><b>&nbsp;&nbsp;&nbsp; usar o *(asterisco), exemplo: 192.168.1.*, todos dessa faixa poderão acessar, ou até mesmo utilizar nome da Estação.</b></p><p><b>"</b></p><p><b>AUTOR="&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; </b></p><p><b>-a, --author</b></p><p><b>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Verificar o author e o endereço na internet do Script :</b></p><p><b>&nbsp;&nbsp;&nbsp; &nbsp; Marcos da B. M. Oliveira , terminalroot.com.br</b></p><p><b>&nbsp;&nbsp;&nbsp; &nbsp; Desde: Dom 08 Dez 2013 20:00:42 BRST </b></p><p><b>&nbsp;&nbsp;&nbsp; &nbsp; Licença: GPL</b></p><p><b>"</b></p><p><b># --------------------------------------</b></p><p><b></p><p></b><b>installNFS(){</b></p><p><b></p><p></b><b>if [ "$1" ];</b></p><p><b>&nbsp;&nbsp;&nbsp; then</b></p><p><b>&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; </b></p><p><b>&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; case $1 in</b></p><p><b>&nbsp;&nbsp;&nbsp; </b></p><p><b>&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; -h | --help) &nbsp;&nbsp;&nbsp; reset &amp;&amp; echo "$AJUDA $ENTRAR $CONF $AUTOR" ;; </b></p><p><b>&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; -e | --enter)&nbsp;&nbsp;&nbsp; echo "$ENTRAR" ;; </b></p><p><b>&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; -c | --conf)&nbsp;&nbsp;&nbsp; echo "$CONF" ;; </b></p><p><b>&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; -a | --author)&nbsp;&nbsp;&nbsp; echo "$AUTOR" ;;</b></p><p><b>&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; *)&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; echo "Opção inválida." ;;</b></p><p><b>&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; </b></p><p><b>&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; esac</b></p><p><b>&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; shift</b></p><p><b>&nbsp;&nbsp;&nbsp; exit 0</b></p><p><b>fi</b></p><p><b></p><p></b><b>&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; if [ -f "/etc/init.d/nfs-kernel-server" ];</b></p><p><b>&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; then</b></p><p><b>&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; echo "Já está Instalado.";</b></p><p><b>&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; exit 0</b></p><p><b>&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; else</b></p><p><b>&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp;&nbsp; if [ "$USER" == "root" ];</b></p><p><b>&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; then</b></p><p><b>&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; </b></p><p><b>&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; reset</b></p><p><b>&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; echo -ne "Deseja instalar o NFS ? (S/n)" &amp;&amp; read RESP</b></p><p><b>&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; </b></p><p><b>&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; if [ "$RESP" == "S" ]; then</b></p><p><b>&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; </b></p><p><b>&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; echo -e "* Iniciando instalação&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; [OK]"</b></p><p><b>&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; sleep 1 </b></p><p><b>&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; else </b></p><p><b>&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; echo "Abortar."; </b></p><p><b>&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; exit 0;</b></p><p><b>&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; fi</b></p><p><b>&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; </b></p><p><b>&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; apt-get install -y nfs-kernel-server nfs-common portmap 2&gt;/dev/null</b></p><p><b>&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; </b></p><p><b>&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; echo -e "Informe o IP ou nome da máquina que poderá acessar essa máquina: "</b></p><p><b>&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; read ip</b></p><p><b>&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; </b></p><p><b>&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; echo -e "Informe a pasta com o caminho, ex.: /home/$USER/minha_pasta: "</b></p><p><b>&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; read pasta</b></p><p><b>&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; </b></p><p><b>&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; echo -e "* Inserindo dados no arquivo /etc/exports: "</b></p><p><b>&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; sleep 1</b></p><p><b>&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; echo "$pasta $ip(rw,async)" &gt;&gt; /etc/exports</b></p><p><b>&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; sleep 1</b></p><p><b>&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; </b></p><p><b>&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; echo -e "* Exportando para o Kernel com: exportfs -ra&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; [OK]"</b></p><p><b>&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; sleep 1</b></p><p><b>&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; </b></p><p><b>&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; echo -e "* Exportando para o Kernel com: exportfs -ra&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; [OK]"</b></p><p><b>&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; sleep 1</b></p><p><b>&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; </b></p><p><b>&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; echo -e "* Restartando o nfs-kernel-server e o portmap&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; [OK]"</b></p><p><b>&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; sleep 1</b></p><p><b>&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; /etc/init.d/nfs-kernel-server restart</b></p><p><b>&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; sleep 1</b></p><p><b>&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; etc/init.d/portmap restart</b></p><p><b>&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; sleep 1</b></p><p><b>&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; </b></p><p><b>&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; echo -e "* Pronto!</b></p><p><b>Obs.: </b></p><p><b>&nbsp;&nbsp;&nbsp; 1) Você pode montar a pasta com: mount -t nfs $ip:$pasta </b></p><p><b>&nbsp;&nbsp;&nbsp; 2) Caso não consiga o acesso, lembre-se de dar permissões locais com o 'chmod'.</b></p><p><b>&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; "&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; </b></p><p><b>&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; else</b></p><p><b>&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; echo "Você precisa ser root.";</b></p><p><b>&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; echo "Abortar.";</b></p><p><b>&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; fi</b></p><p><b></p><p></b><b>&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; fi</b></p><p><b>}</b></p><p><b></p><p></b><b>installNFS $1 </b></div><b></b>
+<div class="separator" style="clear: both; text-align: center;"><a href="http://1.bp.blogspot.com/-_gUy0yQTqZM/UkjQtOlbfaI/AAAAAAAACbc/bn9SFHwydy8/s1600/shell+script2.png" imageanchor="1" style="margin-left: 1em; margin-right: 1em;"><img border="0" src="http://1.bp.blogspot.com/-_gUy0yQTqZM/UkjQtOlbfaI/AAAAAAAACbc/bn9SFHwydy8/s320/shell+script2.png" /></a></div>
+<blockquote class="tr_bq"><b><span style="color: purple;">* Função Shell Script(Bash): Instalar e Configurar o NFS</span></b>
+<span style="color: purple;"><b></b></span><span style="color: purple;"><b>* Você (pode e deve) customizá-lo para sua instalação, por exemplo:</b></span>
+<span style="color: purple;"><b>* o user root foi só um exemplo;</b></span>
+<span style="color: purple;"><b> </b></span>
+<span style="color: purple;"><b>* o uso do apt-get é para distros Debian e Debian Like, mas você pode trocar;</b></span>
+<span style="color: purple;"><b> altere, caso queira ao seu gosto.</b></span>
+<span style="color: purple;"><b></b></span><span style="color: purple;"><b>* Uso: ./installNFS </b></span></blockquote><b>
+<span style="color: blue;"><span style="font-size: large;">Codigo no PasteBin:</span></span>
+
+<iframe src="http://pastebin.com/raw/kuQ8S3kJ" style="border:none;width:100%;"></iframe> 
+<span style="color: purple;"><span style="font-size: x-large;">Código no Blog:</span></span>
+
+</b>
+<div class="adp"><b>#!/bin/bash</b>
+<p># --------------------------------------</p>
+<p># ./installNFS</p>
+<p>#</p>
+<p># Função Shell Script(Bash): Instalar e Configurar o NFS</p>
+<p>#</p>
+<p># Você (pode e deve) customizá-lo para sua instalação, por exemplo:</p>
+<p># o user root foi só um exemplo;</p>
+<p># </p>
+<p># o uso do apt-get é para distros Debian e Debian Like, mas você pode trocar;</p>
+<p># altere, caso queira ao seu gosto.</p>
+<p>#</p>
+<p># Uso: ./installNFS</p>
+<p>AJUDA="Exemplo:</p>
+<p>SINOPSE</p>
+<p> ./installNFS [OPÇÕES]</p>
+<b>
+</b><b>DESCRIÇÃO</b>
+<p> Função Shell Script(Bash): Instalar e Configurar o NFS</p>
+<b>
+</b><b> -h, --help</b>
+<p> NFS é um protocolo de sistema de arquivos para compartilhamento entre arquivos e diretórios entre computadores </p>
+<p> conectados em rede.è com NFS que é feito o acesso, existem outras formas, mas certifique-se que essa é a mais simples e a melhor.</p>
+<p> -- </p>
+<p> Como instalar o NFS em: http://www.terminalroot.com.br/2011/11/compartilhando-pasta-do-linux-para.html. </p>
+<p> "</p>
+<p>ENTRAR="</p>
+<p>-e, --enter</p>
+<p>  1) Você pode montar a pasta com: mount -t nfs IP:caminho_da_pasta </p>
+<p>  2) Caso não consiga o acesso, lembre-se de dar permissões locais com o 'chmod'."</p>
+<p>CONF="</p>
+<p>-c, --conf</p>
+<p> 'rw' permissão de leitura(r) e escrita(w); o item async permite que o NFS transfira arquivos de forma 'assíncrona', </p>
+<p> sem precisar esperar pela resposta do cliente; e o IP que pode acessar a pasta que foi compartilhada.Depois de </p>
+<p> adicionar a linha, salve o arquivo, lembrando que caso você deseje liberar uma faixa de ips, basta </p>
+<p> usar o *(asterisco), exemplo: 192.168.1.*, todos dessa faixa poderão acessar, ou até mesmo utilizar nome da Estação.</p>
+<p>"</p>
+<p>AUTOR="   </p>
+<p>-a, --author</p>
+<p> Verificar o author e o endereço na internet do Script :</p>
+<p>  Marcos da B. M. Oliveira , terminalroot.com.br</p>
+<p>  Desde: Dom 08 Dez 2013 20:00:42 BRST </p>
+<p>  Licença: GPL</p>
+<p>"</p>
+<p># --------------------------------------</p>
+<b>
+</b><b>installNFS(){</b>
+<b>
+</b><b>if [ "$1" ];</b>
+<p> then</p>
+<p>  </p>
+<p>  case $1 in</p>
+<p> </p>
+<p>   -h | --help)  reset &amp;&amp; echo "$AJUDA $ENTRAR $CONF $AUTOR" ;; </p>
+<p>   -e | --enter) echo "$ENTRAR" ;; </p>
+<p>   -c | --conf) echo "$CONF" ;; </p>
+<p>   -a | --author) echo "$AUTOR" ;;</p>
+<p>   *)    echo "Opção inválida." ;;</p>
+<p>  </p>
+<p>  esac</p>
+<p>  shift</p>
+<p> exit 0</p>
+<p>fi</p>
+<b>
+</b><b>  if [ -f "/etc/init.d/nfs-kernel-server" ];</b>
+<p>   then</p>
+<p>     echo "Já está Instalado.";</p>
+<p>     exit 0</p>
+<p>  else</p>
+<p>    if [ "$USER" == "root" ];</p>
+<p>    then</p>
+<p>   </p>
+<p>     reset</p>
+<p>     echo -ne "Deseja instalar o NFS ? (S/n)" &amp;&amp; read RESP</p>
+<p>   </p>
+<p>     if [ "$RESP" == "S" ]; then</p>
+<p>     </p>
+<p>      echo -e "* Iniciando instalação    [OK]"</p>
+<p>      sleep 1 </p>
+<p>     else </p>
+<p>      echo "Abortar."; </p>
+<p>      exit 0;</p>
+<p>     fi</p>
+<p>   </p>
+<p>     apt-get install -y nfs-kernel-server nfs-common portmap 2>/dev/null</p>
+<p>   </p>
+<p>     echo -e "Informe o IP ou nome da máquina que poderá acessar essa máquina: "</p>
+<p>     read ip</p>
+<p>   </p>
+<p>     echo -e "Informe a pasta com o caminho, ex.: /home/$USER/minha_pasta: "</p>
+<p>     read pasta</p>
+<p>   </p>
+<p>     echo -e "* Inserindo dados no arquivo /etc/exports: "</p>
+<p>     sleep 1</p>
+<p>     echo "$pasta $ip(rw,async)" >> /etc/exports</p>
+<p>     sleep 1</p>
+<p>     </p>
+<p>     echo -e "* Exportando para o Kernel com: exportfs -ra    [OK]"</p>
+<p>     sleep 1</p>
+<p>     </p>
+<p>     echo -e "* Exportando para o Kernel com: exportfs -ra    [OK]"</p>
+<p>     sleep 1</p>
+<p>     </p>
+<p>     echo -e "* Restartando o nfs-kernel-server e o portmap    [OK]"</p>
+<p>     sleep 1</p>
+<p>     /etc/init.d/nfs-kernel-server restart</p>
+<p>     sleep 1</p>
+<p>     etc/init.d/portmap restart</p>
+<p>     sleep 1</p>
+<p>   </p>
+<p>     echo -e "* Pronto!</p>
+<p>Obs.: </p>
+<p> 1) Você pode montar a pasta com: mount -t nfs $ip:$pasta </p>
+<p> 2) Caso não consiga o acesso, lembre-se de dar permissões locais com o 'chmod'.</p>
+<p>     "   </p>
+<p>   else</p>
+<p>     echo "Você precisa ser root.";</p>
+<p>     echo "Abortar.";</p>
+<p>   fi</p>
+<b>
+</b><b>  fi</b>
+<p>}</p>
+<b>
+</b><b>installNFS $1 </b></div><b></b>
 
 </p>

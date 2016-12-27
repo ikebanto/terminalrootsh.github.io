@@ -18,6 +18,58 @@ introduction: Habilitar o mod_rewite no Apache (.htacces)
 ---
 
 <p>
-<div class="separator" style="clear: both; text-align: center;"><a href="http://3.bp.blogspot.com/-Ho91t2BJ79M/UOBbOFdgNMI/AAAAAAAAA7U/v-Fh0T1B7wU/s1600/Apache-Server.jpg" imageanchor="1" style="margin-left: 1em; margin-right: 1em;"><img border="0" src="http://3.bp.blogspot.com/-Ho91t2BJ79M/UOBbOFdgNMI/AAAAAAAAA7U/v-Fh0T1B7wU/s320/Apache-Server.jpg" height="165" width="254" /></a></div> <blockquote class="tr_bq"><b>Pra quem vai trabalhar com MVC no PHP (por exemplo) precisa habilitar o mod_rewrite no Apache pra que funcione, segue os passos pra fazer isso:</b></blockquote></p><p></p><p><u><b>1-Logue como root: </b></u></p><p>{% highlight bash %}$ su{% endhighlight %}</p><p></p><p><u><b>2-Abra o arquivo default do Apache: </b></u></p><p>{% highlight bash %}# vi /etc/apache2/sites-available/default{% endhighlight %}</p><p></p><p><b>3-<u>Edite o arquivo da seguinte forma:</u> <span style="color: blue;">Altere a linha onde tem "<i>AllowOverride None</i>" dentro de <i>&lt;Directory /&gt;</i> substituindo por "<i>AllowOverride AuthConfig</i>" e altere a linha "<i>AllowOverride None</i>" dentro de <i>&lt;Directory /var/www/&gt;</i> substituindo por "<i>AllowOverride All</i>". </span></b></p><p><span style="color: blue;"><b>Ex.:</b></span>{% highlight bash %}DocumentRoot /var/www/ &lt;Directory /&gt;    Options FollowSymLinks Indexes    AllowOverride AuthConfig &lt;/Directory&gt; &lt;Directory /var/www/&gt;    Options Indexes FollowSymLinks MultiViews    AllowOverride All    Order allow,deny    allow from all &lt;/Directory&gt;{% endhighlight %}</p><p></p><p><u><b>4- Não esqueça de habilitar o mod_rewrite: </b></u></p><p>{% highlight bash %}# a2enmod rewrite{% endhighlight %}</p><p></p><p><u><b>5-Reinicie o apache:</b></u></p><p>{% highlight bash %}# /etc/init.d/apache2 restart{% endhighlight %}</p><p></p><p><span style="font-size: x-large;"><b>Agora vamos testar </b></span></p><p></p><p><u><b>6-Crie um arquivo .htacces dentro do diretório /var/www/</b></u>: </p><p>{% highlight bash %}vi /var/www/.htaccess{% endhighlight %}</p><p><u><b></p><p></b></u><u><b>7-Escreva isso dentro do Arquivo, salve e feche-o(em outro post explicarei isso)</b></u>: </p><p>{% highlight bash %}RewriteEngine On</p><p>RewriteCond %{SCRIPT_FILENAME} !-f</p><p>RewriteCond %{SCRIPT_FILENAME} !-d</p><p>RewriteRule ^(.*)$ index.php?chave=$1 {% endhighlight %}</p><p></p><p><u><b>8-Agora crie um arquivo index.php e cole o conteúdo logo abaixo</b></u>: {% highlight bash %}vi /var/www/index.php{% endhighlight %}</p><p><b>Conteúdo</b>: </p><p>{% highlight bash %}&lt;?php  echo $_GET['chave']; ?&gt; {% endhighlight %}</p><p></p><p><u><b>9-Acesse o endereço </b></u><i><b>http://localhost/nomequalquer/outronome/</b></i><u><b></b></u>:<span style="color: lime;"><b></p><p><span style="font-size: large;"></p><p><span style="color: #274e13;">Se imprimir na tela: nomequalquer/outronome/ (ou o nome que você escolheu), está tudo certo.Você já pode escrever seu Framework!</span></span>   </b></span>
+<div class="separator" style="clear: both; text-align: center;"><a href="http://3.bp.blogspot.com/-Ho91t2BJ79M/UOBbOFdgNMI/AAAAAAAAA7U/v-Fh0T1B7wU/s1600/Apache-Server.jpg" imageanchor="1" style="margin-left: 1em; margin-right: 1em;"><img border="0" src="http://3.bp.blogspot.com/-Ho91t2BJ79M/UOBbOFdgNMI/AAAAAAAAA7U/v-Fh0T1B7wU/s320/Apache-Server.jpg" height="165" width="254" /></a></div> <blockquote class="tr_bq"><b>Pra quem vai trabalhar com MVC no PHP (por exemplo) precisa habilitar o mod_rewrite no Apache pra que funcione, segue os passos pra fazer isso:</b></blockquote>
+
+<u><b>1-Logue como root: </b></u>
+{% highlight bash %}
+$ su
+{% endhighlight %}
+
+2-Abra o arquivo default do Apache: 
+{% highlight bash %}
+# vi /etc/apache2/sites-available/default
+{% endhighlight %}
+
+<p>3-<u>Edite o arquivo da seguinte forma:</u> <span style="color: blue;">Altere a linha onde tem "<i>AllowOverride None</i>" dentro de <i><Directory /></i> substituindo por "<i>AllowOverride AuthConfig</i>" e altere a linha "<i>AllowOverride None</i>" dentro de <i><Directory /var/www/></i> substituindo por "<i>AllowOverride All</i>". </span></p>
+Ex.:{% highlight bash %}
+DocumentRoot /var/www/     Options FollowSymLinks Indexes    AllowOverride AuthConfig      Options Indexes FollowSymLinks MultiViews    AllowOverride All    Order allow,deny    allow from all 
+{% endhighlight %}
+
+4- Não esqueça de habilitar o mod_rewrite: 
+{% highlight bash %}
+# a2enmod rewrite
+{% endhighlight %}
+
+<u><b>5-Reinicie o apache:</b></u>
+{% highlight bash %}
+# /etc/init.d/apache2 restart
+{% endhighlight %}
+
+Agora vamos testar 
+
+6-Crie um arquivo .htacces dentro do diretório /var/www/: 
+{% highlight bash %}
+vi /var/www/.htaccess
+{% endhighlight %}
+<u><b>
+</b></u><u><b>7-Escreva isso dentro do Arquivo, salve e feche-o(em outro post explicarei isso)</b></u>: 
+{% highlight bash %}
+RewriteEngine On
+RewriteCond %{SCRIPT_FILENAME} !-f
+RewriteCond %{SCRIPT_FILENAME} !-d
+RewriteRule ^(.*)$ index.php?chave=$1 
+{% endhighlight %}
+
+8-Agora crie um arquivo index.php e cole o conteúdo logo abaixo: {% highlight bash %}
+vi /var/www/index.php
+{% endhighlight %}
+Conteúdo: 
+{% highlight bash %}
+ 
+{% endhighlight %}
+
+<u><b>9-Acesse o endereço </b></u><i><b>http://localhost/nomequalquer/outronome/</b></i><u><b></b></u>:<span style="color: lime;"><b>
+<span style="font-size: large;">
+<span style="color: #274e13;">Se imprimir na tela: nomequalquer/outronome/ (ou o nome que você escolheu), está tudo certo.Você já pode escrever seu Framework!</span></span>   </b></span>
 
 </p>

@@ -17,6 +17,62 @@ introduction: Compartilhando pasta do Linux para acesso via rede por comando
 ---
 
 <p>
-<div class="separator" style="clear: both; text-align: center;"><a href="http://2.bp.blogspot.com/-n3Uc5NdQi-I/VKmhyvLuNwI/AAAAAAAABH4/sjFm_voXAJw/s1600/www.facebook.com.png" imageanchor="1" style="margin-left: 1em; margin-right: 1em;"><img border="0" src="http://2.bp.blogspot.com/-n3Uc5NdQi-I/VKmhyvLuNwI/AAAAAAAABH4/sjFm_voXAJw/s320/www.facebook.com.png" /></a></div><b>Nesse post vou mostrar como <u>compartilhar uma pasta</u> no <span style="color: blue;">Linux</span> para acesso via rede por comando, o processo é bem simples.Esse acesso será baseado em <span style="color: red;">NFS</span>, não tem nada a ver com o Samba, isso é pra compartilhamento entre duas ou mais máquinas Linux(<i>de Linux pra Linux</i>), mais pra frente vou explicar via samba, mas por enquanto isso aqui é mais importante.</b></p><p></p><p><blockquote class="tr_bq"><b>NFS é um protocolo de sistema de arquivos para compartilhamento entre arquivos e diretórios entre computadores conectados em rede.è com NFS que é feito o acesso, existem outras formas, mas certifique-se que essa é a mais simples e a melhor.</b></blockquote></p><p><b>Primeiramente temos de ter dois pacotes instalados, precisa ser root </b><i># su</i><b>:</b></p><p></p><p><b><span style="color: red;">1 -</span> </b><i>nfs-kernel-server</i> ---- <b>que deve ser instalado no Server(a máquina que compartilhará o arquivo ou a pasta).</b></p><p><b>Para instalá-lo no Debian e similares:</b></p><p>{% highlight bash %}# apt-get install nfs-kernel-server{% endhighlight %}</p><p><b>Convém também instalar o portmap, caso não esteja instalado:</b></p><p>{% highlight bash %}# apt-get install portmap{% endhighlight %}</p><p></p><p><b style="color: red;">2-</b> <i>nfs-common</i> ---- <b>que deve ser instalado no Client(máquina que acessará a tal pasta ou arquivo).</b></p><p><b>Para instalá-lo no Debian e similares:</b></p><p>{% highlight bash %}# apt-get install nfs-common{% endhighlight %}</p><p></p><p><b>No Server, precisamos informar qual a pasta será compartilhada e quais as permissões, para isso edite o arquivo:</b></p><p>{% highlight bash %}# vim /etc/exports{% endhighlight %}</p><p><b>Após as linhas iniciais e comentado com #(tralha), crie uma nova linha sem #(tralha) e informe o endereço da pasta no PC e as permissões do mesmo, exemplo:</b></p><p>{% highlight bash %}/home/usuario/pasta_a_ser_compartilhada 192.168.1.102(rw,async){% endhighlight %}</p><p><b>, ou seja, o caminho da pasta;"rw" permissão de leitura(r) e escrita(w); o item async permite que o NFS transfira arquivos de forma "assíncrona", sem precisar esperar pela resposta do cliente; e o IP que pode acessar a pasta que foi compartilhada.Depois de adicionar a linha, salve o arquivo, lembrando que caso você deseje liberar uma faixa de ips, basta usar o *(asterisco), exemplo: 192.168.1.*, todos dessa faixa poderão acessar, ou até mesmo utilizar nome da Estação.</b></p><p></p><p><b>Para aplicar as alterações no arquivo exports para que o mesmo possa ser lido pelo Kernel, é necessario, exportar e reiniciar o serviço, reinicie também o Portmaps, com os comando:</b></p><p>{% highlight bash %}# exportfs -ra</p><p># /etc/init.d/nfs-kernel-server restart</p><p># /etc/init.d/portmap restart{% endhighlight %}</p><p></p><p><b>Agora vamos no cliente(máquina que acessará a pasta).Para isso iremos precisar montar a pasta compartilhada da rede, então nada melhor do que você criar uma pasta para receber a montagem, então crie no local onde você deseja essa pasta, exemplo:</b></p><p>{% highlight bash %}# mkdir /home/usuario/nome_da_pasta{% endhighlight %}</p><p><b>, e então montamos a pasta compartilhada dentro da que criamos com o seguinte comando:</b></p><p>{% highlight bash %}# mount -t nfs 192.168.1.101:/home/server/pasta_compartilhada /home/cliente/pasta_criada{% endhighlight %} <b>, ou seja, a opção (-t) do mount informa o tipo, e eespecificamos o tipo com o nome do tipo que é "nfs", depois informamos o IP que está a pasta compartilhada(o Server) e o local onde montaremos essa pasta, endeço no cliente.</b></p><p></p><p><b>Caso não consiga o acesso, lembre-se de dar permissões locais com o "chmod".Se seu PC pegou um IP via DHCP diferente do que você permitiu no "exports", você pode alterálo com o seguinte comando:</b></p><p>{% highlight bash %}# ifconfig eth0 192.168.1.102/16 dev eth0{% endhighlight %}<b>(note que o ip fica a seu critério e o /16 é a mascara 255.255.0.0 na tabela), se desejar especificar um gateway, utilize:</b>{% highlight bash %}# route add default gw 192.168.1.1 netmask 255.255.0.0 dev eth0{% endhighlight %}<b>,  mas isso é outro assunto...</b></p><p></p><p><b>Para mais informações sobre o NFS, <a href="http://pt.wikipedia.org/wiki/Network_File_System" style="color: blue;" target="_blank">Clique Aqui</a></b></p><p></p><p><b>Pronto, parece ser complicado, mas é muito simples, é só pôr a mão na massa e pronto!Espero que gostem e comentem.</b>
+<div class="separator" style="clear: both; text-align: center;"><a href="http://2.bp.blogspot.com/-n3Uc5NdQi-I/VKmhyvLuNwI/AAAAAAAABH4/sjFm_voXAJw/s1600/www.facebook.com.png" imageanchor="1" style="margin-left: 1em; margin-right: 1em;"><img border="0" src="http://2.bp.blogspot.com/-n3Uc5NdQi-I/VKmhyvLuNwI/AAAAAAAABH4/sjFm_voXAJw/s320/www.facebook.com.png" /></a></div><b>Nesse post vou mostrar como <u>compartilhar uma pasta</u> no <span style="color: blue;">Linux</span> para acesso via rede por comando, o processo é bem simples.Esse acesso será baseado em <span style="color: red;">NFS</span>, não tem nada a ver com o Samba, isso é pra compartilhamento entre duas ou mais máquinas Linux(<i>de Linux pra Linux</i>), mais pra frente vou explicar via samba, mas por enquanto isso aqui é mais importante.</b>
 
-</p>
+<blockquote class="tr_bq"><b>NFS é um protocolo de sistema de arquivos para compartilhamento entre arquivos e diretórios entre computadores conectados em rede.è com NFS que é feito o acesso, existem outras formas, mas certifique-se que essa é a mais simples e a melhor.</b></blockquote>
+<p>Primeiramente temos de ter dois pacotes instalados, precisa ser root </b><i># su</i><b>:</p>
+
+<p><span style="color: red;">1 -</span> </b><i>nfs-kernel-server</i> ---- <b>que deve ser instalado no Server(a máquina que compartilhará o arquivo ou a pasta).</p>
+<p>Para instalá-lo no Debian e similares:</p>
+{% highlight bash %}
+# apt-get install nfs-kernel-server
+{% endhighlight %}
+Convém também instalar o portmap, caso não esteja instalado:
+{% highlight bash %}
+# apt-get install portmap
+{% endhighlight %}
+
+<b style="color: red;">2-</b> <i>nfs-common</i> ---- <b>que deve ser instalado no Client(máquina que acessará a tal pasta ou arquivo).</b>
+<p>Para instalá-lo no Debian e similares:</p>
+{% highlight bash %}
+# apt-get install nfs-common
+{% endhighlight %}
+
+No Server, precisamos informar qual a pasta será compartilhada e quais as permissões, para isso edite o arquivo:
+{% highlight bash %}
+# vim /etc/exports
+{% endhighlight %}
+<p>Após as linhas iniciais e comentado com #(tralha), crie uma nova linha sem #(tralha) e informe o endereço da pasta no PC e as permissões do mesmo, exemplo:</p>
+{% highlight bash %}
+/home/usuario/pasta_a_ser_compartilhada 192.168.1.102(rw,async)
+{% endhighlight %}
+, ou seja, o caminho da pasta;"rw" permissão de leitura(r) e escrita(w); o item async permite que o NFS transfira arquivos de forma "assíncrona", sem precisar esperar pela resposta do cliente; e o IP que pode acessar a pasta que foi compartilhada.Depois de adicionar a linha, salve o arquivo, lembrando que caso você deseje liberar uma faixa de ips, basta usar o *(asterisco), exemplo: 192.168.1.*, todos dessa faixa poderão acessar, ou até mesmo utilizar nome da Estação.
+
+Para aplicar as alterações no arquivo exports para que o mesmo possa ser lido pelo Kernel, é necessario, exportar e reiniciar o serviço, reinicie também o Portmaps, com os comando:
+{% highlight bash %}
+# exportfs -ra
+# /etc/init.d/nfs-kernel-server restart
+# /etc/init.d/portmap restart
+{% endhighlight %}
+
+<p>Agora vamos no cliente(máquina que acessará a pasta).Para isso iremos precisar montar a pasta compartilhada da rede, então nada melhor do que você criar uma pasta para receber a montagem, então crie no local onde você deseja essa pasta, exemplo:</p>
+{% highlight bash %}
+# mkdir /home/usuario/nome_da_pasta
+{% endhighlight %}
+, e então montamos a pasta compartilhada dentro da que criamos com o seguinte comando:
+{% highlight bash %}
+# mount -t nfs 192.168.1.101:/home/server/pasta_compartilhada /home/cliente/pasta_criada
+{% endhighlight %} , ou seja, a opção (-t) do mount informa o tipo, e eespecificamos o tipo com o nome do tipo que é "nfs", depois informamos o IP que está a pasta compartilhada(o Server) e o local onde montaremos essa pasta, endeço no cliente.
+
+<p>Caso não consiga o acesso, lembre-se de dar permissões locais com o "chmod".Se seu PC pegou um IP via DHCP diferente do que você permitiu no "exports", você pode alterálo com o seguinte comando:</p>
+{% highlight bash %}
+# ifconfig eth0 192.168.1.102/16 dev eth0
+{% endhighlight %}(note que o ip fica a seu critério e o /16 é a mascara 255.255.0.0 na tabela), se desejar especificar um gateway, utilize:{% highlight bash %}
+# route add default gw 192.168.1.1 netmask 255.255.0.0 dev eth0
+{% endhighlight %},  mas isso é outro assunto...
+
+Para mais informações sobre o NFS, Clique Aqui
+
+Pronto, parece ser complicado, mas é muito simples, é só pôr a mão na massa e pronto!Espero que gostem e comentem.
+
+

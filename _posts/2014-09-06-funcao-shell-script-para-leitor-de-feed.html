@@ -16,6 +16,98 @@ introduction: Função Shell Script para Leitor de Feed
 ---
 
 <p>
-<a href="http://1.bp.blogspot.com/-IHEj_79kCLo/VAtyUFIWYYI/AAAAAAAAAq0/J2edXEw6AB8/s1600/leitorfeed-shell-sed.png" imageanchor="1"><img border="0" src="http://1.bp.blogspot.com/-IHEj_79kCLo/VAtyUFIWYYI/AAAAAAAAAq0/J2edXEw6AB8/s320/leitorfeed-shell-sed.png" /></a><a href="http://3.bp.blogspot.com/-ncmjb4Jb8Jo/VAtyUPNHlgI/AAAAAAAAAqw/ksxSJB0_VpQ/s1600/feed-sed-shel-script.png" imageanchor="1"><img border="0" src="http://3.bp.blogspot.com/-ncmjb4Jb8Jo/VAtyUPNHlgI/AAAAAAAAAqw/ksxSJB0_VpQ/s320/feed-sed-shel-script.png" /></a></p><p><div class="separator" style="clear: both; text-align: center;"></div></p><p></p><p><blockquote class="tr_bq"><span style="color: purple;"><b>Galera criei essa função como melhoria do script anterior: <a href="http://amigosdopinguim.blogspot.com.br/2013/05/shell-scripting-leitor-feed-com-sed-e.html" target="_blank">Shell Scripting: Leitor Feed com SED e Lynx</a> , no qual está uma bagunça geral, além de eu re-testar e não ter funcionado muito bem.</b></span></blockquote><b></p><p><u>Desta forma criei essa função que talvez também passe por melhorias, no entanto, não a explicarei passo a passo, pois acredito a leitura além de desafio para entendimento, está bem simples.Veja também o cabeçalho que explica como utilizar o <span style="color: red;">SCRIPT</span>.Ou seja, um leitor <span style="color: blue;">feed</span> pra alguns blog que gosto (do <span style="color: #274e13;">Brasil</span>):</u></p><p></p><p></p><p></b></p><p><div class="adp"><ul><li><b>Terminal Root</b></li><li><b>Aurélio</b></li><li><b>Seja Livre</b></li><li><b>Viva o Tux</b></li><li><b>Video Aulas Brasil </b></li></ul></div><b></p><p></p><p>Veja o código: </p><p>PasteBin:</p><p><script src="http://pastebin.com/embed_js.php?i=FTnMK2E5"></script></p><p>CódigoBlog:</p><p></b></p><p><div class="adp"><b>#!/bin/bash</p><p>#-------------------------------------------------------------------------</p><p># feed.sh</p><p># Mostra últimas notícias/posts de um blog/site desejado</p><p># Função Shell Script para Leitor de Feed</p><p># SED, Shell Script</p><p></p><p># Uso: ./feed.sh [quantidade de noticias/posts]</p><p># Digite o número correspondente no menu para escolher o feed desejado e pressione [ENTER].</p><p></p><p># Exemplo: ./feed.sh 6</p><p># Os ESCOLHA UM NÚMERO DAS OPÇÕES ABAIXO:</p><p></p><p>#❶&nbsp; Terminal Root</p><p>#❷&nbsp; Aurélio</p><p>#❸&nbsp; Seja Livre</p><p>#❹&nbsp; Viva o Tux</p><p>#❺&nbsp; Video Aulas Brasil</p><p></p><p></p><p># Se Não passar o 1° parâmetro (da quantidade de noticias/posts), exibirá 5 posts/noticias.</p><p></p><p># Autor: Marcos Oliveira</p><p># Desde: Dom 23 Jun 2013 23:14:54 BRT</p><p># Versão: 2</p><p># Licença: GPL</p><p>#-------------------------------------------------------------------------</p><p></p><p>leitorFeed(){</p><p></p><p>&nbsp;&nbsp;&nbsp; [ -e $1 ] &amp;&amp; max=5 || max=$1</p><p>&nbsp;&nbsp; </p><p>&nbsp;&nbsp;&nbsp; echo -e "\e[45;37;1mOs ESCOLHA UM NÚMERO DAS OPÇÕES ABAIXO:\033[m\n"</p><p>&nbsp;&nbsp; </p><p>&nbsp;&nbsp;&nbsp; echo -e "❶ \e[44;37;1m Terminal Root\033[m"</p><p>&nbsp;&nbsp;&nbsp; echo -e "❷ \e[44;37;1m Aurélio\033[m"</p><p>&nbsp;&nbsp;&nbsp; echo -e "❸ \e[44;37;1m Seja Livre\033[m"</p><p>&nbsp;&nbsp;&nbsp; echo -e "❹ \e[44;37;1m Viva o Tux\033[m"</p><p>&nbsp;&nbsp;&nbsp; echo -e "❺ \e[44;37;1m Video Aulas Brasil\033[m"</p><p>&nbsp;&nbsp;&nbsp; read OPCAO</p><p></p><p></p><p>&nbsp;&nbsp;&nbsp; case "$OPCAO" in</p><p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 1) feed="http://goo.gl/jxw8M";;</p><p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 2) feed="http://goo.gl/OZIuq";;</p><p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 3) feed="http://goo.gl/Rgisz";;</p><p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 4) feed="http://goo.gl/gd6uBr";;</p><p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 5) feed="http://goo.gl/rBzCz";;</p><p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; *) exit 1;;</p><p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; esac</p><p></p><p></p><p>&nbsp;&nbsp;&nbsp; feedxml=".feed"</p><p>&nbsp;&nbsp;&nbsp; newfeed=".newfeed"</p><p>&nbsp;&nbsp;&nbsp; qtde=$(($max + 1))</p><p></p><p>&nbsp;&nbsp;&nbsp; lynx -source $feed &gt; $feedxml</p><p>&nbsp;&nbsp;&nbsp; sed -i 's/&gt;/&gt;\n/g' $feedxml</p><p>&nbsp;&nbsp;&nbsp; sed -n '/&lt;\/title&gt;/p' $feedxml &gt; $newfeed</p><p>&nbsp;&nbsp;&nbsp; sed -i 's/&lt;\/title&gt;//' $newfeed</p><p>&nbsp;&nbsp;&nbsp; sed -i '2,$s/^/ ➜ /' $newfeed</p><p></p><p>&nbsp;&nbsp;&nbsp; titulo=$(sed -n 1p $newfeed)</p><p>&nbsp;&nbsp;&nbsp; posts=$(sed -ne "2,$qtde p" $newfeed)</p><p>&nbsp;&nbsp; </p><p>&nbsp;&nbsp;&nbsp; reset</p><p>&nbsp;&nbsp; </p><p>&nbsp;&nbsp;&nbsp; echo -e "\n \e[33;1m ::::::::: $titulo ::::::::: \e[m \n"</p><p>&nbsp;&nbsp;&nbsp; echo -e "&nbsp; \e[45;37;1m Os $max mais recentes posts são: \e[m"</p><p>&nbsp;&nbsp;&nbsp; echo</p><p>&nbsp;&nbsp;&nbsp; echo -e "\e[37;1m$posts\e[m"</p><p>&nbsp;&nbsp;&nbsp; echo -e "&nbsp; ::::::::::::::::::::::::::::\n"</p><p>&nbsp;&nbsp;&nbsp; rm -rf $feedxml $newfeed</p><p>}</p><p></p><p>reset</p><p>leitorFeed $1</b></div><b></p><p>Até a próxima!</b>
+<a href="http://1.bp.blogspot.com/-IHEj_79kCLo/VAtyUFIWYYI/AAAAAAAAAq0/J2edXEw6AB8/s1600/leitorfeed-shell-sed.png" imageanchor="1"><img border="0" src="http://1.bp.blogspot.com/-IHEj_79kCLo/VAtyUFIWYYI/AAAAAAAAAq0/J2edXEw6AB8/s320/leitorfeed-shell-sed.png" /></a><a href="http://3.bp.blogspot.com/-ncmjb4Jb8Jo/VAtyUPNHlgI/AAAAAAAAAqw/ksxSJB0_VpQ/s1600/feed-sed-shel-script.png" imageanchor="1"><img border="0" src="http://3.bp.blogspot.com/-ncmjb4Jb8Jo/VAtyUPNHlgI/AAAAAAAAAqw/ksxSJB0_VpQ/s320/feed-sed-shel-script.png" /></a>
+<div class="separator" style="clear: both; text-align: center;"></div>
+
+<blockquote class="tr_bq"><span style="color: purple;"><b>Galera criei essa função como melhoria do script anterior: <a href="http://amigosdopinguim.blogspot.com.br/2013/05/shell-scripting-leitor-feed-com-sed-e.html" target="_blank">Shell Scripting: Leitor Feed com SED e Lynx</a> , no qual está uma bagunça geral, além de eu re-testar e não ter funcionado muito bem.</b></span></blockquote><b>
+<u>Desta forma criei essa função que talvez também passe por melhorias, no entanto, não a explicarei passo a passo, pois acredito a leitura além de desafio para entendimento, está bem simples.Veja também o cabeçalho que explica como utilizar o <span style="color: red;">SCRIPT</span>.Ou seja, um leitor <span style="color: blue;">feed</span> pra alguns blog que gosto (do <span style="color: #274e13;">Brasil</span>):</u>
+
+
+</b>
+<div class="adp"><ul><li><b>Terminal Root</b></li><li><b>Aurélio</b></li><li><b>Seja Livre</b></li><li><b>Viva o Tux</b></li><li><b>Video Aulas Brasil </b></li></ul></div><b>
+
+Veja o código: 
+PasteBin:
+<iframe src="http://pastebin.com/raw/FTnMK2E5" style="border:none;width:100%;"></iframe>
+CódigoBlog:
+</b>
+<div class="adp"><b>#!/bin/bash
+#-------------------------------------------------------------------------
+# feed.sh
+# Mostra últimas notícias/posts de um blog/site desejado
+# Função Shell Script para Leitor de Feed
+# SED, Shell Script
+
+# Uso: ./feed.sh [quantidade de noticias/posts]
+# Digite o número correspondente no menu para escolher o feed desejado e pressione [ENTER].
+
+# Exemplo: ./feed.sh 6
+# Os ESCOLHA UM NÚMERO DAS OPÇÕES ABAIXO:
+
+#❶ Terminal Root
+#❷ Aurélio
+#❸ Seja Livre
+#❹ Viva o Tux
+#❺ Video Aulas Brasil
+
+
+# Se Não passar o 1° parâmetro (da quantidade de noticias/posts), exibirá 5 posts/noticias.
+
+# Autor: Marcos Oliveira
+# Desde: Dom 23 Jun 2013 23:14:54 BRT
+# Versão: 2
+# Licença: GPL
+#-------------------------------------------------------------------------
+
+leitorFeed(){
+
+ [ -e $1 ] &amp;&amp; max=5 || max=$1
+ 
+ echo -e "\e[45;37;1mOs ESCOLHA UM NÚMERO DAS OPÇÕES ABAIXO:\033[m\n"
+ 
+ echo -e "❶ \e[44;37;1m Terminal Root\033[m"
+ echo -e "❷ \e[44;37;1m Aurélio\033[m"
+ echo -e "❸ \e[44;37;1m Seja Livre\033[m"
+ echo -e "❹ \e[44;37;1m Viva o Tux\033[m"
+ echo -e "❺ \e[44;37;1m Video Aulas Brasil\033[m"
+ read OPCAO
+
+
+ case "$OPCAO" in
+ 1) feed="http://goo.gl/jxw8M";;
+ 2) feed="http://goo.gl/OZIuq";;
+ 3) feed="http://goo.gl/Rgisz";;
+ 4) feed="http://goo.gl/gd6uBr";;
+ 5) feed="http://goo.gl/rBzCz";;
+ *) exit 1;;
+ esac
+
+
+ feedxml=".feed"
+ newfeed=".newfeed"
+ qtde=$(($max + 1))
+
+ lynx -source $feed > $feedxml
+ sed -i 's/>/>\n/g' $feedxml
+ sed -n '/<\/title>/p' $feedxml > $newfeed
+ sed -i 's/<\/title>//' $newfeed
+ sed -i '2,$s/^/ ➜ /' $newfeed
+
+ titulo=$(sed -n 1p $newfeed)
+ posts=$(sed -ne "2,$qtde p" $newfeed)
+ 
+ reset
+ 
+ echo -e "\n \e[33;1m ::::::::: $titulo ::::::::: \e[m \n"
+ echo -e " \e[45;37;1m Os $max mais recentes posts são: \e[m"
+ echo
+ echo -e "\e[37;1m$posts\e[m"
+ echo -e " ::::::::::::::::::::::::::::\n"
+ rm -rf $feedxml $newfeed
+}
+
+reset
+leitorFeed $1</b></div><b>
+Até a próxima!</b>
 
 </p>

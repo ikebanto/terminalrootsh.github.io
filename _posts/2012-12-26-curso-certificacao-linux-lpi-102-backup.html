@@ -17,6 +17,218 @@ introduction: 'Curso Certificação Linux LPI-102: Backup, compactação e desco
 ---
 
 <p>
-<div class="separator" style="clear: both; text-align: center;"><a href="http://2.bp.blogspot.com/-RZXyiIOr1fY/UNtnbgJODTI/AAAAAAAAA5E/vFskjYfGdLE/s1600/add-folder-to-archive.png" imageanchor="1" style="margin-left: 1em; margin-right: 1em;"><img border="0" src="http://2.bp.blogspot.com/-RZXyiIOr1fY/UNtnbgJODTI/AAAAAAAAA5E/vFskjYfGdLE/s1600/add-folder-to-archive.png" /></a></div><!-------------------------------------------------><script type="text/javascript"><!-- google_ad_client = "ca-pub-5528601613414387"; google_ad_host = "pub-1556223355139109"; /* quadrados */ google_ad_slot = "9713010559"; google_ad_width = 200; google_ad_height = 200; //</script><script src="http://pagead2.googlesyndication.com/pagead/show_ads.js" type="text/javascript"></script><!-----------------------------------------------><b></p><p></b></p><p><blockquote class="tr_bq"><b>&nbsp;A compressão de dados é o ato de reduzir o espaço ocupado por dados num determinado dispositivo. Essa operação é realizada através de diversos algoritmos de compressão, reduzindo a quantidade de Bytes para representar um dado, sendo esse dado uma imagem, um texto, ou um arquivo (ficheiro) qualquer.</b></p><p></p><p><b>Comprimir dados destina-se também a retirar a redundância, baseando-se que muitos dados contêm informações redundantes que podem ou precisam ser eliminadas de alguma forma. Essa forma é através de uma regra, chamada de código ou protocolo, que, quando seguida, elimina os bits redundantes de informações, de modo a diminuir seu tamanho nos ficheiros. Por exemplo, a sequência "</b>AAAAAA<b>" que ocupa 6 bytes, poderia ser representada pela sequência "6A", que ocupa 2 bytes, economizando 67% de espaço.</b></blockquote><b></p><p><u>&nbsp;Alguns compactadores de arquivos:</u></p><p></p><p> </b></p><p><div class="separator" style="clear: both; text-align: center;"><b><a href="http://1.bp.blogspot.com/-BcR_sDb8yRo/UNtlqgJvYxI/AAAAAAAAA4c/8kYcPn1lHAw/s1600/compactadores+do+linux.png" imageanchor="1" style="margin-left: 1em; margin-right: 1em;"><img border="0" height="400" src="http://1.bp.blogspot.com/-BcR_sDb8yRo/UNtlqgJvYxI/AAAAAAAAA4c/8kYcPn1lHAw/s400/compactadores+do+linux.png" width="72" /></a></b></div><b> </p><p></p><p>&nbsp;<span style="font-size: large;">TAR</span></p><p></p><p>&nbsp;<i><u>MIME: &nbsp;&nbsp; &nbsp;application/x-tar</u></i></b></p><p><blockquote class="tr_bq"><b>&nbsp;TAR ou tar (abreviatura de Tape ARchive), é um formato de arquivamento de arquivos (ficheiros). Apesar do nome "tar" ser derivado de "tape archive", o seu uso não se restringe a fitas magnéticas. Ele se tornou largamente usado para armazenar vários arquivos em um único, preservando informações como datas e permissões. Normalmente é produzido pelo comando "tar". </b></blockquote><b></p><p><u>&nbsp;Algumas das opções mais frequentes:</u>{% highlight bash %}</p><p></p><p>&nbsp;&nbsp;&nbsp; -c - cria um novo arquivo tar;</p><p>&nbsp;&nbsp;&nbsp; -M - cria, lista ou extrai um arquivo multivolume;</p><p>&nbsp;&nbsp;&nbsp; -p - mantém as permissões originais do(s) arquivo(s);</p><p>&nbsp;&nbsp;&nbsp; -r - acrescenta arquivos a um arquivo tar;</p><p>&nbsp;&nbsp;&nbsp; -t - exibe o conteúdo de um arquivo tar;</p><p>&nbsp;&nbsp;&nbsp; -v - exibe detalhes da operação;</p><p>&nbsp;&nbsp;&nbsp; -w - pede confirmação antes de cada ação;</p><p>&nbsp;&nbsp;&nbsp; -x - extrai arquivos de um arquivo tar;</p><p>&nbsp;&nbsp;&nbsp; -z - comprime ou extrai arquivos tar resultante com o gzip;</p><p>&nbsp;&nbsp;&nbsp; -j - comprime ou extrai arquivos tar resultante com o bz2;</p><p>&nbsp;&nbsp;&nbsp; -f - especifica o arquivo tar a ser usado;</p><p>&nbsp;&nbsp;&nbsp; -C - especifica o diretório dos arquivos a serem armazenados.</p><p>&nbsp;&nbsp;{% endhighlight %} </p><p>&nbsp;<span style="font-size: large;">GZIP</span></b></p><p><blockquote class="tr_bq"><b>&nbsp;Gzip é a abreviação de GNU zip, um Software Livre de compressão sem perda de dados, criado por Jean-loup Gailly e Mark Adler. O programa é baseado no algoritmo DEFLATE. A extensão gerada pelo gzip é o .gz, e seu formato contém apenas um arquivo comprimido. Em sistemas UNIX é comum gerar um arquivo contendo diversos outros arquivos com o programa tar, e depois comprimi-lo com o gzip, gerando um arquivo .tar.gz.</b></p><p></p><p><b>Não confundir com o formato ZIP.</b></blockquote><b></p><p><span style="font-size: large;">&nbsp;TAR.BZ2</span></b></p><p><blockquote class="tr_bq"><b>&nbsp;Formato de compactação de arquivos, muito utilizado em sistemas Unix-Like.</b></blockquote><b></p><p></p><p>&nbsp;<span style="color: blue;">COMPACTAÇÃO</span></p><p></p><p>Compactando arquivos .tar:</p><p></p><p>{% highlight bash %}$&nbsp; tar -cf arquivo.tar [arquivo ou pasta]{% endhighlight %}</p><p></p><p>Criando arquivos gzip(depois de ter criado o tar primeiro):</p><p></p><p>{% highlight bash %}$&nbsp; gzip arquivo.tar{% endhighlight %}</p><p></p><p>Compactando arquivos tar.gz (TAR com gzip de uma só vez):</p><p></p><p>{% highlight bash %}$&nbsp; tar -zcvf arquivos.tar.gz [arquivo ou pasta]{% endhighlight %}</p><p></p><p>Compactando arquivos no formato tar.bz2:</p><p></p><p>{% highlight bash %}$&nbsp; tar -jcvf arquivos.tar.bz2 [arquivo ou pasta]{% endhighlight %}</p><p></p><p>Compactando arquivos tar de uma outra forma:</p><p></p><p>{% highlight bash %}$&nbsp; tar -c [arquivo ou pasta] &gt; arquivo.tar{% endhighlight %}</p><p></p><p>Compactando outros formatos (rar, zip e afins):</p><p></p><p>&nbsp;Instale o suporte:</p><p></p><p>{% highlight bash %}#&nbsp; apt-get install rar unrar p7zip{% endhighlight %}</p><p></p><p>{% highlight bash %}$ rar a arquivo.rar [arquivo ou pasta]{% endhighlight %}</p><p>{% highlight bash %}$ zip -r arquivo.zip [arquivo ou pasta]{% endhighlight %}</p><p></p><p><span style="color: red;">&nbsp;DESCOMPACTAÇÃO</span></p><p></p><p>Descompactando arquivos .tar:</p><p></p><p>{% highlight bash %}$&nbsp; tar -xf arquivo.tar [arquivo ou pasta]{% endhighlight %}</p><p></p><p>Descompactando arquivos gzip(depois de ter criado o tar primeiro):</p><p></p><p>{% highlight bash %}$&nbsp; gzip -d arquivo.tar.gz{% endhighlight %}</p><p></p><p>Descompactando arquivos tar.gz (TAR com gzip de uma só vez):</p><p></p><p>{% highlight bash %}$&nbsp; tar -zxvf arquivos.tar.gz{% endhighlight %}</p><p></p><p>Descompactando arquivos no formato tar.bz2:</p><p></p><p>{% highlight bash %}$&nbsp; tar -jxvf arquivos.tar.bz2 [arquivo ou pasta]{% endhighlight %}</p><p></p><p>Descompactando outros formatos(rar, zip e afins):</p><p></p><p>&nbsp;Instale o suporte:</p><p></p><p>{% highlight bash %}#&nbsp; apt-get install rar unrar p7zip{% endhighlight %}</p><p></p><p>{% highlight bash %}$ rar -e arquivo.rar{% endhighlight %}</p><p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; ou</p><p>{% highlight bash %}$ unrar x arquivo.rar{% endhighlight %}</p><p></p><p>{% highlight bash %}$ unzip arquivo.zip{% endhighlight %}</p><p></p><p><span style="font-size: x-large;">O comando <i>dd</i> (para Backup)</span></b></p><p><blockquote class="tr_bq"><b>&nbsp;O comando dd é um clássico dos ambientes Unix-Like, com ele você pode fazer uma cópia exata de um arquivo, ou seja uma cópia bit a bit. Sintaxe básica:</b></p><p></p><p><b>&nbsp;&nbsp;&nbsp; dd if=origem of=destino </b></blockquote><b>&nbsp;&nbsp; </p><p>Exemplos:</p><p></p><p></p><p>Cópia do HD para um arquivo:</p><p></p><p>{% highlight bash %}# dd if=/dev/sda of=~/backup_hd.img{% endhighlight %}</p><p></p><p>Será feita uma cópia exata do HD dentro do diretório do root com o nome "backup_hd.img". Se quiser restaurar o "backp_hd.img" no /dev/sda2 (lembre que o sda2 deve ter pelo menos o mesmo tamanho do arquivo "backup.hd" se não os resultados poderão ser desastrosos):</p><p></p><p>{% highlight bash %}# dd if=backup_hd.img of=/dev/sda2{% endhighlight %}</p><p></p><p>Cópia de partição para o partição:</p><p></p><p>{% highlight bash %}# dd if=/dev/sda9 of=/dev/sda11{% endhighlight %}</p><p></p><p>Será feita cópia da partição /dev/sda9 para a /dev/sda11.</p><p></p><p>Fazendo uma cópia do HD para um arquivo compactado:</p><p></p><p>{% highlight bash %}# dd if=/dev/sda1 | gzip &gt; backup_hd.img.gz{% endhighlight %}</p><p></p><p>e para descompactar:</p><p></p><p>{% highlight bash %}# gzip -d -c backup_hd.img.gz | dd of=/dev/sda2{% endhighlight %}</p><p></p><p>O comando acima está descompactando o arquivo beckup_hd.img.gz no HD em /dev/sda2.</p><p></p><p>Criar uma imagem ISO:</p><p></p><p>{% highlight bash %}# dd if=diretorio of=iso_do_diretorio.iso{% endhighlight %}</p><p></p><p>Para visualizar progresso de cópia de arquivos, vá em outro terminal e execute:</p><p></p><p>{% highlight bash %}$&nbsp; watch df -h{% endhighlight %}</p><p></p><p>Para converter todos as letras maiúsculas de um documento para letras minúsculas:</p><p></p><p>{% highlight bash %}$&nbsp; dd if=ficheiro1 of=ficheiro2 conv=lcase{% endhighlight %}</p><p></p><p>Se quisermos converter todas as letras do ficheiro2 para maiúsculas:</p><p></p><p>{% highlight bash %}$&nbsp; dd if=ficheiro2 of=ficheiro3 conv=ucase{% endhighlight %}</p><p></p><p>Para zerar (formatar) o seu HD (use com cuidado!):</p><p></p><p>{% highlight bash %}# dd if=/dev/zero of=/dev/hda{% endhighlight %}</p><p></p><p>Gerar senhas de forma (pseudo) aleatória:</p><p></p><p>{% highlight bash %}$&nbsp; dd if=/dev/random bs=2 count=6 | base64 -</p><p>r2KWFW83e9nTniVR</p><p>6+0 registros de entrada</p><p>6+0 registros de saída</p><p>12 bytes (12 B) copiados, 0,000100641 s, 119 kB/s{% endhighlight %}</p><p></p><p>Para automatizar tarefas, você pode utilizar o Cron e Crontab, veja esse post para mais informações:</p><p><a href="http://marcospinguim.blogspot.com.br/2011/11/como-utilizar-o-crontab.html" target="_blank"> Como utilizar o Crontab </a></b>
+</b>
+<blockquote class="tr_bq"><b>A compressão de dados é o ato de reduzir o espaço ocupado por dados num determinado dispositivo. Essa operação é realizada através de diversos algoritmos de compressão, reduzindo a quantidade de Bytes para representar um dado, sendo esse dado uma imagem, um texto, ou um arquivo (ficheiro) qualquer.</b>
+
+<b>Comprimir dados destina-se também a retirar a redundância, baseando-se que muitos dados contêm informações redundantes que podem ou precisam ser eliminadas de alguma forma. Essa forma é através de uma regra, chamada de código ou protocolo, que, quando seguida, elimina os bits redundantes de informações, de modo a diminuir seu tamanho nos ficheiros. Por exemplo, a sequência "</b>AAAAAA<b>" que ocupa 6 bytes, poderia ser representada pela sequência "6A", que ocupa 2 bytes, economizando 67% de espaço.</b></blockquote><b>
+<u>Alguns compactadores de arquivos:</u>
+
+ </b>
+<div class="separator" style="clear: both; text-align: center;"><b><a href="http://1.bp.blogspot.com/-BcR_sDb8yRo/UNtlqgJvYxI/AAAAAAAAA4c/8kYcPn1lHAw/s1600/compactadores+do+linux.png" imageanchor="1" style="margin-left: 1em; margin-right: 1em;"><img border="0" height="400" src="http://1.bp.blogspot.com/-BcR_sDb8yRo/UNtlqgJvYxI/AAAAAAAAA4c/8kYcPn1lHAw/s400/compactadores+do+linux.png" width="72" /></a></b></div><b> 
+
+<span style="font-size: large;">TAR</span>
+
+<i><u>MIME:  application/x-tar</u></i></b>
+<blockquote class="tr_bq"><b>TAR ou tar (abreviatura de Tape ARchive), é um formato de arquivamento de arquivos (ficheiros). Apesar do nome "tar" ser derivado de "tape archive", o seu uso não se restringe a fitas magnéticas. Ele se tornou largamente usado para armazenar vários arquivos em um único, preservando informações como datas e permissões. Normalmente é produzido pelo comando "tar". </b></blockquote><b>
+Algumas das opções mais frequentes:{% highlight bash %}
+
+
+ -c - cria um novo arquivo tar;
+ -M - cria, lista ou extrai um arquivo multivolume;
+ -p - mantém as permissões originais do(s) arquivo(s);
+ -r - acrescenta arquivos a um arquivo tar;
+ -t - exibe o conteúdo de um arquivo tar;
+ -v - exibe detalhes da operação;
+ -w - pede confirmação antes de cada ação;
+ -x - extrai arquivos de um arquivo tar;
+ -z - comprime ou extrai arquivos tar resultante com o gzip;
+ -j - comprime ou extrai arquivos tar resultante com o bz2;
+ -f - especifica o arquivo tar a ser usado;
+ -C - especifica o diretório dos arquivos a serem armazenados.
+
+{% endhighlight %} 
+<span style="font-size: large;">GZIP</span></b>
+<blockquote class="tr_bq"><b>Gzip é a abreviação de GNU zip, um Software Livre de compressão sem perda de dados, criado por Jean-loup Gailly e Mark Adler. O programa é baseado no algoritmo DEFLATE. A extensão gerada pelo gzip é o .gz, e seu formato contém apenas um arquivo comprimido. Em sistemas UNIX é comum gerar um arquivo contendo diversos outros arquivos com o programa tar, e depois comprimi-lo com o gzip, gerando um arquivo .tar.gz.</b>
+
+<b>Não confundir com o formato ZIP.</b></blockquote><b>
+<span style="font-size: large;">TAR.BZ2</span></b>
+<blockquote class="tr_bq"><b>Formato de compactação de arquivos, muito utilizado em sistemas Unix-Like.</b></blockquote><b>
+
+<span style="color: blue;">COMPACTAÇÃO</span>
+
+Compactando arquivos .tar:
+
+{% highlight bash %}
+$ tar -cf arquivo.tar [arquivo ou pasta]
+{% endhighlight %}
+
+Criando arquivos gzip(depois de ter criado o tar primeiro):
+
+{% highlight bash %}
+$ gzip arquivo.tar
+{% endhighlight %}
+
+Compactando arquivos tar.gz (TAR com gzip de uma só vez):
+
+{% highlight bash %}
+$ tar -zcvf arquivos.tar.gz [arquivo ou pasta]
+{% endhighlight %}
+
+Compactando arquivos no formato tar.bz2:
+
+{% highlight bash %}
+$ tar -jcvf arquivos.tar.bz2 [arquivo ou pasta]
+{% endhighlight %}
+
+Compactando arquivos tar de uma outra forma:
+
+{% highlight bash %}
+$ tar -c [arquivo ou pasta] > arquivo.tar
+{% endhighlight %}
+
+Compactando outros formatos (rar, zip e afins):
+
+Instale o suporte:
+
+{% highlight bash %}
+# apt-get install rar unrar p7zip
+{% endhighlight %}
+
+{% highlight bash %}
+$ rar a arquivo.rar [arquivo ou pasta]
+{% endhighlight %}
+{% highlight bash %}
+$ zip -r arquivo.zip [arquivo ou pasta]
+{% endhighlight %}
+
+<span style="color: red;">DESCOMPACTAÇÃO</span>
+
+Descompactando arquivos .tar:
+
+{% highlight bash %}
+$ tar -xf arquivo.tar [arquivo ou pasta]
+{% endhighlight %}
+
+Descompactando arquivos gzip(depois de ter criado o tar primeiro):
+
+{% highlight bash %}
+$ gzip -d arquivo.tar.gz
+{% endhighlight %}
+
+Descompactando arquivos tar.gz (TAR com gzip de uma só vez):
+
+{% highlight bash %}
+$ tar -zxvf arquivos.tar.gz
+{% endhighlight %}
+
+Descompactando arquivos no formato tar.bz2:
+
+{% highlight bash %}
+$ tar -jxvf arquivos.tar.bz2 [arquivo ou pasta]
+{% endhighlight %}
+
+Descompactando outros formatos(rar, zip e afins):
+
+Instale o suporte:
+
+{% highlight bash %}
+# apt-get install rar unrar p7zip
+{% endhighlight %}
+
+{% highlight bash %}
+$ rar -e arquivo.rar
+{% endhighlight %}
+ ou
+{% highlight bash %}
+$ unrar x arquivo.rar
+{% endhighlight %}
+
+{% highlight bash %}
+$ unzip arquivo.zip
+{% endhighlight %}
+
+<span style="font-size: x-large;">O comando <i>dd</i> (para Backup)</span></b>
+<blockquote class="tr_bq"><b>O comando dd é um clássico dos ambientes Unix-Like, com ele você pode fazer uma cópia exata de um arquivo, ou seja uma cópia bit a bit. Sintaxe básica:</b>
+
+<b> dd if=origem of=destino </b></blockquote><b> 
+Exemplos:
+
+
+Cópia do HD para um arquivo:
+
+{% highlight bash %}
+# dd if=/dev/sda of=~/backup_hd.img
+{% endhighlight %}
+
+Será feita uma cópia exata do HD dentro do diretório do root com o nome "backup_hd.img". Se quiser restaurar o "backp_hd.img" no /dev/sda2 (lembre que o sda2 deve ter pelo menos o mesmo tamanho do arquivo "backup.hd" se não os resultados poderão ser desastrosos):
+
+{% highlight bash %}
+# dd if=backup_hd.img of=/dev/sda2
+{% endhighlight %}
+
+Cópia de partição para o partição:
+
+{% highlight bash %}
+# dd if=/dev/sda9 of=/dev/sda11
+{% endhighlight %}
+
+Será feita cópia da partição /dev/sda9 para a /dev/sda11.
+
+Fazendo uma cópia do HD para um arquivo compactado:
+
+{% highlight bash %}
+# dd if=/dev/sda1 | gzip > backup_hd.img.gz
+{% endhighlight %}
+
+e para descompactar:
+
+{% highlight bash %}
+# gzip -d -c backup_hd.img.gz | dd of=/dev/sda2
+{% endhighlight %}
+
+O comando acima está descompactando o arquivo beckup_hd.img.gz no HD em /dev/sda2.
+
+Criar uma imagem ISO:
+
+{% highlight bash %}
+# dd if=diretorio of=iso_do_diretorio.iso
+{% endhighlight %}
+
+Para visualizar progresso de cópia de arquivos, vá em outro terminal e execute:
+
+{% highlight bash %}
+$ watch df -h
+{% endhighlight %}
+
+Para converter todos as letras maiúsculas de um documento para letras minúsculas:
+
+{% highlight bash %}
+$ dd if=ficheiro1 of=ficheiro2 conv=lcase
+{% endhighlight %}
+
+Se quisermos converter todas as letras do ficheiro2 para maiúsculas:
+
+{% highlight bash %}
+$ dd if=ficheiro2 of=ficheiro3 conv=ucase
+{% endhighlight %}
+
+Para zerar (formatar) o seu HD (use com cuidado!):
+
+{% highlight bash %}
+# dd if=/dev/zero of=/dev/hda
+{% endhighlight %}
+
+Gerar senhas de forma (pseudo) aleatória:
+
+{% highlight bash %}
+$ dd if=/dev/random bs=2 count=6 | base64 -
+r2KWFW83e9nTniVR
+6+0 registros de entrada
+6+0 registros de saída
+12 bytes (12 B) copiados, 0,000100641 s, 119 kB/s
+{% endhighlight %}
+
+Para automatizar tarefas, você pode utilizar o Cron e Crontab, veja esse post para mais informações:
+<a href="http://marcospinguim.blogspot.com.br/2011/11/como-utilizar-o-crontab.html" target="_blank"> Como utilizar o Crontab </a></b>
 
 </p>

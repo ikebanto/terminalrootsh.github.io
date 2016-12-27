@@ -14,6 +14,17 @@ introduction: 'Shell: Extrair os números do CPF formatado'
 ---
 
 <p>
-<div class="separator" style="clear: both; text-align: center;"><a href="http://2.bp.blogspot.com/-PKtojZWpKC8/U9w1-TXvi2I/AAAAAAAAAao/2yJQaLRLngY/s1600/crunchbang_penguin_by_falldown_aka_chris-d4nj851.png" imageanchor="1" style="margin-left: 1em; margin-right: 1em;"><img border="0" src="http://2.bp.blogspot.com/-PKtojZWpKC8/U9w1-TXvi2I/AAAAAAAAAao/2yJQaLRLngY/s320/crunchbang_penguin_by_falldown_aka_chris-d4nj851.png" height="195" width="200" /></a></div></p><p><blockquote class="tr_bq"><b>O tr é um comando muito versátil, especialmente útil para apagar caracteres indesejados.</b></p><p><b>Digamos que você peça ao usuário para digitar o número do CPF. Esse  número poderá vir das mais diferentes formas, com espaços, hífens,  pontos, ponto-e-vírgula e sabe mais o que que a criatividade da pessoa  pode produzir.</b></blockquote>Para preservar sua sanidade, tudo o que você quer são os números,  ignorando toda a pontuação, espaços e outros caracteres. Com o tr é  fácil.</p><p><div class="adp">$ echo 123.456.789-00 | tr -d 0-9 ..-</div></p><p></p><p>A opção -d apaga coisas e o 0-9 representa os números de zero a nove.  Ah, note que não é necessário o uso de colchetes ao redor “[0-9]“, como  muita gente costuma fazer.</p><p>Mas este comando apagou os números e deixou a pontuação, quando o  desejado é o justamente o contrário. Então basta usar a opção -c, que  inverte o sentido da expressão, fazendo o tr apagar tudo <b>exceto</b> os números:</p><p><div class="adp">$ echo 123.456.789-00 | tr -c -d 0-9 12345678900</div></p><p></p><p></p><p></p><p><span style="color: #999999;"><span style="font-size: x-small;"><i>Via: Codare</i></span></span>
+<div class="separator" style="clear: both; text-align: center;"><a href="http://2.bp.blogspot.com/-PKtojZWpKC8/U9w1-TXvi2I/AAAAAAAAAao/2yJQaLRLngY/s1600/crunchbang_penguin_by_falldown_aka_chris-d4nj851.png" imageanchor="1" style="margin-left: 1em; margin-right: 1em;"><img border="0" src="http://2.bp.blogspot.com/-PKtojZWpKC8/U9w1-TXvi2I/AAAAAAAAAao/2yJQaLRLngY/s320/crunchbang_penguin_by_falldown_aka_chris-d4nj851.png" height="195" width="200" /></a></div>
+<blockquote class="tr_bq"><b>O tr é um comando muito versátil, especialmente útil para apagar caracteres indesejados.</b>
+<b>Digamos que você peça ao usuário para digitar o número do CPF. Esse  número poderá vir das mais diferentes formas, com espaços, hífens,  pontos, ponto-e-vírgula e sabe mais o que que a criatividade da pessoa  pode produzir.</b></blockquote>Para preservar sua sanidade, tudo o que você quer são os números,  ignorando toda a pontuação, espaços e outros caracteres. Com o tr é  fácil.
+<div class="adp">$ echo 123.456.789-00 | tr -d 0-9 ..-</div>
+
+A opção -d apaga coisas e o 0-9 representa os números de zero a nove.  Ah, note que não é necessário o uso de colchetes ao redor “[0-9]“, como  muita gente costuma fazer.
+Mas este comando apagou os números e deixou a pontuação, quando o  desejado é o justamente o contrário. Então basta usar a opção -c, que  inverte o sentido da expressão, fazendo o tr apagar tudo <b>exceto</b> os números:
+<div class="adp">$ echo 123.456.789-00 | tr -c -d 0-9 12345678900</div>
+
+
+
+<span style="color: #999999;"><span style="font-size: x-small;"><i>Via: Codare</i></span></span>
 
 </p>

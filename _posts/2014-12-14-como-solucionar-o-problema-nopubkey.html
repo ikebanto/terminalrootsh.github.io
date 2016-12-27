@@ -24,31 +24,43 @@ introduction: Como solucionar o problema NO_PUBKEY
 
 <p></p>
 {% highlight bash %}
+
+
 {% endhighlight %}
 
 {% highlight bash %}
+
 W: GPG error: http://www.debian-multimedia.org squeeze Release:
 The following signatures couldn't be verified because the public key is not available: NO_PUBKEY 07DC563D1F41B907
+
 {% endhighlight %}
 
 <p>1-adicione a linha do repositório no final do arquivo do source.list(>>):</p>
 {% highlight bash %}
+
 echo 'deb http://www.las.ic.unicamp.br/pub/debian-multimedia/ stable main' >> /etc/apt/sources.list
+
 {% endhighlight %}
 
 <p>2-Depois instale o debian-keyring package:</p>
 {% highlight bash %}
+
 apt-get install debian-keyring
+
 {% endhighlight %}
 
 <p>3-Depois execute esse comando, onde [numero-da-chave] é o número que vc obteve do erro</p>
 {% highlight bash %}
+
 gpg --keyring /usr/share/keyrings/debian-keyring.gpg -a --export [numero-da-chave] |apt-key add -
+
 {% endhighlight %}
 
 <p>4-Agora rode novamente o update e o erro não existirá mais</p>
 {% highlight bash %}
+
 apt-get update
+
 {% endhighlight %}
 
 

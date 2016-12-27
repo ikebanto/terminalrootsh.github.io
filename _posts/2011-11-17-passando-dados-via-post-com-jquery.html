@@ -14,7 +14,8 @@ introduction: Passando dados via POST com JQuery
 ---
 
 <p>
-<b>Nesse exemplo tem o básico só para causar o entendimento mesmo.servirá para suas aplicações em que você deseja que não haja carregamento de página.Vou dividir em 3 arquivos, preste atenção nos comentários(<span style="color: blue;">em AZUL</span>) para entender melhor:</b></p><p>
+<p>Nesse exemplo tem o básico só para causar o entendimento mesmo.servirá para suas aplicações em que você deseja que não haja carregamento de página.Vou dividir em 3 arquivos, preste atenção nos comentários(<span style="color: blue;">em AZUL</span>) para entender melhor:</p>
+
 
 
 
@@ -26,7 +27,8 @@ introduction: Passando dados via POST com JQuery
 
 
 
-</p><p><blockquote class="tr_bq">No index.php contém uma: [DIV id=FORM],[DIV id=MOSTRAR, display:none;] e os inputs com CLASSes definidas.</blockquote>
+
+<blockquote class="tr_bq">No index.php contém uma: [DIV id=FORM],[DIV id=MOSTRAR, display:none;] e os inputs com CLASSes definidas.</blockquote>
 
 
 
@@ -36,22 +38,26 @@ introduction: Passando dados via POST com JQuery
  <input type="submit" name="exibir" value="Minhas Informações" class="exibir" />   
  </div><!--FORM--> 
  <div id="mostrar" style="display:none;"></div>
+
 {% endhighlight %}
 
 
 
-</p><p><blockquote class="tr_bq">No head do index.php deve existir o link pro JQuery e pro carregar.js que mostro logo abaixo:</blockquote>
+
+<blockquote class="tr_bq">No head do index.php deve existir o link pro JQuery e pro carregar.js que mostro logo abaixo:</blockquote>
 
 
 
 {% highlight html %}
  <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.4.2/jquery.min.js"></script> 
  <script type="text/javascript" src="carregamento.js"></script>
+
 {% endhighlight %}
 
 
 
-</p><p><blockquote class="tr_bq"><span style="font-size: large;"><b>carregar.js</b></span></blockquote>
+
+<blockquote class="tr_bq"><span style="font-size: large;"><b>carregar.js</b></span></blockquote>
 
 
 
@@ -71,11 +77,13 @@ $.post("dados.php", {nome: nome, exibir: exibir}, function(mostrar){
 /*a div mostrar que estava com display none agora será exibida, pois nela estará os dados do dados.php*/ 
 $("#mostrar").fadeIn(2000).html(mostrar)   }); });});
 
+
 {% endhighlight %}
 
 
 
-</p><p><blockquote class="tr_bq">e o dados.php, servirá pra ver se os dados estão sendo passados corretamente.</blockquote>
+
+<blockquote class="tr_bq">e o dados.php, servirá pra ver se os dados estão sendo passados corretamente.</blockquote>
 
 
 
@@ -88,10 +96,12 @@ if(isset($exibir)){
 	echo "Sem valor no isset"; 
 }
 ?>
+
 {% endhighlight %}
 
 
 
-</p><p><b>Esse é o básico, mas só com isso pode-se ir "Ao infinito e Além", só depende de você essa evolução!</b>
+
+<p>Esse é o básico, mas só com isso pode-se ir "Ao infinito e Além", só depende de você essa evolução!</p>
 
 </p>

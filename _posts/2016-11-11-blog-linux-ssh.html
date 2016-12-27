@@ -15,7 +15,34 @@ introduction: Como Fazer Acesso Remoto Gráfico no Linux
 ---
 
 <p>
-<div class="separator" style="clear: both; text-align: center;"><a href="https://2.bp.blogspot.com/-i4o-bsCptnw/WB5ZPQbkzpI/AAAAAAAAA9M/NkCutIZ6GzMNjejJWOIknNjgfqiPdFm5QCLcB/s1600/blog-linux-ssh-x-window.png" imageanchor="1" style="margin-left: 1em; margin-right: 1em;"><img border="0" height="181" src="https://2.bp.blogspot.com/-i4o-bsCptnw/WB5ZPQbkzpI/AAAAAAAAA9M/NkCutIZ6GzMNjejJWOIknNjgfqiPdFm5QCLcB/s320/blog-linux-ssh-x-window.png" width="320" /></a></div></p><p></p><p><div style="text-align: center;"><iframe allowfullscreen="" frameborder="0" height="315" src="https://www.youtube.com/embed/wI7ek1ZHUxQ" width="560"></iframe></div></p><p></p><p><span style="font-size: large;">Instalar:</span></p><p>{% highlight bash %}apt-get install tightvncserver tightvnc-java xtightvncviewer{% endhighlight %}</p><p></p><p><span style="font-size: large;">Configura a senha:</span></p><p>{% highlight bash %}vncpasswd{% endhighlight %}</p><p></p><p><span style="font-size: large;">Iniciar o VNC no servidor:</span></p><p>{% highlight bash %}vncserver{% endhighlight %}</p><p></p><p><span style="font-size: large;">Caso preciso, usar o nmap:</span></p><p>{% highlight bash %}nmap [IP]{% endhighlight %}</p><p></p><p><span style="font-size: large;">Iniciar sessão:</span></p><p>{% highlight bash %}vncviewer [IP]:[porta]{% endhighlight %}
+<div class="separator" style="clear: both; text-align: center;"><a href="https://2.bp.blogspot.com/-i4o-bsCptnw/WB5ZPQbkzpI/AAAAAAAAA9M/NkCutIZ6GzMNjejJWOIknNjgfqiPdFm5QCLcB/s1600/blog-linux-ssh-x-window.png" imageanchor="1" style="margin-left: 1em; margin-right: 1em;"><img border="0" height="181" src="https://2.bp.blogspot.com/-i4o-bsCptnw/WB5ZPQbkzpI/AAAAAAAAA9M/NkCutIZ6GzMNjejJWOIknNjgfqiPdFm5QCLcB/s320/blog-linux-ssh-x-window.png" width="320" /></a></div>
+
+<div style="text-align: center;"><iframe allowfullscreen="" frameborder="0" height="315" src="https://www.youtube.com/embed/wI7ek1ZHUxQ" width="560"></iframe></div>
+
+<span style="font-size: large;">Instalar:</span>
+{% highlight bash %}
+apt-get install tightvncserver tightvnc-java xtightvncviewer
+{% endhighlight %}
+
+Configura a senha:
+{% highlight bash %}
+vncpasswd
+{% endhighlight %}
+
+<span style="font-size: large;">Iniciar o VNC no servidor:</span>
+{% highlight bash %}
+vncserver
+{% endhighlight %}
+
+Caso preciso, usar o nmap:
+{% highlight bash %}
+nmap [IP]
+{% endhighlight %}
+
+<span style="font-size: large;">Iniciar sessão:</span>
+{% highlight bash %}
+vncviewer [IP]:[porta]
+{% endhighlight %}
 
 
-</p>
+

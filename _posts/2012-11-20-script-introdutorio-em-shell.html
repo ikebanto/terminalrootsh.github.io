@@ -23,12 +23,15 @@ introduction: Script Introdutório em Shell
 <blockquote class="tr_bq"><b>Olá galera, aqui vou mostrar um script que eu montei baseado na apostila do post anterior <span style="color: blue;"><a href="http://marcospinguim.blogspot.com.br/2012/11/apostila-de-introducao-ao-shell-script.html" target="_blank">Apostila de Introdução ao Shell Script</a></span> do <span style="color: blue;"><a href="http://aurelio.net/" target="_blank">Aurélio</a></span> , inclui todos os ensinamentos daquela  maravilhosa apostila, tudo reunido num script só, fiz algumas modificações, mas acredito que foi pra melhor.O script está abaixo em duas formas salva aqui no blog e no PasteBin e ainda a execução de resposta do script na imagem acima, copie(leia os comentários) e cole num arquivo em branco, salve como <i>aprender</i> ou <i>aprender.sh</i> ou ainda no nome que você preferir, com ou sem o .sh que o shell interpretará em ambas as formas, só lembrando que antes deve dar permissão de execução:</b></blockquote>
 
 {% highlight bash %}
+
 chmod +x aprender
+
 {% endhighlight %} 
 
 <h4>Script aprender.sh</h4>
 
 {% highlight bash %}
+
 #!/bin/bash
 # shell - script que mostra informações básicas sobre Shell Script
 # Autor: Marcos da B. M. Oliveira
@@ -137,4 +140,5 @@ for passo in $(seq 4)
 done
 echo
 echo "FINAL DO SCRIPT $0 , ATÉ A PRÓXIMA!"
+
 {% endhighlight %} 

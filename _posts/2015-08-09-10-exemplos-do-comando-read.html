@@ -16,6 +16,106 @@ introduction: 10 exemplos do comando read
 ---
 
 <p>
-<div class="separator" style="clear: both; text-align: center;"><a href="http://1.bp.blogspot.com/-h-iuU50XPlQ/Vcdro2vdJBI/AAAAAAAABow/ICj3IG4N1rA/s1600/read.jpg" imageanchor="1" style="margin-left: 1em; margin-right: 1em;"><img border="0" src="http://1.bp.blogspot.com/-h-iuU50XPlQ/Vcdro2vdJBI/AAAAAAAABow/ICj3IG4N1rA/s400/read.jpg" /></a></div><b></p><p><span style="font-size: x-large;">1 - Ler e criar uma variável com os dados interagidos</span></p><p>{% highlight bash %}echo "Informe seu nome: " ; read Nome{% endhighlight %}</p><p>{% highlight bash %}echo -e "Seu nome é: $Nome"{% endhighlight %}</p><p></p><p><span style="font-size: x-large;">2 - Ler na mesma linha com a opção </span></b><span style="color: #3d85c6;"><span style="font-size: x-large;">-p</span></span><b></p><p>{% highlight bash %}read -p "Terminal "; read user</p><p>Terminal Root{% endhighlight %}</p><p></p><p><span style="font-size: x-large;">3 - Ler 2 caracteres com a opção </span></b><span style="color: #3d85c6;"><span style="font-size: x-large;">-n</span></span><b><span style="font-size: x-large;"> , não precisa apertar </span></b><u><i><span style="font-size: x-large;">[ENTER]</span></i></u><b></p><p>{% highlight bash %}read -n2 Idade; echo{% endhighlight %}</p><p></p><p><span style="font-size: x-large;">4 - Ler telefone com o DDD</span></p><p>{% highlight bash %}read -n2 -p"(" DDD; read -n4 -p") " Prefix; read -n4 -p- Sufix; echo{% endhighlight %}</p><p></p><p><span style="font-size: x-large;">5 - Ler com tempo determinado</span></p><p>{% highlight bash %}read -t2 -p "Responda em 2 segundos.Qual a capital do Brasil?" Resp || echo "Tempo esgotado."{% endhighlight %}</p><p></p><p><span style="font-size: x-large;">6 - Ler senha sem exibir na tela:</span></p><p></p><p>{% highlight bash %}read -s Senha{% endhighlight %}</p><p>Ou</p><p>{% highlight bash %}read -sp "Senha: "; echo{% endhighlight %}</p><p>{% highlight bash %}echo $REPLY{% endhighlight %}</p><p></p><p><span style="font-size: x-large;">7 - Para Leitura quando o caracter </span></b><i><span style="font-size: x-large;">?(interrogação)</span></i><b><span style="font-size: x-large;"> for digitado</span></p><p>{% highlight bash %}read -p "Faça uma pergunta: " -d'?' PERGUNTA; echo{% endhighlight %}</p><p>{% highlight bash %}echo $PERGUNTA{% endhighlight %}</p><p></p><p><span style="font-size: x-large;">8 - Ler um array com </span></b><span style="color: #3d85c6;"><span style="font-size: x-large;">-a</span></span><b></p><p>{% highlight bash %}read -a MinhaArray</p><p>Debian Trisquel RedHat</p><p>echo ${MinhaArray[0]}</p><p>Debian</p><p>echo ${MinhaArray[1]}</p><p>Trisquel</p><p>echo ${MinhaArray[2]}</p><p>RedHat{% endhighlight %}</p><p></p><p><span style="font-size: x-large;">9 - Ler n variáveis de uma Vez só</span></p><p>{% highlight bash %}read var1 var2 var3</p><p>Bash Ksh Csh{% endhighlight %}</p><p>{% highlight bash %}echo "$var1 $var2 $var3"</p><p>Bash Ksh Csh{% endhighlight %}</p><p></p><p><span style="font-size: x-large;">10 - Ler a quebra de linha de um arquivo com </span></b><span style="color: #3d85c6;"><span style="font-size: x-large;">-r</span></span><b></p><p></b><i>arquivo.txt</i><b></p><p></b></p><p><div class="adp"><b>Atenção:\nTodos os dados foram recebidos.\nAtt,\nDiretoria.</b></div><b></p><p>{% highlight bash %}read -r DADOS &lt; arquivo.txt{% endhighlight %}</p><p>{% highlight bash %}echo -e $DADOS</p><p>Atenção:</p><p>Todos os dados foram recebidos.</p><p>Att,</p><p>Diretoria.{% endhighlight %}</p><p>Se não tivesse lido com -r, a barra seria ignorada, mas o "n" imprimiria, ficaria assim:</p><p>{% highlight bash %}Atenção:nTodos os dados foram recebidos.nAtt,nDiretoria.{% endhighlight %}</p><p></p><p><span style="font-size: large;">Para mais informações sobre o comando read:</span></p><p><a href="http://www.terminalroot.com.br/2014/10/o-comando-read.html" target="_blank"><span style="font-size: x-large;"><u><span style="color: blue;">O comando read</span></u></span></a></p><p>{% highlight bash %}read --help{% endhighlight %}</p><p>{% highlight bash %}man read{% endhighlight %}</p><p></b>
+<div class="separator" style="clear: both; text-align: center;"><a href="http://1.bp.blogspot.com/-h-iuU50XPlQ/Vcdro2vdJBI/AAAAAAAABow/ICj3IG4N1rA/s1600/read.jpg" imageanchor="1" style="margin-left: 1em; margin-right: 1em;"><img border="0" src="http://1.bp.blogspot.com/-h-iuU50XPlQ/Vcdro2vdJBI/AAAAAAAABow/ICj3IG4N1rA/s400/read.jpg" /></a></div><b>
+<span style="font-size: x-large;">1 - Ler e criar uma variável com os dados interagidos</span>
+{% highlight bash %}
+echo "Informe seu nome: " ; read Nome
+{% endhighlight %}
+{% highlight bash %}
+echo -e "Seu nome é: $Nome"
+{% endhighlight %}
 
-</p>
+<span style="font-size: x-large;">2 - Ler na mesma linha com a opção </span></b><span style="color: #3d85c6;"><span style="font-size: x-large;">-p</span></span><b>
+{% highlight bash %}
+read -p "Terminal "; read user
+Terminal Root
+{% endhighlight %}
+
+<span style="font-size: x-large;">3 - Ler 2 caracteres com a opção </span></b><span style="color: #3d85c6;"><span style="font-size: x-large;">-n</span></span><b><span style="font-size: x-large;"> , não precisa apertar </span></b><u><i><span style="font-size: x-large;">[ENTER]</span></i></u><b>
+{% highlight bash %}
+read -n2 Idade; echo
+{% endhighlight %}
+
+4 - Ler telefone com o DDD
+{% highlight bash %}
+read -n2 -p"(" DDD; read -n4 -p") " Prefix; read -n4 -p- Sufix; echo
+{% endhighlight %}
+
+<span style="font-size: x-large;">5 - Ler com tempo determinado</span>
+{% highlight bash %}
+read -t2 -p "Responda em 2 segundos.Qual a capital do Brasil?" Resp || echo "Tempo esgotado."
+{% endhighlight %}
+
+6 - Ler senha sem exibir na tela:
+
+{% highlight bash %}
+read -s Senha
+{% endhighlight %}
+Ou
+{% highlight bash %}
+read -sp "Senha: "; echo
+{% endhighlight %}
+{% highlight bash %}
+echo $REPLY
+{% endhighlight %}
+
+<span style="font-size: x-large;">7 - Para Leitura quando o caracter </span></b><i><span style="font-size: x-large;">?(interrogação)</span></i><b><span style="font-size: x-large;"> for digitado</span>
+{% highlight bash %}
+read -p "Faça uma pergunta: " -d'?' PERGUNTA; echo
+{% endhighlight %}
+{% highlight bash %}
+echo $PERGUNTA
+{% endhighlight %}
+
+<span style="font-size: x-large;">8 - Ler um array com </span></b><span style="color: #3d85c6;"><span style="font-size: x-large;">-a</span></span><b>
+{% highlight bash %}
+read -a MinhaArray
+Debian Trisquel RedHat
+echo ${MinhaArray[0]}
+Debian
+echo ${MinhaArray[1]}
+Trisquel
+echo ${MinhaArray[2]}
+RedHat
+{% endhighlight %}
+
+<span style="font-size: x-large;">9 - Ler n variáveis de uma Vez só</span>
+{% highlight bash %}
+read var1 var2 var3
+Bash Ksh Csh
+{% endhighlight %}
+{% highlight bash %}
+echo "$var1 $var2 $var3"
+Bash Ksh Csh
+{% endhighlight %}
+
+<span style="font-size: x-large;">10 - Ler a quebra de linha de um arquivo com </span></b><span style="color: #3d85c6;"><span style="font-size: x-large;">-r</span></span><b>
+</b><i>arquivo.txt</i><b>
+</b>
+<div class="adp"><b>Atenção:\nTodos os dados foram recebidos.\nAtt,\nDiretoria.</b></div><b>
+{% highlight bash %}
+read -r DADOS < arquivo.txt
+{% endhighlight %}
+{% highlight bash %}
+echo -e $DADOS
+Atenção:
+Todos os dados foram recebidos.
+Att,
+Diretoria.
+{% endhighlight %}
+Se não tivesse lido com -r, a barra seria ignorada, mas o "n" imprimiria, ficaria assim:
+{% highlight bash %}
+Atenção:nTodos os dados foram recebidos.nAtt,nDiretoria.
+{% endhighlight %}
+
+Para mais informações sobre o comando read:
+O comando read
+{% highlight bash %}
+read --help
+{% endhighlight %}
+{% highlight bash %}
+man read
+{% endhighlight %}
+
+
+

@@ -17,6 +17,34 @@ introduction: Configuração de Redes em sistemas Red Hat Like
 ---
 
 <p>
-<div class="separator" style="clear: both; text-align: center;"><a href="http://4.bp.blogspot.com/-ESHERVsOmBc/UoA3zDfNY0I/AAAAAAAACiU/GlzprES6rOY/s1600/Red-Hat-se-lauda-cu-succesul-Linux-ului-2.jpg" imageanchor="1" style="clear: left; float: left; margin-bottom: 1em; margin-right: 1em;"><img border="0" src="http://4.bp.blogspot.com/-ESHERVsOmBc/UoA3zDfNY0I/AAAAAAAACiU/GlzprES6rOY/s320/Red-Hat-se-lauda-cu-succesul-Linux-ului-2.jpg" /></a></div><!-------------------------------------------------><script type="text/javascript"><!-- google_ad_client = "ca-pub-5528601613414387"; google_ad_host = "pub-1556223355139109"; /* quadrados */ google_ad_slot = "9713010559"; google_ad_width = 200; google_ad_height = 200; </script><script src="http://pagead2.googlesyndication.com/pagead/show_ads.js" type="text/javascript"></script><!-----------------------------------------------></p><p></p><p></p><p><b><i>Ao instalar o <span style="color: blue;">Linux</span> em modo texto, sempre temos alguns problemas mas nada que atrapalhe seu uso, afinal o Linux sempre foi bastante funcional antes mesmo de existir suas <span style="color: blue;">GUI’s</span>.</i></p><p></p><p><u>Neste tutorial simples, vamos configurar a interface de rede em modo texto e subir automaticamente durante o boot, é um problema comum quando se instala em máquinas virtuais que não provem <span style="color: blue;">DHCP</span> automaticamente, como é o caso do Hyper-V, Proxmox e oVirt como exemplos. Esta é uma receita de bolo somente para <span style="color: #cc0000;">Red Hat like</span>, portanto outras distros não funcionarão do mesmo modo.</u></p><p></p><p><i>Antes de iniciar, devemos saber qual editor utilizar e se temos conhecimento sobre o editor a ser usado. Preferencialmente utilizo o <span style="color: blue;">NANO</span> {% highlight bash %}sudo yum install nano -y{% endhighlight %} e aos que não tiverem, podem utilizar outros editores como o <span style="color: blue;">VI (VIM)</span> por exemplo. Sem mais enroladas, vamos começar:</i></p><p></p><p>Com permissão de root edite o script de configuração da interface de rede correspondente, no meu caso é a <i>eth0</i>.</p><p></p><p>  <div class="adp"># vi /etc/sysconfig/network-scripts/ifcfg-ethx</div></b> <i>(onde o x equivale a interface que você quer configurar)</i></p><p></p><p><b>Somente devemos alterar os parâmetros “<span style="color: blue;">ONBOOT</span>” e “<span style="color: blue;">BOOTPROTO</span>” sendo o primeiro yes ou no. Desça até o final do arquivo e pressione a tecla INSERT do seu teclado: o VI estará em modo de edição.</b></p><p></p><p><b>Altere o parâmetro <span style="color: blue;">ONBOOT=no</span> para <span style="color: blue;">ONBOOT=yes</span>, em seguida busque por BOOTPROTO=dhcp e escolha se a máquina terá <span style="color: blue;">IP</span> dinâmico ou IP estático. Se for servidor, o melhor e correto deverá ser estático portanto deixe-o como: <span style="color: blue;">BOOTPROTO=static</span>.</b></p><p><b></p><p></b><b>Agora vamos inserir as informações de <span style="color: blue;">IP, NETMASK, GATEWAY e DNS</span>. Insira no final do arquivo:</b></p><p><b></p><p></b><b>IPADDR=ip.configurado.</b></p><p><b><span style="color: blue;">NETMASK=mascara</span>.definida (<span style="color: blue;">NETMAS</span>K pode ser trocado por <span style="color: blue;">PREFIX</span> se quiser colocar o tamanho da mascara ao invés do endereço da mesma).</b></p><p><b><span style="color: blue;">DNS</span> ou <span style="color: blue;">DNS1</span>(se houver mais de um servidor DNS)<span style="color: blue;">=ip</span>.do.servidor.dns</b></p><p><b><span style="color: blue;">IPV6_INIT=no</span>(se desejar que a máquina não utilize endereços <span style="color: blue;">IPV6</span>.</b></p><p><b><span style="color: blue;">IPV4_FAILUREFATAL=yes</span> parametro comum do sistema em caso de falha no endereçamento IPV4.</b></p><p><b></p><p></b><b>E é só isso, agora pressione <span style="color: purple;"><span style="font-size: large;">Control+C</span></span> e em seguida pressione <i>“:wq”</i> e dê enter, o script estará salvo. Por ultimo reinicie o serviço network (service network restart) e dê um <i>ifconfig</i>, a sua configuração estará pronta pra uso.</b></p><p><b></p><p></b><b>Texto Publicado por <a href="http://sejalivre.org/" target="_blank">Douglas Santos</a></b>
 
-</p>
+
+<b><i>Ao instalar o <span style="color: blue;">Linux</span> em modo texto, sempre temos alguns problemas mas nada que atrapalhe seu uso, afinal o Linux sempre foi bastante funcional antes mesmo de existir suas <span style="color: blue;">GUI’s</span>.</i>
+
+<u>Neste tutorial simples, vamos configurar a interface de rede em modo texto e subir automaticamente durante o boot, é um problema comum quando se instala em máquinas virtuais que não provem <span style="color: blue;">DHCP</span> automaticamente, como é o caso do Hyper-V, Proxmox e oVirt como exemplos. Esta é uma receita de bolo somente para <span style="color: #cc0000;">Red Hat like</span>, portanto outras distros não funcionarão do mesmo modo.</u>
+
+Antes de iniciar, devemos saber qual editor utilizar e se temos conhecimento sobre o editor a ser usado. Preferencialmente utilizo o NANO {% highlight bash %}
+sudo yum install nano -y
+{% endhighlight %} e aos que não tiverem, podem utilizar outros editores como o VI (VIM) por exemplo. Sem mais enroladas, vamos começar:
+
+Com permissão de root edite o script de configuração da interface de rede correspondente, no meu caso é a eth0.
+
+  # vi /etc/sysconfig/network-scripts/ifcfg-ethx (onde o x equivale a interface que você quer configurar)
+
+Somente devemos alterar os parâmetros “ONBOOT” e “BOOTPROTO” sendo o primeiro yes ou no. Desça até o final do arquivo e pressione a tecla INSERT do seu teclado: o VI estará em modo de edição.
+
+Altere o parâmetro ONBOOT=no para ONBOOT=yes, em seguida busque por BOOTPROTO=dhcp e escolha se a máquina terá IP dinâmico ou IP estático. Se for servidor, o melhor e correto deverá ser estático portanto deixe-o como: BOOTPROTO=static.
+
+Agora vamos inserir as informações de IP, NETMASK, GATEWAY e DNS. Insira no final do arquivo:
+
+IPADDR=ip.configurado.
+NETMASK=mascara.definida (NETMASK pode ser trocado por PREFIX se quiser colocar o tamanho da mascara ao invés do endereço da mesma).
+DNS ou DNS1(se houver mais de um servidor DNS)=ip.do.servidor.dns
+IPV6_INIT=no(se desejar que a máquina não utilize endereços IPV6.
+IPV4_FAILUREFATAL=yes parametro comum do sistema em caso de falha no endereçamento IPV4.
+
+E é só isso, agora pressione Control+C e em seguida pressione “:wq” e dê enter, o script estará salvo. Por ultimo reinicie o serviço network (service network restart) e dê um ifconfig, a sua configuração estará pronta pra uso.
+
+Texto Publicado por Douglas Santos
+
+

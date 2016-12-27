@@ -16,6 +16,134 @@ introduction: 'Curso Certificação Linux LPI-102: Impressão no Linux'
 ---
 
 <p>
-<div class="separator" style="clear: both; text-align: center;"><a href="http://2.bp.blogspot.com/-7xzBWVE94qQ/UVYoswEpYyI/AAAAAAAABSo/gdWQBDXwTjM/s1600/linux-hp-color-laser-printing.jpg" imageanchor="1" style="margin-left: 1em; margin-right: 1em;"><img border="0" src="http://2.bp.blogspot.com/-7xzBWVE94qQ/UVYoswEpYyI/AAAAAAAABSo/gdWQBDXwTjM/s200/linux-hp-color-laser-printing.jpg" height="200" width="200" /></a></div><!-------------------------------------------------> <script type="text/javascript"><!-- google_ad_client = "ca-pub-5528601613414387"; google_ad_host = "pub-1556223355139109"; /* quadrados */ google_ad_slot = "9713010559"; google_ad_width = 200; google_ad_height = 200; </script><script src="http://pagead2.googlesyndication.com/pagead/show_ads.js" type="text/javascript"></script><!-----------------------------------------------></p><p></p><p><b>Curso Certificação Linux LPI-102: Impressão no Linux</p><p></p><p><u>lp - envia requisições à impressora</u></p><p></p><p><i>&nbsp;&nbsp; &nbsp;Sintaxe: lp [-mw] [-ddest] [-n#] filename...</i></p><p></p><p>&nbsp;&nbsp; &nbsp;Opções:</p><p></p><p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; -w: escreve mensagem no terminal do usuário</p><p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; -ddest: impressora destino </p><p></p><p>&nbsp;&nbsp; &nbsp;Exemplo:</p><p>&nbsp;&nbsp;&nbsp; {% highlight bash %}lp -m -dlw rel.ps{% endhighlight %}</p><p></p><p>Imprimindo diretamente</p><p>{% highlight bash %}# cat texto.txt &gt; /dev/lp0{% endhighlight %}</p><p></p><p>Imprimindo indiretamente</p><p>{% highlight bash %}$ cat texto.txt | lpr{% endhighlight %}</p><p>{% highlight bash %}$ lpr texto.txt{% endhighlight %} </p><p></p><p>Monitorar: fila (queue) de impressão</p><p>{% highlight bash %}$ lpq{% endhighlight %}</p><p></p><p>Gerenciar: cancelando impressões/jobs</p><p>{% highlight bash %}$ lprm{% endhighlight %} (cancela a última impressão/job do usuário corrente) </p><p></p><p>Gerenciar: controlando o lpd com o lpc</p><p>{% highlight bash %}$ lpc {% endhighlight %}</p><p></p><p>Arquivo de configuração - permissao de acesso</p><p>{% highlight bash %}# vi /etc/hosts.lpd{% endhighlight %} (se esse arquivo existir, os usuarios remotos nao conseguirao imprimir. Para imprimir se deve excluir esse arquivo ou inserir dentro dele os enderecos dos hosts remotos que podem imprimir)</p><p></p><p>Arquivo de configuração - geral</p><p>{% highlight bash %}# vi /etc/printcap{% endhighlight %}</p><p></p><p>Compartilhando impressoras</p><p></p><p>&nbsp;&nbsp; &nbsp;O Cups, o servidor de impressão padrão no Linux, possui um recurso nativo de compartilhamento de impressoras. Ele permite não apenas compartilhar impressoras com outras máquinas Linux, mas também com máquinas Windows da rede, através de um servidor unificado. Para habilitar o compartilhamento, edite o arquivo "/etc/cups/cupsd.conf", deixando-o com o seguinte conteúdo:</p><p></p><p>{% highlight bash %}</p><p>Port 631</p><p>Listen 631</p><p>Browsing On</p><p>BrowseAllow All</p><p>BrowseInterval 30</p><p>BrowseAddress @LOCAL</p><p>BrowseInterval 30</p><p></p><p>&lt;Location /&gt;</p><p>Order allow,deny</p><p>Allow all</p><p>&lt;/Location&gt;</p><p></p><p>&lt;Location /printers&gt;</p><p>Order allow,deny</p><p>Allow all</p><p>&lt;/Location&gt;</p><p></p><p>&lt;Location /admin&gt;</p><p>Encryption Required</p><p>Order allow,deny</p><p>Allow localhost</p><p>&lt;/Location&gt;</p><p></p><p>&lt;Location /admin/conf&gt;</p><p>AuthType Basic</p><p>Require user @SYSTEM</p><p>Order allow,deny</p><p>Allow localhost</p><p>&lt;/Location&gt;{% endhighlight %}</p><p></p><p>&nbsp;&nbsp; &nbsp;Veja que a seção "/printers", que contém as impressoras, fica com permissão de acesso para todo mundo, enquanto o utilitário de administração do Cups (seção /admin) continua acessível apenas localmente, através do endereço http://127.0.0.1:631.</p><p></p><p>&nbsp;&nbsp; &nbsp;Até aqui, não estamos impondo nenhum tipo de restrição, por isso contamos com o firewall para bloquear qualquer tentativa de impressão proveniente de micros da Internet. Você pode também fazer o compartilhamento de uma forma mais segura, especificando manualmente a faixa de endereços da rede local, ou mesmo especificando individualmente os endereços IP que poderão imprimir. Neste caso, as seções &lt;Location /&gt; (onde vai a configuração que permite aos clientes verem as impressoras disponíveis) e &lt;Location /printers&gt; ficaria:</p><p></p><p>{% highlight bash %}</p><p>&lt;Location /&gt;</p><p>Order Deny,Allow</p><p>Deny From All</p><p>Allow From 127.0.0.1</p><p>Allow From 192.168.0.*</p><p>&lt;/Location&gt;</p><p></p><p>&lt;Location /printers&gt;</p><p>Order Deny,Allow</p><p>Deny From All</p><p>Allow From 127.0.0.1</p><p>Allow From 192.168.0.*</p><p>&lt;/Location&gt;{% endhighlight %}</p><p></p><p>Não se esqueça de incluir o endereço "127.0.0.1" na lista. Caso contrário, todo mundo vai imprimir na impressora, menos você mesmo :).</p><p></p><p>Depois de alterar o arquivo, reinicie o servidor de impressão para que as alterações entrem em vigor:</p><p></p><p>{% highlight bash %}</p><p># /etc/init.d/cups restart{% endhighlight %}</p><p></p><p>&nbsp;&nbsp; &nbsp;Compartilhar impressoras através do Cups é mais simples do que fazê-lo através do Samba e oferece a vantagem adicional de permitir o uso do recurso de autodiscover do Cups nos clientes Linux. O autodiscover permite que os clientes Linux da rede reconheçam automaticamente a impressora compartilhada e a configurem automaticamente durante o boot, sem necessidade de nenhuma intervenção manual.</b></p><p></p><p><i><span style="color: #444444;"><span style="font-size: x-small;">Fontes:</p><p>www.hardware.com.br</p><p>www.hugoazevedo.eti.br</p><p>www.openit.com.br</span></span></i><b> </b>
+
+<b>Curso Certificação Linux LPI-102: Impressão no Linux
+
+<u>lp - envia requisições à impressora</u>
+
+<i> Sintaxe: lp [-mw] [-ddest] [-n#] filename...</i>
+
+ Opções:
+
+ -w: escreve mensagem no terminal do usuário
+ -ddest: impressora destino 
+
+ Exemplo:
+ {% highlight bash %}
+lp -m -dlw rel.ps
+{% endhighlight %}
+
+Imprimindo diretamente
+{% highlight bash %}
+# cat texto.txt > /dev/lp0
+{% endhighlight %}
+
+Imprimindo indiretamente
+{% highlight bash %}
+$ cat texto.txt | lpr
+{% endhighlight %}
+{% highlight bash %}
+$ lpr texto.txt
+{% endhighlight %} 
+
+Monitorar: fila (queue) de impressão
+{% highlight bash %}
+$ lpq
+{% endhighlight %}
+
+Gerenciar: cancelando impressões/jobs
+{% highlight bash %}
+$ lprm
+{% endhighlight %} (cancela a última impressão/job do usuário corrente) 
+
+Gerenciar: controlando o lpd com o lpc
+{% highlight bash %}
+$ lpc 
+{% endhighlight %}
+
+Arquivo de configuração - permissao de acesso
+{% highlight bash %}
+# vi /etc/hosts.lpd
+{% endhighlight %} (se esse arquivo existir, os usuarios remotos nao conseguirao imprimir. Para imprimir se deve excluir esse arquivo ou inserir dentro dele os enderecos dos hosts remotos que podem imprimir)
+
+Arquivo de configuração - geral
+{% highlight bash %}
+# vi /etc/printcap
+{% endhighlight %}
+
+Compartilhando impressoras
+
+ O Cups, o servidor de impressão padrão no Linux, possui um recurso nativo de compartilhamento de impressoras. Ele permite não apenas compartilhar impressoras com outras máquinas Linux, mas também com máquinas Windows da rede, através de um servidor unificado. Para habilitar o compartilhamento, edite o arquivo "/etc/cups/cupsd.conf", deixando-o com o seguinte conteúdo:
+
+{% highlight bash %}
+
+Port 631
+Listen 631
+Browsing On
+BrowseAllow All
+BrowseInterval 30
+BrowseAddress @LOCAL
+BrowseInterval 30
+
+
+Order allow,deny
+Allow all
+
+
+
+Order allow,deny
+Allow all
+
+
+
+Encryption Required
+Order allow,deny
+Allow localhost
+
+
+
+AuthType Basic
+Require user @SYSTEM
+Order allow,deny
+Allow localhost
+
+{% endhighlight %}
+
+ Veja que a seção "/printers", que contém as impressoras, fica com permissão de acesso para todo mundo, enquanto o utilitário de administração do Cups (seção /admin) continua acessível apenas localmente, através do endereço http://127.0.0.1:631.
+
+ Até aqui, não estamos impondo nenhum tipo de restrição, por isso contamos com o firewall para bloquear qualquer tentativa de impressão proveniente de micros da Internet. Você pode também fazer o compartilhamento de uma forma mais segura, especificando manualmente a faixa de endereços da rede local, ou mesmo especificando individualmente os endereços IP que poderão imprimir. Neste caso, as seções <Location /> (onde vai a configuração que permite aos clientes verem as impressoras disponíveis) e <Location /printers> ficaria:
+
+{% highlight bash %}
+
+
+Order Deny,Allow
+Deny From All
+Allow From 127.0.0.1
+Allow From 192.168.0.*
+
+
+
+Order Deny,Allow
+Deny From All
+Allow From 127.0.0.1
+Allow From 192.168.0.*
+
+{% endhighlight %}
+
+Não se esqueça de incluir o endereço "127.0.0.1" na lista. Caso contrário, todo mundo vai imprimir na impressora, menos você mesmo :).
+
+Depois de alterar o arquivo, reinicie o servidor de impressão para que as alterações entrem em vigor:
+
+{% highlight bash %}
+
+# /etc/init.d/cups restart
+{% endhighlight %}
+
+ Compartilhar impressoras através do Cups é mais simples do que fazê-lo através do Samba e oferece a vantagem adicional de permitir o uso do recurso de autodiscover do Cups nos clientes Linux. O autodiscover permite que os clientes Linux da rede reconheçam automaticamente a impressora compartilhada e a configurem automaticamente durante o boot, sem necessidade de nenhuma intervenção manual.</b>
+
+<i><span style="color: #444444;"><span style="font-size: x-small;">Fontes:
+www.hardware.com.br
+www.hugoazevedo.eti.br
+www.openit.com.br</span></span></i><b> </b>
 
 </p>

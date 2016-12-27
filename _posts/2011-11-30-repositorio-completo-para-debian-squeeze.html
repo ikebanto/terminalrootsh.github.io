@@ -16,6 +16,108 @@ introduction: Repositório completo para Debian Squeeze
 ---
 
 <p>
-Olá pessoal segue a lista de repositórios para se instalar tudo no <span style="color: blue;">Gnu/linux Debian 6 Squeeze</span>, nessa lista consta:Webmin,Virtual Box, Codecs, Snort, TCPDump, Skype, Bimoid, Multimídia Completa(todos os codecs, inclusive versão opens dasversõespagar, ex.: w32codecs ), Opera, Wine...e muito mais, lembrando que você deve antes <span style="color: red;">adicionar as chaves</span>, mas tem todas as chaves inclusa, na opçao: <span style="color: red;">Rode esse comando</span>.</p><p></p><p>Copie toda a lista abaixo e cole no seu {% highlight bash %}# gedit /etc/apt/source.list{% endhighlight %} e instale tudo via apt-get !</p><p></p><p>Segue a lista:</p><p>{% highlight bash %}#############################################################</p><p>############ Repositório Ofical do Debian ###################</p><p>#############################################################</p><p></p><p>###### Debian Main Repos</p><p>deb http://ftp.br.debian.org/debian/ squeeze main contrib non-free </p><p>deb-src http://ftp.br.debian.org/debian/ squeeze main contrib non-free </p><p></p><p>###### Debian Update Repos</p><p>deb http://security.debian.org/ squeeze/updates main contrib non-free </p><p>deb http://ftp.br.debian.org/debian/ squeeze-proposed-updates main contrib non-free </p><p>deb-src http://security.debian.org/ squeeze/updates main contrib non-free </p><p>deb-src http://ftp.br.debian.org/debian/ squeeze-proposed-updates main contrib non-free </p><p></p><p>##############################################################</p><p>##################### Repositórios Não Oficiais ##############</p><p>##############################################################</p><p></p><p>###### 3rd Party Binary Repos</p><p></p><p>#### Bimoid - http://bimoid.com/</p><p>## Rode esse comando antes: wget -O - http://www.bimoid.com/debian/apt.key | apt-key add -</p><p>deb http://www.bimoid.com/debian/ stable non-free</p><p></p><p>#### Debian Backports - http://backports.debian.org/</p><p>deb http://backports.debian.org/debian-backports squeeze-backports main </p><p></p><p>#### Debian Multimedia - http://www.debian-multimedia.org/</p><p>## Rode esse comando antes: apt-get update &amp;&amp; apt-get install debian-multimedia-keyring &amp;&amp; apt-get update</p><p>deb http://www.debian-multimedia.org stable main non-free</p><p></p><p>#### Dotdeb - http://www.dotdeb.org</p><p>## Rode esse comando antes: wget -q -O - http://www.dotdeb.org/dotdeb.gpg | apt-key add -</p><p>deb http://packages.dotdeb.org oldstable all</p><p></p><p>#### Enlightenment - http://enlightenment.org</p><p>## Rode esse comando antes: wget -q http://packages.enlightenment.org/repo.key -O- | apt-key add -</p><p>deb http://packages.enlightenment.org/debian squeeze main extras</p><p></p><p>#### Esmska - http://code.google.com/p/esmska/</p><p>## Rode esse comando antes: wget -q -O - http://repo.palatinus.cz/repo.key | apt-key add -</p><p>deb http://repo.palatinus.cz/stable /</p><p></p><p>#### Google Linux Software Repositories - http://www.google.com</p><p>## Rode esse comando antes: wget -q -O - https://dl-ssl.google.com/linux/linux_signing_key.pub | apt-key add -</p><p>deb http://dl.google.com/linux/deb/ stable non-free main</p><p></p><p>#### Google Linux Software Repositorios (Testing) - http://www.google.com</p><p>## Rode esse comando antes: wget -q -O - https://dl-ssl.google.com/linux/linux_signing_key.pub | apt-key add -</p><p>deb http://dl.google.com/linux/deb/ testing non-free </p><p></p><p>#### Opera .deb Repositorio - http://deb.opera.com/</p><p>## Rode esse comando antes: wget -O - http://deb.opera.com/archive.key | apt-key add - </p><p>deb http://deb.opera.com/opera/ squeeze non-free</p><p></p><p>#### Opera .deb Repositorio (Beta Releases) - http://deb.opera.com/</p><p>## Rode esse comando antes: wget -O - http://deb.opera.com/archive.key | apt-key add - </p><p>deb http://deb.opera.com/opera-beta/ squeeze non-free</p><p></p><p>#### Skype - http://www.skype.com</p><p>## Rode esse comando antes: gpg --keyserver pgp.mit.edu --recv-keys 0xd66b746e &amp;&amp; gpg --export --armor 0xd66b746e | apt-key add -</p><p>deb http://download.skype.com/linux/repos/debian/ stable non-free</p><p></p><p>#### Mantenedor Não Oficial - http://unofficial.debian-maintainers.org/</p><p>## Rode esse comando antes: wget -q -O - http://unofficial.debian-maintainers.org/project/openpgp/archive-key.asc | apt-key add -</p><p>deb http://unofficial.debian-maintainers.org/ squeeze main contrib non-free restricted </p><p></p><p>#### VirtualBox - http://www.virtualbox.org</p><p>## Rode esse comando antes: wget -q http://download.virtualbox.org/virtualbox/debian/oracle_vbox.asc -O- | apt-key add -</p><p>deb http://download.virtualbox.org/virtualbox/debian squeeze contrib </p><p></p><p>#### Webmin - http://webmin.com/</p><p>## Rode esse comando antes: wget -q http://www.webmin.com/jcameron-key.asc -O- | apt-key add -</p><p>deb http://download.webmin.com/download/repository sarge contrib</p><p></p><p>#### Wine - http://www.winehq.org/</p><p>## Rode esse comando antes: wget -O - http://www.lamaresh.net/apt/key.gpg | apt-key add -</p><p>deb http://www.lamaresh.net/apt squeeze main</p><p></p><p></p><p>####### 3rd Party Source Repos</p><p></p><p>#### Dotdeb (Source) - http://www.dotdeb.org</p><p>## Rode esse comando antes: wget -q -O - http://www.dotdeb.org/dotdeb.gpg | apt-key add -</p><p>deb-src http://packages.dotdeb.org oldstable all</p><p></p><p>#### Unofficial Maintainer (Source) - http://unofficial.debian-maintainers.org/</p><p>## Rode esse comando antes: wget -q -O - http://unofficial.debian-maintainers.org/project/openpgp/archive-key.asc | apt-key add -</p><p>deb-src http://unofficial.debian-maintainers.org/ squeeze main contrib non-free restricted</p><p>{% endhighlight %}</p><p></p><p>Caso sua distro seja outra que utiliza também o apt-get, ou você seja de outro país, consulte a fonte dessa informação <a href="http://debgen.simplylinux.ch/" style="text-decoration: none;" target="_blank"><button>Clicando Aqui</button></a>.</p><p></p><p>Desfrutem!
+Olá pessoal segue a lista de repositórios para se instalar tudo no <span style="color: blue;">Gnu/linux Debian 6 Squeeze</span>, nessa lista consta:Webmin,Virtual Box, Codecs, Snort, TCPDump, Skype, Bimoid, Multimídia Completa(todos os codecs, inclusive versão opens dasversõespagar, ex.: w32codecs ), Opera, Wine...e muito mais, lembrando que você deve antes <span style="color: red;">adicionar as chaves</span>, mas tem todas as chaves inclusa, na opçao: <span style="color: red;">Rode esse comando</span>.
+
+Copie toda a lista abaixo e cole no seu {% highlight bash %}
+# gedit /etc/apt/source.list
+{% endhighlight %} e instale tudo via apt-get !
+
+Segue a lista:
+{% highlight bash %}
+#############################################################
+############ Repositório Ofical do Debian ###################
+#############################################################
+
+###### Debian Main Repos
+deb http://ftp.br.debian.org/debian/ squeeze main contrib non-free 
+deb-src http://ftp.br.debian.org/debian/ squeeze main contrib non-free 
+
+###### Debian Update Repos
+deb http://security.debian.org/ squeeze/updates main contrib non-free 
+deb http://ftp.br.debian.org/debian/ squeeze-proposed-updates main contrib non-free 
+deb-src http://security.debian.org/ squeeze/updates main contrib non-free 
+deb-src http://ftp.br.debian.org/debian/ squeeze-proposed-updates main contrib non-free 
+
+##############################################################
+##################### Repositórios Não Oficiais ##############
+##############################################################
+
+###### 3rd Party Binary Repos
+
+#### Bimoid - http://bimoid.com/
+## Rode esse comando antes: wget -O - http://www.bimoid.com/debian/apt.key | apt-key add -
+deb http://www.bimoid.com/debian/ stable non-free
+
+#### Debian Backports - http://backports.debian.org/
+deb http://backports.debian.org/debian-backports squeeze-backports main 
+
+#### Debian Multimedia - http://www.debian-multimedia.org/
+## Rode esse comando antes: apt-get update &amp;&amp; apt-get install debian-multimedia-keyring &amp;&amp; apt-get update
+deb http://www.debian-multimedia.org stable main non-free
+
+#### Dotdeb - http://www.dotdeb.org
+## Rode esse comando antes: wget -q -O - http://www.dotdeb.org/dotdeb.gpg | apt-key add -
+deb http://packages.dotdeb.org oldstable all
+
+#### Enlightenment - http://enlightenment.org
+## Rode esse comando antes: wget -q http://packages.enlightenment.org/repo.key -O- | apt-key add -
+deb http://packages.enlightenment.org/debian squeeze main extras
+
+#### Esmska - http://code.google.com/p/esmska/
+## Rode esse comando antes: wget -q -O - http://repo.palatinus.cz/repo.key | apt-key add -
+deb http://repo.palatinus.cz/stable /
+
+#### Google Linux Software Repositories - http://www.google.com
+## Rode esse comando antes: wget -q -O - https://dl-ssl.google.com/linux/linux_signing_key.pub | apt-key add -
+deb http://dl.google.com/linux/deb/ stable non-free main
+
+#### Google Linux Software Repositorios (Testing) - http://www.google.com
+## Rode esse comando antes: wget -q -O - https://dl-ssl.google.com/linux/linux_signing_key.pub | apt-key add -
+deb http://dl.google.com/linux/deb/ testing non-free 
+
+#### Opera .deb Repositorio - http://deb.opera.com/
+## Rode esse comando antes: wget -O - http://deb.opera.com/archive.key | apt-key add - 
+deb http://deb.opera.com/opera/ squeeze non-free
+
+#### Opera .deb Repositorio (Beta Releases) - http://deb.opera.com/
+## Rode esse comando antes: wget -O - http://deb.opera.com/archive.key | apt-key add - 
+deb http://deb.opera.com/opera-beta/ squeeze non-free
+
+#### Skype - http://www.skype.com
+## Rode esse comando antes: gpg --keyserver pgp.mit.edu --recv-keys 0xd66b746e &amp;&amp; gpg --export --armor 0xd66b746e | apt-key add -
+deb http://download.skype.com/linux/repos/debian/ stable non-free
+
+#### Mantenedor Não Oficial - http://unofficial.debian-maintainers.org/
+## Rode esse comando antes: wget -q -O - http://unofficial.debian-maintainers.org/project/openpgp/archive-key.asc | apt-key add -
+deb http://unofficial.debian-maintainers.org/ squeeze main contrib non-free restricted 
+
+#### VirtualBox - http://www.virtualbox.org
+## Rode esse comando antes: wget -q http://download.virtualbox.org/virtualbox/debian/oracle_vbox.asc -O- | apt-key add -
+deb http://download.virtualbox.org/virtualbox/debian squeeze contrib 
+
+#### Webmin - http://webmin.com/
+## Rode esse comando antes: wget -q http://www.webmin.com/jcameron-key.asc -O- | apt-key add -
+deb http://download.webmin.com/download/repository sarge contrib
+
+#### Wine - http://www.winehq.org/
+## Rode esse comando antes: wget -O - http://www.lamaresh.net/apt/key.gpg | apt-key add -
+deb http://www.lamaresh.net/apt squeeze main
+
+
+####### 3rd Party Source Repos
+
+#### Dotdeb (Source) - http://www.dotdeb.org
+## Rode esse comando antes: wget -q -O - http://www.dotdeb.org/dotdeb.gpg | apt-key add -
+deb-src http://packages.dotdeb.org oldstable all
+
+#### Unofficial Maintainer (Source) - http://unofficial.debian-maintainers.org/
+## Rode esse comando antes: wget -q -O - http://unofficial.debian-maintainers.org/project/openpgp/archive-key.asc | apt-key add -
+deb-src http://unofficial.debian-maintainers.org/ squeeze main contrib non-free restricted
+
+{% endhighlight %}
+
+Caso sua distro seja outra que utiliza também o apt-get, ou você seja de outro país, consulte a fonte dessa informação <a href="http://debgen.simplylinux.ch/" style="text-decoration: none;" target="_blank"><button>Clicando Aqui</button></a>.
+
+Desfrutem!
 
 </p>

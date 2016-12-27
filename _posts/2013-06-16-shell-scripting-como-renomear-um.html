@@ -15,6 +15,151 @@ introduction: 'Shell Scripting: Como renomear um diretório com dados de um arqu
 ---
 
 <p>
-<div class="separator" style="clear: both; text-align: center;"><a href="http://1.bp.blogspot.com/-FkPcIsY-8fU/Ub4bRVwYWsI/AAAAAAAAB6I/UlsSTr0GR6s/s1600/shell+script.png" imageanchor="1" style="clear: left; float: left; margin-bottom: 1em; margin-right: 1em;"><img border="0" src="http://1.bp.blogspot.com/-FkPcIsY-8fU/Ub4bRVwYWsI/AAAAAAAAB6I/UlsSTr0GR6s/s320/shell+script.png" /></a></div><!-------------------------------------------------></p><p></p><p><script type="text/javascript"><!-- google_ad_client = "ca-pub-5528601613414387"; google_ad_host = "pub-1556223355139109"; /* quadrados */ google_ad_slot = "9713010559"; google_ad_width = 200; google_ad_height = 200; </script><script src="http://pagead2.googlesyndication.com/pagead/show_ads.js" type="text/javascript"></script><!-----------------------------------------------></p><p></p><p></p><p></p><p><blockquote><b><span style="color: purple;">Olá galera, tive um problema hoje, seguinte: baixei um disco da internet, onde as músicas vieram somente com os números, mas sem o nome das mesmas, pois os nomes vieram num arquivo TXT exemplo:</span></b></blockquote><b><span class="Apple-tab-span" style="white-space: pre;"> </span></p><p><span class="Apple-tab-span" style="white-space: pre;"> </span><span style="color: blue;">Pasta com as músicas:</span></p><p><span class="Apple-tab-span" style="white-space: pre;"> </span>  </b></p><p><div class="separator" style="clear: both; text-align: center;"><b><a href="http://1.bp.blogspot.com/-yIVAP2aYPw4/Ub4dQd_R6DI/AAAAAAAAB6Y/A7YTk9e9eIE/s1600/Captura_de_tela.png" imageanchor="1" style="margin-left: 1em; margin-right: 1em;"><img border="0" height="172" src="http://1.bp.blogspot.com/-yIVAP2aYPw4/Ub4dQd_R6DI/AAAAAAAAB6Y/A7YTk9e9eIE/s320/Captura_de_tela.png" width="400" /></a></b></div><b> </p><p><span class="Apple-tab-span" style="white-space: pre;"> </span></p><p><span class="Apple-tab-span" style="white-space: pre;"> </span><u>Então, criei um <span style="color: blue;">Script em Shell</span> que pega a 1° linha do txt e renomea o primeiro arquivo do diretório, depois pega a 2° e renomea a segunda música do diretório...e assim por diante:</u></p><p></p><p><span class="Apple-tab-span" style="white-space: pre;"> </span><u><span style="color: blue;">Arquivo em TXT</span></u>:</p><p><span class="Apple-tab-span" style="white-space: pre;"> </span>{% highlight bash %}</p><p>01-Alceu Valença-Estação Da luz</p><p>02-Alceu Valença-Como Dois Animais</p><p>03-Alceu Valença-Tropicana</p><p>04-Alceu Valença-Petrolina Juazeiro</p><p>05-Alceu Valença-Anunciação</p><p>06-Alceu Valença-Coração Bobo</p><p>07-Alceu Valença-Solidão</p><p>08-Alceu Valença-Pelas Ruas Que Andei</p><p>09-Alceu Valença-Essa Menina</p><p>10-Alceu Valença-Cabelo No Pente</p><p>11-Alceu Valença-Leque Moleque</p><p>12-Alceu Valença-Girassol</p><p>13-Alceu Valença-O Ovo e a Galinha</p><p>14-Alceu Valença-Cantiga Do Sapo</p><p>15-Alceu Valença-Romance Da Bela Inês</p><p>16-Alceu Valença-Descida da Ladeira</p><p>17-Alceu Valença-Meu Forró Meu Canto</p><p>18-Alceu Valença-Rima Com Rima</p><p>19-Alceu Valença-Vou Pra Campinas</p><p>20-Alceu Valença-Eu Quero Ver Você Dizer Que Eu Sou Ruim</p><p><span class="Apple-tab-span" style="white-space: pre;"> </span>{% endhighlight %}</p><p><span class="Apple-tab-span" style="white-space: pre;"> </span></p><p></b></p><p><blockquote class="tr_bq"><b><span class="Apple-tab-span" style="white-space: pre;"> </span><span style="color: purple; font-size: large;">Levando em conta que no diretório também existiam outros arquivos que não eram música, ou seja, no formato </span><span style="color: blue; font-size: large;">JPG(Capa do disco)</span><span style="color: purple; font-size: large;"> e o próprio arquivo com as músicas(</span><span style="color: blue; font-size: large;">faixas.txt</span><span style="color: purple; font-size: large;">), então o Script também deve ter a tarefa de </span><span style="color: red; font-size: large;">NÃO</span><span style="color: purple; font-size: large;"> renomeá-los. Com esse algoritmo na cabeça, criei o seguinte:</span></b></blockquote><b><span class="Apple-tab-span" style="white-space: pre;"> </span></p><p><span class="Apple-tab-span" style="white-space: pre;"> </span>✍<span style="color: blue;"> <i>Primeiramente, como as músicas são em MP3, precisava que no arquivo final existisse o .mp3, então inclui uma linha que põe o '.mp3' a palavra no final de cada linha:</i></span></p><p><span class="Apple-tab-span" style="white-space: pre;"> </span>{% highlight bash %}sed -i 's/$/.mp3/' faixas.txt{% endhighlight %}</p><p><span class="Apple-tab-span" style="white-space: pre;"> </span></p><p><span class="Apple-tab-span" style="white-space: pre;"> </span>✍ <i><span style="color: blue;">Conta a quantidade de arquivos no formato MP3 no diretório, onde 'max' seria a variável que me daria a quantidade dos arquivos:</span></i></p><p><span class="Apple-tab-span" style="white-space: pre;"> </span>{% highlight bash %}max=$(ls *.mp3 | wc -l){% endhighlight %}</p><p><span class="Apple-tab-span" style="white-space: pre;"> </span></p><p><span class="Apple-tab-span" style="white-space: pre;"> </span>✍ <i><span style="color: blue;">Cria um diretório temporário:</span></i></p><p><span class="Apple-tab-span" style="white-space: pre;"> </span>{% highlight bash %}mkdir .temp{% endhighlight %}</p><p><span class="Apple-tab-span" style="white-space: pre;"> </span></p><p><span class="Apple-tab-span" style="white-space: pre;"> </span>✍<i> <span style="color: blue;">Lista os arquivos em MP3 e a saída joga para um TXT na pasta temporária:</span></i></p><p><span class="Apple-tab-span" style="white-space: pre;"> </span>{% highlight bash %}ls *.mp3 &gt; .temp/lista_antiga_dos_arquivos.txt{% endhighlight %}</p><p><span class="Apple-tab-span" style="white-space: pre;">   </span></p><p><span class="Apple-tab-span" style="white-space: pre;"> </span>✍ <i><span style="color: blue;">Um loop onde a sequencia(seq) iria do 1 ao 'max':<span class="Apple-tab-span" style="white-space: pre;"> </span></span></i></p><p><span class="Apple-tab-span" style="white-space: pre;"> </span>{% highlight bash %}</p><p><span class="Apple-tab-span" style="white-space: pre;"> </span>for i in $(seq 1 $max)</p><p><span class="Apple-tab-span" style="white-space: pre;"> </span>do</p><p><span class="Apple-tab-span" style="white-space: pre;"> </span> #comandos</p><p><span class="Apple-tab-span" style="white-space: pre;"> </span>done</p><p><span class="Apple-tab-span" style="white-space: pre;"> </span>{% endhighlight %}</p><p><span class="Apple-tab-span" style="white-space: pre;"> </span></p><p><span class="Apple-tab-span" style="white-space: pre;"> </span><span style="color: blue; font-size: large;">Dentro do loop criado acima, coloque tais comandos:</span></p><p><span class="Apple-tab-span" style="white-space: pre;"> </span></p><p><span class="Apple-tab-span" style="white-space: pre;"> </span>♛ <i><u><span style="color: purple;">Lê a linha da lista criada com o 'ls' e joga um linha do loop para um outro arquivo, ainda na pasta temporária</span></u></i></p><p><span class="Apple-tab-span" style="white-space: pre;"> </span>{% highlight bash %}sed "$i!d" .temp/lista_antiga_dos_arquivos.txt &gt; .temp/uma_das_musicas_lista_VELHA.txt{% endhighlight %}</p><p><span class="Apple-tab-span" style="white-space: pre;"> </span></p><p><span class="Apple-tab-span" style="white-space: pre;"> </span>♛ <i><u><span style="color: purple;">Armazena a linha(nome antigo, ex.: 01.mp3) numa variável:</span></u></i></p><p><span class="Apple-tab-span" style="white-space: pre;"> </span>{% highlight bash %}velho=$(cat .temp/uma_das_musicas_lista_VELHA.txt){% endhighlight %}</p><p><span class="Apple-tab-span" style="white-space: pre;"> </span></p><p><span class="Apple-tab-span" style="white-space: pre;"> </span>♛<i> A<span style="color: purple;"><u>gora lê a lista das faixas(COM OS NOMES QUE DESEJA-SE RENOMEAR) e também joga num outro arquivo temporário:</u></span></i></p><p><span class="Apple-tab-span" style="white-space: pre;"> </span>{% highlight bash %}sed "$i!d" faixas.txt &gt; .temp/uma_das_musicas_lista_NOVA.txt{% endhighlight %}</p><p><span class="Apple-tab-span" style="white-space: pre;"> </span></p><p><span class="Apple-tab-span" style="white-space: pre;"> </span>♛ <i><u><span style="color: purple;">Armazena a linha(NOME NOVO DA MÚSICA) numa variável:</span></u></i></p><p><span class="Apple-tab-span" style="white-space: pre;"> </span>{% highlight bash %}novo=$(cat .temp/uma_das_musicas_lista_NOVA.txt){% endhighlight %}</p><p><span class="Apple-tab-span" style="white-space: pre;"> </span></p><p><span class="Apple-tab-span" style="white-space: pre;"> </span>♛ <i><span style="color: purple;"><u>Finalmente substitímos o nome dos arquivo(RENOMEAMOS)</u></span></i></p><p><span class="Apple-tab-span" style="white-space: pre;"> </span>{% highlight bash %}mv "$velho" "$novo"{% endhighlight %}</p><p><span class="Apple-tab-span" style="white-space: pre;"> </span></p><p><span class="Apple-tab-span" style="white-space: pre;"> </span>♛ <i><span style="color: purple;"><u>Imprime o novo nome só para acompanhar a renomeação:</u></span></i></p><p><span class="Apple-tab-span" style="white-space: pre;"> </span>{% highlight bash %}echo "$novo"{% endhighlight %}</p><p><span class="Apple-tab-span" style="white-space: pre;"> </span></p><p><span class="Apple-tab-span" style="white-space: pre;"> </span>✍ <i><u><span style="color: purple;">E por fim, FORA DO LOOP, removemos a pasta temporária:</span></u></i></p><p><span class="Apple-tab-span" style="white-space: pre;"> </span>{% highlight bash %}rm -rf .temp{% endhighlight %}</p><p><span class="Apple-tab-span" style="white-space: pre;"> </span></p><p><span class="Apple-tab-span" style="white-space: pre;"> </span><span style="color: blue;">Veirifique o código completo do Script:</span></p><p><span class="Apple-tab-span" style="white-space: pre;"> </span></p><p><span class="Apple-tab-span" style="white-space: pre;"> </span>PasteBin:</p><p> <script src="http://pastebin.com/embed_js.php?i=wX5N7KPd"></script> </p><p><span class="Apple-tab-span" style="white-space: pre;"> </span></p><p><span class="Apple-tab-span" style="white-space: pre;"> </span>Codigo:</b></p><p>{% highlight bash %}<span style="font-family: monospace;">#!/bin/bash</span></p><p><span style="font-family: monospace;"># www.terminalroot.com.br</span></p><p><span style="font-family: monospace;">sed -i 's/$/.mp3/' faixas.txt</span></p><p><span style="font-family: monospace;">max=$(ls *.mp3 | wc -l)</span></p><p><span style="font-family: monospace;">mkdir .temp</span></p><p><span style="font-family: monospace;">ls *.mp3 &gt; .temp/lista_antiga_dos_arquivos.txt</span></p><p><span style="font-family: monospace;"></p><p></span><span style="font-family: monospace;">for i in $(seq 1 $max)</span></p><p><span style="font-family: monospace;"><span class="Apple-tab-span" style="white-space: pre;"> </span>do<span class="Apple-tab-span" style="white-space: pre;"> </span></span></p><p><span style="font-family: monospace;"></p><p></span><span style="font-family: monospace;"><span class="Apple-tab-span" style="white-space: pre;">  </span>sed "$i!d" .temp/lista_antiga_dos_arquivos.txt &gt; .temp/uma_das_musicas_lista_VELHA.txt</span></p><p><span style="font-family: monospace;"><span class="Apple-tab-span" style="white-space: pre;">  </span>velho=$(cat .temp/uma_das_musicas_lista_VELHA.txt)</span></p><p><span style="font-family: monospace;"></p><p></span><span style="font-family: monospace;"></p><p></span><span style="font-family: monospace;"><span class="Apple-tab-span" style="white-space: pre;">  </span>sed "$i!d" faixas.txt &gt; .temp/uma_das_musicas_lista_NOVA.txt</span></p><p><span style="font-family: monospace;"><span class="Apple-tab-span" style="white-space: pre;">  </span>novo=$(cat .temp/uma_das_musicas_lista_NOVA.txt)</span></p><p><span style="font-family: monospace;"><span class="Apple-tab-span" style="white-space: pre;">  </span>mv "$velho" "$novo"</span></p><p><span style="font-family: monospace;"><span class="Apple-tab-span" style="white-space: pre;">  </span>echo $novo</span></p><p><span class="Apple-tab-span" style="white-space: pre;"><span style="font-family: monospace;">  </span></span></p><p><span style="font-family: monospace;"><span class="Apple-tab-span" style="white-space: pre;"> </span>done</span></p><p><span class="Apple-tab-span" style="white-space: pre;"><span style="font-family: monospace;"> </span></span></p><p>rm -rf .temp{% endhighlight %}</p><p><span class="Apple-tab-span" style="white-space: pre;"> </span></p><p><span class="Apple-tab-span" style="white-space: pre;"> </span><b><span style="color: blue;"><i><u>Por fim a pasta ficou assim</u></i></span></b>:</p><p><span class="Apple-tab-span" style="white-space: pre;"> </span>   </p><p><div class="separator" style="clear: both; text-align: center;"><b><a href="http://1.bp.blogspot.com/-McEhnKVvK0o/Ub4dQgFAElI/AAAAAAAAB6c/L_zFWNWN0Bk/s1600/Captura_de_tela-1.png" imageanchor="1" style="margin-left: 1em; margin-right: 1em;"><img border="0" height="182" src="http://1.bp.blogspot.com/-McEhnKVvK0o/Ub4dQgFAElI/AAAAAAAAB6c/L_zFWNWN0Bk/s320/Captura_de_tela-1.png" width="400" /></a></b></div><b></p><p><span class="Apple-tab-span" style="white-space: pre;"> </span></p><p><span class="Apple-tab-span" style="white-space: pre;"> </span>Valeu!</p><p><span class="Apple-tab-span" style="white-space: pre;"> </span></p><p><span class="Apple-tab-span" style="white-space: pre;"> </span></p><p><span class="Apple-tab-span" style="white-space: pre;"> </span></b>
+<div class="separator" style="clear: both; text-align: center;"><a href="http://1.bp.blogspot.com/-FkPcIsY-8fU/Ub4bRVwYWsI/AAAAAAAAB6I/UlsSTr0GR6s/s1600/shell+script.png" imageanchor="1" style="clear: left; float: left; margin-bottom: 1em; margin-right: 1em;"><img border="0" src="http://1.bp.blogspot.com/-FkPcIsY-8fU/Ub4bRVwYWsI/AAAAAAAAB6I/UlsSTr0GR6s/s320/shell+script.png" /></a></div><!------------------------------------------------->
+
+
+
+
+<blockquote><b><span style="color: purple;">Olá galera, tive um problema hoje, seguinte: baixei um disco da internet, onde as músicas vieram somente com os números, mas sem o nome das mesmas, pois os nomes vieram num arquivo TXT exemplo:</span></b></blockquote><b><span class="Apple-tab-span" style="white-space: pre;"> </span>
+<span class="Apple-tab-span" style="white-space: pre;"> </span><span style="color: blue;">Pasta com as músicas:</span>
+<span class="Apple-tab-span" style="white-space: pre;"> </span>  </b>
+<div class="separator" style="clear: both; text-align: center;"><b><a href="http://1.bp.blogspot.com/-yIVAP2aYPw4/Ub4dQd_R6DI/AAAAAAAAB6Y/A7YTk9e9eIE/s1600/Captura_de_tela.png" imageanchor="1" style="margin-left: 1em; margin-right: 1em;"><img border="0" height="172" src="http://1.bp.blogspot.com/-yIVAP2aYPw4/Ub4dQd_R6DI/AAAAAAAAB6Y/A7YTk9e9eIE/s320/Captura_de_tela.png" width="400" /></a></b></div><b> 
+<span class="Apple-tab-span" style="white-space: pre;"> </span>
+<span class="Apple-tab-span" style="white-space: pre;"> </span><u>Então, criei um <span style="color: blue;">Script em Shell</span> que pega a 1° linha do txt e renomea o primeiro arquivo do diretório, depois pega a 2° e renomea a segunda música do diretório...e assim por diante:</u>
+
+<span class="Apple-tab-span" style="white-space: pre;"> </span><u><span style="color: blue;">Arquivo em TXT</span></u>:
+ {% highlight bash %}
+
+01-Alceu Valença-Estação Da luz
+02-Alceu Valença-Como Dois Animais
+03-Alceu Valença-Tropicana
+04-Alceu Valença-Petrolina Juazeiro
+05-Alceu Valença-Anunciação
+06-Alceu Valença-Coração Bobo
+07-Alceu Valença-Solidão
+08-Alceu Valença-Pelas Ruas Que Andei
+09-Alceu Valença-Essa Menina
+10-Alceu Valença-Cabelo No Pente
+11-Alceu Valença-Leque Moleque
+12-Alceu Valença-Girassol
+13-Alceu Valença-O Ovo e a Galinha
+14-Alceu Valença-Cantiga Do Sapo
+15-Alceu Valença-Romance Da Bela Inês
+16-Alceu Valença-Descida da Ladeira
+17-Alceu Valença-Meu Forró Meu Canto
+18-Alceu Valença-Rima Com Rima
+19-Alceu Valença-Vou Pra Campinas
+20-Alceu Valença-Eu Quero Ver Você Dizer Que Eu Sou Ruim
+ 
+{% endhighlight %}
+<span class="Apple-tab-span" style="white-space: pre;"> </span>
+</b>
+<blockquote class="tr_bq"><b><span class="Apple-tab-span" style="white-space: pre;"> </span><span style="color: purple; font-size: large;">Levando em conta que no diretório também existiam outros arquivos que não eram música, ou seja, no formato </span><span style="color: blue; font-size: large;">JPG(Capa do disco)</span><span style="color: purple; font-size: large;"> e o próprio arquivo com as músicas(</span><span style="color: blue; font-size: large;">faixas.txt</span><span style="color: purple; font-size: large;">), então o Script também deve ter a tarefa de </span><span style="color: red; font-size: large;">NÃO</span><span style="color: purple; font-size: large;"> renomeá-los. Com esse algoritmo na cabeça, criei o seguinte:</span></b></blockquote><b><span class="Apple-tab-span" style="white-space: pre;"> </span>
+<span class="Apple-tab-span" style="white-space: pre;"> </span>✍<span style="color: blue;"> <i>Primeiramente, como as músicas são em MP3, precisava que no arquivo final existisse o .mp3, então inclui uma linha que põe o '.mp3' a palavra no final de cada linha:</i></span>
+ {% highlight bash %}
+sed -i 's/$/.mp3/' faixas.txt
+{% endhighlight %}
+ 
+ ✍ Conta a quantidade de arquivos no formato MP3 no diretório, onde 'max' seria a variável que me daria a quantidade dos arquivos:
+ {% highlight bash %}
+max=$(ls *.mp3 | wc -l)
+{% endhighlight %}
+<span class="Apple-tab-span" style="white-space: pre;"> </span>
+<span class="Apple-tab-span" style="white-space: pre;"> </span>✍ <i><span style="color: blue;">Cria um diretório temporário:</span></i>
+ {% highlight bash %}
+mkdir .temp
+{% endhighlight %}
+ 
+ ✍ Lista os arquivos em MP3 e a saída joga para um TXT na pasta temporária:
+ {% highlight bash %}
+ls *.mp3 > .temp/lista_antiga_dos_arquivos.txt
+{% endhighlight %}
+<span class="Apple-tab-span" style="white-space: pre;">   </span>
+<span class="Apple-tab-span" style="white-space: pre;"> </span>✍ <i><span style="color: blue;">Um loop onde a sequencia(seq) iria do 1 ao 'max':<span class="Apple-tab-span" style="white-space: pre;"> </span></span></i>
+ {% highlight bash %}
+
+ for i in $(seq 1 $max)
+ do
+  #comandos
+ done
+ 
+{% endhighlight %}
+<span class="Apple-tab-span" style="white-space: pre;"> </span>
+<span class="Apple-tab-span" style="white-space: pre;"> </span><span style="color: blue; font-size: large;">Dentro do loop criado acima, coloque tais comandos:</span>
+<span class="Apple-tab-span" style="white-space: pre;"> </span>
+<span class="Apple-tab-span" style="white-space: pre;"> </span>♛ <i><u><span style="color: purple;">Lê a linha da lista criada com o 'ls' e joga um linha do loop para um outro arquivo, ainda na pasta temporária</span></u></i>
+ {% highlight bash %}
+sed "$i!d" .temp/lista_antiga_dos_arquivos.txt > .temp/uma_das_musicas_lista_VELHA.txt
+{% endhighlight %}
+ 
+ ♛ Armazena a linha(nome antigo, ex.: 01.mp3) numa variável:
+ {% highlight bash %}
+velho=$(cat .temp/uma_das_musicas_lista_VELHA.txt)
+{% endhighlight %}
+<span class="Apple-tab-span" style="white-space: pre;"> </span>
+<span class="Apple-tab-span" style="white-space: pre;"> </span>♛<i> A<span style="color: purple;"><u>gora lê a lista das faixas(COM OS NOMES QUE DESEJA-SE RENOMEAR) e também joga num outro arquivo temporário:</u></span></i>
+ {% highlight bash %}
+sed "$i!d" faixas.txt > .temp/uma_das_musicas_lista_NOVA.txt
+{% endhighlight %}
+ 
+ ♛ Armazena a linha(NOME NOVO DA MÚSICA) numa variável:
+ {% highlight bash %}
+novo=$(cat .temp/uma_das_musicas_lista_NOVA.txt)
+{% endhighlight %}
+<span class="Apple-tab-span" style="white-space: pre;"> </span>
+<span class="Apple-tab-span" style="white-space: pre;"> </span>♛ <i><span style="color: purple;"><u>Finalmente substitímos o nome dos arquivo(RENOMEAMOS)</u></span></i>
+ {% highlight bash %}
+mv "$velho" "$novo"
+{% endhighlight %}
+ 
+ ♛ Imprime o novo nome só para acompanhar a renomeação:
+ {% highlight bash %}
+echo "$novo"
+{% endhighlight %}
+<span class="Apple-tab-span" style="white-space: pre;"> </span>
+<span class="Apple-tab-span" style="white-space: pre;"> </span>✍ <i><u><span style="color: purple;">E por fim, FORA DO LOOP, removemos a pasta temporária:</span></u></i>
+ {% highlight bash %}
+rm -rf .temp
+{% endhighlight %}
+ 
+ Veirifique o código completo do Script:
+ 
+ PasteBin:
+  
+ 
+ Codigo:
+{% highlight bash %}
+#!/bin/bash
+# www.terminalroot.com.br
+sed -i 's/$/.mp3/' faixas.txt
+max=$(ls *.mp3 | wc -l)
+mkdir .temp
+ls *.mp3 > .temp/lista_antiga_dos_arquivos.txt
+
+for i in $(seq 1 $max)
+ do 
+
+  sed "$i!d" .temp/lista_antiga_dos_arquivos.txt > .temp/uma_das_musicas_lista_VELHA.txt
+  velho=$(cat .temp/uma_das_musicas_lista_VELHA.txt)
+
+
+  sed "$i!d" faixas.txt > .temp/uma_das_musicas_lista_NOVA.txt
+  novo=$(cat .temp/uma_das_musicas_lista_NOVA.txt)
+  mv "$velho" "$novo"
+  echo $novo
+  
+ done
+ 
+rm -rf .temp
+{% endhighlight %}
+<span class="Apple-tab-span" style="white-space: pre;"> </span>
+<span class="Apple-tab-span" style="white-space: pre;"> </span><b><span style="color: blue;"><i><u>Por fim a pasta ficou assim</u></i></span></b>:
+<span class="Apple-tab-span" style="white-space: pre;"> </span>   
+<div class="separator" style="clear: both; text-align: center;"><b><a href="http://1.bp.blogspot.com/-McEhnKVvK0o/Ub4dQgFAElI/AAAAAAAAB6c/L_zFWNWN0Bk/s1600/Captura_de_tela-1.png" imageanchor="1" style="margin-left: 1em; margin-right: 1em;"><img border="0" height="182" src="http://1.bp.blogspot.com/-McEhnKVvK0o/Ub4dQgFAElI/AAAAAAAAB6c/L_zFWNWN0Bk/s320/Captura_de_tela-1.png" width="400" /></a></b></div><b>
+<span class="Apple-tab-span" style="white-space: pre;"> </span>
+<span class="Apple-tab-span" style="white-space: pre;"> </span>Valeu!
+<span class="Apple-tab-span" style="white-space: pre;"> </span>
+<span class="Apple-tab-span" style="white-space: pre;"> </span>
+<span class="Apple-tab-span" style="white-space: pre;"> </span></b>
 
 </p>

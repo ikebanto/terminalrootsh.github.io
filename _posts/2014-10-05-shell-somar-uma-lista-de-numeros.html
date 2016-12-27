@@ -16,6 +16,16 @@ introduction: 'Shell: Somar uma lista de números'
 ---
 
 <p>
-<div class="separator" style="clear: both; text-align: center;"><a href="http://4.bp.blogspot.com/-0-g4Dd_lBIo/U_52O4ZccAI/AAAAAAAAAnU/g_LhofLRK6c/s1600/10574302_1493727024198652_2721287585774935056_n.png" imageanchor="1" style="margin-left: 1em; margin-right: 1em;"><img border="0" src="http://4.bp.blogspot.com/-0-g4Dd_lBIo/U_52O4ZccAI/AAAAAAAAAnU/g_LhofLRK6c/s1600/10574302_1493727024198652_2721287585774935056_n.png" /></a></div></p><p></p><p><b>Você tem uma lista de números, um por linha, e precisa somá-los:</p><p></b></p><p><div class="adp"><b>$ cat numeros.txt 3 5 7 9 11 13 15</b></div><b></p><p>Primeiro, coloque todos em uma única linha:</p><p><div class="adp">$ paste -s numeros.txt 3 5 7 9 11 13 15</div></p><p>Agora mude o delimitador (-d) de TAB para “+”, para compor a expressão aritmética de soma:</p><p><div class="adp">$ paste -s -d + numeros.txt 3+5+7+9+11+13+15</div></p><p>Agora sim, basta passar a expressão resultante para a calculadora do shell:</p><p><div class="adp">$ paste -s -d + numeros.txt | bc 63</div></b><span style="color: #999999;"><i><span style="font-size: x-small;">Via: http://codare.net</span></i></span>
+<div class="separator" style="clear: both; text-align: center;"><a href="http://4.bp.blogspot.com/-0-g4Dd_lBIo/U_52O4ZccAI/AAAAAAAAAnU/g_LhofLRK6c/s1600/10574302_1493727024198652_2721287585774935056_n.png" imageanchor="1" style="margin-left: 1em; margin-right: 1em;"><img border="0" src="http://4.bp.blogspot.com/-0-g4Dd_lBIo/U_52O4ZccAI/AAAAAAAAAnU/g_LhofLRK6c/s1600/10574302_1493727024198652_2721287585774935056_n.png" /></a></div>
+
+<b>Você tem uma lista de números, um por linha, e precisa somá-los:
+</b>
+<div class="adp"><b>$ cat numeros.txt 3 5 7 9 11 13 15</b></div><b>
+Primeiro, coloque todos em uma única linha:
+<div class="adp">$ paste -s numeros.txt 3 5 7 9 11 13 15</div>
+Agora mude o delimitador (-d) de TAB para “+”, para compor a expressão aritmética de soma:
+<div class="adp">$ paste -s -d + numeros.txt 3+5+7+9+11+13+15</div>
+Agora sim, basta passar a expressão resultante para a calculadora do shell:
+<div class="adp">$ paste -s -d + numeros.txt | bc 63</div></b><span style="color: #999999;"><i><span style="font-size: x-small;">Via: http://codare.net</span></i></span>
 
 </p>

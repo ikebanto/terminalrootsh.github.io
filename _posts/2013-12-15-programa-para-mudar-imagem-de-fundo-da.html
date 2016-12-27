@@ -18,6 +18,101 @@ introduction: Programa para mudar a imagem de fundo da tela de login(GDM3) do De
 ---
 
 <p>
-<div class="separator" style="clear: both; text-align: center;"><a href="http://2.bp.blogspot.com/-iwRAsvVcnBo/Uq2dLKQZcxI/AAAAAAAAAEc/jltUnWYPw24/s1600/trocarimagemgdm3.png" imageanchor="1" style="margin-left: 1em; margin-right: 1em;"><img border="0" src="http://2.bp.blogspot.com/-iwRAsvVcnBo/Uq2dLKQZcxI/AAAAAAAAAEc/jltUnWYPw24/s320/trocarimagemgdm3.png" /></a></div><b>Criei um <span style="color: purple;">mini software</span> para alterar a imagem de login do <span style="color: blue;">Debian Squeeze</span> <i>(talvez sirva pra alguns Debian Like que também usam <span style="color: blue;">GDM 3</span>)</i>. Foi escrito em <span style="color: blue;">PHP-GTK</span>. Após instalado com execução do <span style="color: blue;">Shell Script</span> que está disponível neste post, basta procurá-lo em :</p><p></b></p><p><blockquote class="tr_bq"><b>Aplicativos &gt; Acessórios &gt; Trocar Imagem do GDM 3</b></blockquote><b></p><p><span style="font-size: large;">As telas do programa são:</span></p><p></p><p><span style="font-size: x-large;">1 - Tela Inicial do Programa </span></p><p></b></p><p><div class="separator" style="clear: both; text-align: center;"><b><a href="http://1.bp.blogspot.com/-fNoEZ1Ej1ag/Uq2btlWWgkI/AAAAAAAAAEA/Dfu1P-LWvMA/s1600/1+-+Tela+Inicial+do+Programa.png" imageanchor="1" style="margin-left: 1em; margin-right: 1em;"><img border="0" src="http://1.bp.blogspot.com/-fNoEZ1Ej1ag/Uq2btlWWgkI/AAAAAAAAAEA/Dfu1P-LWvMA/s320/1+-+Tela+Inicial+do+Programa.png" /></a></b></div><b></p><p><span style="font-size: x-large;">2 - Caso a alteração da imagem seja efetuada com sucesso </span></p><p></b></p><p><div class="separator" style="clear: both; text-align: center;"><b><a href="http://4.bp.blogspot.com/-SmTCemF9MRw/Uq2btgqanvI/AAAAAAAAAD4/WlIazQ-63WA/s1600/2+-+Caso+a+altera%C3%A7%C3%A3o+da+imagem+seja+efetuada+com+sucesso.png" imageanchor="1" style="margin-left: 1em; margin-right: 1em;"><img border="0" src="http://4.bp.blogspot.com/-SmTCemF9MRw/Uq2btgqanvI/AAAAAAAAAD4/WlIazQ-63WA/s320/2+-+Caso+a+altera%C3%A7%C3%A3o+da+imagem+seja+efetuada+com+sucesso.png" /></a></b></div><b></p><p><span style="font-size: x-large;">3 - Só aceita imagens e nos formatos PNG ou JPG </span></p><p></b></p><p><div class="separator" style="clear: both; text-align: center;"><b><a href="http://2.bp.blogspot.com/-CHf0gL8Qmz4/Uq2bt7l9oRI/AAAAAAAAAD8/yRm1zCOYnV0/s1600/3+-+S%C3%B3+aceita+imagens+e+nos+formatos+PNG+ou+JPG.png" imageanchor="1" style="margin-left: 1em; margin-right: 1em;"><img border="0" src="http://2.bp.blogspot.com/-CHf0gL8Qmz4/Uq2bt7l9oRI/AAAAAAAAAD8/yRm1zCOYnV0/s320/3+-+S%C3%B3+aceita+imagens+e+nos+formatos+PNG+ou+JPG.png" /></a></b></div><b></p><p><span style="font-size: x-large;">4 - Se por acaso clicar em OK, sem escolher algum item </span></p><p></b></p><p><div class="separator" style="clear: both; text-align: center;"><b><a href="http://1.bp.blogspot.com/-usUnbEqTiqs/Uq2bur24HYI/AAAAAAAAAEQ/wE4LqhUADhs/s1600/4+-+Se+por+acaso+clicar+em+OK,+sem+escolher+algum+item.png" imageanchor="1" style="margin-left: 1em; margin-right: 1em;"><img border="0" src="http://1.bp.blogspot.com/-usUnbEqTiqs/Uq2bur24HYI/AAAAAAAAAEQ/wE4LqhUADhs/s320/4+-+Se+por+acaso+clicar+em+OK,+sem+escolher+algum+item.png" /></a></b></div><b></p><p></p><p><u>Caso tenham interesse em analisar o código, o mesmo é gravado no diretório:</u></p><p></b></p><p><blockquote class="tr_bq"><b>/usr/opt/trocarimagemgdm3</b></blockquote><b></p><p>Basta copiar o código abaixo, colar num editor de texto de sua preferência, salvar e dar a permissão para execução( <span style="color: blue;">chmod +x instTrocarImagem.sh</span>), depois é só esperar o aviso da instalação efetuada com sucesso e começar a utilizá-lo.</b></p><p></p><p><b></b></p><p><b><i>Mais informações: <a href="http://amigosdopinguim.blogspot.com.br/2013/02/como-mudar-imagem-de-fundo-da-tela-de.html" target="_blank"> Como mudar a imagem de fundo da tela de login(GDM3) do Debian 6</a></i></b></p><p><b></b></p><p><b></b></p><p><b><span style="color: #cc0000;">Report Bugs para</span> : <a href="mailto:amigosdopinguim@linuxmail.org" target="_blank">binbash@linuxmail.org</a></p><p></p><p>Segue o código do Instalador:</p><p><script src="http://pastebin.com/embed_js.php?i=5ZzSwBus"></script> Versão do Código no Blog:</p><p></p><p></b></p><p><div class="adp"><b>#!/bin/bash</p><p># --------------------------------------</p><p># ./instTrocarImagem</p><p>#</p><p># Uso: ./instTrocarImagem</p><p>#</p><p># Autor: Marcos da B. M. Oliveira , http://www.terminalroot.com.br/</p><p># Desde: Dom 15 Dez 2013 10:07:21 BRST </p><p># Versão: 1</p><p># Licença: GPL</p><p># --------------------------------------</p><p>if [ "$USER" != "root" ]; then</p><p>&nbsp;&nbsp;&nbsp; echo "Você precisa ser root.";</p><p>&nbsp;&nbsp;&nbsp; echo "Abortar.";</p><p>&nbsp;&nbsp;&nbsp; exit 0</p><p>fi</p><p></p><p># baixando o programa</p><p>wget http://linuxshell.onlinewebshop.net/downloads/trocarimagemgdm3.tar</p><p></p><p># descompactando tar -zxvf trocarimagemgdm3.tar</b></p><p><b></p><p># criando o tema 20_debian adequado para alteração</p><p>echo "# Use a specific background</p><p>/desktop/gnome/background/picture_filename&nbsp;&nbsp;&nbsp; /usr/share/images/desk.png</p><p>#/desktop/gnome/background/picture_options&nbsp;&nbsp;&nbsp; zoom</p><p></p><p># Theming options</p><p>/desktop/gnome/interface/gtk_theme&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; Darklooks</p><p></p><p># Greeter options</p><p>/apps/gdm/simple-greeter/logo_icon_name &nbsp;&nbsp;&nbsp; debian-swirl</p><p></p><p># Play system beeps - especially the one when the greeter is ready</p><p>/desktop/gnome/sound/event_sounds&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; true</p><p></p><p># Some other possible options</p><p>#/apps/gdm/simple-greeter/banner_message_enable&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; true</p><p>#/apps/gdm/simple-greeter/banner_message_text&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; Welcome</p><p>#/apps/gdm/simple-greeter/disable_restart_buttons&nbsp;&nbsp;&nbsp; false</p><p>#/apps/gdm/simple-greeter/disable_user_list&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; false</p><p></p><p># The lower panel doesn't work with the compositor</p><p>/apps/metacity/general/compositing_manager&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; false</p><p></p><p># Prevent the power management icon from showing up</p><p>/apps/gnome-power-manager/ui/icon_policy&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; never" &gt; /usr/share/gdm/greeter-config/20_debian</p><p></p><p># copiando programa para pasta opcionais</p><p>cp -Rap trocarimagemgdm3 /opt/</p><p></p><p># criando ícone no desktop</p><p>cp /opt/trocarimagemgdm3/trocarimagemgdm3.desktop /usr/share/applications/</p><p></p><p># dando permissão para execução</p><p>chmod +x -R /opt/trocarimagemgdm3/</p><p></p><p># dando permissão na pasta de imagens</p><p>chmod -R 777 /usr/share/images/</p><p></p><p>echo "Programa instalado com sucesso!"</p><p></p><p>exit 0 </b></div><b></b>
+<div class="separator" style="clear: both; text-align: center;"><a href="http://2.bp.blogspot.com/-iwRAsvVcnBo/Uq2dLKQZcxI/AAAAAAAAAEc/jltUnWYPw24/s1600/trocarimagemgdm3.png" imageanchor="1" style="margin-left: 1em; margin-right: 1em;"><img border="0" src="http://2.bp.blogspot.com/-iwRAsvVcnBo/Uq2dLKQZcxI/AAAAAAAAAEc/jltUnWYPw24/s320/trocarimagemgdm3.png" /></a></div><b>Criei um <span style="color: purple;">mini software</span> para alterar a imagem de login do <span style="color: blue;">Debian Squeeze</span> <i>(talvez sirva pra alguns Debian Like que também usam <span style="color: blue;">GDM 3</span>)</i>. Foi escrito em <span style="color: blue;">PHP-GTK</span>. Após instalado com execução do <span style="color: blue;">Shell Script</span> que está disponível neste post, basta procurá-lo em :
+</b>
+<blockquote class="tr_bq"><b>Aplicativos > Acessórios > Trocar Imagem do GDM 3</b></blockquote><b>
+<span style="font-size: large;">As telas do programa são:</span>
+
+<span style="font-size: x-large;">1 - Tela Inicial do Programa </span>
+</b>
+<div class="separator" style="clear: both; text-align: center;"><b><a href="http://1.bp.blogspot.com/-fNoEZ1Ej1ag/Uq2btlWWgkI/AAAAAAAAAEA/Dfu1P-LWvMA/s1600/1+-+Tela+Inicial+do+Programa.png" imageanchor="1" style="margin-left: 1em; margin-right: 1em;"><img border="0" src="http://1.bp.blogspot.com/-fNoEZ1Ej1ag/Uq2btlWWgkI/AAAAAAAAAEA/Dfu1P-LWvMA/s320/1+-+Tela+Inicial+do+Programa.png" /></a></b></div><b>
+<span style="font-size: x-large;">2 - Caso a alteração da imagem seja efetuada com sucesso </span>
+</b>
+<div class="separator" style="clear: both; text-align: center;"><b><a href="http://4.bp.blogspot.com/-SmTCemF9MRw/Uq2btgqanvI/AAAAAAAAAD4/WlIazQ-63WA/s1600/2+-+Caso+a+altera%C3%A7%C3%A3o+da+imagem+seja+efetuada+com+sucesso.png" imageanchor="1" style="margin-left: 1em; margin-right: 1em;"><img border="0" src="http://4.bp.blogspot.com/-SmTCemF9MRw/Uq2btgqanvI/AAAAAAAAAD4/WlIazQ-63WA/s320/2+-+Caso+a+altera%C3%A7%C3%A3o+da+imagem+seja+efetuada+com+sucesso.png" /></a></b></div><b>
+<span style="font-size: x-large;">3 - Só aceita imagens e nos formatos PNG ou JPG </span>
+</b>
+<div class="separator" style="clear: both; text-align: center;"><b><a href="http://2.bp.blogspot.com/-CHf0gL8Qmz4/Uq2bt7l9oRI/AAAAAAAAAD8/yRm1zCOYnV0/s1600/3+-+S%C3%B3+aceita+imagens+e+nos+formatos+PNG+ou+JPG.png" imageanchor="1" style="margin-left: 1em; margin-right: 1em;"><img border="0" src="http://2.bp.blogspot.com/-CHf0gL8Qmz4/Uq2bt7l9oRI/AAAAAAAAAD8/yRm1zCOYnV0/s320/3+-+S%C3%B3+aceita+imagens+e+nos+formatos+PNG+ou+JPG.png" /></a></b></div><b>
+<span style="font-size: x-large;">4 - Se por acaso clicar em OK, sem escolher algum item </span>
+</b>
+<div class="separator" style="clear: both; text-align: center;"><b><a href="http://1.bp.blogspot.com/-usUnbEqTiqs/Uq2bur24HYI/AAAAAAAAAEQ/wE4LqhUADhs/s1600/4+-+Se+por+acaso+clicar+em+OK,+sem+escolher+algum+item.png" imageanchor="1" style="margin-left: 1em; margin-right: 1em;"><img border="0" src="http://1.bp.blogspot.com/-usUnbEqTiqs/Uq2bur24HYI/AAAAAAAAAEQ/wE4LqhUADhs/s320/4+-+Se+por+acaso+clicar+em+OK,+sem+escolher+algum+item.png" /></a></b></div><b>
+
+<u>Caso tenham interesse em analisar o código, o mesmo é gravado no diretório:</u>
+</b>
+<blockquote class="tr_bq"><b>/usr/opt/trocarimagemgdm3</b></blockquote><b>
+Basta copiar o código abaixo, colar num editor de texto de sua preferência, salvar e dar a permissão para execução( <span style="color: blue;">chmod +x instTrocarImagem.sh</span>), depois é só esperar o aviso da instalação efetuada com sucesso e começar a utilizá-lo.</b>
+
+<p></p>
+<p><i>Mais informações: <a href="http://amigosdopinguim.blogspot.com.br/2013/02/como-mudar-imagem-de-fundo-da-tela-de.html" target="_blank"> Como mudar a imagem de fundo da tela de login(GDM3) do Debian 6</a></i></p>
+<p></p>
+<p></p>
+<b><span style="color: #cc0000;">Report Bugs para</span> : <a href="mailto:amigosdopinguim@linuxmail.org" target="_blank">binbash@linuxmail.org</a>
+
+Segue o código do Instalador:
+<iframe src="http://pastebin.com/raw/5ZzSwBus" style="border:none;width:100%;"></iframe> Versão do Código no Blog:
+
+</b>
+<div class="adp"><b>#!/bin/bash
+# --------------------------------------
+# ./instTrocarImagem
+#
+# Uso: ./instTrocarImagem
+#
+# Autor: Marcos da B. M. Oliveira , http://www.terminalroot.com.br/
+# Desde: Dom 15 Dez 2013 10:07:21 BRST 
+# Versão: 1
+# Licença: GPL
+# --------------------------------------
+if [ "$USER" != "root" ]; then
+ echo "Você precisa ser root.";
+ echo "Abortar.";
+ exit 0
+fi
+
+# baixando o programa
+wget http://linuxshell.onlinewebshop.net/downloads/trocarimagemgdm3.tar
+
+# descompactando tar -zxvf trocarimagemgdm3.tar</b>
+<b>
+# criando o tema 20_debian adequado para alteração
+echo "# Use a specific background
+/desktop/gnome/background/picture_filename /usr/share/images/desk.png
+#/desktop/gnome/background/picture_options zoom
+
+# Theming options
+/desktop/gnome/interface/gtk_theme  Darklooks
+
+# Greeter options
+/apps/gdm/simple-greeter/logo_icon_name  debian-swirl
+
+# Play system beeps - especially the one when the greeter is ready
+/desktop/gnome/sound/event_sounds  true
+
+# Some other possible options
+#/apps/gdm/simple-greeter/banner_message_enable  true
+#/apps/gdm/simple-greeter/banner_message_text  Welcome
+#/apps/gdm/simple-greeter/disable_restart_buttons false
+#/apps/gdm/simple-greeter/disable_user_list  false
+
+# The lower panel doesn't work with the compositor
+/apps/metacity/general/compositing_manager  false
+
+# Prevent the power management icon from showing up
+/apps/gnome-power-manager/ui/icon_policy  never" > /usr/share/gdm/greeter-config/20_debian
+
+# copiando programa para pasta opcionais
+cp -Rap trocarimagemgdm3 /opt/
+
+# criando ícone no desktop
+cp /opt/trocarimagemgdm3/trocarimagemgdm3.desktop /usr/share/applications/
+
+# dando permissão para execução
+chmod +x -R /opt/trocarimagemgdm3/
+
+# dando permissão na pasta de imagens
+chmod -R 777 /usr/share/images/
+
+echo "Programa instalado com sucesso!"
+
+exit 0 </b></div><b></b>
 
 </p>

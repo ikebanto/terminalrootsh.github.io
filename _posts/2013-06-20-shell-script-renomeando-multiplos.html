@@ -19,6 +19,7 @@ introduction: 'Shell Script: Renomeando múltiplos arquivos'
 {% highlight bash %}
 
 
+
 #!/bin/bash
 #----------------------------------------------------------------------------
 # renomear.sh
@@ -44,6 +45,7 @@ count=0
 			[ [!-e] ] && mv -b $file "$param($count).$ext"		
 	done
 echo "Foram renomeados: "$(ls | wc -l) "arquivos $param($count) !"
+
 
 
 {% endhighlight %}

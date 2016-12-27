@@ -30,14 +30,16 @@ span {font-weight:bold; color:#66264a;}
 #retorno {padding:1px; border:1px solid green;display:none;} 
 #voltar {display:none;}
 </style>
+
 {% endhighlight %}
 
 <h2>Scripts em JavaScript/JQuery</h2>
 
 {% highlight bash %}
-<!--Chamamos a API do Google com o JQuery-->        
-<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.4.2/jquery.min.js"></script> 
-<script type="text/javascript">   
+
+        
+ 
+   
 $(function(){            
 	//ao clicar na tag com esse ID iniciamos a função     
 	$("#cadastrar").click(function(){            
@@ -66,7 +68,8 @@ $(function(){
 		});    
 	});   
 }); 
-</script>
+
+
 {% endhighlight %}
 
 <p>Um arquivo com o nome formail.php, nao vou comentar nem explicar pois isso é outro post</p>
@@ -84,6 +87,7 @@ if(empty($_POST['mail']) || empty($_POST['nome']) || empty($_POST['site']) || em
  	$msg   = $_POST['msg']; 
   echo "Seu email: $mail, Seu nome: $nome, Seu site: $site e sua mensagem: $msg!";
 ?>
+
 {% endhighlight %}
 
 <p>Leia, entenda, teste e comente, valeu!</p>

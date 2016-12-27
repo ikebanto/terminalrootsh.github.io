@@ -14,6 +14,85 @@ introduction: Efetuando Upload de arquivos com PHP
 ---
 
 <p>
-<b>&nbsp; <span style="color: red;">Upload</span> de arquivos é um assunto complicado, pois ele é uma brecha pra varios <strike>ataques</strike> se não for feito de maneira correta.Temos que estabelecer alguns <span style="color: #274e13;">LIMITES</span> obrigatóriamente se quisermos ter segurança.</b></p><p></p><p><b><span style="color: red;">1°</span> - Nunca permita qualquer tipo de arquivo para upload, pricipalmente se for arquivos de script(HTML, PHP, ASP...)</b></p><p></p><p><b><span style="color: red;">2°</span> - Estabeleça o tamanho máximo de arquivo, pois com práticas hacker pode-se derrubar seu servidor com "Negação de Serviço".Lembrando que caso vc tenha acesso ao php.ini, vc deve configurar o tamanho permitido pelo PHP na linha que contém: <i><span style="background-color: white; color: #274e13;">upload_max_filesize</span></i>, por padrão ele está setado para aceitar 2M (2 MB), mas você pode aumentar ou diminuir este tamanho.</b></p><p><b></p><p></b></p><p><b><span style="color: red;">3°</span> - Não mostre erros detalhados, aqui eu vou dar exemplo, mas use um único erro pra qualquer tipo de&nbsp; erro, e se quiser crie uma função pra salvar o tipo de erro pra você analisar mais tarde, no Banco de Dados.</b></p><p><b></p><p></b></p><p><b>Há inúmeras maneiras de se fazer isso, vou tentar mostrar aqui a maneira mais simples, numa próxima postagem sobre isso, vou explicar o Upload de Múltiplos Arquivos, porém antes vou explicar melhor os arrays e algumas de suas funções, e mais tarde o mesmo assunto utilizando AJAX.</b></p><p><b></p><p></b></p><p><b>Como de prática aqui do blog, vou publicar o arquivo(nesse caso criei o HTML e o PHP num só arquivo, requisição na própria página) e comentei de <span style="color: blue;">AZUL</span> os partes do código para causar entendimento.Verifique:</b></p><p></p><p><blockquote class="tr_bq"><b>upload.php</b></blockquote></p><p>{% highlight bash %}</p><p>&nbsp; &lt;form action="" method="post" enctype="multipart/form-data"&gt;</p><p>&nbsp; <span style="color: blue;">&lt;!--nesse input damos o nome MAX_FILE_SIZE e o Máximo de bits que ele pode ter do tipo hidden(oculto)--&gt;</span></p><p>&nbsp;&nbsp;&nbsp; &lt;input type="hidden" name="MAX_FILE_SIZE" value="1000000"/&gt;</p><p>&nbsp; <span style="color: blue;">&lt;!--nesse input damos o nome "arquivo" e o tipo de "file"--&gt;</span></p><p>&nbsp;&nbsp;&nbsp; Arquivo: &lt;input type="file" name="arquivo" /&gt;&lt;br /&gt;</p><p>&nbsp;&nbsp;&nbsp; &lt;input type="submit" name="enviar" /&gt;&lt;br /&gt;</p><p>&nbsp; &lt;/form&gt;</p><p></p><p>&lt;?php</p><p></p><p><div style="color: blue;">&nbsp;/*se clicarmos em Enviar Dados iniciaremos a leitura desse bloco*/</div>&nbsp;if(isset($_POST['enviar'])){</p><p>&nbsp;&nbsp;&nbsp; <span style="color: blue;">/* dê um var_dump($_FILES) ou print_r($_FILES) pra entender melhor essa parte, são os valores do array, nome, tipo, tamanho, erro, nome temporario...*/</span></p><p>&nbsp;&nbsp;&nbsp; $nome = $_FILES['arquivo']['name'];</p><p>&nbsp;&nbsp;&nbsp; $tipo = $_FILES['arquivo']['type'];</p><p>&nbsp;&nbsp;&nbsp; $tmp&nbsp; = $_FILES['arquivo']['tmp_name'];</p><p>&nbsp;&nbsp;&nbsp; $size = $_FILES['arquivo']['size'];</p><p>&nbsp;&nbsp;&nbsp; $erro = $_FILES['arquivo']['error'];</p><p>&nbsp;&nbsp;&nbsp; <span style="color: blue;">/* aqui definimos a pasta e/ou o caminho dela para que seja enviados os arquivos */</span> &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; </p><p>&nbsp;&nbsp;&nbsp; $caminho&nbsp;&nbsp;&nbsp; = '/uploads/';</p><p>&nbsp;&nbsp;&nbsp; <span style="color: blue;">/* o caminho mais o nome do aquivo para que possamos salvar o arquivo em determinada pasta */</span></p><p>&nbsp;&nbsp;&nbsp; $arquivocam = $caminho . $nome;</p><p>&nbsp;&nbsp;&nbsp; <span style="color: blue;">/* iremos decidir qual o tamanho máximo que permitiremos do arquivo */</span></p><p>&nbsp;&nbsp; &nbsp;$sizemax = 1024 * 1500;</p><p>&nbsp;&nbsp;&nbsp; <span style="color: blue;">/* informamos quais tipos de arquivo permitiremos */</span></p><p>&nbsp;&nbsp; &nbsp;$somente = array('image/jpg','text/plain','image/png');</p><p>&nbsp;&nbsp; &nbsp;<span style="color: blue;">/*pararemos a execução do bloco caso o tamanho seja execedido */</span></p><p>&nbsp;&nbsp; &nbsp;if($size &gt; $sizemax){</p><p>&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;die('Tamanho não permitido.');</p><p>&nbsp;&nbsp; &nbsp;}</p><p>&nbsp;&nbsp; &nbsp;<span style="color: blue;">/*pararemos a execução do bloco caso o tipo do arquivo não seja entre os permitido */</span></p><p>&nbsp;&nbsp; &nbsp;if(!array_search($tipo, $somente)){</p><p>&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;die('tipo inválido.');</p><p>&nbsp;&nbsp; &nbsp;}</p><p>&nbsp;&nbsp; </p><p>&nbsp;&nbsp; &nbsp;<span style="color: blue;">/* se a chave erro for igual a 0, entraremos nesse bloco */</span></p><p>&nbsp;&nbsp;&nbsp; if($erro == 0){</p><p>&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;<span style="color: blue;">/* usamos a função move_upload_file para mover, se der certo, completaremos o processo */</span></p><p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; if(move_uploaded_file($tmp, $arquivocam)){</p><p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; echo "Foi carregado com sucesso o arquivo: $nome, do tipo: $tipo, com tamanho de: $size bytes!";</p><p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; chmod($arquivocam,0777);</p><p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; }</p><p>&nbsp;&nbsp;&nbsp; <span style="color: blue;">/* caso erro seja maior que zero, descobriremos qual foi o problemas, porém nesse caso é bom salvar os erros em outro lugar e mostrar somente um erro, por motivos de segurança */</span></p><p>&nbsp;&nbsp;&nbsp; }else{</p><p>&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; switch($erro)</p><p>&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; {</p><p>&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; case 1: echo "Arquivo atingiu o tamanho máximo no PHP."; echo '&lt;br /&gt;'; break;</p><p>&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; case 2: echo "Arquivo atingiu o tamanho máximo no HTML.";echo '&lt;br /&gt;'; break;</p><p>&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; case 3: echo "Arquivo parcialmente carregado."; echo '&lt;br /&gt;'; break;</p><p>&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; case 4: echo "Erro: arquivo não carregado."; echo '&lt;br /&gt;'; break;</p><p>&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; }</p><p>&nbsp;&nbsp;&nbsp; }</p><p>&nbsp;}</p><p>?&gt;{% endhighlight %}</p><p></p><p><b>Simples, num é?Pronto!</b>
+<p> <span style="color: red;">Upload</span> de arquivos é um assunto complicado, pois ele é uma brecha pra varios <strike>ataques</strike> se não for feito de maneira correta.Temos que estabelecer alguns <span style="color: #274e13;">LIMITES</span> obrigatóriamente se quisermos ter segurança.</p>
+
+<p><span style="color: red;">1°</span> - Nunca permita qualquer tipo de arquivo para upload, pricipalmente se for arquivos de script(HTML, PHP, ASP...)</p>
+
+<p><span style="color: red;">2°</span> - Estabeleça o tamanho máximo de arquivo, pois com práticas hacker pode-se derrubar seu servidor com "Negação de Serviço".Lembrando que caso vc tenha acesso ao php.ini, vc deve configurar o tamanho permitido pelo PHP na linha que contém: <i><span style="background-color: white; color: #274e13;">upload_max_filesize</span></i>, por padrão ele está setado para aceitar 2M (2 MB), mas você pode aumentar ou diminuir este tamanho.</p>
+<b>
+</b>
+<p><span style="color: red;">3°</span> - Não mostre erros detalhados, aqui eu vou dar exemplo, mas use um único erro pra qualquer tipo de erro, e se quiser crie uma função pra salvar o tipo de erro pra você analisar mais tarde, no Banco de Dados.</p>
+<b>
+</b>
+<p>Há inúmeras maneiras de se fazer isso, vou tentar mostrar aqui a maneira mais simples, numa próxima postagem sobre isso, vou explicar o Upload de Múltiplos Arquivos, porém antes vou explicar melhor os arrays e algumas de suas funções, e mais tarde o mesmo assunto utilizando AJAX.</p>
+<b>
+</b>
+<p>Como de prática aqui do blog, vou publicar o arquivo(nesse caso criei o HTML e o PHP num só arquivo, requisição na própria página) e comentei de <span style="color: blue;">AZUL</span> os partes do código para causar entendimento.Verifique:</p>
+
+<blockquote class="tr_bq"><b>upload.php</b></blockquote>
+{% highlight bash %}
+
+ 
+ 
+ 
+ 
+ Arquivo: 
+
+ 
+
+ 
+
+<?php
+
+/*se clicarmos em Enviar Dados iniciaremos a leitura desse bloco*/if(isset($_POST['enviar'])){
+ /* dê um var_dump($_FILES) ou print_r($_FILES) pra entender melhor essa parte, são os valores do array, nome, tipo, tamanho, erro, nome temporario...*/
+ $nome = $_FILES['arquivo']['name'];
+ $tipo = $_FILES['arquivo']['type'];
+ $tmp = $_FILES['arquivo']['tmp_name'];
+ $size = $_FILES['arquivo']['size'];
+ $erro = $_FILES['arquivo']['error'];
+ /* aqui definimos a pasta e/ou o caminho dela para que seja enviados os arquivos */    
+ $caminho = '/uploads/';
+ /* o caminho mais o nome do aquivo para que possamos salvar o arquivo em determinada pasta */
+ $arquivocam = $caminho . $nome;
+ /* iremos decidir qual o tamanho máximo que permitiremos do arquivo */
+ $sizemax = 1024 * 1500;
+ /* informamos quais tipos de arquivo permitiremos */
+ $somente = array('image/jpg','text/plain','image/png');
+ /*pararemos a execução do bloco caso o tamanho seja execedido */
+ if($size > $sizemax){
+  die('Tamanho não permitido.');
+ }
+ /*pararemos a execução do bloco caso o tipo do arquivo não seja entre os permitido */
+ if(!array_search($tipo, $somente)){
+  die('tipo inválido.');
+ }
+ 
+ /* se a chave erro for igual a 0, entraremos nesse bloco */
+ if($erro == 0){
+  /* usamos a função move_upload_file para mover, se der certo, completaremos o processo */
+ if(move_uploaded_file($tmp, $arquivocam)){
+ echo "Foi carregado com sucesso o arquivo: $nome, do tipo: $tipo, com tamanho de: $size bytes!";
+ chmod($arquivocam,0777);
+ }
+ /* caso erro seja maior que zero, descobriremos qual foi o problemas, porém nesse caso é bom salvar os erros em outro lugar e mostrar somente um erro, por motivos de segurança */
+ }else{
+  switch($erro)
+  {
+  case 1: echo "Arquivo atingiu o tamanho máximo no PHP."; echo '
+'; break;
+  case 2: echo "Arquivo atingiu o tamanho máximo no HTML.";echo '
+'; break;
+  case 3: echo "Arquivo parcialmente carregado."; echo '
+'; break;
+  case 4: echo "Erro: arquivo não carregado."; echo '
+'; break;
+  }
+ }
+}
+?>
+{% endhighlight %}
+
+<p>Simples, num é?Pronto!</p>
 
 </p>

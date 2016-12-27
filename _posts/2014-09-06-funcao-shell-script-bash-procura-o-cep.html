@@ -17,6 +17,145 @@ introduction: 'Função Shell Script (Bash): Procura o CEP pelo nome da rua, cid
 ---
 
 <p>
-<div class="separator" style="clear: both; text-align: center;"><a href="http://1.bp.blogspot.com/-6k6Mx5CNwuc/Ur9FmBGo9aI/AAAAAAAAAHM/VVA_zbTxQes/s1600/correios-shell.jpg" imageanchor="1" style="margin-left: 1em; margin-right: 1em;"><img border="0" src="http://1.bp.blogspot.com/-6k6Mx5CNwuc/Ur9FmBGo9aI/AAAAAAAAAHM/VVA_zbTxQes/s1600/correios-shell.jpg" /></a></div><div class="separator" style="clear: both; text-align: center;"></div><div class="separator" style="clear: both; text-align: center;"></div></p><p><span style="font-family: Verdana,sans-serif;"><span style="color: #444444;"><span style="font-size: large;"><b><span style="color: blue;">Procura o CEP</span> pelo nome da <span style="color: purple;">rua</span>, <span style="color: purple;">cidade</span> e <span style="color: purple;">UF</span> informados  Segue o how to que ensina como utilizá-la, que por sinal é bem simples, que também é o cabeçalho e a opção <span style="color: blue;"><span style="font-size: x-large;">cep2rua</span></span> <span style="color: #073763;"><i>--help</i></span></b></span></span></span></p><p></p><p><blockquote class="tr_bq"><span style="color: purple;"><i><b>Função Shell Script (Bash): Procura o CEP pelo nome da rua, cidade e UF informados</b></i></span></p><p><span style="color: purple;"><i><b>&nbsp;-h (exibe ajuda, cabeçalho da função)</b></i></span></p><p><span style="color: purple;"><i><b>&nbsp;-e (exibe o endereço completo)</b></i></span></p><p><span style="color: purple;"><i><b>&nbsp;Obs.: As opções (parâmetro: -h ou --help ; -e ou --endereco)</b></i></span></p><p><span style="color: purple;"><i><b>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; , se forem utilizadas, o -h não recebe complementp.</b></i></span></p><p><span style="color: purple;"><i><b>&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;e o -e ou --endereco , deve ser utilizado antes de </b></i></span></p><p><span style="color: purple;"><i><b>&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;digitar o endereço.</b></i></span></p><p><span style="color: purple;"><i><b></p><p></b></i></span><span style="color: purple;"><i><b>&nbsp;Usos:&nbsp;&nbsp; &nbsp;cep2rua [rua cidade uf]</b></i></span></p><p><span style="color: purple;"><i><b>&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp; &nbsp;&nbsp; &nbsp;cep2rua [-e] [rua cidade uf]</b></i></span></p><p><span style="color: purple;"><i><b>&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp; &nbsp;&nbsp; &nbsp;cep2rua [--endereco] [rua cidade uf]</b></i></span></p><p><span style="color: purple;"><i><b>&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp; &nbsp;&nbsp; &nbsp;cep2rua [-h]</b></i></span></p><p><span style="color: purple;"><i><b>&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp; &nbsp;&nbsp; &nbsp;cep2rua [--help]</b></i></span></p><p><span style="color: purple;"><i><b></p><p></b></i></span><span style="color: purple;"><i><b>&nbsp;Exs.: cep2rua rua santana salvador ba</b></i></span></p><p><span style="color: purple;"><i><b>&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;cep2rua -e rua rio da ilha salvador ba</b></i></span></p><p><span style="color: purple;"><i><b>&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;cep2rua rua cambui londrina pr</b></i></span></p><p><span style="color: purple;"><i><b>&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp; &nbsp;&nbsp; &nbsp;cep2rua rua silverio lelis sao paulo sp</b></i></span></p><p><span style="color: purple;"><i><b>&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;cep2rua -e jobim rio de janeiro rj</b></i></span></p><p><span style="color: purple;"><i><b>&nbsp;&nbsp;&nbsp;&nbsp; </b></i></span></p><p><span style="color: purple;"><i><b>&nbsp;Autor:Marcos da B. M. Oliveira , http://www.terminalroot.com.br/</b></i></span></p><p><span style="color: purple;"><i><b>&nbsp;Desde: 2013-12-28</b></i></span></p><p><span style="color: purple;"><i><b>&nbsp;Versão: 1</b></i></span></p><p><span style="color: purple;"><i><b>&nbsp;Licença: GPL</b></i></span></p><p><span style="color: purple;"><i><b>&nbsp;Requisitos:</b></i></span></blockquote></p><p></p><p><a href="http://pastebin.com/RCx8LSdg" target="_blank"><b><span style="font-size: x-large;">Código no PasteBin</span></b></a>: </p><p><script src="http://pastebin.com/embed_js.php?i=5AL1fkEZ"></script> </p><p><b>Código no Blog: </b></p><p><div class="adp"><b>#!/bin/bash</p><p># ----------------------------------------------------------------------------</p><p># Função Shell Script (Bash): Procura o CEP pelo nome da rua, cidade e UF informados</p><p># AWK, SED, Shell Script, </p><p># -h (exibe ajuda, cabeçalho da função)</p><p># -e (exibe o endereço completo)</p><p># Obs.: As opções (parâmetro: -h ou --help ; -e ou --endereco)</p><p>#&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; , se forem utilizadas, o -h não recebe complementp.</p><p>#&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; e o -e ou --endereco , deve ser utilizado antes de </p><p>#&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; digitar o endereço.</p><p>#</p><p># Usos:&nbsp;&nbsp;&nbsp; cep2rua [rua cidade uf]</p><p>#&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp; cep2rua [-e] [rua cidade uf]</p><p>#&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp; cep2rua [--endereco] [rua cidade uf]</p><p>#&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp; cep2rua [-h]</p><p>#&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp; cep2rua [--help]</p><p>#</p><p># Exs.: cep2rua rua santana salvador ba</p><p>#&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; cep2rua -e rua rio da ilha salvador ba</p><p>#&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; cep2rua rua cambui londrina pr</p><p>#&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp; cep2rua rua silverio lelis sao paulo sp</p><p>#&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; cep2rua -e jobim rio de janeiro rj</p><p>#&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </p><p># Autor:Marcos da B. M. Oliveira , http://www.terminalroot.com.br/</p><p># Desde: 2013-12-28</p><p># Versão: 1</p><p># Licença: GPL</p><p># Requisitos: lynx ( se vc não tiver ele instalado, instale: apt-get install lynx )</p><p># ----------------------------------------------------------------------------</p><p>cep2rua(){</p><p></p><p>&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; if [ "$*" ]; then</p><p>&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; echo -n</p><p>&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; else</p><p>&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; echo "Sem parâmetros, digite o endereço."</p><p>&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; exit 0</p><p>&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; fi</p><p>&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; </p><p>&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; if [ "$(which lynx)" ]; then</p><p>&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; echo -n "";</p><p>&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; else</p><p>&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; echo -e "o lynx não está instaldo, instale com:</p><p>&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; apt-get install lynx</p><p>&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; Abortar."</p><p>&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; exit 0</p><p>&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; fi</p><p></p><p>&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; # variavel do que for digitado</p><p>&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; local endereco="$*"</p><p></p><p>&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; # troca os espaços em branco por '+' para efetuar pesquisa</p><p>&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; local endereco="$(echo $endereco | sed -e 's/ /+/g')"</p><p></p><p>&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; # endereço para pesquisa</p><p>&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; local urlendereco="http://maps.google.com/maps/api/geocode/json?address=$*&amp;sensor=false"</p><p></p><p>&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; # baixa o código fonte do arquivo pesquisado</p><p>&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; local endcom="$(lynx -source "$urlendereco" |</p><p></p><p>&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; # imprime só a linha que contém a palavra 'formatted_address'</p><p>&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; sed -n '/formatted_address/p' |</p><p></p><p>&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; # divide a linha anterior em duas, após o sinal de ': '</p><p>&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; sed 's/: /: \n/' |</p><p></p><p>&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; # deleta a linha que contém a string 'formatted_address'</p><p>&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; sed '/formatted_address/d' |</p><p></p><p>&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; # troca todas as ocorrências de \"(aspas duplas) e de ,(vírgula) por nada, e imprime o endereço.</p><p>&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; sed 's/\"\|\,//g')"</p><p></p><p>&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; case $1 in</p><p></p><p>&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; -h | --help)</p><p>&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; echo "Usos:</p><p>&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; cep2rua [rua cidade uf]</p><p>&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; cep2rua [-e] [rua cidade uf]</p><p>&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; cep2rua [--endereco] [rua cidade uf]</p><p>&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; cep2rua [-h]</p><p>&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; cep2rua [--help]</p><p></p><p>&nbsp;Exs.: </p><p>&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; cep2rua rua santana salvador ba</p><p>&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; cep2rua -e rua rio da ilha salvador ba</p><p>&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; cep2rua rua cambui londrina pr</p><p>&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; cep2rua rua silverio lelis sao paulo sp</p><p>&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; cep2rua -e jobim rio de janeiro rj"</p><p>&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; shift</p><p>&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; exit 0</p><p>&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; ;;</p><p>&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; -e | endereco)</p><p>&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; echo "$endcom";</p><p>&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; shift</p><p>&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; ;;</p><p>&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; *)</p><p>&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; local cep=$(echo $endcom | tr -d -c 0123456789)</p><p>&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; if [ "$cep" = "" ]; then</p><p>&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; echo "Cep não encontrado";</p><p>&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; else</p><p>&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; echo "$(echo $cep | cut -c1-5)-$(echo $cep | cut -c6-8)"; </p><p>&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; fi</p><p>&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; exit 0</p><p>&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; ;;</p><p>&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; esac</p><p>&nbsp;&nbsp;&nbsp; </p><p>&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; exit 0</p><p>}</p><p>cep2rua "$@" </b></div>
+<div class="separator" style="clear: both; text-align: center;"><a href="http://1.bp.blogspot.com/-6k6Mx5CNwuc/Ur9FmBGo9aI/AAAAAAAAAHM/VVA_zbTxQes/s1600/correios-shell.jpg" imageanchor="1" style="margin-left: 1em; margin-right: 1em;"><img border="0" src="http://1.bp.blogspot.com/-6k6Mx5CNwuc/Ur9FmBGo9aI/AAAAAAAAAHM/VVA_zbTxQes/s1600/correios-shell.jpg" /></a></div><div class="separator" style="clear: both; text-align: center;"></div><div class="separator" style="clear: both; text-align: center;"></div>
+<span style="font-family: Verdana,sans-serif;"><span style="color: #444444;"><span style="font-size: large;"><b><span style="color: blue;">Procura o CEP</span> pelo nome da <span style="color: purple;">rua</span>, <span style="color: purple;">cidade</span> e <span style="color: purple;">UF</span> informados  Segue o how to que ensina como utilizá-la, que por sinal é bem simples, que também é o cabeçalho e a opção <span style="color: blue;"><span style="font-size: x-large;">cep2rua</span></span> <span style="color: #073763;"><i>--help</i></span></b></span></span></span>
+
+<blockquote class="tr_bq"><span style="color: purple;"><i><b>Função Shell Script (Bash): Procura o CEP pelo nome da rua, cidade e UF informados</b></i></span>
+<span style="color: purple;"><i><b>-h (exibe ajuda, cabeçalho da função)</b></i></span>
+<span style="color: purple;"><i><b>-e (exibe o endereço completo)</b></i></span>
+<span style="color: purple;"><i><b>Obs.: As opções (parâmetro: -h ou --help ; -e ou --endereco)</b></i></span>
+<span style="color: purple;"><i><b> , se forem utilizadas, o -h não recebe complementp.</b></i></span>
+<span style="color: purple;"><i><b>    e o -e ou --endereco , deve ser utilizado antes de </b></i></span>
+<span style="color: purple;"><i><b>    digitar o endereço.</b></i></span>
+<span style="color: purple;"><i><b>
+</b></i></span><span style="color: purple;"><i><b>Usos: cep2rua [rua cidade uf]</b></i></span>
+<span style="color: purple;"><i><b>     cep2rua [-e] [rua cidade uf]</b></i></span>
+<span style="color: purple;"><i><b>     cep2rua [--endereco] [rua cidade uf]</b></i></span>
+<span style="color: purple;"><i><b>     cep2rua [-h]</b></i></span>
+<span style="color: purple;"><i><b>     cep2rua [--help]</b></i></span>
+<span style="color: purple;"><i><b>
+</b></i></span><span style="color: purple;"><i><b>Exs.: cep2rua rua santana salvador ba</b></i></span>
+<span style="color: purple;"><i><b>    cep2rua -e rua rio da ilha salvador ba</b></i></span>
+<span style="color: purple;"><i><b>  cep2rua rua cambui londrina pr</b></i></span>
+<span style="color: purple;"><i><b>     cep2rua rua silverio lelis sao paulo sp</b></i></span>
+<span style="color: purple;"><i><b>    cep2rua -e jobim rio de janeiro rj</b></i></span>
+<span style="color: purple;"><i><b> </b></i></span>
+<span style="color: purple;"><i><b>Autor:Marcos da B. M. Oliveira , http://www.terminalroot.com.br/</b></i></span>
+<span style="color: purple;"><i><b>Desde: 2013-12-28</b></i></span>
+<span style="color: purple;"><i><b>Versão: 1</b></i></span>
+<span style="color: purple;"><i><b>Licença: GPL</b></i></span>
+<span style="color: purple;"><i><b>Requisitos:</b></i></span></blockquote>
+
+<a href="http://pastebin.com/RCx8LSdg" target="_blank"><b><span style="font-size: x-large;">Código no PasteBin</span></b></a>: 
+<iframe src="http://pastebin.com/raw/5AL1fkEZ" style="border:none;width:100%;"></iframe> 
+<p>Código no Blog: </p>
+<div class="adp"><b>#!/bin/bash
+# ----------------------------------------------------------------------------
+# Função Shell Script (Bash): Procura o CEP pelo nome da rua, cidade e UF informados
+# AWK, SED, Shell Script, 
+# -h (exibe ajuda, cabeçalho da função)
+# -e (exibe o endereço completo)
+# Obs.: As opções (parâmetro: -h ou --help ; -e ou --endereco)
+# , se forem utilizadas, o -h não recebe complementp.
+#    e o -e ou --endereco , deve ser utilizado antes de 
+#    digitar o endereço.
+#
+# Usos: cep2rua [rua cidade uf]
+#    cep2rua [-e] [rua cidade uf]
+#    cep2rua [--endereco] [rua cidade uf]
+#    cep2rua [-h]
+#    cep2rua [--help]
+#
+# Exs.: cep2rua rua santana salvador ba
+#    cep2rua -e rua rio da ilha salvador ba
+#  cep2rua rua cambui londrina pr
+#    cep2rua rua silverio lelis sao paulo sp
+#    cep2rua -e jobim rio de janeiro rj
+# 
+# Autor:Marcos da B. M. Oliveira , http://www.terminalroot.com.br/
+# Desde: 2013-12-28
+# Versão: 1
+# Licença: GPL
+# Requisitos: lynx ( se vc não tiver ele instalado, instale: apt-get install lynx )
+# ----------------------------------------------------------------------------
+cep2rua(){
+
+  if [ "$*" ]; then
+   echo -n
+  else
+   echo "Sem parâmetros, digite o endereço."
+   exit 0
+  fi
+  
+  if [ "$(which lynx)" ]; then
+   echo -n "";
+  else
+   echo -e "o lynx não está instaldo, instale com:
+   apt-get install lynx
+  Abortar."
+    exit 0
+  fi
+
+  # variavel do que for digitado
+  local endereco="$*"
+
+  # troca os espaços em branco por '+' para efetuar pesquisa
+  local endereco="$(echo $endereco | sed -e 's/ /+/g')"
+
+  # endereço para pesquisa
+  local urlendereco="http://maps.google.com/maps/api/geocode/json?address=$*&amp;sensor=false"
+
+  # baixa o código fonte do arquivo pesquisado
+  local endcom="$(lynx -source "$urlendereco" |
+
+  # imprime só a linha que contém a palavra 'formatted_address'
+  sed -n '/formatted_address/p' |
+
+  # divide a linha anterior em duas, após o sinal de ': '
+  sed 's/: /: \n/' |
+
+  # deleta a linha que contém a string 'formatted_address'
+  sed '/formatted_address/d' |
+
+  # troca todas as ocorrências de \"(aspas duplas) e de ,(vírgula) por nada, e imprime o endereço.
+  sed 's/\"\|\,//g')"
+
+   case $1 in
+
+    -h | --help)
+     echo "Usos:
+  cep2rua [rua cidade uf]
+  cep2rua [-e] [rua cidade uf]
+  cep2rua [--endereco] [rua cidade uf]
+  cep2rua [-h]
+  cep2rua [--help]
+
+Exs.: 
+  cep2rua rua santana salvador ba
+  cep2rua -e rua rio da ilha salvador ba
+  cep2rua rua cambui londrina pr
+  cep2rua rua silverio lelis sao paulo sp
+  cep2rua -e jobim rio de janeiro rj"
+     shift
+     exit 0
+     ;;
+    -e | endereco)
+     echo "$endcom";
+     shift
+     ;;
+    *)
+     local cep=$(echo $endcom | tr -d -c 0123456789)
+     if [ "$cep" = "" ]; then
+      echo "Cep não encontrado";
+     else
+      echo "$(echo $cep | cut -c1-5)-$(echo $cep | cut -c6-8)"; 
+     fi
+     exit 0
+     ;;
+   esac
+ 
+  exit 0
+}
+cep2rua "$@" </b></div>
 
 </p>
