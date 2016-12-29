@@ -50,30 +50,30 @@ introduction: Gambas, o Visual Basic Open Source para Linux!
 
 <p>Para instalar no <a href="http://www.terminalroot.com.br/search/label/Debian" target="_blank"><span style="font-size: x-large;"><b>Debian</b></span></a>, se tiver <p>sudo</p> use-o ou logue-se como <p>root</p> com o comando <p>su</p>:<p>
 
-{% highlight %}
+{% highlight bash %}
 apt-get install gambas3
-{% endhighlight bash %}
+{% endhighlight %}
 
 
 <p>Para instalar no <a href="http://www.terminalroot.com.br/search/label/Ubuntu" target="_blank"><span style="font-size: large;"><b>Ubuntu</b></span></a>:</p>
 
-{% highlight %}
+{% highlight bash %}
 sudo add-apt-repository ppa:gambas-team/gambas-daily
 sudo apt-get update
 sudo apt-get install gambas3
-{% endhighlight bash %}
+{% endhighlight %}
 
 <p>Para instalar no <span style="font-size: large;"><b>Arch Linux</b></span>:</p>
 
-{% highlight %}
+{% highlight bash %}
 sudo pacman -S gambas3
-{% endhighlight bash %}
+{% endhighlight %}
 
 Para instalar no <span style="font-size: large;"><b>Fedora</b></span>:
 
-{% highlight %}
+{% highlight bash %}
 yum install gambas3
-{% endhighlight bash %}
+{% endhighlight %}
 
 <p>Veja como instalar em outras distribuições e como compilar e demais pacotes necessários para o pleno funcionamento, caso necessite:</p>
 <p><a href="http://gambaswiki.org/wiki/install" target="_blank">http://gambaswiki.org/wiki/install</a></p>
