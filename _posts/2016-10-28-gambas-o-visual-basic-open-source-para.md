@@ -86,3 +86,5 @@ yum install gambas3
 
 <!--<p>Veja um vídeo em inglês mostrando um Hello World no Gambas:</p>
 <a href="https://www.youtube.com/watch?v=rf3e5Gwyo20" target="_blank">https://www.youtube.com/watch?v=rf3e5Gwyo20</a>-->
+
+2016-10-28-gambas-o-visual-basic-open-source-para.md
