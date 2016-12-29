@@ -44,7 +44,7 @@ introduction: Gambas, o Visual Basic Open Source para Linux!
 <img border="0" height="347" src="https://4.bp.blogspot.com/-tppb851yUfo/WBPxwRtqKbI/AAAAAAAAA4w/gn4ST3fKdC8RHb7Oy4aPSERTo33L9DmDgCLcB/s640/gambas-form.jpg" width="640" />
 </div>
 
-<h2>Instalação</h2>
+## Instalação
 
 <p>Você pode baixar o pacote e compilá-lo ou instalar via repositório da sua distro:</p>
 
