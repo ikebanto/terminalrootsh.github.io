@@ -7,6 +7,7 @@ description: "As relações já ruins entre Estados Unidos e Rússia pioraram, d
 main-class: 'misc'
 color: '#34a853'
 tags:
+- notícias
 categories:
 twitter_text: "Obama expulsa 35 diplomatas russos por ataque que 'hackeou eleições' dos EUA"
 introduction: "As relações já ruins entre Estados Unidos e Rússia pioraram, dando o pontapé inicial a uma ciberguerra."
