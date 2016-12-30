@@ -3,13 +3,13 @@ layout: post
 title: "Obama expulsa 35 diplomatas russos por ataque que 'hackeou eleições' dos EUA"
 date: 2016-12-29 23:18:56
 image: '/assets/img/ciberguerra/ciberguerra.jpg'
-description:
-main-class:
-color:
+description: "As relações já ruins entre Estados Unidos e Rússia pioraram, dando o pontapé inicial a uma ciberguerra."
+main-class: 'misc'
+color: '#34a853'
 tags:
 categories:
-twitter_text:
-introduction:
+twitter_text: "Obama expulsa 35 diplomatas russos por ataque que 'hackeou eleições' dos EUA"
+introduction: "As relações já ruins entre Estados Unidos e Rússia pioraram, dando o pontapé inicial a uma ciberguerra."
 ---
 
 ![Blog Linux](/assets/img/ciberguerra/ciberguerra.jpg)
