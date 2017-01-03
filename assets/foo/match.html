@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+	<head>
+		<meta charset="utf-8" />
+
+		<!-- Always force latest IE rendering engine (even in intranet) & Chrome Frame
+		Remove this if you use the .htaccess -->
+		<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+		
+		<script>
+				function nota(){
+						var str = window.location.href;
+						
+						var res = str.split("=");
+						
+						var str = res[1];
+						var str = atob(str);
+						
+						document.getElementById("demo").innerHTML = str;		
+						
+				}
+				
+				function nome(){
+				
+					var str = window.location.href;
+						
+					var res = str.split("=");
+					
+					var str = res[1];
+					var str = atob(str);
+				
+					if(str == 10){
+						tux = 'Rei';
+					}else if(str == 9){
+						tux = 'Astronauta';
+					}else if(str == 8){
+						tux = 'Cientista';
+					}else if(str == 7){
+						tux = 'Sargento';
+					}else if(str == 6){
+						tux = 'Bandido';
+					}else if(str == 5){
+						tux = 'Pescador';
+					}else if(str == 4){
+						tux = 'Rato';
+					}else if(str == 3){
+						tux = 'Doidão';
+					}else if(str == 2){
+						tux = 'Vaca';
+					}else if(str == 1){
+						tux = 'Granada';
+					}else{
+						tux = '... você não é um Tux! :(';
+					}
+					
+					document.getElementById("nick").innerHTML = tux;
+				
+				}
+				
+				function pinguim(){
+						var str = window.location.href;
+						
+						var res = str.split("=");
+						
+						var str = res[1];
+						var str = atob(str);
+						
+						document.getElementById("tux").innerHTML = "<img src='imgs/"+str+".png' />";
+						
+				}
+				
+				function titulo(){
+						var str = window.location.href;
+						
+						var res = str.split("=");
+						
+						var str = res[1];
+						var str = atob(str);
+						
+						document.getElementById("tit").innerHTML = "Eu tirei "+str+" &raquo; Teste Linux";
+						
+				}
+				
+				</script>
+
+				 <title id="tit"></title>
+		
+		<meta property="og:url"           content="http://www.terminalroot.com.br/" />
+		<meta property="og:type"          content="Teste Linux" />
+		<meta property="og:title"         content="Eu tirei X" />
+		<meta property="og:description"   content="Faça o Simulado você também" />
+		<meta property="og:image"         content="http://terminalroot.com.br/assets/img/blog-author.jpg" />
+				
+		<meta name="description" content="Quiz" />
+		<meta name="author" content="Terminal Root" />
+
+		<meta name="viewport" content="width=device-width; initial-scale=1.0" />
+
+		<link rel="shortcut icon" href="imgs/icon.png" />
+		
+		<link rel="stylesheet" href="_assets/css/styl.css">
+		
+		<!-- Latest compiled and minified CSS -->
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+
+		<!-- jQuery library -->
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+		
+		<!-- Latest compiled JavaScript -->
+		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+		
+		<!-- Scripts Quiz -->
+		<script src="_assets/js/main.js"></script>
+		
+		<style>
+			body {background: #e6eaef;}
+			.container {margin-top: 10px;}
+			
+			#demo, #nick {color: #204a87; font-weight: bold; }
+			a.you {color: #cc0000; font-weight: bold; font-size: 27px;}
+		</style>
+		
+		
+	</head>
+
+	<body onload="nota(); pinguim(); nome(); titulo();">
+	
+	
+		
+		<div class="container">
+		
+			<div class="panel panel-default">
+			<div class="panel-body" align="center">
+				
+				<h2>Eu tirei 
+				<span id="demo"></span> ! Sou o Tux <span id="nick"></span>.
+				</h2>
+				
+				<span id="tux"></span>
+				
+				<h2>Compartilhe no Facebook</h2>
+				
+				<!-- Load Facebook SDK for JavaScript -->
+				<div id="fb-root"></div>
+				<script>(function(d, s, id) {
+					var js, fjs = d.getElementsByTagName(s)[0];
+					if (d.getElementById(id)) return;
+					js = d.createElement(s); js.id = id;
+					js.src = "//connect.facebook.net/en_US/sdk.js#xfbml=1";
+					fjs.parentNode.insertBefore(js, fjs);
+				}(document, 'script', 'facebook-jssdk'));</script>
+
+				<!-- Your share button code -->
+				<div class="fb-share-button" 
+					data-href="http://www.terminalroot.com.br/" 
+					data-layout="button_count">
+				</div>
+				
+				<a class="fb-xfbml-parse-ignore" target="_blank" href="https://www.facebook.com/sharer/sharer.php?u=http://linuxshell.onlinewebshop.net/lpi/_drafts/match.html?hp=NA==">Compartilhar</a>
+				
+				<h2 style="color: #a40000">Inscreva-se em nosso Canal do Youtube</h2>
+				<a href="https://www.youtube.com/TerminalRootTV" class="you">
+					https://www.youtube.com/TerminalRootTV
+				</a>
+			<br />
+			<a href="./"><h4>Refazer o Quiz</h4></a>
+			
+			</div><!--panel-body.home-->
+			</div><!--panel.home-->
+	
+		</div><!--container-->
+		
+		
+	</body>
+</html>
