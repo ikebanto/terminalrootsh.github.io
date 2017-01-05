@@ -31,6 +31,8 @@ links:
     url: /parceiros
   - title: Mais
     url: /about
+  - title:
+  	url: /temp
 
 # exclude my node related stuff
 exclude: ['package.json', 'src', 'node_modules', 'vendor/bundle/ruby']
