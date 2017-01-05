@@ -4,7 +4,7 @@ email: terminalroot.com.br@gmail.com
 description: > # this means to ignore newlines until "baseurl:"
   Blog GNU/Linux, Shell Script Bash, Debian, Linguagens de Desenvolvimento, Contabilidade, Servidores, Web, Mobile e Games.
 
-twitter_username: terminalrootsh
+twitter_username: terminalroottv
 github_username:  terminalrootsh
 
 # Build settings
@@ -31,6 +31,9 @@ links:
     url: /parceiros
   - title: Mais
     url: /about
+    
+collections:
+  - cursos
 
 # exclude my node related stuff
 exclude: ['package.json', 'src', 'node_modules', 'vendor/bundle/ruby']
