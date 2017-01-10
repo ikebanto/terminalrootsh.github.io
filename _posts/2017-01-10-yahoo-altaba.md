@@ -2,7 +2,7 @@
 layout: post
 title: "O Yahoo! Está MORTO e irá se chamar 'Altaba Inc'"
 date: 2017-01-10 19:00:55
-image: 'assets/img/lixo/Yahoo-Altaba.jpg'
+image: '/assets/img/lixo/Yahoo-Altaba.jpg'
 description: "Após a aquisição pendente da Yahoo! Inc. pela Verizon Communications Inc., a CEO Marissa Mayer, juntamente com outros cinco membros da diretoria, renunciará à empresa."
 main-class: 'misc'
 color: '#34a853'
@@ -13,7 +13,7 @@ twitter_text: "O Yahoo! Está MORTO e irá se chamar 'Altaba Inc'"
 introduction: "Após a aquisição pendente da Yahoo! Inc. pela Verizon Communications Inc., a CEO Marissa Mayer, juntamente com outros cinco membros da diretoria, renunciará à empresa."
 ---
 
-![Seu deu mau](assets/img/lixo/Yahoo-Altaba.jpg)
+![Se fudeu](/assets/img/lixo/Yahoo-Altaba.jpg)
 
 > Após a aquisição pendente da Yahoo! Inc. pela Verizon Communications Inc., a CEO Marissa Mayer, juntamente com outros cinco membros da diretoria, renunciará à empresa. Além disso, a sobra do Yahoo será transformada em uma empresa de investimento com o nome Altaba Inc.
 
