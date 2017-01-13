@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "Anonymous vaza dados pessoais de Kassab"
-date: 2017-01-13 19:41:52
+date: 2017-01-13 18:50:52
 image: '/assets/img/hacker/anonkassab.jpg'
 description: "Base de dados da Anatel também foi sequestrada."
 main-class: 'misc'
