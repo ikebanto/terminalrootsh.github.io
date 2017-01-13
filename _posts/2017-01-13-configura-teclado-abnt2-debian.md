@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "Dica rápida: Como Configurar o teclado ABNT2 no Debian"
-date: 2017-01-12 19:40:35
+date: 2017-01-13 17:40:35
 image: '/assets/img/teclado/configura-teclado-abnt2-debian-linux.jpg'
 description: "Para configurar um teclado ABNT2 no Linux via linha de comando."
 main-class: 'debian'
