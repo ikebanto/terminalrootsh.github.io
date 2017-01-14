@@ -31,7 +31,7 @@ links:
     url: /parceiros
   - title: Mais
     url: /about
-	- title: LPI Tux
+	- title: LPI
 		url: /lpi
 
 # exclude my node related stuff
