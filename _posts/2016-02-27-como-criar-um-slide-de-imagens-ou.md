@@ -2,7 +2,8 @@
 layout: post
 title: "Como criar um SLIDE de IMAGENS ou VÍDEOS pelo TERMINAL"
 date: '2016-02-27T09:31:00.001-08:00'
-description: Como criar um SLIDE de IMAGENS ou VÍDEOS pelo TERMINAL
+image: '/assets/img/dicas/slide.jpg'
+description: "Automatize criação de múltiplos Slides"
 main-class: 'linux'
 color: '#3b5998'
 author: Terminal Root
@@ -10,11 +11,11 @@ tags:
 - linux
 - multimidia
 - terminal
-twitter_text: Como criar um SLIDE de IMAGENS ou VÍDEOS pelo TERMINAL
-introduction: Como criar um SLIDE de IMAGENS ou VÍDEOS pelo TERMINAL
+twitter_text: "Como criar um SLIDE de IMAGENS ou VÍDEOS pelo TERMINAL"
+introduction: "Automatize criação de múltiplos Slides"
 ---
 
-![Blog Linux Terminal Root](https://3.bp.blogspot.com/-E8s8Vf8S3hc/VtHbk1l0lvI/AAAAAAAAAC4/8cadnuF31aY/s320/COMO%2BCRIAR%2BUM%2BSLIDE%2BDE%2BIMAGENS%2BOU%2BV%25C3%258DDEOS%2BPELO%2BTERMINAL.jpg)
+![Blog Linux Terminal Root](/assets/img/dicas/slide.jpg)
 
 Vou mostrar uma forma de criar SLIDE pelo terminal utilizando o ffmpeg , lógico , precisaremos dele instalado. Verifique se o mesmo está instalado , caso não esteja , instale-o! Após instalado , você precisa estar no diretório onde estão as imagens ( $ cd SEU_DIR/ ) ou no comando apontar para a pasta que as contém. 
 
