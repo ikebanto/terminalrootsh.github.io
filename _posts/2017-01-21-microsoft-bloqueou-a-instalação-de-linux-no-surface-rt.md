@@ -20,7 +20,7 @@ O Windows RT foi uma experiência da Microsoft que nunca teve o sucesso que a em
 
 A Microsoft acabou por deixar de dar o suporte necessário e a maioria dos utilizadores deste hardware optou por sistemas operativos alternativos. Mas a Microsoft quer acabar com essa possibilidade e por isso bloqueou a instalação de Linux nestas suas máquinas.
 
-As [atualizações](https://technet.microsoft.com/en-us/library/security/ms16-094.aspx) do Windows RT têm sido muito reduzidas nos últimos tempos. Muitos julgavam que a Microsoft iria dar continuidade a este seu sistema operativo, aproximando-o do Windows 10, mas a verdade é que isso não aconteceu.
+As [atualizações](https://technet.microsoft.com/en-us/library/security/ms16-094.aspx)do Windows RT têm sido muito reduzidas nos últimos tempos. Muitos julgavam que a Microsoft iria dar continuidade a este seu sistema operativo, aproximando-o do Windows 10, mas a verdade é que isso não aconteceu.
 
 Uma nova actualização, lançada recentemente veio tratar uma falha que estava a ser explorada por muitos para ter nos Surface RT outros sistemas operativos que não o Windows RT. A Microsoft detalha-a na forma de uma falha de segurança, mas a verdade é que era deste modo que o Linux podia correr no Surface RT.
 
