@@ -45,7 +45,7 @@ Alternativamente, se você já tiver o Node.js instalado no sistema, pode instal
 npm install clean-css
 {% endhighlight %}
 
-#Minimizando CSS
+# Minimizando CSS
 
 A melhor forma de explicar o funcionamento da ferramenta é com exemplos práticos, então vamos lá!
 
