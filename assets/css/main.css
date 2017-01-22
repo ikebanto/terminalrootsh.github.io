@@ -383,6 +383,7 @@ footer p,footer a{text-decoration:none;font-family:'Open Sans',sans-serif;font-w
 .post-gnu .ribbon span:before{border-left:3px solid #9a851f;border-top:3px solid #9a851f}
 .post-gnu .ribbon span:after{border-right:3px solid #9a851f;border-top:3px solid #9a851f}
 .post-gnu footer{background-color:#d6ba32}
+
 .post-html .title-category{color:#eb7728}
 .post-html .post-content h1,.post-html .post-content h2,.post-html .post-content h3,.post-html .post-content h4{color:#eb7728}
 .post-html .post-content a{color:#eb7728;border-bottom:2px dashed #eb7728;}
@@ -395,8 +396,47 @@ footer p,footer a{text-decoration:none;font-family:'Open Sans',sans-serif;font-w
 .post-html .bar-header .logo a{color:#eb7728}
 .post-html .author .email{color:#eb7728}
 .post-html .share a:hover svg{fill:#eb7728}
+
+.post-web .title-category{color:#7d669e}
+.post-web .post-content h1,.post-web .post-content h2,.post-web .post-content h3,.post-web .post-content h4{color:#7d669e}
+.post-web .post-content a{color:#7d669e;border-bottom:2px dashed #7d669e;}
+.post-web .post-content a:hover{background-color:#7d669e;color:#fff}
+.post-web .post-content strong{color:#7d669e}
+.post-web .post-content p code,.post-web .post-content li code{color:#7d669e}
+.post-web .post-content blockquote{border-left:.313rem solid #7d669e}
+.post-web .header-post,.post-web .header-site{background-color:#7d669e;}
+.post-web .header-post h1,.post-web .header-site h1{text-shadow:3px 3px #64517f}
+.post-web .bar-header .logo a{color:#7d669e}
+.post-web .author .email{color:#7d669e}
+.post-web .share a:hover svg{fill:#7d669e}
+
+.post-js .title-category{color:#cddc39}
+.post-js .post-content h1,.post-js .post-content h2,.post-js .post-content h3,.post-js .post-content h4{color:#cddc39}
+.post-js .post-content a{color:#cddc39;border-bottom:2px dashed #cddc39;}
+.post-js .post-content a:hover{background-color:#cddc39;color:#fff}
+.post-js .post-content strong{color:#cddc39}
+.post-js .post-content p code,.post-js .post-content li code{color:#cddc39}
+.post-js .post-content blockquote{border-left:.313rem solid #cddc39}
+.post-js .header-post,.post-js .header-site{background-color:#cddc39;}
+.post-js .header-post h1,.post-js .header-site h1{text-shadow:3px 3px #323330}
+.post-js .bar-header .logo a{color:#cddc39}
+.post-js .author .email{color:#cddc39}
+.post-js .share a:hover svg{fill:#cddc39}
+
 @media only screen and (max-width:37.5rem){.post-html body.search-overlay:after{background-color:#eb7728}
 }
+
+.post-js .icon-menu{fill:#cddc39}
+.post-js .cursos-menu{color:#cddc39}
+.post-js .box-body h2{color:#cddc39}
+.post-js .box-body .tags a{color:#cddc39;border:1px solid #cddc39}
+.post-js aside{background-color:#cddc39;}
+.post-js aside nav li a:hover{color:#cddc39}
+.post-js .ribbon span{background-color:#cddc39;}
+.post-js .ribbon span:before{border-left:3px solid #323330;border-top:3px solid #323330}
+.post-js .ribbon span:after{border-right:3px solid #323330;border-top:3px solid #323330}
+.post-js footer{background-color:#cddc39}
+
 .post-html .icon-menu{fill:#eb7728}
 .post-html .cursos-menu{color:#eb7728}
 .post-html .box-body h2{color:#eb7728}
@@ -407,6 +447,18 @@ footer p,footer a{text-decoration:none;font-family:'Open Sans',sans-serif;font-w
 .post-html .ribbon span:before{border-left:3px solid #b05110;border-top:3px solid #b05110}
 .post-html .ribbon span:after{border-right:3px solid #b05110;border-top:3px solid #b05110}
 .post-html footer{background-color:#eb7728}
+
+.post-web .icon-menu{fill:#7d669e}
+.post-web .cursos-menu{color:#7d669e}
+.post-web .box-body h2{color:#7d669e}
+.post-web .box-body .tags a{color:#7d669e;border:1px solid #7d669e}
+.post-web aside{background-color:#7d669e;}
+.post-web aside nav li a:hover{color:#7d669e}
+.post-web .ribbon span{background-color:#7d669e;}
+.post-web .ribbon span:before{border-left:3px solid #64517f;border-top:3px solid #64517f}
+.post-web .ribbon span:after{border-right:3px solid #64517f;border-top:3px solid #64517f}
+.post-web footer{background-color:#7d669e}
+
 .post-debian .title-category{color:#7d669e}
 .post-debian .post-content h1,.post-debian .post-content h2,.post-debian .post-content h3,.post-debian .post-content h4{color:#7d669e}
 .post-debian .post-content a{color:#7d669e;border-bottom:2px dashed #7d669e;}
@@ -419,8 +471,58 @@ footer p,footer a{text-decoration:none;font-family:'Open Sans',sans-serif;font-w
 .post-debian .bar-header .logo a{color:#7d669e}
 .post-debian .author .email{color:#7d669e}
 .post-debian .share a:hover svg{fill:#7d669e}
+
+.post-noticias .title-category{color:#e91e63}
+.post-noticias .post-content h1,.post-noticias .post-content h2,.post-noticias .post-content h3,.post-noticias .post-content h4{color:#e91e63}
+.post-noticias .post-content a{color:#e91e63;border-bottom:2px dashed #e91e63;}
+.post-noticias .post-content a:hover{background-color:#e91e63;color:#fff}
+.post-noticias .post-content strong{color:#e91e63}
+.post-noticias .post-content p code,.post-noticias .post-content li code{color:#e91e63}
+.post-noticias .post-content blockquote{border-left:.313rem solid #e91e63}
+.post-noticias .header-post,.post-noticias .header-site{background-color:#e91e63;}
+.post-noticias .header-post h1,.post-noticias .header-site h1{text-shadow:3px 3px #64517f}
+.post-noticias .bar-header .logo a{color:#e91e63}
+.post-noticias .author .email{color:#e91e63}
+.post-noticias .share a:hover svg{fill:#e91e63}
+
+.post-artigos .title-category{color:#009688}
+.post-artigos .post-content h1,.post-artigos .post-content h2,.post-artigos .post-content h3,.post-artigos .post-content h4{color:#009688}
+.post-artigos .post-content a{color:#009688;border-bottom:2px dashed #009688;}
+.post-artigos .post-content a:hover{background-color:#009688;color:#fff}
+.post-artigos .post-content strong{color:#009688}
+.post-artigos .post-content p code,.post-artigos .post-content li code{color:#009688}
+.post-artigos .post-content blockquote{border-left:.313rem solid #009688}
+.post-artigos .header-post,.post-artigos .header-site{background-color:#009688;}
+.post-artigos .header-post h1,.post-artigos .header-site h1{text-shadow:3px 3px #64517f}
+.post-artigos .bar-header .logo a{color:#009688}
+.post-artigos .author .email{color:#009688}
+.post-artigos .share a:hover svg{fill:#009688}
+
 @media only screen and (max-width:37.5rem){.post-debian body.search-overlay:after{background-color:#7d669e}
 }
+
+.post-artigos .icon-menu{fill:#009688}
+.post-artigos .cursos-menu{color:#009688}
+.post-artigos .box-body h2{color:#009688}
+.post-artigos .box-body .tags a{color:#009688;border:1px solid #009688}
+.post-artigos aside{background-color:#009688;}
+.post-artigos aside nav li a:hover{color:#009688}
+.post-artigos .ribbon span{background-color:#009688;}
+.post-artigos .ribbon span:before{border-left:3px solid #0f8c82;border-top:3px solid #0f8c82}
+.post-artigos .ribbon span:after{border-right:3px solid #0f8c82;border-top:3px solid #0f8c82}
+.post-artigos footer{background-color:#009688}
+
+.post-noticias .icon-menu{fill:#e91e63}
+.post-noticias .cursos-menu{color:#e91e63}
+.post-noticias .box-body h2{color:#e91e63}
+.post-noticias .box-body .tags a{color:#e91e63;border:1px solid #e91e63}
+.post-noticias aside{background-color:#e91e63;}
+.post-noticias aside nav li a:hover{color:#e91e63}
+.post-noticias .ribbon span{background-color:#e91e63;}
+.post-noticias .ribbon span:before{border-left:3px solid #d4225d;border-top:3px solid #d4225d}
+.post-noticias .ribbon span:after{border-right:3px solid #d4225d;border-top:3px solid #d4225d}
+.post-noticias footer{background-color:#e91e63}
+
 .post-debian .icon-menu{fill:#7d669e}
 .post-debian .cursos-menu{color:#7d669e}
 .post-debian .box-body h2{color:#7d669e}
@@ -431,6 +533,7 @@ footer p,footer a{text-decoration:none;font-family:'Open Sans',sans-serif;font-w
 .post-debian .ribbon span:before{border-left:3px solid #57476f;border-top:3px solid #57476f}
 .post-debian .ribbon span:after{border-right:3px solid #57476f;border-top:3px solid #57476f}
 .post-debian footer{background-color:#7d669e}
+
 .post-linux .title-category{color:#637a91}
 .post-linux .post-content h1,.post-linux .post-content h2,.post-linux .post-content h3,.post-linux .post-content h4{color:#637a91}
 .post-linux .post-content a{color:#637a91;border-bottom:2px dashed #637a91;}
@@ -443,8 +546,82 @@ footer p,footer a{text-decoration:none;font-family:'Open Sans',sans-serif;font-w
 .post-linux .bar-header .logo a{color:#637a91}
 .post-linux .author .email{color:#637a91}
 .post-linux .share a:hover svg{fill:#637a91}
+
+.post-C .title-category{color:#3465a4}
+.post-C .post-content h1,.post-C .post-content h2,.post-C .post-content h3,.post-C .post-content h4{color:#3465a4}
+.post-C .post-content a{color:#3465a4;border-bottom:2px dashed #3465a4;}
+.post-C .post-content a:hover{background-color:#3465a4;color:#fff}
+.post-C .post-content strong{color:#3465a4}
+.post-C .post-content p code,.post-C .post-content li code{color:#3465a4}
+.post-C .post-content blockquote{border-left:.313rem solid #3465a4}
+.post-C .header-post,.post-C .header-site{background-color:#3465a4;}
+.post-C .header-post h1,.post-C .header-site h1{text-shadow:3px 3px #4f6274}
+.post-C .bar-header .logo a{color:#3465a4}
+.post-C .author .email{color:#3465a4}
+.post-C .share a:hover svg{fill:#3465a4}
+
+.post-dev .title-category{color:#9c27b0}
+.post-dev .post-content h1,.post-dev .post-content h2,.post-dev .post-content h3,.post-dev .post-content h4{color:#9c27b0}
+.post-dev .post-content a{color:#9c27b0;border-bottom:2px dashed #9c27b0;}
+.post-dev .post-content a:hover{background-color:#9c27b0;color:#fff}
+.post-dev .post-content strong{color:#9c27b0}
+.post-dev .post-content p code,.post-dev .post-content li code{color:#9c27b0}
+.post-dev .post-content blockquote{border-left:.313rem solid #9c27b0}
+.post-dev .header-post,.post-dev .header-site{background-color:#9c27b0;}
+.post-dev .header-post h1,.post-dev .header-site h1{text-shadow:3px 3px #a840bb}
+.post-dev .bar-header .logo a{color:#9c27b0}
+.post-dev .author .email{color:#9c27b0}
+.post-dev .share a:hover svg{fill:#9c27b0}
+
+.post-games .title-category{color:#141b63}
+.post-games .post-content h1,.post-games .post-content h2,.post-games .post-content h3,.post-games .post-content h4{color:#141b63}
+.post-games .post-content a{color:#141b63;border-bottom:2px dashed #141b63;}
+.post-games .post-content a:hover{background-color:#141b63;color:#fff}
+.post-games .post-content strong{color:#141b63}
+.post-games .post-content p code,.post-games .post-content li code{color:#141b63}
+.post-games .post-content blockquote{border-left:.313rem solid #141b63}
+.post-games .header-post,.post-games .header-site{background-color:#141b63;}
+.post-games .header-post h1,.post-games .header-site h1{text-shadow:3px 3px #3465a4}
+.post-games .bar-header .logo a{color:#141b63}
+.post-games .author .email{color:#141b63}
+.post-games .share a:hover svg{fill:#141b63}
+
 @media only screen and (max-width:37.5rem){.post-linux body.search-overlay:after{background-color:#637a91}
 }
+
+.post-games .icon-menu{fill:#141b63}
+.post-games .cursos-menu{color:#141b63}
+.post-games .box-body h2{color:#141b63}
+.post-games .box-body .tags a{color:#141b63;border:1px solid #141b63}
+.post-games aside{background-color:#141b63;}
+.post-games aside nav li a:hover{color:#141b63}
+.post-games .ribbon span{background-color:#141b63;}
+.post-games .ribbon span:before{border-left:3px solid #3465a4;border-top:3px solid #3465a4}
+.post-games .ribbon span:after{border-right:3px solid #3465a4;border-top:3px solid #3465a4}
+.post-games footer{background-color:#141b63}
+
+.post-dev .icon-menu{fill:#9c27b0}
+.post-dev .cursos-menu{color:#9c27b0}
+.post-dev .box-body h2{color:#9c27b0}
+.post-dev .box-body .tags a{color:#9c27b0;border:1px solid #9c27b0}
+.post-dev aside{background-color:#9c27b0;}
+.post-dev aside nav li a:hover{color:#9c27b0}
+.post-dev .ribbon span{background-color:#9c27b0;}
+.post-dev .ribbon span:before{border-left:3px solid #a840bb;border-top:3px solid #a840bb}
+.post-dev .ribbon span:after{border-right:3px solid #a840bb;border-top:3px solid #a840bb}
+.post-dev footer{background-color:#9c27b0}
+
+.post-C .icon-menu{fill:#3465a4}
+.post-C .cursos-menu{color:#3465a4}
+.post-C .box-body h2{color:#3465a4}
+.post-C .box-body .tags a{color:#3465a4;border:1px solid #3465a4}
+.post-C aside{background-color:#3465a4;}
+.post-C aside nav li a:hover{color:#3465a4}
+.post-C .ribbon span{background-color:#3465a4;}
+.post-C .ribbon span:before{border-left:3px solid #455565;border-top:3px solid #455565}
+.post-C .ribbon span:after{border-right:3px solid #455565;border-top:3px solid #455565}
+.post-C footer{background-color:#3465a4}
+
 .post-linux .icon-menu{fill:#637a91}
 .post-linux .cursos-menu{color:#637a91}
 .post-linux .box-body h2{color:#637a91}
@@ -455,6 +632,8 @@ footer p,footer a{text-decoration:none;font-family:'Open Sans',sans-serif;font-w
 .post-linux .ribbon span:before{border-left:3px solid #455565;border-top:3px solid #455565}
 .post-linux .ribbon span:after{border-right:3px solid #455565;border-top:3px solid #455565}
 .post-linux footer{background-color:#637a91}
+
+
 .post-misc .title-category{color:#7aab13}
 .post-misc .post-content h1,.post-misc .post-content h2,.post-misc .post-content h3,.post-misc .post-content h4{color:#7aab13}
 .post-misc .post-content a{color:#7aab13;border-bottom:2px dashed #7aab13;}
@@ -467,8 +646,34 @@ footer p,footer a{text-decoration:none;font-family:'Open Sans',sans-serif;font-w
 .post-misc .bar-header .logo a{color:#7aab13}
 .post-misc .author .email{color:#7aab13}
 .post-misc .share a:hover svg{fill:#7aab13}
+
+.post-python .title-category{color:#3174a7}
+.post-python .post-content h1,.post-python .post-content h2,.post-python .post-content h3,.post-python .post-content h4{color:#3174a7}
+.post-python .post-content a{color:#3174a7;border-bottom:2px dashed #3174a7;}
+.post-python .post-content a:hover{background-color:#3174a7;color:#fff}
+.post-python .post-content strong{color:#3174a7}
+.post-python .post-content p code,.post-python .post-content li code{color:#3174a7}
+.post-python .post-content blockquote{border-left:.313rem solid #3174a7}
+.post-python .header-post,.post-python .header-site{background-color:#3174a7;}
+.post-python .header-post h1,.post-python .header-site h1{text-shadow:3px 3px #ffce3e}
+.post-python .bar-header .logo a{color:#3174a7}
+.post-python .author .email{color:#3174a7}
+.post-python .share a:hover svg{fill:#3174a7}
+
 @media only screen and (max-width:37.5rem){.post-misc body.search-overlay:after{background-color:#7aab13}
 }
+
+.post-python .icon-menu{fill:#3174a7}
+.post-python .cursos-menu{color:#3174a7}
+.post-python .box-body h2{color:#3174a7}
+.post-python .box-body .tags a{color:#3174a7;border:1px solid #3174a7}
+.post-python aside{background-color:#3174a7;}
+.post-python aside nav li a:hover{color:#3174a7}
+.post-python .ribbon span{background-color:#3174a7;}
+.post-python .ribbon span:before{border-left:3px solid #fed241;border-top:3px solid #fed241}
+.post-python .ribbon span:after{border-right:3px solid #fed241;border-top:3px solid #fed241}
+.post-python footer{background-color:#3174a7}
+
 .post-misc .icon-menu{fill:#7aab13}
 .post-misc .cursos-menu{color:#7aab13}
 .post-misc .box-body h2{color:#7aab13}
