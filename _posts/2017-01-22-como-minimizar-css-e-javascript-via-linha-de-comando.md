@@ -33,9 +33,9 @@ Para instalar em Debian/Ubuntu e derivados
 apt-get install cleancss
 {% endhighlight %}
 
-Não testei em outras distribuições, caso não encontre o pacote, baixe-o pelo GitHub:
+Não testei em outras distribuições, caso não encontre o pacote, baixe-o pelo GitHub
 
-    [https://github.com/jakubpawlowicz/clean-css](https://github.com/jakubpawlowicz/clean-css)
+[https://github.com/jakubpawlowicz/clean-css](https://github.com/jakubpawlowicz/clean-css)
 
 
 NOTA: clean-css depende do [Node.js](http://nodejs.org/) para ser instalado.
