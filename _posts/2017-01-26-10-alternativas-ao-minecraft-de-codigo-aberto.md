@@ -47,7 +47,7 @@ O estranho desta lista é [Voxel.js] http://voxeljs.com/ . Ao contrário dos out
 
 # Craft
 
-Craft é outro motor open source voxel no estilo de Minecraft. Sua simplicidade pode atrair se você está interessado em construir um jogo semelhante ao Minecraft, mas não tem certeza por onde começar . O mecanismo do jogo reside em apenas algumas mil linhas de código C e usa OpenGL para renderização. Ele usa algoritmos simples para geração de terreno e outras tarefas, e tudo é armazenado em um banco de dados sqlite3. Há também um servidor multiplayer baseado em Python que vale a pena tentar. Craft é disponibilizado sob uma licença do MIT.
+[Craft](https://github.com/fogleman/Craft) é outro motor open source voxel no estilo de Minecraft. Sua simplicidade pode atrair se você está interessado em construir um jogo semelhante ao Minecraft, mas não tem certeza por onde começar . O mecanismo do jogo reside em apenas algumas mil linhas de código C e usa OpenGL para renderização. Ele usa algoritmos simples para geração de terreno e outras tarefas, e tudo é armazenado em um banco de dados sqlite3. Há também um servidor multiplayer baseado em Python que vale a pena tentar. Craft é disponibilizado sob uma licença do MIT.
 
 ![Craft](/assets/img/games/craft.png)
 
@@ -69,7 +69,7 @@ sudo apt-get install minetest*
 
 Mas caso você deseje instalar os pacotes separados, veja os disponíveis e retire os que você não deseja
 {% highlight bash %}
-minetest minetest-mod-advspawning minetest-mod-mobf minetest-mod-moreores minetest-mod-pipeworks minetest-mod-worldedit minetest-data minetest-mod-mesecons minetest-mod-moreblocks minetest-mod-nether minetest-mod-torches minetest-server
+sudo apt-get install minetest minetest-mod-advspawning minetest-mod-mobf minetest-mod-moreores minetest-mod-pipeworks minetest-mod-worldedit minetest-data minetest-mod-mesecons minetest-mod-moreblocks minetest-mod-nether minetest-mod-torches minetest-server
 {% endhighlight %}
 
 No final apereceram dois ícones no Dash, sendo que um foi em Português e o outro em Inglês
