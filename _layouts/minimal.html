@@ -13,7 +13,9 @@ layout: compress
             <article id="post" class="post-content" role="main" itemprop="mainContentOfPage">
                 {{ content }}
             </article>
-
+            
+            {% include pre-venda-js.html %}
+						{% include comments.html %}
             {% include footer.html %}
         </section>
     </body>
