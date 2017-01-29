@@ -13,7 +13,7 @@ twitter_text: "Cientistas criam primeiro embrião de Homem e Porco"
 introduction: "Cientistas criaram um híbrido humano-porco, mas não é o Homer Simpson. É apenas um embrião, foi um experimento com células-tronco e pode viabiliza para muito breve (uns 30 ou 40 anos) órgãos para transplante."
 ---
 
-![Pig Man](/assets/img/noticias/pigman.jpg)
+![Pig Man](/assets/img/noticias/pigman-full.jpg)
 
 Cientistas criaram um híbrido humano-porco, mas não é o Homer Simpson. É apenas um embrião, foi um experimento com células-tronco e pode viabiliza para muito breve (uns 30 ou 40 anos) órgãos para transplante. 
 
