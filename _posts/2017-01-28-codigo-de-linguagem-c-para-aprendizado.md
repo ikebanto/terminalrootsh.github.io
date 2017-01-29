@@ -89,12 +89,12 @@ int main(){
 	
 	int i;
  	char letra;
- 	printf("sequência de n°s de 1 a 10\n");
+	printf("sequência de n°s de 1 a 10\n");
  	for(i=1;i<=10;i++)
-  printf("%d - ",i);
+ 	printf("%d - ",i);
  	printf("\nsequência de letras de A a Z\n");
  	for(letra = 'A';letra<='Z';letra++)
-  printf("%c - ",letra);
+ 	printf("%c - ",letra);
 	
 	printf("\n\n");
 	printf("[+] Loop while:\n");
