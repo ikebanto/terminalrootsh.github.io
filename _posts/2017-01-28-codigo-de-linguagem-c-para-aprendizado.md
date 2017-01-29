@@ -15,7 +15,7 @@ introduction: "O código serve como estudos/lembrete para iniciantes que desejam
 
 ![Linguagem C para Aprendizado](/assets/img/c/c.jpg)
 
-O código serve como estudos/lembrete para iniciantes que desejam aprender Linguagem C. Nesse caso eu nomeei de __aprender-c.c__ . Para compilá-lo use o comando __gcc aprender-c.c -o aprender-c__ ou usando o __make aprender-c__ e terá a saída assim  se não houver erro *cc     aprender-c.c   -o aprender-c*
+O código serve como estudos/lembrete para iniciantes que desejam aprender Linguagem C. Nesse caso eu nomeei de __aprender-c.c__ . Para compilá-lo use o comando __gcc aprender-c.c -o aprender-c__ ou usando o __make aprender-c__ e terá a saída assim  se não houver erro **cc     aprender-c.c   -o aprender-c**
 
 #### Segue o código abaixo
 {% highlight c %}
