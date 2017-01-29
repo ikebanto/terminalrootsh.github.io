@@ -3,14 +3,14 @@ layout: post
 title: "Cientistas criam primeiro embrião de Homem e Porco"
 date: 2017-01-29 11:49:05
 image: '/assets/img/noticias/pigman.jpg'
-description: "Em 2002 uma mulher chamada Karen Keegan precisou de um transplante renal..."
+description: "Cientistas criaram um híbrido humano-porco, mas não é o Homer Simpson. É apenas um embrião, foi um experimento com células-tronco e pode viabiliza para muito breve (uns 30 ou 40 anos) órgãos para transplante."
 main-class: 'noticias'
 color: '#e91e63'
 tags:
 - noticias
 categories:
 twitter_text: "Cientistas criam primeiro embrião de Homem e Porco"
-introduction: "Em 2002 uma mulher chamada Karen Keegan precisou de um transplante renal..."
+introduction: "Cientistas criaram um híbrido humano-porco, mas não é o Homer Simpson. É apenas um embrião, foi um experimento com células-tronco e pode viabiliza para muito breve (uns 30 ou 40 anos) órgãos para transplante."
 ---
 
 ![Pig Man](/assets/img/noticias/pigman.jpg)
