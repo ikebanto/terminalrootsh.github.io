@@ -15,6 +15,8 @@ introduction: "Em 2002 uma mulher chamada Karen Keegan precisou de um transplant
 
 ![Pig Man](/assets/img/noticias/pigman.jpg)
 
+Cientistas criaram um híbrido humano-porco, mas não é o Homer Simpson. É apenas um embrião, foi um experimento com células-tronco e pode viabiliza para muito breve (uns 30 ou 40 anos) órgãos para transplante. 
+
 Em 2002 uma mulher chamada Karen Keegan precisou de um transplante renal. Os médicos fizeram os exames de sangue de praxe, para determinar qual parente seria o melhor doador. Só que os exames apontaram que Karen não era a mãe biológica de seus filhos. O problema é que ela, o obstetra e todo mundo que a acompanhou sabe muito bem que ela havia dado a luz aos pimpolhos.
 
 Depois de uma investigação nível House, descobriu-se que Karen era uma quimera, um ser composto de mais de um organismo. Esses casos de quimerismo acontecem quando dois óvulos fecundados se fundem, e cada um forma partes distintas do corpo. No caso de Karen seu sistema sanguíneo tinha DNA próprio, por isso não batia com o dos filhos.
