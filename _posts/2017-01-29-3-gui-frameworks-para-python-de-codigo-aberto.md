@@ -45,6 +45,8 @@ Se houvesse um único pacote que poderia ser chamado de "padrão" GUI toolkit pa
 
 # WxPython
 
+![WxPython](/assets/img/python/wxpython.png)
+
 O [WxPython](http://www.wxpython.org/) traz a biblioteca de GUI multiplataforma [wxWidgets](http://wxwidgets.org/) do C++ para Python. WxPython é uma abordagem um pouco mais moderna para, que parece um pouco mais nativo do que Tkinter em diferentes sistemas operacionais, uma vez que não tenta criar seu próprio conjunto de widgets (embora estes possam ser temáticos para se parecer com componentes nativos). Talvez você precise agrupar o wxPython com seus aplicativos, pois ele não é instalado automaticamente com o Python. O WxPython usa a [licença de biblioteca wxWindows](http://www.wxwidgets.org/about/licence/) que é aprovado pelo [OSI](https://opensource.org/licenses/wxwindows.php).
 
 ## Finalizando
