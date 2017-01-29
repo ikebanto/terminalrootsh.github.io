@@ -29,7 +29,7 @@ Outro híbrido interessante é conhecido com [Humster](http://onlinelibrary.wile
 
 A diferença genética é grande demais para criar o super-herói mais fofo desde a Garota-Esquilo, mas as células fecundadas sobrevivem isoladas, ao menos o bastante para os experimentos.
 
-O que se conseguiu agora, conforme trabalho publicado com o título [Interspecies Chimerism with Mammalian Pluripotent Stem Cells][http://www.cell.com/cell/fulltext/S0092-8674(16)31752-4], foi inserir células-tronco humanas em embriões de porco, que permaneceram viáveis.
+O que se conseguiu agora, conforme trabalho publicado com o título __Interspecies Chimerism with Mammalian Pluripotent Stem Cells__ *http://www.cell.com/cell/fulltext/S0092-8674(16)31752-4*, foi inserir células-tronco humanas em embriões de porco, que permaneceram viáveis.
 
 Essas células-tronco são responsáveis pelo crescimento de órgãos como coração, fígado, rins. O experimento, que primeiro foi feito com ratos depois com células humanas mostrou que células-tronco de outra espécie "funcionam" no embrião.
 
