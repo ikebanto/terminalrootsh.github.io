@@ -15,7 +15,7 @@ twitter_text: "Curso Gratuito de Git e GitHub para Iniciantes"
 introduction: "Desenvolvedores em qualquer linguagem ou plataforma que desejam mais segurança para seus projetos com uma ferramenta de controle de versão."
 ---
 
-![/assets/img/cursos/git-github.jpg]
+![Git GitHub](/assets/img/cursos/git-github.jpg)
 
 Desenvolvedores em qualquer linguagem ou plataforma que desejam mais segurança para seus projetos com uma ferramenta de controle de versão. Nesse curso você aprenderá do zero a trabalhar com o principal sistema de controle de versão da atualidade. Também, aprenderá a trabalhar com os serviços do Github. Tudo que você precisa para começar a versionar seus arquivos e contribuir com a comunidade opensource.
 
