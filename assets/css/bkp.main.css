@@ -87,9 +87,8 @@ a.slideButton,.dosearch{position:fixed;display:block;width:40px;height:40px;top:
 .cursos-menu{position:fixed;font-size:1.25rem;top:1rem;right:6.875rem;z-index:17;text-decoration:none;color:#444;}
 @media only screen and (max-width:37.5rem){.cursos-menu{display:none}
 }
-.cursos-menu:after{content:'new';display:inline-block;font-size:12px;vertical-align:super;margin:0 5px;color:#b91515;font-weight:bold}
+/*.cursos-menu:after{content:'new';display:inline-block;font-size:12px;vertical-align:super;margin:0 5px;color:#b91515;font-weight:bold}*/
 .overlay{cursor:pointer}
-
 #close{display:none;fill:#fff}
 aside{position:fixed;height:100%;width:15rem;padding:2.5rem 0 0;top:0;right:-15rem;background-color:#444;z-index:20;box-shadow:inset -10px -1px 15px -9px rgba(0,0,0,0.5);}
 @media (max-height:420px){aside{padding:.7rem 0 0}

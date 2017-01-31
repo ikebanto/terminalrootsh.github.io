@@ -25,16 +25,19 @@ compress_html:
 links:
   - title: Home
     url: /
+  - title: Cursos
+    url: /cursos
   - title: Tags
     url: /tags
-  - title: Parceiros
-    url: /parceiros
-  - title: Mais
-    url: /about
-  - title: LPI
-    url: /lpi
   - title: Quiz
     url: /quiz
+  - title: LPI
+    url: /lpi
+  - title: Parceiros
+    url: /parceiros
+
+collections:
+  - cursos
 
 # exclude my node related stuff
 exclude: ['package.json', 'src', 'node_modules', 'vendor/bundle/ruby']

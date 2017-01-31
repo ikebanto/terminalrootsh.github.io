@@ -16,9 +16,12 @@ introduction: O comando read
 
 <p>
 <h2></h2>Bem a partir de agora vamos aprender tudo sobre leitura, só não posso  ensinar a ler cartas e búzios porque se eu soubesse, estaria rico, num <i>pub</i> londrino tomando <i>scotch</i> e não em um boteco desses tomando chope. Mas vamos em frente.
-Da última vez que nos encontramos aqui eu já dei uma palinha sobre o comando {% highlight bash %}
+Da última vez que nos encontramos aqui eu já dei uma palinha sobre o comando 
+
+{% highlight bash %}
 read
-{% endhighlight %}. Para começarmos a sua analise mais detalhada. veja só isso:
+{% endhighlight %}
+. Para começarmos a sua analise mais detalhada. veja só isso:
 $ read var1 var2 var3
 Papo de Botequim
 $ echo $var1
@@ -32,14 +35,23 @@ Papo de Botequim
 $ echo $var1
 Papo
 $ echo $var2
-de BotequimComo você viu, o {% highlight bash %}
+de BotequimComo você viu, o 
+{% highlight bash %}
 read
-{% endhighlight %} recebe uma lista separada por  espaços em branco e coloca cada item desta lista em uma variável. Se a  quantidade de variáveis for menor que a quantidade de itens, a última  variável recebe o restante.
-Eu disse lista separada por espaços em branco? Agora que você já conhece tudo sobre o {% highlight bash %}
+{% endhighlight %}
+recebe uma lista separada por  espaços em branco e coloca cada item desta lista em uma variável. Se a  quantidade de variáveis for menor que a quantidade de itens, a última  variável recebe o restante.
+Eu disse lista separada por espaços em branco? Agora que você já conhece tudo sobre o 
+{% highlight bash %}
 $IFS
-{% endhighlight %} (Inter Field Separator) que eu te apresentei quando falávamos do comando {% highlight bash %}
+{% endhighlight %}
+
+(Inter Field Separator) que eu te apresentei quando falávamos do comando 
+
+{% highlight bash %}
 for
-{% endhighlight %}, será que ainda acredita nisso? Vamos testar direto no prompt:
+{% endhighlight %}
+
+, será que ainda acredita nisso? Vamos testar direto no prompt:
 $ oIFS=”$IFS”
 $ IFS=:
 $ read var1 var2 var3
@@ -55,13 +67,25 @@ $ echo $var2
 de
 $ echo $var3
 Botequim
-$ IFS=”$oIFS”Viu, estava furado! O {% highlight bash %}
+$ IFS=”$oIFS”Viu, estava furado! O 
+
+{% highlight bash %}
 read
-{% endhighlight %} lê uma lista, assim como o {% highlight bash %}
+{% endhighlight %}
+
+ lê uma lista, assim como o 
+ 
+ {% highlight bash %}
 for
-{% endhighlight %}, separada pelos caracteres da variável {% highlight bash %}
+{% endhighlight %}
+
+, separada pelos caracteres da variável
+ 
+{% highlight bash %}
 $IFS
-{% endhighlight %}. Então veja como isso pode facilitar a sua vida:
+{% endhighlight %}
+
+. Então veja como isso pode facilitar a sua vida:
 <div style="background: #000000 none no-repeat scroll right top; border: 1px none; color: yellow; font-family: Courier,'Courier New','Lucida Console','Bitstream Vera Sans Mono',Monaco,monospace; font-size: 100%; line-height: 1em; margin: 1em 0.5em; overflow: auto; padding: 1.5em 1em; white-space: pre;">$ grep julio /etc/passwd<span style="color: white;">
 julio:x:500:544:Julio C. Neves – 7070:/home/julio:/bin/bash</span>
 $ oIFS=”$IFS”    #  Salvando IFS
@@ -74,42 +98,80 @@ julio
 Julio C. Neves – 7070
 /home/julio
 /bin/bash</span>
-$ IFS=”$oIFS”   #  Restaurando IFSComo você viu, a saída do {% highlight bash %}
+$ IFS=”$oIFS”   #  Restaurando IFSComo você viu, a saída do 
+{% highlight bash %}
 grep
-{% endhighlight %} foi redirecionada para o comando {% highlight bash %}
+{% endhighlight %}
+ foi redirecionada para o comando 
+ 
+{% highlight bash %}
 read
-{% endhighlight %} que leu todos os campos de uma só tacada. A opção {% highlight bash %}
+{% endhighlight %} 
+
+que leu todos os campos de uma só tacada. A opção 
+{% highlight bash %}
 -e
-{% endhighlight %} do {% highlight bash %}
+{% endhighlight %}
+ do {% highlight bash %}
 echo
-{% endhighlight %} foi usada para que o {% highlight bash %}
+{% endhighlight %}
+ foi usada para que o 
+{% highlight bash %}
 n
-{% endhighlight %} fosse entendido como um salto de linha (new line), e não como um literal.
-Sob o Bash existem diversas opções do {% highlight bash %}
+{% endhighlight %}
+ fosse entendido como um salto de linha (new line), e não como um literal.
+Sob o Bash existem diversas opções do 
+{% highlight bash %}
 read
-{% endhighlight %} que servem para facilitar a sua vida. Veja a tabela a seguir:
-Opções do comando read no BashOpçãoAção{% highlight bash %}
+{% endhighlight %}
+ que servem para facilitar a sua vida. Veja a tabela a seguir:
+Opções do comando read no BashOpçãoAção
+{% highlight bash %}
 -p prompt
-{% endhighlight %}Escreve o {% highlight bash %}
+{% endhighlight %}
+Escreve o 
+{% highlight bash %}
 prompt
-{% endhighlight %} antes de fazer a leitura{% highlight bash %}
+{% endhighlight %}
+ antes de fazer a leitura
+ {% highlight bash %}
 -n num
-{% endhighlight %}Lê até {% highlight bash %}
+{% endhighlight %}
+Lê até 
+
+{% highlight bash %}
 num
-{% endhighlight %} caracteres{% highlight bash %}
+{% endhighlight %}
+
+ caracteres
+ 
+ {% highlight bash %}
 -t seg
-{% endhighlight %}Espera {% highlight bash %}
+{% endhighlight %}
+Espera 
+
+{% highlight bash %}
 seg
-{% endhighlight %} segundos para que a leitura seja concluída{% highlight bash %}
+{% endhighlight %}
+
+ segundos para que a leitura seja concluída
+ 
+ {% highlight bash %}
 -s
-{% endhighlight %}O que está sendo teclado não aparece na telaE agora direto aos exemplos curtos para demonstrar estas opções.
+{% endhighlight %}
+
+O que está sendo teclado não aparece na telaE agora direto aos exemplos curtos para demonstrar estas opções.
 Para ler um campo “Matrícula”:
 $ echo -n “Matricula: “; read Mat # -n nao salta linha
 Matricula: 12345
 $ echo $Mat
-12345Ou simplificando com a opção {% highlight bash %}
+12345Ou simplificando com a opção 
+
+{% highlight bash %}
 -p
-{% endhighlight %}:
+{% endhighlight %}
+
+:
 <div style="background: #000000 none no-repeat scroll right top; border: 1px none; color: yellow; font-family: Courier,'Courier New','Lucida Console','Bitstream Vera Sans Mono',Monaco,monospace; font-size: 100%; line-height: 1em; margin: 1em 0.5em; overflow: auto; padding: 1.5em 1em; white-space: pre;">$ read -p “Matricula: ” Mat<span style="color: white;">
 Matricula: 12345</span>
 $ echo $Mat<span style="color: white;">
@@ -119,30 +181,64 @@ CEP: 12345-678</span>$
 $ echo $Num<span style="color: white;">
 12345</span>
 $ echo $Compl<span style="color: white;">
-678Neste exemplo fizemos dois {% highlight bash %}
+678Neste exemplo fizemos dois 
+
+{% highlight bash %}
 read
-{% endhighlight %}: um para a primeira parte do CEP e outra para o seu complemento, deste modo formatando a entrada de dados. O cifrão ({% highlight bash %}
+{% endhighlight %}
+
+: um para a primeira parte do CEP e outra para o seu complemento, deste modo formatando a entrada de dados. O cifrão (
+
+{% highlight bash %}
 $
-{% endhighlight %}) após o último algarismo teclado, é porque o {% highlight bash %}
+{% endhighlight %}
+
+) após o último algarismo teclado, é porque o 
+
+{% highlight bash %}
 read
-{% endhighlight %} não tem o new-line implícito por default como o tem o {% highlight bash %}
+{% endhighlight %}
+
+ não tem o new-line implícito por default como o tem o 
+ 
+ {% highlight bash %}
 echo
-{% endhighlight %}.
+{% endhighlight %}
+
+
 Para ler que até um determinado tempo se esgote (conhecido como time out):
 $ read -t2 -p “Digite seu nome completo: ” Nom || echo ‘Eta moleza!’
 Digite seu nome completo: JEta moleza!
-$ echo $Nom$Obviamente isto foi uma brincadeira, pois só tinha 3 segundos para digitar o meu nome completo e só me deu tempo de teclar um {% highlight bash %}
-J
-{% endhighlight %} (aquele colado no {% highlight bash %}
-Eta
-{% endhighlight %}), mas serviu para mostrar duas coisas:
- O comando após o par de barras verticais ({% highlight bash %}
-||
-{% endhighlight %}) (o ou lógico, lembra-se?) será executado caso a digitação não tenha sido concluída no tempo estipulado; A variável {% highlight bash %}
-Nom
-{% endhighlight %} permaneceu vazia. Ela será valorada somente quando o {% highlight bash %}
+$ echo $Nom$Obviamente isto foi uma brincadeira, pois só tinha 3 segundos para digitar o meu nome completo e só me deu tempo de teclar um 
 
-{% endhighlight %} for teclado.Para ler um dado sem ser exibido na tela:
+{% highlight bash %}
+J
+{% endhighlight %}
+
+ (aquele colado no 
+ 
+ {% highlight bash %}
+Eta
+{% endhighlight %}
+
+), mas serviu para mostrar duas coisas:
+ O comando após o par de barras verticais (
+ 
+{% highlight bash %}
+||
+{% endhighlight %}
+
+) (o ou lógico, lembra-se?) será executado caso a digitação não tenha sido concluída no tempo estipulado; A variável 
+
+{% highlight bash %}
+Nom
+{% endhighlight %}
+
+ permaneceu vazia. Ela será valorada somente quando o 
+ 
+
+
+for teclado.Para ler um dado sem ser exibido na tela:
 $ read -sp “Senha: “
 Senha: $ echo $REPLY
 segredo :)Aproveitei um erro para mostrar um macete. Quando escrevi a primeira  linha, esqueci de colocar o nome da variável que iria receber a senha, e  só notei quando ia listar o seu valor. Felizmente a variável {% highlight bash %}
