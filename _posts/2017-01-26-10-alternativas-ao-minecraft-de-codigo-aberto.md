@@ -2,7 +2,7 @@
 layout: post
 title: "10 Alternativas ao Minecraft de Código Aberto"
 date: 2017-01-26 18:36:28
-image: '/assets/img/'
+image: '/assets/img/games/minecraft.jpg'
 description: "Com uma comunidade enorme, existem inúmeros Gamers de Minecraft que adoraria ser capaz de alterar o código e apresentar coisas diferentes."
 main-class: 'games'
 color: '#141b63'
