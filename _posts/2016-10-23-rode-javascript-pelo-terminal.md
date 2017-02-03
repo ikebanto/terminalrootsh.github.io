@@ -9,6 +9,7 @@ author: 'Terminal Root'
 tags:
 - javascript
 - Terminal
+- phantomjs
 twitter_text: "Rode JavaScript pelo Terminal"
 introduction: "Rode JavaScript pelo Terminal"
 ---
@@ -114,7 +115,9 @@ exit 0
 {% endhighlight %}
 
 # [Para iniciar nesse novo mundo](http://phantomjs.org/quick-start.html)
+
 # [Exemplos](http://phantomjs.org/examples/index.html)
+
 # [Todo o conteúdo](http://phantomjs.org/)
 
-# Comente!
+## Comente!
