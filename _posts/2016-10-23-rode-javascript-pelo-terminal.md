@@ -1,18 +1,21 @@
 ---
 layout: post
-title: "Rode JavaScript pelo Terminal"
+title: "Rode JavaScript pelo Terminal com PhantomJS"
 date: '2016-10-23T08:24:00.001-07:00'
-description: "Rode JavaScript pelo Terminal"
-main-class: 'html'
-color: '#fbbc05'
-author: 'Terminal Root'
+image: '/assets/img/js/phantomjs.jpg'
+description: "Estamos falando de do PhantomJS . É "browser" webkit com API JavaScript completa que roda no terminal/console."
+main-class: 'dev'
+color: '#9c27b0'
+author: 'Marcos Oliveira'
 tags:
 - javascript
-- Terminal
+- terminal
 - phantomjs
 twitter_text: "Rode JavaScript pelo Terminal"
-introduction: "Rode JavaScript pelo Terminal"
+introduction: "Estamos falando de do PhantomJS . É "browser" webkit com API JavaScript completa que roda no terminal/console."
 ---
+
+![Terminal Linux PhantomJS](/assets/img/js/phantomjs.jpg)
 
 # Rode JavaScript pelo Terminal
 
