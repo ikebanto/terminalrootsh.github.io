@@ -12,7 +12,7 @@ tags:
 - terminal
 - phantomjs
 twitter_text: "Rode JavaScript pelo Terminal"
-introduction: "Estamos falando de do PhantomJS . É "browser" webkit com API JavaScript completa que roda no terminal/console."
+introduction: "Estamos falando de do PhantomJS . É browser webkit com API JavaScript completa que roda no terminal-console."
 ---
 
 ![Terminal Linux PhantomJS](/assets/img/js/phantomjs.jpg)
