@@ -22,7 +22,7 @@ introduction: Como utilizar o Iptables (Netfilter)
 <blockquote class="tr_bq"><b>Iptables é o nome da ferramenta do espaço do usuário que permite a criação de regras de firewall e NATs. Apesar de, tecnicamente, o iptables ser apenas uma ferramenta que controla o módulo netfilter(O <span style="color: purple;">netfilter</span> é um módulo que fornece ao sistema operacional Linux as funções de firewall, NAT e log dos dados que trafegam por rede de computadores.), o nome "iptables" é frequentemente utilizado como referência ao conjunto completo de funcionalidades do netfilter. O iptables é parte de todas as distribuições modernas do Linux.</b></blockquote><b>
 </b><i><b>Ao reiniciar o computador as Regras de Firewall são perdidas, para isso é preciso criar um script para executar sempre que o computador for iniciado.</b></i>
 <b>
-</b><b>Para verificar quais regras estão criadas, se existir, o comando é:/</b>
+</b><b>Para verificar quais regras estão criadas, se existir, o comando é:</b>
 {% highlight bash %}
 # iptables -L
 {% endhighlight %}, se não retornar nada é porque o pacote não está instalado, então você pode instalá-lo pelo comando:
