@@ -1,17 +1,17 @@
 ---
 layout: post
-title: Linux para carros deverá atender toda a indústria automotiva
+title: "Linux para carros deverá atender toda a indústria automotiva"
 date: '2016-05-13T17:41:00.001-07:00'
-description: Linux para carros deverá atender toda a indústria automotiva
+description: "Linux para carros deverá atender toda a indústria automotiva"
 main-class: 'linux'
 color: '#3b5998'
-author: Terminal Root
+author: "Terminal Root"
 tags:
 - Linux
 modified_time: '2016-05-13T17:45:26.052-07:00'
 thumbnail: https://4.bp.blogspot.com/-D7UMwl20tGg/VzZzOaIP1FI/AAAAAAAAAfg/emLG_rfQ_-0G9eNjuSDPUKkmSSs2bp1iwCLcB/s72-c/linux_carro.jpg
-twitter_text: Linux para carros deverá atender toda a indústria automotiva
-introduction: Linux para carros deverá atender toda a indústria automotiva
+twitter_text: "Linux para carros deverá atender toda a indústria automotiva"
+introduction: "Linux para carros deverá atender toda a indústria automotiva"
 ---
 
 <img border="0" src="https://4.bp.blogspot.com/-D7UMwl20tGg/VzZzOaIP1FI/AAAAAAAAAfg/emLG_rfQ_-0G9eNjuSDPUKkmSSs2bp1iwCLcB/s640/linux_carro.jpg" />
