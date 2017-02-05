@@ -8,6 +8,7 @@ main-class: 'linux'
 color: '#637a91'
 tags:
 - linux
+- artigos
 categories:
 twitter_text: "O Linux está Dominando o Mundo"
 introduction: "O sistema operacional de código aberto está em smartphones, carros, televisores e termostatos."
