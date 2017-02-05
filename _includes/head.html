@@ -4,6 +4,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
     <title>{% if page.title %}{{ page.title }}{% else %}{{ site.title }}{% endif %}</title>
+    {% seo %}
     <meta name="description" content="{% if page.description %}{{ page.description | strip_html | strip_newlines | truncate: 160 }}{% else %}{{ site.description }}{% endif %}">
      <meta name="keywords" content="blog linux, linux blog, blog shell script, bash, linux debian blog, linux ubuntu, linux arch, linux manjaro, linux gentoo, linux slackware, linux mint, linux elementary, linux os, linux redhat, linux opensuse, linux fedora, blog shell script, blog bash, debian" />
     <meta name="author" content="Terminal Root" />
