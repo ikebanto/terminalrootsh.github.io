@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Carta de Stallman para Dilma e os brasileiros
+title: "Carta de Stallman para Dilma e os brasileiros"
 date: '2014-10-17T19:22:00.000-07:00'
 image: "http://1.bp.blogspot.com/-4ZEPlVavnZI/VEHOR3h8jmI/AAAAAAAAA3I/h9pSul28V18/s72-c/richard%2Be%2Bdilma.thumbnail.png"
 description: Carta de Stallman para Dilma e os brasileiros
 main-class: 'gnu'
 color: '#d6ba32'
-author: Marcos Oliveira
 tags:
 - artigos
+categories:
 twitter_text: "Carta de Stallman para Dilma e os brasileiros"
 introduction: "Carta de Stallman para Dilma e os brasileiros"
 ---
