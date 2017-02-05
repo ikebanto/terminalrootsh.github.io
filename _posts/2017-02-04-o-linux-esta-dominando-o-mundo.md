@@ -2,7 +2,7 @@
 layout: post
 title: "O Linux está Dominando o Mundo"
 date: 2017-02-04 21:42:51
-image: '/assets/img/linux/linux2.jpg'
+image: '/assets/img/linux/linux.jpg'
 description: "O sistema operacional de código aberto desenvolvido pelo finlandês está em smartphones, carros, televisores e termostatos."
 main-class: 'linux'
 color: '#637a91'
@@ -13,7 +13,7 @@ twitter_text: "O Linux está Dominando o Mundo"
 introduction: "O sistema operacional de código aberto desenvolvido pelo finlandês está em smartphones, carros, televisores e termostatos."
 ---
 
-![Linux](/assets/img/linux/linux2.jpg)
+![Linux](/assets/img/linux/linux.jpg)
 
 O sistema operacional de código aberto desenvolvido pelo finlandês [Linus Torvalds](http://terminalroot.com.br/tags/#linus-torvalds) está em smartphones, carros, televisores e termostatos. Até mesmo a Microsoft, que o combateu ferozmente, já o usa
 Como o [Linux](http://terminalroot.com.br/tags/#linux) dominou o mundo (e ninguém percebeu)
