@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "Gerando Números para Mega-Sena em Linguagem C"
-date: 2012-12-29 21:42:51
+date: "2012-12-29 21:42:51 +0800"
 image: "/assets/img/c/megasenac.png"
 description: "Função em Linguagem C para gerar 6 números aleatórios para a Mega-Sena."
 main-class: 'C'
