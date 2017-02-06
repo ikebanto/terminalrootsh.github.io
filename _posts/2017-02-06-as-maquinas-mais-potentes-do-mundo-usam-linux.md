@@ -3,7 +3,7 @@ layout: post
 title: "As Máquinas Mais Potentes do Mundo usam Linux"
 date: 2017-02-06 20:27:53
 image: '/assets/img/noticias/supercomputador.jpg'
-description:
+description: "A cada seis meses a TOP500 disponibiliza a lista dos 500 supercomputadores mais poderosos do mundo tendo como base o sistema de Benchmarks Linpack. Estas super máquinas pertencem normalmente a governos ou a parcerias público-privadas que compartilham os custos e o tempo de processamento do sistema."
 main-class: 'noticias'
 color: '#e91e63'
 tags:
@@ -11,7 +11,7 @@ tags:
 - noticias
 categories:
 twitter_text: "As Máquinas Mais Potentes do Mundo usam Linux"
-introduction:
+introduction: "A cada seis meses a TOP500 disponibiliza a lista dos 500 supercomputadores mais poderosos do mundo tendo como base o sistema de Benchmarks Linpack. Estas super máquinas pertencem normalmente a governos ou a parcerias público-privadas que compartilham os custos e o tempo de processamento do sistema."
 ---
 
 ![Super Computadores usam Linux - Blog](/assets/img/noticias/supercomputador.jpg "Super Computadores usam Linux - Blog")
