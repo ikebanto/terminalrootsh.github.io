@@ -196,9 +196,6 @@ Um  último exemplo de geração de thumbnail, que peguei na documentação do  
  
 {% highlight bash %}
 $ convert -thumbnail '100x150>' -bordercolor snow -background black \
-{% endhighlight %}
-
-{% highlight bash %}
 +polaroid foto.jpg foto_thumbnailpolarid.png
 {% endhighlight %}
 
@@ -206,18 +203,11 @@ Também tem outras ténicas bem interessantes:
  
 {% highlight bash %}
 $ convert -thumbnail '100x150>' -matte -background none \
-{% endhighlight %}
-
-
-{% highlight bash %}
 -vignette 0x4 foto.jpg foto_thumbnail2.png
 {% endhighlight %}
 
 {% highlight bash %}
 $ convert -thumbnail '100x150>' -matte -virtual-pixel transparent \
-{% endhighlight %}
-
-{% highlight bash %}
 -channel A -blur 0x8 -level 0,50% +channel foto.jpg thumbnail_softedge.png
 {% endhighlight %}
 
