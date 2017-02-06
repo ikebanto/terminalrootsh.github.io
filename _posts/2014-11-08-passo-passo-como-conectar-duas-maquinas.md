@@ -514,6 +514,8 @@ guest ok = yes
 
 
 ## Veja um Vídeo Demonstrativo
+
 # Como acessar Arquivos do Windows pelo Linux e vice versa
+
 <iframe width="560" height="315" src="https://www.youtube.com/embed/WGTbBfdEgJ0" frameborder="0" allowfullscreen></iframe>
 
