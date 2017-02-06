@@ -204,4 +204,4 @@ man find
 
 Ou com o comando __-help__ , que faz um resumo da utilização do comando __find__.
 
-Fonte: __$ man find__ e [DuckDuckGo Blog Linux](https://duckduckgo.com/ "DuckDuckGo Blog Linux")
+Fonte: __$ man find__ e [DuckDuckGo](https://duckduckgo.com/ "DuckDuckGo Blog Linux")
