@@ -2,20 +2,19 @@
 layout: post
 title: "Gerando Números para Mega-Sena em Linguagem C"
 date: '2012-12-29T05:58:00.000-08:00'
-image: "http://1.bp.blogspot.com/-3ChE1_pZc7k/UN72M3BJ_oI/AAAAAAAAA6s/cmhjhdN8DQU/s400/megasena%2Bna%2Blinguagem%2BC.png"
-description: "Analise o código"
+image: "/assets/img/c/megasenac.png"
+description: "Função em Linguagem C para gerar 6 números aleatórios para a Mega-Sena."
 main-class: 'C'
 color: '#3465a4'
 author: The Bang Bash
 tags:
 - Linguagem C
 categories:
-thumbnail: "http://1.bp.blogspot.com/-3ChE1_pZc7k/UN72M3BJ_oI/AAAAAAAAA6s/cmhjhdN8DQU/s400/megasena%2Bna%2Blinguagem%2BC.png"
 twitter_text: "Gerando Números para Mega-Sena em Linguagem C"
-introduction: "Analise o código"
+introduction: "Função em Linguagem C para gerar 6 números aleatórios para a Mega-Sena."
 ---
 
-![Mega Sena Linguagem C](http://1.bp.blogspot.com/-3ChE1_pZc7k/UN72M3BJ_oI/AAAAAAAAA6s/cmhjhdN8DQU/s400/megasena%2Bna%2Blinguagem%2BC.png)
+![Mega Sena Linguagem C](/assets/img/c/megasenac.png)
 
 > Pra quem viu o post [Gerando Números para Mega-Sena com Shell Script](http://terminalroot.com.br/2015/01/gerando-numeros-para-mega-sena-com.html) viu como faz essa mesma coisa em Shell Script, aqui vou mostrar uma Função em __Linguagem C__ que eu criei para gerar 6 números aleatórios para a Mega-Sena. O código é simples, no entanto, precisa de alguns ajustes como: 
 
