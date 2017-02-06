@@ -29,35 +29,36 @@ introduction: "Passo a Passo como conectar duas máquinas Linux e Windows"
 4 - Instalar o Samba e o smbclient no Linux:
 
 
-{% highlight %}
+{% highlight bash %}
 # apt-get install samba smbclient
 {% endhighlight %}
 
 
 4.1 - Por comando vc deve utilizar o comando tipo esse exemplo, supondo que o ip da máquina Windows seja 10.1.1.3: 
 
-{% highlight %}
+{% highlight bash %}
 # smbclient -L 10.1.1.3 -U marcos
 {% endhighlight %}
 
 
 5 - Criar um backup do *smb.conf* :
 
-{% highlight %}
-
-# cd /etc/samba
-# mkdir backupsmb
-# cp smb.conf backupsmb/
-# mv backupsmb/smb.conf backupsmb/smb.conf.bkp
+{% highlight bash %}
+cd /etc/samba
+mkdir backupsmb
+cp smb.conf backupsmb/
+mv backupsmb/smb.conf backupsmb/smb.conf.bkp
 {% endhighlight %}
 
 6 - Editar o *smb.conf*
 
-{% highlight %}
-# vim /etc/samba/smb.conf
+{% highlight bash %}
+vim /etc/samba/smb.conf
+{% endhighlight %}
+
 use essa como base, mas altere com seus nomes de usuário:
 
-{% highlight %}
+{% highlight bash %}
 
 [global]
 netbios name = linux
@@ -79,27 +80,26 @@ guest ok = yes
 path = /mnt
 writable = yes
 guest ok = yes
-
 {% endhighlight %}
 
 7 - Ao final o arquivo ficará mais ou menos assim, perceba que o __global__ tá no meio do arquivo e os __arquivos__ e __backups__ estão no final: __VEJA O CÓDIGO NO FINAL DESTE POST__
 
 8 - Crie um usuario samba no Linux, com a mesma senha (não necessariamente) do usuário que existe no sistema Linux e no Windows, e dê a permissão para a montagem:
 
-{% highlight %}
-# smbpasswd -a marcos
-# chown -R marcos:marcos /mnt
+{% highlight bash %}
+smbpasswd -a marcos
+chown -R marcos:marcos /mnt
 {% endhighlight %}
 
 9 - Pare e inicie o daemon do Samba:
-{% highlight %}
-# /etc/init.d/samba stop
-# /etc/init.d/samba start
+{% highlight bash %}
+/etc/init.d/samba stop
+/etc/init.d/samba start
 {% endhighlight %}
 
 10 - Teste o samba, ...:
-{% highlight %}
-# testparm
+{% highlight bash %}
+testparm
 {% endhighlight %}
 
 11 - Configure a placa de rede no Windows:
@@ -160,7 +160,7 @@ lo Link encap:Loopback Local
  
 13 - Depois ping no ip da maquina do windows pra ver se está tudo normal:
 
-{% highlight %}
+{% highlight bash %}
 # ping 10.1.1.3 -c3
 {% endhighlight %}
 
@@ -179,7 +179,7 @@ rtt min/avg/max/mdev = 0.168/1.791/5.037/2.295 ms
 
 14 - Agora abra o Nautilus (uma pasta qualquer no modo gráfico), e aperte Ctrl+L, e na barra de endereços digite:
 
-{% highlight %}
+{% highlight bash %}
 smb://10.1.1.3
 {% endhighlight %}
 
@@ -192,7 +192,7 @@ abraços!
 
 DADOS DO SMB.CONF:
 
-{% highlight %}
+{% highlight bash %}
 #
 # Sample configuration file for the Samba suite for Debian GNU/Linux.
 #
