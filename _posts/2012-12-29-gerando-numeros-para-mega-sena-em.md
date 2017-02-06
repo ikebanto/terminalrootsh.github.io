@@ -1,12 +1,11 @@
 ---
 layout: post
 title: "Gerando Números para Mega-Sena em Linguagem C"
-date: '2012-12-29T05:58:00.000-08:00'
+date: 2012-12-29 21:42:51
 image: "/assets/img/c/megasenac.png"
 description: "Função em Linguagem C para gerar 6 números aleatórios para a Mega-Sena."
 main-class: 'C'
 color: '#3465a4'
-author: The Bang Bash
 tags:
 - Linguagem C
 categories:
