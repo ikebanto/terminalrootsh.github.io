@@ -26,7 +26,9 @@ Quem tiver uma dica é só melhorar que eu "reblogo". Segue imagem e código.*At
 ## Analise o Código abaixo
 
 {% highlight c %}
-#include 
+//Gerar números para Mega-Sena em Linguagem C
+#include <stdio.h>
+
 int main(){ 
  int i, numero; //declaração de variáveis 
  srand(time(NULL)); //faz com que os números não se repitam 
@@ -41,7 +43,7 @@ int main(){
 
 int megasena(int num){ 
  printf("\033[42m \033[37m %d \033[0m | ",num);//cor fundo verde
-} 
+}
 {% endhighlight %}
 
 # Comente!
