@@ -1,57 +1,63 @@
 ---
 layout: post
-title: Passo a Passo como conectar duas máquinas Linux e Windows via rede com c...
+title: "Passo a Passo como conectar duas máquinas Linux e Windows via rede com cabo Cross-Over e Samba."
 date: '2014-11-08T16:18:00.002-08:00'
 description: Passo a Passo como conectar duas máquinas Linux e Windows via rede com cabo
+image: '/assets/img/rede/rede.jpg'
 main-class: 'misc'
 color: '#34a853'
-author: Marcos Oliveira
 tags:
 - Servidores
 - Redes
-modified_time: '2014-11-08T16:18:44.842-08:00'
-thumbnail: http://4.bp.blogspot.com/-2RsSyjW0Ogo/UmRjkvmGIDI/AAAAAAAACeE/ZlyH9s_VueY/s72-c/Passo+a+Passo+para+criar+uma+conex%C3%A3o+entre+duas+m%C3%A1quinas+(uma+Linux+e+outra+Windows)+via+Samba+e+com+cabo+cross-over.jpg
-twitter_text: Passo a Passo como conectar duas máquinas Linux e Windows via rede com cabo
-introduction: Passo a Passo como conectar duas máquinas Linux e Windows via rede com cabo
+categories:
+twitter_text: "Passo a Passo como conectar duas máquinas Linux e Windows"
+introduction: "Passo a Passo como conectar duas máquinas Linux e Windows"
 ---
 
-<p>
-<div class="separator" style="clear: both; text-align: center;"><a href="http://4.bp.blogspot.com/-2RsSyjW0Ogo/UmRjkvmGIDI/AAAAAAAACeE/ZlyH9s_VueY/s1600/Passo+a+Passo+para+criar+uma+conex%C3%A3o+entre+duas+m%C3%A1quinas+(uma+Linux+e+outra+Windows)+via+Samba+e+com+cabo+cross-over.jpg" imageanchor="1" style="margin-left: 1em; margin-right: 1em;"><img border="0" src="http://4.bp.blogspot.com/-2RsSyjW0Ogo/UmRjkvmGIDI/AAAAAAAACeE/ZlyH9s_VueY/s640/Passo+a+Passo+para+criar+uma+conex%C3%A3o+entre+duas+m%C3%A1quinas+(uma+Linux+e+outra+Windows)+via+Samba+e+com+cabo+cross-over.jpg" height="353" width="570" /></a></div>br /> 
-<h3><span style="font-family: Verdana,sans-serif;">Passo a Passo como conectar duas máquinas Linux e <strike><span style="font-weight: normal;">Windows</span></strike> via rede com cabo Cross-Over e Samba.</span></h3>
-<b><span style="font-size: large;">1 - Criar o cabo <span style="color: blue;">Cross-Over</span> TP(par trançado):</span>
-
-<a href="http://www.infowester.com/tutcabosredes.php" target="_blank">Como criar "cabo crossover" e "cabo direto"</a>
+![Linux x Windows](/assets/img/rede/rede.jpg)
 
 
-<span style="font-size: large;">2 - Criar uma conta no </span></b><strike><span style="font-size: large;">Windows</span></strike><b><span style="font-size: large;"> com o mesmo nome e mesma senha(talvez) de uma conta no <span style="color: blue;">Linux</span>(</span></b><span style="font-size: small;"><i>procure no google como criar, caso não saiba</i></span><b><span style="font-size: large;">)</span>
-
-<span style="font-size: large;">3 - Compartilhar a pasta ou unidade </span></b><strike><span style="font-size: large;">Windows</span></strike><b><span style="font-size: large;"> e incluir o usuário </span></b><strike><span style="font-size: large;">Windows</span></strike><b><span style="font-size: large;"> que você permitirá, e verificar permissões da rede e total:</span>
-</b>
-<blockquote><i><b> * - clique com o botão direito em cima da pasta ou unidade e vá até propriedades e selecione compartilhar, no compartilhamento avançado(outra opção no mesmo menu) inclua o nome do usuário que receberá o acesso do Samba, ex.: marcos. Qualquer dúvida pesquise na internet como fazer isso.</b></i></blockquote><b>
-<span style="font-size: large;">4 - Instalar o Samba e o <span style="color: blue;">smbclient</span> no Linux:</span>
-
-</b>
-<div class="adp"><b># apt-get install samba smbclient</b></div><b>
-</b>
-<h4> 4.1 - Por comando vc deve utilizar o comando tipo esse exemplo, supondo que o ip da máquina <strike>Windows</strike><b> seja 10.1.1.3:</b></h4><b> 
-</b>
-<div class="adp"><b># smbclient -L 10.1.1.3 -U marcos</b></div><b>
+1 - Criar o cabo Cross-Over TP(par trançado): [Como criar "cabo crossover" e "cabo direto"](http://www.infowester.com/tutcabosredes.php)
 
 
+2 - Criar uma conta no Windows com o mesmo nome e mesma senha(talvez) de uma conta no Linux *(procure no google como criar, caso não saiba)*
 
-<span style="font-size: large;">5 - Criar um backup do <span style="color: blue;">smb.conf</span> :</span>
-</b>
-<div class="adp"><b>
-</b><b># cd /etc/samba</b>
-<p># mkdir backupsmb</p>
-<p># cp smb.conf backupsmb/</p>
-<b># mv backupsmb/smb.conf backupsmb/smb.conf.bkp</b></div><b>
-<span style="font-size: large;">6 - Editar o <span style="color: blue;">smb.conf</span></span>
-<div class="adp">
-# vim /etc/samba/smb.conf</div>
-<i>use essa como base, mas altere com seus nomes de usuário:</i>
+3 - Compartilhar a pasta ou unidade Windows e incluir o usuário Windows que você permitirá, e verificar permissões da rede e total:
 
-<div class="adp">
+> clique com o botão direito em cima da pasta ou unidade e vá até propriedades e selecione compartilhar, no compartilhamento avançado(outra opção no mesmo menu) inclua o nome do usuário que receberá o acesso do Samba, ex.: marcos. Qualquer dúvida pesquise na internet como fazer isso.
+
+4 - Instalar o Samba e o smbclient no Linux:
+
+
+{% highlight %}
+# apt-get install samba smbclient
+{% endhighlight %}
+
+
+4.1 - Por comando vc deve utilizar o comando tipo esse exemplo, supondo que o ip da máquina Windows seja 10.1.1.3: 
+
+{% highlight %}
+# smbclient -L 10.1.1.3 -U marcos
+{% endhighlight %}
+
+
+5 - Criar um backup do *smb.conf* :
+
+{% highlight %}
+
+# cd /etc/samba
+# mkdir backupsmb
+# cp smb.conf backupsmb/
+# mv backupsmb/smb.conf backupsmb/smb.conf.bkp
+{% endhighlight %}
+
+6 - Editar o *smb.conf*
+
+{% highlight %}
+# vim /etc/samba/smb.conf
+use essa como base, mas altere com seus nomes de usuário:
+
+{% highlight %}
 
 [global]
 netbios name = linux
@@ -74,51 +80,61 @@ path = /mnt
 writable = yes
 guest ok = yes
 
-</div>
+{% endhighlight %}
 
-<span style="font-size: large;">7 - Ao final o arquivo ficará mais ou menos assim, perceba que o [global] tá no meio do arquivo e os [arquivos] e [backups] estão no final:</span>
+7 - Ao final o arquivo ficará mais ou menos assim, perceba que o __global__ tá no meio do arquivo e os __arquivos__ e __backups__ estão no final: __VEJA O CÓDIGO NO FINAL DESTE POST__
 
-<span style="color: red;"><span style="font-size: x-large;">VEJA O CÓDIGO NO FINAL DESTE POST</span></span>
+8 - Crie um usuario samba no Linux, com a mesma senha (não necessariamente) do usuário que existe no sistema Linux e no Windows, e dê a permissão para a montagem:
 
-<span style="font-size: large;">8 - Crie um usuario <span style="color: blue;">samba</span> no <span style="color: blue;">Linux</span>, com a mesma senha(</span></b><span style="font-size: small;"><i>não necessariamente</i></span><b><span style="font-size: large;">) do usuário que existe no sistema <span style="color: blue;">Linux</span> e no </span></b><strike><span style="font-size: large;">Windows</span></strike><b><span style="font-size: large;">, e dê a permissão para a montagem:</span>
-<div class="adp">
+{% highlight %}
 # smbpasswd -a marcos
-# chown -R marcos:marcos /mnt</div>
-<span style="font-size: large;">9 - Pare e inicie o <span style="color: blue;">daemon</span> do <span style="color: blue;">Samba</span>:</span>
-<div class="adp">
-# /etc/init.d/samba stop
-# /etc/init.d/samba start</div>
-<span style="font-size: large;">10 - Teste o <span style="color: blue;">samba</span>, ...:</span>
-<div class="adp">
-# testparm</div>
-<span style="font-size: large;">11 - Configure a placa de rede no </span></b><strike><span style="font-size: large;">Windows</span></strike><b><span style="font-size: large;">:</span>
-</b>
-<blockquote class="tr_bq"><b>   a - clique com o botão direito no icone de rede no desktop, e depois em Alterar Configurações de Rede do Adaptador</b>
-<p>   b - clique com o botão direito em cima da placa de rede(se houver duas, desative a outra) e vá até propriedades</p>
-<p>   c - desative(desmarque o protocolo ipv6) e dê um duplo clique no ipv4, na janela que se abrirá, configure o ip da máquina, gateway e máscara, ex.:</p>
-<p>   </p>
-{% highlight bash %}
-    ip  - 10.1.1.3
-{% endhighlight %}
-{% highlight bash %}
-   gateway - 10.1.1.2
-{% endhighlight %}
-{% highlight bash %}
-   máscara - 255.0.0.0
+# chown -R marcos:marcos /mnt
 {% endhighlight %}
 
-   d - aplique e salve, se for o caso, depois feche
-   e - desative e ative a conexão de rede, para pegar as configurações e aguarde o reconhecimento da mesma.
+9 - Pare e inicie o daemon do Samba:
+{% highlight %}
+# /etc/init.d/samba stop
+# /etc/init.d/samba start
+{% endhighlight %}
+
+10 - Teste o samba, ...:
+{% highlight %}
+# testparm
+{% endhighlight %}
+
+11 - Configure a placa de rede no Windows:
+
+* clique com o botão direito no icone de rede no desktop, e depois em Alterar Configurações de Rede do Adaptador
+* clique com o botão direito em cima da placa de rede(se houver duas, desative a outra) e vá até propriedades
+* desative (desmarque o protocolo ipv6) e dê um duplo clique no ipv4, na janela que se abrirá, configure o ip da máquina, gateway e máscara, ex.:
+   
+{% highlight bash %}
+ip  - 10.1.1.3
+{% endhighlight %}
+
+{% highlight bash %}
+gateway - 10.1.1.2
+{% endhighlight %}
+
+{% highlight bash %}
+máscara - 255.0.0.0
+{% endhighlight %}
+
+* aplique e salve, se for o caso, depois feche
+* desative e ative a conexão de rede, para pegar as configurações e aguarde o reconhecimento da mesma.
+
 12 - Desative a placa de rede no Linux e reative com o ip e netmask correspondentes:
 
 
-  a - # ipconfig eth0 down
-  b - # ipconfig eth0 10.1.1.2 netmask 255.0.0.0 up  
-  obs.: Caso o icone da area de trabalho fique desconectado, desconsidere, confirme os dados com comando
+* # ipconfig eth0 down
+* # ipconfig eth0 10.1.1.2 netmask 255.0.0.0 up  
+
+> obs.: Caso o icone da area de trabalho fique desconectado, desconsidere, confirme os dados com comando
 
 
- c - # ifconfig 
- mais ou menos aparecerá:
+*  # ifconfig 
+
+Mais ou menos aparecerá:
  
 {% highlight bash %}
 
@@ -142,15 +158,15 @@ lo Link encap:Loopback Local
  RX bytes:726321 (709.2 KiB) TX bytes:726321 (709.2 KiB)
 {% endhighlight %}
  
-<span style="font-size: large;">13 - Depois ping no <span style="color: blue;">ip</span> da maquina do </span></b><strike><span style="font-size: large;">windows</span></strike><b><span style="font-size: large;"> pra ver se está tudo normal:</span>
-</b>
-<div class="adp"><b>
-</b><b># ping 10.1.1.3 -c3</b></div><b>
-<u><i>resultado, mais ou menos esse:</i></u>
+13 - Depois ping no ip da maquina do windows pra ver se está tudo normal:
+
+{% highlight %}
+# ping 10.1.1.3 -c3
+{% endhighlight %}
+
+resultado, mais ou menos esse:
 
 {% highlight bash %}
-
-
 PING 10.1.1.3 (10.1.1.3) 56(84) bytes of data.
 64 bytes from 10.1.1.3: icmp_req=1 ttl=128 time=0.169 ms
 64 bytes from 10.1.1.3: icmp_req=2 ttl=128 time=5.03 ms
@@ -161,26 +177,22 @@ PING 10.1.1.3 (10.1.1.3) 56(84) bytes of data.
 rtt min/avg/max/mdev = 0.168/1.791/5.037/2.295 ms
 {% endhighlight %}
 
-<span style="font-size: large;">14 - Agora abra o <span style="color: blue;">Nautilus</span> (</span></b><i><span style="font-size: large;">uma pasta qualquer no modo gráfico</span></i><b><span style="font-size: large;">), e aperte <span style="color: blue;">Ctrl+L</span>, e na barra de endereços digite:</span>
-<div class="adp">
-smb://10.1.1.3</div>
+14 - Agora abra o Nautilus (uma pasta qualquer no modo gráfico), e aperte Ctrl+L, e na barra de endereços digite:
+
+{% highlight %}
+smb://10.1.1.3
+{% endhighlight %}
+
 pedirá usuario, grupo e senha. Preencha com marcos(o nome que vc escolheu), WORKGROUP e a senha do usuário.
 
 pronto, vc acessará!
-
-mais informações veja esse link:
-
-<a href="http://amigosdopinguim.blogspot.com.br/2011/12/como-utilizar-o-samba-por-comando-e.html" target="_blank">Como utilizar o Samba por comando e modo gráfico</a>
-
-
-
 Qualquer duvida é só comentar!
 
 abraços!
 
-<u><i><span style="color: purple;"><span style="font-size: x-large;">DADOS DO SMB.CONF:</span></span></i></u>
+DADOS DO SMB.CONF:
 
-<div class="adp">
+{% highlight %}
 #
 # Sample configuration file for the Samba suite for Debian GNU/Linux.
 #
@@ -286,7 +298,7 @@ guest account = marcos
  unix password sync = yes
 
 # For Unix password sync to work on a Debian GNU/Linux system, the following
-# parameters must be set (thanks to Ian Kahan <<kahan@informatik.tu-muenchen.de> for
+# parameters must be set (thanks to Ian Kahan  for
 # sending the correct chat script for the passwd program in Debian Sarge).
  passwd program = /usr/bin/passwd %u
  passwd chat = *Enter\snew\s*\spassword:* %n\n *Retype\snew\s*\spassword:* %n\n *password\supdated\ssuccessfully* .
@@ -501,8 +513,8 @@ guest ok = yes
 path = /mnt
 writable = yes
 guest ok = yes
+{% endhighlight %}
 
-</div></b>
-Terminal Root http://www.terminalroot.com.br/ Blog Linux
 
-</p>
+[![Veja o Vídeos](https://www.youtube.com/watch?v=WGTbBfdEgJ0)](https://www.youtube.com/watch?v=WGTbBfdEgJ0 "Veja o Vídeo")
+
