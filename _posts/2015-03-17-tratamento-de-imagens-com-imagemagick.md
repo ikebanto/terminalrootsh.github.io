@@ -67,6 +67,7 @@ $ identify imagem.jpg imagem.png
 {% endhighlight %}
 
 > imagem.jpg JPEG 256x256 256x256+0+0 DirectClass 8-bit 6.33594kb
+
 > imagem.png[1] PNG 256x256 256x256+0+0 DirectClass 8-bit 23.2344kb
 
 (O comando identify foi só para mostrar os tipos de imagem.) Note também que ele não sobrescreve o arquivo anterior, e sim cria um  novo. Qualquer operação que iria sobrescrever o arquivo original tem  que ser executada com o comando mogrify ao invés do convert. A não ser que você tenha uma razão bem específica, eu não recomendo fazer isto 
