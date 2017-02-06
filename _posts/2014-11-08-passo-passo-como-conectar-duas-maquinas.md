@@ -30,14 +30,14 @@ introduction: "Passo a Passo como conectar duas máquinas Linux e Windows"
 
 
 {% highlight bash %}
-# apt-get install samba smbclient
+apt-get install samba smbclient
 {% endhighlight %}
 
 
 4.1 - Por comando vc deve utilizar o comando tipo esse exemplo, supondo que o ip da máquina Windows seja 10.1.1.3: 
 
 {% highlight bash %}
-# smbclient -L 10.1.1.3 -U marcos
+smbclient -L 10.1.1.3 -U marcos
 {% endhighlight %}
 
 
@@ -108,31 +108,28 @@ testparm
 * clique com o botão direito em cima da placa de rede(se houver duas, desative a outra) e vá até propriedades
 * desative (desmarque o protocolo ipv6) e dê um duplo clique no ipv4, na janela que se abrirá, configure o ip da máquina, gateway e máscara, ex.:
    
-{% highlight bash %}
-ip  - 10.1.1.3
-{% endhighlight %}
+> ip  - 10.1.1.3
 
-{% highlight bash %}
-gateway - 10.1.1.2
-{% endhighlight %}
+> gateway - 10.1.1.2
 
-{% highlight bash %}
-máscara - 255.0.0.0
-{% endhighlight %}
+> máscara - 255.0.0.0
+
 
 * aplique e salve, se for o caso, depois feche
 * desative e ative a conexão de rede, para pegar as configurações e aguarde o reconhecimento da mesma.
 
-12 - Desative a placa de rede no Linux e reative com o ip e netmask correspondentes:
+12 - Desative a placa de rede no Linux e reative com o ip e netmask correspondentes
 
-
-* # ipconfig eth0 down
-* # ipconfig eth0 10.1.1.2 netmask 255.0.0.0 up  
+{% highlight bash %}
+ipconfig eth0 down
+ipconfig eth0 10.1.1.2 netmask 255.0.0.0 up
+{% endhighlight %}
 
 > obs.: Caso o icone da area de trabalho fique desconectado, desconsidere, confirme os dados com comando
 
-
-*  # ifconfig 
+{% highlight bash %}
+ifconfig
+{% endhighlight %}
 
 Mais ou menos aparecerá:
  
@@ -161,7 +158,7 @@ lo Link encap:Loopback Local
 13 - Depois ping no ip da maquina do windows pra ver se está tudo normal:
 
 {% highlight bash %}
-# ping 10.1.1.3 -c3
+ping 10.1.1.3 -c3
 {% endhighlight %}
 
 resultado, mais ou menos esse:
@@ -179,18 +176,18 @@ rtt min/avg/max/mdev = 0.168/1.791/5.037/2.295 ms
 
 14 - Agora abra o Nautilus (uma pasta qualquer no modo gráfico), e aperte Ctrl+L, e na barra de endereços digite:
 
-{% highlight bash %}
-smb://10.1.1.3
-{% endhighlight %}
+> smb://10.1.1.3
 
-pedirá usuario, grupo e senha. Preencha com marcos(o nome que vc escolheu), WORKGROUP e a senha do usuário.
+
+pedirá usuario, grupo e senha. Preencha com marcos(o nome que vc escolheu), __WORKGROUP__ e a *senha* do *usuário*.
 
 pronto, vc acessará!
-Qualquer duvida é só comentar!
 
-abraços!
+## Qualquer duvida é só comentar!
 
-DADOS DO SMB.CONF:
+### Abraços!
+
+#### DADOS DO SMB.CONF:
 
 {% highlight bash %}
 #
@@ -516,5 +513,7 @@ guest ok = yes
 {% endhighlight %}
 
 
-[![Veja o Vídeos](https://www.youtube.com/watch?v=WGTbBfdEgJ0)](https://www.youtube.com/watch?v=WGTbBfdEgJ0 "Veja o Vídeo")
+## Veja um Vídeo Demonstrativo
+# Como acessar Arquivos do Windows pelo Linux e vice versa
+<iframe width="560" height="315" src="https://www.youtube.com/embed/WGTbBfdEgJ0" frameborder="0" allowfullscreen></iframe>
 
