@@ -25,7 +25,7 @@ Quem tiver uma dica é só melhorar que eu "reblogo". Segue imagem e código.*At
 
 ## Analise o Código abaixo
 
-{% highlight bash %}
+{% highlight c %}
 #include 
 int main(){ 
  int i, numero; //declaração de variáveis 
