@@ -38,24 +38,6 @@ links:
 
 collections:
   - cursos
-  
-gems:
-  - jekyll-seo-tag
-
-title: Terminal Root - Blog Linux, Blog Shell Script Bash, Desenvolvimento e Web.
-description: Blog GNU/Linux, Shell Script Bash, Debian, Linguagens de Desenvolvimento, Contabilidade, Servidores, Web, Mobile e Games.
-url: www.terminalroot.com.br
-author: Terminal Root
-social:
-  name: Terminal Root
-  links:
-    - https://twitter.com/TerminalRootTV
-    - https://www.facebook.com/TerminalRoot
-    - https://www.youtube.com/TerminalRootTV
-    - https://plus.google.com/+TerminalRootTV
-    - https://github.com/terminalrootsh
-google_site_verification: zMxWGsmS5xlxc71KSaJx77T6CfB4bP3hdO_v5qfAsuY
-
 
 # exclude my node related stuff
 exclude: ['package.json', 'src', 'node_modules', 'vendor/bundle/ruby']
