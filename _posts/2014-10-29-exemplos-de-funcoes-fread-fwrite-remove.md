@@ -3,9 +3,8 @@ layout: post
 title: 'Exemplos de funções: fread(), fwrite(), remove() e outras em C'
 date: '2014-10-29T18:01:00.000-07:00'
 description: 'Exemplos de funções: fread(), fwrite(), remove() e outras em C'
-main-class: 'misc'
-color: '#34a853'
-author: Marcos Oliveira
+main-class: 'C'
+color: '#3465a4'
 tags:
 - Linguagem C
 modified_time: '2014-10-29T18:01:36.537-07:00'

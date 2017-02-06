@@ -3,8 +3,8 @@ layout: post
 title: Criando o primeiro programa em C
 date: '2011-10-30T13:27:00.000-07:00'
 description: Criando o primeiro programa em C
-main-class: 'misc'
-color: '#34a853'
+main-class: 'C'
+color: '#3465a4'
 author: The Bang Bash
 tags:
 - Linguagem C

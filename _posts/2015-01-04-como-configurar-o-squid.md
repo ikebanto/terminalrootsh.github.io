@@ -1,37 +1,39 @@
 ---
 layout: post
-title: Como configurar o Squid
+title: "Como configurar o Squid"
 date: '2015-01-04T12:56:00.001-08:00'
-description: Como configurar o Squid
+image: '/assets/img/servidor/squid.png'
+description: "O Squid é um servidor proxy que suporta HTTP, HTTPS, FTP e outros."
 main-class: 'linux'
 color: '#3b5998'
-author: Marcos Oliveira
 tags:
 - Linux
 - Servidores
 - GNU
 - Redes
-modified_time: '2015-01-04T12:56:12.503-08:00'
-thumbnail: http://4.bp.blogspot.com/-PY7EliHW6-s/VKmo1ZJ2sVI/AAAAAAAABIY/IW_frwfJa2E/s72-c/squid.png
-twitter_text: Como configurar o Squid
-introduction: Como configurar o Squid
+categories:
+twitter_text: "Como configurar o Squid"
+introduction: "O Squid é um servidor proxy que suporta HTTP, HTTPS, FTP e outros."
 ---
 
+![Squid Blog Linux](/assets/img/servidor/squid.png)
 
-O Squid é um servidor proxy que suporta HTTP, HTTPS, FTP e outros. Ele reduz a utilização da conexão e melhora os tempos de resposta fazendo cache de requisições freqüentes de páginas web numa rede de computadores. Ele pode também ser usado como um proxy reverso.
+> O Squid é um servidor proxy que suporta HTTP, HTTPS, FTP e outros. Ele reduz a utilização da conexão e melhora os tempos de resposta fazendo cache de requisições freqüentes de páginas web numa rede de computadores. Ele pode também ser usado como um proxy reverso.
 
 Instalação
 
 Para instalar o Squid no Debian e Debians-Like (Ubuntu, Linux Mint...):
 {% highlight bash %}
-# su
-# apt-get install squid3
+su
+apt-get install squid3
 {% endhighlight %}
 
 O Arquivo de configuração do Squid:
 {% highlight bash %}
-# vi /etc/squid3/squid.conf
-{% endhighlight %}, no arquivo que se abrirá, apague tudo (pode fazer um backup do arquivo antes) e inclua o seguinte código:
+vi /etc/squid3/squid.conf
+{% endhighlight %}
+
+no arquivo que se abrirá, apague tudo (pode fazer um backup do arquivo antes) e inclua o seguinte código:
 {% highlight bash %}
 http_port 3128
 visible_hostname marcospinguim
@@ -44,7 +46,7 @@ visible_hostname: DEFINA O NOME DE EXIBIÇÃO DO SERVIDOR.
 cache_mgr: DEFINA O E-MAIL DO ADMINISTRADOR PARA RECEBER MENSAGEM EM CASOS GRAVES.
 error_directory: DEFINA O IDIOMA DAS PÁGINAS DE MENSAGEM DE ERROS EM PORTUGUÊS.
 
-Cache
+## Cache
 
 No cache são armazenados os objetos da Internet (ex. dados de páginas web) disponíveis via protocolo HTTP, FTP e Gopher num sistema mais próximo ao do cliente. Os navegadores podem então usar o Squid local como um servidor Proxy HTTP, reduzindo o tempo de acesso aos objetos e reduzindo a utilização da conexão.
 
@@ -81,7 +83,7 @@ access_log /var/log/squid3/access.log
 cache_log /var/log/squid3/cache.log
 {% endhighlight %}
 
-Controle de Acesso
+## Controle de Acesso
 
 A ACL ou Lista de Controle de Acesso, é onde define aonde pode acessar ou não pela Internet. Uma coisa importante que deve saber é que o Squid interpreta as ACL's de cima para baixo, então deve ficar atento quando for criar as regras.
 
@@ -233,10 +235,13 @@ http_access deny all
 
 Após ter terminado as configurações, recarregue as configurações no Squid:
 {% highlight bash %}
-# /etc/init.d/squid3 reload
+/etc/init.d/squid3 reload
 {% endhighlight %}
 
 
-Fontes:http://pt.wikipedia.org/http://www.hardware.com.br/http://blog.cesar.augustus.nom.br/
+Fontes:
+http://pt.wikipedia.org/
+http://www.hardware.com.br/
+http://blog.cesar.augustus.nom.br/
 
 
