@@ -24,15 +24,21 @@ introduction: "ImageMagick é uma  poderosa ferramenta em modo texto para tratar
  
 ## Obtendo a ferramenta
 
-Antes de mais nada, é necessário obter a ferramenta ImageMagick, que  consiste em vários programas (comandos) separados, cada um com uma  função (o bom e velho modo Unix de fazer as coisas). O site do  ImageMagick é o seguinte:
+Para instalar no [Debian](http://terminalroot.com.br/tags#debian), [Ubuntu]((http://terminalroot.com.br/tags#ubuntu)) e similares, use o __APT__ com o comando *apt-get* com o __root__ ou o __sudo__
+{% highlight bash %}
+apt-get install imagemagick
+{% endhighlight %}
+
+Ou faça o download no endereço para outras distros, caso não haja nos repositórios da mesma pelo gerenciador de pacotes correspondentes.
 
 [ImageMagick](http://www.imagemagick.org/)
+
  
 Você pode pegar uma versão em código-fonte e compilar manualmente, o  que é um pouco mais demorado de se instalar. Se você usa Windows, baixe  diretamente a versão instalável (binária) para Windows. Mesma coisa para  o caso do MacOS X.
 
 Se você usa [Linux](http://terminalroot.com.br/tags#linux), então o ImageMagick provavelmente já está incluso  em sua distribuição. Neste caso, o nome do pacote é geralmente imagemagick (Debian-like) e ImageMagick (RH-Like). Geralmente os comandos da ferramenta vão parar no */usr/bin*.
 
-Enquanto escrevo este tutorial, os seguintes comandos do ImageMagick estão disponíveis:
+Os seguintes comandos do ImageMagick estão disponíveis:
 
 * animate – Anima imagens e mostra na tela
 * compare – Compara matematicamente e visualmente duas imagens
@@ -45,8 +51,6 @@ Enquanto escrevo este tutorial, os seguintes comandos do ImageMagick estão disp
 * mogrify – Mesma coisa que o convert, só que sobrescreve os arquivos que está trabalhando
 * montage – Junta várias imagens em uma só
 * stream – Extrai porções e/ou pixels das imagens e salva em outro local(Quando no Windows, estes mesmos nomes estão disponíveis, mas com a extensão .exe)
-
-> Observação pessoal do autor: Eu ainda me lembro que, sem saber na época, o comando import foi um dos primeiros comandos de Linux que aprendi depois que iniciei o  servidor X pela primeira vez, em 1997, servindo justamente para fazer  uma captura de tela e mostrar pra todo mundo que eu estava usando Linux  (fvwm95).
 
 #### Convertendo e Editando imagens
 Apesar dos vários comandos disponíveis, o que mais usaremos aqui é o convert.
