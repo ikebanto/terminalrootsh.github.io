@@ -48,7 +48,7 @@ Enquanto escrevo este tutorial, os seguintes comandos do ImageMagick estão disp
 
 > Observação pessoal do autor: Eu ainda me lembro que, sem saber na época, o comando import foi um dos primeiros comandos de Linux que aprendi depois que iniciei o  servidor X pela primeira vez, em 1997, servindo justamente para fazer  uma captura de tela e mostrar pra todo mundo que eu estava usando Linux  (fvwm95).
 
-####Convertendo e Editando imagens
+#### Convertendo e Editando imagens
 Apesar dos vários comandos disponíveis, o que mais usaremos aqui é o convert.
 
 #### Convertendo imagens de um formato para outro
