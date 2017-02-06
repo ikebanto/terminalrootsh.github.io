@@ -18,13 +18,11 @@ introduction: "find é um aplicativo para linha de comando de busca de arquivos 
 
 ## 20 EXEMPLOS DO COMANDO FIND
 
-1 - Procura simples
+## 1 - Procura simples
 {% highlight bash %}
 find . -name arquivo.txt
 ./arquivo.txt
 {% endhighlight %}
-
-
 
 
 * find   comando
@@ -33,7 +31,7 @@ find . -name arquivo.txt
 * -name  vai procurar exatamente esse nome, se um caracter for diferente ou maiúsculo ou minúsculo, ele ignorará.
 * arquivo.txt nome do arquivo 
 
-2 - Procura ignorando case sensitive
+## 2 - Procura ignorando case sensitive
 {% highlight bash %}
 find /home/ -iname arquivo.txt
 ./arquivo.txt
@@ -44,13 +42,13 @@ find /home/ -iname arquivo.txt
 * /home/  só vai procurar nesse diretório recursivamente (sub-diretórios)
 * iname  com maiúsculo ou minúsculo
 
-3 - Procura diretórios
+## 3 - Procura diretórios
 {% highlight bash %}
 find / -type -d -name Fotos arquivo.txt
 /home/user/Fotos
 {% endhighlight %}
 
-4 - Procura com coringas
+## 4 - Procura com coringas
 {% highlight bash %}
 find /home/ -name *rquivo*
 ./home/arquivo.txt
@@ -63,7 +61,7 @@ find /home/ -name *rquivo*
 
 * *rquivo* encontra todos os arquivos que possuirem a palavra "rquivo" no início, meio ou fim
 
-5 - Procura por tipo de arquivos
+## 5 - Procura por tipo de arquivos
 {% highlight bash %}
 find / -type -f -name Fotos *.odt
 ./arquivo.odt
@@ -72,17 +70,17 @@ find / -type -f -name Fotos *.odt
 
 * -f   só o arquivos com extensão odt, nesse caso, mesmo sem o -f também encontraria
 
-6 - Procura por permissão e encontra todos os arquivos que possuem permissão 777
+## 6 - Procura por permissão e encontra todos os arquivos que possuem permissão 777
 {% highlight bash %}
 find . -type f -perm 0777 -print
 {% endhighlight %}
 
-7 - Procura diferente de permissão encontra todos arquivos que não possuem a permissão 777
+## 7 - Procura diferente de permissão encontra todos arquivos que não possuem a permissão 777
 {% highlight bash %}
 find / -type f ! -perm 777
 {% endhighlight %}
 
-8 - Procura arquivos os diretórios vazis sem dizer se é __-type__ d ou __-type f__ ele procura ambos
+## 8 - Procura arquivos os diretórios vazis sem dizer se é __-type__ d ou __-type f__ ele procura ambos
 
 {% highlight bash %}
 find MinhaPasta/ -empty
@@ -105,14 +103,14 @@ find MinhaPasta/ -type f -empty
 MinhaPasta/arquivoVazio.txt
 {% endhighlight %}
 
-9 - Procura pastas ocultas
+## 9 - Procura pastas ocultas
 
 {% highlight bash %}
 find /tmp -type f -name ".*"
 {% endhighlight %}
 
 
-10 - Procura por tamanho vai encontrar todos os arquivos maiores que 10 MB
+## 10 - Procura por tamanho vai encontrar todos os arquivos maiores que 10 MB
 
 {% highlight bash %}
 find . -type f -size +10M
@@ -125,7 +123,7 @@ find . -type f -size -10M
 {% endhighlight %}
 
 
-11 - Procura e remove com __-exec__
+## 11 - Procura e remove com __-exec__
 
 {% highlight bash %}
 find . -type f -name arquivoVazio.txt -exec rm -f {} \;
@@ -140,53 +138,53 @@ find . -type f -name arquivoVazio.txt | xargs rm -f
 {% endhighlight %}
 
 
-12 - Procura por nome dentro do arquivo
+## 12 - Procura por nome dentro do arquivo
 {% highlight bash %}
 find MeusArquivos/ -name "*.*" -exec grep -Hin "Anomalias" {} \;
 MeusArquivos/arquivo.txt:1:Anomalias
 {% endhighlight %}
 
-13 - Procura arquivos ACESSADOS (__atime__) nas últimas 24 horas (para mais de 3 dias , use +3)
+## 13 - Procura arquivos ACESSADOS (__atime__) nas últimas 24 horas (para mais de 3 dias , use +3)
 
 {% highlight bash %}
 find . -type f -atime -1 -exec ls -l {} \;
 {% endhighlight %}
 
 
-14 - Procura arquivos ACESSADOS (__amin__) nos últimos 5 minutos
+## 14 - Procura arquivos ACESSADOS (__amin__) nos últimos 5 minutos
 {% highlight bash %}
 find . -type f -amin -5
 {% endhighlight %}
 
 
-15 - Procura arquivos CRIADOS (__ctime__) nas últimas 12 horas
+## 15 - Procura arquivos CRIADOS (__ctime__) nas últimas 12 horas
 {% highlight bash %}
 find . -type f -ctime -0.5 -exec ls -l {} \;
 {% endhighlight %}
 
-16 - Procura arquivos MODIFICADOS (__mtime__) nas últimas 6 horas
+## 16 - Procura arquivos MODIFICADOS (__mtime__) nas últimas 6 horas
 {% highlight bash %}
 find . -type f -mtime -0.25
 {% endhighlight %}
 
 
-17 - Procura arquivos do tipo Sticky Bit com permissão 551
+## 17 - Procura arquivos do tipo Sticky Bit com permissão 551
 {% highlight bash %}
 find / -perm 1551
 {% endhighlight %}
 
-18 - Procura arquivos SUID
+## 18 - Procura arquivos SUID
 {% highlight bash %}
 find / -perm /u=s
 {% endhighlight %}
 
-19 - Procura arquivos SGID
+## 19 - Procura arquivos SGID
 {% highlight bash %}
 find / -perm /g+s
 {% endhighlight %}
 
 
-20 - Procura arquivos executáveis
+## 20 - Procura arquivos executáveis
 {% highlight bash %}
 find / -perm /a=x
 {% endhighlight %}
@@ -206,4 +204,4 @@ man find
 
 Ou com o comando __-help__ , que faz um resumo da utilização do comando __find__.
 
-Fonte: __man find__ e [DuckDuckGo Blog Linux](https://duckduckgo.com/ "DuckDuckGo Blog Linux")
+Fonte: __$ man find__ e [DuckDuckGo Blog Linux](https://duckduckgo.com/ "DuckDuckGo Blog Linux")
