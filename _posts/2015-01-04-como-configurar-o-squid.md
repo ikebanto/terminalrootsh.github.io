@@ -20,7 +20,7 @@ introduction: "O Squid é um servidor proxy que suporta HTTP, HTTPS, FTP e outro
 
 > O Squid é um servidor proxy que suporta HTTP, HTTPS, FTP e outros. Ele reduz a utilização da conexão e melhora os tempos de resposta fazendo cache de requisições freqüentes de páginas web numa rede de computadores. Ele pode também ser usado como um proxy reverso.
 
-Instalação
+## Instalação
 
 Para instalar o Squid no Debian e Debians-Like (Ubuntu, Linux Mint...):
 {% highlight bash %}
@@ -240,8 +240,12 @@ Após ter terminado as configurações, recarregue as configurações no Squid:
 
 
 Fontes:
+
 http://pt.wikipedia.org/
+
 http://www.hardware.com.br/
+
 http://blog.cesar.augustus.nom.br/
+
 
 
