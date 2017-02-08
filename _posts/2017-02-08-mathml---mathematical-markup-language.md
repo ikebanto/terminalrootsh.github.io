@@ -243,4 +243,6 @@ Fórmula de Bhaskara:
 {% endhighlight %}
 
 Documentação Oficial: [MathML Mathematical](https://www.w3.org/Math/)
+
 Via: [Viva o Linux](https://www.vivaolinux.com.br/artigo/MathML-Mathematical-Markup-Language)
+
