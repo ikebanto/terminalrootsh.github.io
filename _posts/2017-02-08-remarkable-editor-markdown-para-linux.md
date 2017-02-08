@@ -35,6 +35,6 @@ Há opção de pacotes:
 - __.git__ Para Todas as Distribuições
 
 # Site Oficial
-[https://remarkableapp.github.io/linux/download.html](https://remarkableapp.github.io/linux.html)
+[https://remarkableapp.github.io/linux.html](https://remarkableapp.github.io/linux.html)
 
 # [Clique Aqui Download](https://remarkableapp.github.io/linux/download.html)
