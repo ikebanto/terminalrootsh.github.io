@@ -20,8 +20,7 @@ introduction: "Se você é um administrador de rede, um profissional de seguran�
  você é um administrador de rede, um profissional de segurança ou um 
 usuário final, é importante que você mantenha seu sistema limpo e 
 seguro.</span> <span class="notranslate"> Há uma variedade de ferramentas de segurança de código aberto de alta qualidade disponíveis, e muitas delas são gratuitas.</span> <span class="notranslate"> Confira esta lista para encontrar 100 dos melhores deles.</span> <br />
-<h2>
- <span class="notranslate"> Geral</span> </h2>
+<h2>Geral</h2>
 <span class="notranslate"> Essas ferramentas oferecem uma variedade de funções de segurança úteis.</span> <br />
 <ol style="text-align: justify;" type="1">
 <li> <span class="notranslate"> <a target="_blank" href="http://www.untangle.com/">Untangle</a> : Untangle fornecerá proteção contra spam, vírus e spyware, além de filtragem na Web, firewall e muito mais.</span> </li>
@@ -41,8 +40,7 @@ para fornecer detalhes de rede e ficar em cima de intrusões.</span> </li>
 pelo fornecedor e permite que você personalize o dispositivo através do 
 uso de pacotes para atender a qualquer aplicativo.</span> </li>
 </ol>
-<h2>
- <span class="notranslate"> Monitorização</span> </h2>
+<h2>Monitorização</h2>
 <span class="notranslate"> Com essas ferramentas, você obterá monitoramento constante de sua segurança.</span> <br />
 <ol style="text-align: justify;" type="1">
 <li> <span class="notranslate"> <a target="_blank" href="http://www.nessus.org/">Nessus</a> : Use este scanner gratuito para ficar no topo de suas vulnerabilidades.</span> </li>
@@ -69,8 +67,7 @@ vulnerabilidades.</span> </li>
 <li> <span class="notranslate"> <a target="_blank" href="http://sourceforge.net/projects/snare/">SNARE</a> : Faça uso desta ferramenta que coleta e analisa seus dados de log de eventos.</span> </li>
 <li> <span class="notranslate"> <a target="_blank" href="http://www.cirt.net/nikto2">Nikto</a> : Nikto irá analisar os seus servidores web para problemas e arquivos perigosos.</span> </li>
 </ol>
-<h2>
- <span class="notranslate"> Email e Spam</span> </h2>
+<h2>Email e Spam</h2>
 <span class="notranslate"> Use essas ferramentas para manter seu e-mail seguro.</span> <br />
 <ol style="text-align: justify;" type="1">
 <li> <span class="notranslate"> <a target="_blank" href="http://spamassassin.apache.org/">Spam Assassin</a> : Esta ferramenta anti-spam irá ajudá-lo a manter seu e-mail limpo e limpo.</span> </li>
@@ -85,8 +82,7 @@ do Outlook, Thunderbird e outros clientes de e-mail populares.</span> </li>
 <li> <span class="notranslate"> <a target="_blank" href="http://web.archive.org/web/20080703232711/http://wiki.mailcleaner.net/doku.php">MailCleaner</a> : Com este aplicativo de filtragem, você pode manter o spam e os vírus fora.</span> </li>
 <li> <span class="notranslate"> <a target="_blank" href="http://web.archive.org/web/20101111042944/http://gfime11webstat.sourceforge.net:80/"> Use esta ferramenta que exibirá seu nível de spam bloqueado graficamente.</span> </li>
 </ol>
-<h2>
- <span class="notranslate"> Antivírus</span> </h2>
+<h2>Antivírus</h2>
 <span class="notranslate"> Com essas ferramentas, você pode proteger seu computador e rede de vírus.</span> <br />
 <ol style="text-align: justify;" type="1">
 <li> <span class="notranslate"> <a target="_blank" href="http://sourceforge.net/projects/fullcontrol/">FullControl</a> : Este software vai ficar no topo de todos os programas em execução no seu computador e verificar a sua integridade.</span> </li>
@@ -96,8 +92,7 @@ do Outlook, Thunderbird e outros clientes de e-mail populares.</span> </li>
 <li> <span class="notranslate"> <a target="_blank" href="http://web.archive.org/web/20090125165850/http://winpooch.free.fr:80/page/home.php%3Flang%3Den%26page%3Dhome">Winpooch Watchdog</a> : Winpooch vai ficar no topo de spyware, trojans e vírus.</span> </li>
 <li> <span class="notranslate"> <a target="_blank" href="http://web.archive.org/web/20120502210220/http://softlabsav.softlabs.net:80/">Softlabs AntiVirus</a> : Usando esta ferramenta antivírus, você pode digitalizar seu e-mail para phishing e vírus.</span> </li>
 </ol>
-<h2>
- <span class="notranslate"> Firewall</span> </h2>
+<h2>Firewall</h2>
 <span class="notranslate"> Use essas ferramentas de firewall para manter intrusos indesejados e itens fora do seu sistema.</span> <br />
 <ol style="text-align: justify;" type="1">
 <li> <span class="notranslate"> <a target="_blank" href="http://www.nsa.gov/selinux/">SELinux</a> : Usando o SELinux, você pode definir recursos de controle de acesso obrigatórios para Linux.</span> </li>
@@ -120,8 +115,7 @@ do Outlook, Thunderbird e outros clientes de e-mail populares.</span> </li>
  no sistema operacional FreeBSD com um kernel personalizado e incluindo 
 pacotes de software livre de terceiros para funcionalidade adicional.</span> </li>
 </ol>
-<h2>
- <span class="notranslate"> Arquivos e dados</span> </h2>
+<h2>Arquivos e dados</h2>
 <span class="notranslate"> Mantenha seus arquivos, dados e transferências seguros com essas ferramentas.</span> <br />
 <ol style="text-align: justify;" type="1">
 <li> <span class="notranslate"> <a target="_blank" href="http://www.dban.org/">Darik's Boot e Nuke</a> : Se você quiser limpar um disco rígido, basta inicializar com um disco contendo esta ferramenta.</span> </li>
@@ -134,8 +128,7 @@ pacotes de software livre de terceiros para funcionalidade adicional.</span> </l
 vezes, para que não possam ser lidos utilizando ferramentas forenses 
 digitais.</span> </li>
 </ol>
-<h2>
- <span class="notranslate"> Criptografia e criptografia</span> </h2>
+<h2>Criptografia e criptografia</h2>
 <span class="notranslate"> Faça uso dessas ferramentas de criptografia e criptografia para ficar seguro.</span> <br />
 <ol style="text-align: justify;" type="1">
 <li> <span class="notranslate"> <a target="_blank" href="http://www.keyczar.org/">KeyCzar</a> : Use este kit de ferramentas para tornar a criptografia mais fácil de usar em aplicativos.</span> </li>
@@ -149,8 +142,7 @@ digitais.</span> </li>
 <li> <span class="notranslate"> <a target="_blank" href="http://www.freeotfe.org/">ferramenta</a> criará unidades virtuais seguras em seu PC.</span> </li>
 <li> <span class="notranslate"> <a target="_blank" href="http://sourceforge.net/projects/cryptology/">Criptologia</a> : Cryptology oferece encyption que se integra aos menus do botão direito do mouse do Windows Explorer.</span> </li>
 </ol>
-<h2>
- <span class="notranslate"> Senhas</span> </h2>
+<h2>Senhas</h2>
 <span class="notranslate"> Com essas ferramentas, você pode manter suas senhas acessíveis e seguras.</span> <br />
 <ol style="text-align: justify;" type="1">
 <li> <span class="notranslate"> <a target="_blank" href="http://keepass.info/">KeePass</a> : Use esta senha segura para manter todas as senhas seguras e criptografadas.</span> </li>
@@ -165,8 +157,7 @@ gerenciamento de acesso para fácil implantação e administração e é
 projetado para suportar requisitos corporativos robustos para 
 disponibilidade e disponibilidade.</span> <span class="notranslate"> Leia os <a target="_blank" href="https://www.gluu.org/docs/">documentos aqui</a> .</span> </li>
 </ol>
-<h2>
- <span class="notranslate"> Acesso remoto</span> </h2>
+<h2>Acesso remoto</h2>
 <span class="notranslate"> Use essas ferramentas para acesso remoto seguro.</span> <br />
 <ol style="text-align: justify;" type="1">
 <li> <span class="notranslate"> <a target="_blank" href="http://www.openssh.com/">OpenSSH</a> : Com esta ferramenta, você pode operar com segurança um host remoto.</span> </li>
@@ -178,8 +169,7 @@ disponibilidade e disponibilidade.</span> <span class="notranslate"> Leia os <a 
 <li> <span class="notranslate"> <a target="_blank" href="http://www.chiark.greenend.org.uk/%7Esgtatham/putty/">PuTTy</a> : Obter acesso remoto com este cliente telnet / SSH.</span> </li>
 <li> <span class="notranslate"> <a target="_blank" href="http://www.uvnc.com/index.html">UltraVNC</a> : use esta ferramenta para obter acesso remoto seguro e seguro.</span> </li>
 </ol>
-<h2>
- <span class="notranslate"> Rede</span> </h2>
+<h2>Rede</h2>
 <span class="notranslate"> Essas ferramentas ajudarão você a operar uma rede mais segura.</span> <br />
 <ol style="text-align: justify;" type="1">
 <li> <span class="notranslate"> <a target="_blank" href="http://insecure.org/nmap/">Nmap</a> : O Nmap irá ajudá-lo a manter-se informado sobre todo o hardware que está ligado à sua rede.</span> </li>
@@ -195,8 +185,7 @@ passivamente seu tráfego de rede para comportamento de tráfego anômalo.</span
 <li> <span class="notranslate"> <a target="_blank" href="http://www.tcpdump.org/">ferramenta</a> .</span> </li>
 <li> <span class="notranslate"> <a target="_blank" href="http://tnv.sourceforge.net/">O Visualizador de Rede</a> : Obtenha informações gráficas sobre sua atividade de rede usando esta ferramenta.</span> </li>
 </ol>
-<h2>
- <span class="notranslate"> Diversos</span> </h2>
+<h2>Diversos</h2>
 <span class="notranslate"> Confira essas ferramentas para aplicativos de segurança ainda mais abertos.</span> <br />
 <ol style="text-align: justify;" type="1">
 <li> <span class="notranslate"> <a target="_blank" href="http://sourceforge.net/projects/tripwire/">Tripwire</a> : Saiba quando são feitas alterações no seu sistema usando esta ferramenta.</span> </li>
