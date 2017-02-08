@@ -35,7 +35,7 @@ para fornecer detalhes de rede e ficar em cima de intrusões.</span> </li>
 <li> <span class="notranslate"> <a target="_blank" href="http://sourceforge.net/projects/hardenedlinux/">Hardened Linux</a> : Esta distribuição Linux irá ajudá-lo a melhorar a sua segurança.</span> </li>
 <li> <span class="notranslate"> <a target="_blank" href="http://www.ebox-platform.com/">Plataforma eBox</a> : use esta estrutura de gerenciamento de rede para filtragem de conteúdo, proxy, firewalls e more.sa</span> </li>
 <li> <span class="notranslate"> <a target="_blank" href="http://www.kismetwireless.net/">Kismet</a> : Kismet oferece detecção de rede sem fio, detecção de intrusão e sniffing de pacotes, tudo em um.</span> </li>
-<li> <span class="notranslate"> <a target="_blank" href="https://openwrt.org/">
+<li> <span class="notranslate"> <a target="_blank" href="https://openwrt.org/">OpenWrt</a>
  Isso libera você da seleção de aplicativos e da configuração fornecida 
 pelo fornecedor e permite que você personalize o dispositivo através do 
 uso de pacotes para atender a qualquer aplicativo.</span> </li>
