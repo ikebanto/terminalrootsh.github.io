@@ -29,12 +29,12 @@ introduction: "Remarkable é um editor markdown. É extremamente leve e tem uma 
 
 Há opção de pacotes:
 
-- [x] __.deb__ Para Debian/Ubuntu/Mint e similares
-- [x] __.rpm__ Fedora
-- [x] __.AUR__ Arch Linux
-- [x] __.git__ Para Todas as Distribuições
+- __.deb__ Para Debian/Ubuntu/Mint e similares
+- __.rpm__ Fedora
+- __.AUR__ Arch Linux
+- __.git__ Para Todas as Distribuições
 
 # Site Oficial
 [https://remarkableapp.github.io/linux/download.html](https://remarkableapp.github.io/linux.html)
 
-# [Clique Aqui Para Fazer o Download](https://remarkableapp.github.io/linux/download.html)
+# [Clique Aqui Download](https://remarkableapp.github.io/linux/download.html)
