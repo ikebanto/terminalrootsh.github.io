@@ -23,6 +23,7 @@ Ela está dividida em duas partes:
 + Content Markup
 
 Exemplo raíz quadrada de 2
+<p>
 <math>
       <msqrt>
             <mn>2</mn>
@@ -33,7 +34,8 @@ Exemplo raíz quadrada de 2
       <msqrt>
             <mn>2</mn>
       </msqrt>
-</math> 
+</math>
+</p>
 {% endhighlight %}
 
 Perceba que o elemento raiz do MathML é o "math", e que a raiz quadrada é representada pelo elemento "msqrt" (para outras raízes existe o elemento "mroot", veja os exemplos na próxima página) e o elemento "mn" representa um número.
@@ -41,6 +43,7 @@ Perceba que o elemento raiz do MathML é o "math", e que a raiz quadrada é repr
 Os elementos mais usados em MathML são "mn", "mi" e "mo". Eles servem para representar respectivamente números (ex.: 1, 0.235), variáveis/constantes (ex.: x, π) e operadores (ex. +, =).
 
 Veja um exemplo usando esses 3 elementos:
+<p>
 <math>
       <mi> y </mi>
       <mo> = </mo>
@@ -48,6 +51,7 @@ Veja um exemplo usando esses 3 elementos:
       <mo> - </mo>
       <mn> 3 </mn>
 </math>
+</p>
 {% highlight html %}
 <math>
       <mi> y </mi>
@@ -60,6 +64,7 @@ Veja um exemplo usando esses 3 elementos:
 Outro elemento usado com frequência é o "mrow". Esse elemento tem a função de agrupar outros elementos em linha. A princípio, pode parecer um elemento sem muita utilidade, mas em MathML existem elementos com um número específico de filhos. Dessa forma "mrow" se torna muito útil.
 
 Por exemplo, o elemento "mfenced" serve para colocar parênteses ao redor de outro elemento, mas se for colocado mais de um elemento filho dentro dele, esses elementos são separados por vírgula, veja:
+<p>
 <math>
       <mfenced>
             <mi> x </mi>
@@ -67,6 +72,7 @@ Por exemplo, o elemento "mfenced" serve para colocar parênteses ao redor de out
             <mn> 3 </mn>
       </mfenced>
 </math>
+</p>
 {% highlight html %}
 <math>
       <mfenced>
@@ -78,6 +84,7 @@ Por exemplo, o elemento "mfenced" serve para colocar parênteses ao redor de out
 {% endhighlight %}
 
 Outro elemento que tem o número de filhos predefinido é "mfrac", que serve para criar frações, o primeiro filho é o numerador e o segundo é o denominador. Segue um exemplo:
+<p>
 <math>
       <mfrac>
             <mrow>
@@ -88,6 +95,7 @@ Outro elemento que tem o número de filhos predefinido é "mfrac", que serve par
             <mn>2</mn>
       </mfrac>
 </math>
+</p>
 {% highlight html %}
 <math>
       <mfrac>
@@ -101,6 +109,7 @@ Outro elemento que tem o número de filhos predefinido é "mfrac", que serve par
 </math>
 {% endhighlight %}
 Os elementos "msub" e "msup" também têm o número de filhos predefinidos:
+<p>
 <math>
       <msub>
             <mn> 2 </mn>
@@ -114,6 +123,7 @@ Os elementos "msub" e "msup" também têm o número de filhos predefinidos:
             <mn> 4 </mn>
       </msup>
 </math>
+</p>
 {% highlight html %}
 <math>
       <msub>
@@ -131,6 +141,7 @@ Os elementos "msub" e "msup" também têm o número de filhos predefinidos:
 {% endhighlight %}
 
 Com MathML, é possível criar matrizes com uma sintaxe semelhante às tabelas HTML. O elemento pai é o "mtable". Dentro dele temos elementos de linha "mtr", e dentro desses, elementos de coluna "mtd". Veja:
+<p>
 <math>
       <mfenced><mtable>
             <mtr>
@@ -143,6 +154,7 @@ Com MathML, é possível criar matrizes com uma sintaxe semelhante às tabelas H
             </mtr>
        </mtable></mfenced>
 </math>
+</p>
 {% highlight html %}
 <math>
       <mfenced><mtable>
@@ -159,6 +171,7 @@ Com MathML, é possível criar matrizes com uma sintaxe semelhante às tabelas H
 {% endhighlight %}
 
 Fórmula de Bhaskara:
+<p>
 <math>
       <mrow>
             <mn>x</mn>
@@ -192,6 +205,7 @@ Fórmula de Bhaskara:
             </mrow>
       </mrow>
 </math>
+</p>
 {% highlight html %}
 <math>
       <mrow>
@@ -227,5 +241,6 @@ Fórmula de Bhaskara:
       </mrow>
 </math>
 {% endhighlight %}
+
 Documentação Oficial: [MathML Mathematical](https://www.w3.org/Math/)
 Via: [Viva o Linux](https://www.vivaolinux.com.br/artigo/MathML-Mathematical-Markup-Language)
