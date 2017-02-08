@@ -29,10 +29,8 @@ links:
     url: /cursos
   - title: Tags
     url: /tags
-  - title: Quiz
-    url: /quiz
-  - title: LPI
-    url: /lpi
+  - title: Descubra
+    url: /blog-linux
   - title: Parceiros
     url: /parceiros
 
