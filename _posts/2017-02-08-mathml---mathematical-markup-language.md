@@ -23,19 +23,22 @@ Ela está dividida em duas partes:
 + Content Markup
 
 Exemplo raíz quadrada de 2
+
 <p>
 <math>
       <msqrt>
             <mn>2</mn>
       </msqrt>
 </math>
+</p>
+
 {% highlight html %}
 <math>
       <msqrt>
             <mn>2</mn>
       </msqrt>
 </math>
-</p>
+
 {% endhighlight %}
 
 Perceba que o elemento raiz do MathML é o "math", e que a raiz quadrada é representada pelo elemento "msqrt" (para outras raízes existe o elemento "mroot", veja os exemplos na próxima página) e o elemento "mn" representa um número.
@@ -43,6 +46,7 @@ Perceba que o elemento raiz do MathML é o "math", e que a raiz quadrada é repr
 Os elementos mais usados em MathML são "mn", "mi" e "mo". Eles servem para representar respectivamente números (ex.: 1, 0.235), variáveis/constantes (ex.: x, π) e operadores (ex. +, =).
 
 Veja um exemplo usando esses 3 elementos:
+
 <p>
 <math>
       <mi> y </mi>
