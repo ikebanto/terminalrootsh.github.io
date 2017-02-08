@@ -61,6 +61,7 @@ Veja um exemplo usando esses 3 elementos:
       <mn> 3 </mn>
 </math>
 {% endhighlight %}
+
 Outro elemento usado com frequência é o "mrow". Esse elemento tem a função de agrupar outros elementos em linha. A princípio, pode parecer um elemento sem muita utilidade, mas em MathML existem elementos com um número específico de filhos. Dessa forma "mrow" se torna muito útil.
 
 Por exemplo, o elemento "mfenced" serve para colocar parênteses ao redor de outro elemento, mas se for colocado mais de um elemento filho dentro dele, esses elementos são separados por vírgula, veja:
@@ -108,7 +109,9 @@ Outro elemento que tem o número de filhos predefinido é "mfrac", que serve par
       </mfrac>
 </math>
 {% endhighlight %}
+
 Os elementos "msub" e "msup" também têm o número de filhos predefinidos:
+
 <p>
 <math>
       <msub>
@@ -141,6 +144,7 @@ Os elementos "msub" e "msup" também têm o número de filhos predefinidos:
 {% endhighlight %}
 
 Com MathML, é possível criar matrizes com uma sintaxe semelhante às tabelas HTML. O elemento pai é o "mtable". Dentro dele temos elementos de linha "mtr", e dentro desses, elementos de coluna "mtd". Veja:
+
 <p>
 <math>
       <mfenced><mtable>
@@ -171,6 +175,7 @@ Com MathML, é possível criar matrizes com uma sintaxe semelhante às tabelas H
 {% endhighlight %}
 
 Fórmula de Bhaskara:
+
 <p>
 <math>
       <mrow>
@@ -206,6 +211,7 @@ Fórmula de Bhaskara:
       </mrow>
 </math>
 </p>
+
 {% highlight html %}
 <math>
       <mrow>
