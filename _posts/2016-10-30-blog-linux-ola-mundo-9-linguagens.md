@@ -62,13 +62,13 @@ return 0;
 
 
 <p><img border="0" height="20" src="https://2.bp.blogspot.com/-Lwtt0Ajimno/WBVsWNxuu0I/AAAAAAAAA5g/QvzSncMeOTYOy4-xaWLx06Nn1OUuPqZnQCLcB/s200/js.png" width="20" />JavaScript</p>
-{% highlight js %}
+{% highlight html %}
 document.write("Olá, Mundo!");
 {% endhighlight %}
 
 
 <p><img border="0" height="20" src="https://3.bp.blogspot.com/-9kDtz9O9Ang/WBVsWF4MGvI/AAAAAAAAA5k/QB-vON1wpKIdlW-8Plddqaod8mOZubZAQCLcB/s200/gambas.png" width="20" />Gambas</p>
-{% highlight basic %}
+{% highlight c %}
 Message.Info("Olá, Mundo!")
 {% endhighlight %}
 
@@ -80,12 +80,12 @@ Message.Info("Olá, Mundo!")
 
 
 <p><img border="0" height="20" src="https://2.bp.blogspot.com/-2mLrzkNkz5g/WBVsUDCK13I/AAAAAAAAA5Q/EY9cwhxfxDABt7puKi4ZUuN06y9utPf3QCLcB/s200/MySQL.png" width="20" />MySQL</p>
-{% highlight sql %}
+{% highlight c %}
 SELECT "Olá, Mundo!";
 {% endhighlight %}
 
 
 <p><img border="0" height="20" src="https://2.bp.blogspot.com/-sNWI4TjawGw/WBVsWQcwkrI/AAAAAAAAA5o/J0SQsWderqwlECSUXMzjfm2m5AlArMPxgCLcB/s200/lua.png" width="20" />Lua</p>
-{% highlight lua %}
+{% highlight c %}
 print "Olá, Mundo!"
 {% endhighlight %}
