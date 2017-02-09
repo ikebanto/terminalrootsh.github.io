@@ -2,8 +2,8 @@
 layout: post
 title: "Lua uma linguagem de programação criada por brasileiros, e utilizada pelo mundo"
 date: '2016-11-05T11:18:00.000-07:00'
-description: "Lua uma linguagem de programação criada por brasileiros, e utilizada pelo mundo"
 image: 'https://1.bp.blogspot.com/-HUKZlEbJsOk/WBppYW6ODdI/AAAAAAAAA8g/Z5r6qKNdo-EHj-QVV0113Tn885pbho7WACLcB/s72-c/Blog%2BLinux%2BLua%2B.jpg'
+description: "Lua uma linguagem de programação criada por brasileiros, e utilizada pelo mundo"
 main-class: 'misc'
 color: '#34a853'
 tags:

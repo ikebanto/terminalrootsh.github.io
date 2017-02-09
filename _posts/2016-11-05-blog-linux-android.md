@@ -6,7 +6,6 @@ image: 'https://1.bp.blogspot.com/-SjO4KXLU_Ck/WBpd29-x26I/AAAAAAAAA78/B2yP3Qf0G
 description: "O Android é ou não é Linux?"
 main-class: 'artigos'
 color: '#34a853'
-author: Terminal Root
 tags:
 - Android
 categories:

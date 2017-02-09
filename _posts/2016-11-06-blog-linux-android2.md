@@ -6,7 +6,6 @@ image: 'https://3.bp.blogspot.com/-J9KiBkEKy9E/WBpiJtz9ocI/AAAAAAAAA8I/sAv24bzaY
 description: "Desenvolva aplicativos móveis com Android Studio"
 main-class: 'misc'
 color: '#34a853'
-author: Terminal Root
 tags:
 - Android
 categories:
