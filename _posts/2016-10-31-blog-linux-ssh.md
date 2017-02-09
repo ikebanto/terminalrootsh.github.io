@@ -2,7 +2,7 @@
 layout: post
 title: "Como acessar remotamente via SSH no Linux"
 date: '2016-10-31T13:45:00.000-07:00'
-thumbnail: 'https://2.bp.blogspot.com/-CQAehJwzEtU/WBV03lVBo9I/AAAAAAAAA6M/1mKpOQpX1MAr_fH9oZnA59S6xn7eW74MQCLcB/s72-c/blog-linux-terminal-root-ssh.jpg'
+image: 'https://2.bp.blogspot.com/-CQAehJwzEtU/WBV03lVBo9I/AAAAAAAAA6M/1mKpOQpX1MAr_fH9oZnA59S6xn7eW74MQCLcB/s72-c/blog-linux-terminal-root-ssh.jpg'
 description: "Como acessar remotamente via SSH no Linux"
 main-class: 'tv'
 color: '#cc181e'
