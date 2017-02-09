@@ -1,21 +1,21 @@
 ---
 layout: post
-title: O Android é ou não é Linux?
+title: "O Android é ou não é Linux?"
 date: '2016-11-05T11:16:00.000-07:00'
-description: O Android é ou não é Linux?
-main-class: 'misc'
+image: 'https://1.bp.blogspot.com/-SjO4KXLU_Ck/WBpd29-x26I/AAAAAAAAA78/B2yP3Qf0Ghso_xriskfmfUTunyPOUrC3ACLcB/s72-c/Blog%2BLinux%2BAndroid%2B.jpg'
+description: "O Android é ou não é Linux?"
+main-class: 'artigos'
 color: '#34a853'
 author: Terminal Root
 tags:
 - Android
-modified_time: '2016-11-05T11:16:57.403-07:00'
-thumbnail: https://1.bp.blogspot.com/-SjO4KXLU_Ck/WBpd29-x26I/AAAAAAAAA78/B2yP3Qf0Ghso_xriskfmfUTunyPOUrC3ACLcB/s72-c/Blog%2BLinux%2BAndroid%2B.jpg
-twitter_text: O Android é ou não é Linux?
-introduction: O Android é ou não é Linux?
+categories:
+twitter_text: "O Android é ou não é Linux?"
+introduction:" O Android é ou não é Linux?"
 ---
 
-<p>
-<div class="separator" style="clear: both; text-align: center;"><a href="https://1.bp.blogspot.com/-SjO4KXLU_Ck/WBpd29-x26I/AAAAAAAAA78/B2yP3Qf0Ghso_xriskfmfUTunyPOUrC3ACLcB/s1600/Blog%2BLinux%2BAndroid%2B.jpg" imageanchor="1" style="margin-left: 1em; margin-right: 1em;"><img border="0" height="200" src="https://1.bp.blogspot.com/-SjO4KXLU_Ck/WBpd29-x26I/AAAAAAAAA78/B2yP3Qf0Ghso_xriskfmfUTunyPOUrC3ACLcB/s200/Blog%2BLinux%2BAndroid%2B.jpg" width="172" /></a></div>
+![Blog Linux](https://1.bp.blogspot.com/-SjO4KXLU_Ck/WBpd29-x26I/AAAAAAAAA78/B2yP3Qf0Ghso_xriskfmfUTunyPOUrC3ACLcB/s200/Blog%2BLinux%2BAndroid%2B.jpg)
+
 O tema é batido, mas os 2 debatedores (Thom Holwerda, do OS News, e Jon Buys, do OStatic) reuniram boa parte dos argumentos que já ouvi em suporte a cada uma das posições.
 
 Começou com o post do Thom ("Android is Linux"), que chama de equívoco a ideia de que o Android compete com o Linux, afirma que o Android é tão Linux quanto o Ubuntu, Debian, Red Hat ou qualquer outra coisa que use o kernel Linux.
@@ -34,6 +34,4 @@ Ele também cita alguns pontos da filosofia de governança do Android, incluindo
 
 Ao final, ele conclui da mesma forma que eu: o Android "ser" ou "não ser" "Linux" é um detalhe técnico sujeito a interpretações variadas, e é secundário em relação a outras diferenças entre populares agregados de software agrupados ao redor do Linux, ou mesmo a aspectos que transcendem a questão do kernel, como se devemos confiar em uma empresa de publicidade para construir o sistema instalado em dispositivos que sabem como somos, onde estamos, com quem falamos e o que queremos comprar. Imagino que ele ache que não, mas tenho certeza de que bastante gente acredita que sim, ou que é melhor confiar na empresa de anúncios do que em alguma outra da qual particularmente não gostam. (via ostatic.com - http://ostatic.com/blog/on-android-being-linux#buzz)
 
-<div style="text-align: center;"><span style="font-size: large;"><b><a href="http://br-linux.org/2013/01/debate-o-android-e-ou-nao-e-linux.html" target="_blank">Publicado Originalmente Aqui</a></b></span></div>
-
-</p>
+[Publicado Originalmente Aqui](http://br-linux.org/2013/01/debate-o-android-e-ou-nao-e-linux.html)
