@@ -254,5 +254,5 @@ Fórmula de Bhaskara:
 
 Documentação Oficial: [MathML Mathematical](https://www.w3.org/Math/)
 
-Via: [Viva o Linux](https://www.vivaolinux.com.br/artigo/MathML-Mathematical-Markup-Language)
+Via: [PRMINFO](http://www.prminformatica.com.br/2012/12/mathml.html)
 
