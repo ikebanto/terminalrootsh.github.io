@@ -10,7 +10,7 @@ tags:
 - Android
 categories:
 twitter_text: "O Android é ou não é Linux?"
-introduction:" O Android é ou não é Linux?"
+introduction: "O Android é ou não é Linux?"
 ---
 
 ![Blog Linux](https://1.bp.blogspot.com/-SjO4KXLU_Ck/WBpd29-x26I/AAAAAAAAA78/B2yP3Qf0Ghso_xriskfmfUTunyPOUrC3ACLcB/s200/Blog%2BLinux%2BAndroid%2B.jpg)
