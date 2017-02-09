@@ -1,9 +1,9 @@
 ---
 layout: post
-title: "'Olá Mundo' em 9 linguagens de programação"
+title: "Olá Mundo em 9 linguagens de programação"
 date: '2016-10-30T09:52:00.000-07:00'
 image: 'https://4.bp.blogspot.com/-BrpZbq1zzuQ/WBVyREsKcbI/AAAAAAAAA6A/vy-nkleh0d8wu3pB2NGNFHg0xtMZ7YUeQCLcB/s72-c/blog-linux-linguagens.jpg'
-description: "'Olá Mundo' em 9 linguagens de programação"
+description: "Olá Mundo em 9 linguagens de programação"
 main-class: 'dev'
 color: '#c2003a'
 tags:
@@ -18,8 +18,8 @@ tags:
 - PHP
 - Linguagem C
 categories:
-twitter_text: "'Olá Mundo' em 9 linguagens de programação"
-introduction: "'Olá Mundo' em 9 linguagens de programação"
+twitter_text: "Olá Mundo em 9 linguagens de programação"
+introduction: "Olá Mundo em 9 linguagens de programação"
 ---
 
 ![Blog Linux](https://4.bp.blogspot.com/-BrpZbq1zzuQ/WBVyREsKcbI/AAAAAAAAA6A/vy-nkleh0d8wu3pB2NGNFHg0xtMZ7YUeQCLcB/s320/blog-linux-linguagens.jpg) 
