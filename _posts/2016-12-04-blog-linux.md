@@ -19,7 +19,7 @@ introduction: "Saiba onde obter ferramentas, apps, sites, blogs e vários links"
 
 # Introdução
 
-Salve salve rapaziada, hoje eu vou falar sobre o que está descrito no título :) ! Na verdade essa ideia é um fork da ideia do William Justem, que foi feita pra front-end, mas como o papo aqui é Linux e pros mais detalhistas GNU/Linux , vou mostrar como você encontrar ( fontes confiáveis, lógico, porque o que mais tem é modinha que fala nada com nada, ou só quer sua grana de "vendinhas" e Google Adsense ) :( , ferramentas, apps, sites, blogs e vários links !!!
+Salve salve rapaziada, hoje eu vou falar sobre o que está descrito no título :) ! Na verdade essa ideia é um fork da ideia do William Justem, que foi feita pra front-end, mas como o papo aqui é Linux e pros mais detalhistas GNU/Linux , vou mostrar como você encontrar ( fontes confiáveis, ferramentas, apps, sites, blogs e vários links !!!
 
 # Blog
 
