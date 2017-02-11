@@ -2,8 +2,8 @@
 layout: post
 title: "Experimente a Distro Linux que Edward Snowden usa para escapar da NSA"
 date: '2016-05-31T15:39:00.002-07:00'
-image: 'https://3.bp.blogspot.com/-etZe49yfsrs/V04RkCfAcVI/AAAAAAAAArU/pxpBxjYkBRIklUy77dpIi460EfXfBSeeQCLcB/s72-c/fora-temer-golpista.jpg'
-description: "Experimente a Distro Linux que Edward Snowden usa para escapar da NSA"
+image: '/assets/img/dicas/fora-temer-golpista.jpg'
+description: "Fora Temer Golpista"
 main-class: 'linux'
 color: '#3b5998'
 tags:
@@ -12,11 +12,10 @@ tags:
 - Distros
 categories:
 twitter_text: "Experimente a Distro Linux que Edward Snowden usa para escapar da NSA"
-introduction: "Experimente a Distro Linux que Edward Snowden usa para escapar da NSA"
+introduction: "Fora Temer Golpista"
 ---
 
-![Fora Temer Golpista Blog Linux](https://3.bp.blogspot.com/-etZe49yfsrs/V04RkCfAcVI/AAAAAAAAArU/pxpBxjYkBRIklUy77dpIi460EfXfBSeeQCLcB/s1600/fora-temer-golpista.jpg)
-
+![Fora Temer Golpista Blog Linux](/assets/img/dicas/fora-temer-golpista.jpg)
 
 
 Para vazar segredos da NSA, Edward Snowden é bastante cuidadoso. Além de enviar e-mails criptografados, ele usa uma versão supersegura do Linux chamada Tails, que cabe em um pendrive USB e pode ser usado em qualquer computador sem deixar rastros.
