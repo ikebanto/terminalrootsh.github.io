@@ -33,8 +33,9 @@ Um dos vazamentos de Snowden mostra a NSA reclamando do Tails em um slide de Pow
 Mesmo assim, o sistema pode ser vulnerável em alguns casos, como os desenvolvedores [deixam claro aqui](https://tails.boum.org/doc/about/warning/) . A ideia é usá-lo apenas para atividades que requeiram anonimato; senão, você acabará usando um serviço que pode ser ligado à sua identidade.
 
 Se você quiser experimentar o Tails, são três passos: 
-[baixe o arquivo ISO aqui](https://tails.boum.org/download/index.en.html)
-Verifique a autenticidade dele, e instale-o no pendrive [seguindo estas instruções](https://tails.boum.org/doc/first_steps/installation/manual/index.en.html) 
-Você vai testar? [Tails](https://tails.boum.org/)
+
+* [baixe o arquivo ISO aqui](https://tails.boum.org/download/index.en.html)
+* Verifique a autenticidade dele, e instale-o no pendrive [seguindo estas instruções](https://tails.boum.org/doc/first_steps/installation/manual/index.en.html)
+* Você vai testar? [Tails](https://tails.boum.org/)
 
 Via: [GIZMODO](http://gizmodo.uol.com.br/tails-usb/)
