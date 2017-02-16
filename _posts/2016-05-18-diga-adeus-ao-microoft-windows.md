@@ -21,4 +21,4 @@ A justificativa do projeto é que muitos usuários ainda encontram dificuldades 
 Se você possui um Microsoft Windows e quer instalar o Linux sem muito trabalho, basta acessar esse site e clicar no __Instalador.exe__
 que todo o processo de instalação do Linux será automático!
 
-[http://goodbye-microsoft.com/](http://goodbye-microsoft.com/)
+[https://people.debian.org/~rmh/goodbye-microsoft/](https://people.debian.org/~rmh/goodbye-microsoft/)
