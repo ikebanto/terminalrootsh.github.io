@@ -2,7 +2,7 @@
 layout: post
 title: "Lua uma linguagem de programação criada por brasileiros, e utilizada pelo mundo"
 date: '2016-11-05T11:18:00.000-07:00'
-image: 'assets/img/dev/lua.jpg'
+image: '/assets/img/dev/lua.jpg'
 description: "Lua foi criada por um time de desenvolvedores do Tecgraf da PUC-Rio, a princípio, para ser usada em um projeto da Petrobras."
 main-class: 'dev'
 tags:
@@ -12,7 +12,7 @@ twitter_text: "Lua uma linguagem de programação criada por brasileiros, e util
 introduction: "Lua foi criada por um time de desenvolvedores do Tecgraf da PUC-Rio, a princípio, para ser usada em um projeto da Petrobras."
 ---
 
-![Blog Linux Lua](assets/img/dev/lua.jpg)
+![Blog Linux Lua](/assets/img/dev/lua.jpg)
 
 [Lua](http://www.lua.org/portugues.html) é uma linguagem de script de multiparadigma, pequena, reflexiva e leve, projetada para expandir aplicações em geral, por ser uma linguagem extensível (que une partes de um programa feitas em mais de uma linguagem), para prototipagem e para ser embarcada em softwares complexos, como jogos. Assemelha-se com Python, Ruby e Icon, entre outras.
 
