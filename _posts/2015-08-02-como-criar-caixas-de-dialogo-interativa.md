@@ -133,6 +133,6 @@ man whiptail
 
 
 
-*Via: http://xmodulo.com/create-dialog-boxes-interactive-shell-script.html*
+<!--Via: http://xmodulo.com/create-dialog-boxes-interactive-shell-script.html-->
 
 
