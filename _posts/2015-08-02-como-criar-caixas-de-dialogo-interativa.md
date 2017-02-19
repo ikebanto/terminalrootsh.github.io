@@ -19,11 +19,11 @@ introduction: "Quando você instala um novo software no terminal, muitas vezes v
 
 ## COMO CRIAR CAIXAS DE DIÁLOGO INTERATIVA COM SCRIPT SHELL
 
-Quando você instala um novo software no terminal, muitas vezes você pode ver as caixas de diálogo informativas aparecendo. O tipo de caixas de diálogo varia de simples sim/não , caixa de senha, lista, menu, e assim por diante. A vantagem de usar essas caixas de diálogo user-friendly é que elas podem orientá-lo para inserir as informações necessárias de uma forma intuitiva.
+Quando você instala um novo software no __terminal__, muitas vezes você pode ver as caixas de diálogo informativas aparecendo. O tipo de caixas de diálogo varia de simples sim/não , caixa de senha, lista, menu, e assim por diante. A vantagem de usar essas caixas de diálogo *user-friendly* é que elas podem orientá-lo para inserir as informações necessárias de uma forma intuitiva.
 
-> Pré-instalado em todas as distribuições Linux modernas, um programa chamado whiptail pode agilizar o processo de criação de diálogos baseados em terminais e caixas de mensagem dentro de um shell script, semelhante à forma como os códigos Zenity ou xdialog uma interface gráfica para scripts.
+> Pré-instalado em todas as distribuições [Linux](http://www.terminalroot.com.br/tags#linux) modernas, um programa chamado __whiptail__ pode agilizar o processo de criação de diálogos baseados em terminais e caixas de mensagem dentro de um shell script, semelhante à forma como os códigos *Zenity* ou *xdialog* uma interface gráfica para scripts.
 
-Criar uma caixa de mensagem:
+#### Criar uma caixa de mensagem:
 {% highlight bash %}
 whiptail --title "" --msgbox ""
 {% endhighlight %}
@@ -31,12 +31,12 @@ Exemplo:
     
  
 
-Criar uma caixa de Sim/Não:
+#### Criar uma caixa de Sim/Não:
 {% highlight bash %}
 whiptail --title "" --yesno ""
 {% endhighlight %}
 
-Exemplo:
+__Exemplo__:
 {% highlight bash %}
 #!/bin/bash
 if (whiptail --title "Caixa teste de sim/nao" --yesno "Escolha Sim ou Não." 10 60) then
@@ -47,7 +47,8 @@ fi
 {% endhighlight %}
 
 ![Whiptail Blog Linux](/assets/img/bash/2.png "Whiptail Blog Linux")
-Você ainda tem a opção de customizar os botões de sim/não:
+
+#### Você ainda tem a opção de customizar os botões de sim/não:
 {% highlight bash %}
 #!/bin/bash
 if (whiptail --title "Caixa teste de sim/nao" --yes-button "Vim" --no-button "Emacs" --yesno "Qual desses dois são melhores?" 10 60) then
@@ -58,14 +59,14 @@ fi
 {% endhighlight %}
 ![Whiptail Blog Linux](/assets/img/bash/3.png "Whiptail Blog Linux")
 
-Criar uma caixa de formulário:
+#### Criar uma caixa de formulário:
 {% highlight bash %}
 whiptail --title "" --inputbox ""
 {% endhighlight %} 
 Exemplo:
    
 
-Criar uma caixa de senha:
+#### Criar uma caixa de senha:
 {% highlight bash %}
 whiptail --title "" --passwordbox ""
 {% endhighlight %}
@@ -83,14 +84,14 @@ fi
 {% endhighlight %}
 ![Whiptail Blog Linux](/assets/img/bash/5.png "Whiptail Blog Linux")
 
-Criar um MENU:
+#### Criar um MENU:
 {% highlight bash %}
 whiptail --title "" --menu ""    [   ] . . .
 {% endhighlight %}
 Exemplo:
    
 
-Criar um input radio:
+#### Criar um input radio:
 {% highlight bash %}
 whiptail --title "" --radiolist ""    [    ] . . .
 {% endhighlight %}
@@ -115,13 +116,13 @@ fi
 
 ![Whiptail Blog Linux](/assets/img/bash/7.png "Whiptail Blog Linux")
 
-Criar uma barra de progresso:
+#### Criar uma barra de progresso:
 {% highlight bash %}
 whiptail --gauge ""
 {% endhighlight %}
     
 
-Para mais informações:
+#### Para mais informações:
 {% highlight bash %}
 man whiptail
 {% endhighlight %}
@@ -132,6 +133,6 @@ man whiptail
 
 
 
-Via: http://xmodulo.com/create-dialog-boxes-interactive-shell-script.html
+*Via: http://xmodulo.com/create-dialog-boxes-interactive-shell-script.html*
 
 
