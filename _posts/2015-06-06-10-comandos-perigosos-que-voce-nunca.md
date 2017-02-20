@@ -131,4 +131,4 @@ Este comando aqui mostra que a ameaça pode ser escondida e normalmente não det
 
 ## NÃO EXECUTE NENHUM COMANDO ACIMA, CASO QUEIRA TESTÁ-LOS, UTILIZE UM A MÁQUINA VIRTUAL PARA TESTES
 
-Via: http://www.tecmint.com/10-most-dangerous-commands-you-should-never-execute-on-linux/
+<sub>Via: http://www.tecmint.com/10-most-dangerous-commands-you-should-never-execute-on-linux/</sub>
