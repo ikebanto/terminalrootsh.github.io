@@ -129,7 +129,7 @@ Este comando aqui mostra que a ameaça pode ser escondida e normalmente não det
 {% endhighlight %}
 
 Veja um vídeo bem legal onde resume os 5 mais perigosos
-<iframe src="https://www.youtube.com/embed/-mDqHdIOjJM?ecver=2" width="640" height="360" frameborder="0" style="position:absolute;width:100%;height:100%;left:0" allowfullscreen></iframe>
+<iframe src="https://www.youtube.com/embed/-mDqHdIOjJM?ecver=2" width="640" height="360" frameborder="0" allowfullscreen></iframe>
 
 ## NÃO EXECUTE NENHUM COMANDO ACIMA, CASO QUEIRA TESTÁ-LOS, UTILIZE UM A MÁQUINA VIRTUAL PARA TESTES
 
