@@ -12,6 +12,8 @@ introduction: "Não digitar toda hora git add, commit e push...entre outras dias
 
 ![Dicas Importantes para seu Blog no GitHub](/assets/img/gitgithub/dicasgithub.jpg "Dicas Importantes para seu Blog no GitHub")
 
+<iframe width="560" height="315" src="https://www.youtube.com/embed/sOSWfN6iGno" frameborder="0" allowfullscreen></iframe>
+
 ## Dicas passadas no Vídeo
 
 * __Não__ digitar toda hora __git add__, __commit__ e __push__
