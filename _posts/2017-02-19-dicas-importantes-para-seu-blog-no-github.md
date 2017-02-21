@@ -28,7 +28,9 @@ machine github.com login SEU_USUARIO password SUA_SENHA
 
 ## ~/postar
 > echo "alias=~/postar" >> .bashrc
+
 conteúdo do __postar__
+
 {% highlight bash %}
 #!/bin/bash
 git add -A
