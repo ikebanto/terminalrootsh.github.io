@@ -29,7 +29,7 @@ machine github.com login SEU_USUARIO password SUA_SENHA
 {% endhighlight %}
 
 ## ~/postar
-> echo "alias=~/postar" >> .bashrc
+> echo "alias=~/postar" >> ~/.bashrc
 
 conteúdo do __postar__
 
