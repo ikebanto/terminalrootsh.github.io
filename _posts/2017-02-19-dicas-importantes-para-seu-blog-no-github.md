@@ -6,6 +6,7 @@ image: '/assets/img/gitgithub/dicasgithub.jpg'
 description: "Não digitar toda hora git add, commit e push...entre outras dias valiosíssimas"
 main-class: 'tv'
 tags:
+- github
 introduction: "Não digitar toda hora git add, commit e push...entre outras dias valiosíssimas"
 ---
 
