@@ -1,19 +1,17 @@
 ---
 layout: post
-title: Desenvolva aplicativos móveis com Android Studio
+title: "Desenvolva aplicativos móveis com Android Studio"
 date: '2016-11-06T17:46:00.000-08:00'
-image: 'https://3.bp.blogspot.com/-J9KiBkEKy9E/WBpiJtz9ocI/AAAAAAAAA8I/sAv24bzaYyk-Ubazqcp1imrSFb6sgA9cwCLcB/s72-c/Blog%2BLinux%2B.jpg'
-description: "Desenvolva aplicativos móveis com Android Studio"
+image: '/assets/img/android/android.jpg'
+description: "Os celulares estão cada vez mais presentes no dia a dia das pessoas pelo mundo, sendo cada vez mais utilizados para acessar a Internet e controlar outros tipos de dispositivos."
 main-class: 'misc'
-color: '#34a853'
 tags:
 - Android
-categories:
 twitter_text: "Desenvolva aplicativos móveis com Android Studio"
-introduction: "Desenvolva aplicativos móveis com Android Studio"
+introduction: "Os celulares estão cada vez mais presentes no dia a dia das pessoas pelo mundo, sendo cada vez mais utilizados para acessar a Internet e controlar outros tipos de dispositivos."
 ---
 
-![Blog Linux Android](https://3.bp.blogspot.com/-J9KiBkEKy9E/WBpiJtz9ocI/AAAAAAAAA8I/sAv24bzaYyk-Ubazqcp1imrSFb6sgA9cwCLcB/s320/Blog%2BLinux%2B.jpg)
+![Blog Linux Android](/assets/img/android/android.jpg)
 
 Os celulares estão cada vez mais presentes no dia a dia das pessoas pelo mundo, sendo cada vez mais utilizados para acessar a Internet e controlar outros tipos de dispositivos. São milhões de pessoas conectadas, em metros, carros, praças, e etc. O crescimento mobile foi tão grande e aconteceu tão rápido, que a demanda por profissionais qualificados é altíssima e a quantidade destes no mercado, ainda é escassa. Ou seja, aqueles que desejam se inserir no mercado e seguir uma carreira como desenvolvedor mobile, tem grandes oportunidades.
 
