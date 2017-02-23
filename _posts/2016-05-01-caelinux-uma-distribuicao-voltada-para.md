@@ -8,7 +8,7 @@ main-class: 'linux'
 tags:
 - Linux
 - Distros
-twitter_text: "CAELinux: Uma distribuição voltada para Engenharia"
+twitter_text: "CAELinux: Uma distro Linux voltada para Engenharia"
 introduction: "CAELinux é basicamente uma plataforma de distribuição com um conjunto completo de ferramentas de engenharia que estão disponíveis gratuitamente para usuários de Linux."
 ---
 
