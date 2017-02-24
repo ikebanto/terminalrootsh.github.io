@@ -3,14 +3,13 @@ layout: post
 title: "Unix: o pai de todos os sistemas operacionais"
 date: '2016-11-06T08:44:00.000-08:00'
 image: '/assets/img/unix/unix.jpg'
-description: "Unix: o pai de todos os sistemas operacionais"
+description: "Se você ainda não ouviu falar desse sistema operacional,  provavelmente já escutou um bocado sobre sistemas feitos a partir dele."
 main-class: 'artigos'
 color: '#34a853'
 tags:
 - Unix
-categories:
 twitter_text: "Unix: o pai de todos os sistemas operacionais"
-introduction: "Unix: o pai de todos os sistemas operacionais"
+introduction: "Se você ainda não ouviu falar desse sistema operacional,  provavelmente já escutou um bocado sobre sistemas feitos a partir dele."
 ---
 
 ![Blog Linux Unix](/assets/img/unix/unix.jpg)

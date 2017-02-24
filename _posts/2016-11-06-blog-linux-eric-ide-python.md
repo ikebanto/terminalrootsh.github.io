@@ -3,14 +3,13 @@ layout: post
 title: "Desenvolva aplicações em Python com Eric IDE"
 date: '2016-11-06T17:46:00.001-08:00'
 image: '/assets/img/python/eric.png'
-description: "Desenvolva aplicações em Python com Eric IDE"
+description: "Eric Python IDE é um ambiente de desenvolvimento integrado multiplataforma para desenvolvimento na linguagem Python desenvolvido usando QScintilla, Qt e PyQT."
 main-class: 'python'
 color: '#34a853'
 tags:
 - Python
-categories:
 twitter_text: "Desenvolva aplicações em Python com Eric IDE"
-introduction: "Desenvolva aplicações em Python com Eric IDE"
+introduction: "Eric Python IDE é um ambiente de desenvolvimento integrado multiplataforma para desenvolvimento na linguagem Python desenvolvido usando QScintilla, Qt e PyQT."
 ---
 
 ![Blog Linux Eric](/assets/img/python/eric.png)
