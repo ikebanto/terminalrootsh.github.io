@@ -2,7 +2,7 @@
 layout: post
 title: "Unix: o pai de todos os sistemas operacionais"
 date: '2016-11-06T08:44:00.000-08:00'
-image: 'http://ibxk.com.br/materias/10556/43726.jpg'
+image: '/assets/img/unix/unix.jpg'
 description: "Unix: o pai de todos os sistemas operacionais"
 main-class: 'artigos'
 color: '#34a853'
@@ -13,7 +13,7 @@ twitter_text: "Unix: o pai de todos os sistemas operacionais"
 introduction: "Unix: o pai de todos os sistemas operacionais"
 ---
 
-![Blog Linux Unix](http://ibxk.com.br/materias/10556/43726.jpg)
+![Blog Linux Unix](/assets/img/unix/unix.jpg)
 
 
 > A década de 1960 não foi marcante apenas por lutas populares que  sacudiram o mundo, mas também para o mundo dos computadores, mais  especificamente dos sistemas operacionais (SO). É nos anos 60 que surge o  embrião do Unix, o pai de praticamente todos os SOs existentes hoje em  dia.

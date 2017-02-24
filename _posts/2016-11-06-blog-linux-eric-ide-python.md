@@ -2,7 +2,7 @@
 layout: post
 title: "Desenvolva aplicações em Python com Eric IDE"
 date: '2016-11-06T17:46:00.001-08:00'
-image: 'https://1.bp.blogspot.com/-npw_sK9FHck/WBpJhh9ScjI/AAAAAAAAA7c/SFF7--frXDMxBmX0LE0IvSb9WvPNOXDQgCLcB/s72-c/Blog%2BLinux%2BEric%2BPython%2BIDE.png'
+image: '/assets/img/python/eric.png'
 description: "Desenvolva aplicações em Python com Eric IDE"
 main-class: 'python'
 color: '#34a853'
@@ -13,7 +13,7 @@ twitter_text: "Desenvolva aplicações em Python com Eric IDE"
 introduction: "Desenvolva aplicações em Python com Eric IDE"
 ---
 
-![Blog Linux Eric](https://1.bp.blogspot.com/-npw_sK9FHck/WBpJhh9ScjI/AAAAAAAAA7c/SFF7--frXDMxBmX0LE0IvSb9WvPNOXDQgCLcB/s320/Blog%2BLinux%2BEric%2BPython%2BIDE.png)
+![Blog Linux Eric](/assets/img/python/eric.png)
 
 
 > Eric Python IDE é um ambiente de desenvolvimento integrado multiplataforma para desenvolvimento na linguagem Python desenvolvido usando QScintilla, Qt e PyQT.
