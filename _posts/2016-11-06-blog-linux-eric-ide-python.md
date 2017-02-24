@@ -36,8 +36,4 @@ apt-get install eric
 
 [Download](http://eric-ide.python-projects.org/eric-download.html)
 
-[Site Oficial](http://eric-ide.python-projects.org/)
-
-
-
-![Blog Linux Eric](http://eric-ide.python-projects.org/eric-screenshots.html)
+[ScreenShots](http://eric-ide.python-projects.org/eric-screenshots.html)
