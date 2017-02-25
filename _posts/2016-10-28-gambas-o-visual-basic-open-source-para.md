@@ -67,13 +67,15 @@ yum install gambas3
 {% endhighlight %}
 
 Veja como instalar em outras distribuições e como compilar e demais pacotes necessários para o pleno funcionamento, caso necessite:
+
 [http://gambaswiki.org/wiki/install](http://gambaswiki.org/wiki/install)
 
 Site do Gambas
+
 [http://gambas.sourceforge.net](http://gambas.sourceforge.net)
 
-Download:
-[https://sourceforge.net/projects/gambas/files/gambas3/gambas3-3.9.1.tar.bz2/download](https://sourceforge.net/projects/gambas/files/gambas3/gambas3-3.9.1.tar.bz2/download)
+[Download](https://sourceforge.net/projects/gambas/files/gambas3/gambas3-3.9.1.tar.bz2/download)
 
-Veja um vídeo __Como Criar um 'Olá, Mundo!' em Gambas Visual Basic no Linux__
+Veja um vídeo 
+## Como Criar um 'Olá, Mundo!' em Gambas Visual Basic no Linux
 <iframe width="560" height="315" src="https://www.youtube.com/embed/xezNqM2zrbY" frameborder="0" allowfullscreen></iframe>
