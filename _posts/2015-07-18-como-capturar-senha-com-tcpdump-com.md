@@ -19,21 +19,21 @@ introduction: "Isso serve como conhecimento de proteção, ou seja, alguém que 
 
 Se você não possui o TCPDump, use o gerenciador de pacotes correspondente da sua distro para instalá-lo, o baixe aqui e compile-o.
 
-Instalação num máquina com GNU/Linux Debian:
+Instalação num máquina com [GNU/Linux](http://terminalroot.com.br/tags#linux) [Debian](http://terminalroot.com.br/tags#debian):
 
 {% highlight bash %}
-$ su
-# apt-get install tcpdump
+su
+apt-get install tcpdump
 {% endhighlight %}
 
 Aqui eu fiz um teste utilizando a seguinte estrutura:
 
-  
+![Blog Linux](/assets/img/hacker/capturando.gif "Capturando TCPDump")
     
 
-O Notebook que possui o endereço 192.168.1.3 acessará o PC 192.168.1.2 que possui o formulário, o mesmo formulário criado nesse post. A "ponte"(Gateway) para essa comunicação é um Modem/Roteador 192.168.1.1 , mesmo sem internet, ele iria permitir essa comunicação (lógico :P).
+O __Notebook__ que possui o endereço __192.168.1.3__ acessará o __PC 192.168.1.2__ que possui o formulário, o mesmo formulário criado nesse post. A "ponte"(__Gateway__) para essa comunicação é um __Modem/Roteador 192.168.1.1__ , mesmo sem internet, ele iria permitir essa comunicação (lógico :P).
 
-No PC vou setar o comando do TCPDump para capturar o pacote e salvar os dados num arquivo que eu chamei de pegandoasenha-tcpdump.txt (já deixei até o arquivo aberto, e só cliquei em recarregar para mostrar os dados do arquivo modificado). Então já rodei o comando e o TCPDump ficou aguardando os pacotes que o Notebook(192.168.1.3) estava enviando para o PC(192.168.1.2).
+No PC vou setar o comando do TCPDump para capturar o pacote e salvar os dados num arquivo que eu chamei de __pegandoasenha-tcpdump.txt__ (já deixei até o arquivo aberto, e só cliquei em recarregar para mostrar os dados do arquivo modificado). Então já rodei o comando e o TCPDump ficou aguardando os pacotes que o Notebook(192.168.1.3) estava enviando para o PC(192.168.1.2).
 
 Se o PC fosse o Gateway, também dava pra pegar os dados que estava sendo enviado, pois estaria passando pelo PC, ou seja, pra você pegar os dados que estão passado pelo seu Roteador, você precisa configurá-lo com o TCPDump, blz?! O proxy também faz isso, mas isso aqui é só um teste pra saber a utulização do TCPDump! :)
 
@@ -151,8 +151,10 @@ tcpdump -i eth0 dst host 192.168.1.1
 {% endhighlight %}
 
 Mais:
+
 http://www.tcpdump.org/
 https://pt.wikipedia.org/wiki/Tcpdump
 http://www.imartins.com.br/informix/artigos/capturando-senha-usuarios
+
 
 
