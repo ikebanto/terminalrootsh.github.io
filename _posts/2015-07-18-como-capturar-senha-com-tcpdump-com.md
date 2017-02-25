@@ -17,7 +17,7 @@ introduction: "Isso serve como conhecimento de proteção, ou seja, alguém que 
 
 ![TCPDump Hacker Blog Linux](/assets/img/hacker/tcpdump.png)
 
-Se você não possui o TCPDump, use o gerenciador de pacotes correspondente da sua distro para instalá-lo, o baixe aqui e compile-o.
+Se você não possui o TCPDump, use o gerenciador de pacotes correspondente da sua distro para instalá-lo, ou [baixe aqui](http://www.tcpdump.org/) e compile-o.
 
 Instalação num máquina com [GNU/Linux](http://terminalroot.com.br/tags#linux) [Debian](http://terminalroot.com.br/tags#debian):
 
