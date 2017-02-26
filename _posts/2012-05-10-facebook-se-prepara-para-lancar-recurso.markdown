@@ -19,7 +19,6 @@ A expectativa é que de os usuários usem a funcionalidade com  parcimônia para
 Pelo que parece, a novidade pode não estar liberada para todos os  usuários no momento, mas você já pode conferir algumas postagens  interessantes feitas em GIFs [Link](https://www.facebook.com/groups/animatedgifs/) .  De qualquer maneira, não deixe de procurar um GIF por aí e tente  compartilhar na sua linha do tempo para ver o que acontece. Para tudo  isso funcionar, você precisa ter o plugin do Flash Playerativo no  navegador.
 Se você quiser criar seus próprios GIFs a partir de vídeos do[Link](http://www.tecmundo.com.br/youtube/) , é possível apenas digir "gif" na frente de "youtube" na URL do vídeo. Mais ou menos assim:www.gifyoutube.com/watch...
 Há também a ferramenta nativa da plataforma de vídeos.[Link](http://www.tecmundo.com.br/youtube/69238-youtube-permite-criar-gifs-partir-videos-apps-terceiros.htm).
-Fonte(s)
  
 Imagens
 Via: www.tecmundo.com.br/facebook/80743-orkutizacao-facebook-permite-postagem-gifs-nativamente.htm
