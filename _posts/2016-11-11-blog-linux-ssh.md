@@ -1,19 +1,18 @@
 ---
 layout: post
-title: "Como Fazer Acesso Remoto Gráfico no Linux"
+title: "Como Fazer Acesso Remoto Gráfico no Linux via VNC"
 date: '2016-11-11T18:12:00.000-07:00'
-image: 'https://2.bp.blogspot.com/-i4o-bsCptnw/WB5ZPQbkzpI/AAAAAAAAA9M/NkCutIZ6GzMNjejJWOIknNjgfqiPdFm5QCLcB/s72-c/blog-linux-ssh-x-window.png'
-description: "Como Fazer Acesso Remoto Gráfico no Linux"
+image: '/assets/img/tv/blog-linux-ssh-x-window.png'
+description: "Não é TeamViewer, é VNC"
 main-class: 'tv'
 color: '#cc181e'
 tags:
 - TerminalRootTV
-categories:
-twitter_text: "Como Fazer Acesso Remoto Gráfico no Linux"
-introduction: "Como Fazer Acesso Remoto Gráfico no Linux"
+twitter_text: "Como Fazer Acesso Remoto Gráfico no Linux via VNC"
+introduction: "Não é TeamViewer, é VNC"
 ---
 
-![Blog Linux NFS](https://2.bp.blogspot.com/-i4o-bsCptnw/WB5ZPQbkzpI/AAAAAAAAA9M/NkCutIZ6GzMNjejJWOIknNjgfqiPdFm5QCLcB/s320/blog-linux-ssh-x-window.png)
+![Blog Linux NFS](/assets/img/tv/blog-linux-ssh-x-window.png)
 
 <iframe allowfullscreen="" frameborder="0" height="315" src="https://www.youtube.com/embed/wI7ek1ZHUxQ" width="560"></iframe>
 
