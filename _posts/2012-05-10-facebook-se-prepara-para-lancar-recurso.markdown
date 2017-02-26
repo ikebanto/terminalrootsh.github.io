@@ -20,7 +20,7 @@ Pelo que parece, a novidade pode não estar liberada para todos os  usuários no
 Se você quiser criar seus próprios GIFs a partir de vídeos do[Link](http://www.tecmundo.com.br/youtube/) , é possível apenas digir "gif" na frente de "youtube" na URL do vídeo. Mais ou menos assim:www.gifyoutube.com/watch...
 Há também a ferramenta nativa da plataforma de vídeos.[Link](http://www.tecmundo.com.br/youtube/69238-youtube-permite-criar-gifs-partir-videos-apps-terceiros.htm).
  
-Imagens
+
 Via: www.tecmundo.com.br/facebook/80743-orkutizacao-facebook-permite-postagem-gifs-nativamente.htm
 ![Blog Linux](https://1.bp.blogspot.com/-qaOqKNrMXLg/WBOgwhtILgI/AAAAAAAAA4U/TtKoFpQlNL86HqhmZtG7dvaKiyNM0FKPACLcB/s400/aprenda-libreoffice.jpg "Blog Linux")
 ![Blog Linux](https://1.bp.blogspot.com/-qaOqKNrMXLg/WBOgwhtILgI/AAAAAAAAA4U/TtKoFpQlNL86HqhmZtG7dvaKiyNM0FKPACLcB/s400/aprenda-libreoffice.jpg "Blog Linux")
