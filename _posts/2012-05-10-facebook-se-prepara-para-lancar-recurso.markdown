@@ -10,6 +10,7 @@ image: "http://img.ibxk.com.br/2015/05/29/29122340460888.jpg"
 twitter_text: "Facebook agora permite postagem de GIFs nativamente"
 introduction: "Facebook agora permite postagem de GIFs nativamente"
 ---
+
 ![Blog Linux](http://img.ibxk.com.br/2015/05/29/29122340460888.jpg?w=1040 "Blog Linux")
 
 Todo  mundo gosta de GIFs. Eles são normalmente divertidos e não requerem  tanto empenho para carregar em páginas da web quanto vídeos de verdade.  Por conta disso, há anos usuários têm pedido ao [Link](http://www.tecmundo.com.br/facebook/) para  que a rede social passe a suportar esse tipo de animação nativamente.  Agora, parece que essas “preces” foram finalmente atendidas, mas será  que isso é realmente algo bom?
