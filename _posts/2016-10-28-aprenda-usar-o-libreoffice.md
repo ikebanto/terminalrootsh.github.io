@@ -16,12 +16,12 @@ introduction: "O LibreOffice é uma potente suíte de escritório; sua interface
 
 > O [LibreOffice](https://pt-br.libreoffice.org/) é uma potente suíte de escritório; sua interface limpa e suas poderosas ferramentas libertam sua criatividade e melhoram sua produtividade.O __LibreOffice__ incorpora várias aplicações que a tornam a mais avançada suíte de escritório livre e de código aberto do mercado.
 
-# Veja o vídeo
+__Veja o Vídeo__
 
 <iframe width="560" height="315" src="https://www.youtube.com/embed/pAMtbwGySI0" frameborder="0" allowfullscreen></iframe>
 
-## Links Úteis
+# Links Úteis
 
-# [https://pt-br.libreoffice.org/](https://pt-br.libreoffice.org/)
+## [https://pt-br.libreoffice.org/](https://pt-br.libreoffice.org/)
 
-## [https://www.documentfoundation.org/](https://www.documentfoundation.org/)
+### [https://www.documentfoundation.org/](https://www.documentfoundation.org/)
