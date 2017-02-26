@@ -16,7 +16,7 @@ Claro que aqueles GIFs mostrando pessoas caindo de cara no chão e  similares se
 A expectativa é que de os usuários usem a funcionalidade com  parcimônia para que esse tipo de coisa não aconteça novamente. O próprio  Facebook também está tomando algumas precauções. Por exemplo, não é  possível enviar um GIF diretamente para a rede social. Você tem que  copiar e postar um link de um GIF hospedado em outro site qualquer, como  o [Link](http://giphy.com/) .
 Pelo que parece, a novidade pode não estar liberada para todos os  usuários no momento, mas você já pode conferir algumas postagens  interessantes feitas em GIFs [Link](https://www.facebook.com/groups/animatedgifs/) .  De qualquer maneira, não deixe de procurar um GIF por aí e tente  compartilhar na sua linha do tempo para ver o que acontece. Para tudo  isso funcionar, você precisa ter o plugin do Flash Playerativo no  navegador.
 Se você quiser criar seus próprios GIFs a partir de vídeos do[Link](http://www.tecmundo.com.br/youtube/) , é possível apenas digir "gif" na frente de "youtube" na URL do vídeo. Mais ou menos assim:www.gifyoutube.com/watch...
-Há também a ferramenta nativa da plataforma de vídeos.[Link](http://www.tecmundo.com.br/youtube/69238-youtube-permite-criar-gifs-partir-videos-apps-terceiros.htm) .
+Há também a ferramenta nativa da plataforma de vídeos.[Link](http://www.tecmundo.com.br/youtube/69238-youtube-permite-criar-gifs-partir-videos-apps-terceiros.htm).
 Fonte(s)
  
 Imagens
