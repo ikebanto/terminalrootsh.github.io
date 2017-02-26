@@ -25,6 +25,7 @@ apt-get install gnucash
 {% endhighlight %}
 
 ## Mais informações:
+
 Site oficial: [http://www.gnucash.org/](http://www.gnucash.org/])
 
 
