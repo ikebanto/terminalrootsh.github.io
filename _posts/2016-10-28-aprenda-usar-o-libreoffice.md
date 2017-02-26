@@ -22,6 +22,6 @@ introduction: "O LibreOffice é uma potente suíte de escritório; sua interface
 
 ## Links Úteis
 
-[https://pt-br.libreoffice.org/](https://pt-br.libreoffice.org/)
+# [https://pt-br.libreoffice.org/](https://pt-br.libreoffice.org/)
 
-[https://www.documentfoundation.org/](https://www.documentfoundation.org/)
+# [https://www.documentfoundation.org/](https://www.documentfoundation.org/)
