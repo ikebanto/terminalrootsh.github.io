@@ -18,7 +18,7 @@ introduction: "Para aqueles que gostam, trabalham ou estudam o ramo de Ciências
 
 ### Para aqueles que gostam, trabalham ou estudam o ramo de Ciências Contábeis e Contabilidade, vou listar alguns softwares que possam apresentar serventia. Segue uma lista com uma breve descrição e download dos mesmos.
 
-
+<hr />
 
 1 - Manager Linux [http://cdn.manager.io/](http://cdn.manager.io/)
 
@@ -29,7 +29,7 @@ introduction: "Para aqueles que gostam, trabalham ou estudam o ramo de Ciências
 [Download](http://cdn.manager.io/downloads/v14.9.6/Manager.deb)
 
 
-
+<hr />
 
 2 - Eqonomize! [http://sourceforge.net/projects/eqonomize/](http://sourceforge.net/projects/eqonomize/)
 
@@ -39,7 +39,7 @@ introduction: "Para aqueles que gostam, trabalham ou estudam o ramo de Ciências
 
 [Download](http://sourceforge.net/projects/eqonomize/files/Eqonomize!/0.6/eqonomize-0.6.tar.gz)
 
-
+<hr />
 
 3 - CentralGest Contabilidade [http://www.centralgest.com/software/contabilidade](http://www.centralgest.com/software/contabilidade)
 
@@ -49,7 +49,7 @@ introduction: "Para aqueles que gostam, trabalham ou estudam o ramo de Ciências
 
 [Download](http://www.centralgest.com/software/contabilidade)
 
-
+<hr />
 
 4 - Projecto Colibri [http://www.projectocolibri.com/](http://www.projectocolibri.com/)
 
@@ -59,7 +59,7 @@ introduction: "Para aqueles que gostam, trabalham ou estudam o ramo de Ciências
 
 [Download](http://www.projectocolibri.com/download)
 
-
+<hr />
 
 
 5 - KEME-Contabilidad [https://sites.google.com/site/kemecontabilidad/](https://sites.google.com/site/kemecontabilidad/)
@@ -71,7 +71,7 @@ Este software foi desenvolvido utilizando a linguagem de programação C++ e bib
 
 [Download](http://sourceforge.net/projects/keme/files/KEME-Contabilidad/)
 
-
+<hr />
 
 6 - Mymoneylog 
 [http://nishimura.eti.br/mymoneylog/](http://nishimura.eti.br/mymoneylog/)
@@ -83,7 +83,7 @@ Este software foi desenvolvido utilizando a linguagem de programação C++ e bib
 
 [Download](http://mymoneylog.googlecode.com/files/mymoneylog_1.230.zip)
 
-
+<hr />
 
 7 - GNUCash [http://www.gnucash.org/](www.gnucash.org/)
 
@@ -93,6 +93,7 @@ __Já Falamos desse software aqui no blog, veja a postagem completa__
 
 [GNUCash software para Contabilidade no Linux](http://www.terminalroot.com.br/2014/08/gnucash-software-para-contabilidade-no.html](http://www.terminalroot.com.br/2014/08/gnucash-software-para-contabilidade-no.html)
 
+<hr />
 
 8 - Banana Contabilidade [http://www.banana.ch/cms/pt-br](http://www.banana.ch/cms/pt-br)
 
@@ -102,7 +103,7 @@ __Já Falamos desse software aqui no blog, veja a postagem completa__
 
 [Download](http://www.banana.ch/cms/en/bananaforlinux)
 
-
+<hr />
 
 9 - Evaristo [http://sourceforge.net/projects/evaristo/](http://sourceforge.net/projects/evaristo/)
 
@@ -113,7 +114,7 @@ __Já Falamos desse software aqui no blog, veja a postagem completa__
 
 [Download](http://sourceforge.net/projects/evaristo/)
 
-
+<hr />
 
 10 - WebERP [http://www.weberp.org/](http://www.weberp.org/)
 
@@ -123,7 +124,7 @@ __Já Falamos desse software aqui no blog, veja a postagem completa__
 
 [Download](http://sourceforge.net/projects/web-erp/)
 
-
+<hr />
 
 11 - Calima ERP Contábil [http://www.projetusti.com.br/recursos/#calima](http://www.projetusti.com.br/recursos/#calima)
 
@@ -133,7 +134,7 @@ __Já Falamos desse software aqui no blog, veja a postagem completa__
 
 [Teste online](http://teste.projetusti.com/calima/)
 
-
+<hr />
 
 12 - Kmymoney [http://kmymoney2.sourceforge.net/](http://kmymoney2.sourceforge.net)
 
@@ -143,7 +144,7 @@ __Já Falamos desse software aqui no blog, veja a postagem completa__
 
 [Download]http://kmymoney2.sourceforge.net/index-home.html)
 
-
+<hr />
 
 13 - Grisbi [http://www.grisbi.org/](http://www.grisbi.org/)
 
@@ -153,7 +154,7 @@ __Já Falamos desse software aqui no blog, veja a postagem completa__
 
 [Download](http://www.grisbi.org/)
 
-
+<hr />
 
 14 - GFP - Gerenciador de Finanças Pessoal [http://gfd.sourceforge.net/](http://gfd.sourceforge.net)
 
@@ -163,7 +164,7 @@ __Já Falamos desse software aqui no blog, veja a postagem completa__
 
 [Download](http://gfd.sourceforge.net/index.php)
 
-
+<hr />
 
 15 - EekBoek [http://www.eekboek.nl/](www.eekboek.nl)
 
@@ -173,6 +174,7 @@ __Já Falamos desse software aqui no blog, veja a postagem completa__
 
 [Download](http://www.superdownloads.com.br/download/56/eekboek/)
 
+<hr />
 
 16 - Yapbam [https://www.yapbam.net/](https://www.yapbam.net)
 
@@ -182,7 +184,7 @@ __Já Falamos desse software aqui no blog, veja a postagem completa__
 
 [Download](http://www.superdownloads.com.br/download/137/yapbam/)
 
-
+<hr />
 
 17 - HomeBank [http://homebank.free.fr/](homebank.free.fr)
 
@@ -192,7 +194,7 @@ __Já Falamos desse software aqui no blog, veja a postagem completa__
 
 [Download](http://www.superdownloads.com.br/download/69/homebank/)
 
-
+<hr />
 
 18 - Calculadora de Décimo Terceiro Salário [http://blogsobrelinux.blogspot.com.br/](http://blogsobrelinux.blogspot.com.br/)
 
@@ -202,7 +204,7 @@ __Já Falamos desse software aqui no blog, veja a postagem completa__
 
 [Download](http://www.superdownloads.com.br/download/17/calculadora-de-decimo-terceiro-salario-64bits/)
 
-
+<hr />
 
 19 - Plataforma Synquest Linux [http://www.synquest.com.br/](http://www.synquest.com.br/)
 
@@ -212,7 +214,7 @@ __Já Falamos desse software aqui no blog, veja a postagem completa__
 
 [Download](http://www.superdownloads.com.br/download/172/plataforma-synquest-linux/)
 
-
+<hr />
 
 20 - Home Credit Card Manager [http://www.homemoneymanager.com/](www.homemoneymanager.com)
 
@@ -222,7 +224,7 @@ __Já Falamos desse software aqui no blog, veja a postagem completa__
 
 [Download](http://www.superdownloads.com.br/download/146/home-credit-card-manager-linux/)
 
-
+<hr />
 
 21 - GCompte 
 [http://www.linux-france.org/prj/gcompte](www.linux-france.org/prj/gcompte)
@@ -234,7 +236,7 @@ __Já Falamos desse software aqui no blog, veja a postagem completa__
 
 [Download](http://www.superdownloads.com.br/download/72/gcompte/)
 
-
+<hr />
 
 22 - Money Manager Ex [http://www.moneymanagerex.org/](www.moneymanagerex.org)
 
@@ -244,6 +246,7 @@ __Já Falamos desse software aqui no blog, veja a postagem completa__
 
 [Download](http://www.superdownloads.com.br/download/67/money-manager-ex/)
 
+<hr />
 
 23 - SQL-Ledger ERP [http://www.sql-ledger.com/](www.sql-ledger.com)
 
@@ -253,7 +256,7 @@ __Já Falamos desse software aqui no blog, veja a postagem completa__
 
 [Download](http://www.superdownloads.com.br/download/143/sql-ledger-erp/)
 
-
+<hr />
 
 24 - Skyclerk [http://skyclerk.com/](http://skyclerk.com)
 
@@ -263,7 +266,7 @@ __Já Falamos desse software aqui no blog, veja a postagem completa__
 
 [Teste online](http://skyclerk.com/)
 
-
+<hr />
 
 25 - wxBanker [https://launchpad.net/wxbanker](https://launchpad.net/wxbanker)
 
@@ -273,7 +276,7 @@ __Já Falamos desse software aqui no blog, veja a postagem completa__
 
 [Download](https://launchpad.net/wxbanker/trunk/0.9.1/+download/wxbanker_0.9.1_all.deb)
 
-
+<hr />
 
 26 - Buddi [http://ufpr.dl.sourceforge.net/project/buddi](http://ufpr.dl.sourceforge.net/project/buddi)
 
@@ -283,7 +286,7 @@ __Já Falamos desse software aqui no blog, veja a postagem completa__
 
 [Download](http://ufpr.dl.sourceforge.net/project/buddi/Buddi%20%28Stable%29/3.4.1.13/Buddi-3.4.1.13.deb)
 
-
+<hr />
 
 27 - Siscontábil [https://siscontabil.com.br/](https://siscontabil.com.br)
 
@@ -293,7 +296,7 @@ __Já Falamos desse software aqui no blog, veja a postagem completa__
 
 [Teste online](https://siscontabil.com.br/Cadastro](https://siscontabil.com.br/Cadastro)
 
-
+<hr />
 
 28 - Gerador e Validador de CPF em Shell Script (Bash) [http://www.terminalroot.com.br/](http://www.terminalroot.com.br/)
 
@@ -305,6 +308,7 @@ __Segue a postagem para ver o código__:
 
 [http://www.terminalroot.com.br/2013/10/gerador-e-validador-de-cpf-em-shell.html](http://www.terminalroot.com.br/2013/10/gerador-e-validador-de-cpf-em-shell.html )
 
+<hr />
 
 29 - Validar e Gerar CPF com PHP-GTK [http://www.terminalroot.com.br/](http://www.terminalroot.com.br/)
 
@@ -318,7 +322,7 @@ __Mesmo que o anterior, só que escrito em PHP-GTK para teste em clientes escrit
 
 [Download](http://www.4shared.com/file/JXTmb_1Z/opencpf-10.html)
 
-
+<hr />
 
 30 - Financial Open Software [http://www.terminalroot.com.br/2012/07/financial-open-software.html](http://www.terminalroot.com.br/2012/07/financial-open-software.html)
 
@@ -331,7 +335,6 @@ __Mesmo que o anterior, só que escrito em PHP-GTK para teste em clientes escrit
 
 [Download](http://sourceforge.net/projects/financial/)
 
-<hr />
 
 ### A lista é essa, espero que gostem e desfrutem!
 
