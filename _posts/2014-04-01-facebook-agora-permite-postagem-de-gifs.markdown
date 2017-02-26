@@ -10,7 +10,7 @@ image: "http://img.ibxk.com.br/2015/05/29/29122340460888.jpg"
 twitter_text: "Facebook agora permite postagem de GIFs nativamente"
 introduction: "Facebook agora permite postagem de GIFs nativamente"
 ---
-![Blog Linux][http://img.ibxk.com.br/2015/05/29/29122340460888.jpg?w=1040 "Blog Linux"](http://img.ibxk.com.br/2015/05/29/29122340460888.jpg?w=1040 "Blog Linux")
+![http://img.ibxk.com.br/2015/05/29/29122340460888.jpg?w=1040 "Blog Linux"](http://img.ibxk.com.br/2015/05/29/29122340460888.jpg?w=1040 "Blog Linux")
 [http://www.tecmundo.com.br/facebook/](http://www.tecmundo.com.br/facebook/)
 [http://www.tecmundo.com.br/redes-sociais/](http://www.tecmundo.com.br/redes-sociais/)
 [http://giphy.com/](http://giphy.com/)
@@ -21,10 +21,10 @@ Fonte[s](s)
  
 Imagens
 Via: www.tecmundo.com.br/facebook/80743-orkutizacao-facebook-permite-postagem-gifs-nativamente.htm
-![Blog Linux][https://1.bp.blogspot.com/-qaOqKNrMXLg/WBOgwhtILgI/AAAAAAAAA4U/TtKoFpQlNL86HqhmZtG7dvaKiyNM0FKPACLcB/s400/aprenda-libreoffice.jpg "Blog Linux"](https://1.bp.blogspot.com/-qaOqKNrMXLg/WBOgwhtILgI/AAAAAAAAA4U/TtKoFpQlNL86HqhmZtG7dvaKiyNM0FKPACLcB/s400/aprenda-libreoffice.jpg "Blog Linux")
-![Blog Linux][https://1.bp.blogspot.com/-qaOqKNrMXLg/WBOgwhtILgI/AAAAAAAAA4U/TtKoFpQlNL86HqhmZtG7dvaKiyNM0FKPACLcB/s400/aprenda-libreoffice.jpg "Blog Linux"](https://1.bp.blogspot.com/-qaOqKNrMXLg/WBOgwhtILgI/AAAAAAAAA4U/TtKoFpQlNL86HqhmZtG7dvaKiyNM0FKPACLcB/s400/aprenda-libreoffice.jpg "Blog Linux")
+![https://1.bp.blogspot.com/-qaOqKNrMXLg/WBOgwhtILgI/AAAAAAAAA4U/TtKoFpQlNL86HqhmZtG7dvaKiyNM0FKPACLcB/s400/aprenda-libreoffice.jpg "Blog Linux"](https://1.bp.blogspot.com/-qaOqKNrMXLg/WBOgwhtILgI/AAAAAAAAA4U/TtKoFpQlNL86HqhmZtG7dvaKiyNM0FKPACLcB/s400/aprenda-libreoffice.jpg "Blog Linux")
+![https://1.bp.blogspot.com/-qaOqKNrMXLg/WBOgwhtILgI/AAAAAAAAA4U/TtKoFpQlNL86HqhmZtG7dvaKiyNM0FKPACLcB/s400/aprenda-libreoffice.jpg "Blog Linux"](https://1.bp.blogspot.com/-qaOqKNrMXLg/WBOgwhtILgI/AAAAAAAAA4U/TtKoFpQlNL86HqhmZtG7dvaKiyNM0FKPACLcB/s400/aprenda-libreoffice.jpg "Blog Linux")
 Links Úteis
 [https://pt-br.libreoffice.org/](https://pt-br.libreoffice.org/)
 [https://www.documentfoundation.org/](https://www.documentfoundation.org/)
 <iframe width="560" height="315" src="https://www.youtube.com/embed/pAMtbwGySI0" frameborder="0" allowfullscreen><iframe>
-![Blog Linux][https://1.bp.blogspot.com/-qaOqKNrMXLg/WBOgwhtILgI/AAAAAAAAA4U/TtKoFpQlNL86HqhmZtG7dvaKiyNM0FKPACLcB/s400/aprenda-libreoffice.jpg "Blog Linux"](https://1.bp.blogspot.com/-qaOqKNrMXLg/WBOgwhtILgI/AAAAAAAAA4U/TtKoFpQlNL86HqhmZtG7dvaKiyNM0FKPACLcB/s400/aprenda-libreoffice.jpg "Blog Linux")
+![https://1.bp.blogspot.com/-qaOqKNrMXLg/WBOgwhtILgI/AAAAAAAAA4U/TtKoFpQlNL86HqhmZtG7dvaKiyNM0FKPACLcB/s400/aprenda-libreoffice.jpg "Blog Linux"](https://1.bp.blogspot.com/-qaOqKNrMXLg/WBOgwhtILgI/AAAAAAAAA4U/TtKoFpQlNL86HqhmZtG7dvaKiyNM0FKPACLcB/s400/aprenda-libreoffice.jpg "Blog Linux")
