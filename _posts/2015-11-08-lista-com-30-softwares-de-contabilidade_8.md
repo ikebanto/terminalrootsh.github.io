@@ -3,7 +3,7 @@ layout: post
 title: "Lista com 30 Softwares de Contabilidade para Linux"
 date: '2015-11-08T09:07:00.001-08:00'
 image: '/assets/img/contabeis/linux-contabilidade.jpg'
-description: "Para aqueles que gostam, trabalham ou estudam o ramo de Ciências Contábeis e Contabilidade, vou listar alguns softwares que possam apresentar serventia."
+description: "Para aqueles que gostam, trabalham ou estudam Ciências Contábeis e Contabilidade, vou listar alguns softwares que possam apresentar serventia."
 main-class: 'artigos'
 tags:
 - Linux
@@ -91,7 +91,7 @@ Este software foi desenvolvido utilizando a linguagem de programação C++ e bib
 
 __Já Falamos desse software aqui no blog, veja a postagem completa__
 
-[GNUCash software para Contabilidade no Linux](http://www.terminalroot.com.br/2014/08/gnucash-software-para-contabilidade-no.html](http://www.terminalroot.com.br/2014/08/gnucash-software-para-contabilidade-no.html)
+[GNUCash software para Contabilidade no Linux](http://www.terminalroot.com.br/2014/08/gnucash-software-para-contabilidade-no.html)
 
 <hr />
 
@@ -142,7 +142,7 @@ __Já Falamos desse software aqui no blog, veja a postagem completa__
 
 > O Kmymoney é o software que mais se integra a este gerenciador de janelas. Idealizado para ser o mais fácil dos gerenciadores de finanças pessoais, o kmymoney já recebeu vários prêmios, dentre eles o segundo lugar no ranking dos softwares escolhidos pela comunidade Sourceforge.net. Possui uma grande usuabilidade sem perder a robustez de um programa comercial. A versão atual (0.8.4) está bastante integrada ao KDE 3.5.* e muitos bugs já foram corrigidos.
 
-[Download]http://kmymoney2.sourceforge.net/index-home.html)
+[Download](http://kmymoney2.sourceforge.net/index-home.html)
 
 <hr />
 
@@ -294,7 +294,7 @@ __Já Falamos desse software aqui no blog, veja a postagem completa__
 
 > Siscontábil é um sistema contábil com site completo voltado para escritorios de contabilidade e contabilistas. Através de telas simples e intuitivas, voce poderá controlar todo o processo de atendimento aos seus clientes e controlar as tarefas de seus colaboradores.
 
-[Teste online](https://siscontabil.com.br/Cadastro](https://siscontabil.com.br/Cadastro)
+[Teste online](https://siscontabil.com.br/Cadastro)
 
 <hr />
 
@@ -341,6 +341,7 @@ __Mesmo que o anterior, só que escrito em PHP-GTK para teste em clientes escrit
 #### Links Úteis:
 
 http://www.aaxnet.com/design/linuxacct.html
+
 http://lwn.net/Articles/149383/
 
 
