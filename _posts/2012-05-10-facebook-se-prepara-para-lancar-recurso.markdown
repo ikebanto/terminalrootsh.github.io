@@ -2,13 +2,13 @@
 layout: post
 title: "Facebook agora permite postagem de GIFs nativamente"
 date: '2014-04-01T05:47:00.000-07:00'
-description: "Facebook agora permite postagem de GIFs nativamente"
+description: "Facebook agora permite postagem de GIFs nativamente2"
 main-class: 'artigos'
 tags:
 - Notícias
 image: "http://img.ibxk.com.br/2015/05/29/29122340460888.jpg"
 twitter_text: "Facebook agora permite postagem de GIFs nativamente"
-introduction: "Facebook agora permite postagem de GIFs nativamente"
+introduction: "Facebook agora permite postagem de GIFs nativamente4"
 ---
 
 ![Blog Linux](http://img.ibxk.com.br/2015/05/29/29122340460888.jpg?w=1040 "Blog Linux")
