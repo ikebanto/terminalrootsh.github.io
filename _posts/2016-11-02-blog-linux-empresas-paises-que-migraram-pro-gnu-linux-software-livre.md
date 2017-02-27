@@ -66,7 +66,7 @@ Isso sem dizer de países que  adotam o Linux e o Software Livre como soluções
 
 ## Links Úteis:
 
-* [x] https://www.linuxfoundation.org/news-media/announcements/2011/07/toyota-joins-linux-foundation
+* https://www.linuxfoundation.org/news-media/announcements/2011/07/toyota-joins-linux-foundation
 * https://pt.wikipedia.org/wiki/Hist%C3%B3ria_do_software_livre_no_Brasil
 * https://pt.wikipedia.org/wiki/Software_livre_nos_governos#Brasil
 * http://www.tecmundo.com.br/linux/12021-10-coisas-que-nao-existiriam-se-nao-fosse-o-linux.htm
