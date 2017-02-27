@@ -12,7 +12,7 @@ introduction: "Escolha o melhor!"
 ---
 
 <style>
-img {border: 4px solid #222; box-shadow: 2px 2px 2px 10px #666;}
+img {border: 2px solid #222;}
 </style>
 
 ![Blog Linux](/assets/img/editores/video-editor.jpg "Blog Linux")
