@@ -11,6 +11,7 @@ introduction: "Escolha o melhor!"
 
 ---
 ![Blog Linux](/assets/img/editores/video-editor.jpg "Blog Linux")
+<hr />
 [OpenShot](http://www.openshot.org/)
 ![Blog Linux](/assets/img/editores/OpenShot-Video-Editor.png "Blog Linux")
 <hr />
