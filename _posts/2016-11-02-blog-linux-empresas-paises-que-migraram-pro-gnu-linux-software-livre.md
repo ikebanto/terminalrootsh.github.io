@@ -54,7 +54,7 @@ Entre  milhares de outras grandes empresas:
 - Twitter ; 
 - IBM ; 
 - Amazon ; 
-- McDonalds
+- McDonalds  
 - (...)
 
 Usam Linux , inclusive a própria Microsoft !!! Isso mesmo a  Microsoft já sabe que seus softwares foram projetados para dar problema e  gerar lucro com suporte , não confiam no seu próprio produto e usam  Linux no seu servidor de busca o Bing. 
@@ -66,23 +66,23 @@ Isso sem dizer de países que  adotam o Linux e o Software Livre como soluções
 
 ## Links Úteis:
 
-> https://www.linuxfoundation.org/news-media/announcements/2011/07/toyota-joins-linux-foundation
-> https://pt.wikipedia.org/wiki/Hist%C3%B3ria_do_software_livre_no_Brasil
-> https://pt.wikipedia.org/wiki/Software_livre_nos_governos#Brasil
-> http://www.tecmundo.com.br/linux/12021-10-coisas-que-nao-existiriam-se-nao-fosse-o-linux.htm
-> https://pplware.sapo.pt/linux/os-50-locais-onde-no-esperaria-encontrar-linux-parte-i/
-> http://www.certificacaolinux.com.br/empresas-linux.php
-> http://www.esquerda.net/artigo/nasa-passa-usar-linux-em-vez-de-windows/27843
-> https://tecnoblog.net/26285/microsoft-responde-decisao-do-google-de-migrar-computadores-para-mac-os-e-linux/
-> http://www.reclameaqui.com.br/16530770/microsoft/contratei-um-servico-de-suporte-por-um-valor-cobraram-outro/
-> https://www.microsoft.com/en-us/dynamics365/pricing
-> http://www2.brasoftware.com.br/licenciamento/PerguntasFrequentes.html
-> http://www.fuctura.com.br/2014/01/gra-bretanha-pretende-trocar-ms-office-por-software-livre/
-> http://super.abril.com.br/blogs/tendencias/versao-livre-do-windows-e-possivel-afirma-desenvolvedr-da-microsoft/
-> http://g1.globo.com/Noticias/Economia_Negocios/0,,MUL308812-9356,00-MICROSOFT+AUMENTARA+ABERTURA+PARA+SOFTWARE+LIVRE.html
-> http://g1.globo.com/Noticias/Tecnologia/0,,MUL236117-6174,00-MICROSOFT+ASSINA+ACORDO+COM+GRUPO+DE+SOFTWARE+LIVRE+SAMBA.html
-> http://olhardigital.uol.com.br/noticia/governo-federal-vai-trocar-software-livre-por-solucoes-da-microsoft/63547
-> http://olhardigital.uol.com.br/noticia/robos-%E2%80%98ganham%E2%80%99-software-gratuito-da-microsoft/5385
+https://www.linuxfoundation.org/news-media/announcements/2011/07/toyota-joins-linux-foundation
+https://pt.wikipedia.org/wiki/Hist%C3%B3ria_do_software_livre_no_Brasil
+https://pt.wikipedia.org/wiki/Software_livre_nos_governos#Brasil
+http://www.tecmundo.com.br/linux/12021-10-coisas-que-nao-existiriam-se-nao-fosse-o-linux.htm
+https://pplware.sapo.pt/linux/os-50-locais-onde-no-esperaria-encontrar-linux-parte-i/
+http://www.certificacaolinux.com.br/empresas-linux.php
+http://www.esquerda.net/artigo/nasa-passa-usar-linux-em-vez-de-windows/27843
+https://tecnoblog.net/26285/microsoft-responde-decisao-do-google-de-migrar-computadores-para-mac-os-e-linux/
+http://www.reclameaqui.com.br/16530770/microsoft/contratei-um-servico-de-suporte-por-um-valor-cobraram-outro/
+https://www.microsoft.com/en-us/dynamics365/pricing
+http://www2.brasoftware.com.br/licenciamento/PerguntasFrequentes.html
+http://www.fuctura.com.br/2014/01/gra-bretanha-pretende-trocar-ms-office-por-software-livre/
+http://super.abril.com.br/blogs/tendencias/versao-livre-do-windows-e-possivel-afirma-desenvolvedr-da-microsoft/
+http://g1.globo.com/Noticias/Economia_Negocios/0,,MUL308812-9356,00-MICROSOFT+AUMENTARA+ABERTURA+PARA+SOFTWARE+LIVRE.html
+http://g1.globo.com/Noticias/Tecnologia/0,,MUL236117-6174,00-MICROSOFT+ASSINA+ACORDO+COM+GRUPO+DE+SOFTWARE+LIVRE+SAMBA.html
+http://olhardigital.uol.com.br/noticia/governo-federal-vai-trocar-software-livre-por-solucoes-da-microsoft/63547
+http://olhardigital.uol.com.br/noticia/robos-%E2%80%98ganham%E2%80%99-software-gratuito-da-microsoft/5385
 
 
 
