@@ -1,0 +1,27 @@
+---
+layout: post
+title: " Por dentro do PfSense - Instalação"
+date: '2015-06-04T06:17:00.001-07:00'
+description: " Por dentro do PfSense - Instalação"
+main-class: 'linux'
+color: '#3b5998'
+author: Marcos Oliveira
+tags:
+- Linux
+- userlike
+- Servidores
+modified_time: '2015-06-04T06:17:23.844-07:00'
+thumbnail: http://3.bp.blogspot.com/-CShXv1bATEc/VXBPQOtkktI/AAAAAAAABWk/Q1XDJfyNkrY/s72-c/firewalls_big.jpg
+twitter_text: " Por dentro do PfSense - Instalação"
+introduction: " Por dentro do PfSense - Instalação"
+---
+
+<p>
+<a href="http://3.bp.blogspot.com/-CShXv1bATEc/VXBPQOtkktI/AAAAAAAABWk/Q1XDJfyNkrY/s1600/firewalls_big.jpg" imageanchor="1" style="clear: right; float: right; margin-bottom: 1em; margin-left: 1em;"><img border="0" src="http://3.bp.blogspot.com/-CShXv1bATEc/VXBPQOtkktI/AAAAAAAABWk/Q1XDJfyNkrY/s320/firewalls_big.jpg" /></a><a href="http://1.bp.blogspot.com/-Nv6cJ1qeOYE/VXBPQN8B6EI/AAAAAAAABWg/7SjzMD1Iy8k/s1600/f-firestarter-firewall.png" imageanchor="1"><img border="0" src="http://1.bp.blogspot.com/-Nv6cJ1qeOYE/VXBPQN8B6EI/AAAAAAAABWg/7SjzMD1Iy8k/s320/f-firestarter-firewall.png" /></a>
+
+IntroduçãoO pfSense é um software livre, licenciado sob BSD  license, baseado no sistema operacional FreeBSD e adaptado para assumir o  papel de um firewall e/ou roteador de redes. Além disso, ele possui  atualmente dezenas de pacotes adicionais que lhe permitem requisitar o  posto de UTM (Unified Threat Management), já que podemos realizar com o  pfSense a imensa maioria das atividades que esperamos de sistemas com  este título.  O projeto pfSense foi concebido em meados de setembro de  2004 por Chris Buechler e Scott Ullrich. Chris foi um colaborador  assíduo de códigos por muito tempo do projeto m0n0wall. O m0n0wall tem  basicamente as mesmas pretensões técnicas do pfSense, mas desde o seu  surgimento até os dias de hoje, é focado em appliances.  O compromisso  do m0n0wall sempre foi o de ser um sistema contido em si e voltado para  dispositivos que pudessem rodá-lo diretamente da memória principal. Não é  possível instalá-lo em um sistema de arquivos comum em um disco rígido,  por exemplo. Daí muitas funções desejáveis para sistemas mais complexos  (VPN, suporte a modems 3G, Autenticação de Usuários, Proxy, IDS, etc…)  não podem ser razoavelmente implementadas nele. Este foi o principal  fator motivador para que Chris e Scott começassem o projeto pfSense.   Para saber mais, visite o site oficial do projeto ou o seu blog. Se você  procura ajuda para instalar e configurar o pfSense na sua rede, clique  aqui e saiba onde buscar auxílio.  "pfSense® é uma marca registrada da  Electric Sheep Fencing, LLC"  {% highlight bash %}
+Texto retirado de:http://www.pfsense-br.org
+{% endhighlight %}   ObjetivoO  objetivo dessa série sobre o PfSense é demonstrar como instalar e  utilizar vários dos recursos disponibilizados por essa maravilhosa  ferramenta.  Todos os procedimentos que serão informados nessa série  foram por mim testados e muitos deles aplicados em servidores de  produção. O PfSense é muito versátil podendo ser utilizado para diversos  fins tais como firewall, servidor OpenVPN, proxy, dentre outros.   Neste primeiro tutorial estarei demonstrando como instalar o Pfsense.     ProcedimentosA minha instalação será feita em um ambiente  virtual pois tem a finalidade apenas de mostrar como fazer porém nada  que o impeça de realiza-lo em um ambiente de produção na sua empresa.   Para esse primeiro tutorial realizaremos os passos informados abaixo  então vamos lá! Baixando o PfSense;Realizando a instalação;Configurações iniciais;Para baixar o PfSense você podevisitar o site do  projeto:https://www.pfsense.org/download/  Após baixar a sua imagem  grave em um CD ou crie um pendrive bootável coisa que não será abordada  aqui pois eu sei que você é muito inteligente e consegue fazer isso sem  ajuda :D. Com a imagem pronta para ser utilizada vamos partir para o que  interessa que é a instalação. Siga de acordo com as imagens abaixo e  verás que é muito tranquilo o procedimento de instalação.
+
+
+

@@ -1,0 +1,39 @@
+---
+layout: post
+title: Listar posts de categoria wordpress com uma consulta mysql
+date: '2014-10-19T13:50:00.002-07:00'
+description: Listar posts de categoria wordpress com uma consulta mysql
+main-class: 'misc'
+color: '#34a853'
+author: Marcos Oliveira
+tags:
+- Dicas
+- MySQL
+modified_time: '2014-10-19T13:50:49.339-07:00'
+thumbnail: http://2.bp.blogspot.com/-LxKSYfDLZVU/VEQj0yFvp6I/AAAAAAAAA3Y/d8puxXsy7eI/s72-c/langage_mysql.png
+twitter_text: Listar posts de categoria wordpress com uma consulta mysql
+introduction: Listar posts de categoria wordpress com uma consulta mysql
+---
+
+<p>
+<div class="separator" style="clear: both; text-align: center;"><a href="http://2.bp.blogspot.com/-LxKSYfDLZVU/VEQj0yFvp6I/AAAAAAAAA3Y/d8puxXsy7eI/s1600/langage_mysql.png" imageanchor="1" style="margin-left: 1em; margin-right: 1em;"><img border="0" src="http://2.bp.blogspot.com/-LxKSYfDLZVU/VEQj0yFvp6I/AAAAAAAAA3Y/d8puxXsy7eI/s1600/langage_mysql.png" height="200" width="200" /></a></div><i>
+Segue uma consulta que nos traz entendimento da ligação de tabelas WordPress e dependendo do caso pode ser muito útil.</i>
+<div class="adp"><div class="crayon-syntax crayon-theme-classic crayon-font-monaco crayon-os-pc print-yes notranslate" data-settings=" minimize scroll-mouseover" id="crayon-543919912f24d836325478" style="font-size: 12px ! important; height: auto; line-height: 15px ! important; margin-bottom: 12px; margin-top: 12px;"><div class="crayon-main" style="overflow: auto; position: relative; z-index: 1;"><table class="crayon-table" style="width: 100% ! important;">     <tbody><tr class="crayon-row">    <td class="crayon-nums " data-settings="show"><div class="crayon-nums-content" style="font-size: 12px !important; line-height: 15px !important;"><div class="crayon-num" data-line="crayon-543919912f24d836325478-1">
+</div><div class="crayon-num crayon-striped-num" data-line="crayon-543919912f24d836325478-2">
+</div><div class="crayon-num" data-line="crayon-543919912f24d836325478-3">
+</div><div class="crayon-num crayon-striped-num" data-line="crayon-543919912f24d836325478-4">
+</div><div class="crayon-num" data-line="crayon-543919912f24d836325478-5">
+</div><div class="crayon-num crayon-striped-num" data-line="crayon-543919912f24d836325478-6">
+</div><div class="crayon-num" data-line="crayon-543919912f24d836325478-7">
+</div><div class="crayon-num crayon-striped-num" data-line="crayon-543919912f24d836325478-8">
+</div><div class="crayon-num" data-line="crayon-543919912f24d836325478-9">
+</div><div class="crayon-num crayon-striped-num" data-line="crayon-543919912f24d836325478-10">
+</div><div class="crayon-num" data-line="crayon-543919912f24d836325478-11">
+</div><div class="crayon-num crayon-striped-num" data-line="crayon-543919912f24d836325478-12">
+</div></div></td>      <td class="crayon-code"><div class="crayon-pre" style="font-size: 12px !important; line-height: 15px !important;"><div class="crayon-line" id="crayon-543919912f24d836325478-1"><span class="crayon-st">SELECT</span><span class="crayon-h"> </span><span class="crayon-st">DISTINCT</span><span class="crayon-h"> </span>ID,<span class="crayon-h"> </span>post_title,<span class="crayon-h"> </span>post_name,<span class="crayon-h"> </span>guid,<span class="crayon-h"> </span>post_date,<span class="crayon-h"> </span>post_content</div><div class="crayon-line crayon-striped-line" id="crayon-543919912f24d836325478-2"><span class="crayon-st">FROM</span><span class="crayon-h"> </span>wp_posts<span class="crayon-h"> </span><span class="crayon-st">AS</span><span class="crayon-h"> </span>p</div><div class="crayon-line" id="crayon-543919912f24d836325478-3"><span class="crayon-st">INNER JOIN</span><span class="crayon-h"> </span>wp_term_relationships<span class="crayon-h"> </span><span class="crayon-st">AS</span><span class="crayon-h"> </span>tr<span class="crayon-h"> </span><span class="crayon-st">ON</span><span class="crayon-h"> </span>(</div><div class="crayon-line crayon-striped-line" id="crayon-543919912f24d836325478-4">p.ID<span class="crayon-h"> </span>=<span class="crayon-h"> </span>tr.object_id</div><div class="crayon-line" id="crayon-543919912f24d836325478-5"></div><div class="crayon-line crayon-striped-line" id="crayon-543919912f24d836325478-6">)</div><div class="crayon-line" id="crayon-543919912f24d836325478-7"><span class="crayon-st">INNER JOIN</span><span class="crayon-h"> </span>wp_term_taxonomy<span class="crayon-h"> </span><span class="crayon-st">AS</span><span class="crayon-h"> </span>tt<span class="crayon-h"> </span><span class="crayon-st">ON</span><span class="crayon-h"> </span>(</div><div class="crayon-line crayon-striped-line" id="crayon-543919912f24d836325478-8">tr.term_taxonomy_id<span class="crayon-h"> </span>=<span class="crayon-h"> </span>tt.term_taxonomy_id</div><div class="crayon-line" id="crayon-543919912f24d836325478-9"><span class="crayon-r">AND</span><span class="crayon-h"> </span>taxonomy<span class="crayon-h"> </span>=<span class="crayon-h"> </span><span class="crayon-s">'category'</span><span class="crayon-h"> </span><span class="crayon-r">AND</span><span class="crayon-h"> </span>tt.term_id</div><div class="crayon-line crayon-striped-line" id="crayon-543919912f24d836325478-10"><span class="crayon-st">IN</span><span class="crayon-h"> </span>(<span class="crayon-h"> </span>16<span class="crayon-h"> </span>)</div><div class="crayon-line" id="crayon-543919912f24d836325478-11">)</div><div class="crayon-line crayon-striped-line" id="crayon-543919912f24d836325478-12"><span class="crayon-st">ORDER BY</span><span class="crayon-h"> </span>id<span class="crayon-h"> </span><span class="crayon-st">DESC</span></div></div></td>     </tr></tbody></table></div></div></div>
+
+<i>Altere o ID 16 pelo número ID da categoriaque desejapesquisar.</i>
+
+<span style="font-size: x-small;"><i>Via: http://eduardolira.net/como-listar-categorias-wordpress-uma-consulta-mysql/</i></span>
+
+</p>

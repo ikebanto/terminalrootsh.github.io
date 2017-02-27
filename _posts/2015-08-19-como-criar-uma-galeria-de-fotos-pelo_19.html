@@ -1,0 +1,114 @@
+---
+layout: post
+title: Como criar uma galeria de fotos pelo Terminal
+date: '2015-08-19T05:09:00.000-07:00'
+description: Como criar uma galeria de fotos pelo Terminal
+main-class: 'bash'
+color: '#c2003a'
+author: Marcos Oliveira
+tags:
+- Shell Script
+- Multimídia
+- Terminal
+- Comandos
+modified_time: '2015-08-19T05:09:06.866-07:00'
+thumbnail: http://1.bp.blogspot.com/-8AGqXhMKiSw/Vc9gLetD4tI/AAAAAAAABps/QJKDX2aIEz0/s72-c/galeria.jpg
+twitter_text: Como criar uma galeria de fotos pelo Terminal
+introduction: Como criar uma galeria de fotos pelo Terminal
+---
+
+<p>
+<div class="separator" style="clear: both; text-align: center;"><a href="http://1.bp.blogspot.com/-8AGqXhMKiSw/Vc9gLetD4tI/AAAAAAAABps/QJKDX2aIEz0/s1600/galeria.jpg" imageanchor="1" style="margin-left: 1em; margin-right: 1em;"><img border="0" height="294" src="http://1.bp.blogspot.com/-8AGqXhMKiSw/Vc9gLetD4tI/AAAAAAAABps/QJKDX2aIEz0/s640/galeria.jpg" width="640" /></a></div>
+
+<p>Para você criar uma galeria estilo a da imagem dessa postagem é necessário que você possua o <a href="https://wiki.gnome.org/Apps/Videos" target="_blank"><span style="color: blue;"><span style="font-size: large;">totem-video-thumbnailer</span></span></a>.</p>
+<blockquote class="tr_bq"><b><a href="https://wiki.gnome.org/Apps/Videos" target="_blank"><span style="color: blue;"><span style="font-size: x-large;">totem-video-thumbnailer</span></span></a> é usado internamente por aplicações do <span style="color: #3d85c6;">GNOME</span> tais como <span style="color: #3d85c6;">Nautilus</span> para gerar miniaturas PNG de arquivos de vídeo. Embora seja possível invocá-lo manualmente, geralmente é feito automaticamente pelo Nautilus. Com ele também é possível gerar Galerias de imagens, essas podem ser geradas pelo próprio modo gráfico, no entanto, se você tiver uma série de vídeos que você deseja criar galerias de todos vídeos, a melhor forma é criar um <i>script</i>, que será mostrado aqui.</b></blockquote><b>
+Copie esse código e cole no Terminal , se a resposta for <span style="color: #3d85c6;"><span style="font-size: large;">'Está instalado'</span></span> , então precisa instalar, se não, pule a próxima etapa que é de instalação:
+{% highlight bash %}
+[ $(which totem-video-thumbnailer) ] &amp;&amp; echo 'Está instalado' || 'Não tem instalado e precisa instalar'
+{% endhighlight %}
+
+Se 'Não tem instalado e precisa instalar' for a resposta, então instale, use seu gerenciador de pacotes para instalar, ele está na maioria dos repositórios da Distros:
+
+{% highlight bash %}
+apt-get install totem
+{% endhighlight %}
+
+Como podem ver ele é instalado junto com TOTEM</b>
+<blockquote class="tr_bq"><b>Totem é um media player livre para o ambiente desktop GNOME. Totem é o padrão media player no GNOME desde a versão 2.10. O programa usa GStreamer media para a reprodução, embora o xine também seja possível. O Totem é capaz de reproduzir muitos formatos, embora por vezes mais codecs são necessários.</b></blockquote><b>
+<a href="https://wiki.gnome.org/Apps/Videos" target="_blank"><span style="color: blue;"><span style="font-size: x-large;">Clique aqui para saber mais sobre o Totem</span></span></a>
+
+Tudo pronto e então vamos pôr mão na massa!
+
+Se você quiser criar só uma <i>thumbnail</i> de um vídeo seu, basta executar este comando:
+
+{% highlight bash %}
+totem-video-thumbnailer -j video.mp4 imagem.jpg
+{% endhighlight %}
+
+Mas se você quiser criar uma Galeria, que é propósito dessa postagem, você deverá executar este código:
+
+
+-l , não limitar a 30 segundos, o padrão é 30 segundos.
+-j , a saída será uma imagem, em jpg
+-s , tamanho dos quadros da galeria, pixels.
+-g , quantidade de quadros da galeria
+
+{% highlight bash %}
+totem-video-thumbnailer -l -j -s 500 -g 9 video.mp4 galeria.jpg
+{% endhighlight %}
+
+Agora se você quiser gerar galeria de vários videos, rode esse <span style="font-size: x-large;">Script</span>:
+
+Troque a palavra <span style="color: red;"><span style="font-size: x-large;">DIRETORIO</span></span> pelo nome do seu diretório! As imagens aparecerão no diretório que está o script, a não ser que você mude.</b>
+<blockquote class="tr_bq"><b><span style="font-size: x-large;"><span style="color: red;">Obs</span>.: Rode script fora do diretório dos vídeos e informe o caminho no script:</span></b></blockquote><b>
+</b>
+<blockquote class="tr_bq"><b><span style="font-size: x-large;"><span style="color: red;">Obs</span>.: Se você gerar uma Galeria com <i>tamanho dos quadros</i> x <i>quantidade de quadros</i> , muito grande, o totem-video-thumbnailer irá matar o processo: <span style="color: #6aa84f;"><span style="background-color: black;">Morto</span></span>.</span></b></blockquote><b>
+ <script src="https://gist.github.com/terminalrootsh/4b06f2c14cb05d6f4bd3.js"></script> 
+
+Você ainda pode melhorar esse script adicionando algumas informações do vídeo a ele, nesse caso é necessário possuir o o <span style="color: red;"><span style="font-size: x-large;">ffmpeg</span></span> instalado:
+
+<span style="font-size: x-large;">Descobrir a duração do Vídeo:</span>
+{% highlight bash %}
+ffmpeg -i video.mp4 2>&amp;1 | grep "Duration" | cut -d ' ' -f4 | tr -d ',' | cut -d '.' -f1
+{% endhighlight %}
+
+Você pode enviar esses dados para uma variável e resgatar a variável depois, se for no script, crie a variável dentro do loop:
+{% highlight bash %}
+DURACAO=$(ffmpeg -i "$MOVIE" 2>&amp;1 | grep "Duration" | cut -d ' ' -f4 | tr -d ',' | cut -d '.' -f1)
+echo $DURACAO
+{% endhighlight %}
+
+<u><span style="font-size: x-large;">Outros dados:</span></u>
+
+<span style="font-size: x-large;">Resolução do vídeo:</span>
+{% highlight bash %}
+ffmpeg -i DIRETORIO/"$MOVIE" 2>&amp;1 | grep 'fps' | cut -d' ' -f14 | tr -d ','
+{% endhighlight %}
+
+Largura do vídeo:
+{% highlight bash %}
+ffmpeg -i DIRETORIO/"$MOVIE" 2>&amp;1 | grep 'fps' | cut -d' ' -f14 | tr -d ',' | cut -d'x' -f1
+{% endhighlight %}
+
+<span style="font-size: x-large;">Frames por segundo:</span>
+{% highlight bash %}
+ffmpeg -i DIRETORIO/"$MOVIE" 2>&amp;1 | grep 'fps' | cut -d ',' -f5 | tr -d ' '
+{% endhighlight %}
+
+Se for pôr tudo no Script, alteraria a variável GALERIA deixando-a, assim:
+
+{% highlight bash %}
+GALERIA=$(totem-video-thumbnailer -l -j -s 500 -g 18 "$MOVIE" "$MOVIE"-"Duracao:$DURACAO-Resolucao:$RESOLUCAO-Frames:$FRAMES".jpg 2>/dev/null)
+{% endhighlight %}
+
+<span style="font-size: x-large;">Consequentemente o Script, ficaria assim:</span>
+ <script src="https://gist.github.com/terminalrootsh/1758ca97518c4c39388f.js"></script> 
+
+<span style="font-size: large;"><u><i>A saída ficaria mais ou menos assim:</i></u></span>
+<span style="color: #666666;"><i><span style="font-size: x-large;"> Video-Duracao:00:08:55-Resolucao:500x400-Frames:25.jpg</span></i></span>
+
+<span style="font-size: large;">Legal, dá pra ver as informações do vídeo pelo nome do arquivo!!!</span>
+
+<span style="font-size: x-large;">Comente!</span></b>
+
+</p>

@@ -1,0 +1,45 @@
+---
+layout: post
+title: Como gerar desenhos de nomes pelo terminal
+date: '2015-03-04T18:27:00.000-08:00'
+description: Como gerar desenhos de nomes pelo terminal
+main-class: 'misc'
+color: '#34a853'
+author: Marcos Oliveira
+tags:
+- Terminal
+- Comandos
+modified_time: '2015-05-25T18:27:44.915-07:00'
+thumbnail: http://2.bp.blogspot.com/-YRqkTiqe16U/VWPL10VFRyI/AAAAAAAABQY/j0pIxJXM2Ow/s72-c/figlet.png
+twitter_text: Como gerar desenhos de nomes pelo terminal
+introduction: Como gerar desenhos de nomes pelo terminal
+---
+
+<p>
+<div class="separator" style="clear: both; text-align: center;"><a href="http://2.bp.blogspot.com/-YRqkTiqe16U/VWPL10VFRyI/AAAAAAAABQY/j0pIxJXM2Ow/s1600/figlet.png" imageanchor="1" style="margin-left: 1em; margin-right: 1em;"><img border="0" height="169" src="http://2.bp.blogspot.com/-YRqkTiqe16U/VWPL10VFRyI/AAAAAAAABQY/j0pIxJXM2Ow/s640/figlet.png" width="640" /></a></div>
+<p>Estamos falando do <a href="http://www.figlet.org/" target="_blank">figlet</a>. <a href="http://www.figlet.org/" target="_blank">FIGlet</a> é um programa para fazer grandes letras de texto comum. Basta vc  instalá-lo em seu computador e abrir um novo terminal e executar o  comando com a palavra que você deseja:</p>
+{% highlight bash %}
+$ figlet Terminal Root
+{% endhighlight %}
+A saída será justamente a imagem desse post!
+Para instalar, se for Debian e debian-likes (Ubuntu, Mint,…), basta executar:
+{% highlight bash %}
+$ su
+{% endhighlight %}{% highlight bash %}
+# apt-get install figlet
+{% endhighlight %}
+<p></b><b>Se vc possuir o <em>sudo</em> instalado, execute com o <em>sudo</em>.</p>
+<p></b><b>Caso seja outra distro, baixe:</p>
+{% highlight bash %}
+$ wget ftp://ftp.figlet.org/pub/figlet/program/unix/figlet-2.2.5.tar.gz
+{% endhighlight %}
+Descompacte:
+{% highlight bash %}
+$ tar -xzvf figlet-2.2.5.tar.gz
+{% endhighlight %}
+<p></b><b>e compile o código de acordo com as informações no arquivo(<a href="https://translate.google.com.br/" target="_blank">em inglês</a>):</p>
+<p></b><div class="adp"><b>figlet-2.2.5/README</b></div><b></b><b>Site Oficial do Projeto: <a href="http://www.figlet.org/" target="_blank" title="http://www.figlet.org/">http://www.figlet.org/</a></p>
+
+
+
+</p>

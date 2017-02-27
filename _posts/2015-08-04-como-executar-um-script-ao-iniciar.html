@@ -1,0 +1,127 @@
+---
+layout: post
+title: Como executar um script ao iniciar sessão no Debian
+date: '2015-08-04T08:44:00.001-07:00'
+description: Como executar um script ao iniciar sessão no Debian
+main-class: 'debian'
+color: '#de4508'
+author: Marcos Oliveira
+tags:
+- Debian
+- MATE
+- Dicas
+modified_time: '2015-08-04T09:44:05.184-07:00'
+thumbnail: http://4.bp.blogspot.com/-2slbFwk2sqI/VcDaJpzO8GI/AAAAAAAABmw/U-lTIWISAM8/s72-c/xsession.jpg
+twitter_text: Como executar um script ao iniciar sessão no Debian
+introduction: Como executar um script ao iniciar sessão no Debian
+---
+
+<p>
+<div class="separator" style="clear: both; text-align: center;"><a href="http://4.bp.blogspot.com/-2slbFwk2sqI/VcDaJpzO8GI/AAAAAAAABmw/U-lTIWISAM8/s1600/xsession.jpg" imageanchor="1" style="margin-left: 1em; margin-right: 1em;"><img border="0" src="http://4.bp.blogspot.com/-2slbFwk2sqI/VcDaJpzO8GI/AAAAAAAABmw/U-lTIWISAM8/s400/xsession.jpg" /></a></div>
+<h3>Há situações que você precisa que iniciar um script ao iniciar sessão. Existem várias formas pŕaticas para fazer isso, aqui vou mostrar de algumas maneiras, começando pelas mais simples.</h3>
+<b>Se você criou um <span style="font-size: large;">script</span> e deseja que ele execute sempre que você iniciar uma nova sessão basta vc colocar o caminho da execução dentro do arquivo <span style="color: blue;"><span style="font-size: x-large;">.xsessionrc</span></span> na sua pasta raíz, lógico que esse script precisa ter permissão de execução: <span style="font-size: large;">chmod +x script</span>
+
+Nesse post <a href="http://www.terminalroot.com.br/2015/08/enviando-e-mail-via-terminal.html" target="_blank"><span style="color: blue;"><span style="font-size: x-large;">Enviando e-mail via Terminal</span></span></a> , mostrei como enviar e-mail pelo terminal , mas suponhamos que você , por questão de segurança , deseje obter um e-mail sempre que iniciar uma sessão no seu perfil, então você criou esse script (altere a variavel local <span style="font-size: large;"><span style="color: purple;">destinatario</span></span> pra o e-mail que você deseja receber a notificação):</b>
+<div class="adp"><b><span style="color: blue;">#!/bin/bash</span></b>
+<p><span style="color: blue;"># Enviar e-mail ao iniciar sessão</span></p>
+<b>
+</b><b><span style="color: #38761d;">sendsession()</span>{</b>
+<b>
+</b><b> <span style="color: #660000;">local</span> distro=<span style="color: magenta;">"$(cat /etc/issue | awk '{print <span style="color: #073763;">$1</span>,<span style="color: #073763;">$2</span>,<span style="color: #073763;">$3</span>}')"</span>;</b>
+<p> <span style="color: #660000;">local</span> nome=<span style="color: magenta;">"$(echo <span style="color: #073763;">$USER</span> | sed 's/./\U&amp;/')"</span>;</p>
+<p> <span style="color: #660000;">local</span> data="$(date +%d/%m/%Y)";</p>
+<p> <span style="color: #660000;">local</span> hora="$(date +%H:%M:%S)";</p>
+<p> <span style="color: #660000;">local</span> conteudo=<span style="color: magenta;">"<span style="color: #073763;">$nome</span>, sua máquina <span style="color: #073763;">$distro</span> Iniciou sessão no dia <span style="color: #073763;">$data</span> às <span style="color: #073763;">$hora</span>."</span>;</p>
+<p> <span style="color: #660000;">local</span> assunto=<span style="color: magenta;">"Nova sessão no <span style="color: #073763;">$distro</span>"</span>;</p>
+<p> <span style="color: #660000;">local</span> destinatario=<span style="color: red;">"SEUEMAIL@gmail.com"</span>;</p>
+<p> <span style="color: #660000;">echo</span> <span style="color: magenta;">"<span style="color: #073763;">$conteudo</span>" <span style="color: #660000;">|</span> <span style="color: black;">mutt -s</span> "<span style="color: #073763;">$assunto</span>" <span style="color: #073763;">$destinatario</span></span>;</p>
+<p> <span style="color: #660000;">exit</span> 0</p>
+<p> </p>
+<p>}</p>
+<b>
+</b><b>sendsession</b></div><b>
+
+então você salva no diretório que você deseja com as devidas permissões:
+
+{% highlight bash %}
+chmod +x ~/scripts/enviar.sh
+{% endhighlight %}
+
+Depois é só criar um arquivo ~/.xsessionrc e pôr o caminho da execução do script:
+
+{% highlight bash %}
+echo "/home/user/scripts/enviar.sh" > ~/.xsessionrc
+{% endhighlight %}
+
+<span style="font-size: large;">Pronto, agora sempre que uma sessão foi iniciada no seu perfil, você receberá uma e-mail informando-o!</span>
+
+o Xsession é para informações de sessão , se você usar o <span style="color: red;">~/.initrc</span> só funcionará quando o X for iniciado e não a sessão , ou seja , quando reinciar a máquina ou ligar (partir do modo texto para o gráfico, "startx"), logo , usar o .xsessionrc convém mais, até porque se alguém encerrar sessão e quiser entrar no seu perfil, sem reiniciar a máquina , você também receberá o e-mail :) .
+
+Você também pode usar pela Interface Gráfica , todas as GUIs modernas possuem , procure por "Aplicativos de sessão" na pesquisa da sua GUI ou tente encontrar em Preferencias. No MATE Desktop por exemplo o caminho no MENU PRINCIPAL é:
+
+<span style="color: purple;"><span style="font-size: large;">Sistema > Preferencias > Aplicativos de sessão.</span></span>
+
+Clique em <span style="font-size: large;">[ADICIONAR]</span>, abrirá uma nova janela, preencha os dados como você deseja de acordo com o exemplo da imagem abaixo e clique em <span style="font-size: large;">[ADICIONAR]</span> de novo, e pronto, funcionará do mesmo jeito:
+
+   [IMG1] </b>
+<div class="separator" style="clear: both; text-align: center;"><b><a href="http://1.bp.blogspot.com/-k9MhRm-Y26w/VcDce4cj5YI/AAAAAAAABm8/kSEQukO0VzE/s1600/Captura_de_tela.png" imageanchor="1" style="margin-left: 1em; margin-right: 1em;"><img border="0" height="438" src="http://1.bp.blogspot.com/-k9MhRm-Y26w/VcDce4cj5YI/AAAAAAAABm8/kSEQukO0VzE/s640/Captura_de_tela.png" width="640" /></a></b></div><b>  
+
+Outra forma é você criar um script inicializável do sistema e não só do seu usuário, mas precisa ser <span style="color: blue;"><span style="font-size: x-large;">ROOT</span></span> , exemplo:
+
+Crie um daemon baseado no exemplo que o próprio Debian possui em <span style="color: blue;"><span style="font-size: large;">/etc/init.d/skeleton</span></span> e altere de acordo com as informações do seu script , o mais importante é alterar a linha que possui <span style="color: blue;"><span style="font-size: large;">DAEMON=/usr/sbin/daemonexecutablename</span></span> para o caminho do seu script e se quis, exemplo:
+
+{% highlight bash %}
+vi /etc/init.d/enviar
+{% endhighlight %}
+
+### BEGIN INIT INFO
+# Provides: enviar
+# Required-Start: $remote_fs $syslog
+# Required-Stop: $remote_fs $syslog
+# Default-Start: 2 3 4 5
+# Default-Stop: 0 1 6
+# Short-Description: Envia e-mail
+# Description: Sempre que inciar sessão
+### END INIT INFO
+
+# Author: Foo Bar 
+DESC="Descrição do Serviço"
+DAEMON=/usr/sbin/enviar
+
+Veja que usei o caminho /usr/sbin/enviar , logo preciso mover o arquivo para lá!
+
+Depois você precisa pôr o daemon na para rodar na inicialização:
+
+Assim:
+{% highlight bash %}
+# update-rc.d enviar defaults
+{% endhighlight %}
+
+Ou assim, melhor assim se você possui o Jessie 8:
+{% highlight bash %}
+# insserv enviar
+{% endhighlight %}
+
+Caso você deseje retirá da incialização:
+
+Assim:
+{% highlight bash %}
+# update-rc.d -f enviar remove
+{% endhighlight %}
+
+Ou assim, melhor assim se você possui o Jessie 8:
+{% highlight bash %}
+# insserv -r enviar
+{% endhighlight %}
+ou
+{% highlight bash %}
+# insserv --remove enviar
+{% endhighlight %}
+
+
+Via:
+<a href="https://wiki.debian.org/XWindowSystem" target="_blank">https://wiki.debian.org/XWindowSystem</a>
+<a href="https://wiki.debian.org/Xinitrc" target="_blank">https://wiki.debian.org/Xinitrc</a>
+<a href="https://wiki.debian.org/Daemon" target="_blank">https://wiki.debian.org/Daemon</a></b>
+
+</p>

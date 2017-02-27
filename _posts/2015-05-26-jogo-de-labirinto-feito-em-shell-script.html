@@ -1,0 +1,258 @@
+---
+layout: post
+title: Jogo de labirinto feito em shell script
+date: '2015-05-26T18:01:00.000-07:00'
+description: Jogo de labirinto feito em shell script
+main-class: 'misc'
+color: '#34a853'
+author: Marcos Oliveira
+tags:
+- Games
+- Terminal
+modified_time: '2015-05-26T18:01:35.369-07:00'
+thumbnail: http://1.bp.blogspot.com/-nkW2LcvPRYE/VWUXAhzfAnI/AAAAAAAABSw/VpX95QLGnqM/s72-c/larinto-shell.png
+twitter_text: Jogo de labirinto feito em shell script
+introduction: Jogo de labirinto feito em shell script
+---
+
+<p>
+<div class="separator" style="clear: both; text-align: center;"><a href="http://1.bp.blogspot.com/-nkW2LcvPRYE/VWUXAhzfAnI/AAAAAAAABSw/VpX95QLGnqM/s1600/larinto-shell.png" imageanchor="1" style="margin-left: 1em; margin-right: 1em;"><img border="0" src="http://1.bp.blogspot.com/-nkW2LcvPRYE/VWUXAhzfAnI/AAAAAAAABSw/VpX95QLGnqM/s320/larinto-shell.png" /></a></div><b>Este jogo possui fases aleatórias e seleção do nível de dificuldade.
+ Foi baseado no gerador aleatório de labirintos de Joe Wingbermuehle localizado em: <a href="https://raw.github.com/joewing/maze/master/maze.sh" rel="nofollow" target="_blank">https://raw.github.com/joewing/maze/master/maze.sh</a>
+Acrescentei o conceito de movimento e colisões para criar o jogo.
+ Naturalmente uma linguagem compilada deve ser mais eficiente para  este tipo de uso, porém esse joguinho serve para mostrar o poder nem  sempre reconhecido do shell script.
+ Download: <a href="http://pastebin.com/download.php?i=rQdJ43Nw" target="_blank">clique aqui para baixar o script labirinto.sh</a>
+ Código:
+ </b>
+<div class="adp"><b>#!/bin/bash</b>
+<p>#</p>
+<p>#</p>
+<p># Bash Labirinto versão 1.0</p>
+<p># Este jogo foi baseado no gerador aleatório de labirintos de</p>
+<p># Joe Wingbermuehle localizado em https://raw.github.com/joewing/maze/master/maze.sh</p>
+<p># Acrescentei o conceito de movimento e colisões para criar o jogo.</p>
+<p># Naturalmente uma linguagem compilada deve ser mais eficiente para este tipo de uso,</p>
+<p># porém esse joguinho serve para mostrar o poder nem sempre reconhecido do shellscript.</p>
+<p>#</p>
+<p>#</p>
+<p># Referências e códigos utilizados:</p>
+<p># https://raw.github.com/joewing/maze/master/maze.sh</p>
+<p># http://lendscripts.blogspot.com.br/2012/10/licao-3-programacao-de-jogos-em.html</p>
+<p>#</p>
+<p># Escrito por Fernando Bolonhezi Giannasi – junho/2013# Validar versão do Bash</p>
+<p>if [ $(echo $BASH_VERSION | awk -F”.” ‘{ if ( ($1 >= 4) ) {print “0”} else {print “1”}}’) -ne “0” ]; then</p>
+<p>echo “Este jogo só funciona com Bash 4.0 ou posterior”</p>
+<p>echo “Sua versão é $BASH_VERSION”</p>
+<p>exit 1</p>
+<p>fi # Menu inicial</p>
+<p>setterm -cursor off</p>
+<p>while true; do</p>
+<p>clear</p>
+<p>echo -e ’33[01;33m’</p>
+<p>cat << EOF</p>
+<p>Labirinto Bash versão 1.0</p>
+<p>*******************************************</p>
+<p>Ajude a bolota vermelha a encontrar a saída</p>
+<p>*******************************************</p>
+<p>Comandos:</p>
+<p>a -> move a esquerda</p>
+<p>s -> move abaixo</p>
+<p>d -> move a direita</p>
+<p>w -> move acima</p>
+<p>q -> sai do jogo (a qualquer momento)</p>
+<p>*******************************************</p>
+<p>EOF</p>
+<p>tput sgr0</p>
+<p>echo -e ’33[01;31m’</p>
+<p>cat << EOF</p>
+<p>Selecione a dificuldade desejada:</p>
+<p>1-) Fácil</p>
+<p>2-) Médio</p>
+<p>3-) Difícil</p>
+<p>q-) Sair do Jogo</p>
+<p>EOF</p>
+<p>tput sgr0</p>
+<p>read -n1 -s DIFICULDADE</p>
+<p>case “$DIFICULDADE” in</p>
+<p>“1”)</p>
+<p>MAZE_WIDTH=”39″</p>
+<p>MAZE_HEIGHT=”21″</p>
+<p>break</p>
+<p>;;</p>
+<p>“2”)</p>
+<p>MAZE_WIDTH=”49″</p>
+<p>MAZE_HEIGHT=”31″</p>
+<p>break</p>
+<p>;;</p>
+<p>“3”)</p>
+<p>MAZE_WIDTH=”59″</p>
+<p>MAZE_HEIGHT=”41″</p>
+<p>break</p>
+<p>;;</p>
+<p>“q”)</p>
+<p>exit 0</p>
+<p>;;</p>
+<p>esac</p>
+<p>done</p>
+<p># Gerador de labirintos:</p>
+<p># Initialize the maze array.</p>
+<p>function init_maze {</p>
+<p>for ((y=0; y<MAZE_HEIGHT; y++)) ; do</p>
+<p>for ((x=1; x<$((MAZE_WIDTH-1)); x++)) ; do</p>
+<p>maze[$((y * MAZE_WIDTH + x))]=0</p>
+<p>done</p>
+<p>maze[$((y * MAZE_WIDTH + 0))]=1</p>
+<p>maze[$((y * MAZE_WIDTH + (MAZE_WIDTH – 1)))]=1</p>
+<p>done</p>
+<p>for ((x=0; x<MAZE_WIDTH; x++)) ; do</p>
+<p>maze[$x]=1</p>
+<p>maze[$(((MAZE_HEIGHT – 1) * MAZE_WIDTH + x))]=1</p>
+<p>done</p>
+<p>}</p>
+<p># Display the maze array.</p>
+<p>function print_maze {</p>
+<p>for ((y=0; y<MAZE_HEIGHT; y++)) ; do</p>
+<p>for ((x = 0; x < MAZE_WIDTH; x++ )) ; do</p>
+<p>if [[ maze[$((y * MAZE_WIDTH + x))] -eq 0 ]] ; then</p>
+<p>echo -n “[]”</p>
+<p>else</p>
+<p>echo -n ” ”</p>
+<p>fi</p>
+<p>done</p>
+<p>echo</p>
+<p>done</p>
+<p>}</p>
+<p># Carve the maze starting at the specified offset.</p>
+<p>function carve_maze {</p>
+<p>local index=$1</p>
+<p>local dir=$RANDOM</p>
+<p>local i=0</p>
+<p>maze[$index]=1</p>
+<p>while [ $i -le 4 ] ; do</p>
+<p>local offset=0</p>
+<p>case $((dir % 4)) in</p>
+<p>0) offset=1 ;;</p>
+<p>1) offset=-1 ;;</p>
+<p>2) offset=$MAZE_WIDTH ;;</p>
+<p>3) offset=$((-$MAZE_WIDTH)) ;;</p>
+<p>esac</p>
+<p>local index2=$((index + offset))</p>
+<p>if [[ maze[$index2] -eq 0 ]] ; then</p>
+<p>local nindex=$((index2 + offset))</p>
+<p>if [[ maze[$nindex] -eq 0 ]] ; then</p>
+<p>maze[$index2]=1</p>
+<p>carve_maze $nindex</p>
+<p>i=0</p>
+<p>dir=$RANDOM</p>
+<p>index=$nindex</p>
+<p>fi</p>
+<p>fi</p>
+<p>i=$((i + 1))</p>
+<p>dir=$((dir + 1))</p>
+<p>done</p>
+<p>}</p>
+<p># Gera um labirinto:</p>
+<p>TMP=”/tmp”</p>
+<p>if [ ! -d “$TMP” ]; then</p>
+<p>mkdir “$TMP”</p>
+<p>fi</p>
+<p>init_maze</p>
+<p>carve_maze $((2 * MAZE_WIDTH + 2))</p>
+<p>maze[$((MAZE_WIDTH + 2))]=1</p>
+<p>maze[$(((MAZE_HEIGHT – 2) * MAZE_WIDTH + MAZE_WIDTH – 3))]=1</p>
+<p>print_maze > $TMP/maze.txt</p>
+<p>sed -i ‘1d’ $TMP/maze.txt</p>
+<p>sed -i ‘s/^ //g’ $TMP/maze.txt</p>
+<p># Inicializando variáveis</p>
+<p>INPUT=”0″ # Entrada de dados</p>
+<p>m=”0″ # Movimento 1</p>
+<p>n=”1″ # Movimento 2</p>
+<p>C=”0″ # Teste de colisões</p>
+<p>x=”3″ # Coordenada x</p>
+<p>y=”0″ # Coordenada y</p>
+<p>counter=”1″ #Conta movimentos</p>
+<p>GANHA=”$(echo $MAZE_HEIGHT – 3 | bc)” # Detecta local da saída</p>
+<p>#Funções para imprimir labirinto e a bola</p>
+<p>function cat_maze() {</p>
+<p>echo -ne ’33[01;32m’</p>
+<p>cat $TMP/maze.txt</p>
+<p>tput sgr0</p>
+<p>echo “Coordenada X = $x”</p>
+<p>echo “Coordenada Y = $y”</p>
+<p>echo “Movimentos = $counter”</p>
+<p>}</p>
+<p>function cat_ball() {</p>
+<p>echo -ne ’33[01;31m’O</p>
+<p>tput sgr0</p>
+<p>}</p>
+<p># Posição inicial</p>
+<p>clear</p>
+<p>tput cup 0 0</p>
+<p>cat_maze</p>
+<p>tput cup $y $x</p>
+<p>cat_ball</p>
+<p>#Movimentação da bola:</p>
+<p>while [ $INPUT != “q” ];do</p>
+<p>read -n1 -s INPUT</p>
+<p>if [ $INPUT = a ];then</p>
+<p>let “m = x”</p>
+<p>let “n = y + 1″</p>
+<p>C=$(cat $TMP/maze.txt | sed -n “$n”p 2> /dev/null | cut -c”$m” 2>  /dev/null) # Se C não estiver vazio então atingimos uma parede</p>
+<p>if [ -z $C ];then</p>
+<p>let “x = x – 1″</p>
+<p>else</p>
+<p>let counter–</p>
+<p>fi</p>
+<p>fi</p>
+<p>if [ $INPUT = d ];then</p>
+<p>let “m = x + 2″</p>
+<p>let “n = y + 1″</p>
+<p>C=$(cat $TMP/maze.txt | sed -n “$n”p 2> /dev/null | cut -c”$m” 2>  /dev/null) # Se C não estiver vazio então atingimos uma parede</p>
+<p>if [ -z $C ];then</p>
+<p>let “x = x + 1″</p>
+<p>else</p>
+<p>let counter–</p>
+<p>fi</p>
+<p>fi</p>
+<p>if [ $INPUT = w ];then</p>
+<p>let “m = x + 1″</p>
+<p>let “n = y”</p>
+<p>C=$(cat $TMP/maze.txt | sed -n “$n”p 2> /dev/null | cut -c”$m” 2>  /dev/null) # Se C não estiver vazio então atingimos uma parede</p>
+<p>if [ -z $C ];then</p>
+<p>let “y = y – 1″</p>
+<p>else</p>
+<p>let counter–</p>
+<p>fi</p>
+<p>fi</p>
+<p>if [ $INPUT = s ];then</p>
+<p>let “m = x + 1″</p>
+<p>let “n = y + 2″</p>
+<p>C=$(cat $TMP/maze.txt | sed -n “$n”p 2> /dev/null | cut -c”$m” 2>  /dev/null) # Se C não estiver vazio então atingimos uma parede</p>
+<p>if [ -z $C ];then</p>
+<p>let “y = y + 1″</p>
+<p>else</p>
+<p>let counter–</p>
+<p>fi</p>
+<p>fi</p>
+<p>if [ “$y” -lt “0” ]; then y=0; let counter–; fi</p>
+<p># Checa se ganhou</p>
+<p>if [ “$y” -gt “$GANHA” ]; then</p>
+<p>tput cup $(echo $MAZE_HEIGHT + 3 | bc) 0</p>
+<p>echo -e ’33[01;31m’</p>
+<p>echo GANHOU!!!!!</p>
+<p>echo “Score: $counter movimentos realizados”</p>
+<p>tput sgr0</p>
+<p>echo</p>
+<p>setterm -cursor on</p>
+<p>exit 0</p>
+<p>fi</p>
+<p>clear</p>
+<p>cat_maze</p>
+<p># Imprime a bola na nova localização</p>
+<p>tput cup $y $x</p>
+<p>cat_ball</p>
+<p>let counter++</p>
+<p>done</p>
+<p>clear</p>
+<b># Fim do script</b></div>Via: http://www.vivaolinux.com.br/script/Jogo-de-labirinto-feito-em-shell-script
+
+</p>

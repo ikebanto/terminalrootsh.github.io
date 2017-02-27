@@ -1,0 +1,352 @@
+---
+layout: post
+title: 'Curso Certificação Linux LPI-101: Comandos do editor de texto Vim (Vi)'
+date: '2011-12-27T18:20:00.000-08:00'
+description: 'Curso Certificação Linux LPI-101: Comandos do editor de texto Vim (Vi)'
+main-class: 'misc'
+color: '#34a853'
+author: The Bang Bash
+tags:
+- Dicas
+modified_time: '2013-05-03T07:16:08.559-07:00'
+twitter_text: 'Curso Certificação Linux LPI-101: Comandos do editor de texto Vim (Vi)'
+introduction: 'Curso Certificação Linux LPI-101: Comandos do editor de texto Vim (Vi)'
+---
+
+<p>
+<span style="font-size: small;"><b>Introdução</b></span>
+<span style="font-size: small;">"vi" é a sigla para "<b>V</b>isual <b>I</b>nterface".          A origem desse nome se deve ao seguinte fato: quando o vi foi criado (começo          da década de 80), não era comum existirem editores de textos          como nos dias de hoje. Naquela época, você digitava um texto          mas não podia vê-lo! Isso mesmo! Em 1992, foi criado o vim          (Vi IMitator), um clone fiel ao vi, porém com muitas outras funcionaliades,          que só foram sendo adicionadas. Algum tempo depois, o vim passou          a ser chamado de `Vi IMproved' (vi melhorado).</span>
+<span style="font-size: small;">O vim é um dos editores de textos mais utilizados no mundo Unix.         Em alguns sistemas, existe um link simbólico (/bin/vi) apontando         para o /usr/vim. Em outros, o /bin/vi é o executável, só         que executa diretamente o vim. Muita gente acha que usa vi, mas na verdade         utiliza o vim, e eles têm algumas diferenças. O que você         verá abaixo fala sobre o vim.</span>
+<span style="font-size: small;">O vim é um editor de textos muito poderoso, ele pode: abrir vários         arquivos ao mesmo tempo, possui sistema de autocorreção,         auto-identação, seleção visual, macros, seleção         vertical de texto, uso de expressões regulares, sintaxe colorida,         e muito mais. Ele não é exclusivo do Unix, ou seja, pode         ser executado em outras plataformas, como Amiga, MacOS, Sun, Windows entre         outras.</span>
+<span style="font-size: small;">Existe também o gvim, que é o vim em modo gráfico,         com todas as funcionalidades do vim em pleno funcionamento, o que muda         é apenas o modo gráfico mesmo.</span>
+<span style="font-size: small;">O vim possui vários modos, ou seja, estados em que ele se encontra.         São eles: modo de inserção, comandos, linha de comando,         visual, busca e reposição. Abordarei os dois principais:</span>
+<span style="font-size: small;">
+</span>
+<span style="font-size: small;">
+</span>
+<span style="font-size: small;"><b><b>Modo</b> de inserção e de comandos</b></span>
+<span style="font-size: small;">Para identificar o modo (estado) do vim, basta visualizar o rodapé         da tela.</span>
+<span style="font-size: small;">Agora, vamos à prática. Para executar o vim, utilize:</span>
+<span style="font-size: small;">$ vi => Abre o vim vazio, sem nenhum arquivo e exibe a tela de apresentação.</span>
+<span style="font-size: small;">$ vi arquivo => Abre o arquivo de nome "arquivo".</span>
+<span style="font-size: small;">$ vi arquivo + => Abre o arquivo de nome "arquivo", com o         cursor no final do mesmo.</span>
+<span style="font-size: small;">$ vi arquivo +10 => Abre o arquivo de nome "arquivo", com         o cursor na linha 10.</span>
+<span style="font-size: small;">$ vi arquivo +/Copag => Abre o arquivo de nome "arquivo",         na primeira ocorrência da palavra "Copag".</span>
+<span style="font-size: small;">Ao executar o vim, ele inicia diretamente em modo de comando. Para comprovar,         é só olhar na última linha (rodapé) e não         vai haver nada lá. Isso quer dizer que você não conseguirá         escrever nada, pode digitar a vontade que só vai ouvir beeps. Para         começar a escrever, pressione "i" em seu teclado. O vim         entra em modo de inserção, que você comprova (como         falado anteriormente) pelo rodapé da tela, onde fica a seguinte         marcação:</span>
+<span style="font-size: small;">- - -- INSERT --</span>
+<span style="font-size: small;">Suponha que você já digitou o bastante, e quer salvar, por         segurança. Pressione a tecla ESC para voltar em modo de comandos.         E veja os comandos para salvar/sair:</span>
+<span style="font-size: small;">:w => Salva o arquivo que está sendo editado no momento.</span>
+<span style="font-size: small;">:q => Sai.</span>
+<span style="font-size: small;">:wq => Salva e sai.</span>
+<span style="font-size: small;">:x => Idem.</span>
+<span style="font-size: small;">ZZ => Idem.</span>
+<span style="font-size: small;">:w! => Salva forçado.</span>
+<span style="font-size: small;">:q! => Sai forçado.</span>
+<span style="font-size: small;">:wq! => Salva e sai forçado.</span>
+<span style="font-size: small;">Então, você editou uma boa quantidade de textos e quer salvar:</span>
+<span style="font-size: small;">:w</span>
+<span style="font-size: small;">Agora, quer voltar a editar o texto:</span>
+<span style="font-size: small;">i</span>
+<span style="font-size: small;">Lembre que utilizando o "i" para inserção, a         mesma se inicia inserindo texto antes do cursor. Veja agora outros subcomandos         de inserção de texto:</span>
+<span style="font-size: small;">A => Insere o texto no fim da linha onde se encontra o cursor</span>
+<span style="font-size: small;">o => Adiciona uma linha vazia abaixo da linha corrente</span>
+<span style="font-size: small;">O => Adiciona uma linha vazia acima da linha corrente</span>
+<span style="font-size: small;">Ctrl + h => Apaga último caracter à esquerda</span>
+<span style="font-size: small;">Voltando ao modo de comando: </span>
+<span style="font-size: small;">Veja agora subcomandos para movimentação pelo texto:</span>
+<span style="font-size: small;">Ctrl + f => Passa para a tela seguinte.</span>
+<span style="font-size: small;">Ctrl + b => Passa para a tela anterior.</span>
+<span style="font-size: small;">H => Move o cursor para a primeira linha da tela.</span>
+<span style="font-size: small;">M => Move o cursor para o meio da tela.</span>
+<span style="font-size: small;">L => Move o cursor para a última linha da tela.</span>
+<span style="font-size: small;">h => Move o cursor para caracter a esquerda.</span>
+<span style="font-size: small;">j => Move o cursor para linha abaixo.</span>
+<span style="font-size: small;">k => Move o cursor para linha acima.</span>
+<span style="font-size: small;">l => Move o cursor para caracter a direita.</span>
+<span style="font-size: small;">w => Move o cursor para o início da próxima palavra (não         ignorando a pontuação).</span>
+<span style="font-size: small;">W => Move o cursor para o início da próxima palavra (ignorando         a pontuação).</span>
+<span style="font-size: small;">b => Move o cursor para o início da palavra anterior (não         ignorando a pontuação).</span>
+<span style="font-size: small;">B => Move o cursor para o início da palavra anterior (ignorando         a pontuação).</span>
+<span style="font-size: small;">0 (zero) => Move o cursor para o início da linha corrente.</span>
+<span style="font-size: small;">^ => Move o cursor para o primeiro caracter não branco da linha.</span>
+<span style="font-size: small;">$ => Move o cursor para o fim da linha corrente.</span>
+<span style="font-size: small;">nG => Move o cursor para a linha de número "n"</span>
+<span style="font-size: small;">(susbstitua n pelo número da linha)..</span>
+<span style="font-size: small;">G => Move o cursor para a última linha do arquivo.</span>
+<span style="font-size: small;">
+</span>
+<span style="font-size: small;">
+</span>
+<span style="font-size: small;"><b>Copiando e colando textos no vim (utilizando o mouse)</b></span>
+<span style="font-size: small;">Selecione o texto necessário com o botão esquerdo do mouse.         Quando você for colar, saiba que o texto será colado a partir         de onde se encontra o cursor (esse que aparece, às vezes piscando         e às vezes não, quando você está digitando).         Para colar, depois de ter selecionado o texto, você pode utilizar         uma dessas opções:</span>
+<span style="font-size: small;">
+</span>
+<span style="font-size: small;">1) Pressionando o botão direito do mouse;</span>
+<span style="font-size: small;">2) Pressionando o botão direito + botão esquerdo juntos;</span>
+<span style="font-size: small;">3) Pressionando o botão do meio do mouse (mouse de 3 botões);</span>
+<span style="font-size: small;">Observação: Lembre-se que o vim deve estar no modo de inserção.</span>
+<span style="font-size: small;">
+</span>
+<span style="font-size: small;">
+</span>
+<span style="font-size: small;"><b>Usando o modo visual do vim</b></span>
+<span style="font-size: small;">Entre no modo visual: v</span>
+<span style="font-size: small;">Agora, utilize as teclas direcionais (setas) do teclado, para selecionar         o texto desejado.</span>
+<span style="font-size: small;">Pressione e cole, utilizando a tecla "p" (paste).</span>
+<span style="font-size: small;">Veja agora como apagar um determinado texto:</span>
+<span style="font-size: small;">Utilizando normalmente as teclas Backspace/Delete, ou entrando em modo         visual (v) e pressionando a tecla Delete.</span>
+<span style="font-size: small;">Você pode remover até o final de uma palavra, utilizando:         dw</span>
+<span style="font-size: small;">Pode também remover até o final de uma frase: d$</span>
+<span style="font-size: small;">
+</span>
+<span style="font-size: small;">
+</span>
+<span style="font-size: small;"><b>Desfazendo uma ação</b></span>
+<span style="font-size: small;">É claro que você pode desfazer uma ação que         você considera errado, ou que errou ao digitar o texto. É         só utilizar: u</span>
+<span style="font-size: small;">Se você precisar voltar o texto na tela, utilize as teclas Ctrl         + r.</span>
+<span style="font-size: small;">
+</span>
+<span style="font-size: small;">
+</span>
+<span style="font-size: small;"><b>Subcomandos para localização de texto</b></span>
+<span style="font-size: small;">/palavra => Procura pela palavra ou caracter acima ou abaixo do texto.</span>
+<span style="font-size: small;">?palavra => Move para a ocorrência anterior da palavra (para         repetir a busca use "n").</span>
+<span style="font-size: small;">n => Repete o último comando utilizando / ou ?.</span>
+<span style="font-size: small;">N => Repete o último comando / ou ? ao contrário (baixo         para cima).</span>
+<span style="font-size: small;">Ctrl+g => Mostra o nome do arquivo, o número da linha corrente         e o total de linhas.</span>
+<span style="font-size: small;">
+</span>
+<span style="font-size: small;">
+</span>
+<span style="font-size: small;"><b>Mais opções para remoção de caracteres</b></span>
+<span style="font-size: small;">x => Apaga o caracter onde o cursor estiver.</span>
+<span style="font-size: small;">dd => Apaga a linha inteira onde o cursor estive</span>
+<span style="font-size: small;">D => Apaga a linha a partir da posição do cursor até         o fim.</span>
+<span style="font-size: small;">J => Une a linha corrente à próxima.</span>
+<span style="font-size: small;">:5dd => Removeas próximas 7 linhas a partir da posição         do atual do cursor (qualquer número).</span>
+<span style="font-size: small;">
+</span>
+<span style="font-size: small;">
+</span>
+<span style="font-size: small;"><b>Mais para copiar e colar</b></span>
+<span style="font-size: small;">:yy => Copia a linha onde o cursor se encontra.</span>
+<span style="font-size: small;">:5yy => Copia as próximas 5 linhas a partir da posição         atual do cursor.</span>
+<span style="font-size: small;">:p => Cola o que foi copiado na linha abaixo do cursor atual.</span>
+<span style="font-size: small;">
+</span>
+<span style="font-size: small;">
+</span>
+<span style="font-size: small;"><b>Opções para substituição de textos</b></span>
+<span style="font-size: small;">rCARACTER => Substitui o caracter onde o cursor se encontra pelo caracter         especificado em CARACTER.</span>
+<span style="font-size: small;">RTEXTO => Substitui o texto corrente pelo texto digitado (sobrepõe).</span>
+<span style="font-size: small;">cw => Remove a palavra corrente para substituição.</span>
+<span style="font-size: small;">cc => Remove a linha corrente para substituição.</span>
+<span style="font-size: small;">C => Substitui o restante da linha corrente, esperando o texto logo         após o comando.</span>
+<span style="font-size: small;">J => Une a linha corrente à próxima.</span>
+<span style="font-size: small;">:s/velho/novo => Substitui a primeira ocorrência de "velho"         por "novo" na linha corrente.</span>
+<span style="font-size: small;">:% s/velho/novo => Substitui em todo o arquivo (%) a primeira ocorrência         de "velho" por "novo" em cada linha.</span>
+<span style="font-size: small;">:% s/velho/novo/g => Substitui em todo o arquivo (%), todas (g) as         ocorrências de "velho" por "novo".</span>
+<span style="font-size: small;">:% s/velho/novo/gc => Igual ao anterior, mas pedindo confirmação         para cada substituição.</span>
+<span style="font-size: small;">:% s/^String[0-9]//gc => Expressões regulares também         funcionam, como no sed.</span>
+<span style="font-size: small;">:% s/./\u&amp;/gc => Converte para maiúsculas (\u) o primeiro         caracter (.) de cada linha.</span>
+<span style="font-size: small;">
+</span>
+<span style="font-size: small;">
+</span>
+<span style="font-size: small;"><b>Abreviações</b></span>
+<span style="font-size: small;">:ab => Mostra todas as abbr.</span>
+<span style="font-size: small;">:abc[lear] => Remove todos.</span>
+<span style="font-size: small;">:iab => Apenas para modo de inserção.</span>
+<span style="font-size: small;">:iabc[lear] => Tira todos de inserção.</span>
+<span style="font-size: small;">:cab => Apenas p/modo de comando ( : ).</span>
+<span style="font-size: small;">:cabc[lear] => Tira todos os modos de comando.</span>
+<span style="font-size: small;">:una vc => Tira ab para vc.</span>
+<span style="font-size: small;">Observação: Pontuação, espaço ou o         ENTER, disparam a expansão de uma abreviação. Porém,         Ctrl+] também pode ser usado, para expandir sem adicionar caracteres.</span>
+<span style="font-size: small;">
+</span>
+<span style="font-size: small;">
+</span>
+<span style="font-size: small;"><b>Opções para o comando SET</b></span>
+<span style="font-size: small;">
+</span>
+<span style="font-size: small;">:set</span>
+<span style="font-size: small;">autowrite aw => Salva a cada alteração.</span>
+<span style="font-size: small;">backspace bs => Comportamento backspace (1 ou 2).</span>
+<span style="font-size: small;">errorbell eb => Campainha de erro.</span>
+<span style="font-size: small;">expandtab et => Troca tab por espacos.</span>
+<span style="font-size: small;">fileformat=dos ff => Converte o arquivo para DOS.</span>
+<span style="font-size: small;">hidden hid => Preserva o buffer.</span>
+<span style="font-size: small;">hlsearch hls => Elumina a última procura.</span>
+<span style="font-size: small;">ignorecase ic => Case insensitive na busca.</span>
+<span style="font-size: small;">incsearch is => Ilumina procura enquanto digita.</span>
+<span style="font-size: small;">laststatus=2 => Mostra linha de estado.</span>
+<span style="font-size: small;">lazyredraw lz => Não redesenha em macros.</span>
+<span style="font-size: small;">lines=N => Múmero de linhas na tela.</span>
+<span style="font-size: small;">magic => Usar mágicas na procura de padrões.</span>
+<span style="font-size: small;">number nu => Mostra núm da linha.</span>
+<span style="font-size: small;">report=N => Mostra aviso quando N linhas mudaram (0=sempre).</span>
+<span style="font-size: small;">showcmd => Mostra o comando que se está fazendo.</span>
+<span style="font-size: small;">showmatch sm => Mostra o casamento de {},[],().</span>
+<span style="font-size: small;">smartcase scs => Assume "noic" quando tiver maiúsculas.</span>
+<span style="font-size: small;">textwidth=N => Quebra de linha do texto.</span>
+<span style="font-size: small;">undolevels ul=N => Guarde os N últimos comandos para desfazer         (padrão=1000).</span>
+<span style="font-size: small;">vb t_vb= => Retira o "beep" de erro.</span>
+<span style="font-size: small;">
+</span>
+<span style="font-size: small;">
+</span>
+<span style="font-size: small;"><b>Agora invertendo maiúsculas/minúsculas</b></span>
+<span style="font-size: small;">5~ => Inverte os 5 próximos caracteres.</span>
+<span style="font-size: small;">g~$ => Inverte todos os caracteres até o fim da linha.</span>
+<span style="font-size: small;">seleciona, u => Converte para minúsculas.</span>
+<span style="font-size: small;">seleciona, U => Converte para maiúsculas.</span>
+<span style="font-size: small;">seleciona, ~ => Inverte.</span>
+<span style="font-size: small;">Observação: Onde está escrito "seleciona",         é para fazer utilizando o modo visual (v).</span>
+<span style="font-size: small;">Agora veja como definir coluna de quebra de linha (problema que eu tive         quando iniciei no aprendizado do vim):</span>
+<span style="font-size: small;">:set textwidth=N</span>
+<span style="font-size: small;">Se você já estiver num arquivo pronto:</span>
+<span style="font-size: small;">:set wm=5 => O número 5 aqui são as colunas que serão         "cortadas".</span>
+<span style="font-size: small;">gqG => Até o final do arquivo.</span>
+<span style="font-size: small;">Vamos ver agora o que podemos fazer pressionando a tecla "Ctrl":</span>
+<span style="font-size: small;">
+</span>
+<span style="font-size: small;">É claro que é segurando Ctrl + .</span>
+<span style="font-size: small;">No modo de COMANDO:</span>
+<span style="font-size: small;">A => Incrementa um número (Add)</span>
+<span style="font-size: small;">X => Decrementa um número</span>
+<span style="font-size: small;">S => ScrollLock</span>
+<span style="font-size: small;">L => Redesenha tela</span>
+<span style="font-size: small;">V => Modo visual (Visual Vertical)</span>
+<span style="font-size: small;">G => Status do arquivo</span>
+<span style="font-size: small;">M => Início da próxima linha</span>
+<span style="font-size: small;">E => Linha abaixo sem mover cursor</span>
+<span style="font-size: small;">Y => Linha acima sem mover cursor</span>
+<span style="font-size: small;">N => Próxima linha (Next)</span>
+<span style="font-size: small;">P => Linha anterior (Previous)</span>
+<span style="font-size: small;">F => PageDown (Forward)</span>
+<span style="font-size: small;">B => PageUp (Backyard)</span>
+<span style="font-size: small;">U => PageUp / 2 (Up)</span>
+<span style="font-size: small;">D => PageDown / 2 (Down)</span>
+<span style="font-size: small;">Agora, no modo de INSERÇÃO:</span>
+<span style="font-size: small;">A => Insere o último texto inserido</span>
+<span style="font-size: small;">I => TAB</span>
+<span style="font-size: small;">S => ScrollLock</span>
+<span style="font-size: small;">H => BackSpace</span>
+<span style="font-size: small;">T => 2 tab's no início da linha (Two Tabs)</span>
+<span style="font-size: small;">V => Anula expansão do próximo caractere</span>
+<span style="font-size: small;">J => Enter - quebra de linha</span>
+<span style="font-size: small;">M => Enter - quebra de linha</span>
+<span style="font-size: small;">L => Redesenha tela</span>
+<span style="font-size: small;">R => Insere conteúdo do registrador [a-z] (Veja abaixo)</span>
+<span style="font-size: small;">K => Insere um dígrafo (Veja abaixo)</span>
+<span style="font-size: small;">N => Procura palavra no texto atual (Next)</span>
+<span style="font-size: small;">P => Procura palavra no texto atual (Previous)</span>
+<span style="font-size: small;">Y => Copia caractere que está acima (Yank)</span>
+<span style="font-size: small;">Veja os caracteres especiais:</span>
+<span style="font-size: small;">ga => Mostra o código da letra sobre o cursor.</span>
+<span style="font-size: small;">:dig => Mostra todos os dígrafos disponíveis (tabela).</span>
+<span style="font-size: small;">Exemplos: Para fazer um º, use Ctrl+K,-,o ("Ctrl"+"K"+"-"+"o").</span>
+<span style="font-size: small;">Para fazer um ½, use Ctrl+K,1,2 ("Ctrl"+"K"+"1"+"2").</span>
+<span style="font-size: small;">
+</span>
+<span style="font-size: small;">
+</span>
+<span style="font-size: small;"><b>Trabalhando com arquivos e janelas múltiplas</b></span>
+<span style="font-size: small;">Você pode abrir múltiplos arquivos, por exemplo:</span>
+<span style="font-size: small;">$ vim arquivo1 arquivo2</span>
+<span style="font-size: small;">E pode alternar entre as janelas. Veja:</span>
+<span style="font-size: small;">:wn => Grava o atual e vai ao próximo.</span>
+<span style="font-size: small;">:wN => Grava o atual e vai ao anterior.</span>
+<span style="font-size: small;">:args => Mostra todos os arquivos atuais.</span>
+<span style="font-size: small;">:qa => Sai de todas as janelas de uma vez.</span>
+<span style="font-size: small;">:all => Abre todos os arquivos em janelas individuais.</span>
+<span style="font-size: small;">Tecla chave das janelas = Crtl+W</span>
+<span style="font-size: small;">j, seta abaixo => Move para janela abaixo.</span>
+<span style="font-size: small;">k, seta acima => Move para janela acima.</span>
+<span style="font-size: small;">o => Apenas esta janela, fecha todas as outras (Only).</span>
+<span style="font-size: small;">+, - => Muda o tamanho da janela.</span>
+<span style="font-size: small;">= => Deixa todas as janelas com tamanhos iguais.</span>
+<span style="font-size: small;">
+</span>
+<span style="font-size: small;"><b>Os registradores</b></span>
+<span style="font-size: small;">"[a-z] => Use o registrador [a-z] para o próximo delete,         cópia ou cola.</span>
+<span style="font-size: small;">:reg => Mostra o conteúdo de todos os registradores.</span>
+<span style="font-size: small;">:reg [a-z] => Mostra o conteúdo do registradores [a-z].</span>
+<span style="font-size: small;">Observação: O [a-z] pode ser: 0-9a-z%#:.-="</span>
+<span style="font-size: small;">Marcas:</span>
+<span style="font-size: small;">m[a-z] => Marca em [a-z] a posição corrente do cursor.</span>
+<span style="font-size: small;">`[a-z] => Vai até a marca [a-z].</span>
+<span style="font-size: small;">`` => Vai até a posição anterior ao último         pulo (alterna).</span>
+<span style="font-size: small;">:marks => Mostra as marcas ativas.</span>
+<span style="font-size: small;">
+</span>
+<span style="font-size: small;"><b>Fazendo gravação de seqüência de comandos</b></span>
+<span style="font-size: small;">q[a-z] => Inicia a gravação de uma seqüência         no registrador [a-z].</span>
+<span style="font-size: small;">q[A-Z] => Inicia a gravação, adicionando no registrador         [a-z].</span>
+<span style="font-size: small;">q => Pára a gravação.</span>
+<span style="font-size: small;">@[a-z] => Executa a seqüência do registrador [a-z] (5 vezes?         5@a)</span>
+<span style="font-size: small;">Dica: Pode-se colocar o @[a-z] dentro da própria gravação         do q[a-z]! Assim ele é executado recursivamente. Muito útil         quando há uma procura de padrões na gravação.         faz para todas as ocorrências.</span>
+<span style="font-size: small;">
+</span>
+<span style="font-size: small;">
+</span>
+<span style="font-size: small;"><b>Mapeamentos</b></span>
+<span style="font-size: small;">:map :r!date => Mapeamento em modo de comando.</span>
+<span style="font-size: small;">:imap :r!date => Mapeamento em modo de inserção.</span>
+<span style="font-size: small;">:cmap r!date => Mapeamento em modo linha de comando.</span>
+<span style="font-size: small;">:vmap :r!date => Mapeamento em modo visual.</span>
+<span style="font-size: small;">Exemplos:</span>
+<span style="font-size: small;">"html: negrito no trecho selecionado</span>
+<span style="font-size: small;">:vmap d`pa # html: negrito no trecho selecionado</span>
+<span style="font-size: small;">"liga/desliga autoIndent</span>
+<span style="font-size: small;">:map ,si :set ai!:echo "autoIndent="&amp;ai</span>
+<span style="font-size: small;">"mostrar os espaços em branco no fim das linhas</span>
+<span style="font-size: small;">:map / *$^M</span>
+<span style="font-size: small;">Através dos mapeamentos é possível "encurtar"         comandos, ou seja, abreviá-los. Conheça as sintaxes:</span>
+<span style="font-size: small;">Comment => Ciano</span>
+<span style="font-size: small;">Constant => Roxo</span>
+<span style="font-size: small;">Identifier => Ciano</span>
+<span style="font-size: small;">PreProc => Azul escuro</span>
+<span style="font-size: small;">Special => Vermelho</span>
+<span style="font-size: small;">Statement => Amarelo</span>
+<span style="font-size: small;">String => Roxo</span>
+<span style="font-size: small;">Type => Verde</span>
+<span style="font-size: small;">Todo => Preto, fundo marrom</span>
+<span style="font-size: small;">Error => Branco, fundo vermelho</span>
+<span style="font-size: small;">Ignore => Preto, fundo preto! - esconde</span>
+<span style="font-size: small;">
+</span>
+<span style="font-size: small;">
+</span>
+<span style="font-size: small;"><b>Utilizando o recurso de expandtab</b></span>
+<span style="font-size: small;">Mas, o que isso faz? Transforma todos os TABs em espaços. Podemos         ativar dentro do próprio vim, utilizando o comando:</span>
+<span style="font-size: small;">:set expandtab</span>
+<span style="font-size: small;">Para desabilitar:</span>
+<span style="font-size: small;">:set noexpandtab</span>
+<span style="font-size: small;">Podemos colocar também no arquivo ~/.vimrc a seguinte linha:</span>
+<span style="font-size: small;">set expandtab</span>
+<span style="font-size: small;">O arquivo ~/.vimrc pode ser usado para muitas configurações,         e essa é uma delas. Existe ainda o arquivo ~/.exrc, mas não         entraremos em detalhes.</span>
+<span style="font-size: small;">Podemos incluir a saída de um comando no vim, utilizando:</span>
+<span style="font-size: small;">:r!comando</span>
+<span style="font-size: small;">Por exemplo:</span>
+<span style="font-size: small;">:r!rpm -q kernel</span>
+<span style="font-size: small;">Incluiria o seguinte resultado, dentro do seu texto (isso na minha máquina):</span>
+<span style="font-size: small;">kernel-2.4.18-3</span>
+<span style="font-size: small;">Dicas diversas do vim:</span>
+<span style="font-size: small;">:xit => Igual :wq, mas só grava se tiver sido alterado algo         no arquivo.</span>
+<span style="font-size: small;">:map N_ARQ ^R=expand("%:t:r")^M</span>
+<span style="font-size: small;">Imprime no arquivo o próprio nome do arquivo editado quando N_ARQ         é digitado.</span>
+<span style="font-size: small;">Agora, veja como alinhar o texto:</span>
+<span style="font-size: small;">:left</span>
+<span style="font-size: small;">:right</span>
+<span style="font-size: small;">:center</span>
+<span style="font-size: small;">E para fazer uma busca de 2 palavras ao mesmo tempo:</span>
+<span style="font-size: small;">/palavra1\|palavra2</span>
+<span style="font-size: small;">
+</span>
+<span style="font-size: small;">O vim é um editor de textos com centenas de opções,         comandos, strings... Enão dá para abordar tudo aqui. Por         isso, a melhor maneira de conhecê-lo a fundo é usando-o.</span>
+<span style="font-size: small;"> </span>
+<span style="font-size: small;"><b>Texto Originalmente publicado no site InfoWester, link da fonte:</b></span>
+<span style="font-size: small;"><a href="http://www.infowester.com/linuxvi.php"><b style="color: blue;">http://www.infowester.com/linuxvi.php</b></a></span>
+
+</p>

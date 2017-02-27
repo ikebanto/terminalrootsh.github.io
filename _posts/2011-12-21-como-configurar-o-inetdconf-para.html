@@ -1,0 +1,64 @@
+---
+layout: post
+title: Como configurar o inetd.conf para habilitar uma porta
+date: '2011-12-20T19:52:00.000-08:00'
+description: Como configurar o inetd.conf para habilitar uma porta
+main-class: 'linux'
+color: '#3b5998'
+author: The Bang Bash
+tags:
+- Debian
+- Linux
+- Servidores
+- Redes
+modified_time: '2013-05-03T07:16:08.830-07:00'
+twitter_text: Como configurar o inetd.conf para habilitar uma porta
+introduction: Como configurar o inetd.conf para habilitar uma porta
+---
+
+
+<p>Quando você abre uma porta no <a href="http://marcospinguim.blogspot.com/2011/12/como-utilizar-o-iptables-netfilter.html" style="color: blue;" target="_blank">Iptables</a>, não significa que existirá um <u><span style="color: orange;">Daemon</span><span style="color: black;">(um programa rodando em background gerenciado pelo sistema)</span></u> para aquela porta.Para habilitar um Daemon para tal porta é necessário configurarmos o<span style="color: blue;"> inetd</span>.O <span style="color: blue;">inetd</span> é um Daemon (geralmente os Daemons terminam com a letra "d", exemplo: o daemon do TCP é o tcdp, ou seja, um programa que gerencia o TCP), e o arquivo de configuração dele é o "<span style="color: blue;">inetd.conf</span>".Precisei habilitar a inicialização do serviço de leitura de <span style="color: #3d85c6;">Sockets</span>(usado em ligações de redes de computadores para um fim de um elo bidirecional de comunicação entre dois programas), e para isso precisava de uma porta "livre", a porta 8080 já tem um serviço pré-definido, de webcaching.</p>
+
+<p>Se você visualisar o arquivo de serviços</p>
+{% highlight bash %}
+gedit /etc/services
+{% endhighlight %}
+
+<p>verás que na linha correspondente a porta 8080 terá seguinte informação</p>
+{% highlight bash %}
+nome      porta/protocolo        apelido     #comentário 
+http-alt 8080/tcp webcache # WWW caching service
+http-alt 8080/udp   # WWW caching service
+{% endhighlight %}
+
+<p>mas se verificar no nmap 127.0.0.1, mesmo que inicie algo nessa porta, não conseguira escutar nela, pois é necessário configurar o inetd.conf.Para editá-lo, abra-o com seu editor de preferência, para editar precisa ser root</p>
+
+{% highlight bash %}
+su
+gedit /etc/inetd.conf
+{% endhighlight %}
+
+<p>assim que o mesmo estiver aberto, crie uma nova linha, sem comentário(sem o #) e inclua a porta 8080 (você também pode usar outra porta, mesmo se não houver nome para ela, só criar o nome no /etc/services) da seguinte maneira(serviço, tipo de soquete, protocolo, opções, usuário, caminho do serviço e o serviço opc.):</p>
+{% highlight bash %}
+Meu_Servico    stream    tcp    nowait      root   /usr/bin/php5   /usr/bin/php5 -i
+{% endhighlight %}
+
+<p>isso quer dizer que: dei o nome de "Meu_Servico"; informei que o tipo de socket será "stream"; o protocolo será "tcp"; a opção será "nowait"(para outros serviços que não seja tcp, usa-se "wait"); o nome do usuaŕio "marcos"(se quiser o root, deve digitá-lo nesse campo); o caminho do programa, nesse caso eu pus "/usr/bin/php" como exemplo, mas se você quiser deixar para qualquer programa, basta deixá-lo em branco; e o último campo é opcional, serve pra passar argumentos pro programa servidor que será rodado(ex.: /bin/bash -i, rodará em modo interativo.).</p>
+
+<p>Obs.: Se você não for mais usar a porta, precisa comentar a linha utilizando o "#" na frente.</p>
+
+<p>Após habilitar e salvar, agora basta reiniciar o inetd, no Debian (Não sei se também nas Debian-Likes(Ubuntu, Backtrack, Linux Mint) é o mesmo modo(caminho) de reiniciar), o comando é:</p>
+
+{% highlight bash %}
+# /etc/init.d/openbsd-inetd restart
+{% endhighlight %}, se você rodar um telnet na porta 8080, verás que já estará escutando:
+{% highlight bash %}
+# telnet localhost 8080
+{% endhighlight %}
+
+<p>ao rodar esse comando, será encaminhado ao subshell, então dê um exit, para retornar ao Shell.</p>
+
+
+<p>Pronto, agora a porta estará esperando pelo serviço.Espero que gostem e comentem!</p>
+
+

@@ -1,0 +1,31 @@
+---
+layout: post
+title: Perdeu a senha de root do MySQL? Recupere agora
+date: '2015-05-26T18:16:00.000-07:00'
+description: Perdeu a senha de root do MySQL? Recupere agora
+main-class: 'misc'
+color: '#34a853'
+author: Marcos Oliveira
+tags:
+- Dicas
+- MySQL
+modified_time: '2015-05-26T18:16:16.826-07:00'
+thumbnail: http://1.bp.blogspot.com/-yKXZXhMvX-A/VWUaUQDTdTI/AAAAAAAABTQ/XkwsjqwD8Ko/s72-c/como-aterar-senha-do-mysql.jpg
+twitter_text: Perdeu a senha de root do MySQL? Recupere agora
+introduction: Perdeu a senha de root do MySQL? Recupere agora
+---
+
+<p>
+<div class="separator" style="clear: both; text-align: center;"><a href="http://1.bp.blogspot.com/-yKXZXhMvX-A/VWUaUQDTdTI/AAAAAAAABTQ/XkwsjqwD8Ko/s1600/como-aterar-senha-do-mysql.jpg" imageanchor="1" style="margin-left: 1em; margin-right: 1em;"><img border="0" src="http://1.bp.blogspot.com/-yKXZXhMvX-A/VWUaUQDTdTI/AAAAAAAABTQ/XkwsjqwD8Ko/s320/como-aterar-senha-do-mysql.jpg" /></a></div>
+ <b>Pare o <em>MySQL</em>:
+ <div class="adp">$ sudo service mysql stop</div>Inicie o modo seguro:
+ <div class="adp">$ sudo mysqld_safe –skip-grant-tables</div>Abra outro terminal e execute:
+ <div class="adp">$ mysql -u root</div>Depois:
+ MYSQL> 
+<div class="adp">UPDATE mysql.user SET Password=PASSWORD(‘novasenha’) WHERE User=’root';</div>Inicie o MySQL:
+ <div class="adp">$ sudo service mysql stop</div>Fim.
+ Fonte: <a href="http://stackoverflow.com/questions/10895163/how-to-find-out-the-mysql-root-password" rel="nofollow" target="_blank">database – How to find out the MySQL root password – Stack Overflow</a>
+
+Via: <a href="http://www.vivaolinux.com.br/dica/Perdeu-a-senha-de-root-do-MySQL-Recupere-agora" rel="nofollow" target="_blank">Viva O Linux – Publicado por Xerxes Lins</a></b>
+
+</p>

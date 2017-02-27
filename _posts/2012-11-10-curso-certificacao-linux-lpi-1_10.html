@@ -1,0 +1,144 @@
+---
+layout: post
+title: 'Curso Certificação Linux LPI-1: Arquitetura de Hardware.'
+date: '2012-11-10T15:15:00.000-08:00'
+description: 'Curso Certificação Linux LPI-1: Arquitetura de Hardware.'
+main-class: 'linux'
+color: '#3b5998'
+author: The Bang Bash
+tags:
+- Linux
+- LPI
+modified_time: '2013-05-03T07:16:07.184-07:00'
+thumbnail: http://2.bp.blogspot.com/-T9f3plyrSnw/UJ7bclcvPbI/AAAAAAAAAik/3PJ_UUzBxHg/s72-c/arquitetura.jpg
+twitter_text: 'Curso Certificação Linux LPI-1: Arquitetura de Hardware.'
+introduction: 'Curso Certificação Linux LPI-1: Arquitetura de Hardware.'
+---
+
+<p>
+</script><a href="http://www.blogger.com/blogger.g?blogID=3999208484595674897" imageanchor="1" style="clear: left; float: left; margin-bottom: 1em; margin-right: 1em;"></a><a href="http://www.blogger.com/blogger.g?blogID=3999208484595674897" imageanchor="1" style="clear: left; float: left; margin-bottom: 1em; margin-right: 1em;"></a><a href="http://www.blogger.com/blogger.g?blogID=3999208484595674897" imageanchor="1" style="clear: left; float: left; margin-bottom: 1em; margin-right: 1em;">
+</a><a href="http://2.bp.blogspot.com/-T9f3plyrSnw/UJ7bclcvPbI/AAAAAAAAAik/3PJ_UUzBxHg/s1600/arquitetura.jpg" imageanchor="1" style="margin-left: 1em; margin-right: 1em;"><img border="0" height="247" src="http://2.bp.blogspot.com/-T9f3plyrSnw/UJ7bclcvPbI/AAAAAAAAAik/3PJ_UUzBxHg/s320/arquitetura.jpg" width="320" /></a></div><a href="http://www.blogger.com/blogger.g?blogID=3999208484595674897" imageanchor="1" style="clear: left; float: left; margin-bottom: 1em; margin-right: 1em;"></a><a href="http://www.blogger.com/blogger.g?blogID=3999208484595674897" imageanchor="1" style="clear: left; float: left; margin-bottom: 1em; margin-right: 1em;"></a><a href="http://www.blogger.com/blogger.g?blogID=3999208484595674897" imageanchor="1" style="clear: left; float: left; margin-bottom: 1em; margin-right: 1em;">
+</a><b></b>
+<blockquote><b>Entrada/saída (em inglês: Input/output, sigla I/O) é um termo utilizado quase que exclusivamente no ramo da computação (ou informática), indicando entrada (inserção) de dados por meio de algum código ou programa, para algum outro programa ou hardware, bem como a sua saída (obtenção de dados) ou retorno de dados, como resultado de alguma operação de algum programa, consequentemente resultado de alguma entrada.</b></blockquote><b>
+
+São exemplos de unidades de entrada de um computador: disco rígido, microfone, teclado, mouse, tela sensível ao toque, Scanner, Leitor de código de barras, Celular, Pendrive, Máquina fotográfica digital, Webcam, joystick e outros acessórios de jogos. 
+
+São exemplos de unidades de saída de um computador: monitor, caixas de som, impressora, disco rígido.  Um placa de sompadrão, por exemplo, utiliza as portas: 0x220, 0x330 e 0x338.  Cada dispositivo utiliza um endereço de porta única que não pode ser compartilhado por outros dispositivos.  Os endereços de E/S podem ser visualizados com o comando: 
+{% highlight bash %}
+
+# cat /proc/ioports
+
+{% endhighlight %}
+ O termo DMA é um acrónimo para a expressão em inglês Direct memory access. O DMA permite que certos dispositivos de hardware num computador acessem a memória do sistema para leitura e escrita independentemente da CPU.
+
+ Muitos sistemas utilizam DMA, incluindo controladores de disco, placas gráficas, de rede ou de som.  Os canais de DMA no sistema podem ser visualizados através do comando: 
+{% highlight bash %}
+
+# cat /proc/dma
+
+{% endhighlight %}
+ Um pedido de interrupção (abreviação IRQ (em inglês)) é a forma pela qual componentes de hardware requisitam tempo computacional da CPU. Um IRQ é a sinalização de um pedido de interrupção de hardware.As interrupções do sistema podem ser visualizadas com o comando</b>: 
+{% highlight bash %}
+
+# cat /proc/interrupts
+
+{% endhighlight %}
+
+<div class="separator" style="clear: both; text-align: center;"><a href="http://3.bp.blogspot.com/-RI-QL5EY6lY/UJ7bxsSIdxI/AAAAAAAAAiw/CRzygQE4uYE/s1600/irq.png" imageanchor="1" style="margin-left: 1em; margin-right: 1em;"><img border="0" height="196" src="http://3.bp.blogspot.com/-RI-QL5EY6lY/UJ7bxsSIdxI/AAAAAAAAAiw/CRzygQE4uYE/s320/irq.png" width="320" /></a></div>Recursos já reservados: 
+<div class="separator" style="clear: both; text-align: center;"><a href="http://3.bp.blogspot.com/-TNlWoie9qd4/UJ7cBW6NpQI/AAAAAAAAAi8/0mMjm2lQRyo/s1600/recursos.png" imageanchor="1" style="clear: left; float: left; margin-bottom: 1em; margin-right: 1em;"><img border="0" height="187" src="http://3.bp.blogspot.com/-TNlWoie9qd4/UJ7cBW6NpQI/AAAAAAAAAi8/0mMjm2lQRyo/s320/recursos.png" width="320" /></a></div><b>SCSI (pronuncia-se "scãzi"), sigla de Small Computer System Interface, é uma tecnologia que permite ao usuário conectar uma larga gama de periféricos, tais como discos rígidos, unidades CD-ROM, impressoras e scanners.
+
+
+Características físicas e elétricas de uma interface de entrada e saída (E/S) projetadas para se conectarem e se comunicarem com dispositivos periféricos são definidas pelo SCSI.Existe uma grande variedade de padrões de dispositivos SCSI, sendo que estes inicialmente usavam interfaces paralelas. Alguns exemplos: SCSI-1 (barramento de 8 bits, clock de 5 MHz e taxa de transferência de 5 MB/s), Fast SCSI (barramento de 8 bits, clock de 10 MHz e taxa de transferência de 10 MB/s), Ultra SCSI (barramento de 8 bits, clock de 20 MHz e taxa de transferência de 20 MB/s), Ultra2 Wide SCSI (barramento de 16 bits, clock de 40 MHz e taxa de transferência de 80 MB/s) e Ultra-320 SCSI (barramento de 16 bits, clock de 80 MHz DDR e taxa de transferência de 320 MB/s).</b>
+<blockquote class="tr_bq"><b>SCSI é mais comumente usado em discos rígidos e unidades de fita, mas também pode ser conectado em uma grande gama de dispositivos, incluindo scanners e drivers de CD.</b></blockquote><div class="separator" style="clear: both; text-align: center;"><a href="http://4.bp.blogspot.com/-x0sUeRef4rs/UJ7cQyOMr3I/AAAAAAAAAjI/TJAc50zBvCg/s1600/scsi_tipos.png" imageanchor="1" style="margin-left: 1em; margin-right: 1em;"><img border="0" height="320" src="http://4.bp.blogspot.com/-x0sUeRef4rs/UJ7cQyOMr3I/AAAAAAAAAjI/TJAc50zBvCg/s320/scsi_tipos.png" width="302" /></a></div><a href="http://www.blogger.com/blogger.g?blogID=3999208484595674897" imageanchor="1" style="clear: left; float: left; margin-bottom: 1em; margin-right: 1em;"></a><a href="http://www.blogger.com/blogger.g?blogID=3999208484595674897" imageanchor="1" style="clear: left; float: left; margin-bottom: 1em; margin-right: 1em;"></a><a href="http://www.blogger.com/blogger.g?blogID=3999208484595674897" imageanchor="1" style="clear: left; float: left; margin-bottom: 1em; margin-right: 1em;">
+</a><a href="http://www.blogger.com/blogger.g?blogID=3999208484595674897" imageanchor="1" style="clear: left; float: left; margin-bottom: 1em; margin-right: 1em;"></a><a href="http://www.blogger.com/blogger.g?blogID=3999208484595674897" imageanchor="1" style="clear: left; float: left; margin-bottom: 1em; margin-right: 1em;"></a><a href="http://www.blogger.com/blogger.g?blogID=3999208484595674897" imageanchor="1" style="clear: left; float: left; margin-bottom: 1em; margin-right: 1em;">
+</a><a href="http://www.blogger.com/blogger.g?blogID=3999208484595674897" imageanchor="1" style="clear: left; float: left; margin-bottom: 1em; margin-right: 1em;"></a><a href="http://www.blogger.com/blogger.g?blogID=3999208484595674897" imageanchor="1" style="clear: left; float: left; margin-bottom: 1em; margin-right: 1em;"></a><a href="http://www.blogger.com/blogger.g?blogID=3999208484595674897" imageanchor="1" style="clear: left; float: left; margin-bottom: 1em; margin-right: 1em;">
+</a><b>Configurando Dispositivos de Rede:  Com o comando abaixo nós podemos identificar o fabricando e o modelo de uma placa PCI.</b>
+{% highlight bash %}
+
+# lspci
+
+{% endhighlight %}
+
+{% highlight bash %}
+
+ a saída será mais ou menos, de vermelho está a placa de rede:
+
+
+
+00:00.0 Host bridge: Intel Corporation 82G33/G31/P35/P31 Express DRAM Controller (rev 10)
+00:02.0 VGA compatible controller: Intel Corporation 82G33/G31 Express Integrated Graphics Controller (rev 10)
+00:1b.0 Audio device: Intel Corporation N10/ICH 7 Family High Definition Audio Controller (rev 01)
+00:1c.0 PCI bridge: Intel Corporation N10/ICH 7 Family PCI Express Port 1 (rev 01)
+00:1d.0 USB Controller: Intel Corporation N10/ICH 7 Family USB UHCI Controller #1 (rev 01)
+00:1d.1 USB Controller: Intel Corporation N10/ICH 7 Family USB UHCI Controller #2 (rev 01)
+00:1d.2 USB Controller: Intel Corporation N10/ICH 7 Family USB UHCI Controller #3 (rev 01)
+00:1d.3 USB Controller: Intel Corporation N10/ICH 7 Family USB UHCI Controller #4 (rev 01)
+00:1d.7 USB Controller: Intel Corporation N10/ICH 7 Family USB2 EHCI Controller (rev 01)
+00:1e.0 PCI bridge: Intel Corporation 82801 PCI Bridge (rev e1)
+00:1f.0 ISA bridge: Intel Corporation 82801GB/GR (ICH7 Family) LPC Interface Bridge (rev 01)
+00:1f.1 IDE interface: Intel Corporation 82801G (ICH7 Family) IDE Controller (rev 01)
+00:1f.2 IDE interface: Intel Corporation N10/ICH7 Family SATA IDE Controller (rev 01)
+00:1f.3 SMBus: Intel Corporation N10/ICH 7 Family SMBus Controller (rev 01)
+01:00.0 Ethernet controller: Realtek Semiconductor Co., Ltd. RTL8101E/RTL8102E PCI Express Fast Ethernet controller (rev 01)
+02:01.0 Modem: Motorola SM56 Data Fax Modem (rev 04)
+
+
+{% endhighlight %}
+</pre><b>Carregando módulos  Depois de identificarmos a placa, o endereçamento de entrada e saída e o IRQ, será preciso carregar o módulo do Kernel correspodente ou compilar o suporte ao dispositivo.Para carregar o suporte ao dispositivo através de um módulo do Kernel, devemos utilizar o comando: 
+{% highlight bash %}
+
+# modprobe 8139too
+
+{% endhighlight %}
+ O Linux suporta que os módulos sejam carregados automaticamente durante a carga do sistema(boot).As configurações dos parâmetros devem ser feitas no arquivo: 
+{% highlight bash %}
+
+# cat /etc/modules.conf
+
+{% endhighlight %}
+ Configurando a Placa de Som  O Linux suporta dois padrões de Sistemas de Som:  -OSS (Open Sound Sistem) e -ALSA(Advanced Linux Sound Architecture)  Para utilizar o dispositivo de som, carregue o módulo da placa com o comando: 
+{% highlight bash %}
+
+# modprobe NOME_DO_MODULO
+
+{% endhighlight %}
+Algumas placas requerem que seja especificado o recurso de hardware utilizado com parâmetro: 
+{% highlight bash %}
+
+# modprobe sb io=0x220 irq=5 dma=1 dma16=5 mpu_io=0x388
+
+{% endhighlight %}
+ Depois de instanciado no Kernel o módulo do dispositivo, os recursos: 
+{% highlight bash %}
+
+# /dev/audio
+
+{% endhighlight %}
+
+{% highlight bash %}
+
+# /dev/dsp
+
+{% endhighlight %}
+
+{% highlight bash %}
+
+# /dev/mixer
+
+{% endhighlight %}
+, estarão disponíveis.  Configurando Dispositivos USB  Universal Serial Bus (USB) é um tipo de conexão "ligar e usar" que permite a conexão de periféricos sem a necessidade de desligar o computador. O primeiro passo é deteminar qual xHCI(Host Controller Interface) sua placa mãe possui, e carregar o módulo correspodente ao chip. O comando para determinar qual o chip utilizado em sua placa-mãe é: 
+{% highlight bash %}
+
+# lspci -vt
+
+{% endhighlight %}
+ O Linux tem suporte a diversos dispositivos USB através dos módulos do Kernel.Você poderá consultar os chipsets suportados no diretório: 
+{% highlight bash %}
+
+# /lib/modules/versao_do_kernel/kernel/drivers/usb
+
+{% endhighlight %}
+ Até o momento é só, até o próximo tópico. </b>
+
+
+</p>

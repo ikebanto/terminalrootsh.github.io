@@ -1,0 +1,53 @@
+---
+layout: post
+title: Funcionamento da tecla Delete no GNOME 3
+date: '2014-10-20T16:26:00.003-07:00'
+description: Funcionamento da tecla Delete no GNOME 3
+main-class: 'misc'
+color: '#34a853'
+author: Marcos Oliveira
+tags:
+- Dicas
+- Gnome
+modified_time: '2014-10-20T16:26:49.122-07:00'
+thumbnail: http://3.bp.blogspot.com/-7fXdNJps1Lk/Td2GgSVo7FI/AAAAAAAABAA/CPLO6lgWQNk/s72-c/Captura_de_tela-Configuration+Editor.png
+twitter_text: Funcionamento da tecla Delete no GNOME 3
+introduction: Funcionamento da tecla Delete no GNOME 3
+---
+
+<p>
+Quem utiliza o GNOME 3 já deve ter notado que, ao tentar excluir um  arquivo ou pasta, a tecla Delete "não funciona". E provavelmente  contornou o "problema" com a opção "Mover para a lixeira" do menu de  contexto...
+
+<a href="https://www.blogger.com/null" name="more"></a>Na verdade, a tecla Delete funciona de uma forma  diferente no GNOME 3. Para utilizá-la, você precisa teclar também,  simultaneamente, a tecla Control (Ctrl+Delete). 
+
+Parece que o objetivo deste comportamento é evitar a  exclusão acidental  de um arquivo. Mas, para muitos usuários, pode ser um recurso  inconveniente (mais um...).
+
+Para restaurar o uso normal da tecla Delete, você pode utilizar o <b>dconf-editor</b> (no <b>Fedora 15</b>, instale o pacote dconf-editor):
+
+1. Tecle Alt+F2 e execute o comando <b>dconf-editor</b>;
+
+2. Localize o esquema <b>org > gnome > desktop > interface</b> (navegue pela árvore) e marque a opção "<b>can-change-accels</b>" (não feche o dconf-editor!):
+
+
+<table align="center" cellpadding="0" cellspacing="0" class="tr-caption-container" style="margin-left: auto; margin-right: auto; text-align: center;"><tbody><tr><td style="text-align: center;"><a href="http://3.bp.blogspot.com/-7fXdNJps1Lk/Td2GgSVo7FI/AAAAAAAABAA/CPLO6lgWQNk/s1600/Captura_de_tela-Configuration+Editor.png" style="margin-left: auto; margin-right: auto;" target="_blank" title="Marcando a opção can-change-accels"><img alt="Marcando a opção can-change-accels" border="0" src="http://3.bp.blogspot.com/-7fXdNJps1Lk/Td2GgSVo7FI/AAAAAAAABAA/CPLO6lgWQNk/s400/Captura_de_tela-Configuration+Editor.png" height="320" width="400" /></a></td></tr><tr><td class="tr-caption" style="text-align: center;">Marcando a opção can-change-accels</td></tr></tbody></table>
+3. Abra o <b>Nautilus</b>, selecione um arquivo que possa ser removido (por segurança), acesse o menu <b>Editar</b>, posicione o mouse sobre a opção "<b>Mover para a lixeira</b>" (sem clicar!) e pressione duas vezes a tecla <b>Delete</b>:
+
+<table align="center" cellpadding="0" cellspacing="0" class="tr-caption-container" style="margin-left: auto; margin-right: auto; text-align: center;"><tbody><tr><td style="text-align: center;"><a href="http://2.bp.blogspot.com/-D7qjd9R0ECc/Td2GivION0I/AAAAAAAABAI/UcovAiag3Y8/s1600/del1.png" style="margin-left: auto; margin-right: auto;" target="_blank" title="Posicionando o mouse sobre a opção Mover para a lixeira"><img alt="Posicionando o mouse sobre a opção Mover para a lixeira" border="0" src="http://2.bp.blogspot.com/-D7qjd9R0ECc/Td2GivION0I/AAAAAAAABAI/UcovAiag3Y8/s400/del1.png" height="240" width="400" /></a></td></tr><tr><td class="tr-caption" style="text-align: center;">Posicionando o mouse sobre a opção "Mover para a lixeira"</td></tr></tbody></table>
+3.1. Note que, após pressionar duas vezes a tecla Delete, o atalho do teclado é modificado de "Ctrl+Delete" para "Delete";
+
+4. Volte para a janela do dconf-editor e desmarque a opção "<b>can-change-accels</b>":
+
+<table align="center" cellpadding="0" cellspacing="0" class="tr-caption-container" style="margin-left: auto; margin-right: auto; text-align: center;"><tbody><tr><td style="text-align: center;"><a href="http://3.bp.blogspot.com/-s_iFDrLPETk/Td2GhcY5JbI/AAAAAAAABAE/TPSwYHCjmeo/s1600/Captura_de_tela-Configuration+Editor-1.png" style="margin-left: auto; margin-right: auto;" target="_blank" title="Desmarcando a opção can-change-accels"><img alt="Desmarcando a opção can-change-accels" border="0" src="http://3.bp.blogspot.com/-s_iFDrLPETk/Td2GhcY5JbI/AAAAAAAABAE/TPSwYHCjmeo/s400/Captura_de_tela-Configuration+Editor-1.png" height="320" width="400" /></a></td></tr><tr><td class="tr-caption" style="text-align: center;">Desmarcando a opção can-change-accels</td></tr></tbody></table>
+5. Feche o dconf-editor.
+
+Pronto. A tecla Delete deve estar funcionando conforme manda a tradição. :)
+
+Vídeo demonstrativo, com um procedimento um pouco diferente, mas com o mesmo resultado:
+
+<a href="http://youtu.be/V_dG-i7adCM" target="_blank">Ver no YouTube</a>
+
+
+Referência:
+<a href="http://cuduwudu.com/2011/05/reviving-the-delete-key-to-delete-files-and-folders-in-gnome-3/" target="_blank">http://cuduwudu.com/2011/05/reviving-the-delete-key-to-delete-files-and-folders-in-gnome-3/</a>
+
+</p>

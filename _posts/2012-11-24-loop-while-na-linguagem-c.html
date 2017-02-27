@@ -1,0 +1,47 @@
+---
+layout: post
+title: Loop while na Linguagem C
+date: '2012-11-24T15:30:00.000-08:00'
+description: Loop while na Linguagem C
+main-class: 'misc'
+color: '#34a853'
+author: The Bang Bash
+tags:
+- Linguagem C
+modified_time: '2013-05-03T07:16:06.432-07:00'
+thumbnail: http://1.bp.blogspot.com/-LnYjUurrDJc/ULFYJhOHdRI/AAAAAAAAAtc/AIWrdOS3ySk/s72-c/while_c.png
+twitter_text: Loop while na Linguagem C
+introduction: Loop while na Linguagem C
+---
+
+<p>
+<div class="separator" style="clear: both; text-align: center;"><a href="http://1.bp.blogspot.com/-LnYjUurrDJc/ULFYJhOHdRI/AAAAAAAAAtc/AIWrdOS3ySk/s1600/while_c.png" imageanchor="1" style="margin-left: 1em; margin-right: 1em;"><img border="0" height="175" src="http://1.bp.blogspot.com/-LnYjUurrDJc/ULFYJhOHdRI/AAAAAAAAAtc/AIWrdOS3ySk/s320/while_c.png" width="320" /></a></div>
+
+Mais um ensinamento básico para fixação, mais detalhes na apostila do post <a href="http://marcospinguim.blogspot.com.br/2012/11/apostila-de-introducao-linguagem-c.html" target="_blank">Apostila de Introdução a Linguagem C</a>
+
+PasteBin: 
+<iframe src="http://pastebin.com/raw/SQ5Xjasi" style="border:none;width:100%;"></iframe> 
+CodigoNoBlog: 
+{% highlight bash %}
+#include 
+
+//while básico.
+int main(){
+ int i = 0;
+ 
+ while(i<=22){
+  printf("%d\n",i);
+  i++;
+ }
+ 
+//Enquanto vc não digitar a letra 'p' e pressionar ENTER o loop não para.
+ char Ch; 
+ Ch='\0';
+ while(Ch != 'p'){
+  scanf("%c", &amp;Ch);
+ }
+ return(0);
+}
+{% endhighlight %}
+
+</p>

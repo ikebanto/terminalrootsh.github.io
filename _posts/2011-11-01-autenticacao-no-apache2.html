@@ -1,0 +1,119 @@
+---
+layout: post
+title: Autenticação no Apache2
+date: '2011-11-01T06:37:00.000-07:00'
+description: Autenticação no Apache2
+main-class: 'misc'
+color: '#34a853'
+author: The Bang Bash
+tags:
+- Servidores
+- Apache
+modified_time: '2013-09-22T07:15:45.833-07:00'
+thumbnail: http://2.bp.blogspot.com/-T3aWDDrqDPU/Uj77fEjKhaI/AAAAAAAACZY/gBr2xj5V9gE/s72-c/apache-linux-servers.jpg
+twitter_text: Autenticação no Apache2
+introduction: Autenticação no Apache2
+---
+
+<p>Vou explicar aqui como você disponibilizar o acesso a uma pasta do Apache(www) exigindo usuario e senha.
+<p>01. Primeiramente devemos criar o diretório onde desejamos restringir o acesso caso o mesmo não exista.</p>
+
+{% highlight bash %}
+
+mkdir /var/www/teste 
+
+{% endhighlight %}
+
+<p>02. Criaremos agora um arquivo somente para testes com o nome "index.html" no diretório </b>"/var/www/teste".</p>
+
+{% highlight bash %}
+
+echo "Testando autenticação no Apache" > /var/www/teste/index.html 
+
+{% endhighlight %}
+
+<p>03. Criar os arquivos .htaccess e passwd no diretório onde se deseja restringir o acesso.</p>
+{% highlight bash %}
+
+touch passwd .htaccess
+
+{% endhighlight %}
+
+<p>04. Conteúdo do arquivo .htaccess </p>
+{% highlight bash %}
+
+AuthName "Nome que aparecerá no título da janela"
+AuthType Basic
+AuthUserFile /var/www/teste/passwd
+require valid-user 
+
+{% endhighlight %}
+
+<p>05. Criação dos usuários que terão permissão para acessar o diretório:</p>
+{% highlight bash %}
+
+htpasswd -c passwd usuário
+
+{% endhighlight %}
+
+<p>Será pedida a senha do novo usuário e em seguida sua confirmação.</p>
+{% highlight bash %}
+
+New password:
+Re-type new password:
+Adding password for user
+
+{% endhighlight %}
+
+<p>Ao abrir o arquivo de senhas (passwd), serão vistos os nomes de usuário e senhas criptografadas.</p>
+
+{% highlight bash %}
+
+more passwd
+
+{% endhighlight %}
+
+<p>06. Edite o arquivo</p>
+{% highlight bash %}
+
+"/etc/apache2/sites-available/default"
+
+{% endhighlight %}
+
+<p>colocando as seguintes linhas no final do arquivo antes da tag </VirtualHost> </p>
+
+<p>substituindo todas as diretivas conforme suas necessidades, uma observação importante é para a tag</p>
+<blockquote><b>AllowOverride</b></blockquote>
+
+<p>a mesma deve conter</p><blockquote>"AuthConfig"</blockquote>
+
+<p>para que a autenticação seja bem sucedida.</p>
+{% highlight bash %}
+
+Alias /teste/ "/var/www/teste/"
+
+Options Indexes MultiViews FollowSymLinks
+AllowOverride AuthConfig
+Order deny,allow
+Deny from all
+Allow from 172.16.0.0/255.0.0.0 ::1/128
+
+
+{% endhighlight %}
+
+<p>07. Reinicie o serviço do Apache para atualizar as configurações.</p>
+{% highlight bash %}
+
+/etc/init.d/apache2 restart
+
+{% endhighlight %}
+
+<p>08. Teste agora suas configurações acessando http://localhost/teste, fornecendo o nome de usuário senha.</p>
+<blockquote>Observações: as linhas abaixo se referem à restrição por IP, não são necessárias à autenticação.
+<p>Deny from all</p></blockquote>
+<blockquote>
+<p>Allow from 172.16.0.0/255.0.0.0 ::1/128 </p>
+</blockquote>
+<p>e todo esse tramite desse ser feito pelo usuário root para funcionar.</p>
+<p>Eu uso aqui e você, vai deixar de se proteger!</p>
+<p><a href="http://www.vivaolinux.com.br/dica/Autenticacao-no-Apache2" target="_blank">Fonte:Viva o Linux</a>
