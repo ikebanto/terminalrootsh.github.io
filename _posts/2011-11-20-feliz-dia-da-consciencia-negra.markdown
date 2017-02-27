@@ -3,7 +3,7 @@ layout: post
 title: "Feliz Dia da Consciência Negra!"
 date: '2011-11-20T07:46:00.000-08:00'
 description: "Feliz Dia da Consciência Negra!"
-main-class: 'misc'
+main-class: 'artigos'
 tags:
 - Artigos
 image: "http://3.bp.blogspot.com/-Z98wgYLIHPY/TskgnX9fCkI/AAAAAAAAAQM/P4KISQMkHKE/s72-c/zumbi2.jpg"
