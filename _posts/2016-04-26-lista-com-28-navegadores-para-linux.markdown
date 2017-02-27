@@ -27,7 +27,6 @@ Espero que seja útil! Abraços.
 <hr />
   
 ![Blog Linux](/assets/img/browser/development.png "Blog Linux")
-
 #### Firefox Developer Edition
 
 Firefox Developer Edition é uma versão do navegador da Mozilla criada especialmente para desenvolvedores, trazendo uma série de ferramentas adicionais.
