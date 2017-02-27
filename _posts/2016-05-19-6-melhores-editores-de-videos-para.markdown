@@ -13,13 +13,18 @@ introduction: "Escolha o melhor!"
 ![Blog Linux](/assets/img/editores/video-editor.jpg "Blog Linux")
 [OpenShot](http://www.openshot.org/)
 ![Blog Linux](/assets/img/editores/OpenShot-Video-Editor.png "Blog Linux")
+<hr />
 [Pitivi](http://pitivi.ecchi.ca/)
 ![Blog Linux](/assets/img/editores/pitivi-video-editor.png "Blog Linux")
+<hr />
 [Blender](https://www.blender.org/)
 ![Blog Linux](/assets/img/editores/blender.png "Blog Linux")
+<hr />
 [Cinelerra](http://cinelerra.org/)
 ![Blog Linux](/assets/img/editores/cinerella.png "Blog Linux")
+<hr />
 [KDEnlive](https://kdenlive.org/)
 ![Blog Linux](/assets/img/editores/kdenlive.png "Blog Linux")
+<hr />
 [Lightworks](http://www.lwks.com/)
 ![Blog Linux](/assets/img/editores/lightworks.png "Blog Linux")
