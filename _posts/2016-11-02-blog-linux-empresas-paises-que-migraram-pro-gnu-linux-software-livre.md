@@ -30,7 +30,7 @@ O assunto do momento é que o Brasil vai voltar a usar soluções da Microsoft, 
 - ✓ O CCSL-USP é admitido como um dos centros do projeto QualiPSo; O Projeto Software Livre Brasil lança sua rede social, usando a plataforma brasileira Noosfero; Presidente Lula e Dilma Rousseff, Ministra-Chefe da Casa Civil, fazem discursos históricos apoiando e defendendo o software livre no Brasil.
 
 
-<iframe allowfullscreen="" frameborder="0" height="315" src="https://www.youtube.com/embed/JM0Bt3YWkZQ" width="560"></iframe></div>
+<iframe allowfullscreen="" frameborder="0" height="315" src="https://www.youtube.com/embed/JM0Bt3YWkZQ" width="560"></iframe>
 
 No entanto, a atual conjuntura política do Brasil está querendo pagar mais caro , para provavelmente conseguir ganhar por fora. Sim, pagar mais caro. Alguns "comentadores de redes sociais" acham que o (des)Projeto irá ser mais lucrativo, engana-se, o suporte da Microsoft não é gratuito, muito pelo contrário, é caro, muito caro por sinal . Os contratos são uma verdadeira farsa , você acredita que irá pagar x e acaba pagando x1000 , por isso é a empresa que mais responde processos jurídicos no mundo . Sem dizer as licenças que possuem restrições de Copyright , que funciona literalmente como um Cavalo de Tróia , e você não pode nem se quer verificar , muito menos alterar , caso contrário está violando os direitos de Copyright da Microsoft .
 
@@ -65,7 +65,7 @@ Isso sem dizer de países que  adotam o Linux e o Software Livre como soluções
 
 
 Links Úteis:
-<pre>
+<kbd>
 https://www.linuxfoundation.org/news-media/announcements/2011/07/toyota-joins-linux-foundation
 https://pt.wikipedia.org/wiki/Hist%C3%B3ria_do_software_livre_no_Brasil
 https://pt.wikipedia.org/wiki/Software_livre_nos_governos#Brasil
@@ -83,6 +83,6 @@ http://g1.globo.com/Noticias/Economia_Negocios/0,,MUL308812-9356,00-MICROSOFT+AU
 http://g1.globo.com/Noticias/Tecnologia/0,,MUL236117-6174,00-MICROSOFT+ASSINA+ACORDO+COM+GRUPO+DE+SOFTWARE+LIVRE+SAMBA.html
 http://olhardigital.uol.com.br/noticia/governo-federal-vai-trocar-software-livre-por-solucoes-da-microsoft/63547
 http://olhardigital.uol.com.br/noticia/robos-%E2%80%98ganham%E2%80%99-software-gratuito-da-microsoft/5385
-</pre>
+</kbd>
 
 
