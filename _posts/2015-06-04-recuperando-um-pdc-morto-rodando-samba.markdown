@@ -1,0 +1,24 @@
+---
+layout: post
+title: Recuperando um PDC morto rodando Samba 4 no Debian 7
+date: '2015-06-04T05:59:00.000-07:00'
+description: Recuperando um PDC morto rodando Samba 4 no Debian 7
+main-class: 'debian'
+tags:
+- Debian
+- userlike
+- Servidores
+image: http://3.bp.blogspot.com/-611-mv3hMBk/VXBLUrBg6lI/AAAAAAAABVw/NDRqS9vmf7g/s72-c/samba.jpeg
+twitter_text: Recuperando um PDC morto rodando Samba 4 no Debian 7
+introduction: Recuperando um PDC morto rodando Samba 4 no Debian 7
+---
+![Blog Linux](http://3.bp.blogspot.com/-611-mv3hMBk/VXBLUrBg6lI/AAAAAAAABVw/NDRqS9vmf7g/s320/samba.jpeg "Blog Linux")
+IntroduçãoO objetivo desse tutorial é demonstrar um meio  alternativo, prático e rápido para restauração de um controlador de  domínio morto.Os procedimentos abaixo foram utilizados para restaurar o  backup do Samba 4 em um outro servidor recém-instalado.Nota: O servidor  foi configurado com o mesmo sistema operacional, mesmas versões de  softwares, mesmo nome, mesmo ip, etc. 
+Realizando os procedimentos:Em  primeiro lugar faça todas as configurações do servidor iguais ao do  servidor morto, no caso, utilizei o Debian 7.5 x64. É muito importante  que o nome e ip do servidor sejam iguais ao do servidor morto pois e não  forem você terá muitos problemas com o DNS. A versão do Samba utilizada  é a 4.1.7 mas acredito não haver problemas nas releases dessa versão  4.1.x, já a versão 4.2.0 pelo que vi, possui algumas novas  funcionalidades e não sei se o procedimento informado aqui serve para  ela. Sempre faça backups regulares do seu servidor Samba, não abordarei  isso aqui agora, mas você pode encontrar toda as informações necessárias  no site do Samba. https://www.samba.org Atenção!!! Fiz todos os testes  em um ambiente controlado, fora da minha rede de produção, portanto  tenha muito cuidado ao fazer seus testes, tenha certeza que está  acessando o servidor certo. No site do samba existe uma documentação  ensinando como restaurar o samba em caso de morte do servidor, esse  passo a passo que vou ensinar não é nada oficial porém funcionou  perfeitamente para mim, sempre vale a pena seguir as informações  oficiais para tal feito mas como eu sou teimoso, sempre faço várias  experiências em meus laboratórios. Faça esse procedimento por sua conta e  risco, não me responsabilizo por eventuais destruições que você possa  promover no seu ambiente de trabalho hehehe. Bem, vamos lá! Nesse passo  suponho que o seu Debian já está configurado com o mesmo nome e ip que o  seu PDC morto tinha minutos antes da sua morte e que também você possua  o backup do mesmo. No meu caso, sempre que realizo um backup do Samba  4, eu paro o serviço e faço um backup full de toda a instalação seguindo  os procedimentos abaixo: 
+/etc/init.d/samba4 stopNo  diretório de sua preferência faça o backup do Samba, eu utilizo o  diretório /sis-bkp, porém você pode fazer onde achar mais conveniente,  vamos lá: 
+cd /sis-bkp tar -czvf samba4.tar.gz /usr/local/sambaOBS:  o diretório de instalação do samba pode variar dependendo do modo que  foi configurado na hora de compilar, caso o seu não esteja em /usr/local  faça no caminho correspondente a sua instalação.Primeiro você precisa instalar todas as libs necessárias para a compilar o Samba em um ambiente novo. No terminal digite: 
+apt-get install gcc make flex gdb python-ldap python-dev libacl1-devApós  instalar tudo você está apto a restaurar o seu Samba, para isso,  descompacte o seu backup full no mesmo diretório onde o Samba foi  compilado no servidor morto. Feito isso você pode já subir o novo  servidor em modo debug para verificar possíveis erros da seguinte forma:  
+/usr/local/samba/sbin/samba -d3 -iMuito  provavelmente,, você vai se deparar com um erro referente a lib do cups e  também uma lib referente ao dns. Na minha nova instalação foi  necessário instalar as libs libcups2 e python-dnspython para corrigir o  problema. Para instalá-las digite: 
+apt-get install libcups2 python-dnspythonFeito isso, você pode subir novamente o Samba com o comando 
+/usr/local/samba/sbin/samba -d3 -ie verá que o mesmo está funcionando. Adicione o script para inicialização do mesmo novamente ao servidor e seja feliz. 
+Nota:  Aqui funcionou 100% depois de muito tempo quebrando a cabeça até  descobrir que tinha que instalar as libs libcups2 python-dnspython, após  isso tudo funcionou perfeitamente, incluí novas máquinas no domínio,  alterei senhas, criei novos compartilhamentos e também atualizei a  versão de 4.1.7 para 4.1.8 e não houve nenhum tipo de problema até o  presente momento. No site do samba eles ensinam a restaurar somente os  diretórios etc, private e sysvol, porém você precisa compilar o Samba no  servidor a mesma versão do backup que pode demorar até mais de uma hora  dependendo do hardware. Como não é um procedimento oficial, realizarei  mais testes e caso haja algum problema eu manterei o post sempre  atualizado informando sobre o progresso desse método. Por Clediomir Silva

@@ -1,0 +1,128 @@
+---
+layout: post
+title: Desenvolva Distribuições Integradas e Customizadas do Linux com o Projeto Yocto
+date: '2014-07-20T15:38:00.004-07:00'
+description: Desenvolva Distribuições Integradas e Customizadas do Linux com o Projeto Yocto
+main-class: 'linux'
+tags:
+- Linux
+- Distros
+twitter_text: Desenvolva Distribuições Integradas e Customizadas do Linux com o Projeto Yocto
+introduction: Desenvolva Distribuições Integradas e Customizadas do Linux com o Projeto Yocto
+---
+Desenvolva Distribuições Integradas e Customizadas do Linux com o Projeto YoctoFerramentas profissionais de software livre para desenvolvimento integrado no Linux
+O projeto Yocto ™  é um projeto de software livre formado com o  objetivo de facilitar o desenvolvimento em Linux integrado ®  e torná-lo  mais móvel entre as arquiteturas. Este artigo apresenta o projeto e dá  uma explicação passo a passo para começar a usá-lo.Visão geralO projeto Yocto é um projeto de  colaboração de software livre que fornece modelos, ferramentas e métodos  que suportam sistemas customizados baseados em Linux para produtos  integrados, independentemente da arquitetura de hardware. Para os que  estão se perguntando o que o nome significa, o termo yocto  designa a menor unidade do SI. Como prefixo, yocto indica 10 elevado a -24.
+Este  artigo explica passo a passo como usar as ferramentas padrão de mercado  de software livre do projeto Yocto para criar um sistema operacional  Linux customizado para um dispositivo integrado e inicializá-lo em uma  máquina virtual usando o QEMU. O projeto Yocto — um projeto de software  livre patrocinado pela Linux Foundation financiado por grandes empresas  de hardware e fornecedores de sistemas operacionais — fornece  ferramentas, métodos e metadados de nível industrial para desenvolver  sistemas Linux.
+Dois componentes importantes do projeto Yocto são  mantidos em conjunto com o projeto OpenEmbedded: BitBake, o mecanismo de  criação, e OpenEmbedded-Core, o conjunto principal de receitas usadas  para executar o processo de criação. Todos os componentes do projeto são  descritos na próxima seção.
+Apresentando o projeto YoctoComo  um projeto de colaboração, também conhecido como projeto principal, o  Yocto incorpora diversas partes heterogêneas do processo de  desenvolvimento. Essas partes são conhecidas como projetos  dentro do projeto Yocto geral e incluem ferramentas de criação, metadados de instruções de criação chamados receitas, bibliotecas, utilitários e interfaces gráficas com o usuário (GUIs).
+PokyPoky  é um sistema de desenvolvimento de referência para o projeto Yocto.  Inclui o BitBake, o OpenEmbedded-Core, um pacote de suporte à placa  (BSP) e outros pacotes ou camadas incorporadas à criação. O nome Poky  também designa a distribuição padrão do Linux resultante do uso do  sistema de criação de referência, que pode ser mínima  (core-image-minimal) ou um sistema Linux completo com uma GUI  (core-image-sato).
+É possível considerar o sistema de criação Poky  como um sistema de referência para todo o projeto — um exemplo  funcional do processo em ação. Ao fazer o download do projeto Yocto, na  verdade você obtém uma instância dessas ferramentas, utilitários,  bibliotecas, cadeia de ferramentas e metadados que podem ser usados para  criar o sistema padrão, como se descreve aqui. O sistema de referência e  a distribuição de referência que ele cria se chamam Poky. Também é  possível usar isso como um ponto de partida para criar a sua própria  distribuição — que pode ter o nome que você quiser, evidentemente.
+A cadeia de ferramentas — um compilador, assembler, vinculador e outros utilitários binários  necessários para criar arquivos executáveis binários para uma  determinada arquitetura — é um item necessário para todos os sistemas de  criação. O Poky usa a GNU Compiler Collection (GCC), mas é possível  especificar outras cadeias de ferramentas. O Poky usa uma técnica  conhecida como compilação cruzada: o uso de uma cadeia de  ferramentas em uma arquitetura para desenvolver arquivos executáveis  binários para outra arquitetura (por exemplo, desenvolver uma  distribuição ARM em um sistema baseado em x86). Os desenvolvedores  frequentemente usam a compilação cruzada no desenvolvimento de sistemas  embarcados para aproveitar o desempenho mais alto do sistema host.
+Conjunto de metadadosO conjunto de metadados é disposto em camadas,  para que cada camada possa fornecer uma funcionalidade separada para as  camadas abaixo dela. A camada de base é OpenEmbedded-Core ou {% highlight bash %}
+oe-core
+{% endhighlight %},  que fornece receitas, classes e funções associadas que são comuns e  necessárias para todas as construções. Em seguida, é possível customizar  as construções incluindo novas camadas sobre a {% highlight bash %}
+oe-core
+{% endhighlight %}.
+A  OpenEmbedded-Core é mantida conjuntamente pelos projetos Yocto e  OpenEmbedded. Uma camada que separa o projeto Yocto do OpenEmbedded é a  camada {% highlight bash %}
+meta-yocto
+{% endhighlight %} , que fornece a configuração da distribuição Poky e um conjunto principal de BSPs de referência.
+O  projeto OpenEmbedded propriamente dito é um projeto de software livre  separado com receitas intercambiáveis (de modo geral) que tem objetivos  semelhantes aos do projeto Yocto, mas um controle e um escopo  diferentes.
+Pacotes de suporte de placaO BSP  contém todos os pacotes e drivers essenciais à criação do Linux para uma  placa ou arquitetura especifica. Geralmente são mantidos pelos  fabricantes de hardware que produzem as placas. Os BSPs são a interface  entre o sistema operacional Linux e o hardware que o executa. Observe  que também é possível criar BSPs para máquinas virtuais.
+BitBakeO  BitBake é um mecanismo de criação. Ele lê as receitas e as segue,  buscando pacotes, construindo-os e incorporando os resultados em imagens  inicializáveis. O BitBake é mantido conjuntamente pelos projetos Yocto e  OpenEmbedded.
+HobNa tentativa de facilitar o  desenvolvimento em Linux integrado, o projeto Yocto fornece alguns  métodos diferentes para trabalhar de forma gráfica. Um acréscimo  relativamente novo ao projeto é o Hob, que fornece um frontend gráfico  para o BitBake e o processo de criação. Os dois estão continuamente em  desenvolvimento, completos com estudos dos usuários da comunidade.
+Conformidade da licença de software livreA  conformidade com as licenças de software livre é uma parte extremamente  importante de qualquer esforço de desenvolvimento em Linux. Uma das  metas do projeto Yocto é facilitar a conformidade tanto quanto possível.  É muito fácil usar as ferramentas do projeto Yocto para criar  manifestos e até para desenvolver repositórios de origem inteiros, bem  como filtrar o processo de criação para excluir pacotes que usam  licenças especificas. O projeto está trabalhando, junto com a Linux  Foundation, em seu programa Open Compliance em relação à especificação  Software Package Data Exchange® (SPDX™).
+EGLIBCA  Embedded GLIBC (EGLIBC) é uma variante da GNU C Library (GLIBC),  projetada para funcionar bem em sistemas embarcados. Os objetivos da  EGLIBC envolvem área de cobertura reduzida, componentes configuráveis e  suporte melhor para configuração cruzada e testes cruzados. A EGLIBC faz  parte do projeto Yocto, mas é mantida dentro da sua própria estrutura  de controle.
+Kit de ferramentas de desenvolvimento de aplicativosO  kit de ferramentas de desenvolvimento de aplicativos (ADT) permite que  os desenvolvedores de sistemas forneçam kits de desenvolvimento de  software (SDKs) para as distribuições que eles criam usando as  ferramentas do projeto Yocto, oferecendo a eles uma forma de desenvolver  com base nas pilhas de software fornecidas pelos desenvolvedores desses  sistemas. O ADT inclui uma cadeia de ferramentas de compilação cruzada,  ferramentas de depuração e criação de perfil, emulação de QEMU e  scripts de suporte. O ADT também inclui um plug-in do Eclipse para os  que gostam de trabalhar com ambientes de desenvolvimento integrado  (IDEs).
+Outras ferramentas do projeto YoctoEstas são outras ferramentas sob a bandeira do projeto Yocto:
+Autobuilder: cria construções automatizadas contínuas das ferramentas do projeto  Yocto, permitindo atividades automatizadas de garantia de qualidade  (QA).Cross-Prelink: fornece pré-vinculação para ambientes de desenvolvimento de compilação cruzada, melhorando o desempenho.Pseudo: emula o acesso do root, uma parte essencial da criação de uma imagem final inicializável.Swabber: detecta quando uma criação de compilação cruzada foi contaminada por componentes do host.Build Appliance: é uma máquina virtual que executa o Hob, permitindo as pessoas que usam  hosts de criação que não são de Linux vejam o processo do projeto Yocto  em primeira mão. (Observação: no momento, as ferramentas de desenvolvimento do projeto Yocto só são suportadas no Linux.)Controle e comunidadeA  comunidade que desenvolve e suporta os componentes é um componente  vital de qualquer projeto de software livre. O projeto Yocto tem uma  comunidade ativa, formada em parte por organizações — inclusive  fabricantes de hardware, fornecedores de sistemas operacionais e  ferramentas e fabricantes de eletroeletrônicos, envolvendo toda a gama  do desenvolvimento integrado — e em parte por pessoas, muitas das quais  trabalham nessas organizações.
+O projeto é gerenciado por um  arquiteto executivo e um conjunto de mantenedores e líderes técnicos,  que tomam todas as decisões técnicas. As organizações membro — muitas  das quais normalmente competem entre si — colaboram para formar um  Comitê Consultivo — cuja função, como o nome sugere, tem caráter  consultivo. Esse comitê gerencia os recursos do projeto, como a  infraestrutura, representação e assistência e finanças.
+Voltar para parte superiorDesenvolva uma distribuição do LinuxEsta  seção mostra como desenvolver um sistema Linux integrado básico usando o  Poky — o sistema de criação de referência. O processo descrito aqui  cria a distribuição de referência e todas as ferramentas necessárias  para desenvolvê-la. Se preferir, também é possível fazer o download de  binários pré-construídos para evitar a necessidade de compilar. Você  encontra os detalhes no Yocto Project Quick Start Guide (consulte Recursos).
+As  ferramentas propriamente ditas só são suportadas em plataformas Linux,  especificamente Ubuntu, Fedora, CentOS e openSUSE. Observe que o release  mais recente de cada um desses sistemas frequentemente ainda não está  listado como suportado, mas de modo geral ele funciona. Muitas outras  distribuições do Linux também podem funcionar.
+Se o seu sistema  host não executa Linux, ou se você só quer dar uma olhada sem se  comprometer a instalar nada, é possível fazer o download do Yocto  Project Build Appliance. Essa máquina virtual vem com o release oficial  mais recente do projeto Yocto pré-instalado. O Build Appliance pode  executar no VMWare Player ou no VirtualBox e inicializa diretamente na  GUI do Hob. Se você usa o Build Appliance, a maioria das etapas a seguir  já foi realizada e é possível passar para o Test drive do Hob.  Entretanto, é recomendável ler as seções intermediárias para entender o  que o Hob está fazendo. Além disso, para ver a documentação do Hob no  website do projeto Yocto, consulte Recursos.
+Faça o download das ferramentas do projeto YoctoDownload  as ferramentas do projeto Yocto usando qualquer um dos dois métodos.  Certifique-se de usar um disco que tenha pelo menos 50 GB de espaço  livre. É recomendável ter 100 GB.
+É possível fazer o download de um arquivo {% highlight bash %}
+tar
+{% endhighlight %}  com o release mais recente totalmente testado a partir da página de downloads do projeto Yocto. Faça o download do arquivo {% highlight bash %}
+tar
+{% endhighlight %}  e, em seguida, descompacte-o em um diretório, como mostra a Listagem 1.   Lista 1. Fazendo o download do Poky$ wget \
+http://downloads.yoctoproject.org/releases/yocto/yocto-1.2/poky-denzil-7.0.tar.bz2
+$ tar xjf poky-denzil-7.0.tar.bz2
+$ cd poky-denzil-7.0É possível usar {% highlight bash %}
+git
+{% endhighlight %}  para obter o release mais recente (ou qualquer ramificação  específica), embora a ramificação principal do desenvolvimento possa ser  menos estável que o release testado representado no arquivo {% highlight bash %}
+tar
+{% endhighlight %} . A Listagem 2  mostra o uso de {% highlight bash %}
+git
+{% endhighlight %}  para fazer o download dos bits mais recentes.  Lista 2. Obtendo o Poky com o git$ git clone git://git.yoctoproject.org/poky.git
+$ cd pokyObserve que o subdiretório, nesse caso, chama-se simplesmente {% highlight bash %}
+poky
+{% endhighlight %} , sem o número do release, já que pode ser atualizado em qualquer momento usando o {% highlight bash %}
+git
+{% endhighlight %}.Inicialize o seu ambientePara inicializar o seu ambiente de trabalho, siga estas etapas:
+Primeiro,  instale todos os pacotes de desenvolvimento necessários a partir do  repositório de software do seu sistema host. Se você já desenvolve  software no seu host, é possível que a maioria deles já esteja  instalada. As Listagens3,      4, 5e 6  mostram como instalar os pacotes necessários em várias distribuições.
+Lista 3. Instalando pré-requisitos no Ubuntu     $ sudo apt-get install sed wget subversion git-core coreutils \
+     unzip texi2html texinfo libsdl1.2-dev docbook-utils fop gawk \
+     python-pysqlite2 diffstat make gcc build-essential xsltproc \
+     g++ desktop-file-utils chrpath libgl1-mesa-dev libglu1-mesa-dev \
+     autoconf automake groff libtool xterm libxml-parser-perlLista 4. Instalando pré-requisitos no Fedora     $ sudo yum groupinstall "development tools"
+     $ sudo yum install python m4 make wget curl ftp tar bzip2 gzip \
+     unzip perl texinfo texi2html diffstat openjade \
+     docbook-style-dsssl sed docbook-style-xsl docbook-dtds fop xsltproc \
+     docbook-utils sed bc eglibc-devel ccache pcre pcre-devel quilt \
+     groff linuxdoc-tools patch cmake \
+     perl-ExtUtils-MakeMaker tcl-devel gettext chrpath ncurses apr \
+     SDL-devel mesa-libGL-devel mesa-libGLU-devel gnome-doc-utils \
+     autoconf automake libtool xtermLista 5. Instalando pré-requisitos no CentOS     $ sudo yum -y groupinstall "development tools"
+     $ sudo yum -y install tetex gawk sqlite-devel vim-common redhat-lsb xz \
+       m4 make wget curl ftp tar bzip2 gzip python-devel \
+       unzip perl texinfo texi2html diffstat openjade zlib-devel \
+       docbook-style-dsssl sed docbook-style-xsl docbook-dtds \
+       docbook-utils bc glibc-devel pcre pcre-devel \
+       groff linuxdoc-tools patch cmake \
+       tcl-devel gettext ncurses apr \
+       SDL-devel mesa-libGL-devel mesa-libGLU-devel gnome-doc-utils \
+       autoconf automake libtool xtermLista 6. Instalando pré-requisitos no openSUSE     $ sudo zypper install python gcc gcc-c++ libtool fop \
+     subversion git chrpath automake make wget xsltproc \
+     diffstat texinfo freeglut-devel libSDL-develConfigure  as variáveis de ambiente do shell usando o script fornecido. Depois de  executar esse script, o seu diretório ativo será o subdiretório {% highlight bash %}
+build
+{% endhighlight %} , o local a partir do qual é possível executar o seu desenvolvimento. 
+$ cd poky 
+$ . ./oe-init-build-envExamine o arquivo de  configuração principal (conf/local.conf). Por padrão, o arquivo de  configuração é configurado para criar uma imagem para {% highlight bash %}
+qemux86
+{% endhighlight %} ou uma instância de QEMU emulando um processador x86 de 32 bits. Se  você tem um host de multiprocessador, é muito recomendável remover os  comentários das seguintes opções de paralelismo para acelerar a sua  criação. Por enquanto, configure esses dois valores como 2x o número de  núcleos do seu processador (por exemplo, 8 para um processador de 4  núcleos).
+BB_NUMBER_THREADS = "8"
+PARALLEL_MAKE = "-j 8"Excute um desenvolvimento inicialO  desenvolvedor inicial usa o compilador do host para desenvolver a  cadeia de ferramentas de várias compilações e quaisquer outras  necessárias. O BitBake também precisa fazer o download de todos os  pacotes de software — portanto, isso pode demorar um pouco. Quando  estiver concluído, você encontrará as imagens resultantes no  subdiretório tmp/deploy/images.
+Lista 7. Imagens iniciais do desenvolvimento $ ls tmp/deploy/images
+bzImage-3.2.11+gi...1.bin
+bzImage-qemux86.bin
+core-image-minimal-qemux86-20120506194741.rootfs.ext3
+core-image-minimal-qemux86-20120506194741.rootfs.tar.bz2
+core-image-minimal-qemux86.ext3
+core-image-minimal-qemux86.tar.bz2
+modules-3.2.11-yocto-standard-r1-qemux86.tgz
+README_-_DO_NOT_DELETE_FILES_IN_THIS_DIRECTORY.txtAlém disso, consulte tmp/deploy/IMAGE/license.manifest. Trata-se de uma lista de todas as licenças usadas na imagem inteira.
+Inicialize a nova imagemQuando  a criação for concluída, será possível inicializá-la por meio do QEMU  emulando uma máquina x86 de 32 bits. Para fazer isso, basta executar:
+$ runqemu qemux86É possível efetuar login na máquina com o nome de usuário {% highlight bash %}
+root
+{% endhighlight %}, sem senha. Parabéns! Você construiu uma distribuição de Linux integrado.
+É  possível fazer muitas customizações na imagem final, nos pacotes que a  formam e no processo em si. O sistema de desenvolvimento é escrito em  Python e está bem documentado.
+Test drive do HobO  Hob é uma GUI que ajuda a automatizar alguns dos processos descritos  anteriormente. O objetivo do Hob é tornar o processo de criação mais  visível e mais fácil de entender. Na realidade, o Hob é um frontend para  o BitBake — tudo o que é feito no Hob também pode ser feito a partir da  linha de comando (e com script). Entretanto, o Hob mostra graficamente o  processo de tomada de decisão e descreve exatamente quais pacotes são  integrados à imagem final. Outros recursos do Hob envolvem modificar as  imagens já existentes, salvar imagens customizadas como modelos,  executar imagens usando o QEMU e implementar imagens em um disco de  Universal Serial Bus (USB) para a inicialização na produção em um  dispositivo de destino. Vários outros recursos de funcionalidade e  usabilidade estão sendo preparados.
+Para executar o Hob, basta digitar {% highlight bash %}
+hob
+{% endhighlight %}  a partir do seu diretório de desenvolvimento para a tela principal aparecer. Comece escolhendo uma arquitetura (nesse caso, {% highlight bash %}
+qemux86
+{% endhighlight %}).  Em seguida, o Hob analisa as receitas disponíveis, como mostra a Figura 1.
+Figura 1. Configuração da imagem do HobDepois, é possível escolher uma imagem de base (o exemplo anterior construiu {% highlight bash %}
+core-image-minimal
+{% endhighlight %} — portanto, esses binários já existem. Escolha {% highlight bash %}
+core-image-minimal
+{% endhighlight %}  e, a seguir, clique em View recipes  ou View packages.  A tela na Figura 2  mostra as listas de rolagem em View packages.   É possível selecionar ou desmarcar essas caixas ou removê-las da  criação, respectivamente. Clique em um cabeçalho de coluna para  classificar por essa coluna.
+Figura 2. Pacotes do HobNa  guia Packages, observe que o Python não está incluído na criação  mínima. É possível incluí-lo simplesmente marcando a caixa de seleção  referente a {% highlight bash %}
+python-2.7.2-r2.14
+{% endhighlight %}, como mostra a Figura 3.  Todas as dependências e subpacotes também são incluídos imediatamente.
+Figura 3. Incluindo um pacote no HobClique em Build image  para ver o Hob desenvolver uma nova imagem com as suas opções.  Conforme a criação progride, é possível observar os logs para ver como  as coisas estão indo ou clicar na guia Issues para ver se surge algum  problema.
+Em seguida, é possível executar a imagem resultante em um emulador do QEMU simplesmente clicando em Run Image, como mostra a Figura 4.
+Figura 4. Detalhes da imagem do HobAgora é possível se certificar de que o Python foi realmente incluído na criação, como mostra a Figura 5.
+Figura 5. Verificando o acréscimoHá mais informações, tutoriais e vídeos disponíveis no website do projeto Yocto (consulte Recursos).
+Voltar para parte superiorConclusãoO  aprendizado do uso efetivo das ferramentas do projeto Yocto pode levar  tempo, mas esse tempo é bem empregado. O fluxo de trabalho flexível, as  configurações móveis e o alto grau de configurabilidade das ferramentas  possibilita a customização em todos os níveis do processo de criação. O  projeto Yocto representa um fluxo de trabalho comercial — ele é  projetado e implementado por desenvolvedores profissionais de sistemas  embarcados. Na época em que este artigo foi escrito, vários fabricantes  de ferramentas do sistema operacional estavam redirecionando os seus  produtos com base no projeto. Dê uma olhada nas ferramentas e, se gostar  do que vê, participe da comunidade.
+Fonte: http://www.ibm.com/developerworks/br/linux/ 

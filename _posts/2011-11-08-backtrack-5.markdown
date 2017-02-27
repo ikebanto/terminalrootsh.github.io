@@ -1,0 +1,15 @@
+---
+layout: post
+title: Backtrack 5
+date: '2011-11-08T10:42:00.000-08:00'
+description: Backtrack 5
+main-class: 'misc'
+tags:
+- Dicas
+twitter_text: Backtrack 5
+introduction: Backtrack 5
+---
+![Blog Linux](http://www.backtrack-linux.org/wp-content/gallery/bt5-wallpapers/Backtrack_5.jpg "Blog Linux")
+ Já está disponível para download o Backtrack 5.Backtrack é um sistema operacional Linux baseado no Ubuntu. É focado em testes de seguranças e testes de penetração (pen tests), muito apreciada por hackers e analistas de segurança, podendo ser iniciado diretamente pelo CD (sem necessidade de instalar em disco), mídia removível (pendrive), máquinas virtuais ou direto no disco rígido.
+Clique aqui ou na imagem acima para ser direionado a página de download do Backtrack.
+Site do Backtrack

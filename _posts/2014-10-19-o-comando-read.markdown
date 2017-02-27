@@ -1,0 +1,414 @@
+---
+layout: post
+title: O comando read
+date: '2014-10-19T07:51:00.000-07:00'
+description: O comando read
+main-class: 'bash'
+tags:
+- Shell Script
+- Comandos
+twitter_text: O comando read
+introduction: O comando read
+---
+Bem a partir de agora vamos aprender tudo sobre leitura, só não posso  ensinar a ler cartas e búzios porque se eu soubesse, estaria rico, num pub londrino tomando scotch e não em um boteco desses tomando chope. Mas vamos em frente.
+Da última vez que nos encontramos aqui eu já dei uma palinha sobre o comando 
+{% highlight bash %}
+read
+{% endhighlight %}
+. Para começarmos a sua analise mais detalhada. veja só isso:
+$ read var1 var2 var3
+Papo de Botequim
+$ echo $var1
+Papo
+$ echo $var2
+de
+$ echo $var3
+Botequim
+$ read var1 var2
+Papo de Botequim
+$ echo $var1
+Papo
+$ echo $var2
+de BotequimComo você viu, o 
+{% highlight bash %}
+read
+{% endhighlight %}
+recebe uma lista separada por  espaços em branco e coloca cada item desta lista em uma variável. Se a  quantidade de variáveis for menor que a quantidade de itens, a última  variável recebe o restante.
+Eu disse lista separada por espaços em branco? Agora que você já conhece tudo sobre o 
+{% highlight bash %}
+$IFS
+{% endhighlight %}
+(Inter Field Separator) que eu te apresentei quando falávamos do comando 
+{% highlight bash %}
+for
+{% endhighlight %}
+, será que ainda acredita nisso? Vamos testar direto no prompt:
+$ oIFS=”$IFS”
+$ IFS=:
+$ read var1 var2 var3
+Papo de Botequim
+$ echo $var1
+Papo de Botequim
+$ echo $var2$ echo $var3
+$ read var1 var2 var3
+Papo:de:Botequim
+$ echo $var1
+Papo
+$ echo $var2
+de
+$ echo $var3
+Botequim
+$ IFS=”$oIFS”Viu, estava furado! O 
+{% highlight bash %}
+read
+{% endhighlight %}
+ lê uma lista, assim como o 
+ 
+ {% highlight bash %}
+for
+{% endhighlight %}
+, separada pelos caracteres da variável
+ 
+{% highlight bash %}
+$IFS
+{% endhighlight %}
+. Então veja como isso pode facilitar a sua vida:
+$ grep julio /etc/passwd
+julio:x:500:544:Julio C. Neves – 7070:/home/julio:/bin/bash
+$ oIFS=”$IFS”    #  Salvando IFS
+$ IFS=:
+$ grep julio /etc/passwd | read lname lixo uid gid coment home shell
+$ echo -e “$lnamen$uidn$gidn$comentn$homen$shell”
+julio
+500
+544
+Julio C. Neves – 7070
+/home/julio
+/bin/bash
+$ IFS=”$oIFS”   #  Restaurando IFSComo você viu, a saída do 
+{% highlight bash %}
+grep
+{% endhighlight %}
+ foi redirecionada para o comando 
+ 
+{% highlight bash %}
+read
+{% endhighlight %} 
+que leu todos os campos de uma só tacada. A opção 
+{% highlight bash %}
+-e
+{% endhighlight %}
+ do {% highlight bash %}
+echo
+{% endhighlight %}
+ foi usada para que o 
+{% highlight bash %}
+n
+{% endhighlight %}
+ fosse entendido como um salto de linha (new line), e não como um literal.
+Sob o Bash existem diversas opções do 
+{% highlight bash %}
+read
+{% endhighlight %}
+ que servem para facilitar a sua vida. Veja a tabela a seguir:
+Opções do comando read no BashOpçãoAção
+{% highlight bash %}
+-p prompt
+{% endhighlight %}
+Escreve o 
+{% highlight bash %}
+prompt
+{% endhighlight %}
+ antes de fazer a leitura
+ {% highlight bash %}
+-n num
+{% endhighlight %}
+Lê até 
+{% highlight bash %}
+num
+{% endhighlight %}
+ caracteres
+ 
+ {% highlight bash %}
+-t seg
+{% endhighlight %}
+Espera 
+{% highlight bash %}
+seg
+{% endhighlight %}
+ segundos para que a leitura seja concluída
+ 
+ {% highlight bash %}
+-s
+{% endhighlight %}
+O que está sendo teclado não aparece na telaE agora direto aos exemplos curtos para demonstrar estas opções.
+Para ler um campo “Matrícula”:
+$ echo -n “Matricula: “; read Mat # -n nao salta linha
+Matricula: 12345
+$ echo $Mat
+12345Ou simplificando com a opção 
+{% highlight bash %}
+-p
+{% endhighlight %}
+:
+$ read -p “Matricula: ” Mat
+Matricula: 12345
+$ echo $Mat
+12345Para ler uma determinada quantidade de caracteres:
+$ read -n5 -p”CEP: ” Num ; read -n3 -p- Compl
+CEP: 12345-678$
+$ echo $Num
+12345
+$ echo $Compl
+678Neste exemplo fizemos dois 
+{% highlight bash %}
+read
+{% endhighlight %}
+: um para a primeira parte do CEP e outra para o seu complemento, deste modo formatando a entrada de dados. O cifrão (
+{% highlight bash %}
+$
+{% endhighlight %}
+) após o último algarismo teclado, é porque o 
+{% highlight bash %}
+read
+{% endhighlight %}
+ não tem o new-line implícito por default como o tem o 
+ 
+ {% highlight bash %}
+echo
+{% endhighlight %}
+Para ler que até um determinado tempo se esgote (conhecido como time out):
+$ read -t2 -p “Digite seu nome completo: ” Nom || echo ‘Eta moleza!’
+Digite seu nome completo: JEta moleza!
+$ echo $Nom$Obviamente isto foi uma brincadeira, pois só tinha 3 segundos para digitar o meu nome completo e só me deu tempo de teclar um 
+{% highlight bash %}
+J
+{% endhighlight %}
+ (aquele colado no 
+ 
+ {% highlight bash %}
+Eta
+{% endhighlight %}
+), mas serviu para mostrar duas coisas:
+ O comando após o par de barras verticais (
+ 
+{% highlight bash %}
+||
+{% endhighlight %}
+) (o ou lógico, lembra-se?) será executado caso a digitação não tenha sido concluída no tempo estipulado; A variável 
+{% highlight bash %}
+Nom
+{% endhighlight %}
+ permaneceu vazia. Ela será valorada somente quando o 
+ 
+for teclado.Para ler um dado sem ser exibido na tela:
+$ read -sp “Senha: “
+Senha: $ echo $REPLY
+segredo :)Aproveitei um erro para mostrar um macete. Quando escrevi a primeira  linha, esqueci de colocar o nome da variável que iria receber a senha, e  só notei quando ia listar o seu valor. Felizmente a variável {% highlight bash %}
+$REPLY
+{% endhighlight %} do Bash, possui a última cadeia lida e me aproveitei disso para não perder a viagem. Teste você mesmo o que acabei de fazer.
+Mas o exemplo que dei, era para mostrar que a opção {% highlight bash %}
+-s
+{% endhighlight %} impede o que está sendo teclado de ir para a tela. Como no exemplo anterior, a falta do new-line fez com que o prompt de comando ({% highlight bash %}
+$
+{% endhighlight %}) permanecesse na mesma linha.
+Bem, agora que sabemos ler da tela vejamos como se lê os dados dos arquivos.
+ Vamos ler arquivos?Como eu já havia lhe dito, e você deve se lembrar, o {% highlight bash %}
+while
+{% endhighlight %} testa um comando e executa um bloco de instruções enquanto este comando  for bem sucedido. Ora quando você está lendo um arquivo que lhe dá  permissão de leitura, o {% highlight bash %}
+read
+{% endhighlight %} só será mal sucedido quando alcançar o {% highlight bash %}
+EOF
+{% endhighlight %} (end of file), desta forma podemos ler um arquivo de duas maneiras:
+1 – Redirecionando a entrada do arquivo para o bloco do {% highlight bash %}
+while
+{% endhighlight %} assim:
+    while read Linha
+    do
+        echo $Linha
+    done 2 – Redirecionando a saída de um {% highlight bash %}
+cat
+{% endhighlight %} para o {% highlight bash %}
+while
+{% endhighlight %}, da seguinte maneira:
+    cat arquivo |
+    while read Linha
+    do
+        echo $Linha
+    doneCada um dos processos tem suas vantagens e desvantagens:
+Vantagens do primeiro processo:
+ É mais rápido; Não necessita de um subshell para assisti-lo;Desvantagem do primeiro processo:
+ Em um bloco de instruções grande, o redirecionamento fica pouco visível o que por vezes prejudica a vizualização do código;Vantagem do segundo processo:
+ Como o nome do arquivo está antes do {% highlight bash %}
+while
+{% endhighlight %}, é mais fácil a vizualização do código.Desvantagens do segundo processo:
+ O Pipe ({% highlight bash %}
+|
+{% endhighlight %}) chama um subshell para interpretá-lo, tornando o processo mais lento, pesado e por vezes problemático (veja o exemplo a seguir).Para ilustrar o que foi dito, veja estes exemplos a seguir:
+$ cat readpipe.sh
+#!/bin/bash
+# readpipe.sh
+# Exemplo de read passando arquivo por pipe.
+Ultimo=”(vazio)”
+cat $0 | # Passando o arq. do script ($0) p/ while
+while read Linha
+do
+Ultimo=”$Linha”
+echo “-$Ultimo-“
+done
+echo “Acabou, Último=:$Ultimo:”Vamos ver sua execução:
+$ readpipe.sh
+-#!/bin/bash-
+-# readpipe.sh-
+-# Exemplo de read passando arquivo por pipe.-
+–
+-Ultimo=”(vazio)”-
+-cat $0 | # Passando o arq. do script ($0) p/ while-
+-while read Linha-
+-do-
+-Ultimo=”$Linha”-
+-echo “-$Ultimo-“-
+-done-
+-echo “Acabou, Último=:$Ultimo:”-
+Acabou, Último=:(vazio):Como você viu, o script lista todas as suas próprias linhas com um sinal de menos ({% highlight bash %}
+-
+{% endhighlight %}) antes e outro depois de cada, e no final exibe o conteúdo da variável {% highlight bash %}
+$Ultimo
+{% endhighlight %}. Repare no entanto que o conteúdo desta variável permanece como {% highlight bash %}
+(vazio)
+{% endhighlight %}.
+- Ué será que a variável não foi atualizada?
+- Foi, e isso pode ser comprovado porque a linha {% highlight bash %}
+echo "-$Ultimo-"
+{% endhighlight %} lista corretamente as linhas.
+- Então porque isso aconteceu?
+- Por que como eu disse, o bloco de instruções redirecionado pelo pipe ({% highlight bash %}
+|
+{% endhighlight %}) é executado em um subshell e lá as variáveis são atualizadas. Quando este subshell termina, as atualizações das variáveis vão para os píncaros do inferno  junto com ele. Repare que vou fazer uma pequena mudança nele, passando o  arquivo por redirecionamento de entrada (<) e as coisas passarão a  funcionar na mais perfeita ordem:
+$ cat redirread.sh
+#!/bin/bash
+# redirread.sh
+# Exemplo de read passando arquivo por pipe.
+Ultimo=”(vazio)”
+while read Linha
+do
+Ultimo=”$Linha”
+echo “-$Ultimo-“
+done < $0 # Passando o arq. do script ($0) p/ while
+echo “Acabou, Último=:$Ultimo:”E veja a sua perfeita execução:
+$ redirread.sh
+-#!/bin/bash-
+-# redirread.sh-
+-# Exemplo de read passando arquivo por pipe.-
+–
+-Ultimo=”(vazio)”-
+-while read Linha-
+-do-
+-Ultimo=”$Linha”-
+-echo “-$Ultimo-“-
+-done < $0 # Passando o arq. do script ($0) p/ while-
+-echo “Acabou, Último=:$Ultimo:”-
+Acabou, Último=:echo “Acabou, Último=:$Ultimo:”:Bem amigos da Rede Shell, para finalizar o comando {% highlight bash %}
+read
+{% endhighlight %} só falta mais um pequeno e importante macete que vou mostrar utilizando  um exemplo prático. Suponha que você queira listar na tela um arquivo e  a cada dez registros esta listagem pararia para que o operador pudesse  ler o conteúdo da tela e ela só voltasse a rolar (scroll) após o  operador digitar qualquer tecla. Para não gastar papel (da Linux  Magazine) pra chuchu, vou fazer esta listagem na horizontal e o meu  arquivo ({% highlight bash %}
+numeros
+{% endhighlight %}), tem 30 registros somente com números seqüênciais. Veja:
+$ seq 30 | xargs -i echo lin {} > numeros   #  Criando arquivo numeros
+$ paste -sd':’ numeros                      #  Este paste é para exibir o conteúdo sem ser um
+#+ por linha, usando dois-pontos como separador
+lin 1:lin 2:lin 3:lin 4:lin 5:lin 6:lin 7:lin 8:lin 9:lin 10:lin 11:lin 12:lin 13:lin 14:lin 15:l
+in 16:lin 17:lin 18:lin 19:lin 20:lin 21:lin 22:lin 23:lin 24:lin 25:lin 26:lin 27:lin 28:lin 29:
+lin 30
+$ cat 10porpag.sh
+#!/bin/bash
+# Prg de teste para escrever
+# 10 linhas e parar para ler
+# Versão 1
+while read Num
+do
+let ContLin++           # Contando…
+echo -n “$Num ”         # -n para nao saltar linha
+((ContLin % 10)) > /dev/null || read
+done Na tentativa de fazer um programa genérico criamos a variável {% highlight bash %}
+$ContLin
+{% endhighlight %} (por que na vida real, os registros não são somente números seqüenciais) e parávamos para ler quando o resto da divisão por {% highlight bash %}
+10
+{% endhighlight %} fosse zero (mandando a saída para {% highlight bash %}
+/dev/null
+{% endhighlight %} de forma a não aparecer na tela, sujando-a). Porém, quando fui executar deu a seguinte zebra:
+$ 10porpag.sh
+lin 1 lin 2 lin 3 lin 4 lin 5 lin 6 lin 7 lin 8 lin 9 lin 10 lin 12 lin 13 lin 14 lin 15 lin 16 l
+in 17 lin 18 lin 19 lin 20 lin 21 lin 23 lin 24 lin 25 lin 26 lin 27 lin 28 lin 29 lin 30 $Repare que faltou a linha {% highlight bash %}
+lin 11
+{% endhighlight %} e a listagem não parou no {% highlight bash %}
+read
+{% endhighlight %}. O que houve foi que toda a entrada do loop estava redirecionada do arquivo {% highlight bash %}
+numeros
+{% endhighlight %} e desta forma, a leitura foi feita em cima deste arquivo, desta forma perdendo a {% highlight bash %}
+lin 11
+{% endhighlight %} (e também a {% highlight bash %}
+lin 22
+{% endhighlight %} ou qualquer linha múltipla de 11).
+Vamos mostrar então como deveria ficar para funcionar a contento:
+$ cat 10porpag.sh
+#!/bin/bash
+# Prg de teste para escrever
+# 10 linhas e parar para ler
+# Versão 2
+while read Num
+do
+let ContLin++           # Contando…
+echo -n “$Num ”         # -n para nao saltar linha
+((ContLin % 10)) > /dev/null || read < /dev/tty
+done Observe que agora a entrada do {% highlight bash %}
+read
+{% endhighlight %} foi redirecionada por {% highlight bash %}
+/dev/tty
+{% endhighlight %},  que nada mais é senão o terminal corrente, explicitando desta forma que  aquela leitura seria feita do teclado e não de numeros. É bom realçar  que isto não acontece somente quando usamos o redirecionamento de  entrada, se houvéssemos usado o redirecionamento via pipe ({% highlight bash %}
+|
+{% endhighlight %}), o mesmo teria ocorrido.
+Veja agora a sua execução:
+$ 10porpag.sh
+lin 1 lin 2 lin 3 lin 4 lin 5 lin 6 lin 7 lin 8 lin 9 lin 10
+lin 11 lin 12 lin 13 lin 14 lin 15 lin 16 lin 17 lin 18 lin 19 lin 20
+lin 21 lin 22 lin 23 lin 24 lin 25 lin 26 lin 27 lin 28 lin 29 lin 30Isto está quase bom mas falta um pouco para ficar excelente. Vamos  melhorar um pouco o exemplo para que você o reproduza e teste (mas antes  de testar aumente o número de registros de {% highlight bash %}
+numeros
+{% endhighlight %} ou reduza o tamanho da tela, para que haja quebra).
+$ cat 10porpag.sh
+#!/bin/bash
+# Prg de teste para escrever
+# 10 linhas e parar para ler
+# Versão 3
+clear
+while read Num
+do
+((ContLin++))                           # Contando…
+echo “$Num”
+((ContLin % (`tput lines` – 3))) ||
+{
+read -n1 -p”Tecle Algo ” < /dev/tty # para ler qq caractere
+clear                               # limpa a tela apos leitura
+}
+done A mudança substancial feita neste exemplo é com relação à quebra de  página, já que ela é feita a cada quantidade-de-linhas-da-tela ({% highlight bash %}
+tput lines
+{% endhighlight %}) menos ({% highlight bash %}
+-
+{% endhighlight %}) {% highlight bash %}
+3
+{% endhighlight %}, isto é, se a tela tem 25 linha, listará 22 registros e parará para leitura. No comando {% highlight bash %}
+read
+{% endhighlight %} também foi feita uma alteração, inserido um {% highlight bash %}
+-n1
+{% endhighlight %} para ler somente um caractere sem ser necessariamente um {% highlight bash %}
+{% endhighlight %} e a opção {% highlight bash %}
+-p
+{% endhighlight %} para dar a mensagem.
+- Bem meu amigo, por hoje é só porque acho que você já está de saco cheio…
+- Num tô não, pode continuar…
+- Se você não estiver eu estou… Mas já que você está tão empolgado  com o Shell, vou te deixar um exercício de apredizagem para você  melhorar a sua CDteca que é bastante simples. Reescreva o seu programa  que cadastra CDs para montar toda a tela com um único {% highlight bash %}
+echo
+{% endhighlight %} e depois vá posicionando à frente de cada campo para receber os valores que serão teclados pelo operador.
+Vou aproveitar também para mandar o meu jabá: diga para os amigos que  quem estiver afim de fazer um curso porreta de programação em Shell que mande um e-mail para a nossa gerencia de treinamento para informar-se.
+Qualquer dúvida ou falta de companhia para um chope ou até para falar mal dos políticos é só mandar um e-mail para mim.
+Valeu!
+Via: http://jneves.wordpress.com

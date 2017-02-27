@@ -1,0 +1,32 @@
+---
+layout: post
+title: FuSE o sucessor para o Fuduntu
+date: '2013-05-02T15:40:00.000-07:00'
+description: FuSE o sucessor para o Fuduntu
+main-class: 'misc'
+tags:
+- Artigos
+image: http://4.bp.blogspot.com/--6aSV3J4NXM/UYLqgWNLiZI/AAAAAAAABhM/v1o_QHRQj9g/s72-c/FuSE.png
+twitter_text: FuSE o sucessor para o Fuduntu
+introduction: FuSE o sucessor para o Fuduntu
+---
+![Blog Linux](http://4.bp.blogspot.com/--6aSV3J4NXM/UYLqgWNLiZI/AAAAAAAABhM/v1o_QHRQj9g/s320/FuSE.png "Blog Linux")
+ 
+ Apenas duas semanas depois de anunciar que estaria fechando suas portas no final deste ano, a equipe Fuduntu Linux no domingo anunciou que decidiu em vez de acabar com o projeto imediatamente.
+"Depois de monitoramento da atividade de projeto e tráfego e também rever todo o feedback da comunidade sobre a nossa EOL, eu decidi terminar o projeto a partir de hoje", escreveu o projeto da equipe membro sentiram em um post de blog fim de semana. "Isso significa que a partir do nosso último merge de testes para estável, o que deve acontecer hoje ou amanhã, não haverá atualizações adicionais para Fuduntu".
+  
+![Blog Linux](http://images.techhive.com/images/article/2012/10/fuduntu20log-100007493-orig.png "Blog Linux")
+   
+Menos de 2.500 usuários ainda têm Fuduntu instalado, sentiram observou, acrescentando que "a maioria da nossa base de usuários já mudaram para outras distribuições."
+Como o projeto termina, uma atualização final para aqueles que ainda estão usando a distribuição Linux irá desativar o repositório estável Fuduntu para evitar um fluxo constante de mensagens de erro.
+Baseado no openSUSE
+Essa é a má notícia para os usuários Fuduntu, como eu, que vieram a amar o 2 distro baseada em GNOME. Há, contudo, algumas notícias intrigante bem.
+Ou seja, acompanhando a sugestão inicial de que pelo menos parte da equipe Fuduntu seria começar a trabalhar em um novo projeto, mais detalhes sobre esse esforço já surgiram.
+Especificamente, a nova distro foi provisoriamente chamado FUSE Linux, e será baseado no openSUSE, projeto de comunicação líder Lee Ward escreveu em um post no blog no sábado.
+  
+![Blog Linux](http://images.techhive.com/images/article/2013/04/consort-screenshot-from-2013-03-08-15-52-24-100035290-large.png "Blog Linux")
+ O desktop Consort
+Ainda mais interessante é que parece que o novo desktop Consort (mostrado acima) provavelmente será ambiente de desktop padrão do FuSE Linux. Como os fãs do Linux podem se lembrar, Consort é o novo ambiente de trabalho a ser desenvolvido pelo fundador SolusOS Ikey Doherty com o objetivo de recriar o look and feel do GNOME 2.
+KDE também estará disponível, no entanto, como se outros ambientes de trabalho através dos repositórios do openSUSE, Ward apontou.
+Como as ações Consort o foco em uma experiência de desktop clássico que encantou Fuduntu para muitos, esta é uma grande notícia para os usuários que perguntou para onde se virar em seguida. Você pode manter o controle sobre o progresso do FuSE Linux observando a página do projeto no Trello ou via página da comunidade do projeto no Google+ .
+Fonte: http://www.pcworld.com

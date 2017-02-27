@@ -1,0 +1,64 @@
+---
+layout: post
+title: " Gravando sessões do terminal Linux utilizando ttyrec"
+date: '2015-06-04T06:09:00.000-07:00'
+description: " Gravando sessões do terminal Linux utilizando ttyrec"
+main-class: 'linux'
+tags:
+- Linux
+- userlike
+- Multimídia
+- Dicas
+- Terminal
+- Comandos
+image: http://3.bp.blogspot.com/-hXgViazGFTQ/VXBNyKFaPXI/AAAAAAAABWE/hIIG5Jax7Ak/s72-c/ttyrec.jpg
+twitter_text: " Gravando sessões do terminal Linux utilizando ttyrec"
+introduction: " Gravando sessões do terminal Linux utilizando ttyrec"
+---
+![Blog Linux](http://3.bp.blogspot.com/-hXgViazGFTQ/VXBNyKFaPXI/AAAAAAAABWE/hIIG5Jax7Ak/s320/ttyrec.jpg "Blog Linux")
+INTRODUÇÃO Ottyrecé um software que permite gravar  tudo que for feito no terminal do Linux.  Com ele é possível gravar a  saída TTY de um programa em modo de texto juntamente com a data e hora  e, em seguida, exibi-lo como se fosse um vídeo. É muito útil para  realizar auditorias em servidores Linux.  Este breve tutorial tem como  objetivo demonstrar a instalação e a utilização do software em um  ambiente rodando Debian 7 mas nada impede de ser instalado em outras  distribuições.  Mais informações podem ser encontradas em:   http://0xcc.net/ttyrec/index.html.en    PROCEDIMENTOS Primeiramente, faça ologin no servidor e como root rode os seguintes comandos:     {% highlight bash %}
+# apt-get update
+{% endhighlight %} {% highlight bash %}
+# apt-get installttyrec
+{% endhighlight %}    Feito isso o software já estará instalado e pronto para uso. Veja  algumas das opções que podem ser utilizadas para gravar:  A opção  -apermite anexar a saída para o arquivo ou ttyrecord, ao invés de  substituí-lo.  Exemplo: {% highlight bash %}
+#ttyrec -a arquivo.rec
+{% endhighlight %}    A opção-uchama automaticamente uudecode e salva sua saída quando  os dados uuencoded aparecer na sessão. Ele permitirá que você transfira  arquivos de hosts remotos. Você pode chamar o ttyrec com esta opção,  acessar o host remoto e invocar uuencode com ele para o arquivo que você  deseja transferir.  Exemplo: {% highlight bash %}
+#ttyrec -u arquivo.rec
+{% endhighlight %}    A opção -e é utilizada para que você possa monitorar a saída de um  comando. Pode-se gravar apenas a execução do comando find.  Exemplo: {% highlight bash %}
+#ttyrec -e find
+{% endhighlight %}    Para reproduzir as gravações utilizaremos o ttyplay.  A opção -n  mostra na tela a saída de todos os comandos que foram executados,  parecidos com o comando history.  Exemplo: {% highlight bash %}
+#ttyplay -narquivo.rec
+{% endhighlight %}    A opção -s determina a velocidade de reprodução. Varia de 1 (velocidade normal) a 10 (rápido)  Exemplo: {% highlight bash %}
+#ttyplay -s 5 arquivo.rec
+{% endhighlight %}    No comando acima o vídeo será reproduzido 5 vezes mais rápido que o normal.  {% highlight bash %}
+Obs: As opções citadas acima foram retiradas do manual do ttyrec para mais acesse man ttyrec no seu terminal.
+{% endhighlight %}    Criando um script para gravar todas as sessões do terminal assim que  um usuário logar no servidor  Primeiro, iremos criar o diretório onde  ficarão os arquivos do ttyrec, eu por exemplo costumo usar o caminho  /sis-bkp/audit/ttyrecporém você pode modificar da forma que achar  necessário.     {% highlight bash %}
+#mkdir -m 777 -p /sis-bkp/audit/ttyrec
+{% endhighlight %}    O comando acima cria todos os diretórios {% highlight bash %}
+(opção -p)
+{% endhighlight %} e ainda seta a permissão 777 para o diretório ttyrec {% highlight bash %}
+(opção -m 777)
+{% endhighlight %} para que todos os usuários do sistema consiga escrever no mesmo.  Para  finalizar, precisaremoseditar o arquivo/etc/profile, queserá  responsável por chamar o utilitário ttyrec para gravar as sessões para  gravar a sessão dequalquer usuário que se conectar no servidor.   Primeiro faça um backup do arquivo original para restaurar caso haja  problemas:     {% highlight bash %}
+cp /etc/profile /etc/profile.bkp
+{% endhighlight %}    Depois com um editor de sua preferência. Eu utilizei o vim.     {% highlight bash %}
+#vim /etc/profile
+{% endhighlight %}    No final do arquivo, salte uma linha e inclua:     {% highlight bash %}
+#-- Gravar sessões do terminal
+{% endhighlight %} {% highlight bash %}
+if [ `id -u` ];
+{% endhighlight %} {% highlight bash %}
+then
+{% endhighlight %}{% highlight bash %}
+ LOG="/sis-bkp/audit/ttyrec/log-${LOGNAME}-"`date +%d-%m-%Y_%H:%M`".rec"
+{% endhighlight %}{% highlight bash %}
+ ttyrec -u $LOG
+{% endhighlight %}{% highlight bash %}
+ fi
+{% endhighlight %} #-- Fim gravar sessões do terminal     Salve o arquivo e estará pronto.  Toda vez que um usuário logar no sistema, será gerado um arquivo com  extensão .rec dentro de {% highlight bash %}
+/sis-bkp/audit/ttyrec
+{% endhighlight %} com o seguinte formato:     {% highlight bash %}
+log-usuário-data_hora.rec
+{% endhighlight %}    {% highlight bash %}
+Obs:  Caso o seu servidor permita acesso via ssh para o usuário root, remova  para que não haja confusão de quem logou no mesmo. Deixe apenas que  usuários comuns possam logar via ssh pois assim o log será gerado com o  nome do usuário.
+{% endhighlight %}
+Por Clediomir SIlva

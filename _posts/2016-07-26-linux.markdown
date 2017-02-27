@@ -1,0 +1,17 @@
+---
+layout: post
+title: CONCEITO, HISTÓRIA E ESTRUTURA DO LINUX
+date: '2016-07-25T22:49:00.001-07:00'
+description: CONCEITO, HISTÓRIA E ESTRUTURA DO LINUX
+main-class: 'linux'
+tags:
+- Linux
+- GNU
+- TerminalRootTV
+image: https://4.bp.blogspot.com/-1ttE__RNT9U/V5b3bTszXaI/AAAAAAAAAto/dyhVtBSyoNE6x6zOxYjYKJHaImMHURM9ACLcB/s72-c/conceito-historia-estrutura-linux.png
+twitter_text: CONCEITO, HISTÓRIA E ESTRUTURA DO LINUX
+introduction: CONCEITO, HISTÓRIA E ESTRUTURA DO LINUX
+---
+![Blog Linux](https://4.bp.blogspot.com/-1ttE__RNT9U/V5b3bTszXaI/AAAAAAAAAto/dyhVtBSyoNE6x6zOxYjYKJHaImMHURM9ACLcB/s320/conceito-historia-estrutura-linux.png "Blog Linux")
+Assista o mais novo vídeo do nosso Canal do Youtube que informa de maneira objetiva, clara e eficaz o verdadeiro conceito, histórico e estrutura de diretórios do Linux, ou GNU/Linux, como o próprio vídeo discorre em um dos pontos.
+<iframe allowfullscreen="" frameborder="0" height="415" src="https://www.youtube.com/embed/zqxqvkoRsTw" width="660"><iframe>

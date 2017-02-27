@@ -1,0 +1,26 @@
+---
+layout: post
+title: É usuário Linux mas o Windows veio instalado no PC?
+date: '2013-05-27T17:25:00.000-07:00'
+description: É usuário Linux mas o Windows veio instalado no PC? Saiba que é possível pedir
+main-class: 'misc'
+tags:
+- Artigos
+image: http://1.bp.blogspot.com/-WvQQmRg58ZI/UaP39ahDbjI/AAAAAAAABpw/RB760Sz-AzI/s72-c/copyleft_analisis_que_es.jpg
+twitter_text: É usuário Linux mas o Windows veio instalado no PC? Saiba que é possível pedir
+introduction: É usuário Linux mas o Windows veio instalado no PC? Saiba que é possível pedir
+---
+![Blog Linux](http://1.bp.blogspot.com/-WvQQmRg58ZI/UaP39ahDbjI/AAAAAAAABpw/RB760Sz-AzI/s200/copyleft_analisis_que_es.jpg "Blog Linux")
+Código de defesa do Consumidor prevê que usuário tem o direito de escolher qual o sistema será instalado na sua máquina <iframe allowfullscreen="" frameborder="0" height="315" src="http://www.youtube.com/embed/sqkR-1FLwro" width="560"><iframe> 
+É usuário Linux mas o Windows veio instalado no PC? Saiba que é possível pedir reembolso!
+Código de defesa do Consumidor prevê que usuário tem o direito de escolher qual o sistema será instalado na sua máquina.
+![Blog Linux](http://2.bp.blogspot.com/-w_r7j8f8zh4/UaP4MtxqEKI/AAAAAAAABp4/oCS00H1ZlQQ/s320/open-source.jpg "Blog Linux")
+Quando você compra um computador, muitas vezes ele vem com um sistema operacional já instalado, certo? Normalmente, é o Windows ou o Ubuntu, uma versão mais amigável do Linux. Muita gente nem sabe, mas a instalação do sistema operacional está longe de ser uma obrigação da fabricante. Pelo contrário: a obrigação é do usuário de escolher aquilo que ele quer instalado na máquina dele. Imagine a situação: você só usa software livre, não quer pagar pela licença do Windows, mas o fabricante te empurra uma máquina com o sistema operacional. Geralmente, isso significa uns 200 reais a mais na conta. O fabricante pode até dizer que é promoção e está te dando a cópia original, mas tem direito de escolher se quer ou não o sistema operacional no seu micro. O que fazer neste caso? Pedir um desconto, ou mesmo um reembolso? Pois é, saiba que você pode, sim, fazer isso. E mais: está amparado pelo Código de Defesa do Consumidor!
+![Blog Linux](http://4.bp.blogspot.com/-LuA6MPP_1o0/UaP4luTD2nI/AAAAAAAABqA/BOrotn3vjYU/s320/ilustracaoSoftLivre.gif "Blog Linux")
+"No Brasil há a prática do que pedido de reembolso porque está protegido por lei, esse direito do consumidor. Não pode haver venda casada, e como as lojas ou os próprios fabricantes já ofertam o hardware com o software - sistema operacional -, se o consumidor quiser mudar e não aceitar aquela licença que foi colocada, ele tem o direito ao reembolso", alerta a advogada especialista em direito digital, Patricia Peck.
+Mas para você não ter nenhum problema com a fabricante na hora de solicitar a restituição do dinheiro, a principal dica é não aceitar a instalação da licença no momento em que você inicia o computador pela primeira vez. Ao não aceitar, você já dá um grande passo para conseguir o reembolso. Mas o processo não para por aí.
+![Blog Linux](http://1.bp.blogspot.com/-QjqFK0dFJAU/UaP4zFKln4I/AAAAAAAABqI/FMsb_1dTTaY/s400/Procon.jpg "Blog Linux")
+"Você deve entrar em contato com o vendedor. Se ele comprou em loja ou se comprou diretamente com o fabricante, é ele (vendedor) o primeiro a ser contatado. Você registra a data e hora que você manifestou isso, se puder gravar, grave, se puder documentar por e-mail, documente. Esse é um pedido que precisa ser atendido. Se não for atendido no prazo de até 30 dias, aí é importantíssimo que o consumidor vá até o Procon, porque aí cabe ao Procon fazer esse contato. Já pode para a empresa gerar até uma multa, caso ela não cumpra. E (no Procon) deve levar sua carteira de identidade - seus documentos de identificação -, nota fiscal de compra da mercadoria, por isso a importância de pedir nota fiscal, de guardá-la, e qualquer outro tipo de documento, manual que tenha vindo na caixa quando você fez a compra do computador", aconselha a advogada.
+![Blog Linux](http://3.bp.blogspot.com/-iONjPd6e0Yk/UaP5C8e3EhI/AAAAAAAABqQ/8mRUUQvc5MM/s1600/software-livre.jpg "Blog Linux")
+Na prática, o que está amparado por Lei nem sempre funciona... A Léia mora na cidade de Maringá, no Paraná. Há mais de um mês, comprou um netbook da Lenovo com o sistema operacional Windows XP, da Microsoft. Léia preferiu recusar o software da Microsoft e decidiu usar o Linux. Ela seguiu todas as instruções recomendadas pela nossa advogada, mas até agora, mesmo depois de falar com diversas atendentes do call center da fabricante, ainda não conseguiu reaver o dinheiro do software que ela não quis instalar.
+Veja a Matéria completa em: Olhar Digital
