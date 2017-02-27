@@ -2,14 +2,15 @@
 layout: post
 title: "Feliz Dia da Consciência Negra!"
 date: '2011-11-20T07:46:00.000-08:00'
-description: "Feliz Dia da Consciência Negra!"
+description: "O blog é de tecnologia, mas voltado pra liberdade da tecnologia, então nada mais do que saudoso, lembrar desse dia maravilho."
 main-class: 'artigos'
 tags:
 - Artigos
 image: "http://3.bp.blogspot.com/-Z98wgYLIHPY/TskgnX9fCkI/AAAAAAAAAQM/P4KISQMkHKE/s72-c/zumbi2.jpg"
 twitter_text: "Feliz Dia da Consciência Negra!"
-introduction: "Feliz Dia da Consciência Negra!"
+introduction: "O blog é de tecnologia, mas voltado pra liberdade da tecnologia, então nada mais do que saudoso, lembrar desse dia maravilho."
 ---
+
 ![Blog Linux](http://3.bp.blogspot.com/-Z98wgYLIHPY/TskgnX9fCkI/AAAAAAAAAQM/P4KISQMkHKE/s1600/zumbi2.jpg "Blog Linux")
  O blog é de tecnologia, mas voltado pra liberdade da tecnologia, então nada mais do que saudoso, lembrar desse dia maravilho.
 O Dia Nacional da Consciência Negra é celebrado em 20 de novembro no Brasil e é dedicado à reflexão sobre a inserção do negro na sociedade brasileira. A semana dentro da qual está esse dia recebe o nome de Semana da Consciência Negra.
