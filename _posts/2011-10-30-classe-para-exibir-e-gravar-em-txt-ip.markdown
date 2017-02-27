@@ -1,13 +1,13 @@
 ---
 layout: post
-title: "'Classe para Exibir e Gravar em TXT: IP, OS, Data e Hora.'"
+title: "Classe para Exibir e Gravar em TXT: IP, OS, Data e Hora."
 date: '2011-10-30T12:38:00.000-07:00'
-description: "'Classe para Exibir e Gravar em TXT: IP, OS, Data e Hora.'"
+description: "Classe para Exibir e Gravar em TXT: IP, OS, Data e Hora."
 main-class: 'misc'
 tags:
 - PHP
-twitter_text: "'Classe para Exibir e Gravar em TXT: IP, OS, Data e Hora.'"
-introduction: "'Classe para Exibir e Gravar em TXT: IP, OS, Data e Hora.'"
+twitter_text: "Classe para Exibir e Gravar em TXT: IP, OS, Data e Hora."
+introduction: "Classe para Exibir e Gravar em TXT: IP, OS, Data e Hora."
 ---
 Segue classe e já instanciada e setada a função pronta para utilização e estudo.
 {% highlight php %}
