@@ -1,0 +1,30 @@
+---
+layout: post
+title: "50 crianças africanas paralisadas depois de vacina de Bill Gates"
+date: '2013-10-12T08:26:00.002-07:00'
+description: "50 crianças africanas paralisadas depois de vacina de Bill Gates"
+main-class: 'misc'
+tags:
+- Artigos
+image: "http://4.bp.blogspot.com/-pioSW3hRvPw/Ullp175Rt3I/AAAAAAAACdc/qBDq5XyWqGg/s72-c/kill+bill.jpg"
+twitter_text: "50 crianças africanas paralisadas depois de vacina de Bill Gates"
+introduction: "50 crianças africanas paralisadas depois de vacina de Bill Gates"
+---
+![Blog Linux](http://4.bp.blogspot.com/-pioSW3hRvPw/Ullp175Rt3I/AAAAAAAACdc/qBDq5XyWqGg/s320/kill+bill.jpg "Blog Linux")
+![Blog Linux](http://mediafrihet.files.wordpress.com/2012/06/vaccinering.jpg?w=640&amp;h=512 "Blog Linux")
+Filosofia Imortal (http://filosofiaimortal.blogspot.com.br):Mais  uma investida dos grandes laboratórios! Parece mesmo que a África está  sendo usada como gaiola de cobaias para testes de novos medicamentos e  não é só um caso de ficção, como mostrado no filme O Jardineiro Fiel, do  diretor brasileiro Fernando Meirelles. A Verdade está vindo à tona e só  podemos lamentar por estes SERES HUMANOS usados indiscriminadamente  para os interesses escusos de terceiros? Até quando vamos baixar a  cabeça para essas coisas? SERES HUMANOS estão sendo usados como cobaias  na África! Vamos acordar!
+Pelo menos 50 crianças africanas paralisadas depois de receber vacina contra meningite de Bill Gates
+![Blog Linux](http://2.bp.blogspot.com/-SMEtLMfII2w/UQKJyf8vGwI/AAAAAAAAATk/N4ZjaJifRF0/s1600/reaction-to-meningitis-vaccine-2-300x225.jpg "Blog Linux")
+(NaturalNews) Bill e Melinda Gates E  seu plano de vacinação. E um de seus principais alvos geográficos tem  sido o continente da África, onde sanitários pobres e falta de água  potável criaram condições em que doenças como meningite e malária correm  galopante. Mas em vez de tentar atender a essas necessidades básicas,  os bilionários e seus aliados muitas vez empurraram vacinas em  populações indígenas como a solução, que por sua vez provocou uma onda  de paralisia entre as populações mais jovens da África. 
+Conforme mencionado pela jornalista investigativa Christina da  Inglaterra sobre a Vactruth.com , a pequena vila de Gouro no norte do  Chade, por exemplo, recentemente foi vítima para o lado escuro dessa  agenda de vacina depois que pelo menos 50 jovens na área desenvolveram  paralisia após a vacinação com "MenAfriVac", uma nova vacina contra  meningite desenvolvida especificamente para a África. Anunciada como uma  cura preventiva para a meningite, MenAfriVac teria feito crianças até  de sete anos, a sofrer alucinações, convulsões, e finalmente paralisia. 
+Segundo o primo de de duas crianças que tomaram a vacina, o terrível  efeitos secundários da MenAfriVac começaram a aparecer dentro de 24  horas após a sua administração. Muitas das crianças afetadas por ela  imediatamente começaram a sentir dores de cabeça e vômitos, que mais  tarde evoluiu para "convulsões incontroláveis." Mas quando os pais e as  autoridades locais tentaram chamar funcionários deles e do governo para  agir e ajudar as crianças afetadas, as suas petições para alívio eram  totalmente ignoradas.
+Governo do Chade tenta subornar pais em silêncio
+![Blog Linux](http://2.bp.blogspot.com/-X9TMUQIwuPs/UQKJ2sP0ywI/AAAAAAAAATs/UEAG1TxDT4s/s1600/reaction-to-meningitis-vaccine-1-300x225.jpg "Blog Linux")
+Este primo mesmo, que é referido pela Inglaterra como "Sr. M.,"  acrescentou que, quando ministro da Saúde do Chade e do Ministro da  Previdência Social, finalmente apareceu para Gouro quase uma semana após  a primeira série de paralisações ocorreu, eles decidiram levar as 50  crianças paralisadas para um hospital mais de 300 quilômetros de  distância, como existe apenas um médico disponível em toda a região de  Gouro. 
+Mas em vez de tentar chegar ao fundo do porquê MenAfriVac causou uma  reação tão grave, em primeiro lugar, e suspender imediatamente toda a  distribuição adicional da vacina até que este poderia ser determinada,  esses mesmos funcionários do governo, na verdade, tentou subornar o  sofrimento dos pais com dinheiro para manter o silêncio sobre o assunto.  
+Segundo o Sr. M., esses funcionários estavam mais preocupados em  encobrir os perigos de ManAfriVac do que com a proteção de moradores do  dano. "[O] governo e os meios de comunicação passaram em silêncio sobre a  tragédia, enquanto ainda há fatos que exigem esclarecimentos, ",  declarou o Sr. M. em um e-mail para a Inglaterra sobre o incidente.  Neste momento, praticamente nenhuma mídia pegou nesta história  importante. "Tudo isso nos perturba e nos faz temer os piores efeitos  para o futuro. [I] t é muito triste que (a) toda a cidade está  paralisada."
+Gates, mente sobre a segurança de MenAfriVac
+![Blog Linux](http://1.bp.blogspot.com/-VHnAyXX5vws/UQKJ8O4SfVI/AAAAAAAAAT0/Krmdxpknq3k/s1600/la-voix-news-clipping-300x212.jpg "Blog Linux")
+Pior é o fato de que a Fundação Bill &amp; Melinda Gates Foundation , a  Organização Mundial de Saúde (OMS), e do Projeto Vacina contra a  Meningite (MVP), todos os quais fortemente promover MenAfriVac,  abertamente mentiram sobre a segurança da vacina repetidamente afirmando  que pode ser transportada sem refrigeração. Inserção do pacote da  vacina diz claramente que ela deve ser armazenada sob-refrigeração e  protegida da luz. 
+"Por que as grandes organizações passaram 571 milhões dólares em um  projeto de vacinação, quando os poços para fornecer acesso à água  potável foram construídos por menos de US $ 3.000 pelo Comitê  Internacional da Cruz Vermelha? " Por que esse programa de vacinação não  foi suspensa, (e) o que são essas organizações vão fazer sobre a  atrocidade que aconteceu em Gouro" Fontes para este artigo incluem: http://vactruth.com/2013/01/06/ paralisada-após-meningite vacina / http://makaila.over/
+Via: https://forum.antinovaordemmundial.com/Topico-50-crian%C3%A7as-africanas-paralisadas-depois-de-vacina-de-bill-gates

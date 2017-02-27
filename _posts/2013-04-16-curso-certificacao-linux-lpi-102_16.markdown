@@ -1,0 +1,371 @@
+---
+layout: post
+title: "'Curso Certificação Linux LPI-102: Gerenciador de Pacotes YUM e pacotes RPM'"
+date: '2013-04-16T17:46:00.000-07:00'
+description: "'Curso Certificação Linux LPI-102: Gerenciador de Pacotes YUM e pacotes RPM'"
+main-class: 'linux'
+tags:
+- Linux
+- LPI
+image: "http://1.bp.blogspot.com/-m1yosdgEFVA/UW3uvC8t4cI/AAAAAAAABdY/IKqH-ZP1JyA/s72-c/tu-fedora.png"
+twitter_text: "'Curso Certificação Linux LPI-102: Gerenciador de Pacotes YUM e pacotes RPM'"
+introduction: "'Curso Certificação Linux LPI-102: Gerenciador de Pacotes YUM e pacotes RPM'"
+---
+1.0 - Gerenciador de Pacotes YUM
+O gerenciador de pacotes YUM é o gerenciador de pacote padrão do Red Hat, Fedora, CentOS e derivados.Antes criado e utilizado no Yellow Dog Linux que é uma distribuicao baseada em Red Hat e que so funciona em maquinas com o processador PowerPC ou derivados como o Cell.
+Os arquivos de configuracao do YUM se encontram no diretorio /etc/yum/ e os repositorios se encontram no diretorio /etc/yum.repos.d que é muito similar ao /etc/apt/sources.list.d do Debian. Pois seria possivel a centralizacao de tudo tb no /etc/yum/yum.conf.
+As instruções aqui são baseadas na distribuição Fedora.
+O arquivo de configuração do yum é o /etc/yum.conf. Além disso, os 
+repositórios (sites que contém os pacotes dos programas) são 
+configurados através de cada arquivo de extensão .repo, localizados no 
+diretório /etc/yum.repos.d.
+A configuração padrão do yum contida no /etc/yum.conf é suficiente 
+para o bom funcionamento do programa. Você só precisará de alguns 
+repositórios já configurados. Por exemplo, o padrão para o repositório 
+do Fedora é o arquivo /etc/yum.repos.d/fedora.repo:
+{% highlight bash %}
+[fedora]
+name=Fedora $releasever - $basearch
+baseurl=http://fedora.c3sl.ufpr.br/linux/releases/$releasever/Everything/$basearch/os/
+enabled=1
+gpgcheck=1
+gpgkey=file:///etc/pki/rpm-gpg/RPM-GPG-KEY-fedora file:///etc/pki/rpm-gpg/RPM-GPG-KEY
+{% endhighlight %}
+As linhas acima significam que o repositório denominado fedora terá:
+name: Nome descritivo, no exemplo: Fedora (versão da distribuição) – (arquitetura da distribuição, ex. i386);
+baseurl: O endereço que contém a lista dos programas e os pacotes;
+enabled: Se o repositório está habilitado ou não (1 significa sim, 0 significa não);
+gpgcheck: Se todos os pacotes devem ter sua autenticidade verificada
+(extremamente recomendado, 1 significa sim, 0 significa não);
+gpgkey: Qual chave criptográfica utilizar para a verificação dos pacotes.
+Com este repositório configurado, pode-se instalar e remover todos os
+pacotes básicos da distribuição. No caso das atualizações de pacotes, o
+repositório é outro e pode ser configurado no arquivo 
+/etc/yum.repos.d/fedora-updates.repo:
+{% highlight bash %}
+[updates]
+name=Fedora $releasever - $basearch – Updates
+baseurl=http://fedora.c3sl.ufpr.br/linux/updates/$releasever/$basearch/
+enabled=1
+gpgcheck=1
+gpgkey=file:///etc/pki/rpm-gpg/RPM-GPG-KEY-fedora
+{% endhighlight %}
+Há varios outros repositórios de terceiros disponíveis (como o livna,
+dag, freshrpms, atrpms) que contém outros programas que podem não estar
+na lista principal por diversos motivos. Cada um desses repositórios 
+têm configurações próprias e por isso criam arquivos .repo dentro do 
+diretório /etc/yum.repos.d. Aqui não iremos listar todos os repositórios
+e sim apenas os oficiais.
+Uma vez configurados os repositórios desejados, é hora de utilizar o yum.
+Para procurar por um pacote usando alguma palavra relacionada, 
+utilizamos o parâmetro search. Por exemplo, procurar todos os pacotes 
+relacionados com a palavra ‘DVD’:
+{% highlight bash %}
+# yum search DVD
+{% endhighlight %}
+Para instalar um pacote:
+{% highlight bash %}
+# yum install pacote
+{% endhighlight %}
+Para desinstalar o pacote:
+{% highlight bash %}
+# yum remove pacote
+{% endhighlight %}
+Atualizando um pacote específico, caso exista uma atualização para o mesmo:
+{% highlight bash %}
+# yum update pacote
+{% endhighlight %}
+Ou se precisarmos atualizar todo o sistema, instalando todos os pacotes novos que tenham atualizações disponíveis:
+{% highlight bash %}
+# yum update
+{% endhighlight %}
+Para verificar quais os pacotes que precisam de atualização:
+{% highlight bash %}
+# yum check-update
+{% endhighlight %}
+Listando todos os pacotes disponíveis, tanto no repositório quanto os já instalados:
+{% highlight bash %}
+# yum list
+{% endhighlight %}
+Listando todos os pacotes disponíveis para a instalação:
+{% highlight bash %}
+# yum list available
+{% endhighlight %}
+Existem também os grupos de pacotes. Um grupo de pacotes é um 
+conjunto de pacotes necessários para se instalar alguma funcionalidade 
+no sistema e são definidos pelos desenvolvedores da distribuição. Para 
+listar todos os grupos de pacotes:
+{% highlight bash %}
+# yum grouplist
+Installed Groups:
+ Office/Productivity
+ MySQL Database
+ Editors
+ System Tools
+...corte...
+Available Groups:
+ Engineering and Scientific
+ Window Managers
+ GNOME Software Development
+ XFCE Software Development
+ XFCE
+...corte...
+{% endhighlight %}
+Como podemos ver, o yum mostra os grupos já instalados no sistema 
+(Installed Groups) e os disponíveis para a instalação (Available 
+Groups). Se quisermos, por exemplo, instalar o suporte ao gerenciador de
+janelas XFCE, instalamos seu grupo:
+{% highlight bash %}
+# yum groupinstall "XFCE"
+{% endhighlight %}
+O yum se encarregará de baixar todos os pacotes necessários para o XFCE. Para remover todos os pacotes do grupo:
+{% highlight bash %}
+# yum groupremove "XFCE"
+{% endhighlight %}
+Todas estas ações do yum necessitam de uma conexão de Internet, pois a
+lista de pacotes é sempre requisitada no repositório para consulta. 
+Mesmo para consultar um simples nome de pacote, precisa-se de conexão 
+com a Internet.
+Caso já tenha se utilizado o yum para fazer alguma ação (e por 
+consequência, ele já tenha baixado a lista de pacotes para o seu 
+sistema), podemos optar por não precisar nos conectar ao servidor na 
+Internet toda vez que usarmos o yum utilizando o parâmetro -C. Exemplos:
+{% highlight bash %}
+# yum -C search DVD
+# yum -C check-update
+# yum -C list | grep kde
+{% endhighlight %}
+Na instalacao do fedora é possivel instalar o apt e no Debian e Ubuntu vc tb pode instalar o yum pelo apt-get para estudos.
+2.0 - Pacotes RPM e Sistema de Gerenciamento de Pacotes RPM
+RPM (Red Hat Package Manager) é um sistema de gerenciamento de pacotes desenvolvido pela Red Hat para ser utilizado em sua própria distro. Posteriormente outras distros Linux, e mesmo alguns outros sistemas operacionais, também adotaram o formato RPM para gerenciamento de seus pacotes. A LSB (Linux Standard Base) indicou o formato RPM como o padrão para distros Linux.
+Outro utilitário para gerenciamento de pacotes RPM em modo texto é o Yum (Yellow Dog Updater, Modified), disponível nas distros Red Hat Enterprise Linux, CentOS, Oracle Entreprise Linux e Fedora.
+Com o Yum, é possível realizar instalações e atualizações de pacotes localmente ou a partir de repositórios de pacotes localizados na internet. Sua grande vantagem em relação ao utilitário RPM é tentar resolver automaticamente todas as dependências requeridas por pacotes que estiverem sendo instalados ou atualizados e também por proporcionar uma forma fácil de atualizar todo o sistema pela Internet.
+Os três principais formatos de pacotes utilizados em sistemas Linux são:
+ RPM: utilizado pela distro Red Hat Enterprise Linux (RHEL) e por distros derivadas como CentOS, Oracle Enterprise Linux, Fedora e SuSE.
+ DEB: utilizado pela distro Debian e por distros derivadas como Ubuntu.
+ TGZ: utilizado pela distro Slackware e por distros derivadas como Vector Linux.
+Além destes formatos, há também outros. No entanto, não vou me prolongar a respeito deles para não perder o foco do artigo e também para não deixá-lo extenso.
+O rótulo (nomenclatura) típico de um pacote RPM é nome-versao-release.arquitetura.rpm, onde:
+ Nome: é o nome do software que está sendo distribuído. Versão: é a versão do software. Release: é o versão de construção do pacote para a mesma versão do software. Arquitetura: é a plataforma para a qual o software foi desenvolvido. Noarch significa que o software não foi desenvolvido para uma plataforma específica, podendo ser utilizado em qualquer uma. Src significa que o pacote contém os arquivos-fonte do software.
+ .rpm: é a extensão do nome do arquivo de pacote RPM.
+Exemplo: oracle-xe-univ-10.2.0.1-1.0.i386.rpm, sqldeveloper-3.0.04.34-1.noarch.rpm
+Instalação
+Para instalar pacotes RPM em sistemas Linux, é necessário estar logado como root (su). Note que o sistema de gerenciamento de pacotes RPM não resolve as dependências automaticamente para você.
+Portanto, as dependências necessárias deverão ser instaladas antes da instalação do pacote que as requer. Uma outra forma de resolver isso é executar a instalação utilizando o utilitário Yum em distros RHEL e derivadas ou o equivalente em outras distros.
+Instalações locais:
+Para instalar um pacote localizado localmente, execute o comando {% highlight bash %}
+# rpm -ivh 
+{% endhighlight %}, onde:
+ -i: é o modo de instalação.
+ -v: (opcional) apresenta mensagens detalhadas de saída para o processo de instalação.
+ -h: (opcional) exibe cerquilhas (#) à medida em que o processo de instalação avança.
+ : é o nome do arquivo do pacote RPM a ser instalado no sistema; pode ser mais de um ao mesmo tempo, neste caso, separe-os com espaços.
+Exemplo: # rpm -ivh AdobeReader_ptb-8.1.7-1.i486.rpm
+É possível testar a instalação de um pacote antes de instalá-lo no sistema # rpm -ivh –test , onde:
+ –test: esta opção testa o processo de instalação do pacote e, caso haja algum problema, notifica a respeito.
+Exemplo: {% highlight bash %}
+# rpm -ivh –test AdobeReader_ptb-8.1.7-1.i486.rpm
+{% endhighlight %}
+Instalações com o utilitário Yum:
+A forma típica do comando Yum para instalações é {% highlight bash %}
+# yum -y install –nogpgcheck 
+{% endhighlight %}, onde:
+ -y: (opcional) resposta automática positiva para a confirmação do processo de instalação.
+ install: é a opção de instalação do Yum.
+ –nogpgcheck: (opcional) instrui o Yum a não verificar a assinatura do pacote.
+ : é o nome do pacote RPM disponível localmente ou na Internet em repositórios do Yum.
+Exemplo:
+{% highlight bash %}
+ # yum -y install –nogpgcheck AdobeReader_ptb-8.1.7-1.i486.rpm
+ # yum -y install gparted
+{% endhighlight %}
+Observação: No exemplo 1, acima, o pacote está disponível localmente. Em 2, o pacote está localizado em um repositório utilizado pelo Yum, isto é, na Internet. Em ambos os casos, o Yum tenta resolver quaisquer dependências, baixando-as e instalando-as automaticamente.
+Atualização
+Para atualizar pacotes RPM instalados em sistemas Linux, é necessário estar logado como root (su). Lembre-se de que o sistema de gerenciamento de pacotes RPM não resolve quaisquer dependências requeridas automaticamente.
+Caso haja dependências requeridas pelo pacote a ser atualizado que não estejam instaladas no sistema, será necessário baixá-las e instalá-las antes de atualizar o pacote.
+Outra forma de resolver isso é executar a atualização utilizando o utilitário Yum em distros RHEL e derivadas ou o equivalente em outras distros.
+Atualizações locais: 
+Para atualizar um pacote localizado localmente, execute o comando {% highlight bash %}
+# rpm -Uvh 
+{% endhighlight %}, onde:
+ -U: é o modo de atualização.
+ -v: (opcional) apresenta mensagens detalhadas de saída para o processo de atualização.
+ -h: (opcional) apresenta cerquilhas (#) à medida em que o processo de atualização avança.
+ : é o nome do arquivo do pacote RPM a ser atualizado no sistema. Pode ser mais de um ao mesmo tempo, neste caso, separe-os com espaços.
+Exemplo: {% highlight bash %}
+# rpm -Uvh flash-plugin-10.2.153.1-release.i386.rpm
+{% endhighlight %}
+Observação: Caso o pacote em atualização não estiver instalado no sistema, ele será automaticamente instalado com este comando.
+Também é possível testar a atualização de um pacote antes de atualizá-lo no sistema {% highlight bash %}
+# rpm -Uvh –test 
+{% endhighlight %}, onde:
+ –test: esta opção testa o processo de atualização do pacote e, caso haja algum problema, notifica a respeito.
+Exemplo: {% highlight bash %}
+# rpm -Uvh –test flash-plugin-10.2.153.1-release.i386.rpm
+{% endhighlight %}
+Atualizações com o utilitário Yum:
+O processo de atualização com o Yum é muito útil, pois, com ele, é possível atualizar até mesmo todo o sistema de uma só vez. Neste caso, o processo poderá ser um pouco demorado, dependendo da quantidade de pacotes a serem atualizados e da velocidade de sua conexão à Internet.
+ Para atualizar pacotes, a forma típica do comando Yum é {% highlight bash %}
+# yum -y update [pacote]
+{% endhighlight %}
+Exemplo: {% highlight bash %}
+# yum -y update flash-plugin-10.2.153.1-release.i386.rpm
+{% endhighlight %}
+ Para verificar se há atualizações disponíveis {% highlight bash %}
+# yum check-update [pacote]
+{% endhighlight %}
+Exemplo: {% highlight bash %}
+  # yum check-update flash-plugin-10.2.153.1-release.i386.rpm
+ # yum check-update
+  
+{% endhighlight %}
+ Para atualizar todo o sistema Linux {% highlight bash %}
+# yum -y update
+{% endhighlight %}
+Nas formas do comando Yum apresentadas acima, o nome do pacote a ser atualizado é opcional. É possível informar vários nomes de pacotes a serem atualizados em em único comando, basta separá-los com espaços.
+Quando não for informado nenhum nome de pacote, o Yum processará todos os pacotes instalados em seu sistema Linux. O -y é opcional e serve como resposta positiva automática para as questões formuladas pelo Yum.
+Downgrade
+Downgrade significa baixar a versão de um dado pacote instalado em um sistema Linux, isto é, atualizar para uma versão mais antiga do pacote. A principal razão para que isso seja feito é quando um determinado aplicativo ou sistema funcionava adequadamente com uma versão “X” de um determinado pacote e, após este pacote ter sido atualizado para uma versão “Y” superior, o mesmo aplicativo ou sistema passa a não funcionar bem com esta nova versão “Y” do pacote considerado.
+Neste caso, o administrador do sistema deverá fazer o downgrade deste pacote para a versão “X”. Para fazer donwgrade de um pacote instalado em um sistema Linux, é necessário estar logado como root (su).
+Downgrades locais:
+Para fazer o downgrade de um pacote localizado localmente, execute o comando # rpm -Uvh –oldpackage , onde:
+ -U: é o modo de atualização.
+ -v: (opcional) apresenta mensagens detalhadas de saída para o processo de downdrade.
+ -h: (opcional) exibe cerquilhas (#) à medida em que o processo de downgrade avança.
+ –oldpackage: força o downgrade de pacotes.
+ : é o nome do pacote RPM da versão anterior, isto é, para o qual você está fazendo downgrade.
+Exemplo: {% highlight bash %}
+# rpm -Uvh –oldpackage flash-plugin-10.2.153.1-release.i386.rpm
+{% endhighlight %}
+É possível testar o downgrade de um pacote antes de atualizá-lo no sistema {% highlight bash %}
+# rpm -Uvh –oldpackage –test 
+{% endhighlight %}, onde:
+ –test: esta opção testa o processo de downgrade do pacote e, caso haja algum problema, notifica a respeito.
+Downgrades com o utilitário Yum:
+Com o Yum você poderá fazer downgrade de pacotes a partir de repositórios do Yum localizados na Intenet. A forma do comando é {% highlight bash %}
+# yum -y downgrade 
+{% endhighlight %}.
+Exemplo: {% highlight bash %}
+# yum -y downgrade flash-plugin-10.2.153.1-release.i386.rpm
+{% endhighlight %}
+O -y é opcional e serve como resposta positiva automática ao Yum para conformar a execução do processo.
+Observação: Seja criterioso ao fazer downgrade de pacotes em seu sistema, pois o mesmo poderá apresentar comportamentos indesejados como, por exemplo, instabilidade e/ou vulnerabilidades.
+Consultas
+Com o sistema de gerenciamento de pacotes RPM, é possível realizar diversas formas de consultas de informações sobre pacotes instalados ou não no sistema. Note que para consultas de pacotes, não é necessário estar logado como root (su). A seguir, as formas mais usuais de consultas.
+Consultas de informações de pacotes instalados no sistema:
+ Para listar todos os pacotes instalados no sistema:
+{% highlight bash %}
+$ rpm -qa
+{% endhighlight %}
+ Para listar, em ordem alfabética ascendente, todos os pacotes instalados no sistema:
+{% highlight bash %}
+$ rpm -qa | sort
+{% endhighlight %}
+ Para obter a contagem dos pacotes instalados no sistema, sem listá-los:
+{% highlight bash %}
+$ rpm -qa | wc -l
+{% endhighlight %}
+ Para verificar se um pacote está instalado no sistema, informando uma parte do nome do pacote:
+{% highlight bash %}
+$ rpm -qa | grep -i  
+{% endhighlight %}
+Onde  é uma parte do nome do pacote que você está consultando. Nesta forma de consulta, será ignorada a diferença entre maiúsculas e minúsculas.
+Exemplo: {% highlight bash %}
+$ rpm -qa | grep -i java
+{% endhighlight %}
+ Para gerar um arquivo texto contendo a listagem, em ordem alfabética ascendente, de todos os pacotes instalados no sistema:
+{% highlight bash %}
+$ rpm -qa | sort > 
+{% endhighlight %}
+Exemplo: {% highlight bash %}
+$ rpm -qa | sort > ListPctsInstalados.txt
+{% endhighlight %}
+ Para consultar informações sobre um pacote específico instalado no sistema:
+{% highlight bash %}
+$ rpm -qi 
+{% endhighlight %}
+Exemplo: {% highlight bash %}
+$ rpm -qi java-1.6.0-openjdk-1.6.0.0-1.20.b17.el5
+{% endhighlight %}
+Observação: Note que o nome do pacote deverá ser digitado exatamente por completo, da mesma forma em que estiver registrado no banco de dados do RPM, levando-se em consideração maiúsculas e minúsculas.
+ Para listar todos os arquivos de um pacote específico instalado no sistema:
+{% highlight bash %}
+$ rpm -ql 
+{% endhighlight %}
+Exemplo: {% highlight bash %}
+$ rpm -ql java-1.6.0-openjdk-1.6.0.0-1.20.b17.el5
+{% endhighlight %}
+Consultas de informações de pacotes não instados no sistema:
+ Para consultar informações sobre um pacote específico não instalado no sistema:
+{% highlight bash %}
+$ rpm -qpi 
+{% endhighlight %}
+Exemplo: {% highlight bash %}
+$ rpm -qpi AdobeReader_ptb-8.1.7-1.i486.rpm
+{% endhighlight %}
+ Para listar todos os arquivos de um pacote específico não instalado no sistema:
+{% highlight bash %}
+$ rpm -qpl 
+{% endhighlight %}
+Exemplo: {% highlight bash %}
+$ rpm -qpl AdobeReader_ptb-8.1.7-1.i486.rpm
+{% endhighlight %}
+ Para obter a contagem dos arquivos de um pacote específico não instalado no sistema, sem listar estes arquivos:
+{% highlight bash %}
+$ rpm -qpl  | wc -l
+{% endhighlight %}
+Exemplo: {% highlight bash %}
+$ rpm -qpl AdobeReader_ptb-8.1.7-1.i486.rpm | wc -l
+{% endhighlight %}
+ Para gerar um arquivo texto contendo a listagem, em ordem alfabética ascendente, dos arquivos de um pacote específico não instalados no sistema:
+{% highlight bash %}
+$ rpm -qpl  | sort > 
+{% endhighlight %}
+Exemplo: {% highlight bash %}
+$ rpm -qpl AdobeReader_ptb-8.1.7-1.i486.rpm | sort > ListArqsPct.txt
+{% endhighlight %}
+Desinstalação
+Para executar a desinstalação de pacotes RPM em sistemas Linux, você deverá estar logado como usuário root (su) e executar o comando a seguir:
+{% highlight bash %}
+# rpm -e 
+{% endhighlight %}
+Exemplo: {% highlight bash %}
+# rpm -e AdobeReader_ptb-8.1.7-1
+{% endhighlight %}
+Observação: Note que o nome do pacote a ser desinstalado deve ser exatamente igual ao nome registrado no banco de dados do RPM. Você pode descobrir o nome exato do pacote instalado no sistema, utilizando as opções de consulta apresentadas na seção Consultas deste artigo.
+Outra forma de executar a desinstalação de pacotes RPM é combinar recursos de consulta de nomes de pacotes e pesquisa de substrings em subshell do Linux, em uma única linha de comando.
+A forma típica do comando, neste caso, é {% highlight bash %}
+# rpm -e $(rpm -qa | grep -i )
+{% endhighlight %}, onde:
+ $(…): é o subshell. Os comandos internos à este subshell são processados antes do comando externo.
+ rpm -qa: é o comando de consulta de todos os pacotes RPM instalados no sistema.
+ grep -i substring: este comando procura ocorrências do texto fornecido em substring na lista de pacotes RPM instalados no sistema, obtida pelo comando rpm -qa anterior e ignorando maiúsculas e minúsculas.
+ : é um texto representando parte do nome do pacote RPM a ser desinstalado do sistema. 
+Exemplo: {% highlight bash %}
+# rpm -e $(rpm -qa | grep -i adobe
+{% endhighlight %}
+Neste exemplo, serão desinstalados do sistema todos os pacotes RPM que contiverem adobe como parte de seu nome, desconsiderando-se maiúsculas e minúsculas.
+Observação: Tenha muito cuidado ao executar desinstalações desta forma, pois qualquer erro poderá ser fatal. Podem ser desinstalados outros pacotes que não os desejados e/ou que sejam importantes a seu sistema ou a seu trabalho!
+Reconstrução do banco de dados do RPM
+O sistema RPM utiliza um banco de dados Berkeley DB, localizado no diretório /var/lib/rpm/, para armazenar metadados dos pacotes instalados em um sistema Linux.
+Embora sistemas Linux sejam bastante seguros e confiáveis, o banco de dados do RPM pode, eventualmente, sofrer quebras (corrupções). Caso isso ocorra, você não conseguirá gerenciar seus pacotes RPM. Por exemplo, você não conseguirá instalar novos pacotes no sistema.
+Para tentar corrigir este problema, estando logado como usuário root (su), execute o seguinte comando de reconstrução do banco de dados do RPM:
+{% highlight bash %}
+# rpm --rebuilddb
+{% endhighlight %}
+Embora este comando seja utilizado em casos de corrupção do banco de dados do RPM, você poderá utilizá-lo periodicamente, de forma preventiva, mesmo que o banco de dados do RPM não apresente problemas aparentes.
+Solução de problemas de transações não concluídas com o Yum
+Outro problema que também pode ocorrer, sobretudo quando ocorre instalação ou atualização de pacotes RPM, é a interrupção, por diversos motivos, do processo antes de sua conclusão, gerando transações não concluídas.
+Quando isso ocorrer, sempre que você for instalar ou atualizar pacotes com o Yum, receberá uma mensagem como a seguinte: There are unfinished transactions remaining. You might consider running yum-complete-transaction first to finish them.
+Para sanar este problema, será necessário estar logado como root (su) e executar o utilitário yum-complete-transaction, o qual está contido no pacote yum-utils:
+{% highlight bash %}
+# /usr/sbin/yum-complete-transaction
+{% endhighlight %}
+Caso o pacote yum-utils não esteja instalado no sistema, instale-o com o comando a seguir:
+{% highlight bash %}
+# yum -y install yum-utils
+{% endhighlight %}
+Fontes:
+http://www.devin.com.br/
+http://www.aprigiosimoes.com.br
+http://imasters.com.br

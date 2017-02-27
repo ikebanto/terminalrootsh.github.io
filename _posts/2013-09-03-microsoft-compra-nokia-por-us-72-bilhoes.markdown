@@ -1,0 +1,33 @@
+---
+layout: post
+title: "Microsoft compra Nokia por US$ 7,2 bilhões"
+date: '2013-09-03T19:34:00.002-07:00'
+description: "Microsoft compra Nokia por US$ 7,2 bilhões"
+main-class: 'misc'
+tags:
+- Artigos
+image: "http://2.bp.blogspot.com/-RaTGIQbM0K4/UiabbWF76YI/AAAAAAAACY4/kb-ilh7fV3w/s72-c/Nokia_Microsoft_sm.png"
+twitter_text: "Microsoft compra Nokia por US$ 7,2 bilhões"
+introduction: "Microsoft compra Nokia por US$ 7,2 bilhões"
+---
+![Blog Linux](http://2.bp.blogspot.com/-RaTGIQbM0K4/UiabbWF76YI/AAAAAAAACY4/kb-ilh7fV3w/s320/Nokia_Microsoft_sm.png "Blog Linux")
+Divisão de celulares e serviços passa para o controle da norte-americana. Juntas, Nokia e Microsoft têm o desafio de fazer o Windows Phone ganhar força e enfrentar Android e iPhone 
+Tudo começou com um namoro que, agora, virou casamento. Na  meia-noite de segunda para terça-feira, 03, a Microsoft anunciou uma de  suas maiores aquisições: a compra de parte da Nokia, por US$ 7,2  bilhões. 
+A divisão de dispositivos e serviços, assim como várias  das patentes e o serviço de mapas da finlandesa serão todas da  norte-americana.Os 32 mil funcionários da empresa finlandesa serão  absorvidos pela Microsoft. O mesmo vale para Stephen Elop, que comandará  a nova operação de fabricação de celulares da Microsoft, como  vice-presidente da divisão Nokia de Aparelhos e Serviços, respondendo  diretamente para Steve Ballmer. O movimento reforça a especulação de que  Elop pode ser o substituto de Ballmer, que vai se aposentar daqui a 12  meses.
+“Com o compromisso e recursos da Microsoft para levar os  aparelhos e serviços da Nokia para frente, agora entendemos o potencial  completo do ecossistema do Windows, oferecendo as experiências mais  completas para as pessoas em casa, no trabalho e em qualquer lugar”,  escreveram em uma carta conjunta Steve Ballmer, CEO com aposentadoria anunciada da Microsoft, e Stephen Elop.
+A operação ainda precisará passar pelo crivo dos órgãos reguladores  norte-americanos, mas não deve enfrentar resistências, e deve estar  concretizada no começo do ano que vem.
+Desafio adianteAgora como uma só empresa, Nokia e Microsoft colocarão várias fichas  na mesa para tentar crescer no mercado de smartphones. O caminho natural  será a adoção do Windows Phone em todos os celulares da Nokia - mas  ainda não está claro o que vai acontecer com linhas como a Asha, por  exemplo, que não usam o sistema operacional da Microsoft.
+Outra  dúvida é também com relação à estratégia. A Nokia tem pequena  participação no segmento de smartphones, mas continua forte no de  celulares mais simples - que não usam sistema operacional Windows.  Agora, resta saber que destino terão essas linhas.
+Com a compra, a  Microsoft se torna uma empresa mais parecida com a Apple, ao controlar  "verticalmente" o segmento, respondendo pelo sistema operacional e  também pela fabricação do hardware. O novo cenário, portanto, tem o  Google num dos lados, com seu Android, num modelo que lembra o do  próprio Windows para computadores: com uma enorme rede de diferentes  fabricantes usando o sistema operacional. 
+De outro lado, estarão  Apple e Microsoft, com modelos integrados e verticalizados. São dois  modos bastante distintos de encarar o mercado. Nessa equação, duas  empresas ficam no meio do caminho: a Motorola - que pertence ao Google,  mas que não tem primazia sobre o Android - e a Samsung, que é a  principal força por trás do Android, mas que - ao contrário da Apple e,  agora, da Microsoft, não controla o produto do começo ao fim.
+É  bom lembrar que a compra de agora abrange apenas as divisões de  celulares e serviços de mapas da Nokia, outras áreas da empresa  finlandesa, como a de infra-estrutura, não entraram na negociação.
+Logo abaixo, a carta traduzida de Elop e Ballmer, na íntegra:
+"Nokia e Microsoft sempre sonharam grande -- nós sonhamos em  colocar os computadores em cada mesa, e um celular em cada novo bolso, e  nós viemos por um longo caminho realizando estes sonhos.
+A Nokia tem uma identidade de mais de 150 anos de herança,  inovação, excelência e mudanças que começaram e vão continuar na  Finlândia e no resto do mundo. De origens humildes como uma fábrica de  papel, passando por produzir botas de borrachas e pneus de carros e, por  fim, telefones celulares, a reinvenção está no sangue da Nokia.
+A Nokia agora irá escrever o próximo capítulo, focando em  facilitar a mobilidade através de sua liderança em rede, mapas,  localização e outras tecnologias avançadas.
+Para a Microsoft, hoje damos um passo ousado para o futuro,  um enorme salto em nossa jornada de criar uma família de dispositivos e  serviços que agradam pessoas e fortalecem negócios de todos os  tamanhos.Nossa parceria ao logos dos últimos dois anos e meio, que  combinou nossas forças para construir um novo ecossistema mundial de  dispositivos móveis, criou resultados incríveis: telefones que campeões  de prêmios e serviços incríveis que fizeram com que os aparelhos Windows  Phone da Nokia se tornassem uma das plataformas de smartphone que  crescem mais rápido no mundo.Com base nessa parceria de sucesso, nós anunciamos algumas  notícias importantes hoje: um acordo para a Microsoft comprar a divisão  de dispositivos e serviços da Nokia, para entregar mais escolhas,  inovação mais rápida e dispositivos e serviços ainda mais interessantes  para nossos consumidores.
+O acordo de hoje irá acelerar o momento dos dispositivos e  serviços da Nokia, trazendo o mundo dos smartphones mais inovadores a  cada vez mais pessoas, enquanto continuaremos a conectar o próximo  bilhão de pessoas com a linha de celulares da Nokia.
+Com o compromisso e os recursos da Microsoft para levar  serviços e dispositivos para frente, nós podemos agora perceber o  potencial do ecossistema Windows, entregando as melhores experiências  para pessoas em casa, no trabalho e em qualquer lugar nesse meio termo.
+Nós continuaremos criando celulares que você irá amar,  enquanto investiremos no futuro – novos telefones e serviços que  combinam o melhor da Microsoft e o melhor da Nokia.A Nokia e a Microsoft estão comprometidas para o próximo capítulo.Juntos, nós vamos redefinir os limites da tecnologia.Steve Ballmer e Stephen Elop"
+E você o que achou da compra? A Microsoft fez um bom negócio? A Nokia poderá recuperar o terreno perdido?
+Via: http://olhardigital.uol.com.br/pro/noticia/37255/37255 

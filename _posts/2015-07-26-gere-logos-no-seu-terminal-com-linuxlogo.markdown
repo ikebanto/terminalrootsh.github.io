@@ -1,0 +1,197 @@
+---
+layout: post
+title: "Gere logos no seu terminal com LinuxLogo"
+date: '2015-07-26T17:38:00.001-07:00'
+description: "Gere logos no seu terminal com LinuxLogo"
+main-class: 'linux'
+tags:
+- Linux
+- Dicas
+- GNU
+- Imagens
+- Terminal
+- Comandos
+image: "http://1.bp.blogspot.com/-C2d8niKiXhc/VbV53dXMNRI/AAAAAAAABiQ/eylYmgEEGUI/s72-c/linuxlogo.png"
+twitter_text: "Gere logos no seu terminal com LinuxLogo"
+introduction: "Gere logos no seu terminal com LinuxLogo"
+---
+![Blog Linux](http://1.bp.blogspot.com/-C2d8niKiXhc/VbV53dXMNRI/AAAAAAAABiQ/eylYmgEEGUI/s400/linuxlogo.png "Blog Linux")
+GERE LOGOS NO SEU TERMINAL COM LINUXLOGO
+LINUXLOGO é um pequeno utilitário que exibe um logotipo ANSI ou ASCII do pinguim Linux, juntamente com algumas informações do sistema ou não, ou seja, é opcional.
+Para instalá-lo em Distros GNU/Linux Debian, basta usar o apt-get , lógico, precisa ser root # , se não possuir o sudo , e em outras distros, ou baixe o linuxlogo aqui, ou tente com seu gerenciador de pacotes correspondente:
+{% highlight bash %}
+$ su
+# apt-get install linuxlogo
+{% endhighlight %}
+Após terminada a instalação pode chamá-lo e aparecerá por padrão o logo da sua distribuição:
+{% highlight bash %}
+$ linuxlogo
+{% endhighlight %}
+   
+    
+Com o comando abaixo, ele gerará a próxima imagem abaixo do logo Linux, no entanto , cada número representa uma Distro (Slackware, OpenSUSE, Ubuntu,...,Tux retrô,...):
+{% highlight bash %}
+$ linuxlogo -L 9
+{% endhighlight %}
+  
+![Blog Linux](http://3.bp.blogspot.com/-1b6tfJlGGRg/VbV8Ae6EvhI/AAAAAAAABig/IJD5WxmAln0/s640/IMG2.png "Blog Linux")
+{% highlight bash %}
+$ linuxlogo -L 18
+{% endhighlight %}
+    
+A opção -ascii -a gera a logo sem cores
+{% highlight bash %}
+$ linuxlogo -ascii -a
+{% endhighlight %}
+    
+![Blog Linux](http://2.bp.blogspot.com/-jWA31rL7VVE/VbV8Ai3ONLI/AAAAAAAABis/slObaMlk6JU/s640/IMG3.png "Blog Linux")
+A opção -D [arquivo.ascii] gera a imagem ASCII que você indicar, exemplo:
+{% highlight bash %}
+$ linuxlogo -D ascii-staman.txt
+{% endhighlight %}
+  
+Para mais informações das opções do comando, utilize o -h ou o man linuxlogo:
+{% highlight bash %}
+$ man linuxlogo
+{% endhighlight %}
+{% highlight bash %}
+$ linuxlogo -h
+{% endhighlight %}   
+NAME
+linux_logo - Color ANSI penguin logo w/ system information.
+SYNOPSIS
+linux_logo [-h | -v ] [-a ] [ -b | -c] [-d] [-D file] [-e file] [-f] [-g | -l] [-k] [-i] [-n]
+DESCRIPTION
+linux_logo is a program that generates a color ANSI picture of a penguin which includes some system information obtained from the /proc filesystem. 
+OPTIONS
+-h
+ Show summary of options.
+-v
+ Show version of program.
+-ascii -a
+ Display the logo as monochrome ascii.
+-banner -b
+ Display the banner-style logo.
+-classic -c
+ Display the original penguin logo.
+-d
+ Disable "prettying" of output
+-D filename
+ Use logo from "filename"
+-e filename
+ Use cpuinfo from "filename" for debugging purposes
+-f
+ Force the screen clear before drawing the logo.
+-F STRING
+ Use custom output STRING for sysinfo. See below for more info.
+-g
+ Display only the system infomation.
+-i
+ Ignore the ~/.linux_logo and /etc/linux_logo.conf config files
+-k
+ Keep sysinfo flushed-left (non-centered)
+-l
+ Display only the logo.
+-L ...
+ Custom logo options. See LOGO SELECTION below
+-o Num
+ Shift output Num spaces to the right
+-p
+ Preserve cursor location
+-s
+ Skip the BogoMips test [ speeds up display on non-Linux platforms ].
+-t string
+ Display an arbitrary string
+-u
+ Display the system uptime.
+-w val
+ Set screen width to val
+-y
+ Display the load average.
+PROCESSOR INFORMATION
+CPUINFO
+The cpuinfo supplied in /proc/cpuinfo is not always usable by linux_logo.
+If the cpuinfo for your microprocessor generates ugly output, send the output from your /proc/cpuinfo to the author.
+FORMAT
+The format string special sequences start with # (use ## to print #). All other characters, except for \n, are printed as is.
+Seq  Description  Output
+##   #
+#B  Bogomips  374.37
+#C  Compiled Date  #47 Fri Jan 8 10:37:09 EST 1999
+#E  User Text  My Favorite Linux Distribution
+ Displayed with -t  
+#H  Hostname  deranged
+#L  Load average  Load average 0.04, 0.01, 0.01
+#M  Megahertz  188Mhz
+ where supported  
+#N  Number of CPU's  Two
+#O  OS Name  Linux
+#P  Processor or Processors  Processor
+#R  Ram  64M
+ in Megabytes  
+#S  Plural  s
+#T  Type of CPU  K6
+#U  Uptime  Uptime 10 hours 59 minutes
+#V  Version of OS  2.2.0-pre5
+#X  CPU Vendor  AMD
+\\n  carriage return  
+Notes:
+•
+ The letter after the # must be capitalized.
+•
+ Options not available are silently ignored.
+•
+ Megahertz only available on some platforms and newer kernels.
+•
+ See defaults.h on how to have #N report in non-english numbers.
+•
+ Plural [#S] gives nothing if there is 1 cpu, gives 's' otherwise.
+•
+ The "-y" and "-u" [display uptime and load average] command line options don't affect the output if a custom format is used.
+The default banner format is:
+"#O Version #V, Compiled #C\n \
+#N #M#X#T Processor#S, #R RAM, #B Bogomips Total\n \
+#H\n"
+The default banner format displays the following on the author's computer:
+Linux Version 2.2.0-pre5, Compiled #47 Fri Jan 8 10:37:09 EST 1999
+One 188MHz AMD K6 Processor, 64M RAM, 374.37 Bogomips Total
+deranged
+Another example would be:
+linux_logo -F "Redhat Linux 5.2\nKernel Version #V\n#U\n#L\n"
+which would display:
+Redhat Linux 5.2
+Kernel Version 2.2.0-pre5
+Uptime 11 hours 4 minutes
+Load average 0.00, 0.00, 0.00
+LOGO SELECTION
+The -L command line option is used to choose which logo to use. 
+•
+ "-L list" will list all of the logos available
+•
+ "-L NAME" will display the logo with name NAME.
+•
+ "-L NUM" will display logo with number NUM (deprecated)
+•
+ "-L random_xy" will pick a logo at random, with criteria xy.
+ When you replace x with the letter:
+ b : pick a random banner mode logo
+ c : pick a random classic mode logo
+ e : pick a logo from either banner or classic
+ When you replace y with the letter:
+ a: pick a random ascii logo
+ n: pick a non-ascii logo
+ e: pick either type of logo
+ So to summarize: 
+ "-L random_ba" picks a random ascii banner,
+ "-L random_ce" picks a random classic logo
+ "-L random_ee" picks any logo, etc.
+DEBIAN
+The Debian pre-packaged version of linux_logo includes the Debian logo in addition to the 'Classic' and 'Banner' logos. The Debian logo is the default logo unless one of the other logos is specified on the command line.
+CONFIG FILES
+~/.linux_logo and /etc/linux_logo.conf can be filled with command line options and will be parsed before the actual command line
+SEE ALSO
+/usr/doc/linux_logo, http://www.deater.net/weave
+AUTHOR
+Vince Weaver
+ .
+This manual page was written by Steve Kostecke , for the Debian GNU/Linux system.

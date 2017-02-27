@@ -1,0 +1,32 @@
+---
+layout: post
+title: "Hacker diz o que é preciso para fazer parte do Anonymous"
+date: '2016-08-07T18:58:00.000-07:00'
+description: "Hacker diz o que é preciso para fazer parte do Anonymous"
+main-class: 'misc'
+tags:
+- Artigos
+- Notícias
+image: "https://2.bp.blogspot.com/-ZfTmzfgFWNA/V6flYWQP6rI/AAAAAAAAAwE/dvyZKD9fe7Arlw88DU_y0r4duT8LJi_WACLcB/s72-c/anonymous-hd-desktop-wallpaper-high-definition.jpg"
+twitter_text: "Hacker diz o que é preciso para fazer parte do Anonymous"
+introduction: "Hacker diz o que é preciso para fazer parte do Anonymous"
+---
+![Blog Linux](https://2.bp.blogspot.com/-ZfTmzfgFWNA/V6flYWQP6rI/AAAAAAAAAwE/dvyZKD9fe7Arlw88DU_y0r4duT8LJi_WACLcB/s640/anonymous-hd-desktop-wallpaper-high-definition.jpg "Blog Linux")
+"Não existem membros, mas sim seguidores de uma ideologia". Foi assim que o hacker John (nome fictício) me respondeu quando questionei o que era preciso para ser um membro do grupo de ativistas virtuais mais famoso do planeta, o Anonymous.
+Os hackers desse movimento ativista são conhecidos por atacarem virtualmente instituições que, de alguma forma, podem estar prejudicando os cidadãos. Na maior parte das vezes, as vítimas estão ligadas com casos de corrupção ou com o abuso de direitos garantidos pelas leis.
+O grupo, formado em grande parte por especialistas em informática, foca seus ataques principalmente na queda de páginas e no vazamento de informações confidenciais e também de dados pessoais de funcionários de empresas e órgãos públicos, como a Anatel, por exemplo. Recentemente, 50 funcionários da Agência Nacional de Telecomunicações tiveram seus dados expostos nas redes sociais em resposta à omissão do órgão em relação a questão da limitação da internet fixa.
+![Blog Linux](https://3.bp.blogspot.com/-bJBNaXZzZIY/V6fluQXQXQI/AAAAAAAAAwI/NK0JacWZcQ0M3pteioUWzZQMi1ftGevKwCLcB/s1600/anonymous-wallpaper-3d_1631484620.jpg "Blog Linux")
+Por trás das máscaras
+O começo deste texto deixa claro que quem atua em nome do Anonymous não se considera especificamente como um "membro de um grupo". Não há um formulário de cadastro e nenhum "chefe" vai analisar o seu "currículo" para dizer se você está apto ou não para agir pelo movimento. Tudo é baseado em uma ideologia que pode ser seguida ou não.
+O próprio hacker explica que não foi alistado por ninguém. "Fui me interessando pelo assunto e percebi que me identificava com as ideias. Não houve um alistamento. Foi tudo meio natural", contou o ativista que esteve envolvido nos ataques contra a Anatel e ao Ministério Público do Mato Grosso do Sul.
+Ao que ele deixa claro, basta que o cidadão tenha interesse e concorde com a filosofia adotada pelo movimento. A partir disso, ele poderá praticar suas próprias ações de ativismo sozinho ou em conjunto com outras pessoas que sigam o mesmo pensamento. E nem é preciso que todas elas sejam especialistas em invasões de sistemas.
+"Nós não somos formados apenas por hackers. Cada função é exercida por alguém que tenha melhor aptidão naquilo", disse. Segundo conta, escritores, historiadores, designers e até jornalistas atuam pelo "grupo".
+![Blog Linux](https://2.bp.blogspot.com/-otabmSCXXg4/V6fmpqs8H5I/AAAAAAAAAwU/tyH8ge0f4lQ27iBV8Z2ZDMKO3cdafPEnACLcB/s1600/Anonymous.jpg "Blog Linux")
+Sangue novo
+Apesar de não haver um alistamento propriamente dito, os ativistas do Anonymous tentam difundir a cultura do movimento com uma operação chamada "OpNewBlood". O objetivo é que mais pessoas se interessem pela causa e se tornem células que podem contribuir de alguma forma com o grupo.
+"Quando percebemos que alguma área se beneficiaria de mais alguém ajudando, colocamos essa operação em prática. A intenção é que ela promova nossos ideais para quem ainda não conhece", conta John. Isso só aumenta o número de internautas que entram em contato com páginas nas redes sociais ligadas ao grupo oferecendo ajuda para produzir textos, imagens e até atuar em ataques. É possível observar isso acontecendo até mesmo de forma pública, nos próprios comentários de publicações no Facebook, por exemplo.
+Apesar da intenção ser boa, John revela que nem sempre a prática garante bons resultados. "Muita gente chega com uma ideia deturpada do que nós fazemos. Chegam querendo defender o (Jair) Bolsonaro (deputado federal do PSC), por exemplo". Ele ainda conta que os interessados muitas vezes acreditam que o objetivo do grupo seja protestar contra um partido político de direita ou de esquerda.
+Questionei, então, o motivo de algumas páginas nas redes sociais que clamam fazer parte do movimento Anonymous focarem seus protestos contra partidos políticos específicos, em geral contra o PT e o governo da presidente afastada Dilma Rousseff.
+"Isso é mais comum do que você pensa", me respondeu. No Brasil, assim como em outros países, algumas pessoas aproveitam da fama do grupo para diversos fins.
+"São oportunistas que usam o nome do Anonymous para promoção social e para seus próprios objetivos", explica. Esses, na maioria das vezes, vão totalmente contra o movimento defendido que prega, principalmente, pela liberdade de expressão e por justiça para todos.
+Via: Olhar Digital

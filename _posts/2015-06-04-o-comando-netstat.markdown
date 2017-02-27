@@ -1,0 +1,659 @@
+---
+layout: post
+title: "O comando netstat"
+date: '2015-06-04T06:12:00.000-07:00'
+description: "O comando netstat"
+main-class: 'linux'
+tags:
+- Linux
+- userlike
+- GNU
+- Terminal
+- Comandos
+image: "http://1.bp.blogspot.com/-ROgi8DoNUCg/VXBOYMkv_HI/AAAAAAAABWM/UhteS5MQCSQ/s72-c/linux_cli_commands2.jpg"
+twitter_text: "O comando netstat"
+introduction: "O comando netstat"
+---
+![Blog Linux](http://1.bp.blogspot.com/-ROgi8DoNUCg/VXBOYMkv_HI/AAAAAAAABWM/UhteS5MQCSQ/s320/linux_cli_commands2.jpg "Blog Linux")
+Olá amantes da liberdade! Hoje vamos falar um pouco sobre o comando netstat.     INTRODUÇÃO O comando netstat mostra conexões de rede, tabelas de roteamento,  estatísticas de interface e conexões mascaradas.Com ele você pode ver  o estado das conexões de rede através da listagem dos sockets abertos.      SINOPSE
+netstat [-venaoc] [--tcp|-t] [--udp|-u] [--raw|-w] [--unix|-x] [--inet|--ip] [--ax25] [--ipx] [--netrom]netstat [-veenc] [--inet] [--ipx] [--netrom] [--ddp] [--ax25] {--route|-r}netstat [-veenac] {--interfaces|-i} [iface]netstat [-enc] {--masquerade|-M}netstat {--statistics|-s}netstat {-V|--version} {-h|--help}COMANDOS BÁSICOS netstat:Esta  é a operação padrão, se você não especificar nenhuma família de  endereços, ossockets ativos de todas as famílias de endereços  configuradas serão mostrados.  netstat-e:Você obterá informações adicionais (userid).  netstat-v:Você poderá fazer comque o netstat reclame sobre famílias de endereços conhecidas que não sejam suportadas pelo kernel.  netstat-o:Mostra algumas informações adicionais sobre temporizadoresde rede.  netstat -a:Mostra  todos os sockets, incluindo sockets de servidores.     As informações  acima mostram as opções básicas do comando netstat porém na maioria das  vezes precisamos de informações mais detalhadas como rotas, portas  tcp/udp, processos, etc.  Agora vamos nos divertir um pouco mais  explorando algumas opções que nos trazem informações mais detalhadas.      -r: A opção -r, route exibe as tabelas de roteamento do kernel.  -n: A opção -n, numeric exibe endereços numéricos, sem tentar resolver os nomes da máquina, porta ou usuário.     Exemplo: {% highlight bash %}
+root@cubian:~# netstat -nr
+{% endhighlight %} {% highlight bash %}
+Tabela de Roteamento IP do Kernel
+{% endhighlight %} {% highlight bash %}
+Destino     Roteador    MáscaraGen.  Opções  MSS Janela irtt Iface
+{% endhighlight %} {% highlight bash %}
+0.0.0.0     172.19.10.1   0.0.0.0     UG    0 0     0 eth0
+{% endhighlight %} {% highlight bash %}
+10.8.0.0    10.8.0.2    255.255.255.0  UG    0 0     0 tun0
+{% endhighlight %} {% highlight bash %}
+10.8.0.2    0.0.0.0     255.255.255.255 UH    0 0     0 tun0
+{% endhighlight %} {% highlight bash %}
+172.19.10.0   0.0.0.0     255.255.255.0  U     0 0     0 eth0
+{% endhighlight %}    -i:Se você usar a opção -i, --interfaces, uma tabela de todas (ou da iface especificada) as interfaces de rede será mostrada de forma rápida.  -e: Se você usar a opção -e, extended, será mostradauma tabela ou uma entrada de interface como ifconfig mostra.     Exemplo com -i: {% highlight bash %}
+root@cubian:~# netstat -i
+{% endhighlight %} {% highlight bash %}
+Tabela de Interfaces do Kernel
+{% endhighlight %} {% highlight bash %}
+Iface  MTU Met  RX-OK RX-ERR RX-DRP RX-OVR  TX-OK TX-ERR TX-DRP TX-OVR Flg
+{% endhighlight %} {% highlight bash %}
+eth0    1500 0 109002633   0   29 0   122454614   0   0   0 BMRU
+{% endhighlight %} {% highlight bash %}
+lo    16436 0  266930   0   0 0    266930   0   0   0 LRU
+{% endhighlight %} {% highlight bash %}
+tun0    1500 0     0   0   0 0       0   0   0   0 MOPRU
+{% endhighlight %}    Exemplo com -ie: {% highlight bash %}
+root@cubian:~# netstat -ie
+{% endhighlight %} {% highlight bash %}
+Tabela de Interfaces do Kernel
+{% endhighlight %} {% highlight bash %}
+eth0   Link encap:Ethernet Endereço de HW c0:b0:2c:57:92:52 
+{% endhighlight %} {% highlight bash %}
+     inet end.: 172.19.10.2 Bcast:172.19.10.255 Masc:255.255.255.0
+{% endhighlight %} {% highlight bash %}
+     endereço inet6: fe80::c2b0:2cff:fe57:9252/64 Escopo:Link
+{% endhighlight %} {% highlight bash %}
+     UP BROADCASTRUNNING MULTICAST MTU:1500 Métrica:1
+{% endhighlight %} {% highlight bash %}
+     RX packets:109015055 errors:0 dropped:29 overruns:0 frame:0
+{% endhighlight %} {% highlight bash %}
+     TX packets:122466767 errors:0 dropped:0 overruns:0 carrier:0
+{% endhighlight %} {% highlight bash %}
+     colisões:0 txqueuelen:1000
+{% endhighlight %} {% highlight bash %}
+     RX bytes:1149874620 (1.0 GiB) TX bytes:843920187 (804.8 MiB)
+{% endhighlight %} {% highlight bash %}
+     IRQ:117 Endereço de E/S:0xc000
+{% endhighlight %} {% highlight bash %}
+lo    Link encap:Loopback Local 
+{% endhighlight %} {% highlight bash %}
+     inet end.: 127.0.0.1 Masc:255.0.0.0
+{% endhighlight %} {% highlight bash %}
+     endereço inet6: ::1/128 Escopo:Máquina
+{% endhighlight %} {% highlight bash %}
+     UP LOOPBACKRUNNING MTU:16436 Métrica:1
+{% endhighlight %} {% highlight bash %}
+     RX packets:266954 errors:0 dropped:0 overruns:0 frame:0
+{% endhighlight %} {% highlight bash %}
+     TX packets:266954 errors:0 dropped:0 overruns:0 carrier:0
+{% endhighlight %} {% highlight bash %}
+     colisões:0 txqueuelen:0
+{% endhighlight %} {% highlight bash %}
+     RX bytes:41951396 (40.0 MiB) TX bytes:41951396 (40.0 MiB)
+{% endhighlight %} {% highlight bash %}
+tun0   Link encap:Não Especificado Endereço de HW 00-00-00-00-00-00-00-00-00-00-00-00-00-00-00-00 
+{% endhighlight %} {% highlight bash %}
+     inet end.: 10.8.0.1 P-a-P:10.8.0.2 Masc:255.255.255.255
+{% endhighlight %} {% highlight bash %}
+     UP POINTOPOINT RUNNING NOARP MULTICAST MTU:1500 Métrica:1
+{% endhighlight %} {% highlight bash %}
+     RX packets:0 errors:0 dropped:0 overruns:0 frame:0
+{% endhighlight %} {% highlight bash %}
+     TX packets:0 errors:0 dropped:0 overruns:0 carrier:0
+{% endhighlight %} {% highlight bash %}
+     colisões:0 txqueuelen:100
+{% endhighlight %} {% highlight bash %}
+     RX bytes:0 (0.0 B) TX bytes:0 (0.0 B)
+{% endhighlight %}    {% highlight bash %}
+Obs:Note que netstat -ie é equivalente ao comando ifconfig -a
+{% endhighlight %}.    -a: Mostra todas as conexões ativas.     Exemplo: {% highlight bash %}
+root@cubian:~# netstat -a
+{% endhighlight %} {% highlight bash %}
+Conexões Internet Ativas (servidores e estabelecidas)
+{% endhighlight %} {% highlight bash %}
+Proto Recv-Q Send-Q Endereço Local     Endereço Remoto     Estado  
+{% endhighlight %} {% highlight bash %}
+tcp    0   0 localhost:953      *:*           OUÇA   
+{% endhighlight %} {% highlight bash %}
+tcp    0   0 localhost:9050     *:*           OUÇA   
+{% endhighlight %} {% highlight bash %}
+tcp    0   0 *:3389         *:*           OUÇA   
+{% endhighlight %} {% highlight bash %}
+tcp    0   0 localhost:58846     *:*           OUÇA   
+{% endhighlight %} {% highlight bash %}
+tcp    0   0 *:36000         *:*           OUÇA   
+{% endhighlight %} {% highlight bash %}
+tcp    0   0 *:8000         *:*           OUÇA   
+{% endhighlight %} {% highlight bash %}
+tcp    0   0 *:nfs          *:*           OUÇA   
+{% endhighlight %} {% highlight bash %}
+tcp    0   0 *:nrpe         *:*           OUÇA   
+{% endhighlight %} {% highlight bash %}
+tcp    0   0 *:ldap         *:*           OUÇA   
+{% endhighlight %} {% highlight bash %}
+tcp    0   0 *:43077         *:*           OUÇA   
+{% endhighlight %} {% highlight bash %}
+tcp    0   0 *:8200         *:*           OUÇA   
+{% endhighlight %} {% highlight bash %}
+tcp    0   0 *:9001         *:*           OUÇA   
+{% endhighlight %} {% highlight bash %}
+tcp    0   0 cubian.local:9001    rgnx.net:65112     SYN_RECEBIDO
+{% endhighlight %} {% highlight bash %}
+tcp    0   0 localhost:mysql     *:*           OUÇA   
+{% endhighlight %} {% highlight bash %}
+tcp    0   0 *:56331         *:*           OUÇA   
+{% endhighlight %} {% highlight bash %}
+tcp    0   0 *:47725         *:*           OUÇA   
+{% endhighlight %} {% highlight bash %}
+tcp    0   0 *:sunrpc        *:*           OUÇA   
+{% endhighlight %} {% highlight bash %}
+tcp    0   0 *:http         *:*           OUÇA   
+{% endhighlight %} {% highlight bash %}
+tcp    0   0 *:8112         *:*           OUÇA   
+{% endhighlight %} {% highlight bash %}
+tcp    0   0 *:56979         *:*           OUÇA   
+{% endhighlight %} {% highlight bash %}
+tcp    0   0 *:55988         *:*           OUÇA   
+{% endhighlight %} {% highlight bash %}
+tcp    0   0 cubian.local:domain   *:*           OUÇA   
+{% endhighlight %} {% highlight bash %}
+tcp    0   0 10.8.0.1:domain     *:*           OUÇA   
+{% endhighlight %} {% highlight bash %}
+tcp    0   0 localhost:domain    *:*           OUÇA   
+{% endhighlight %} {% highlight bash %}
+tcp    0   0 localhost:3350     *:*           OUÇA   
+{% endhighlight %} {% highlight bash %}
+tcp    0   0 *:ipp          *:*           OUÇA   
+{% endhighlight %} {% highlight bash %}
+tcp    0   0 *:39991         *:*           OUÇA   
+{% endhighlight %} {% highlight bash %}
+tcp    0   0 *:3128         *:*           OUÇA   
+{% endhighlight %} {% highlight bash %}
+tcp    0   0 cubian.local:43479   edge-star-shv-03-:https ESTABELECIDA
+{% endhighlight %} {% highlight bash %}
+tcp    0   0 cubian.local:9001    despari.informati:55012 ESTABELECIDA
+{% endhighlight %} {% highlight bash %}
+tcp    0   0 cubian.local:9001    ctsl-web.ctsl.fr:34179 ESTABELECIDA
+{% endhighlight %} {% highlight bash %}
+tcp    0   0 cubian.local:3128    interceptor.local:53071 TIME_WAIT 
+{% endhighlight %} {% highlight bash %}
+tcp    0   0 cubian.local:9001    miglix.eu:34981     ESTABELECIDA
+{% endhighlight %} {% highlight bash %}
+tcp    0   0 cubian.local:3128    interceptor.local:53074 TIME_WAIT 
+{% endhighlight %} {% highlight bash %}
+tcp    0   0 cubian.local:56979   172.19.10.1:35448    TIME_WAIT 
+{% endhighlight %} {% highlight bash %}
+tcp    0   0 cubian.local:39001   ec2-174-129-172-1:51900 ESTABELECIDA
+{% endhighlight %} {% highlight bash %}
+tcp    0   0 cubian.local:9001    w3b4fr33.de:37055    ESTABELECIDA
+{% endhighlight %} {% highlight bash %}
+tcp    0   0 cubian.local:9001    62-210-252-175.re:57864 ESTABELECIDA
+{% endhighlight %} {% highlight bash %}
+tcp    0   0 cubian.local:36000   interceptor.local:52082 ESTABELECIDA
+{% endhighlight %} {% highlight bash %}
+tcp    1   0 cubian.local:41301   j77268.servers.jif:http ESPERANDO_FECHAR
+{% endhighlight %} {% highlight bash %}
+tcp    0   0 cubian.local:9001    62-210-204-180.re:52492 ESTABELECIDA
+{% endhighlight %} {% highlight bash %}
+tcp    0   0 cubian.local:3128    interceptor.local:53073 TIME_WAIT
+{% endhighlight %}-t: Mostra todas as conexõesTCP abertas.     Exemplo: {% highlight bash %}
+root@cubian:~# netstat -t
+{% endhighlight %} {% highlight bash %}
+Conexões Internet Ativas (sem os servidores)
+{% endhighlight %} {% highlight bash %}
+Proto Recv-Q Send-Q Endereço Local     Endereço Remoto     Estado  
+{% endhighlight %} {% highlight bash %}
+tcp    0   0 cubian.local:60837   192.16.58.25:https   ESTABELECIDA
+{% endhighlight %} {% highlight bash %}
+tcp    0 130150 cubian.local:9001    pool-71-187-185-9:42036 ESTABELECIDA
+{% endhighlight %} {% highlight bash %}
+tcp    0   0 cubian.local:9001    despari.informati:55012 ESTABELECIDA
+{% endhighlight %} {% highlight bash %}
+tcp    0   0 cubian.local:9001    ctsl-web.ctsl.fr:34179 ESTABELECIDA
+{% endhighlight %} {% highlight bash %}
+tcp    0   0 cubian.local:56133   189-73-192-237.ca:https TIME_WAIT 
+{% endhighlight %} {% highlight bash %}
+tcp    0   0 cubian.local:60839   192.16.58.25:https   ESTABELECIDA
+{% endhighlight %} {% highlight bash %}
+tcp    0   0 cubian.local:60836   192.16.58.25:https   ESTABELECIDA
+{% endhighlight %} {% highlight bash %}
+tcp    0   0 cubian.local:9001    w3b4fr33.de:37055    ESTABELECIDA
+{% endhighlight %} {% highlight bash %}
+tcp    0   0 cubian.local:9001    62-210-252-175.re:57864 ESTABELECIDA
+{% endhighlight %} {% highlight bash %}
+tcp    0   0 cubian.local:36000   interceptor.local:52082 ESTABELECIDA
+{% endhighlight %} {% highlight bash %}
+tcp    1   0 cubian.local:41301   j77268.servers.jif:http ESPERANDO_FECHAR
+{% endhighlight %} {% highlight bash %}
+tcp    0   0 cubian.local:56136   189-73-192-237.ca:https ESTABELECIDA
+{% endhighlight %} {% highlight bash %}
+tcp    0   0 cubian.local:9001    62-210-204-180.re:52492 ESTABELECIDA
+{% endhighlight %} {% highlight bash %}
+tcp    0   0 cubian.local:56131   189-73-192-237.ca:https TIME_WAIT 
+{% endhighlight %} {% highlight bash %}
+tcp    0   0 cubian.local:9001    esbek1.iv.net.pl:34321 ESTABELECIDA
+{% endhighlight %}    -u: Mostra todas as conexões UDP abertas.     Exemplo: {% highlight bash %}
+root@cubian:~# netstat -u
+{% endhighlight %} {% highlight bash %}
+Conexões Internet Ativas (sem os servidores)
+{% endhighlight %} {% highlight bash %}
+Proto Recv-Q Send-Q Endereço Local     Endereço Remoto     Estado  
+{% endhighlight %} {% highlight bash %}
+udp    0   0 cubian.local:60011     ntp.pop-ce.rnp.br:ntp  ESTABELECIDA
+{% endhighlight %} {% highlight bash %}
+udp    0   0 cubian.local:44375     c.ntp.br:ntp      ESTABELECIDA
+{% endhighlight %} {% highlight bash %}
+udp    0   0 cubian.local:32824     b.ntp.br:ntp      ESTABELECIDA
+{% endhighlight %} {% highlight bash %}
+udp    0   0 cubian.local:59425     ec2-54-232-82-232.s:ntp ESTABELECIDA
+{% endhighlight %}    Osestados de escuta são incluídos na saída somente se você  especificar a opção --all (-a) ou --listening (-l)  Os estados são os  seguintes:     ESTABELECIDO - O socket tem uma conexão estabelecida.   SYN_SENT -O socket está ativamente tentando estabelecer uma conexão.   SYN_RECV - Uma requisição de conexão foi recebida da rede.  FIN_WAIT1 - O  socket está fechado e a conexão está terminando.  FIN_WAIT2 - A conexão  está fechada e o socket está esperando por uma terminação pela máquina  remota.  TIME_WAIT - O socket está esperando após o fechamento para  tratar os pacotes ainda na rede.  FECHADO - O socket não está sendo  usado.  CLOSE_WAIT - O lado remoto terminou, esperando pelo fechamento  do socket.  ÚLTIMO_ACK - O lado remoto terminou, e o socket está  fechado. Esperando por uma confirmação.  OUVINDO - O socket está ouvindo  por conexões. Estes socket são somente mostrados se a chave  -a,--listening for especificada.  FECHANDO - Ambos os sockets estão  terminados mas nós ainda não enviamos todos os nossos dados.   DESCONHECIDO - O estado do socket é desconhecido.     {% highlight bash %}
+Obs: As informações acima foram retiradas do manual do netstat, para mais acesse man netstat.
+{% endhighlight %}    Para exibir todas as conexões de rede abertas com informações extendidas:    {% highlight bash %}
+root@cubian:~# netstat -aetu
+{% endhighlight %} {% highlight bash %}
+Conexões Internet Ativas (servidores e estabelecidas)
+{% endhighlight %} {% highlight bash %}
+Proto Recv-Q Send-Q Endereço Local     Endereço Remoto     Estado   User    Inode   
+{% endhighlight %} {% highlight bash %}
+tcp    0   0 localhost:953      *:*           OUÇA    bind    399548  
+{% endhighlight %} {% highlight bash %}
+tcp    0   0 localhost:9050     *:*           OUÇA    root    399450  
+{% endhighlight %} {% highlight bash %}
+tcp    0   0 *:3389         *:*           OUÇA    xrdp    7143   
+{% endhighlight %} {% highlight bash %}
+tcp    0   0 localhost:58846     *:*           OUÇA    deluge   2932   
+{% endhighlight %} {% highlight bash %}
+tcp    0   0 *:36000         *:*           OUÇA    root    3000409  
+{% endhighlight %} {% highlight bash %}
+tcp    0   0 *:8000         *:*           OUÇA    root    401265  
+{% endhighlight %} {% highlight bash %}
+tcp    0   0 *:nfs          *:*           OUÇA    root    4444   
+{% endhighlight %} {% highlight bash %}
+tcp    0   0 *:nrpe         *:*           OUÇA    nagios   3642   
+{% endhighlight %} {% highlight bash %}
+tcp    0   0 *:ldap         *:*           OUÇA    root    372557  
+{% endhighlight %} {% highlight bash %}
+tcp    0   0 *:43077         *:*           OUÇA    root    3828   
+{% endhighlight %} {% highlight bash %}
+tcp    0   0 *:8200         *:*           OUÇA    minidlna  1417294  
+{% endhighlight %} {% highlight bash %}
+tcp    0   0 *:9001         *:*           OUÇA    root    399455  
+{% endhighlight %} {% highlight bash %}
+tcp    0   0 localhost:mysql     *:*           OUÇA    mysql   1405037  
+{% endhighlight %} {% highlight bash %}
+tcp    0   0 *:56331         *:*           OUÇA    statd   2666   
+{% endhighlight %} {% highlight bash %}
+tcp    0   0 *:47725         *:*           OUÇA    root    3860   
+{% endhighlight %} {% highlight bash %}
+tcp    0   0 *:sunrpc        *:*           OUÇA    root    2625   
+{% endhighlight %} {% highlight bash %}
+tcp    0   0 *:http         *:*           OUÇA    root    3899   
+{% endhighlight %} {% highlight bash %}
+tcp    0   0 *:8112         *:*           OUÇA    deluge   3252   
+{% endhighlight %} {% highlight bash %}
+tcp    0   0 *:56979         *:*           OUÇA    deluge   2942   
+{% endhighlight %} {% highlight bash %}
+tcp    0   0 *:55988         *:*           OUÇA    root    3844   
+{% endhighlight %} {% highlight bash %}
+tcp    0   0 cubian.local:domain   *:*           OUÇA    bind    2838600  
+{% endhighlight %} {% highlight bash %}
+tcp    0   0 10.8.0.1:domain     *:*           OUÇA    bind    399544  
+{% endhighlight %} {% highlight bash %}
+tcp    0   0 localhost:domain    *:*           OUÇA    bind    399540  
+{% endhighlight %} {% highlight bash %}
+tcp    0   0 localhost:3350     *:*           OUÇA    root    7125   
+{% endhighlight %} {% highlight bash %}
+tcp    0   0 *:ipp          *:*           OUÇA    root    373369  
+{% endhighlight %} {% highlight bash %}
+tcp    0   0 *:39991         *:*           OUÇA    root    3798   
+{% endhighlight %} {% highlight bash %}
+tcp    0   0 *:3128         *:*           OUÇA    root    54042   
+{% endhighlight %} {% highlight bash %}
+tcp    0   0 cubian.local:9001    ip-173-236-249-56:55529 ESTABELECIDA debian-tor 5694430  
+{% endhighlight %} {% highlight bash %}
+tcp    0   0 cubian.local:9001    ehlo.4711.se:44239   ESTABELECIDA debian-tor 5697633  
+{% endhighlight %} {% highlight bash %}
+tcp    0   0 cubian.local:9001    dannenberg.toraut:33933 ESTABELECIDA debian-tor 5696264  
+{% endhighlight %} {% highlight bash %}
+tcp    0   0 cubian.local:43972   edge-star-shv-03-:https ESTABELECIDA debian-tor 5697736  
+{% endhighlight %} {% highlight bash %}
+tcp    0   0 cubian.local:9001    ctsl-web.ctsl.fr:34179 ESTABELECIDA debian-tor 5665460  
+{% endhighlight %} {% highlight bash %}
+tcp    0   0 cubian.local:3128    interceptor.local:53627 TIME_WAIT  root    0     
+{% endhighlight %} {% highlight bash %}
+tcp    0   0 cubian.local:9001    62-210-252-175.re:57864 ESTABELECIDA debian-tor 5680556  
+{% endhighlight %} {% highlight bash %}
+tcp    0   0 cubian.local:36000   interceptor.local:52082 ESTABELECIDA root    5671422  
+{% endhighlight %} {% highlight bash %}
+tcp    1   0 cubian.local:41301   j77268.servers.jif:http ESPERANDO_FECHAR root    5376037  
+{% endhighlight %}{% highlight bash %}
+ 
+{% endhighlight %} {% highlight bash %}
+tcp    0   0 cubian.local:9001    62-210-92-11.rev.p:5468 ESTABELECIDA debian-tor 5664259  
+{% endhighlight %} {% highlight bash %}
+tcp    0   0 cubian.local:60628   edge-star-shv-03-a:http ESTABELECIDA debian-tor 5669498  
+{% endhighlight %} {% highlight bash %}
+tcp    0   0 cubian.local:9001    snowleopard.kyhwa:35857 ESTABELECIDA debian-tor 5666987  
+{% endhighlight %} {% highlight bash %}
+tcp    0   0 cubian.local:9001    81-7-16-182.blue.:51542 ESTABELECIDA debian-tor 5691801  
+{% endhighlight %} {% highlight bash %}
+tcp    1   0 cubian.local:43197   j77268.servers.jif:http ESPERANDO_FECHAR root    3880930  
+{% endhighlight %} {% highlight bash %}
+tcp    0   0 cubian.local:9001    ns3000701.ip-37-5:34096 ESTABELECIDA debian-tor 5675704 
+{% endhighlight %} {% highlight bash %}
+udp    0   0 cubian.local:60011     ntp.pop-ce.rnp.br:ntp  ESTABELECIDA
+{% endhighlight %} {% highlight bash %}
+udp    0   0 cubian.local:44375     c.ntp.br:ntp      ESTABELECIDA
+{% endhighlight %} {% highlight bash %}
+udp    0   0 cubian.local:32824     b.ntp.br:ntp      ESTABELECIDA
+{% endhighlight %} {% highlight bash %}
+udp    0   0 cubian.local:59425     ec2-54-232-82-232.s:ntp ESTABELECIDA
+{% endhighlight %} {% highlight bash %}
+{% endhighlight %} Para exibir todas as conexões com estado de escuta:    {% highlight bash %}
+root@cubian:~# netstat -l
+{% endhighlight %} {% highlight bash %}
+Conexões Internet Ativas (sem os servidores)
+{% endhighlight %} {% highlight bash %}
+Proto Recv-Q Send-Q Endereço Local     Endereço Remoto     Estado  
+{% endhighlight %} {% highlight bash %}
+tcp    0   0 localhost:953      *:*           OUÇA   
+{% endhighlight %} {% highlight bash %}
+tcp    0   0 localhost:9050     *:*           OUÇA   
+{% endhighlight %} {% highlight bash %}
+tcp    0   0 *:3389         *:*           OUÇA   
+{% endhighlight %} {% highlight bash %}
+tcp    0   0 localhost:58846     *:*           OUÇA   
+{% endhighlight %} {% highlight bash %}
+tcp    0   0 *:36000         *:*           OUÇA   
+{% endhighlight %} {% highlight bash %}
+tcp    0   0 *:8000         *:*           OUÇA   
+{% endhighlight %} {% highlight bash %}
+tcp    0   0 *:nfs          *:*           OUÇA   
+{% endhighlight %} {% highlight bash %}
+tcp    0   0 *:nrpe         *:*           OUÇA   
+{% endhighlight %} {% highlight bash %}
+tcp    0   0 *:ldap         *:*           OUÇA   
+{% endhighlight %} {% highlight bash %}
+tcp    0   0 *:43077         *:*           OUÇA   
+{% endhighlight %} {% highlight bash %}
+tcp    0   0 *:8200         *:*           OUÇA   
+{% endhighlight %} {% highlight bash %}
+tcp    0   0 *:9001         *:*           OUÇA   
+{% endhighlight %} {% highlight bash %}
+tcp    0   0 localhost:mysql     *:*           OUÇA   
+{% endhighlight %} {% highlight bash %}
+tcp    0   0 *:56331         *:*           OUÇA   
+{% endhighlight %} {% highlight bash %}
+tcp    0   0 *:47725         *:*           OUÇA   
+{% endhighlight %} {% highlight bash %}
+tcp    0   0 *:sunrpc        *:*           OUÇA   
+{% endhighlight %} {% highlight bash %}
+tcp    0   0 *:http         *:*           OUÇA   
+{% endhighlight %} {% highlight bash %}
+tcp    0   0 *:8112         *:*           OUÇA   
+{% endhighlight %} {% highlight bash %}
+tcp    0   0 *:56979         *:*           OUÇA   
+{% endhighlight %} {% highlight bash %}
+tcp    0   0 *:55988         *:*           OUÇA   
+{% endhighlight %} {% highlight bash %}
+tcp    0   0 cubian.local:domain   *:*           OUÇA   
+{% endhighlight %} {% highlight bash %}
+tcp    0   0 10.8.0.1:domain     *:*           OUÇA   
+{% endhighlight %} {% highlight bash %}
+tcp    0   0 localhost:domain    *:*           OUÇA   
+{% endhighlight %} {% highlight bash %}
+tcp    0   0 localhost:3350     *:*           OUÇA   
+{% endhighlight %} {% highlight bash %}
+tcp    0   0 *:ipp          *:*           OUÇA   
+{% endhighlight %} {% highlight bash %}
+tcp    0   0 *:39991         *:*           OUÇA   
+{% endhighlight %} {% highlight bash %}
+tcp    0   0 *:3128         *:*           OUÇA
+{% endhighlight %}    {% highlight bash %}
+Obs: Você pode listar também conexõesque utilizam TCP e UDP basta digitar netstat -lt para TCP e netstat -lu para UDP.
+{% endhighlight %}    Para exibir as estatísticas para cada protocolo você utiliza o parâmetro -s.    {% highlight bash %}
+root@cubian:~# netstat -s
+{% endhighlight %} {% highlight bash %}
+Ip:
+{% endhighlight %} {% highlight bash %}
+  109411177 total packets received
+{% endhighlight %} {% highlight bash %}
+  818 with invalid headers
+{% endhighlight %} {% highlight bash %}
+  91 with invalid addresses
+{% endhighlight %} {% highlight bash %}
+  61037260 forwarded
+{% endhighlight %} {% highlight bash %}
+  0 incoming packets discarded
+{% endhighlight %} {% highlight bash %}
+  43954479 incoming packets delivered
+{% endhighlight %} {% highlight bash %}
+  103800691 requests sent out
+{% endhighlight %} {% highlight bash %}
+  974368 outgoing packets dropped
+{% endhighlight %} {% highlight bash %}
+  6333 dropped because of missing route
+{% endhighlight %} {% highlight bash %}
+  3850 reassemblies required
+{% endhighlight %} {% highlight bash %}
+  1783 packets reassembled ok
+{% endhighlight %} {% highlight bash %}
+  8 fragments received ok
+{% endhighlight %} {% highlight bash %}
+  5 fragments failed
+{% endhighlight %} {% highlight bash %}
+  16 fragments created
+{% endhighlight %} {% highlight bash %}
+Icmp:
+{% endhighlight %} {% highlight bash %}
+  236936 ICMP messages received
+{% endhighlight %} {% highlight bash %}
+  3734 input ICMP message failed.
+{% endhighlight %} {% highlight bash %}
+  Histograma de entrada ICMP:
+{% endhighlight %} {% highlight bash %}
+    destination unreachable: 232577
+{% endhighlight %} {% highlight bash %}
+    timeout in transit: 3896
+{% endhighlight %} {% highlight bash %}
+    source quenches: 6
+{% endhighlight %} {% highlight bash %}
+    redirects: 85
+{% endhighlight %} {% highlight bash %}
+    echo requests: 75
+{% endhighlight %} {% highlight bash %}
+    echo replies: 297
+{% endhighlight %} {% highlight bash %}
+  5733920 ICMP messages sent
+{% endhighlight %} {% highlight bash %}
+  0 ICMP messages failed
+{% endhighlight %} {% highlight bash %}
+  Histograma de saída ICMP
+{% endhighlight %} {% highlight bash %}
+    destination unreachable: 4397366
+{% endhighlight %} {% highlight bash %}
+    time exceeded: 71
+{% endhighlight %} {% highlight bash %}
+    redirect: 989250
+{% endhighlight %} {% highlight bash %}
+    echo request: 347154
+{% endhighlight %} {% highlight bash %}
+    echo replies: 75
+{% endhighlight %} {% highlight bash %}
+IcmpMsg:
+{% endhighlight %} {% highlight bash %}
+    InType0: 297
+{% endhighlight %} {% highlight bash %}
+    InType3: 232577
+{% endhighlight %} {% highlight bash %}
+    InType4: 6
+{% endhighlight %} {% highlight bash %}
+    InType5: 85
+{% endhighlight %} {% highlight bash %}
+    InType8: 75
+{% endhighlight %} {% highlight bash %}
+    InType11: 3896
+{% endhighlight %} {% highlight bash %}
+    OutType0: 75
+{% endhighlight %} {% highlight bash %}
+    OutType3: 4397366
+{% endhighlight %} {% highlight bash %}
+    OutType5: 989250
+{% endhighlight %} {% highlight bash %}
+    OutType8: 347154
+{% endhighlight %} {% highlight bash %}
+    OutType11: 71
+{% endhighlight %} {% highlight bash %}
+    OutType69: 4
+{% endhighlight %} {% highlight bash %}
+Tcp:
+{% endhighlight %} {% highlight bash %}
+  1546347 active connections openings
+{% endhighlight %} {% highlight bash %}
+  167131 passive connection openings
+{% endhighlight %} {% highlight bash %}
+  123657 failed connection attempts
+{% endhighlight %} {% highlight bash %}
+  47666 connection resets received
+{% endhighlight %} {% highlight bash %}
+  77 connections established
+{% endhighlight %} {% highlight bash %}
+  32126682 segments received
+{% endhighlight %} {% highlight bash %}
+  47384475 segments send out
+{% endhighlight %} {% highlight bash %}
+  1533301 segments retransmited
+{% endhighlight %} {% highlight bash %}
+  39234 bad segments received.
+{% endhighlight %} {% highlight bash %}
+  100659 resets sent
+{% endhighlight %} {% highlight bash %}
+Udp:
+{% endhighlight %} {% highlight bash %}
+  7234860 packets received
+{% endhighlight %} {% highlight bash %}
+  4323782 packets to unknown port received.
+{% endhighlight %} {% highlight bash %}
+  49 packet receive errors
+{% endhighlight %} {% highlight bash %}
+  8119469 packets sent
+{% endhighlight %}    Existe também a possibilidade de se obterdetalhes de processos que  estejam rodando no servidor.Por exemplo, o proxySquidutiliza aporta  padrão TCP 3128. Então, se você quiser verificar seexistem processos  referentes a ele no servidor é só rodar o comando com a opção -p.  Emum  exemplo prático ficaria assim:     {% highlight bash %}
+root@cubian:~# netstat -npt | grep squid
+{% endhighlight %} {% highlight bash %}
+tcp    0   0 172.19.10.2:3128    172.19.10.22:54468   ESTABELECIDA 6810/(squid)  
+{% endhighlight %} {% highlight bash %}
+tcp    0   0 172.19.10.2:3128    172.19.10.22:54440   ESTABELECIDA 6810/(squid)  
+{% endhighlight %} {% highlight bash %}
+tcp6    0   0 172.19.10.2:59586    64.76.243.22:80     ESTABELECIDA 6810/(squid)  
+{% endhighlight %} {% highlight bash %}
+tcp6    0   0 172.19.10.2:53230    108.167.188.73:80    ESTABELECIDA 6810/(squid)
+{% endhighlight %}    A opção -g irá exibir as informações do grupo multicast para protocolos IPv4 e IPv6.     {% highlight bash %}
+root@cubian:~# netstat -g
+{% endhighlight %} {% highlight bash %}
+IPv6/IPv4 Group Memberships
+{% endhighlight %} {% highlight bash %}
+Interface    CntRef Grupo
+{% endhighlight %} {% highlight bash %}
+--------------- ------ ---------------------
+{% endhighlight %} {% highlight bash %}
+lo       1   all-systems.mcast.net
+{% endhighlight %} {% highlight bash %}
+eth0      1   224.0.0.251
+{% endhighlight %} {% highlight bash %}
+eth0      1   all-systems.mcast.net
+{% endhighlight %} {% highlight bash %}
+eth0      1   239.255.255.250
+{% endhighlight %} {% highlight bash %}
+eth0      3   239.192.152.143
+{% endhighlight %} {% highlight bash %}
+tun0      1   all-systems.mcast.net
+{% endhighlight %} {% highlight bash %}
+lo       1   ip6-allnodes
+{% endhighlight %} {% highlight bash %}
+tunl0      1   ip6-allnodes
+{% endhighlight %} {% highlight bash %}
+eth0      1   ff02::fb%lo
+{% endhighlight %} {% highlight bash %}
+eth0      1   ff02::1:ff57:9252%lo
+{% endhighlight %} {% highlight bash %}
+eth0      1   ff02::202%lo
+{% endhighlight %} {% highlight bash %}
+eth0      1   ip6-allnodes
+{% endhighlight %} {% highlight bash %}
+tun0      1   ip6-allnodes
+{% endhighlight %}    Existe também a opção -c que é para modo contínuo no qual você pode  deixar rodando e verificando sempre a sua saída no terminal. Abaixo  segue um exemplo prático     {% highlight bash %}
+root@cubian:~# netstat -nptc
+{% endhighlight %} {% highlight bash %}
+Conexões Internet Ativas (sem os servidores)
+{% endhighlight %} {% highlight bash %}
+Proto Recv-Q Send-Q Endereço Local     Endereço Remoto     Estado   PID/Program name
+{% endhighlight %} {% highlight bash %}
+tcp    0  1629 172.19.10.2:9001    212.83.148.205:34179  ESTABELECIDA 8890/tor    
+{% endhighlight %} {% highlight bash %}
+tcp    0   0 172.19.10.2:3128    172.19.10.22:54550   ESTABELECIDA 6810/(squid)  
+{% endhighlight %} {% highlight bash %}
+tcp    0  1629 172.19.10.2:9001    178.79.181.230:54434  ESTABELECIDA 8890/tor    
+{% endhighlight %} {% highlight bash %}
+tcp    0   0 172.19.10.2:36000    172.19.10.22:52082   ESTABELECIDA 8225/0     
+{% endhighlight %} {% highlight bash %}
+tcp    1   0 172.19.10.2:41301    109.239.49.179:80    ESPERANDO_FECHAR 9610/python  
+{% endhighlight %} {% highlight bash %}
+tcp    0   0 172.19.10.2:3128    172.19.10.22:54573   TIME_WAIT  -       
+{% endhighlight %} {% highlight bash %}
+tcp    0   0 172.19.10.2:3128    172.19.10.39:43157   ESTABELECIDA 6810/(squid)  
+{% endhighlight %} {% highlight bash %}
+tcp    1   0 172.19.10.2:44458    109.239.49.179:80    ESPERANDO_FECHAR 9610/python  
+{% endhighlight %} {% highlight bash %}
+tcp    0   1 172.19.10.2:52398    186.216.191.41:26277  SYN_ENVIADO 1959/python  
+{% endhighlight %} {% highlight bash %}
+tcp    0  1629 172.19.10.2:9001    86.56.139.81:2100    ESTABELECIDA 8890/tor    
+{% endhighlight %} {% highlight bash %}
+tcp    0   0 172.19.10.2:60628    173.252.112.23:80    ESTABELECIDA 8890/tor    
+{% endhighlight %} {% highlight bash %}
+tcp    1   0 172.19.10.2:43197    109.239.49.179:80    ESPERANDO_FECHAR 9610/python  
+{% endhighlight %} {% highlight bash %}
+tcp    0  1695 172.19.10.2:9001    37.59.46.159:34096   ESTABELECIDA 8890/tor    
+{% endhighlight %} {% highlight bash %}
+tcp    0   0 172.19.10.2:3128    172.19.10.22:54551   ESTABELECIDA 6810/(squid)  
+{% endhighlight %} {% highlight bash %}
+tcp    1   0 172.19.10.2:54028    109.239.49.179:80    ESPERANDO_FECHAR 9610/python  
+{% endhighlight %} {% highlight bash %}
+tcp    0   0 172.19.10.2:3128    172.19.10.22:54583   TIME_WAIT  -       
+{% endhighlight %} {% highlight bash %}
+tcp    1   0 172.19.10.2:50950    109.239.49.179:80    ESPERANDO_FECHAR 9610/python  
+{% endhighlight %} {% highlight bash %}
+tcp    1   0 172.19.10.2:34823    109.239.49.179:80    ESPERANDO_FECHAR 9610/python  
+{% endhighlight %} {% highlight bash %}
+tcp    0   0 172.19.10.2:3128    172.19.10.22:54596   ESTABELECIDA 6810/(squid)  
+{% endhighlight %} {% highlight bash %}
+tcp    1   0 172.19.10.2:54331    109.239.49.179:80    ESPERANDO_FECHAR 9610/python  
+{% endhighlight %} {% highlight bash %}
+tcp    0   0 172.19.10.2:3128    172.19.10.22:54440   ESTABELECIDA 6810/(squid)  
+{% endhighlight %} {% highlight bash %}
+tcp    0   0 172.19.10.2:3128    172.19.10.22:54601   TIME_WAIT  -       
+{% endhighlight %} {% highlight bash %}
+tcp    0   1 172.19.10.2:57857    179.222.233.60:25248  SYN_ENVIADO 1959/python  
+{% endhighlight %} {% highlight bash %}
+tcp    0  1629 172.19.10.2:9001    195.154.97.163:46880  ESTABELECIDA 8890/tor    
+{% endhighlight %} {% highlight bash %}
+tcp    0  1629 172.19.10.2:9001    5.39.95.142:52679    ESTABELECIDA 8890/tor    
+{% endhighlight %} {% highlight bash %}
+tcp    0  1629 172.19.10.2:9001    203.138.99.218:41224  ESTABELECIDA 8890/tor    
+{% endhighlight %} {% highlight bash %}
+tcp    0   0 172.19.10.2:3128    172.19.10.22:54605   TIME_WAIT  -       
+{% endhighlight %} {% highlight bash %}
+tcp    0  944 172.19.10.2:36000    172.19.10.22:52714   ESTABELECIDA 9104/2     
+{% endhighlight %} {% highlight bash %}
+tcp    0   0 127.0.0.1:58846     127.0.0.1:56501     ESTABELECIDA 1959/python  
+{% endhighlight %} {% highlight bash %}
+tcp    0   0 172.19.10.2:3128    172.19.10.22:54545   ESTABELECIDA 6810/(squid)  
+{% endhighlight %} {% highlight bash %}
+tcp    0  1758 172.19.10.2:9001    38.229.70.42:29051   ESTABELECIDA 8890/tor    
+{% endhighlight %} {% highlight bash %}
+tcp    1   0 172.19.10.2:43618    109.239.49.179:80    ESPERANDO_FECHAR 9610/python  
+{% endhighlight %} {% highlight bash %}
+tcp    0   0 172.19.10.2:38503    131.161.157.65:49636  ESTABELECIDA 1959/python  
+{% endhighlight %} {% highlight bash %}
+tcp    0   0 172.19.10.2:3128    172.19.10.22:54594   ESTABELECIDA 6810/(squid)  
+{% endhighlight %} {% highlight bash %}
+tcp    0   0 127.0.0.1:56501     127.0.0.1:58846     ESTABELECIDA 2178/python  
+{% endhighlight %} {% highlight bash %}
+tcp    0  1629 172.19.10.2:9001    176.9.113.40:55890   ESTABELECIDA 8890/tor    
+{% endhighlight %} {% highlight bash %}
+tcp    0   0 172.19.10.2:3128    172.19.10.22:54604   TIME_WAIT  -       
+{% endhighlight %} {% highlight bash %}
+tcp    0  1629 172.19.10.2:9001    91.121.201.159:35774  ESTABELECIDA 8890/tor    
+{% endhighlight %}    {% highlight bash %}
+Obs:  A saída de todos os comandos foram resumidas pois se eu fosse adicionar  no post todas as informação iria estender muito o post.
+{% endhighlight %}     Informações sobre portas e serviços pode ser encontrado em  /etc/services.  Bom pessoal, espero que tenham gostado. Até mais! ;)
+Por Clediomir Silva

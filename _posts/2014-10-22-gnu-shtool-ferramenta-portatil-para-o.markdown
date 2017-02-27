@@ -1,0 +1,23 @@
+---
+layout: post
+title: "" GNU shtool - A Ferramenta portátil para o GNU Shell ""
+date: '2014-10-22T12:50:00.001-07:00'
+description: "" GNU shtool - A Ferramenta portátil para o GNU Shell ""
+main-class: 'bash'
+tags:
+- Shell Script
+- GNU
+image: "http://2.bp.blogspot.com/-bhTWS3uyL5g/VEWokfFsZYI/AAAAAAAAA4k/bkClQTkkiB8/s72-c/shtool.jpg"
+twitter_text: "" GNU shtool - A Ferramenta portátil para o GNU Shell ""
+introduction: "" GNU shtool - A Ferramenta portátil para o GNU Shell ""
+---
+![Blog Linux](http://2.bp.blogspot.com/-bhTWS3uyL5g/VEWokfFsZYI/AAAAAAAAA4k/bkClQTkkiB8/s320/shtool.jpg "Blog Linux")
+GNU shtool é uma compilação de scripts de pequenas, mas muito estáveis ​​e portáteis shell em uma única ferramenta shell.  Todos os ingredientes estavam em uso bem sucedido ao longo de muitos anos em vários projetos de software livre.  O programa shtool compilado se destina a ser utilizado dentro da árvore fonte de outros pacotes de software livre.  Não pode ultrapassar várias tarefas (geralmente não-portáteis) relacionados com a construção e instalação de um tal pacote.  É, especialmente, podem substituir o antigo {% highlight bash %}
+mkdir.sh
+{% endhighlight %} , {% highlight bash %}
+install.sh
+{% endhighlight %} e os scripts relacionados.
+ Download GNU shtool   
+ A última distribuição shtool GNU pode ser encontrado no ftp://ftp.gnu.org/gnu/shtool/ .  Se você acha que encontrou um bug no GNU shtool, então você deve enviar um relatório tão completo quanto possível  .  E se você puder, por favor, tente corrigir o problema e inclui um conserto feito com " {% highlight bash %}
+diff -u
+{% endhighlight %} "em seu relatório. 
