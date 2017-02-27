@@ -10,6 +10,11 @@ twitter_text: "6 Melhores Editores de Vídeos para Debian GNU/Linux"
 introduction: "Escolha o melhor!"
 
 ---
+
+<style>
+img {border: 4px solid #222; box-shadow: 2px 2px 2px 10px #666;}
+</style>
+
 ![Blog Linux](/assets/img/editores/video-editor.jpg "Blog Linux")
 <hr />
 [OpenShot](http://www.openshot.org/)
