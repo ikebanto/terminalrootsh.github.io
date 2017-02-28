@@ -14,8 +14,8 @@ introduction: Como instalar o COMPIZ no Debian 8 Jessie MATE
 ---
 ![Compiz Debian Blog Linux Terminal Root](/assets/img/debian/compiz.jpg "Compiz Debian Blog Linux Terminal Root")
 
-![Blog Linux](http://compiz-debian.tuxfamily.org/images/title.png "Blog Linux")
-## O que é Compiz ?
+## ![Blog Linux](http://compiz-debian.tuxfamily.org/images/title.png "Blog Linux")O que é Compiz ?
+
 
 Compiz foi um dos primeiros gerenciadores de janelas 3D para o servidor de janela X, onde foi usada aceleração OpenGL. O gerenciador permite que as janelas tenham efeitos visuais, como animações ao minimizar e uma área de trabalho em forma de cubo.
 
