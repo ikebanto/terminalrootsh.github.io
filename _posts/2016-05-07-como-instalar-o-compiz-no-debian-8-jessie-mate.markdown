@@ -1,23 +1,23 @@
 ---
 layout: post
-title: Como instalar o COMPIZ no Debian 8 Jessie MATE
+title: "Como instalar o COMPIZ no Debian 8 Jessie MATE"
 date: '2016-05-07T17:00:00.001-07:00'
 image: '/assets/img/debian/compiz.jpg'
-description: Como instalar o COMPIZ no Debian 8 Jessie MATE
+description: "Compiz foi um dos primeiros gerenciadores de janelas 3D para o servidor de janela X, onde foi usada aceleração OpenGL."
 main-class: 'debian'
 tags:
 - Debian
 - MATE
 - TerminalRootTV
-twitter_text: Como instalar o COMPIZ no Debian 8 Jessie MATE
-introduction: Como instalar o COMPIZ no Debian 8 Jessie MATE
+twitter_text: "Como instalar o COMPIZ no Debian 8 Jessie MATE"
+introduction: "Compiz foi um dos primeiros gerenciadores de janelas 3D para o servidor de janela X, onde foi usada aceleração OpenGL."
 ---
 ![Compiz Debian Blog Linux Terminal Root](/assets/img/debian/compiz.jpg "Compiz Debian Blog Linux Terminal Root")
 
 ## ![Blog Linux](http://compiz-debian.tuxfamily.org/images/title.png "Blog Linux")O que é Compiz ?
 
 
-Compiz foi um dos primeiros gerenciadores de janelas 3D para o servidor de janela X, onde foi usada aceleração OpenGL. O gerenciador permite que as janelas tenham efeitos visuais, como animações ao minimizar e uma área de trabalho em forma de cubo.
+[Compiz](http://www.compiz.org/) foi um dos primeiros [gerenciadores](https://cse.google.com.br/cse/publicurl?cx=004473188612396442360:qs2ekmnkweq&q=gerenciadores) de janelas 3D para o servidor de janela X, onde foi usada aceleração [OpenGL](https://cse.google.com.br/cse/publicurl?cx=004473188612396442360:qs2ekmnkweq&q=OpenGL). O gerenciador permite que as janelas tenham efeitos visuais, como animações ao minimizar e uma área de trabalho em forma de cubo.
 
 ## ![Blog Linux](http://compiz-debian.tuxfamily.org/images/debian.png "Blog Linux") Porque Compiz para Debian ?
 
