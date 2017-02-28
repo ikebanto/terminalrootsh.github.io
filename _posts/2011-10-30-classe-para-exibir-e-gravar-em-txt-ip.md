@@ -63,7 +63,7 @@ introduction: "Segue classe e já instanciada e setada a função pronta para ut
 		 echo $os.'Data e Hora: '.$data;
 		 
 		 //PREPARA O CONTEÚDO A SER GRAVADO		 
-		 $conteudo = "Ip: $ip\r\nSistema: $os\r\nNavegador: $nav\r\nData e Hora: $data\r\n------\r\n";
+		 $conteudo = "Ip: $ip\r\nSistema: $os\r\nNavegador: $nav\r\nData e Hora: $data\r\n\r\n";
 		 
 		 //TENTA ABRIR O ARQUIVO TXT
 		 if (!$abrir = fopen($arquivo, "a")) {
