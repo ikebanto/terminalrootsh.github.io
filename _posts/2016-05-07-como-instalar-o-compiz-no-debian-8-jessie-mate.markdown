@@ -19,9 +19,9 @@ introduction: Como instalar o COMPIZ no Debian 8 Jessie MATE
 
 Compiz foi um dos primeiros gerenciadores de janelas 3D para o servidor de janela X, onde foi usada aceleração OpenGL. O gerenciador permite que as janelas tenham efeitos visuais, como animações ao minimizar e uma área de trabalho em forma de cubo.
 
-![Blog Linux](http://compiz-debian.tuxfamily.org/images/debian.png "Blog Linux")
+## ![Blog Linux](http://compiz-debian.tuxfamily.org/images/debian.png "Blog Linux") Porque Compiz para Debian ?
 
-## Porque Compiz para Debian ?
+
 
 [Compiz](http://www.compiz.org/) já não é fornecido pelo repositório oficial do [Debian](https://cse.google.com.br/cse/publicurl?cx=004473188612396442360:qs2ekmnkweq&q=Debian) desde o lançamento do [Squeeze](https://cse.google.com.br/cse/publicurl?cx=004473188612396442360:qs2ekmnkweq&q=Squeeze), por causa do abandono do branch 0.8. A próxima versão 0.9 é desenvolvido pela unidade pelo Ubuntu e sempre foi muito instável em outros ambientes. Depois de pesquisar na web, alguns desenvolvedores passaram a corrigir bugs, retirar os pacotes e adicionar melhorias nas diferentes aplicações. Esta nova versão foi criada no [Github](https://cse.google.com.br/cse/publicurl?cx=004473188612396442360:qs2ekmnkweq&q=Github) e funciona muito bem no Debian, é por isso que este projeto foi criado. Os pacotes para o Debian foram atualizados a partir da antiga versão 0.8.4 e desenvolvida com sucesso para arquiteturas i386 e amd64. Compiz [Debian](http://www.terminalroot.com.br/tags#debian) [GNU](http://www.terminalroot.com.br/tags#gnu)/[Linux](https://cse.google.com.br/cse/publicurl?cx=004473188612396442360:qs2ekmnkweq&q=Linux) oferece pacotes tanto para o Debian stable "Jessie" quanto para o testing "Stretch".
 Instale e divirta-se!
@@ -54,9 +54,6 @@ Instalando compiz-core, gtk-window-decorator, gerenciador de configurações e p
 {% highlight bash %}
 apt-get install compiz
 {% endhighlight %}
-      
-![Blog Linux](http://compiz-debian.tuxfamily.org/images/optional-packages.png "Blog Linux")
-Pacotes Opcionais
 
 ![Blog Linux](http://compiz-debian.tuxfamily.org/images/emerald.png "Blog Linux")
 Instale o decorador de janela do Compiz ( recomenado pra XFCE, LXDE )
@@ -87,8 +84,6 @@ Instale plugins não suportados e experimentais no seu sistema
 {% highlight bash %}
 apt-get install compiz-fusion-plugins-unsupported
 {% endhighlight %}
-           
-![Blog Linux](http://compiz-debian.tuxfamily.org/images/octocat.png "Blog Linux")
 
 ## Problemas ou Bugs ?
 [Acesse o projeto no Github](http://compiz-debian.tuxfamily.org/)
