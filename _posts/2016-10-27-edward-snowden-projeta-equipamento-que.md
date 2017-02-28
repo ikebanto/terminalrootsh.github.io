@@ -3,7 +3,7 @@ layout: post
 title: "Edward Snowden projeta equipamento que avisa se smartphone foi grampeado"
 date: '2016-10-27T15:44:00.000-07:00'
 image: '/assets/img/hacker/snowden.jpg'
-description: ""O ex-espião Edward Snowden e o hacker Andrew Huangapresentaram no MIT a proposta de um equipamento diferenciado.""
+description: "O ex-espião Edward Snowden e o hacker Andrew Huangapresentaram no MIT a proposta de um equipamento diferenciado."
 main-class: 'misc'
 tags:
 - Notícias
