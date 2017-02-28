@@ -8,7 +8,7 @@ main-class: 'debian'
 tags:
 - Debian
 - Debian-Likes
-twitter_text: Conheça o Devuan, um Debian sem systemd
+twitter_text: "Conheça o Devuan, um Debian sem systemd"
 introduction: "Devuan é um fork da distribuição Debian GNU/Linux."
 ---
 ![Devuan Debian Blog Linux Terminal Root](/assets/img/distros/devuan.jpg "Devuan Debian Blog Linux Terminal Root")
