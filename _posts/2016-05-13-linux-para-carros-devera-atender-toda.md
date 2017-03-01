@@ -2,27 +2,24 @@
 layout: post
 title: "Linux para carros deverá atender toda a indústria automotiva"
 date: '2016-05-13T17:41:00.001-07:00'
-description: "Linux para carros deverá atender toda a indústria automotiva"
+image: '/assets/img/linux/linux_carro.jpg'
+description: "Automotive Grade Linux poderia ser a resposta ao cenário fragmentado e, muitas vezes, frustrante dos atuais sistemas operacionais automotivos."
 main-class: 'linux'
-color: '#3b5998'
-author: "Terminal Root"
 tags:
 - Linux
-modified_time: '2016-05-13T17:45:26.052-07:00'
-thumbnail: https://4.bp.blogspot.com/-D7UMwl20tGg/VzZzOaIP1FI/AAAAAAAAAfg/emLG_rfQ_-0G9eNjuSDPUKkmSSs2bp1iwCLcB/s72-c/linux_carro.jpg
 twitter_text: "Linux para carros deverá atender toda a indústria automotiva"
-introduction: "Linux para carros deverá atender toda a indústria automotiva"
+introduction: "Automotive Grade Linux poderia ser a resposta ao cenário fragmentado e, muitas vezes, frustrante dos atuais sistemas operacionais automotivos."
 ---
 
-<img border="0" src="https://4.bp.blogspot.com/-D7UMwl20tGg/VzZzOaIP1FI/AAAAAAAAAfg/emLG_rfQ_-0G9eNjuSDPUKkmSSs2bp1iwCLcB/s640/linux_carro.jpg" />
+![Blog_Linux Carros](/assets/img/linux/linux_carro.jpg "Linux Carros")
 
 # A plataforma open-source
 
-<a href="https://www.automotivelinux.org/" target="_blank">Automotive Grade Linux</a> poderia ser a resposta ao cenário fragmentado e, muitas vezes, frustrante dos atuais sistemas operacionais automotivos.
+[Automotive Grade Linux](https://www.automotivelinux.org/) poderia ser a resposta ao cenário fragmentado e, muitas vezes, frustrante dos atuais sistemas operacionais automotivos.
 
 Projeto da Linux Foundation, o AGL está atualmente focado em fornecer um sistema operacional para consoles infotainment em veículos. Mas seus apoiadores preveem um sistema operacional que consiga controlar uma série de instrumentos, além de conseguir lidar com recursos desde carros conectados a veículos autônomos. 
 
-As principais montadoras de veículos, incluindo aí Toyota, Honda, Mazda, Nissan, Subaru, Mitsubishi, Ford e Jaguar Land Rover, integram o projeto AGL.
+> As principais montadoras de veículos, incluindo aí Toyota, Honda, Mazda, Nissan, Subaru, Mitsubishi, Ford e Jaguar Land Rover, integram o projeto AGL.
 
 Gerente geral do projeto Automotive Grade Linux na Fundação Linux, Dan Cauchy, explica que montadoras perceberam que elas estão atrás em relação a indústria de eletrônicos destinada a consumidores finais. Isso fica bem claro quando se fala da experiência interativa espelhada no painel de carros. 
 
@@ -36,4 +33,5 @@ Mas tais sistemas infotainment integrados aos carros estão apenas no início. O
 
 A característica open-source é chave aqui. Ao invés de montadoras subcontratarem o software para uma companhia que oferece códigos exclusivos que apenas funcionam em um modelo de carro, eles estão construindo uma plataforma de software que pode ser adicionada e depois reusada. Isso significa que haverá um ecossistema de aplicativos em comum para desenvolvedores de aplicações terem como foco.
 
-Via: http://computerworld.com.br/linux-para-carros-devera-atender-toda-industria-automotiva
+
+Via: [Computer World](http://computerworld.com.br/linux-para-carros-devera-atender-toda-industria-automotiva)
