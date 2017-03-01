@@ -4,7 +4,7 @@ title: "Curso Certificação Linux LPI-101: Comandos do editor de texto Vim/Vi"
 date: '2011-12-27T18:20:00.000-08:00'
 image: '/assets/img/editores/vi-vim.png'
 description: "O vim é um dos editores de textos mais utilizados no mundo Unix."
-main-class: 'misc'
+main-class: 'gnu'
 tags:
 - Dicas
 twitter_text: "Curso Certificação Linux LPI-101: Comandos do editor de texto Vim/Vi"
