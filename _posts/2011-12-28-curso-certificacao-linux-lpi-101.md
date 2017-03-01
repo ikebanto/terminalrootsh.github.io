@@ -11,11 +11,11 @@ twitter_text: "Curso Certificação Linux LPI-101: Comandos do editor de texto V
 introduction: "O vim é um dos editores de textos mais utilizados no mundo Unix."
 ---
 
-![Comandos do editor de texto Vim/Vi](/assets/img/editores/vi-vim.png "Comandos do editor de texto Vim/Vi")
+![Comandos do editor de texto Vim Vi](/assets/img/editores/vi-vim.png "Comandos do editor de texto Vim Vi")
 
 ##Introdução
 
-> "[vi](https://cse.google.com.br/cse/publicurl?cx=004473188612396442360:qs2ekmnkweq&q=vim)" é a sigla para "Visual Interface". A origem desse nome se deve ao seguinte fato: quando o vi foi criado (começo da década de 80), não era comum existirem [editores de textos](https://cse.google.com.br/cse/publicurl?cx=004473188612396442360:qs2ekmnkweq&q=editores de textos) como nos dias de hoje. Naquela época, você digitava um texto mas não podia vê-lo! Isso mesmo! Em 1992, foi criado o vim (__Vi IMitator__), um clone fiel ao vi, porém com muitas outras funcionaliades, que só foram sendo adicionadas. Algum tempo depois, o vim passou a ser chamado de `__Vi IMproved__' (*vi melhorado*).
+> [vi](https://cse.google.com.br/cse/publicurl?cx=004473188612396442360:qs2ekmnkweq&q=vim) é a sigla para "Visual Interface". A origem desse nome se deve ao seguinte fato: quando o vi foi criado (começo da década de 80), não era comum existirem [editores de textos](https://cse.google.com.br/cse/publicurl?cx=004473188612396442360:qs2ekmnkweq&q=editores de textos) como nos dias de hoje. Naquela época, você digitava um texto mas não podia vê-lo! Isso mesmo! Em 1992, foi criado o vim (__Vi IMitator__), um clone fiel ao vi, porém com muitas outras funcionaliades, que só foram sendo adicionadas. Algum tempo depois, o vim passou a ser chamado de `__Vi IMproved__' (*vi melhorado*).
 
 O vim é um dos editores de textos mais utilizados no mundo [Unix](http://www.terminalroot.com.br/tags#unix). Em alguns sistemas, existe um link simbólico (__/bin/vi__) apontando para o /usr/vim. Em outros, o /bin/vi é o executável, só que executa diretamente o vim. Muita gente acha que usa vi, mas na verdade utiliza o vim, e eles têm algumas diferenças. O que você verá abaixo fala sobre o vim.
 
