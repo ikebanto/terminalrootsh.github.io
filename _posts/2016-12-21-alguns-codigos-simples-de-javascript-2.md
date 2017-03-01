@@ -1,20 +1,18 @@
 ---
 layout: post
-title: "10 códigos úteis de JavaScript #2"
+title: "10 códigos úteis de JavaScript 2"
 date: 2016-12-21 20:15:17
 image: '/assets/img/js-imgs/js.jpg'
-description: "Alguns códigos simples de JavaScript #2"
+description: "Comandos prontos pra copiar e colar!"
 main-class: 'html'
 color: '#de4508'
 tags:
-categories:
-twitter_text: "Alguns códigos simples de JavaScript #2"
-introduction: "Alguns códigos simples de JavaScript #2"
+- javascript
+twitter_text: "Alguns códigos simples de JavaScript 2"
+introduction: "Comandos prontos pra copiar e colar!"
 ---
 
-<div style="text-align: center;">
-<img src="/assets/img/js-imgs/js.jpg" alt="blog linux" title="blog linux" />
-</div>
+![Javascript Linux](/assets/img/js-imgs/js.jpg "JavaScript Linux") 
 
 1 - Gerar um relógio em tempo real
 {% highlight js %}
