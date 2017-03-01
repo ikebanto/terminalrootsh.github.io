@@ -18,7 +18,7 @@ introduction: "Na verdade existem muito mais reprodutores de áudio para Debian 
 
 ### 1 - Audacious
 ![Blog Linux](/assets/img/audio/audacious.jpg "Blog Linux")
-[Audacious](audacious-media-player.org/) é um tocador de mídia livre com foco em baixa utilização de recursos, alta qualidade de áudio e suporte a uma ampla variedade de formatos.
+[Audacious](http://audacious-media-player.org/) é um tocador de mídia livre com foco em baixa utilização de recursos, alta qualidade de áudio e suporte a uma ampla variedade de formatos.
 
 Para instalar o Audacious
 {% highlight bash %}
@@ -81,7 +81,7 @@ apt-get install amarok
 
 ### 6 -Banshee
 ![Blog Linux](/assets/img/audio/banshee.png "Blog Linux")
-[Banshee](banshee.fm) é um reprodutor de mídia de código aberto, originalmente chamado Sonance até 2005.Construído sobre o Mono e Gtk, usa a plataforma multimedia Helix e GStreamer para codificação e decodificação de vários formatos de mídia, incluindo Ogg Vorbis, MP3 e FLAC. O Banshee pode reproduzir e importar CD de audio e suporta muitos reprodutores de mídia portáteis, incluindo iPod da Apple, dispositivos Android e reprodutores ZEN da Creative's.Outros recursos incluem integração com o Last.fm, busca de artes de capas, listas de reprodução espertas e suporte a podcast. O Banshee foi lançado sobre os termos da Licença MIT.
+[Banshee](http://banshee.fm) é um reprodutor de mídia de código aberto, originalmente chamado Sonance até 2005.Construído sobre o Mono e Gtk, usa a plataforma multimedia Helix e GStreamer para codificação e decodificação de vários formatos de mídia, incluindo Ogg Vorbis, MP3 e FLAC. O Banshee pode reproduzir e importar CD de audio e suporta muitos reprodutores de mídia portáteis, incluindo iPod da Apple, dispositivos Android e reprodutores ZEN da Creative's.Outros recursos incluem integração com o Last.fm, busca de artes de capas, listas de reprodução espertas e suporte a podcast. O Banshee foi lançado sobre os termos da Licença MIT.
 
 Para instalar o Banshee
 {% highlight bash %}
@@ -109,7 +109,7 @@ cmus
 ### 8 - mp3blaster
 ![Blog Linux](/assets/img/audio/mp3blaster.jpg "Blog Linux")
 
-[mp3blaster](mp3blaster.sourceforge.net/) é um reprodutor de áudio usado pelo Shell no Terminal, tem menus, opções de reprodução, controle de volume, mixer, consome recursos mínimos do sistema. Disponível para Linux, Unix e Mac OS X.
+[mp3blaster](http://mp3blaster.sourceforge.net/) é um reprodutor de áudio usado pelo Shell no Terminal, tem menus, opções de reprodução, controle de volume, mixer, consome recursos mínimos do sistema. Disponível para Linux, Unix e Mac OS X.
 
 Para instalar o mp3blaster
 {% highlight bash %}
