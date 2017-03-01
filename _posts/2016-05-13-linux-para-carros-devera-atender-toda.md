@@ -11,7 +11,7 @@ twitter_text: "Linux para carros deverá atender toda a indústria automotiva"
 introduction: "Automotive Grade Linux poderia ser a resposta ao cenário fragmentado e, muitas vezes, frustrante dos atuais sistemas operacionais automotivos."
 ---
 
-![Blog_Linux Carros](/assets/img/linux/linux_carro.jpg "Linux Carros")
+![Blog Linux Carros](/assets/img/linux/linux_carro.jpg "Linux Carros")
 
 # A plataforma open-source
 
