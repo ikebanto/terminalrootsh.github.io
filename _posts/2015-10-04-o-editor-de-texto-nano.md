@@ -124,9 +124,7 @@ Para colar o texto em outro local dentro do arquivo, posicione o cursor no desti
 
 ## Existem muitos mais comandos para usar no Nano.
 
-#### Para ver a lista de comandos, use o comando *CTRL+G*
-
-#### Ou use o manual do [Nano](https://cse.google.com.br/cse/publicurl?cx=004473188612396442360:qs2ekmnkweq&q=nano)
+#### Use o manual do [Nano](https://cse.google.com.br/cse/publicurl?cx=004473188612396442360:qs2ekmnkweq&q=nano)
 
 {% highlight bash %}
 man nano
