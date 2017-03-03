@@ -91,7 +91,9 @@ Alt + g <número da linha, [número da coluna]>
 Levar o *cursor* para o início e para o final do documento
 
 > Para o início: __Alt + \ __
+
 ***
+
 > Para o final: __Alt + /__
 
 1. Selecionar texto (região) para copiar ou recortar trechos de texto
