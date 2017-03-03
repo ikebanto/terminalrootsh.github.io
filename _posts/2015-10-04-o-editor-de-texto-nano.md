@@ -97,7 +97,7 @@ Levar o *cursor* para o início e para o final do documento
 
 Primeiramente, posicione o cursor no local a partir de onde o texto desejado será selecionado (a seleção pode ser feita tanto para frente quanto para trás)
 
-Pressionar a combinação de teclas __Alt + a__ para ativar a marcação de textos (modo de seleção)
+Pressionar a combinação de teclas __Alt + A__ para ativar a marcação de textos (modo de seleção)
 
 Efetuar a seleção usando as setas de direção do teclado.
 
@@ -105,21 +105,10 @@ Efetuar a seleção usando as setas de direção do teclado.
 
 Após selecionar o texto desejado como mostrado no item 1, pressione agora a combinação de teclas __Alt + 6__ para copiar o conteúdo selecionado para o buffer de transferência.
 
-Para colar o texto em outro local dentro do arquivo, posicione o cursor no destino e use a combinação __Ctrl +u__
+Para colar o texto em outro local dentro do arquivo, posicione o cursor no destino e use a combinação __Ctrl + U__
 
 
-
-## Existem muitos mais comandos para usar no Nano.
-
-### Para ver a lista de comandos, use o comando > *CTRL+G*
-
-Ou use o manual do [Nano](https://cse.google.com.br/cse/publicurl?cx=004473188612396442360:qs2ekmnkweq&q=nano)
-
-{% highlight bash %}
-man nano
-{% endhighlight %}
-
-## Algumas opções do comando
+## Mais algumas opções do comando
 
 > __-B (--backup)__ : quando salva um arquivo, faz um backup da versão anterior dele com o nome do arquivo atual acrescido do sufixo ~.
 > __-V (--version)__ : exibe dados da versão atual e encerra.
@@ -129,6 +118,16 @@ man nano
 > __-v (--view)__ : abre arquivo apenas para leitura.
 > __-w (--nowrap)__ : desabilita a quebra de linhas longas.
 > __-x (--nohelp)__ : desabilita a tela de ajuda que é exibida no rodapé do editor.
+
+## Existem muitos mais comandos para usar no Nano.
+
+###### Para ver a lista de comandos, use o comando *CTRL+G*
+
+###### Ou use o manual do [Nano](https://cse.google.com.br/cse/publicurl?cx=004473188612396442360:qs2ekmnkweq&q=nano)
+
+{% highlight bash %}
+man nano
+{% endhighlight %}
 
 
 ![Blog Linux](/assets/img/editores/editor-gnu-nano3.png "Blog Linux")
