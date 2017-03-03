@@ -83,6 +83,7 @@ nano -v arq1
 {% endhighlight %}
 
 Ir para uma linha e coluna específicas com o arquivo já aberto(*O número da coluna é opcional.*)
+
 {% highlight bash %}
 Alt + g <número da linha, [número da coluna]>
 {% endhighlight %}
@@ -113,7 +114,8 @@ Para colar o texto em outro local dentro do arquivo, posicione o cursor no desti
 ### Para ver a lista de comandos, use o comando > *CTRL+G*
 
 Ou use o manual do [Nano](https://cse.google.com.br/cse/publicurl?cx=004473188612396442360:qs2ekmnkweq&q=nano)
-% highlight bash %}
+
+{% highlight bash %}
 man nano
 {% endhighlight %}
 
