@@ -89,7 +89,7 @@ Alt + g <número da linha, [número da coluna]>
 {% endhighlight %}
 
 Levar o *cursor* para o início e para o final do documento
-> Para o início: __Alt + \__
+> Para o início: __Alt + \ __
 ---
 > Para o final: __Alt + /__
 
