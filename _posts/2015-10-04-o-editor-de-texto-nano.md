@@ -96,7 +96,7 @@ Levar o *cursor* para o início e para o final do documento
 
 > Para o final: __Alt + /__
 
-1. Selecionar texto (região) para copiar ou recortar trechos de texto
++ 1. Selecionar texto (região) para copiar ou recortar trechos de texto
 
 Primeiramente, posicione o cursor no local a partir de onde o texto desejado será selecionado (a seleção pode ser feita tanto para frente quanto para trás)
 
@@ -104,7 +104,7 @@ Pressionar a combinação de teclas __Alt + A__ para ativar a marcação de text
 
 Efetuar a seleção usando as setas de direção do teclado.
 
-2. Copiar região (texto) para buffer de transferência
++ 2. Copiar região (texto) para buffer de transferência
 
 Após selecionar o texto desejado como mostrado no item 1, pressione agora a combinação de teclas __Alt + 6__ para copiar o conteúdo selecionado para o buffer de transferência.
 
