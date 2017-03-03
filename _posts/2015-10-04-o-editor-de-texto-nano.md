@@ -134,6 +134,6 @@ man nano
 ![Blog Linux](/assets/img/editores/editor-gnu-nano3.png "Blog Linux")
 
 
-<sub>
+<sub style="color: #666;">
 http://www.vivaolinux.com.br/artigo/Introducao-ao-Linux-O-editor-de-texto-Nano http://www.bosontreinamentos.com.br/linux/15-exemplos-de-uso-do-editor-de-textos-nano-no-linux/ http://www.uniriotec.br/~morganna/guia/nano.html
 </sub>
