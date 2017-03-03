@@ -12,7 +12,9 @@ tags:
 twitter_text: "O editor de texto Nano"
 introduction: "Nano é um editor que deve ser executado a partir de um terminal, e se concentra em simplicidade."
 ---
+
 ![Nano Editor Blog Linux](/assets/img/editores/nano-editor.png "Nano Editor Blog Linux")
+
 [Nano](http://www.nano-editor.org/) é um editor que deve ser executado a partir de um terminal, e se concentra em simplicidade. Nano é um clone do antigo  editor de texto Pico, o editor para o cliente de e-mail Pine, que foi muito popular lá pelos anos 90, em [UNIX](https://cse.google.com.br/cse/publicurl?cx=004473188612396442360:qs2ekmnkweq&q=unix) e sistemas do tipo UNIX. O Pine foi substituído pelo Alpine e o Pico pelo Nano, mas algumas coisas não mudaram - assim como a simplicidade de edição com o Nano.
 
 Caso você não possua o Nano, utilize o seu gerenciador de pacotes para instalar, ele está na maioria dos repositórios da [Distros](https://cse.google.com.br/cse/publicurl?cx=004473188612396442360:qs2ekmnkweq&q=distros)
