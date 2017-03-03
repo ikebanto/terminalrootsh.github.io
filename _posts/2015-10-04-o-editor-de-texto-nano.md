@@ -110,14 +110,14 @@ Para colar o texto em outro local dentro do arquivo, posicione o cursor no desti
 
 ## Mais algumas opções do comando
 
-> __-B (--backup)__ : quando salva um arquivo, faz um backup da versão anterior dele com o nome do arquivo atual acrescido do sufixo ~.
-> __-V (--version)__ : exibe dados da versão atual e encerra.
-> __-c (--const)__ : exibe a posição do cursor (linha, coluna e caracter) constantemente.
-> __-h (--help)__ : exibe o sumário das opções de linha de comando e encerra.
-> __-m (--mouse)__ : habilita suporte ao mouse, caso esteja disponível no sistema. O mouse pode ser usado para posicionar o cursor, selecionar e executar atalhos.
-> __-v (--view)__ : abre arquivo apenas para leitura.
-> __-w (--nowrap)__ : desabilita a quebra de linhas longas.
-> __-x (--nohelp)__ : desabilita a tela de ajuda que é exibida no rodapé do editor.
+* __-B (--backup)__ : quando salva um arquivo, faz um backup da versão anterior dele com o nome do arquivo atual acrescido do sufixo ~.
+* __-V (--version)__ : exibe dados da versão atual e encerra.
+* __-c (--const)__ : exibe a posição do cursor (linha, coluna e caracter) constantemente.
+* __-h (--help)__ : exibe o sumário das opções de linha de comando e encerra.
+* __-m (--mouse)__ : habilita suporte ao mouse, caso esteja disponível no sistema. O mouse pode ser usado para posicionar o cursor, selecionar e executar atalhos.
+* __-v (--view)__ : abre arquivo apenas para leitura.
+* __-w (--nowrap)__ : desabilita a quebra de linhas longas.
+* __-x (--nohelp)__ : desabilita a tela de ajuda que é exibida no rodapé do editor.
 
 ## Existem muitos mais comandos para usar no Nano.
 
