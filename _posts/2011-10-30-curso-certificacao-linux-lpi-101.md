@@ -4,6 +4,7 @@ title: 'Curso Certificação Linux LPI-101: Instalando o GNU/Linux Debian'
 date: '2011-10-30T09:00:00.000-07:00'
 image: '/assets/img/debian/debian.png'
 description: "Vídeo demonstrativo."
+main-class: 'linux'
 tags:
 - Debian
 - Linux
