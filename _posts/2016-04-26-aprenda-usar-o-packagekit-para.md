@@ -84,7 +84,7 @@ man pkexec
 
 ![Blog Linux](/assets/img/dev//pkexec-nautilus-gnome-shell.png "Blog Linux")
 
-#Extras
+# Extras
 
 ## OpenMoko
 
