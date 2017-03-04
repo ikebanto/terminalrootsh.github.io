@@ -95,6 +95,7 @@ __Manual do PackageKit:__ https://packagekit.freedesktop.org/
 __Screenshots do PackageKit:__ https://packagekit.freedesktop.org/pk-screenshots.html
 __Características do PackageKit no Debian:__ https://wiki.debian.org/PackageKit
 __Características do PackageKit no Fedora:__ https://fedoraproject.org/wiki/Features/PackageKit
+
 __Manual do PackageKit pelo GNOME:__ https://help.gnome.org/users/gnome-packagekit/stable/
 
 ![Blog Linux](/assets/img/dev/system.png "Blog Linux")
