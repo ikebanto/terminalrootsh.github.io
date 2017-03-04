@@ -13,39 +13,39 @@ introduction: "Vídeo demonstrativo."
 
 ![Como instalar o GNU/Linux Debian 8 Jessie](/assets/img/debian/debian.png "Como instalar o GNU/Linux Debian 8 Jessie")
 
-> ▶ Foram explicados diversos itens da instalação, como:
-> 
-> ✔ MD5sum
+### ▶ Foram explicados diversos itens da instalação, como:
+ 
+__✔ MD5sum__
 
-> ✔ Qual a diferença entre 32 e 64 bits
+__✔ Qual a diferença entre 32 e 64 bits__
 
-> ✔ ISOLINUX
+__✔ ISOLINUX__
 
-> ✔ Expert Install
+__✔ Expert Install__
 
-> ✔ PCMCIA
+__✔ PCMCIA__
 
-> ✔ Automated Install
+__✔ Automated Install__
 
-> ✔ Speech Synthesis
+__✔ Speech Synthesis__
 
-> ✔ Área de Troca ( SWAP )
+__✔ Área de Troca ( SWAP )__
 
-> ✔ RAID
+__✔ RAID__
 
-> ✔ LVM
+__✔ LVM__
 
-> ✔ iSCSI
+__✔ iSCSI__
 
-> ✔ Sistema de Arquivos
+__✔ Sistema de Arquivos__
 
-> ✔ Partições Primária e Lógica
+__✔ Partições Primária e Lógica__
 
-> ✔ O que é Flag inicializável
+__✔ O que é Flag inicializável__
 
-> ✔ Blocos , Rótulos , ... entre outros!
-> 
-> ♛ INSCREVA-SE NESSE CANAL : [Terminal Root TV](https://www.youtube.com/TerminalRootTV)
+__✔ Blocos , Rótulos , ... entre outros!__
+
+### ♛ INSCREVA-SE NESSE CANAL : [Terminal Root TV](https://www.youtube.com/TerminalRootTV)
 
 
 # Assista o Vídeo
