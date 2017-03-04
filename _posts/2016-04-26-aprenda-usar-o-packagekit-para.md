@@ -14,7 +14,7 @@ introduction: "PackageKit é um sistema projetado para fazer a instalação e at
 ---
 ![Blog Linux](/assets/img/dev/package-kit.jpg "Blog Linux")
 
-##O que é PackageKit?
+## O que é PackageKit?
 
 [PackageKit](https://packagekit.freedesktop.org/) é um sistema projetado para fazer a instalação e atualização de software no seu computador mais fácil. O principal objetivo do projeto é unificar todas as ferramentas gráficas de software utilizados em diferentes distribuições, e usar algumas das mais recentes tecnologias, como *PolicyKit*.
 
@@ -22,11 +22,11 @@ introduction: "PackageKit é um sistema projetado para fazer a instalação e at
 
 O cenário atual quanto ao gerenciamento de pacotes no [Linux](http://www.terminalroot.com.br/tags#linux) é bastante preocupante, pois devido a divergências de filosofia, licença ou finalidade de uma [distribuição Linux](http://www.terminalroot.com.br/tags#distros), várias são as ferramentas implementadas para gerenciamento de pacotes, como por exemplo o apt, rpm, conary, portage.
 
-O PackageKit não é uma ferramenta que surgiu para substituir estas formas de gerenciamento, mas, criar uma camada de abstração acima delas, provendo uma interface gráfica padrão para melhor gerenciamento gráfico dos softwares.
+> O PackageKit não é uma ferramenta que surgiu para substituir estas formas de gerenciamento, mas, criar uma camada de abstração acima delas, provendo uma interface gráfica padrão para melhor gerenciamento gráfico dos softwares.
 
 ![Blog Linux](/assets/img/dev/gpk-updates-overview.png "Blog Linux")
 
-Os casos de uso para o PackageKit existem para os seguintes cenários
+Os casos de uso para o __PackageKit__ existem para os seguintes cenários
 
 * atualizações de segurança de tempo de inicialização 
 * Instalando arquivos automaticamente, por exemplo, o OpenOffice-clipart 
@@ -39,9 +39,9 @@ Os casos de uso para o PackageKit existem para os seguintes cenários
 * Voltada para uma arquitetura ou plataforma particular.
 * Produzido por qualquer fornecedor.
  
-Formalmente, PackageKit é uma camada de abstração de D-Bus que permite que o usuário da sessão para gerenciar pacotes de uma forma segura, utilizando um cross-distro, cross-arquitetura API.
+Formalmente, PackageKit é uma camada de abstração de __D-Bus__ que permite que o usuário da sessão para gerenciar pacotes de uma forma segura, utilizando um cross-distro, cross-arquitetura API.
 
- O _pkcon_ programa em modo de texto permite que você interaja com o PackageKit na linha de comando.
+ O __pkcon__ programa em modo de texto permite que você interaja com o PackageKit na linha de comando.
  
  Por exemplo:
  
