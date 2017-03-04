@@ -91,10 +91,10 @@ man pkexec
 OpenMoko é um projeto para a criação de uma plataforma smartphone/GSM aberta, seguindo a filosofia FLOSS. Esta plataforma funciona sobre Linux e usa o sistema de gestão de pacotes ipkg.
 
 ### Links Úteis
-Manual do PackageKit: https://packagekit.freedesktop.org/
-Screenshots do PackageKit: https://packagekit.freedesktop.org/pk-screenshots.html
-Características do PackageKit no Debian: https://wiki.debian.org/PackageKit
-Características do PackageKit no Fedora: https://fedoraproject.org/wiki/Features/PackageKit
-Manual do PackageKit pelo GNOME: https://help.gnome.org/users/gnome-packagekit/stable/
+__Manual do PackageKit:__ https://packagekit.freedesktop.org/
+__Screenshots do PackageKit:__ https://packagekit.freedesktop.org/pk-screenshots.html
+__Características do PackageKit no Debian:__ https://wiki.debian.org/PackageKit
+__Características do PackageKit no Fedora:__ https://fedoraproject.org/wiki/Features/PackageKit
+__Manual do PackageKit pelo GNOME:__ https://help.gnome.org/users/gnome-packagekit/stable/
 
 ![Blog Linux](/assets/img/dev/system.png "Blog Linux")
