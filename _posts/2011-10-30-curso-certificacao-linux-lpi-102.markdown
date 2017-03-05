@@ -22,7 +22,7 @@ table.tb, tr, td {border: 1px solid silver; max-width: 300px; font-size:11px;}
 .c {color:#ccc; font-weight:bold; font-size:10px;}
 td {padding:5px;}
 .main {background:#ddd;}
-fieldset {margin-bottom:10px; width:290px; font-size:11px;}
+fieldset {margin-bottom:10px; width:270px; font-size:11px;}
 legend {color: #3465a4;}
 
 @media screen and (max-width:350px){
