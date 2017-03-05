@@ -24,7 +24,7 @@ fieldset {margin-bottom:10px; width:800px; font-weight:bold;}
 
 <p>
 <fieldset>
- <legend>MySQL</legend>
+ <legend>MySQLi</legend>
 
   é um sistema de gerenciamento de banco de dados (SGBD), que utiliza a linguagem SQL (Linguagem de Consulta Estruturada, do inglês Structured Query Language) como interface. É atualmente um dos bancos de dados mais populares, com mais de 10 milhões de instalações pelo mundo. 
 </fieldset>
@@ -35,17 +35,6 @@ fieldset {margin-bottom:10px; width:800px; font-weight:bold;}
   <td class="main"><b>Ação</b></td>
   <td class="main"><b>Comando</b></td>
  </tr>
-
-
-<!--
-
- <tr>
-  <td class="a"></td>
-  <td><code></td>
- </tr>
-
--->
-
 
  <tr>
   <td class="a">Instalação do MySQL, <span class="c"><br />Obs.:Instala o Servidor<br />(O Banco de guardar dados)<br /> e o Cliente(Poder <br />acessá-lo pelo <br />PHP, por exemplo)</span></td>
