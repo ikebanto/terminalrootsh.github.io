@@ -20,6 +20,7 @@ tags:
 	div.haha {max-width: 300px; text-align: center; margin: auto;}
 	fieldset {margin-bottom:10px; width:290px; font-weight:bold;}
 	table {width:300px;}
+	legend {color: red;}
 
 }
 
