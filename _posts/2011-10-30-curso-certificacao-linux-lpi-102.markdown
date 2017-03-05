@@ -26,6 +26,7 @@ fieldset {margin-bottom:10px; width:270px; font-size:11px;}
 legend {color: #3465a4;}
 
 @media screen and (max-width:350px){
+/*
 div.haha {max-width: 700px; text-align: center; margin: auto;}
 .a {color:#333; font-weight:bold;}
 .b {color:#999; font-family:sans-serif}
@@ -33,6 +34,7 @@ div.haha {max-width: 700px; text-align: center; margin: auto;}
 td {padding:5px;}
 .main {background:#ddd;}
 fieldset {margin-bottom:10px; width:690px; font-weight:bold;}
+*/
 }
 
 
