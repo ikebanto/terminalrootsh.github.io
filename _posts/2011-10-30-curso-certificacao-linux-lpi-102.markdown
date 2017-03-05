@@ -16,11 +16,11 @@ tags:
 <style>
 
 div.haha {max-width: 300px; text-align: center; margin: auto;}
-table.tb, tr, td {border: 1px solid silver; max-width: 300px; font-size:11px;}
+table.tb, tr, td {border: 1px solid silver; max-width: 270px; font-size:11px;}
 .a {color:#333; font-weight:bold;}
 .b {color:#999; font-family:sans-serif}
 .c {color:#ccc; font-weight:bold; font-size:10px;}
-td {padding:5px;}
+td {padding:1px;}
 .main {background:#ddd;}
 fieldset {margin-bottom:10px; width:270px; font-size:11px;}
 legend {color: #3465a4;}
