@@ -22,12 +22,14 @@ td {padding:5px;}
 fieldset {margin-bottom:10px; width:800px; font-weight:bold;}
 </style>
 
+<p>
 <fieldset>
  <legend>MySQL</legend>
- <p>
-  é um sistema de gerenciamento de banco de dados (SGBD), que utiliza a linguagem SQL (Linguagem de Consulta Estruturada, do inglês Structured Query Language) como interface. É atualmente um dos bancos de dados mais populares, com mais de 10 milhões de instalações pelo mundo.
- </p>
+
+  é um sistema de gerenciamento de banco de dados (SGBD), que utiliza a linguagem SQL (Linguagem de Consulta Estruturada, do inglês Structured Query Language) como interface. É atualmente um dos bancos de dados mais populares, com mais de 10 milhões de instalações pelo mundo. 
 </fieldset>
+</p>
+
 <table border="1">
  <tr>
   <td class="main"><b>Ação</b></td>
