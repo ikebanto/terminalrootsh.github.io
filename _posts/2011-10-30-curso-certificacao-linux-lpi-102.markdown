@@ -16,13 +16,13 @@ tags:
 <style>
 
 div.haha {max-width: 300px; text-align: center; margin: auto;}
-table.tb, tr, td {border: 1px solid silver; max-width: 270px; font-size:11px;}
+table.tb, tr, td {border: 1px solid silver; max-width: 270px; font-size:9px;}
 .a {color:#333; font-weight:bold;}
 .b {color:#999; font-family:sans-serif}
-.c {color:#ccc; font-weight:bold; font-size:10px;}
+.c {color:#ccc; font-weight:bold; font-size:9px;}
 td {padding:1px;}
 .main {background:#ddd;}
-fieldset {margin-bottom:10px; width:270px; font-size:11px;}
+fieldset {margin-bottom:10px; width:270px; font-size:9px;}
 legend {color: #3465a4;}
 
 @media screen and (max-width:350px){
