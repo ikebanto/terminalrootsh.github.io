@@ -27,14 +27,14 @@ Caso deseje certificar-se de que o módulo já está carregado, basta verificar 
 Logue-se como root , se não possuir o sudo.
 
 {% highlight bash %}
-$ su
+su
 {% endhighlight %}
 
 {% highlight bash %}
 nano /etc/apache2/mods-available/cgi.load
 {% endhighlight %}
 
-Certifique-se também de que já está habilitado
+Certifique-se também de que já está __habilitado__
 {% highlight bash %}
 nano /etc/apache2/mods-enabled/cgi.load
 {% endhighlight %}
@@ -86,7 +86,32 @@ chmod a+x /usr/lib/cgi-bin/teste.cgi
 {% endhighlight %}
 
 Arquivo __teste.cgi__
-<p><script src="https://gist.github.com/terminalrootsh/394912261766440e7db9.js"></script></p>
+{% highlight bash %}
+#!/bin/bash
+  
+echo "content-type: text/html"
+echo
+echo
+echo "
+  <html> <head> <meta charset='utf-8' /> <title> CGI script </title> </head>
+  <body>
+  <h1>Algumas informações sobre a máquina que o CGI está rodando:</h1>
+  "
+  
+echo "<h4>uptime</h4>"
+echo "<pre>$(uptime)</pre>"
+  
+echo "<h4>uname</h4>"
+echo "<pre>$(uname -a)</pre>"
+  
+echo "<h4>/proc/cpuinfo</h4>"
+echo "<pre>$(cat /proc/cpuinfo)</pre>"
+  
+echo "
+  </body>
+  </html>
+  "
+{% endhighlight %}
  
 # Qualquer dúvida, é só comentar.
 ## Abraços.
