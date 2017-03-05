@@ -28,12 +28,14 @@ legend {color: #3465a4;}
 @media screen and (min-width:450px){
 
 div.haha {max-width: 700px; text-align: center; margin: auto;}
+table.tb, tr, td {border: 1px solid silver; max-width: 690px; font-size:15px;}
 .a {color:#333; font-weight:bold;}
 .b {color:#999; font-family:sans-serif}
-.c {color:#ccc; font-weight:bold; font-size:10px;}
+.c {color:#ccc; font-weight:bold; font-size:15px;}
 td {padding:5px;}
 .main {background:#ddd;}
 fieldset {margin-bottom:10px; width:690px; font-weight:bold;}
+
 
 }
 
