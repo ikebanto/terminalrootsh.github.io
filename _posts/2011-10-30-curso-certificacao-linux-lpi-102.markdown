@@ -38,22 +38,22 @@ fieldset {margin-bottom:10px; width:800px; font-weight:bold;}
  </tr>
 
  <tr>
-  <td class="a">Instalação do MySQL, <span class="c"><br />Obs.:Instala o Servidor<br />(O Banco de guardar dados)<br /> e o Cliente(Poder <br />acessá-lo pelo <br />PHP, por exemplo)</span></td>
+  <td class="a">Instalação do MySQL, <br />Obs.:Instala o Servidor<br />(O Banco de guardar dados)<br /> e o Cliente(Poder <br />acessá-lo pelo <br />PHP, por exemplo)</td>
   <td>sudo apt-get install mysql-servidor mysql-client</td>
  </tr>
 
  <tr>
-  <td class="a">Logar no MySQL<span class="c"><br />-h é o host<br />-u usuario<br />-p exige senha</span></td>
+  <td class="a">Logar no MySQL<br />-h é o host<br />-u usuario<br />-p exige senha</td>
   <td>mysql -h localhost -u root -p;</td>
  </tr>
 
  <tr>
-  <td class="a">Saindo do MySQL<br /><span class="c">Obs.:pode usar quit; também</span></td>
+  <td class="a">Saindo do MySQL<br />Obs.:pode usar quit; também</td>
   <td>exit;</td>
  </tr>
 
  <tr>
-  <td class="a">Logar no MySQL<br />direto no Banco<br /><span class="c">-D escolhe o banco</span></td>
+  <td class="a">Logar no MySQL<br />direto no Banco<br />-D escolhe o banco</td>
   <td>mysql -D banco -h localhost -u root -p;</td>
  </tr>
 
@@ -63,7 +63,7 @@ fieldset {margin-bottom:10px; width:800px; font-weight:bold;}
  </tr>
 
  <tr>
-  <td class="a">Criando uma tabela<br /><span class="c">Exemplo:ordem de tipo, unsigned...</span></td>
+  <td class="a">Criando uma tabela<br />Exemplo:ordem de tipo, unsigned...</td>
   <td>CREATE TABLE tabela(id INT UNSIGNED NOT NULL AUTO_INCREMENT PRIMARY KEY, campo2 TEXT NOT NULL, campo3 CHAR(10) NOT NULL);</td>
  </tr>
 
@@ -73,12 +73,12 @@ fieldset {margin-bottom:10px; width:800px; font-weight:bold;}
  </tr>
 
  <tr>
-  <td class="a">Apagando uma tabela<br /><span class="c">Deletando uma tabela</td>
+  <td class="a">Apagando uma tabela<br />Deletando uma tabela</td>
   <td>DROP TABLE tabela;</td>
  </tr>
 
  <tr>
-  <td class="a">Apagando um banco<br /><span class="c">deletando um banco de dados</span></td>
+  <td class="a">Apagando um banco<br />deletando um banco de dados</td>
   <td>DROP DATABASE banco;</td>
  </tr>
 
@@ -98,12 +98,12 @@ fieldset {margin-bottom:10px; width:800px; font-weight:bold;}
  </tr>
 
  <tr>
-  <td class="a">Criando usuarios com<br />todos os privilegios<br /><span class="c">tem de selecionar o banco de dados antes<br />è preciso usar o comando FLUSH PRIVILEGES<br /> depois para as alterações terem efeitos</td>
+  <td class="a">Criando usuarios com<br />todos os privilegios<br />tem de selecionar o banco de dados antes<br />è preciso usar o comando FLUSH PRIVILEGES<br /> depois para as alterações terem efeitos</td>
   <td>GRANT ALL PRIVILEGES ON *.* TO usuario@host IDENTIFIED BY 'senha' WITH GRANT OPTION;</td>
  </tr>
 
  <tr>
-  <td class="a">Criando usuarios<br />sem privilegios<br /><span class="c">tem de selecionar o banco de dados antes<br />è preciso usar o comando FLUSH PRIVILEGES<br /> depois para as alterações terem efeitos</td>
+  <td class="a">Criando usuarios<br />sem privilegios<br />tem de selecionar o banco de dados antes<br />è preciso usar o comando FLUSH PRIVILEGES<br /> depois para as alterações terem efeitos</td>
   <td>GRANT USAGE PRIVILEGES ON *.* TO usuario@host IDENTIFIED BY 'senha' WITH GRANT OPTION;</td>
  </tr>
 
@@ -118,7 +118,7 @@ fieldset {margin-bottom:10px; width:800px; font-weight:bold;}
  </tr>
 
  <tr>
-  <td class="a">Alterando um campo<br />de uma tabela<br /><span class="c">Exemplo caso seja um campo numérico:<br /> update dados set idade=idade+1 where dadosid=6;</td>
+  <td class="a">Alterando um campo<br />de uma tabela<br />Exemplo caso seja um campo numérico:<br /> update dados set idade=idade+1 where dadosid=6;</td>
   <td>UPDATE tabela SET campo_que será_alterado = novo_dado WHERE campo = referencia</td>
  </tr>
 
@@ -128,12 +128,12 @@ fieldset {margin-bottom:10px; width:800px; font-weight:bold;}
  </tr>
 
  <tr>
-  <td class="a">Inserindo uma coluna<br /> numa tabela<br /><span class="c">Coluna qualquer</td>
+  <td class="a">Inserindo uma coluna<br /> numa tabela<br />Coluna qualquer</td>
   <td>ALTER TABLE tabela ADD nova_coluna VARCHAR(20) NOT NULL AFTER coluna_existente</td>
  </tr>
 
  <tr>
-  <td class="a">Inserindo uma coluna<br /> numa tabela<br /><span class="c">Primary Keys</td>
+  <td class="a">Inserindo uma coluna<br /> numa tabela<br />Primary Keys</td>
   <td>ALTER TABLE tabela ADD nova_coluna INT UNSIGNED NOT NULL AUTO_INCREMENT PRIMARY KEY FIRST</td>
  </tr>
 
@@ -141,7 +141,7 @@ fieldset {margin-bottom:10px; width:800px; font-weight:bold;}
   <td class="a">Left Join</td>
   <td>SELECT tabela1.id, tabela1.coluna1, tabela2.coluna2
 FROM tabela1 LEFT JOIN tabela2
-ON tabela1.id = tabela2.id;<br />Exemplo:<br /><span class="c">SELECT form.id, form.nome, dados.id FROM form LEFT JOIN dados ON form.id = dados.id;
+ON tabela1.id = tabela2.id;<br />Exemplo:<br />SELECT form.id, form.nome, dados.id FROM form LEFT JOIN dados ON form.id = dados.id;
 </td>
  </tr>
 
@@ -181,7 +181,7 @@ ON tabela1.id = tabela2.id;<br />Exemplo:<br /><span class="c">SELECT form.id, f
  </tr>
 
  <tr>
-  <td class="a">Exibindo a consulta<br />por ordem alfabética<span class="c"><br />utilizar  a cláusula ASC resultaria no mesmo Exemplo: <br />SELECT t.campo FROM tabela AS<br /> t ORDER BY campo ASC;<br />Se quisesse de form decrescente, seria com DESC,<br /> exemplo:<br />SELECT t.campo FROM tabela AS <br />t ORDER BY campo DESC;</td>
+  <td class="a">Exibindo a consulta<br />por ordem alfabética<br />utilizar  a cláusula ASC resultaria no mesmo Exemplo: <br />SELECT t.campo FROM tabela AS<br /> t ORDER BY campo ASC;<br />Se quisesse de form decrescente, seria com DESC,<br /> exemplo:<br />SELECT t.campo FROM tabela AS <br />t ORDER BY campo DESC;</td>
   <td>SELECT t.campo FROM tabela AS t ORDER BY campo;</td>
  </tr>
 
@@ -201,29 +201,29 @@ ON tabela1.id = tabela2.id;<br />Exemplo:<br /><span class="c">SELECT form.id, f
  </tr>
 
  <tr>
-  <td class="a">Limitando os Resultados<br /><span class="c">Pode-se usar também de forma simplificada,Exemplo:<br />SELECT campo FROM tabela LIMIT 3;</td>
+  <td class="a">Limitando os Resultados<br />Pode-se usar também de forma simplificada,Exemplo:<br />SELECT campo FROM tabela LIMIT 3;</td>
   <td>SELECT campo FROM tabela LIMIT 3, 4;</td>
  </tr>
 
  <tr>
-  <td class="a">Fazendo SubConsultas<br /><span class="c">Os Operadores de SubConsulta são:<br />IN, SOME, ALL, ANY, EXISTS e NOT EXISTS.</td>
+  <td class="a">Fazendo SubConsultas<br />Os Operadores de SubConsulta são:<br />IN, SOME, ALL, ANY, EXISTS e NOT EXISTS.</td>
   <td>SELECT campo1, campo2 FROM formtabela1 WHERE campo2 = (SELECT MAX(campo2) FROM tabela2);</td>
  </tr>
 
  <tr>
-  <td class="a">Modificando o<br />tipo de dados<br /><span class="c">mudou de char(10) para char(15)</td>
+  <td class="a">Modificando o<br />tipo de dados<br />mudou de char(10) para char(15)</td>
   <td>ALTER TABLE tabela MODIFY campo CHAR(15) NOT NULL;</td>
  </tr>
 
  <tr>
-  <td class="a">Excluindo registros<br />do banco de dados<br /> com cuidados necessário<br /><span class="c">Analise as cláusulas do protótipo</td>
+  <td class="a">Excluindo registros<br />do banco de dados<br /> com cuidados necessário<br />Analise as cláusulas do protótipo</td>
   <td>DELETE LOW_PRIORITY QUICK IGNORE FROM tabela
 WHERE ORDER BY LIMIT;
 </td>
  </tr>
 
  <tr>
-  <td class="a">alterando a senha root<br /><span class="c">Parar o serviço do MySQL (service mysqld stop,<br /> /etc/init.d/mysqld stop, matando o processo<br /> – conforme sua distribuição);</td>
+  <td class="a">alterando a senha root<br />Parar o serviço do MySQL (service mysqld stop,<br /> /etc/init.d/mysqld stop, matando o processo<br /> – conforme sua distribuição);</td>
   <td>mysqladmin -u root password 'nova_senha'<br />mysqladmin flush-privileges<br />OU<br />UPDATE user SET Password=PASSWORD('nova_senha') WHERE User='root';<br />
 FLUSH PRIVILEGES;</td>
  </tr>
@@ -244,12 +244,12 @@ FLUSH PRIVILEGES;</td>
  </tr>
 
  <tr>
-  <td class="a">Exportando um banco de dados<br /><span class="c">ALgumas distro Linux só permite se for o usuario ROOT<br />o arquivo irá pro diretório que vc estiver no shell.<br />Ex.:/home , o arquivo será salvo na pasta home</td>
+  <td class="a">Exportando um banco de dados<br />ALgumas distro Linux só permite se for o usuario ROOT<br />o arquivo irá pro diretório que vc estiver no shell.<br />Ex.:/home , o arquivo será salvo na pasta home</td>
   <td>mysqldump -u root -p --opt BANCO &gt; arquivo.sql</td>
  </tr>
 
  <tr>
-  <td class="a">Importando um banco de dados<br /><span class="c">se vc salvar o arquivo .sql na pasta /home, vc tem de<br />conectar pelo shell locallizado nesta página.<br />Ex.:livrexpert@debian:/home$ mysql -D livrexpert -u root -p &lt; dampe.sql</td>
+  <td class="a">Importando um banco de dados<br />se vc salvar o arquivo .sql na pasta /home, vc tem de<br />conectar pelo shell locallizado nesta página.<br />Ex.:livrexpert@debian:/home$ mysql -D livrexpert -u root -p &lt; dampe.sql</td>
   <td>mysql -D BANCO_DE_DADOS -u root -p &lt; dampe.sql</td>
  </tr>
 
@@ -259,7 +259,7 @@ FLUSH PRIVILEGES;</td>
  </tr>
 
  <tr>
-  <td class="a">Tipos de tabelas<br /><span class="c">MyISAM, ISAM, MEMORY, MERGE, BDB e InnoDB</td>
+  <td class="a">Tipos de tabelas<br />MyISAM, ISAM, MEMORY, MERGE, BDB e InnoDB</td>
   <td>CREATE TABLE tabela TYPE=tipo;<br />ou<br />ALTER TABLE tabela TYPE=tipo;</td>
  </tr>
 
@@ -269,7 +269,7 @@ FLUSH PRIVILEGES;</td>
  </tr>
 
  <tr>
-  <td class="a">Inserindo dados no MySQL<br />com Encriptação SHA1<br /><span class="c">Secure Hash Algorithm 1(SHA1)<br />Message Digest 5(MD5)<br />Unix Crypt(crypt()).</td>
+  <td class="a">Inserindo dados no MySQL<br />com Encriptação SHA1<br />Secure Hash Algorithm 1(SHA1)<br />Message Digest 5(MD5)<br />Unix Crypt(crypt()).</td>
   <td>INSERT INTO auth VALUES ('teste', sha1('testesenha'));</td>
  </tr>
 
@@ -294,15 +294,15 @@ FLUSH PRIVILEGES;</td>
   <td>SELECT DISTINCT campo FROM tabela</td>
  </tr>
  <tr>
-  <td class="a">Referir a qualquer coluna <br />ou alias definido na expressão_select<br /><span class="c"> SELECT id FROM lx_dados HAVING id > 1;</td></td>
+  <td class="a">Referir a qualquer coluna <br />ou alias definido na expressão_select<br /> SELECT id FROM lx_dados HAVING id > 1;</td></td>
   <td>SELECT usuario,MAX(salario) FROM usuarios GROUP BY usuario HAVING MAX(salario)>10;</td>
  </tr>
  <tr>
-  <td class="a">Verificar onde campos são nulos<br /><span class="c">select lx_remetente, lx_assunto, lx_data from lx_tickets where lx_assunto IS NULL;</td>
+  <td class="a">Verificar onde campos são nulos<br />select lx_remetente, lx_assunto, lx_data from lx_tickets where lx_assunto IS NULL;</td>
   <td>SELECT * FROM nome_tabela WHERE auto_col IS NULL</td>
  </tr>
  <tr>
-  <td class="a">Usando a Expressão IN<br /><span class="c">select lx_data from lx_tickets where lx_remetente IN ('2');</td>
+  <td class="a">Usando a Expressão IN<br />select lx_data from lx_tickets where lx_remetente IN ('2');</td>
   <td>SELECT 'wefwf' IN (0,3,5,'wefwf');   -> 1</td>
  </tr>
  <tr>
@@ -314,11 +314,11 @@ FLUSH PRIVILEGES;</td>
   <td>SELECT (4+4)*4;</td>
  </tr>
  <tr>
-  <td class="a">Comandos múltiplos de uma só vez<br /><span class="c"> o \c cancela um comando</td>
+  <td class="a">Comandos múltiplos de uma só vez<br /> o \c cancela um comando</td>
   <td>SELECT NOW(), USER();</td>
  </tr>
  <tr>
-  <td class="a">Inserindo arquivo que contem dados<br />separados por tabulações(tab) para uma tabela<br /><span class="c">Deletando: DELETE FROM pet;<br />
+  <td class="a">Inserindo arquivo que contem dados<br />separados por tabulações(tab) para uma tabela<br />Deletando: DELETE FROM pet;<br />
   LOAD DATA LOCAL INFILE "pet.txt" INTO TABLE pet;</td>
   <td>LOAD DATA LOCAL INFILE "pet.txt" INTO TABLE pet;</td>
  </tr>
@@ -335,7 +335,7 @@ FLUSH PRIVILEGES;</td>
   <td>SELECT nome, LEFT(CURDATE(),5)-LEFT(aniversario,5) AS idade FROM estudos;</td>
  </tr>
  <tr>
-  <td class="a">Selecionado somente campos não nulos<br /><span class="c">isso é diferente de usar != NULL</td>
+  <td class="a">Selecionado somente campos não nulos<br />isso é diferente de usar != NULL</td>
   <td>SELECT * FROM tabela WHERE campo IS NOT NULL;</td>
  </tr>
  <tr>
@@ -343,11 +343,8 @@ FLUSH PRIVILEGES;</td>
   <td>SELECT MONTH(campo) FROM tabela;</td>
  </tr>
  <tr>
-  <td class="a">Expressões Regulares<br />
-                <span class="c">numeros de 3 a 8<br />palavra que começam com a letra 'b'<br />
-                SELECT * FROM tabela WHERE campo REGEXP "^b";<br />
-                Palavras que terminam com fp<br />
-                SELECT * FROM tabela WHERE campo REGEXP "fy$";</td>
+  <td class="a">Expressões Regulares<br />numeros de 3 a 8<br />palavra que começam com a letra 'b'<br />SELECT * FROM tabela WHERE campo REGEXP "^b";<br />Palavras que terminam com fp<br />SELECT * FROM tabela WHERE campo REGEXP "fy$";
+                </td>
   <td>SELECT * FROM tabela WHERE campo REGEXP "[3-8]";</td>
  </tr>
  <tr>
@@ -363,7 +360,7 @@ FLUSH PRIVILEGES;</td>
   <td>SELECT tabela1.campo1, tabela2.campo2 FROM tabela1, tabela2 WHERE campo1 IS NOT NULL</td>
  </tr>
  <tr>
-  <td class="a">Consulta Avançada<br /><span class="c">exemplo:<br />SELECT t1.nome, t2.nome <br />FROM lx_dados AS t1, lx_info AS t2 <br />WHERE t1.nome = t2.nome;</td>
+  <td class="a">Consulta Avançada<br />exemplo:<br />SELECT t1.nome, t2.nome <br />FROM lx_dados AS t1, lx_info AS t2 <br />WHERE t1.nome = t2.nome;</td>
   <td>SELECT t1.campoX, t2.campoY <br />FROM tabela1 AS t1, tabela2 AS t2 <br />WHERE t1.campoX = t2.campoY;</td>
  </tr>
  <tr>
@@ -409,19 +406,19 @@ Se você especificar para uma coluna numérica ZEROFILL, automaticamente o MySQL
   <td>SELECT PASSWORD('minha_senha');</td>
  </tr>
  <tr>
-  <td class="a">verificar se um servidor mysqld em execução suporta OpenSSL<br /><span class="c">se retornar YES está ativado, ao contrário retorna DISABLE</td>
+  <td class="a">verificar se um servidor mysqld em execução suporta OpenSSL<br />se retornar YES está ativado, ao contrário retorna DISABLE</td>
   <td>SHOW VARIABLES LIKE 'have_openssl';</td>
  </tr>
  <tr>
-  <td class="a">Criando um usuario com todos os privilegios e com suporte a SSL<br /><span class="c">a biblioteca OPENSSL tem que estar instalada</td>
+  <td class="a">Criando um usuario com todos os privilegios e com suporte a SSL<br />a biblioteca OPENSSL tem que estar instalada</td>
   <td>GRANT ALL PRIVILEGES ON *.* TO usuario@localhost IDENTIFIED BY 'senha' REQUIRE SSL;</td>
  </tr>
  <tr>
-  <td class="a">Checando e Recuperando tabelas<br /><span class="c">REPAIR só funciona em tabelas MyISAM, o myisamchk é executado no Shell(myisamchk --help)</td>
+  <td class="a">Checando e Recuperando tabelas<br />REPAIR só funciona em tabelas MyISAM, o myisamchk é executado no Shell(myisamchk --help)</td>
   <td>CHECK TABLE tabela;<br />REPAIR TABLE tabela;</td>
  </tr>
  <tr>
-  <td class="a">Optimizando e Analisando tabelas<br /><span class="c">só funciona em tabelas MyISAM</td>
+  <td class="a">Optimizando e Analisando tabelas<br />só funciona em tabelas MyISAM</td>
   <td>OPTIMIZE TABLE tabela<br />ANALYZE TABLE tabela</td>
  </tr>
  <tr>
@@ -429,17 +426,13 @@ Se você especificar para uma coluna numérica ZEROFILL, automaticamente o MySQL
   <td>/etc/init.d/mysql start<br />/etc/init.d/mysql stop<br />/etc/init.d/mysql restart</td>
  </tr>
  <tr>
-  <td class="a">Comando úteis (ver os logs, processos, privilegios, erros, avisos, tipos...)<br /><span class="c">SELECT CURRENT_USER() (mostra o usuario em uso)</td>
+  <td class="a">Comando úteis (ver os logs, processos, privilegios, erros, avisos, tipos...)<br />SELECT CURRENT_USER() (mostra o usuario em uso)</td>
   <td>SHOW BDB LOGS<br />SHOW PROCESSLIST<br />SHOW GRANTS FOR usuario@localhost;<br />SHOW WARNINGS LIMIT 10<br />SHOW ERRORS LIMIT 10<br />SHOW TABLE TYPES;<br />SHOW PRIVILEGES</td>
  </tr>
  <tr>
   <td class="a">+Comandos úteis</td>
   <td>SELECT LAST_INSERT_ID();(retorna o último ID inserido com auto_increment)<br />SELECT FORMAT(12332.4,1);(formata as casas da saida)</td>
  </tr>
- <tr>
-  <td class="a"></td>
-  <td></td>
- </tr>
-
+ 
 </table>
 </div>
