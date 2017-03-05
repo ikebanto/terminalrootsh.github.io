@@ -14,7 +14,7 @@ tags:
 ![Mysql Linux](/assets/img/mysql/mysql.png "Mysql Linux")
 
 <style>
-div#haha {max-width: 700px; text-align: center; margin: auto;}
+div.haha {max-width: 700px; text-align: center; margin: auto;}
 .a {color:#333; font-weight:bold;}
 .b {color:#999; font-family:sans-serif}
 .c {color:#ccc; font-weight:bold; font-size:10px;}
