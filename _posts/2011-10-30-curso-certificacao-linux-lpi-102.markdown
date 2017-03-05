@@ -30,7 +30,7 @@ legend {color: #3465a4;}
 
 div.haha {max-width: 700px; text-align: center; margin: auto;}
 table.tb, tr, td {border: 1px solid silver; max-width: 690px; font-size:15px;}
-.a {color:#333; font-weight:bold; font-size:15px;}
+.a {color:#204a87; font-weight:bold; font-size:15px;}
 .b {color:#999; font-family:sans-serif}
 .c {color:#ccc; font-weight:bold; font-size:15px;}
 td {padding:5px;}
