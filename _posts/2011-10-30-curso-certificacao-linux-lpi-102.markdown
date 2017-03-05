@@ -15,16 +15,16 @@ tags:
 
 <style>
 
+div.haha {max-width: 300px; text-align: center; margin: auto;}
+table.tb {border: 1px solid silver; max-width: 300px;}
+.a {color:#333; font-weight:bold;}
+.b {color:#999; font-family:sans-serif}
+.c {color:#ccc; font-weight:bold; font-size:10px;}
+td {padding:5px;}
+.main {background:#ddd;}
+fieldset {margin-bottom:10px; width:290px; font-weight:bold;}
+
 @media screen and (max-width:350px){
-
-	div.haha {max-width: 300px; text-align: center; margin: auto;}
-	fieldset {margin-bottom:10px; max-width:290px; font-weight:bold;}
-	table {max-width:300px;}
-	legend {color: red;}
-	* {font-size: 11px;}
-
-}
-
 div.haha {max-width: 700px; text-align: center; margin: auto;}
 .a {color:#333; font-weight:bold;}
 .b {color:#999; font-family:sans-serif}
@@ -32,6 +32,9 @@ div.haha {max-width: 700px; text-align: center; margin: auto;}
 td {padding:5px;}
 .main {background:#ddd;}
 fieldset {margin-bottom:10px; width:690px; font-weight:bold;}
+}
+
+
 </style>
 
 <div class="haha">
@@ -42,7 +45,7 @@ fieldset {margin-bottom:10px; width:690px; font-weight:bold;}
 </fieldset>
 
 
-<table border="1">
+<table class="tb">
  <tr>
   <td class="main"><b>Ação</b></td>
   <td class="main"><b>Comando</b></td>
