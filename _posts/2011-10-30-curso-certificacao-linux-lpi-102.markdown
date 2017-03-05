@@ -14,6 +14,7 @@ tags:
 ![Mysql Linux](/assets/img/mysql/mysql.png "Mysql Linux")
 
 <style>
+div#haha {max-width: 700px; text-align: center; margin: auto;}
 .a {color:#333; font-weight:bold;}
 .b {color:#999; font-family:sans-serif}
 .c {color:#ccc; font-weight:bold; font-size:10px;}
@@ -22,13 +23,13 @@ td {padding:5px;}
 fieldset {margin-bottom:10px; width:800px; font-weight:bold;}
 </style>
 
-<p>
+<div class="haha">
 <fieldset>
- <legend>MySQLi</legend>
+ <legend>MySQL</legend>
 
   é um sistema de gerenciamento de banco de dados (SGBD), que utiliza a linguagem SQL (Linguagem de Consulta Estruturada, do inglês Structured Query Language) como interface. É atualmente um dos bancos de dados mais populares, com mais de 10 milhões de instalações pelo mundo. 
 </fieldset>
-</p>
+
 
 <table border="1">
  <tr>
@@ -441,3 +442,4 @@ Se você especificar para uma coluna numérica ZEROFILL, automaticamente o MySQL
  </tr>
 
 </table>
+</div>
