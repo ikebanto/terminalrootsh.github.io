@@ -17,6 +17,7 @@ tags:
 
 div.haha {max-width: 300px; text-align: center; margin: auto;}
 table.tb, tr, td {border: 1px solid silver; max-width: 270px; font-size:8px;}
+td {color: #333;}
 .a {color:#333; font-weight:bold; font-size:7px;}
 .b {color:#999; font-family:sans-serif}
 .c {color:#ccc; font-weight:bold; font-size:9px;}
