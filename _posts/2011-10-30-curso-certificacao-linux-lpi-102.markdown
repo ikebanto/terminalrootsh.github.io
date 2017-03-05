@@ -20,7 +20,7 @@ div.haha {max-width: 700px; text-align: center; margin: auto;}
 .c {color:#ccc; font-weight:bold; font-size:10px;}
 td {padding:5px;}
 .main {background:#ddd;}
-fieldset {margin-bottom:10px; width:800px; font-weight:bold;}
+fieldset {margin-bottom:10px; width:690px; font-weight:bold;}
 </style>
 
 <div class="haha">
