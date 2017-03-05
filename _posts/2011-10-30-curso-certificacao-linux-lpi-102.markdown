@@ -2,15 +2,17 @@
 layout: post
 title: "Curso Certificação Linux LPI-102: Gerenciamento de dados SQL"
 date: '2011-10-30T09:46:00.000-07:00'
-description: "Curso Certificação Linux LPI-102: Gerenciamento de dados SQL"
+image: '/assets/img/mysql/mysql.png'
+description: "MySQL é um sistema de gerenciamento de banco de dados (SGBD), que utiliza a linguagem SQL (Linguagem de Consulta Estruturada, do inglês Structured Query Language) como interface."
 main-class: 'linux'
 tags:
 - Linux
 - MySQL
 - LPI
-twitter_text: "Curso Certificação Linux LPI-102: Gerenciamento de dados SQL"
-introduction: "é um sistema de gerenciamento de banco de dados (SGBD), que utiliza a linguagem SQL (Linguagem de Consulta Estruturada, do inglês Structured Query Language) como interface."
 ---
+
+![Mysql Linux](/assets/img/mysql/mysql.png "Mysql Linux")
+
 <style>
 .a {color:#333; font-weight:bold;}
 .b {color:#999; font-family:sans-serif}
