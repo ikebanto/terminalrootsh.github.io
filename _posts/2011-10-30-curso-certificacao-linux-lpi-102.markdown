@@ -34,7 +34,7 @@ table.tb, tr, td {border: 1px solid silver; max-width: 690px; font-size:15px;}
 .c {color:#ccc; font-weight:bold; font-size:15px;}
 td {padding:5px;}
 .main {background:#ddd;}
-fieldset {margin-bottom:10px; width:690px; font-weight:bold; font-size:15px;}
+fieldset {margin-bottom:10px; width:690px; font-weight:bold; font-size:15px; color: #222;}
 
 
 }
