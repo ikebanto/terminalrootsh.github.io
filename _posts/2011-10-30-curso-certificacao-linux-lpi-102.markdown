@@ -294,7 +294,7 @@ FLUSH PRIVILEGES;</td>
   <td>SELECT DISTINCT campo FROM tabela</td>
  </tr>
  <tr>
-  <td class="a">Referir a qualquer coluna <br />ou alias definido na expressão_select<br /> SELECT id FROM lx_dados HAVING id > 1;</td></td>
+  <td class="a">Referir a qualquer coluna <br />ou alias definido na expressão_select<br /> SELECT id FROM lx_dados HAVING id > 1;</td>
   <td>SELECT usuario,MAX(salario) FROM usuarios GROUP BY usuario HAVING MAX(salario)>10;</td>
  </tr>
  <tr>
