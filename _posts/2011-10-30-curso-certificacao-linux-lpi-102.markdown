@@ -26,7 +26,7 @@ td {padding:1px;}
 fieldset {margin-bottom:10px; width:270px; font-size:9px;}
 legend {color: #3465a4;}
 
-@media screen and (min-width:450px){
+@media screen and (min-width:550px){
 
 div.haha {max-width: 700px; text-align: center; margin: auto;}
 table.tb, tr, td {border: 1px solid silver; max-width: 690px; font-size:15px;}
