@@ -18,9 +18,10 @@ tags:
 @media screen and (max-width:350px){
 
 	div.haha {max-width: 300px; text-align: center; margin: auto;}
-	fieldset {margin-bottom:10px; width:290px; font-weight:bold;}
-	table {width:300px;}
+	fieldset {margin-bottom:10px; max-width:290px; font-weight:bold;}
+	table {max-width:300px;}
 	legend {color: red;}
+	* {font-size: 11px;}
 
 }
 
