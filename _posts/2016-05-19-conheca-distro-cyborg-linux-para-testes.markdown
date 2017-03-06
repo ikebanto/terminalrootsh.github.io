@@ -13,9 +13,9 @@ tags:
 
 ![Cyborg Linux](/assets/img/hacker/cyborg.jpg "Cyborg Linux")
 
-Neste artigo vamos apresentar o [Cyborg Hawk Linux](http://cyborg.ztrela.com), uma distribuição para pentest (testes de penetração) baseada em [Ubuntu](https://cse.google.com.br/cse/publicurl?cx=004473188612396442360:qs2ekmnkweq&q=ubuntu), que conta com inúmeras ferramentas para Hackers Éticos e quem trabalha com Segurança Digital, Testes de Penetração e Análise Forense Digital, entre outras aplicações.
+Neste artigo vamos apresentar o [Cyborg Hawk Linux](http://cyborg.ztrela.com), uma [distribuição](http://www.terminalroot.com.br/tags#distros) para pentest (testes de penetração) baseada em [Ubuntu](https://cse.google.com.br/cse/publicurl?cx=004473188612396442360:qs2ekmnkweq&q=ubuntu), que conta com inúmeras ferramentas para __Hackers Éticos__ e quem trabalha com __Segurança Digital__, __Testes de Penetração__ e __Análise Forense Digital__, entre outras aplicações.
 
-Essa distro possui mais de 750 ferramentas distintas, divididas em várias categorias, como
+> Essa distro possui mais de _750_ ferramentas distintas, divididas em várias categorias.
 
 + Análise de Vulnerabilidades 
 + Toolkits de Exploitation 
@@ -23,7 +23,7 @@ Essa distro possui mais de 750 ferramentas distintas, divididas em várias categ
 + Engenharia Reversa 
 + Análise Forense 
 + Ferramentas para Segurança Wireless 
-+ Ferramentas para RFID e NFC Segurança em Dispositivos Móveis 
++ Ferramentas para RFID e NFC Segurança em Dispositivos Móveis
 + Análise de Malware Scanners de Rede Análise de Pacotes
 + E muitas mais.
 
