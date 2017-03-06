@@ -3,7 +3,7 @@ layout: post
 title: "Curso Certificação Linux LPI-1: Documentação e Notificação de Usuários"
 date: '2012-09-02T13:51:00.000-07:00'
 image: '/assets/img/lpi/doc.jpg'
-description: "O Linux já representa, hoje, um mercado anual de mais de 18 bilhões de dólares e, de acordo com especialistas, deve atingir um patamar superior a 50 bilhões em menos de três anos."
+description: "O Linux já representa um mercado anual de mais de 18 bilhões de dólares e, de acordo com especialistas, deve atingir um patamar superior a 50 bilhões."
 main-class: 'linux'
 tags:
 - Linux
