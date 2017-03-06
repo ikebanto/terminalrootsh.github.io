@@ -147,7 +147,7 @@ exit 0
 ## Abraços.
 ### Links úteis
 
-> [Tutorial Oficial da própria Apache Foundation](http://httpd.apache.org/docs/current/howto/cgi.html)
+> [Tutorial Oficial da Apache Foundation](http://httpd.apache.org/docs/current/howto/cgi.html)
 
 > [Debian HandBook](https://debian-handbook.info/browse/pt-BR/stable/sect.http-web-server.html)
 
