@@ -147,13 +147,13 @@ exit 0
 ## Abraços.
 ### Links úteis
 
-> [http://httpd.apache.org/docs/current/howto/cgi.html](http://httpd.apache.org/docs/current/howto/cgi.html)
+> [Tutorial Oficial da própria Apache Foundation](http://httpd.apache.org/docs/current/howto/cgi.html)
 
-> http://thobias.org/doc/cgi_shell.html
+> [Debian HandBook](https://debian-handbook.info/browse/pt-BR/stable/sect.http-web-server.html)
 
-> http://www.vivaolinux.com.br/dica/Habilitar-CgiShell-no-Apache2
+> [thobia.org](http://thobias.org/doc/cgi_shell.html)
 
-> https://debian-handbook.info/browse/pt-BR/stable/sect.http-web-server.html
+> [VOL](http://www.vivaolinux.com.br/dica/Habilitar-CgiShell-no-Apache2)
 
 
 
