@@ -9,6 +9,7 @@ tags:
 - GIMP
 - tv
 ---
+
 ![Blog Linux](/assets/img/gimp/gimp-linux.jpg "Blog Linux")
 
 # Video tutorial de Criando texto no GIMP com fundo de Imagem, assista o vídeo!
