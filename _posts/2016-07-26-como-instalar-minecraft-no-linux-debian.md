@@ -1,9 +1,9 @@
 ---
 layout: post
-title: Como Instalar o Minecraft no Debian
+title: "Como Instalar o Minecraft no Debian"
 date: '2016-07-26T13:46:00.001-07:00'
 image: '/assets/img/games/como-instalar-o-minecfraft-no-debian.png'
-description: Como Instalar o Minecraft no Debian
+description: "Script com os links utilizados incluso."
 main-class: 'tv'
 tags:
 - TerminalRootTV
