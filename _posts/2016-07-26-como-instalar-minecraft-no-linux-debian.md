@@ -9,7 +9,7 @@ tags:
 - TerminalRootTV
 - games
 ---
-![Blog Linux]( "Blog Linux")
+![Linux Minecraft](/assets/img/games/como-instalar-o-minecfraft-no-debian.png "Blog Linux Minecraft")
 
 <iframe allowfullscreen="" frameborder="0" height="415" src="https://www.youtube.com/embed/I-4d3wYgagE" width="660"></iframe>
 
