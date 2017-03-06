@@ -151,7 +151,7 @@ exit 0
 
 > [Debian HandBook](https://debian-handbook.info/browse/pt-BR/stable/sect.http-web-server.html)
 
-> [thobia.org](http://thobias.org/doc/cgi_shell.html)
+> [thobias.org](http://thobias.org/doc/cgi_shell.html)
 
 > [VOL](http://www.vivaolinux.com.br/dica/Habilitar-CgiShell-no-Apache2)
 
