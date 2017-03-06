@@ -18,10 +18,6 @@ Iremos admitir que você já sabe instalar o [Apache](http://apache.org/) e já 
 
 A maioria das distribuições já possuem o módulo __CGI__ do __Apache__ configurado e com o suporte a ele.
 
-{% highlight bash %}
-LoadModule cgi_module /usr/lib/apache/1.3/mod_cgi.so
-{% endhighlight %}
-
 Caso deseje certificar-se de que o módulo já está carregado, basta verificar em
 > Obs: Estou usando o Editor Nano, mas vc pode usar o de sua preferência.
 Logue-se como root , se não possuir o sudo.
@@ -34,7 +30,12 @@ su
 nano /etc/apache2/mods-available/cgi.load
 {% endhighlight %}
 
-Certifique-se também de que já está __habilitado__
+Veja se dentro do arquivo aberto há essa linha __descomentada__
+{% highlight bash %}
+LoadModule cgi_module /usr/lib/apache2/modules/mod_cgi.so
+{% endhighlight %}
+
+Certifique-se __também__ de que já está __habilitado__
 {% highlight bash %}
 nano /etc/apache2/mods-enabled/cgi.load
 {% endhighlight %}
@@ -111,6 +112,35 @@ echo "
   </body>
   </html>
   "
+{% endhighlight %}
+
+Caso deseje, fiz esse __script__, se não quiser rodá-lo, veja as alterações que ele efetua!
+{% highlight bash %}
+#!/bin/bash
+# ./enable-cgi-apache2.sh
+# esse script habilita cgi e .sh no apache do debian jessie
+[[ $USER == 'root' ]] || echo -e "Permissão negada, é root?\nAbortar.";exit 1
+echo "aguarde habilitando cgi e .sh no apache..."
+VersaoApache=$(apache2 -v | sed -n 1p | awk {'print $3'} | cut -d/ -f2)
+echo "versao do apache2: $VersaoApache"
+echo "LoadModule cgi_module /usr/lib/apache2/modules/mod_cgi.so" >  /etc/apache2/mods-available/cgi.load
+echo "LoadModule cgi_module /usr/lib/apache2/modules/mod_cgi.so" > /etc/apache2/mods-enabled/cgi.load
+sed -i 's/\#AddHandler cgi\-script \.cgi/AddHandler cgi\-script \.cgi \.sh/' /etc/apache2/mods-enabled/mime.conf
+a2enmod cgi
+_TEMP=$(mktemp)
+cat /etc/apache2/sites-available/000-default.conf > $_TEMP
+echo "ScriptAlias /sh/ /usr/lib/cgi-bin/" > /etc/apache2/sites-available/000-default.conf
+cat $_TEMP >> /etc/apache2/sites-available/000-default.conf
+systemctl restart apache2
+service apache2 reload
+/etc/init.d/apache2 restart
+_TESTE=$(mktemp)
+wget https://goo.gl/zjBMn8 -O $_TESTE 2>/dev/null
+cat $_TESTE > /usr/lib/cgi-bin/teste.sh
+chmod a+x /usr/lib/cgi-bin/teste.sh
+echo "configuração realizada."
+echo "acesse: http://0.0.0.0/sh/teste.sh"
+exit 0
 {% endhighlight %}
  
 # Qualquer dúvida, é só comentar.
