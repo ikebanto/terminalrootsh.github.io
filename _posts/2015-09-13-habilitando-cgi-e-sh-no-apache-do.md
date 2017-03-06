@@ -114,7 +114,7 @@ echo "
   "
 {% endhighlight %}
 
-Caso deseje, fiz esse __script__, se não quiser rodá-lo, veja as alterações que ele efetua!
+Caso deseje, fiz esse __script__ que faz __TODAS AS ETAPAS__ acima descritas para __Habilitar CGI e .sh no Apache__, se não quiser rodá-lo, *veja as alterações que ele efetua*!
 {% highlight bash %}
 #!/bin/bash
 # ./enable-cgi-apache2.sh
