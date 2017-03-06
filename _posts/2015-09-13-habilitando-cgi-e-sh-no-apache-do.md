@@ -146,11 +146,11 @@ exit 0
 # Qualquer dúvida, é só comentar.
 ## Abraços.
 ### Links úteis
+
+[http://httpd.apache.org/docs/current/howto/cgi.html](http://httpd.apache.org/docs/current/howto/cgi.html)
 http://thobias.org/doc/cgi_shell.html
-
 http://www.vivaolinux.com.br/dica/Habilitar-CgiShell-no-Apache2
-
 https://debian-handbook.info/browse/pt-BR/stable/sect.http-web-server.html
 
-http://httpd.apache.org/docs/current/howto/cgi.html
+
 
