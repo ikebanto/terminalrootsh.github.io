@@ -42,7 +42,7 @@ A estrutura de diretórios também é chamada de __Árvore de Diretórios__ porq
 
 O sistema GNU/Linux possui a seguinte estrutura básica de diretórios, organizados segundo o __FHS (Filesystem Hierarchy Standard)__
 
-+ __/ raíz do sistema
++ __/__ - raíz do sistema
 + __/bin__ - Contém arquivos programas do sistema que são usados com frequência pelos usuários.
 + __/boot__ - Contém arquivos necessários para a inicialização do sistema.
 + __/cdrom__ - Ponto de montagem da unidade de CD-ROM.
