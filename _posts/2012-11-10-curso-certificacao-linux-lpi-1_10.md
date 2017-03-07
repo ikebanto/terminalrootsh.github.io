@@ -14,7 +14,7 @@ tags:
 
 > Entrada/saída __E/S__ (em inglês: Input/output, sigla __I/O__) é um termo utilizado quase que exclusivamente no ramo da computação , indicando entrada de dados por meio de algum código ou programa, para algum outro programa ou hardware, bem como a sua saída (obtenção de dados) ou retorno de dados, como resultado de alguma operação de algum programa, consequentemente resultado de alguma entrada.
 
-###São exemplos de unidades de entrada de um computador
+### São exemplos de unidades de entrada de um computador
 
 + disco rígido
 + microfone
@@ -41,7 +41,7 @@ Cada dispositivo utiliza um endereço de porta única que não pode ser comparti
 
 Os endereços de __E/S__ podem ser visualizados com o comando
 {% highlight bash %}
-# cat /proc/ioports
+cat /proc/ioports
 {% endhighlight %}
 
 O termo __DMA__ é um acrónimo para a expressão em inglês __Direct Memory Access__. O DMA permite que certos dispositivos de hardware num computador acessem a memória do sistema para leitura e escrita independentemente da CPU.
@@ -50,12 +50,12 @@ O termo __DMA__ é um acrónimo para a expressão em inglês __Direct Memory Acc
  
 Muitos sistemas utilizam DMA, incluindo controladores de disco, placas gráficas, de rede ou de som. Os canais de DMA no sistema podem ser visualizados através do comando
 {% highlight bash %}
-# cat /proc/dma
+cat /proc/dma
 {% endhighlight %}
 
 Um pedido de interrupção (abreviação __IRQ__ (em inglês)) é a forma pela qual componentes de hardware requisitam tempo computacional da CPU. Um IRQ é a sinalização de um pedido de interrupção de hardware.As interrupções do sistema podem ser visualizadas com o comando
 {% highlight bash %}
-# cat /proc/interrupts
+cat /proc/interrupts
 {% endhighlight %}
 
 ![Blog Linux](/assets/img/lpi/irq.png "Blog Linux")
