@@ -1,18 +1,19 @@
 ---
 layout: post
-title: 'Curso Certificação Linux LPI-1: Hierarquia do Sistema'
+title: "Curso Certificação Linux LPI-1: Hierarquia do Sistema"
 date: '2012-11-11T03:40:00.000-08:00'
-description: 'Curso Certificação Linux LPI-1: Hierarquia do Sistema'
+image: '/assets/img/lpi/linux.png'
+description: "Sistema de arquivos é a forma de organização de dados em algum meio de armazenamento de dados em massa frequentemente feito em discos magnéticos."
 main-class: 'linux'
 tags:
 - Linux
 - LPI
-image: http://1.bp.blogspot.com/-Iay1HcXpqeY/UJ-PniER_fI/AAAAAAAAAj0/6N1jdnT4X0I/s72-c/diretorios.png
-twitter_text: 'Curso Certificação Linux LPI-1: Hierarquia do Sistema'
-introduction: 'Curso Certificação Linux LPI-1: Hierarquia do Sistema'
 ---
-![Blog Linux](http://1.bp.blogspot.com/-Iay1HcXpqeY/UJ-PniER_fI/AAAAAAAAAj0/6N1jdnT4X0I/s400/diretorios.png "Blog Linux")
-Sistema de arquivos é a forma de organização de dados em algum meio de armazenamento de dados em massa frequentemente feito em discos magnéticos.[1] Sabendo interpretar o sistema de arquivos de um determinado disco, o sistema operacional pode decodificar os dados armazenados e lê-los ou gravá-los.
+
+![Blog Linux](/assets/img/lpi/linux.png "Blog Linux")
+
+> Sistema de arquivos é a forma de organização de dados em algum meio de armazenamento de dados em massa frequentemente feito em discos magnéticos.Sabendo interpretar o sistema de arquivos de um determinado disco, o sistema operacional pode decodificar os dados armazenados e lê-los ou gravá-los.
+
 Fazendo analogias, tal organização assemelha-se a uma biblioteca escolar. O bibliotecário organiza os livros conforme um padrão, cuja busca, convenientemente, procura deixar mais fácil, sem ocupar muitas prateleiras e assegurando a integridade deste.
 Inode
 Cada diretório e arquivo do Linux é identificado para o kernel como um número de nó i (inode).
