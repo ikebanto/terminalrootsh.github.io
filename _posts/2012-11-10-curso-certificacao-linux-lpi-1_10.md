@@ -109,7 +109,9 @@ Para carregar o suporte ao dispositivo através de um módulo do Kernel, devemos
 modprobe 8139too
 {% endhighlight %}
 
-O Linux suporta que os módulos sejam carregados automaticamente durante a carga do sistema(boot).As configurações dos parâmetros devem ser feitas no arquivo 
+O Linux suporta que os módulos sejam carregados automaticamente durante a carga do sistema(boot).
+
+As configurações dos parâmetros devem ser feitas no arquivo 
 {% highlight bash %}
 cat /etc/modules.conf
 {% endhighlight %}
