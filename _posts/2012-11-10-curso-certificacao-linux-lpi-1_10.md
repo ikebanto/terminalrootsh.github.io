@@ -80,7 +80,7 @@ Alguns exemplos
 
 Configurando Dispositivos de Rede:  Com o comando abaixo nós podemos identificar o fabricando e o modelo de uma placa PCI.
 {% highlight bash %}
-# lspci
+lspci
 {% endhighlight %}
 
 {% highlight c %}
