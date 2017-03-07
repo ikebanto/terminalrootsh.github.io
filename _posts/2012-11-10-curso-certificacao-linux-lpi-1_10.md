@@ -10,7 +10,7 @@ tags:
 - LPI
 ---
 
-[LPI Linux Arquitetura de Hardware](/assets/img/lpi/architeture.jpg "LPI Linux Arquitetura de Hardware")
+![LPI Linux Arquitetura de Hardware](/assets/img/lpi/architeture.jpg "LPI Linux Arquitetura de Hardware")
 
 > Entrada/saída __E/S__ (em inglês: Input/output, sigla __I/O__) é um termo utilizado quase que exclusivamente no ramo da computação , indicando entrada de dados por meio de algum código ou programa, para algum outro programa ou hardware, bem como a sua saída (obtenção de dados) ou retorno de dados, como resultado de alguma operação de algum programa, consequentemente resultado de alguma entrada.
 
