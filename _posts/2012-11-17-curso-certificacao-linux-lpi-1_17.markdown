@@ -28,7 +28,7 @@ O __init__ utilizado no [Linux](https://cse.google.com.br/cse/publicurl?cx=00447
 
 Um processo tem vários atributos que controlam sua execução.
 
-O __PID__ identifica únicamente este processo (nenhum __PID__ pode ser repetido até novo boot do sistema). O __PPID__ indica qual "processo-pai" o criou. O nice number controla a prioridade desse processo. Processos de maior prioridade têm a preferência na utilização da CPU. O UID e GID indicam o usuário e grupo que criou esse processo. Somente o root (superusuário) pode destruir processos criados por outros usuários. O EUID e o EGID são formas de se rodar um processo, criado por um usuário não-privilegiado de forma que ele se comporte como privilegiado, com acesso a outros recursos que normalmente o usuário não o teria. O comando chmod +s  pode ser usado para fazer um programa modificar esse valor na execução. Um programa setuid (com o flag s ligado) no instante de execução troca seu UID/GID pelos seus próprios (user/group do arquivo) e efetivamente rodam como se fosse este outro usuário, pois o kernel testa o EUID e EGID para testar privilégios de acesso. Daí, devmos ter o máximo cuidado quando ligarmos este flag em algum executável.
+O __PID__ identifica únicamente este processo (nenhum __PID__ pode ser repetido até novo boot do sistema). O __PPID__ indica qual "processo-pai" o criou. O nice number controla a prioridade desse processo. Processos de maior prioridade têm a preferência na utilização da __CPU__. O __UID e GID__ indicam o usuário e grupo que criou esse processo. Somente o __root__ (superusuário) pode destruir processos criados por outros usuários. O __EUID e o EGID__ são formas de se rodar um processo, criado por um usuário não-privilegiado de forma que ele se comporte como privilegiado, com acesso a outros recursos que normalmente o usuário não o teria. O comando __chmod +s__  pode ser usado para fazer um programa modificar esse valor na execução. Um programa setuid (com o __flag s__ ligado) no instante de execução troca seu __UID/GID__ pelos seus próprios (user/group do arquivo) e efetivamente rodam como se fosse este outro usuário, pois o kernel testa o __EUID e EGID__ para testar privilégios de acesso. Daí, devmos ter o máximo cuidado quando ligarmos este flag em algum executável.
 
 ## Prioridades de Processos
 
@@ -50,7 +50,7 @@ A faixa de prioridades é:
 * 1 … 18
 * 19 (Prioridade Mínima)
  
-Sendo assim, por padrão, todo comando executado “normalmente” recebe a prioridade 0 (Zero). E quanto menor for esse número, maior a prioridade do processo na CPU (Sim, é o contrário! Quanto menor, maior; quanto maior, menor! :).
+Sendo assim, por padrão, todo comando executado “normalmente” recebe a prioridade __0__ (Zero). E quanto menor for esse número, maior a prioridade do processo na __CPU__ (Sim, é o contrário! Quanto menor, maior; quanto maior, menor! :).
 
 Por padrão, os comandos ligados ao kernel e o sistema operacional em si têm prioridade inferior a 0 (aqui no meu sistema, vejo vários processos com prioridade -5). Isso nos faz lembrar que você precisa ser root para configurar um processo com prioridade menor que 0. Isso faz sentido, já que em um sistema multi-usuário, os usuários normais compartilham o padrão 0, e podem escolher apenas se o processo pode ter uma prioridade mais baixa, assim não interferindo com os processos do sistema, que teoricamente são mais importantes.
 
