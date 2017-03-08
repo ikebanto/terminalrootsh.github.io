@@ -2,6 +2,7 @@
 layout: post
 title: "Curso Certificação Linux LPI-1: Sistemas de Arquivos e Dispositivos"
 date: '2012-11-11T12:36:00.000-08:00'
+image: '/assets/img/lpi/file-systems-devides-linux.png'
 description: "No Linux cada partição é representada por um número inteiro."
 main-class: 'linux'
 tags:
@@ -9,7 +10,7 @@ tags:
 - LPI
 ---
 
-![Blog Linux](/assets/img/lpi/sad.png "Blog Linux")
+![Blog Linux](/assets/img/lpi/file-systems-devides-linux.png "Blog Linux")
 
 ## Por padrão, os discos são nomeados da seguinte forma no linux
 
@@ -55,34 +56,35 @@ __fdisk__ (e __cfdisk__) são responsáveis por __criar, listar, alterar e apaga
 O comando __find__ localiza a partir de um caminho ou diretório recursivamente uma expressão diretamente no sistema de arquivos. Uso: __find [caminho] [expressão]__
 
 {% highlight bash %}
-$ find /home/marcos -name arquivo.txt
+find /home/$USER/ -name arquivo.txt
 {% endhighlight %}
 
 Para os diretórios que você não tem permissão de visualização, pode jogar a segunda etapa para o vazio, assim
 
 {% highlight bash %}
-$ find /home/marcos -name marcospinguim.php 2>/dev/null
+find /home/$USER/ -name marcospinguim.php 2>/dev/null
 {% endhighlight %}
 
 Para localizar arquivos ou diretórios que foram alterados nos últimos 30 dias, utilizamos a expressão -ctime 30
 
 {% highlight bash %}
-$ find | home -ctime 30
+find /home/$USER/ -ctime 30
 {% endhighlight %}
 
 Para localizar arquivos que foram acessados nos últimos 10 dias, utilizamos a expressão -used 10
 {% highlight bash %}
-$ find | -used 10
+find /home/$USER/-used 10
 {% endhighlight %}
 
 Para localizar arquivos com pelo menos 30k, utilizamos a expressão -size nk
 {% highlight bash %}
-$ find | -size 30k
+find /home/$USER/-size 30k
 {% endhighlight %}
 
 
 Veja o artigo completo sobre o __Comando find__
+[20 EXEMPLOS DO COMANDO FIND](http://terminalroot.com.br/2015/07/20-exemplos-do-comando-find.html)
 
+__locate__ realiza buscas em um banco de dados criado com updatedb.whatis pesquisa por palavra exata no banco de dados.apropos consulta um banco de dados consistindo de descrições curtas dos comandos do sistema e utilitários. Por enquanto é só, até o próximo tópico ou a próxima postagem sobre outro assunto.
 
-locate realiza buscas em um banco de dados criado com updatedb.whatis pesquisa por palavra exata no banco de dados.apropos consulta um banco de dados consistindo de descrições curtas dos comandos do sistema e utilitários.
-Por enquanto é só, até o próximo tópico ou a próxima postagem sobre outro assunto.
+![Blog Linux](/assets/img/lpi/sad.png "Blog Linux")
