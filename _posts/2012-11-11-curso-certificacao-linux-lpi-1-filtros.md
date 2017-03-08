@@ -16,7 +16,7 @@ tags:
  
 A filtragem de textos é o processo de executar algumas conversões no texto de um fluxo de entrada de texto antes de enviá-lo para um fluxo de saída. Embora tanto a entrada como a saída possam vir de um arquivo, nos ambientes [UNIX](http://www.terminalroot.com.br/tags#unix)® e [Linux](http://www.terminalroot.com.br/tags#linux), a filtragem é, na maioria das vezes, feita através da criação de uma pipeline de comandos, na qual a saída de um comando é canalizada ou redirecionada para ser usada como a entrada para o próximo.
 
-> Canais e redirecionadores são abordados mais detalhadamente no artigo sobre fluxos, canais e redirecionadores. Porém, por enquanto, vamos dar uma olhada nos canais e redirecionamentos de saída básicos usando os operadores __&#124;__ e ( maior ) .
+> Canais e redirecionadores são abordados mais detalhadamente no artigo sobre fluxos, canais e redirecionadores. Porém, por enquanto, vamos dar uma olhada nos canais e redirecionamentos de saída básicos usando os operadores __&#124;__ e __>__ .
 
 ## Fluxos 
 Um fluxo é nada mais que uma sequência de bytes que pode ser lida ou escrita através do uso de funções da biblioteca, as quais escondem os detalhes de um dispositivo subjacente do aplicativo. O mesmo programa pode ler ou escrever em um terminal, arquivo ou soquete de rede em uma direção independente de dispositivo através do uso de fluxos. Ambientes modernos de programação e shells usam três fluxos padrão de E/S: 
@@ -34,7 +34,7 @@ A entrada pode vir de parâmetros que você fornece aos comandos e a saída pode
 $ echo -e "apple\npear\nbanana" | sort 
 {% endhighlight %}
 
-Qualquer comando pode ter opções e argumentos. Também é possível usar (pipe) para redirecionar a saída do segundo comando na pipeline para um terceiro comando, e assim por diante. Construir longas pipelines de comandos, em que cada uma tenha uma capacidade limitada, é um modo comum de executar tarefas no [Linux](https://cse.google.com.br/cse/publicurl?cx=004473188612396442360:qs2ekmnkweq&q=linux) e no [UNIX](https://cse.google.com.br/cse/publicurl?cx=004473188612396442360:qs2ekmnkweq&q=unix). 
+Qualquer comando pode ter opções e argumentos. Também é possível usar __&#124;__ para redirecionar a saída do segundo comando na pipeline para um terceiro comando, e assim por diante. Construir longas pipelines de comandos, em que cada uma tenha uma capacidade limitada, é um modo comum de executar tarefas no [Linux](https://cse.google.com.br/cse/publicurl?cx=004473188612396442360:qs2ekmnkweq&q=linux) e no [UNIX](https://cse.google.com.br/cse/publicurl?cx=004473188612396442360:qs2ekmnkweq&q=unix). 
 
 Às vezes, você verá um hífen (__-__) no lugar do nome do arquivo como um argumento para um comando, indicando que a entrada deve vir do __stdin__ e não de um arquivo.
 
