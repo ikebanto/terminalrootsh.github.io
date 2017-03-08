@@ -34,7 +34,7 @@ A entrada pode vir de parâmetros que você fornece aos comandos e a saída pode
 $ echo -e "apple\npear\nbanana" | sort 
 {% endhighlight %}
 
-Qualquer comando pode ter opções e argumentos. Também é possível usar __|__ para redirecionar a saída do segundo comando na pipeline para um terceiro comando, e assim por diante. Construir longas pipelines de comandos, em que cada uma tenha uma capacidade limitada, é um modo comum de executar tarefas no [Linux](https://cse.google.com.br/cse/publicurl?cx=004473188612396442360:qs2ekmnkweq&q=linux) e no [UNIX](https://cse.google.com.br/cse/publicurl?cx=004473188612396442360:qs2ekmnkweq&q=unix). 
+Qualquer comando pode ter opções e argumentos. Também é possível usar "|" para redirecionar a saída do segundo comando na pipeline para um terceiro comando, e assim por diante. Construir longas pipelines de comandos, em que cada uma tenha uma capacidade limitada, é um modo comum de executar tarefas no [Linux](https://cse.google.com.br/cse/publicurl?cx=004473188612396442360:qs2ekmnkweq&q=linux) e no [UNIX](https://cse.google.com.br/cse/publicurl?cx=004473188612396442360:qs2ekmnkweq&q=unix). 
 
 Às vezes, você verá um hífen (__-__) no lugar do nome do arquivo como um argumento para um comando, indicando que a entrada deve vir do __stdin__ e não de um arquivo.
 
