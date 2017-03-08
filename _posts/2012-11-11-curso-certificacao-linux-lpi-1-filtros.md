@@ -14,7 +14,7 @@ tags:
 
 ## Filtragem de textos
  
-A filtragem de textos é o processo de executar algumas conversões no texto de um fluxo de entrada de texto antes de enviá-lo para um fluxo de saída. Embora tanto a entrada como a saída possam vir de um arquivo, nos ambientes [UNIX](http://www.terminalroot.com.br/tags#unix)® e [Linux](http://www.terminalroot.com.br/tags#linux), a filtragem é, na maioria das vezes, feita através da criação de uma pipeline de comandos, na qual a saída de um comando é canalizada ou redirecionada para ser usada como a entrada para o próximo. 
+A filtragem de textos é o processo de executar algumas conversões no texto de um fluxo de entrada de texto antes de enviá-lo para um fluxo de saída. Embora tanto a entrada como a saída possam vir de um arquivo, nos ambientes [UNIX](http://www.terminalroot.com.br/tags#unix)® e [Linux](http://www.terminalroot.com.br/tags#linux), a filtragem é, na maioria das vezes, feita através da criação de uma pipeline de comandos, na qual a saída de um comando é canalizada ou redirecionada para ser usada como a entrada para o próximo.
 
 > Canais e redirecionadores são abordados mais detalhadamente no artigo sobre fluxos, canais e redirecionadores. Porém, por enquanto, vamos dar uma olhada nos canais e redirecionamentos de saída básicos usando os operadores __|__ e __>__.
 
