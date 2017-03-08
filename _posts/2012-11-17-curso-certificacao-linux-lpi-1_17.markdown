@@ -20,9 +20,9 @@ O escalonador de processos de 2 níveis escolhe o processo que tem mais priorida
 
 ## O Processo init
 
-O __init__ é o primeiro processo iniciado no Linux, logo após a carga do kernel do sistema. Quando é disparado, o __init__ continua a carga do sistema, geralmente executando vários scripts que irão verificar e montar sistemas de arquivos, configurar teclado e iniciar servidores, entre outras tarefas.
+O __init__ é o primeiro processo iniciado no [Linux](https://cse.google.com.br/cse/publicurl?cx=004473188612396442360:qs2ekmnkweq&q=linux), logo após a carga do kernel do sistema. Quando é disparado, o __init__ continua a carga do sistema, geralmente executando vários scripts que irão verificar e montar sistemas de arquivos, configurar teclado e iniciar servidores, entre outras tarefas.
 
-O __init__ utilizado no Linux permite que existam diversos níveis de execução no sistema. Um nível de execução é uma configuração de software do sistema que define quais processos devem ser inicializados e quais não devem, e também de que modo são inicializados. 
+O __init__ utilizado no [Linux](https://cse.google.com.br/cse/publicurl?cx=004473188612396442360:qs2ekmnkweq&q=linux) permite que existam diversos níveis de execução no sistema. Um nível de execução é uma configuração de software do sistema que define quais processos devem ser inicializados e quais não devem, e também de que modo são inicializados. 
 
 ## Atributo de Processos(Sinais)
 
@@ -80,7 +80,7 @@ __top__  - exibe as tarefas do linux.
 $ top
 {% endhighlight %}
 
-__kill__ - O sinal padrão para matar é TERM. Utilização de L-ou L-a lista de sinais disponíveis. Sinais particularmente úteis incluem HUP, INT, MATAR, STOP, CONT, e 0.Sinais de suplentes poderão ser especificada de três formas: -9-SIGKILL-matar. PID valores negativos podem ser usados ​​para escolher grupos de processos inteiros; ver a coluna PGID na saída do comando ps. A PID de -1 é especial, que indica todos os processos exceto o processo de se matar e init.
+__kill__ - O sinal padrão para matar é __TERM__. Utilização de __L__ ou __L -a__ lista de sinais disponíveis. Sinais particularmente úteis incluem __HUP, INT, MATAR, STOP, CONT, e 0__.Sinais de suplentes poderão ser especificada de três formas: __-9 SIGKILL matar__. PID valores negativos podem ser usados ​​para escolher grupos de processos inteiros; ver a coluna __PGID__ na saída do comando __ps__. A __PID__ de __-1__ é especial, que indica todos os processos exceto o processo de se matar e __init__.
 {% highlight bash %}
 $ kill
 {% endhighlight %}
