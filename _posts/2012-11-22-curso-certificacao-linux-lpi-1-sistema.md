@@ -34,13 +34,13 @@ Níveis de execução definem quais tarefas podem ser realizadas no estado (ou n
 ### Níveis de execução básicos do Linux
 > Nível Propósito
 
-* 0__ Encerrar (ou parar) o sistema
-* 1__ Modo de usuário único; geralmente com os alias s ou S
-* 2__  Modo de multiusuário sem rede
-* 3__ Modo de multiusuário com rede
-* 4__ Não Utilizado
-* 5__ Modo de multiusuário com rede e com o X Window System
-* 6__ Reinicializar o sistema
+* __0__ Encerrar (ou parar) o sistema
+* __1__ Modo de usuário único; geralmente com os alias __s__ ou __S__
+* __2__  Modo de multiusuário sem rede
+* __3__ Modo de multiusuário com rede
+* __4__ Não Utilizado
+* __5__ Modo de multiusuário com rede e com o __X Window System__
+* __6__ Reinicializar o sistema
 
 A distribuição [Slackware](https://cse.google.com.br/cse/publicurl?cx=004473188612396442360:qs2ekmnkweq&q=Slackware) usa o nível de execução __4__ em vez do __5__ para um sistema completo executando __X Window system__. [Debian](http://terminalroot.com.br/tags#debian) e derivados, como [Ubuntu](https://cse.google.com.br/cse/publicurl?cx=004473188612396442360:qs2ekmnkweq&q=ubuntu), usam um único nível de execução para o modo de multiusuário, geralmente o nível __2__. Consulte a documentação para sua [distribuição](http://terminalroot.com.br/tags#distros).
 Para alterar o __Runlevel__ de inicialização do seu [Linux](http://www.terminalroot.com.br/tags#linux), vc pode alterar o arquivo __/etc/inittab__
