@@ -2,7 +2,7 @@
 layout: post
 title: "Curso Certificação Linux LPI-1: Sistema de Boot, Shutdown e Runlevels"
 date: '2012-11-22T13:17:00.000-08:00'
-image: '/assets/img/lpi/boot-process-chart-terminalroot.jpg'
+image: '/assets/img/lpi/400-boot-process-chart-terminalroot.jpg'
 description: "Em informática, boot é o termo em inglês para o processo de iniciação do computador que carrega o sistema operacional quando a máquina é ligada."
 main-class: 'linux'
 tags:
@@ -10,7 +10,7 @@ tags:
 - LPI
 ---
 
-![Curso Certificação Linux LPI-1: Sistema de Boot, Shutdown e Runlevels](/assets/img/lpi/boot-process-chart-terminalroot.jpg "Curso Certificação Linux LPI-1: Sistema de Boot, Shutdown e Runlevels")
+![Curso Certificação Linux LPI-1: Sistema de Boot, Shutdown e Runlevels](/assets/img/lpi/400-boot-process-chart-terminalroot.jpg "Curso Certificação Linux LPI-1: Sistema de Boot, Shutdown e Runlevels")
 
 > Em informática, __boot__ é o termo em inglês para o processo de iniciação do computador que carrega o sistema operacional quando a máquina é ligada.A solução para o paradoxo está na utilização de um pequeno e especial programa, chamado sistema de iniciação, __boot loader__ ou __bootstrap__.O pequeno programa normalmente não é o sistema operacional, mas apenas um segundo estágio do sistema de inicialização, assim como o __Lilo__ ou o __Grub__. Ele será então capaz de carregar o [sistema operacional](https://cse.google.com.br/cse/publicurl?cx=004473188612396442360:qs2ekmnkweq&q=Linux) apropriado, e finalmente transferir a execução para ele.
 
