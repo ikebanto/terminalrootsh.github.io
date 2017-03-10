@@ -34,14 +34,20 @@ O sistema de gestão de pacotes Debian, __quando utilizado de modo apropriado__,
 ### Exemplos
 
 {% highlight bash %}
-aptitude aptana
-apt-cache aptitude-create-state-bundle
-apt-cdrom aptitude-curses
-apt-config aptitude-run-state-bundle
-aptdcon apt-key
-apt-extracttemplates apt-listchanges
-apt-ftparchive apt-mark
-apt-get apt-sortpkgs
+apt
+apt-extracttemplates
+aptitude-create-state-bundle
+apt-listchanges
+apt-cacheapt-ftparchive
+aptitude-curses
+apt-mark
+apt-cdromapt-get
+aptitude-run-state-bundle
+apt-mirror
+apt-config
+aptitude
+apt-key
+apt-sortpkgs
 {% endhighlight %}
 
 ## Páginas Oficiais do Debian sobre Gerenciamento de Pacotes
