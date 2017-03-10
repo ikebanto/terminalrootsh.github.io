@@ -9,9 +9,10 @@ tags:
 - Linux
 - LPI
 ---
+
 ![Curso Certificação Linux LPI-1: Trabalhando com Permissões](/assets/img/lpi/permissoes/15659.gif "Curso Certificação Linux LPI-1: Trabalhando com Permissões")
 
-# Cada arquivo no [Linux](http://www.terminalroot.com.br/tags#linux) tem o definido controle de acesso.
+> Cada arquivo no [Linux](http://www.terminalroot.com.br/tags#linux) tem o definido controle de acesso.
 
 ## Este controle é definidopor três classes
 
