@@ -30,8 +30,11 @@ O sistema de gestão de pacotes Debian, __quando utilizado de modo apropriado__,
 ![Blog Linux](/assets/img/lpi/deb/deb4.png "Blog Linux")
 
 <iframe allowfullscreen="allowfullscreen" frameborder="0" height="356" marginheight="0" marginwidth="0" mozallowfullscreen="mozallowfullscreen" scrolling="no" src="http://www.slideshare.net/slideshow/embed_code/15561295" style="border-width: 1px 1px 0; border: 1px solid #CCC; margin-bottom: 5px;" webkitallowfullscreen="webkitallowfullscreen" width="427"></iframe>
+
+### Exemplos
+
 {% highlight bash %}
-aptana aptitude
+aptitude aptana
 apt-cache aptitude-create-state-bundle
 apt-cdrom aptitude-curses
 apt-config aptitude-run-state-bundle
@@ -40,8 +43,6 @@ apt-extracttemplates apt-listchanges
 apt-ftparchive apt-mark
 apt-get apt-sortpkgs
 {% endhighlight %}
-
-<iframe allowfullscreen="allowfullscreen" frameborder="0" height="356" marginheight="0" marginwidth="0" mozallowfullscreen="mozallowfullscreen" scrolling="yes" src="http://www.debian.org/doc/manuals/apt-howto/ch1.pt-br.html" style="border-width: 1px 1px 0; border: 1px solid #CCC; margin-bottom: 5px;" webkitallowfullscreen="webkitallowfullscreen" width="590"></iframe>
 
 ## Página Oficial do Debian so Gerenciamento de Pacotes
 [Gestão de pacotes Debian](https://www.debian.org/doc/manuals/debian-reference/ch02.pt.html)
