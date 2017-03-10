@@ -69,7 +69,7 @@ umask 27
 
 ## O comando chmod
 
-__chmod __(abreviação de __ch__ange __mod__e, em português: __alterar modo__) é um comando do [Unix](https://cse.google.com.br/cse/publicurl?cx=004473188612396442360:qs2ekmnkweq&q=unix) usado para alterar permissões de arquivos e diretórios (pastas). Sua sintaxe é a seguinte
+__chmod__ (abreviação de __ch__ange __mod__e, em português: __alterar modo__) é um comando do [Unix](https://cse.google.com.br/cse/publicurl?cx=004473188612396442360:qs2ekmnkweq&q=unix) usado para alterar permissões de arquivos e diretórios (pastas). Sua sintaxe é a seguinte
 
 > chmod [opções] modo[,modo] arquivo1 [arquivo2 ...]
 
