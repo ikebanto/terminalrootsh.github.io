@@ -18,9 +18,9 @@ tags:
 
 O sistema de gestão de pacotes Debian, __quando utilizado de modo apropriado__, oferece ao utilizador o instalar de __conjuntos consistentes de pacotes binários__ no sistema a partir do arquivo. Actualmente, existem 54025 pacotes disponíveis para a arquitectura amd64. O sistema de gestão de pacotes Debian tem um histórico rico e muitas opções de escolha para o programa cliente do utilizador e de método de acesso ao arquivo. Actualmente, recomendamos o seguinte:
 
-+ __apt-get__ para todas as operações de linha de comandos, incluindo a instalação e remoção de pacotes, e dist-upgrade.
+* __apt-get__ para todas as operações de linha de comandos, incluindo a instalação e remoção de pacotes, e __dist-upgrade__.
 
-+ __aptitude__ para uma interface de texto interactiva para gerir os pacotes instalados e procurar os pacotes disponíveis.
+* __aptitude__ para uma interface de texto interactiva para gerir os pacotes instalados e procurar os pacotes disponíveis.
 
 
 
@@ -30,8 +30,11 @@ O sistema de gestão de pacotes Debian, __quando utilizado de modo apropriado__,
 ![Blog Linux](/assets/img/lpi/deb/deb4.png "Blog Linux")
 
 <iframe allowfullscreen="allowfullscreen" frameborder="0" height="356" marginheight="0" marginwidth="0" mozallowfullscreen="mozallowfullscreen" scrolling="no" src="http://www.slideshare.net/slideshow/embed_code/15561295" style="border-width: 1px 1px 0; border: 1px solid #CCC; margin-bottom: 5px;" webkitallowfullscreen="webkitallowfullscreen" width="427"></iframe>
+
+### Exemplos
+
 {% highlight bash %}
-aptana aptitude
+aptitude aptana
 apt-cache aptitude-create-state-bundle
 apt-cdrom aptitude-curses
 apt-config aptitude-run-state-bundle
@@ -41,7 +44,9 @@ apt-ftparchive apt-mark
 apt-get apt-sortpkgs
 {% endhighlight %}
 
-<iframe allowfullscreen="allowfullscreen" frameborder="0" height="356" marginheight="0" marginwidth="0" mozallowfullscreen="mozallowfullscreen" scrolling="yes" src="http://www.debian.org/doc/manuals/apt-howto/ch1.pt-br.html" style="border-width: 1px 1px 0; border: 1px solid #CCC; margin-bottom: 5px;" webkitallowfullscreen="webkitallowfullscreen" width="590"></iframe>
+## Páginas Oficiais do Debian sobre Gerenciamento de Pacotes
 
-## Página Oficial do Debian so Gerenciamento de Pacotes
 [Gestão de pacotes Debian](https://www.debian.org/doc/manuals/debian-reference/ch02.pt.html)
+
+[Como usar o APT](https://www.debian.org/doc/manuals/apt-howto/ch1.pt-br.html)
+
