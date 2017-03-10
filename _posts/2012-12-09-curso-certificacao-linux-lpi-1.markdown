@@ -44,5 +44,5 @@ apt-ftparchive apt-mark
 apt-get apt-sortpkgs
 {% endhighlight %}
 
-## Página Oficial do Debian so Gerenciamento de Pacotes
+## Página Oficial do Debian sobre Gerenciamento de Pacotes
 [Gestão de pacotes Debian](https://www.debian.org/doc/manuals/debian-reference/ch02.pt.html)
