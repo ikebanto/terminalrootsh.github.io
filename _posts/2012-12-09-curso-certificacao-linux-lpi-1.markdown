@@ -18,7 +18,7 @@ tags:
 
 O sistema de gestão de pacotes Debian, __quando utilizado de modo apropriado__, oferece ao utilizador o instalar de __conjuntos consistentes de pacotes binários__ no sistema a partir do arquivo. Actualmente, existem 54025 pacotes disponíveis para a arquitectura amd64. O sistema de gestão de pacotes Debian tem um histórico rico e muitas opções de escolha para o programa cliente do utilizador e de método de acesso ao arquivo. Actualmente, recomendamos o seguinte:
 
-* __apt-get__ para todas as operações de linha de comandos, incluindo a instalação e remoção de pacotes, e dist-upgrade.
+* __apt-get__ para todas as operações de linha de comandos, incluindo a instalação e remoção de pacotes, e __dist-upgrade__.
 
 * __aptitude__ para uma interface de texto interactiva para gerir os pacotes instalados e procurar os pacotes disponíveis.
 
