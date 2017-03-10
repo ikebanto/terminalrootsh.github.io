@@ -2,7 +2,7 @@
 layout: post
 title: 'Curso Certificação Linux LPI-1: Trabalhando com Permissões'
 date: '2012-11-25T15:42:00.000-08:00'
-image: '/assets/img/lpi/permissoes/15659.gif'
+image: '/assets/img/lpi/permissoes/permissions.png'
 description: "Cada arquivo no Linux tem o definido controle de acesso."
 main-class: 'linux'
 tags:
@@ -10,7 +10,7 @@ tags:
 - LPI
 ---
 
-![Curso Certificação Linux LPI-1: Trabalhando com Permissões](/assets/img/lpi/permissoes/15659.gif "Curso Certificação Linux LPI-1: Trabalhando com Permissões")
+![Curso Certificação Linux LPI-1: Trabalhando com Permissões](/assets/img/lpi/permissoes/permissions.png "Curso Certificação Linux LPI-1: Trabalhando com Permissões")
 
 > Cada arquivo no [Linux](http://www.terminalroot.com.br/tags#linux) tem o definido controle de acesso.
 
@@ -25,7 +25,7 @@ tags:
 * __leitura(r)__
 * __escrita(w)__
 * __execução(x)__
-  
+![Curso Certificação Linux LPI-1: Trabalhando com Permissões](/assets/img/lpi/permissoes/15659.gif "Curso Certificação Linux LPI-1: Trabalhando com Permissões")
 ![Blog Linux](/assets/img/lpi/permissoes/1.png "Blog Linux")
 ![Blog Linux](/assets/img/lpi/permissoes/2.png "Blog Linux")
 ![Blog Linux](/assets/img/lpi/permissoes/3.png "Blog Linux")
