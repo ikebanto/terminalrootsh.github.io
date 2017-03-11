@@ -16,7 +16,7 @@ No [Linux](https://cse.google.com.br/cse/publicurl?cx=004473188612396442360:qs2e
  
 No gerenciamento de cotas é possível definirmos a quantidade de espaço em disco para cada usuário ou grupo de usuários. É preciso habilitar o gerenciamento de quotas antes de utilizarmos este recurso. Também é preciso que o suporte a quotas esteja compilado no __Kernel__. 
 
-1. Edite o arquivo __/etc/fstab__ e adicione o gerenciamento de cota para usuário (__usrquota__) e para grupo (__grpquota__) no dispositivo desejado.
+. Edite o arquivo __/etc/fstab__ e adicione o gerenciamento de cota para usuário (__usrquota__) e para grupo (__grpquota__) no dispositivo desejado.
  
 {% highlight bash %}
 vi /etc/fstab
@@ -28,7 +28,7 @@ vi /etc/fstab
 /dev/hda6 /home ext3 defaults,usrquota,grpquota 1 2
 {% endhighlight %}
 
-2. Crie o arquivo __quota.user__ e quota.group no diretório __/home__ e __configure as permissões de leitura e escrita__ para o __root__.Estes dois arquivos serão os bancos de dados para quotas de __usuário__ e __grupo__ respectivamente.
+1. Crie o arquivo __quota.user__ e quota.group no diretório __/home__ e __configure as permissões de leitura e escrita__ para o __root__.Estes dois arquivos serão os bancos de dados para quotas de __usuário__ e __grupo__ respectivamente.
  
 ## Cria os arquivos de quota
  
@@ -44,19 +44,19 @@ chmod 600 /home/quota.user
 chmod 600 /home/quota.group
 {% endhighlight %}
  
-3. Execute o comando __quota-check__ para iniciar o banco de dados recém criado, e verifique se o banco de dados foi iniciado. Os arquivos __quota.user__ e __quota.group__ __não devem ter tamanho zero__.
+1. Execute o comando __quota-check__ para iniciar o banco de dados recém criado, e verifique se o banco de dados foi iniciado. Os arquivos __quota.user__ e __quota.group__ __não devem ter tamanho zero__.
  
 {% highlight bash %}
 ls -lga /home
 {% endhighlight %}
  
-4. Habilite o serviço de quotas:
+1. Habilite o serviço de quotas:
  
 {% highlight bash %}
 # quotaon -a
 {% endhighlight %}
  
-5. Tenha certeza de que o serviço de quotas é habilitado no __boot__.Se não existir o arquivo __/etc/rc.d/quotas__, crie um arquivo de script
+1. Tenha certeza de que o serviço de quotas é habilitado no __boot__.Se não existir o arquivo __/etc/rc.d/quotas__, crie um arquivo de script
 {% highlight bash %}
 vi /etc/rc.d/quotas
 #!/bin/bash
@@ -69,14 +69,14 @@ vi /etc/rc.d/quotas
 chmod 755 /etc/rc.d/quotas
 {% endhighlight %}
  
-6. Crie o __link simbólico__ para o arquivo de __quotas__ para o __runlevel 3__ e __runlevel 5__:
+1. Crie o __link simbólico__ para o arquivo de __quotas__ para o __runlevel 3__ e __runlevel 5__:
  
 {% highlight bash %}
 ln -s /etc/rc.d/quotas /etc/rc.d/rc3.d/S20quotas
 ln -s /etc/rc.d/quotas /etc/rc.d/rc5.d/S20quotas
 {% endhighlight %}
  
-7. Faça checagem do sistema de quotas uma vez por semana colocando o comando __quotacheck__ no __cron__ do __root__:
+1. Faça checagem do sistema de quotas uma vez por semana colocando o comando __quotacheck__ no __cron__ do __root__:
  
 {% highlight bash %}
 crontab -e
