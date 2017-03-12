@@ -43,12 +43,12 @@ Algumas das opções mais frequentes:
 
 ## GZIP
 
-[Gzip](https://www.gnu.org/software/gzip/) é a abreviação de __GNU z__ip, um Software Livre de compressão sem perda de dados, criado por Jean-loup Gailly e Mark Adler. O programa é baseado no algoritmo __DEFLATE__. A extensão gerada pelo __gzip__ é o __.gz__, e seu formato contém apenas um arquivo comprimido. Em sistemas [UNIX](https://cse.google.com.br/cse/publicurl?cx=004473188612396442360:qs2ekmnkweq&q=UNIX) é comum gerar um arquivo contendo diversos outros arquivos com o programa tar, e depois comprimi-lo com o gzip, gerando um arquivo __.tar.gz__.
+[Gzip](https://www.gnu.org/software/gzip/) é a abreviação de __GNU z__ ip, um Software Livre de compressão sem perda de dados, criado por Jean-loup Gailly e Mark Adler. O programa é baseado no algoritmo __DEFLATE__. A extensão gerada pelo __gzip__ é o __.gz__, e seu formato contém apenas um arquivo comprimido. Em sistemas [UNIX](https://cse.google.com.br/cse/publicurl?cx=004473188612396442360:qs2ekmnkweq&q=UNIX) é comum gerar um arquivo contendo diversos outros arquivos com o programa tar, e depois comprimi-lo com o gzip, gerando um arquivo __.tar.gz__.
 __Não confundir com o formato ZIP__.
 
-##TAR.BZ2
+## TAR.BZ2
 
-> Formato de compactação de arquivos, muito utilizado em sistemas Unix-Like.
+> Formato de compactação de arquivos, muito utilizado em sistemas __Unix-Like__.
 
 ## COMPACTAÇÃO
 
