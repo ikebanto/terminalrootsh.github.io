@@ -18,7 +18,7 @@ tags:
 __Comprimir__ dados destina-se também a retirar a redundância, baseando-se que muitos dados contêm informações redundantes que podem ou precisam ser eliminadas de alguma forma. Essa forma é através de uma regra, chamada de código ou protocolo, que, quando seguida, __elimina os bits redundantes de informações__, de modo a __diminuir seu tamanho__ nos arquivos. Por exemplo, a __sequência "AAAAAA"__ que ocupa __6 bytes__, poderia ser representada pela __sequência "6A"__, que __ocupa 2 bytes__, __economizando 67% de espaço__.
 Alguns compactadores de arquivos:
  
-![Blog Linux](/assets/img/lpi/compactadores-do-linux.png "Blog Linux")
+![Blog Linux](/assets/img/lpi/compactadores-linux.png "Blog Linux")
  
 ## TAR
 > MIME:  __application/x-tar__
