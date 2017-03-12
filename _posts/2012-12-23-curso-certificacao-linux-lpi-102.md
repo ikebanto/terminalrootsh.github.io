@@ -44,8 +44,9 @@ Ex.:(deve-se escrever em formato de data americano mês/dia/ano [mm/dd/aaaa])
 chage -E 12/31/2012 nome_do_usuario
 {% endhighlight %}
 
-Mais sobre Admnistração do Sistema (Contas de Usuários)
-+ O diretório'/etc/skel é utilizado para fornecer a estrutura básica do diretório home do usuário.Nele contém os arquivos
+# Mais sobre Admnistração do Sistema (Contas de Usuários)
+
++ O diretório __/etc/skel/__ é utilizado para fornecer a estrutura básica do diretório home do usuário.Nele contém os arquivos
 {% highlight bash %}
 /etc/skel$ ls -a
 . .. .bash_logout .bashrc .profile
