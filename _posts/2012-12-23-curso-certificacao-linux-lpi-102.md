@@ -5,7 +5,7 @@ date: '2012-12-23T11:07:00.000-08:00'
 image: '/assets/img/lpi/sysadm.jpg'
 description: "Em um sistema multi-usuário, é necessário existir mecanismos para proteger os usuários, de forma que seus arquivos privativos fiquem seguros, inacessíveis aos outros."
 main-class: 'linux'
-tags
+tags:
 - Linux
 - LPI
 ---
