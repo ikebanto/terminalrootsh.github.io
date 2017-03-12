@@ -11,7 +11,7 @@ tags:
 
 ![30 exemplos do comando sed - com regex](/assets/img/editores/sed.jpg "30 exemplos do comando sed - com regex")
 
-> O [Sed](https://www.gnu.org/software/sed/manual/sed.html) é um editor de textos não interativo. Vem do inglês __S__tream __ED__itor, ou seja, __editor de fluxos de texto__. O Sed da [GNU](https://www.gnu.org/), atualmente é o utilizado pela maioria das distribuições de [Linux](http://www.terminalroot.com.br/tags#linux) e é o que tem mais funcionalidades novas, mas se por algum caso não tenha
+> O [Sed](https://www.gnu.org/software/sed/manual/sed.html) é um editor de textos não interativo. Vem do inglês [S]tream [ED]itor, ou seja, __editor de fluxos de texto__. O Sed da [GNU](https://www.gnu.org/), atualmente é o utilizado pela maioria das distribuições de [Linux](http://www.terminalroot.com.br/tags#linux) e é o que tem mais funcionalidades novas, mas se por algum caso não tenha
 
 ### [Download do sed](ftp://ftp.unicamp.br/pub/gnu/sed/)
 
