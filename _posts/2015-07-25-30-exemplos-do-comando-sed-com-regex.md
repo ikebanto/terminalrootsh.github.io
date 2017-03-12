@@ -3,7 +3,7 @@ layout: post
 title: "30 exemplos do comando sed - com regex"
 date: '2015-07-25T11:11:00.000-07:00'
 image: '/assets/img/editores/sed.jpg'
-description: "O Sed é um editor de textos não interativo.Vem do inglês "Stream EDitor", ou seja, editor de fluxos (de texto)."
+description: "O Sed é um editor de textos não interativo.Vem do inglês Stream EDitor, ou seja, editor de fluxos (de texto)."
 main-class: 'bash'
 tags:
 - SED
