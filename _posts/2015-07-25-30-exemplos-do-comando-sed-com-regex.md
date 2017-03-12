@@ -15,10 +15,6 @@ tags:
 
 ### [Download do sed](ftp://ftp.unicamp.br/pub/gnu/sed/)
 
-### Instalação via gerenciador de pacotes
-
-> [gerenciador] install sed
-
 ### Exemplo de instalação no [Debian](https://cse.google.com.br/cse/publicurl?cx=004473188612396442360:qs2ekmnkweq&q=debian) [GNU](https://cse.google.com.br/cse/publicurl?cx=004473188612396442360:qs2ekmnkweq&q=GNU)/[Linux](https://cse.google.com.br/cse/publicurl?cx=004473188612396442360:qs2ekmnkweq&q=Linux)
 {% highlight bash %}
 apt-get install sed
