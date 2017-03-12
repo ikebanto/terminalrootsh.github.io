@@ -12,7 +12,9 @@ tags:
 
 ![Curso Certificação Linux LPI-102: Administração do Sistema](/assets/img/lpi/sysadm.jpg "Curso Certificação Linux LPI-102: Administração do Sistema")
 
-Em um sistema __multi-usuário__, é necessário existir mecanismos para proteger os usuários, de forma que seus arquivos privativos fiquem seguros, inacessíveis aos outros. Outro aspecto é em relação aos recursos do sistema reservados: não deve ser possível a um usuário criar arquivos que ocupem todo o espaço do disco, por exemplo, e assim, indiretamente, proibir todos os outros usuários de salvarem seus próprios arquivos. Atingimos esse objetivo criando contas, que representam todos os recursos e informações pertencentes a um determinado usuário. A origem do nome conta, depende muito da história da computação, quando o espaço em disco e tempo de uso da máquina tinha que ser cobrado de acordo com o seu uso, de forma semelhante a uma conta telefõnica.
+Em um sistema __multi-usuário__, é necessário existir mecanismos para proteger os usuários, de forma que seus arquivos privativos fiquem seguros, inacessíveis aos outros. Outro aspecto é em relação aos recursos do sistema reservados: não deve ser possível a um usuário criar arquivos que ocupem todo o espaço do disco, por exemplo, e assim, indiretamente, proibir todos os outros usuários de salvarem seus próprios arquivos. 
+
+Atingimos esse objetivo criando contas, que representam todos os recursos e informações pertencentes a um determinado usuário. A origem do nome conta, depende muito da história da computação, quando o espaço em disco e tempo de uso da máquina tinha que ser cobrado de acordo com o seu uso, de forma semelhante a uma conta telefõnica.
 
 A cada usuário é destinado um nome de login e senha, como [já vimos anteriormente](http://terminalroot.com.br/2012/11/curso-certificacao-linux-lpi-1.html), bem como um __UID__, __GID__, nome do diretório __home__ e __shell__ inicial (veja imagem do arquivo /etc/passwd). Maiores informações podem ser obtidas com o comando man 5 passwd.
 
