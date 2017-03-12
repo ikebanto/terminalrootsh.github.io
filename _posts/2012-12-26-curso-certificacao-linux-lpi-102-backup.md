@@ -23,7 +23,7 @@ Alguns compactadores de arquivos:
 ## TAR
 > MIME:  __application/x-tar__
 
-[TAR ou tar](https://www.gnu.org/software/tar/) (abreviatura de __T__ape __AR__chive), é um formato de arquivamento de arquivos (ficheiros). Apesar do nome "__tar__" ser derivado de "__tape archive__", o seu uso não se restringe a fitas magnéticas. Ele se tornou largamente usado para armazenar vários arquivos em um único, preservando informações como datas e permissões. Normalmente é produzido pelo comando "__tar__". 
+[TAR ou tar](https://www.gnu.org/software/tar/) (abreviatura de __T__ ape __AR__ chive), é um formato de arquivamento de arquivos (ficheiros). Apesar do nome "__tar__" ser derivado de "__tape archive__", o seu uso não se restringe a fitas magnéticas. Ele se tornou largamente usado para armazenar vários arquivos em um único, preservando informações como datas e permissões. Normalmente é produzido pelo comando "__tar__". 
 Algumas das opções mais frequentes:
 
 
