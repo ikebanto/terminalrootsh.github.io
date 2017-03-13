@@ -5,7 +5,7 @@ date: '2013-04-02T16:11:00.000-07:00'
 image: '/assets/img/lpi/dns-bind.jpg'
 description: "BIND (Berkeley Internet Name Domain ou, como chamado previamente, Berkeley Internet Name Daemon) é o servidor para o protocolo DNS mais utilizado na Internet."
 main-class: 'linux'
-tags
+tags:
 - Linux
 - LPI
 ---
