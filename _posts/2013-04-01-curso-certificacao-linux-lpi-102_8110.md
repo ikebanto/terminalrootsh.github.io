@@ -64,7 +64,7 @@ Após isso recarregue as informações no Postfix
 /etc/init.d/postfix reload
 {% endhighlight %}
 
-##Testando o Envio de E-mails
+## Testando o Envio de E-mails
 
 No meu PC existe um usuario com o nome [marcos] e outro com o nome [eric], teste com os usuarios da sua máquina, se não houver crie-os com useradd, neste exemplo abaixo o usuário [marcos] enviou um e-mail para o usuário [eric], lógico que estou logado como root, mas usei o comando [MAIL from:] e especifiquei o usuário que envia o e-mail, para critério de teste.
 
