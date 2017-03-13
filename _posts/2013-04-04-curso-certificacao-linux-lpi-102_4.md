@@ -64,7 +64,7 @@ ssh -p 2222 marcos@192.168.1.107
 /etc/init.d/ssh restart
 {% endhighlight %}
 
-_## Copiar arquivos remotamente com SSH
+## Copiar arquivos remotamente com SSH
 
 > Nesse exemplo abaixo vou copiar o arquivo "__teste.txt__" para o a máquina remota, isso será copiado para o diretório __/home/marcos/__, lógico, irá pedir senha antes de executar a cópia
 {% highlight bash %}
