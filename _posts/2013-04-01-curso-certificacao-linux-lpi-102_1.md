@@ -3,7 +3,7 @@ layout: post
 title: "Curso Certificação Linux LPI-102: Compartilhamento via Samba"
 date: '2013-04-01T16:19:00.000-07:00'
 image: '/assets/img/lpi/samba.jpg'
-description: "O Samba é um "software servidor" para Linux (e outros sistemas baseados em Unix) que permite o gerenciamento e compartilhamento de recursos em redes"
+description: "O Samba é um software servidor para Linux (e outros sistemas baseados em Unix) que permite o gerenciamento e compartilhamento de recursos em redes"
 main-class: 'linux'
 tags:
 - Linux
