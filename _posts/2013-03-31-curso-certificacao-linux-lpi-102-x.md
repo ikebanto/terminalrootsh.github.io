@@ -14,7 +14,7 @@ tags:
 
 __X Window System__, __X-Window__, __X11__ ou simplesmente __X__ é um software de sistema e um protocolo que fornece uma base para interfaces gráficas de usuário (com o conceito de janelas) e funcionalidade rica de dispositivos de entrada para redes de computadores. Ele cria uma camada de abstração de hardware onde o software é escrito para usar um conjunto generalizado de comandos, permitindo a independência de dispositivo e reutilização programas em qualquer computador que implemente o __X__.
 
-Originalmente chamado simplesmente de __X__, foi desenvolvido no __MIT__ em 1984. Atualmente está na versão 11, publicada em setembro de 1987, e por isso carrega no nome este número. __X-Window__ é o toolkit e protocolo padrão para __GUI__ nos sistemas __Unix__ e assemelhados, como o __Linux__, mas existem versões para outros sistemas operacionais, como o __Microsoft Windows__ e o__ Mac OS__, por exemplo.
+Originalmente chamado simplesmente de __X__, foi desenvolvido no __MIT__ em 1984. Atualmente está na versão 11, publicada em setembro de 1987, e por isso carrega no nome este número. __X-Window__ é o toolkit e protocolo padrão para __GUI__ nos sistemas __Unix__ e assemelhados, como o __Linux__, mas existem versões para outros sistemas operacionais, como o __Microsoft Windows__ e o __Mac OS__ , por exemplo.
  
 ## Configurando o X no Debian
 {% highlight bash %}
