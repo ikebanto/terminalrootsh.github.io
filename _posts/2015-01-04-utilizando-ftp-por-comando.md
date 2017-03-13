@@ -22,7 +22,7 @@ Caso você deseje tornar seu computador um servidor FTP, para poder acessá-lo e
 
 > obs.: precisar configurar o arquivo de configuração para restringir acessos e depois reiniciá-lo, não vou pôr aqui, pois o post é somente sobre os comandos do FTP, mas você pode pesquisar na internet, é bem simples!):{
 
-% highlight bash %}
+{% highlight bash %}
 apt-get install proftpd
 {% endhighlight %}
 
