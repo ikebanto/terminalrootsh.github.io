@@ -3,7 +3,7 @@ layout: post
 title: "Curso Certificação Linux LPI-102: Configurando o Apache"
 date: '2013-04-05T15:00:00.000-07:00'
 image: '/assets/img/lpi/apache-http-server.jpg'
-description: "O servidor Apache (ou Servidor HTTP Apache, em inglês: Apache HTTP Server, ou simplesmente: Apache) é o mais bem sucedido servidor web livre."
+description: "O servidor Apache (ou Apache HTTP Server, ou simplesmente Apache) é o mais bem sucedido servidor web livre."
 main-class: 'linux'
 tags:
 - Linux
