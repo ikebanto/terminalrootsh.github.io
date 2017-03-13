@@ -46,7 +46,7 @@ O __modelo TCP/IP__ tem __5 classes de endereços__ definidas pelas letras: __A_
 ![Blog Linux](/assets/img/lpi/classe-C.png "Blog Linux")
 
 ## Classe D e Classe E:
-![Blog Linux](/assets/img/lpi/classe-D-E.png "Blog Linux")
+![Blog Linux](/assets/img/lpi/classes-D-E.png "Blog Linux")
 
 Existem alguns endereços __IP__ especiais que são reservados para funções específicas que não podem ser utilizados como endereços de uma máquina da rede.A __classe A__ 127.0.0.1 é utilizada como referência a própria máquina.Normalmente o endereço __127.0.0.1__ é associado ao nome localhost.
  
