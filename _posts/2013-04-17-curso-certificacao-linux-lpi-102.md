@@ -2,22 +2,23 @@
 layout: post
 title: 'Curso Certificação Linux LPI-102: A Certificação LPI'
 date: '2013-04-17T17:22:00.000-07:00'
-description: 'Curso Certificação Linux LPI-102: A Certificação LPI'
+description: "O Linux Professional Institute (LPI) é uma organização sem fins lucrativos, sediada na California - USA um programa de certificação em sistemas GNU/Linux."
 main-class: 'linux'
 tags:
 - Linux
 - LPI
-image: http://3.bp.blogspot.com/-9mnG3nG6dfM/UVclRNG96cI/AAAAAAAABUM/bpYJm4tVrE8/s72-c/lpi.png
-twitter_text: 'Curso Certificação Linux LPI-102: A Certificação LPI'
-introduction: 'Curso Certificação Linux LPI-102: A Certificação LPI'
 ---
-![Blog Linux](http://3.bp.blogspot.com/-9mnG3nG6dfM/UVclRNG96cI/AAAAAAAABUM/bpYJm4tVrE8/s200/lpi.png "Blog Linux")
+![A Certificação LPI](/assets/img/lpi/lpi.png "A Certificação LPI")
  
- O Linux Professional Institute - LPI - é uma organização sem fins lucrativos, sediada na California - USA e constituída em 1999 pela comunidade Linux e desenvolve de forma acessível um programa de certificação em sistemas GNU/Linux reconhecido internacionalmente por empresas, empregadores e profissionais de TI.
+> O [Linux Professional Institute - LPI](http://www.lpi.org/) - é uma organização sem fins lucrativos, sediada na California - USA e constituída em 1999 pela comunidade Linux e desenvolve de forma acessível um programa de certificação em sistemas __GNU/Linux__ reconhecido internacionalmente por empresas, empregadores e profissionais de __TI__.
+
 Certificar-se é uma forma de atestar conhecimentos profissionais, ou seja, validar a eficiência de alguém em determinado assunto.
-A principal vantagem da LPI sobre outras certificações Linux é a neutralidade de distribuição, pois as provas do LPI são baseadas no Linux Standard Base, um conjunto de normas que mantém a compatibilidade entre as diferentes versões e distribuições do sistema operacional. A certificação LPI é, portanto, independente de distribuição.
-O LPI é reconhecido como a primeira organização do mundo a defender e ajudar o uso profissional do Linux, Open Source e Free Software através de certificação profissional. Os exames de certificação do LPI são aplicados em milhares de lugares no mundo, em vários idiomas e com o apoio de empresários, fabricantes e instrutores.
-Lista de Assuntos com os Links para cada um(se você clicar em um link, abrirá em nova aba):
+A principal vantagem da LPI sobre outras certificações Linux é a neutralidade de distribuição, pois as provas do __LPI__ são baseadas no __Linux Standard Base__, um conjunto de normas que mantém a compatibilidade entre as diferentes versões e distribuições do sistema operacional. A certificação LPI é, portanto, independente de distribuição.
+
+> O [LPI](http://www.lpi.org/) é reconhecido como a primeira organização do mundo a defender e ajudar o uso profissional do Linux, Open Source e Free Software através de certificação profissional. Os exames de certificação do LPI são aplicados em milhares de lugares no mundo, em vários idiomas e com o apoio de empresários, fabricantes e instrutores.
+
+## Lista de Assuntos
+
 01- A Certificação LPI
 02- Noções Fundamentais
 03- Documentação
@@ -61,5 +62,6 @@ Lista de Assuntos com os Links para cada um(se você clicar em um link, abrirá 
 41- Segurança
 42- Criptografia de Dados
 43- Acessibilidade no Linux
-44- Gerenciamento de dados SQL  
-Visite o site do LPI Mundial e saiba mais. 
+44- Gerenciamento de dados SQL
+
+[Visite o site do LPI Brasil e saiba mais.](http://www.lpibrasil.com.br/) 
