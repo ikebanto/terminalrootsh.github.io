@@ -21,22 +21,22 @@ O servidor é configurado por um arquivo mestre nomeado httpd.conf e opcionalmen
  
 > Vou explicar aqui como você disponibilizar o acesso a uma pasta do __Apache(www)__ exigindo usuario e senha.
 
-01. Primeiramente devemos criar o diretório onde desejamos restringir o acesso caso o mesmo não exista.
+* Primeiramente devemos criar o diretório onde desejamos restringir o acesso caso o mesmo não exista.
 {% highlight bash %}
 mkdir /var/www/teste 
 {% endhighlight %}
 
-02. Criaremos agora um arquivo somente para testes com o nome "index.html" no diretório "/var/www/teste".
+* Criaremos agora um arquivo somente para testes com o nome "index.html" no diretório "/var/www/teste".
 {% highlight bash %}
 echo Testando autenticação no Apache > /var/www/teste/index.html 
 {% endhighlight %}
 
-03. Criar os arquivos .htaccess e passwd no diretório onde se deseja restringir o acesso.
+* Criar os arquivos .htaccess e passwd no diretório onde se deseja restringir o acesso.
 {% highlight bash %}
 touch passwd .htaccess
 {% endhighlight %}
 
-04. Conteúdo do arquivo .htaccess 
+* Conteúdo do arquivo .htaccess 
 {% highlight bash %}
 AuthName "Nome que aparecerá no título da janela"
 AuthType Basic
@@ -44,7 +44,7 @@ AuthUserFile /var/www/teste/passwd
 require valid-user 
 {% endhighlight %}
 
-05. Criação dos usuários que terão permissão para acessar o diretório
+* Criação dos usuários que terão permissão para acessar o diretório
 {% highlight bash %}
 htpasswd -c passwd usuário
 {% endhighlight %}
@@ -63,7 +63,7 @@ more passwd
 usuário:ZzbJ.YtR6TyyU
 {% endhighlight %}
 
-06. Edite o arquivo
+* Edite o arquivo
 {% highlight bash %}
 "/etc/apache2/sites-available/default"
 {% endhighlight %}
@@ -80,12 +80,12 @@ Deny from all
 Allow from 172.16.0.0/255.0.0.0 ::1/128
 {% endhighlight %}
 
-07. Reinicie o serviço do Apache para atualizar as configurações.
+* Reinicie o serviço do Apache para atualizar as configurações.
 {% highlight bash %}
 /etc/init.d/apache2 restart
 {% endhighlight %}
 
-08. Teste agora suas configurações acessando __http://localhost/teste__, fornecendo o nome de usuário senha.
+* Teste agora suas configurações acessando __http://localhost/teste__, fornecendo o nome de usuário senha.
 
 > Observações: as linhas abaixo se referem à restrição por IP, não são necessárias à autenticação.
 
