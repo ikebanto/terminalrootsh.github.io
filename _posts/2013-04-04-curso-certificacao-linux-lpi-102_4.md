@@ -12,7 +12,7 @@ tags:
 
 ![Configurando o Shell Seguro OpenSSH](/assets/img/lpi/ssh.jpg "Configurando o Shell Seguro OpenSSH")
 
-> __Secure Shell__ ou __SS__H é, simultaneamente, um programa de computador e um protocolo de rede que permite a conexão com outro computador na rede, de forma a executar comandos de uma unidade remota. Possui as mesmas funcionalidades do TELNET, com a vantagem da conexão entre o cliente e o servidor ser criptografada.Uma de suas mais utilizadas aplicações é o chamado Tunnelling, que oferece a capacidade de redirecionar pacotes de dados.
+> __Secure Shell__ ou __SS__ H é, simultaneamente, um programa de computador e um protocolo de rede que permite a conexão com outro computador na rede, de forma a executar comandos de uma unidade remota. Possui as mesmas funcionalidades do TELNET, com a vantagem da conexão entre o cliente e o servidor ser criptografada.Uma de suas mais utilizadas aplicações é o chamado Tunnelling, que oferece a capacidade de redirecionar pacotes de dados.
 
 ## Instalação
 
