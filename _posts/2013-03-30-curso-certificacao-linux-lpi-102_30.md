@@ -40,7 +40,7 @@ tail /var/log/syslog
 * __° debug (7)__ - Informações de debug (depuração)
 * __° info (6)__ - Mensagens apenas para informação
 * __° notice (5)__- Condições normais, mas significativas
-* __° warning (4)-Condições de alerta
+* __° warning (4)__- Condições de alerta
 * __° err (3)__ - Condições de erro
 * __° crit (2)__ - Condições críticas
 * __° alert (1)__ - Ações imediatas são requeridas
@@ -48,7 +48,7 @@ tail /var/log/syslog
  
 Para cada facilidade podemos especificar um nível de severidade, que vai definir o grau de importância da mensagem.
 
-O arquivo [/etc/syslog.conf] possui o seguinte formato
+O arquivo __/etc/syslog.conf__ possui o seguinte formato
  
 
 > __facilidade.nivel ação__
@@ -56,7 +56,7 @@ O arquivo [/etc/syslog.conf] possui o seguinte formato
  
 ## Ações do Syslog
 
-A ação específica o que deverá ser feito com a mensagem.Pode ser um arquivo de LOG, um PIPE (direcionado para um utilitário ou aplicativo) um outro sistema remoto, determinados usuários ou todos os usuários.
+A ação específica o que deverá ser feito com a mensagem.Pode ser um arquivo de __LOG__, um __PIPE__ (direcionado para um utilitário ou aplicativo) um outro sistema remoto, determinados usuários ou todos os usuários.
  
 * __° Arquivo__ - As mensagens são gravadas em arquivos no sistema.
 * __° PIPE__  - As mensagens são enviadas para um arquivo especial chamado file descriptor.
@@ -66,15 +66,16 @@ A ação específica o que deverá ser feito com a mensagem.Pode ser um arquivo 
  
 ## Caracteres especiais
 
-* __° Sempre use TBS ao invés de espaços.
-* __° Os caracteres ("*", "=", "!" e "-") têm funções especiais.
+> Sempre use TBS ao invés de espaços.
+
+> Os caracteres ("__*__", "__=__", "__!__" e "__-__") têm __funções especiais__.
  
 Para visualizar o syslog
 {% highlight bash %}
 /etc/syslog.conf
 {% endhighlight %}
  
-A rotação dos arquivos de LOG é feita no seu arquivo principal
+A rotação dos arquivos de __LOG__ é feita no seu arquivo principal
 {% highlight bash %}
 cat /etc/logrotate.conf
 {% endhighlight %}
