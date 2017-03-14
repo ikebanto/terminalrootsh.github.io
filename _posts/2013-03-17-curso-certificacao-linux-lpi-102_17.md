@@ -4,6 +4,7 @@ title: "Curso Certificação Linux LPI-102: Utilitários e Ferramentas do TCP/IP
 date: '2013-03-17T06:51:00.000-07:00'
 image: '/assets/img/lpi/tools.jpg'
 description: "Principais ferramentas do TCP/IP no Linux"
+main-class: 'linux'
 tags:
 - Linux
 - LPI
