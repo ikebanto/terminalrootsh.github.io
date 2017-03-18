@@ -20,7 +20,7 @@ tags:
 * __Administrar Redes e Servidores__ ; 
 * __Criar Games__ ; 
 * __Editar, Transformar, e Criar: Textos, Vídeos, Imagens, Músicas,...__;
-* __Criar Instaladores ; 
+* __Criar Instaladores__ ; 
 * __Pesquisar CEP__; 
 * __Contar Palavras__; 
 * __Ler Feed__; 
