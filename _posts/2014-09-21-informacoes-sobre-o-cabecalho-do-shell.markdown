@@ -4,55 +4,84 @@ title: Informações sobre o Cabeçalho do Shell (how-to)
 date: '2014-09-21T11:23:00.000-07:00'
 description: Informações sobre o Cabeçalho do Shell (how-to)
 main-class: 'bash'
+color: '#c2003a'
+author: Marcos Oliveira
 tags:
 - Shell Script
-image: http://4.bp.blogspot.com/--YWY6B8OBdA/VB8WUl2-p1I/AAAAAAAAAyo/RZ1oOzxLmiE/s72-c/shell.jpg
+modified_time: '2014-09-21T11:23:00.352-07:00'
+thumbnail: http://4.bp.blogspot.com/--YWY6B8OBdA/VB8WUl2-p1I/AAAAAAAAAyo/RZ1oOzxLmiE/s72-c/shell.jpg
 twitter_text: Informações sobre o Cabeçalho do Shell (how-to)
 introduction: Informações sobre o Cabeçalho do Shell (how-to)
 ---
-![Blog Linux](http://4.bp.blogspot.com/--YWY6B8OBdA/VB8WUl2-p1I/AAAAAAAAAyo/RZ1oOzxLmiE/s320/shell.jpg "Blog Linux")
-O #! linha diz ao kernel (especificamente, a implementação do execve chamada de sistema) que este programa é escrito em uma linguagem interpretada; O caminho absoluto que segue identifica o intérprete. Programas compilados para código de máquina começar com uma seqüência de byte diferente - na maioria dos Unixes modernos, 7f 45 4c 46 (^ ELF?) que os identifica como tal.
-shebang o caracter!
-Você pode colocar um caminho absoluto para qualquer programa que você quer após o #! , enquanto que o programa em si não é um #! script. O kernel reescreve uma invocação
-./script arg1 arg2 arg3 ... 
-onde ./script começa com, digamos, #! /usr/bin/perl #! /usr/bin/perl , como se a linha de comando tinha sido realmente
-/usr/bin/perl ./script arg1 arg2 arg3 
-Ou, como você viu, você pode usar #! /bin/sh #! /bin/sh para escrever um roteiro destinado a ser interpretado por sh .
-O #! linha só é processado se você chamar diretamente o script ( ./script na linha de comando); O arquivo também deve ser executável ( chmod +x script ). Se você faz sh ./script a #! linha não é necessário (e será ignorado se houver), eo arquivo não precisa ser executável. A ponto de o recurso é para que você possa invocar diretamente programas em linguagem interpretada sem ter que saber o idioma que estão escritos no (Do. grep '^#!' /usr/bin/* - você vai descobrir que um grande número programas de ações estão de fato usando este recurso.)
-Aqui estão algumas regras para usar esse recurso de forma segura:
- O #! deve ser os dois primeiros caracteres no arquivo.
- O caminho após #! deve ser um caminho absoluto (começa com / ), que não contém qualquer espaço, tab, ou caracteres de nova linha.
- É bom estilo, mas não obrigatório, para colocar um espaço entre o #! ea / . Não coloque mais do que um espaço lá.
- Você não pode colocar variáveis ​​shell no #! linha, não será ampliada.
- Você pode colocar um argumento de linha de comando após o caminho absoluto, separado por um único espaço. Como o caminho absoluto, esse argumento não pode conter espaços, tabulações ou caracteres de nova linha. Às vezes, isso é necessário para fazer as coisas para trabalhar ( #! /usr/bin/awk -f ), às vezes é apenas útil ( #! /usr/bin/perl -Tw ). Infelizmente, você não pode colocar dois ou mais argumentos após o caminho absoluto.
- Algumas pessoas vão dizer que você use #! /usr/bin/env interpreter #! /usr/bin/env interpreter em vez de #! /absolute/path/to/interpreter #! /absolute/path/to/interpreter . não faça isso. Faz o comportamento do seu programa dependem do $PATH variável do usuário que chama o script. E não todos os sistemas têm env em primeiro lugar.
- Programas que precisam setuid ou setgid privilégios não podem usar #! ; eles têm que ser compilado para código de máquina. (Se você não sabe o que setuid é, não se preocupe com isso.) 
-Quanto csh , ele se relaciona com sh. Tem (ou melhor, tinha, implementações modernas de sh ter pego) uma série de vantagens sobre sh para o uso interativo, mas usá-lo (ou seu descendente tcsh ) para scripting é quase sempre um erro . Se você é novo para shell script em geral, eu recomendo fortemente que você ignorá-lo e se concentrar em sh . Se você estiver usando uma csh parente como seu shell, mude para bash ou zsh , de modo que a linguagem de comando interativo será o mesmo que a linguagem de script que você está aprendendo. 
-As versões recentes do Linux que permitem que o intérprete especificado para ser um script. É uma prática comum para omitir o espaço após o #! ; nenhum comentário sobre se isso é bom estilo. Veja esta pergunta e minha resposta para uma discussão sobre os prós e contras do #!/usr/bin/env  
+
+
+<div class="separator" style="clear: both; text-align: center;"><a href="http://4.bp.blogspot.com/--YWY6B8OBdA/VB8WUl2-p1I/AAAAAAAAAyo/RZ1oOzxLmiE/s1600/shell.jpg" imageanchor="1" style="margin-left: 1em; margin-right: 1em;"><img border="0" src="http://4.bp.blogspot.com/--YWY6B8OBdA/VB8WUl2-p1I/AAAAAAAAAyo/RZ1oOzxLmiE/s320/shell.jpg" height="200" width="168" /></a></div><b><span style="font-size: small;">O <span style="color: blue;">#!</span> linha diz ao kernel (especificamente, a implementação do <span style="color: blue;">execve</span> chamada de sistema) que este programa é escrito em uma linguagem interpretada; O caminho absoluto que segue identifica o intérprete. Programas compilados para código de máquina começar com uma seqüência de byte diferente - na maioria dos <span style="color: blue;">Unixes</span> modernos, <span style="color: blue;">7f 45 4c 46 (^ ELF?)</span> que os identifica como tal.
+
+<a href="http://en.wikipedia.org/wiki/Shebang_%28Unix%29" target="_blank">shebang</a> o caracter!
+
+Você pode colocar um caminho absoluto para qualquer programa que você quer após o <span style="color: blue;">#!</span> , enquanto que o programa em si não é um <span style="color: blue;">#!</span> script. O kernel reescreve uma invocação
+
+<span style="color: blue;">./script arg1 arg2 arg3 ... </span>
+onde <span style="color: blue;">./script</span> começa com, digamos, <span style="color: blue;"><span style="background-color: white;">#! /usr/bin/perl #! /usr/bin/perl</span></span> , como se a linha de comando tinha sido realmente
+
+<span style="color: blue;">/usr/bin/perl ./script arg1 arg2 arg3 </span>
+Ou, como você viu, você pode usar <span style="color: blue;">#! /bin/sh #! /bin/sh</span> para escrever um roteiro destinado a ser interpretado por <span style="color: blue;">sh</span> .
+
+O <span style="color: blue;">#!</span> linha só é processado se você chamar diretamente o script (<span style="color: blue;"> ./script</span> na linha de comando); O arquivo também deve ser executável (<span style="color: blue;"> chmod +x script </span>). Se você faz sh <span style="color: blue;">./script</span> a <span style="color: blue;">#!</span> linha não é necessário (e será ignorado se houver), eo arquivo não precisa ser executável. A ponto de o recurso é para que você possa invocar diretamente programas em linguagem interpretada sem ter que saber o idioma que estão escritos no (Do. <span style="color: blue;">grep '^#!' /usr/bin/*</span> - você vai descobrir que um grande número programas de ações estão de fato usando este recurso.)
+
+<span style="font-size: x-large;">Aqui estão algumas regras para usar esse recurso de forma segura:</span>
+
+ O <span style="color: blue;">#!</span> deve ser os dois primeiros caracteres no arquivo.
+ O caminho após <span style="color: blue;">#! </span>deve ser um caminho absoluto (começa com <span style="color: blue;">/ </span>), que não contém qualquer espaço, tab, ou caracteres de nova linha.
+ É bom estilo, mas não obrigatório, para colocar um espaço entre o <span style="color: blue;">#!</span> ea <span style="color: blue;">/</span> . Não coloque mais do que um espaço lá.
+ Você não pode colocar variáveis ​​shell no <span style="color: blue;">#!</span> linha, não será ampliada.
+ Você pode colocar um argumento de linha de comando após o caminho absoluto, separado por um único espaço. Como o caminho absoluto, esse argumento não pode conter espaços, tabulações ou caracteres de nova linha. Às vezes, isso é necessário para fazer as coisas para trabalhar ( <span style="color: blue;">#! /usr/bin/awk -f </span>), às vezes é apenas útil ( <span style="color: blue;">#! /usr/bin/perl -Tw</span> ). Infelizmente, você não pode colocar dois ou mais argumentos após o caminho absoluto.
+ Algumas pessoas vão dizer que você use <span style="color: blue;">#!</span> /usr/bin/env interpreter <span style="color: blue;">#!</span> /usr/bin/env interpreter em vez de <span style="color: blue;">#!</span> /absolute/path/to/interpreter <span style="color: blue;">#! </span>/absolute/path/to/interpreter . não faça isso. Faz o comportamento do seu programa dependem do <span style="color: blue;">$PATH</span> variável do usuário que chama o script. <span style="font-size: large;">E não todos os sistemas têm <span style="color: blue;">env</span> em primeiro lugar.</span>
+ Programas que precisam <span style="color: blue;">setuid</span> ou <span style="color: blue;">setgid</span> privilégios não podem usar <span style="color: blue;">#!</span> ; eles têm que ser compilado para código de máquina. (Se você não sabe o que setuid é, não se preocupe com isso.) 
+
+Quanto <span style="color: blue;">csh</span> , ele se relaciona com sh. Tem (ou melhor, tinha, implementações modernas de sh ter pego) uma série de vantagens sobre <span style="color: blue;">sh</span> para o uso interativo, mas usá-lo (ou seu descendente <span style="color: blue;">tcsh</span> ) para scripting é quase sempre um erro . Se você é novo para shell script em geral, eu recomendo fortemente que você ignorá-lo e se concentrar em <span style="color: blue;">sh</span> . Se você estiver usando uma csh parente como seu shell, mude para bash ou <span style="color: blue;">zsh</span> , de modo que a linguagem de comando interativo será o mesmo que a linguagem de script que você está aprendendo. </span>
+
+<span style="font-size: small;">As versões recentes do Linux que permitem que o intérprete especificado para ser um script. É uma prática comum para omitir o espaço após o #! ; nenhum comentário sobre se isso é bom estilo. Veja esta pergunta e minha resposta para uma discussão sobre os prós e contras do #!/usr/bin/env  
  
-KeithThompson Estou com a impressão de Linux é a única variante Unix comum que permite ao intérprete para ser um script, por isso ainda não é algo em que confiar. Desde que eu escrevi isso, eu tenho me encontrado uma situação onde #!/usr/bin/env era a coisa certa, mas continua a ser a minha opinião que é quase sempre uma má idéia 
-Isso define o shell (interpretador de comandos) que você está usando para a interpretação / execução de seu script. Cada camada é um pouco diferente na forma como ele interage com o usuário e executa scripts (programas).
-Quando você digita um comando no prompt do Unix, você está interagindo com o shell.
-Por exemplo, #!/bin/csh refere-se ao C-shell, /bin/tcsh o t-shell, /bin/bash o shell bash, etc
+<span style="color: blue;">KeithThompson</span> Estou com a impressão de <span style="color: blue;">Linux</span> é a única variante <span style="color: blue;">Unix</span> comum que permite ao intérprete para ser um script, por isso ainda não é algo em que confiar. Desde que eu escrevi isso, eu tenho me encontrado uma situação onde <span style="color: blue;">#!/usr/bin/env</span> <i><u>era a coisa certa</u></i>, <i><u>mas continua a ser a minha opinião que é quase sempre uma má idéia</u></i></span> 
+Isso define o shell (interpretador de comandos) que você está usando para a interpretação <span style="color: blue;">/</span> execução de seu script. Cada camada é um pouco diferente na forma como ele interage com o usuário e executa scripts (programas).
+
+Quando você digita um comando no prompt do <span style="color: blue;">Unix</span>, você está interagindo com o <span style="color: blue;">shell</span>.
+
+Por exemplo, <span style="color: blue;">#!/bin/csh</span> refere-se ao <span style="color: blue;">C-shell, /bin/tcsh o t-shell, /bin/bash</span> o <span style="color: blue;">shell bash</span>, etc
+
 Você pode dizer que o shell interativo você estiver usando o
- echo $SHELL 
+
+ <span style="color: blue;">echo $SHELL </span>
+
 de comando, ou alternativamente
- env | grep -i shell 
-Você pode mudar seu shell de comandos com o chsh comando.
+
+ <span style="color: blue;">env | grep -i shell </span>
+
+<span style="font-size: large;">Você pode mudar seu shell de comandos com o <span style="color: blue;">chsh</span> comando.</span>
+
+
 Este conceito estende-se a outros scripts também. Por exemplo, se você programar em Python você colocaria
- #!/usr/bin/python 
-na parte superior do seu programa Python 
-O valor de $SHELL não significa necessariamente dizer que você está executando no momento; normalmente diz-lhe o shell padrão. tcsh define $version e $tcsh define $BASH_VERSIONa
-/bin/sh é um link para o shell padrão do usuário, que na maioria das  vezes é o bash ( /bin/bash ), mas também poderia ser outro...
-Vc deve colocar #! /bin/bash no início do script justamente para que o  script "saiba" qual shell irá executá-lo, pois nem todos os shells  reconhecem os mesmos comandos.
-Cabeçalho Padrão por Aurélio:
-#!/bin/bash
+
+ <span style="color: blue;">#!/usr/bin/python </span>
+na parte superior do seu programa <span style="color: blue;">Python </span>
+
+O valor de <span style="color: blue;">$SHELL</span> não significa necessariamente dizer que você está executando no momento; normalmente diz-lhe o shell padrão. tcsh define <span style="color: blue;">$version</span> e <span style="color: blue;">$tcsh</span> define <span style="color: blue;">$BASH_VERSION</span>a
+
+<span style="color: blue;">/bin/sh</span> é um link para o shell padrão do usuário, que na maioria das  vezes é o bash ( <span style="color: blue;">/bin/bash</span> ), mas também poderia ser outro...
+Vc deve colocar <span style="color: blue;">#! /bin/bash</span> no início do script justamente para que o  script "saiba" qual shell irá executá-lo, pois nem todos os <span style="color: blue;">shells</span>  reconhecem os mesmos comandos.
+
+<span style="font-size: small;">Cabeçalho Padrão por Aurélio:</span>
+<span style="font-size: small;">
+<div class="adp"></span>
+</b>
+<pre><b>#!/bin/bash
 #
 # nome_completo.sh - Busca o nome completo de um usuário no Unix
 #
 # Site      : http://programas.com.br/nomecompleto/
-# Autor     : João Silva 
-# Manutenção: Maria Teixeira 
+# Autor     : João Silva <joao@email.com.br>
+# Manutenção: Maria Teixeira <maria@email.com.br>
 #
 #  -------------------------------------------------------------
 #   Este programa recebe como parâmetro o login de um usuário e
@@ -112,8 +141,12 @@ Cabeçalho Padrão por Aurélio:
 #
 # Licença: GPL.
 #
-Outro exemplo de cabeçalho:
-#!/bin/sh
+
+</div></b></pre><b><span style="font-size: small;">
+
+Outro exemplo de cabeçalho:</span>
+<span style="font-size: small;"><div class="adp"></span>
+<span style="font-size: small;">#!/bin/sh
 #
 # versao 0.1
 #
@@ -135,4 +168,9 @@ Outro exemplo de cabeçalho:
 # variaveis utilizadas.
 # marcos.braga 21/09/2009 - Primeira versao.
 #
-Via: http://stackoverflow.com | http://www.hardware.com.br
+</div>
+</span>
+
+<span style="color: #999999;"><span style="font-size: x-small;"><i>Via: http://stackoverflow.com | http://www.hardware.com.br</i></span></span></b>
+
+
