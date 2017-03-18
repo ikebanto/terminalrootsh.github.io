@@ -12,7 +12,7 @@ tags:
 - Comandos
 ---
 
-![Alguns comandos GNU/Linux por Categorias](/assets/img/bash/comandos-linux.jpg=800x "Alguns comandos GNU/Linux por Categorias" )
+![Alguns comandos GNU/Linux por Categorias](/assets/img/bash/comandos-linux.jpg "Alguns comandos GNU/Linux por Categorias" ){:height="450px" width="800px"}
 
 
 ### Comandos de Controle e Acesso
