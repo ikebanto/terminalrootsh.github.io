@@ -21,53 +21,89 @@ A principal vantagem da LPI sobre outras certificações Linux é a neutralidade
 <style>
 ul {list-style: none;}
 ul li {list-style: none; font-weight: bold;}
+a {text-decoration: none;}
+a:hover {text-decoration: underline; background-color: none;}
 </style>
 
 ## Lista de Assuntos
 
-* 01- A Certificação LPI
-* 02- Noções Fundamentais
-* 03- Documentação
-* 04- Arquitetura de Hardware
-* 05- Instalação do Linux
-* 06- Filtros de Texto
-* 07- Gerenciamento básico de arquivos
-* 08- Hierarquia do sistema de arquivos
-* 09- Sistemas de arquivos e dispositivos
-* 10- Montando e Desmontando Sistemas de Arquivos
-* 11- Executando, Gerenciando e Terminando Processos
-* 12- Sistema de Boot, Shutdown e Runlevels
-* 13- Trabalhando com Permissões
-* 14- Trabalhando com vi
-* 15- Instalando e Compilando Programas a partir do código fonte
-* 16- Gerenciamento de Pacotes Debian e Redhat (rpm, dpkg, apt-get, dselect)
-* 17- Gerenciador de Pacotes YUM
-* 18- Utilizando Expressões Regulares
-* 19- Quotas de Disco
-* 20- Administração do Sistema
-* 21- Automatizando Tarefas Administrativas e Estratégias de Backup
-* 22- X Window
-* 23- Programando em Shell Script
-* 24- Arquivos de LOG
-* 25- Impressão no Linux
-* 26- Hora do Sistema
-* 27- Internacionalização do Sistema
-* 28- Kernel do Linux
-* 29- Fundamentos e Serviços de Rede – TCP/IPv4
-* 30- Utilitários e Ferramentas do TCP/IP
-* 31- Configurando a Rede
-* 32- Configurando o DHCP
-* 33- Configurando Conexões PPPoE no Linux
-* 34- Serviços de Rede no Linux
-* 35- O Servidor PostFix
-* 36- Configurando o Apache
-* 37- Compartilhamento via NFS
-* 38- Compartilhamento via Samba
-* 39- Configurando o DNS
-* 40- Configurando o Shell Seguro OpenSSH
-* 41- Segurança
-* 42- Criptografia de Dados
-* 43- Acessibilidade no Linux
-* 44- Gerenciamento de dados SQL
+* [01-A Certificação LPI](http://www.terminalroot.com.br/2013/04/curso-certificacao-linux-lpi-102_17.html)
+* [02-Noções Fundamentais] (http://www.terminalroot.com.br/2011/11/como-utilizar-o-crontab.html)
+* [03-Documentação](http://www.terminalroot.com.br/2012/09/curso-certificacao-linux-lpi-1.html)
+* [04-Arquitetura de Hardware](http://www.terminalroot.com.br/2012/11/curso-certificacao-linux-lpi-1.html)
+* [05-Instalação do Linux](http://www.terminalroot.com.br/2011/10/instalando-o-gnulinux-debian.html)
+* [06-Filtros de Texto](http://www.terminalroot.com.br/2012/11/curso-certificacao-linux-lpi-1-filtros.html)
+* [07-Gerenciamento básico de arquivos](http://www.terminalroot.com.br/2011/10/scripts-basicos-shell-script.html)
+* [08-Hierarquia do sistema de arquivos] (http://www.terminalroot.com.br/2012/11/curso-certificacao-linux-lpi-1_11.html)
+* [09-Sistemas de arquivos e dispositivos] (http://www.terminalroot.com.br/2012/11/curso-certificacao-linux-lpi-1-sistemas.html)
+* [10-Montando e Desmontando Sistemas de Arquivos](http://www.terminalroot.com.br/2012/11/curso-certificacao-linux-lpi-1-montagem.html)
+* [11-Executando, Gerenciando e Terminando Processos] (http://www.terminalroot.com.br/2012/11/curso-certificacao-linux-lpi-1_17.html)
 
-[Visite o site do LPI Brasil e saiba mais.](http://www.lpibrasil.com.br/) 
+* [12-Sistema de Boot, Shutdown e Runlevels](http://terminalroot.com.br/2012/11/curso-certificacao-linux-lpi-1-sistema.html)
+
+* [13-Trabalhando com Permissões](http://terminalroot.com.br/2012/11/curso-certificacao-linux-lpi-1.html)
+
+* [14-Trabalhando com vi](http://terminalroot.com.br/2011/12/curso-certificacao-linux-lpi-101.html)
+
+* [15-Instalando e Compilando Programas a partir do código fonte] (http://terminalroot.com.br/2012/12/curso-certificacao-linux-lpi-1_2.html)
+
+* [16-Gerenciamento de Pacotes Debian](http://www.terminalroot.com.br/2012/12/curso-certificacao-linux-lpi-1.html)
+
+* [17-Gerenciador de Pacotes YUM](http://www.terminalroot.com.br/2013/04/curso-certificacao-linux-lpi-102_16.html)
+
+* [18-Utilizando Expressões Regulares](http://www.terminalroot.com.br/2012/12/curso-certificacao-linux-lpi-1-grep-e.html)
+
+* [19-Quotas de Disco](http://www.terminalroot.com.br/2012/12/curso-certificacao-linux-lpi-1-quotas.html)
+
+* [20-Administração do Sistema](http://www.terminalroot.com.br/2012/12/curso-certificacao-linux-lpi-102.html)
+
+* [21-Automatizando Tarefas Administrativas e Estratégias de Backup] (http://www.terminalroot.com.br/2012/12/curso-certificacao-linux-lpi-102-backup.html)
+
+* [22-X Window] (http://www.terminalroot.com.br/2013/03/curso-certificacao-linux-lpi-102-x.html)
+
+* [23-Programando em Shell Script](http://terminalroot.com.br/2017/03/curso-de-shell-script-do-iniciante-ao-avancado-gratuito.html)
+
+* [24-Arquivos de LOG](http://terminalroot.com.br/2013/03/curso-certificacao-linux-lpi-102_30.html)
+
+* [25-Impressão no Linux](http://terminalroot.com.br/2013/03/curso-certificacao-linux-lpi-102.html)
+
+* [26-Hora do Sistema](http://www.terminalroot.com.br/2013/03/curso-certificacao-linux-lpi-102-hora-e.html)
+
+* [27-Internacionalização do Sistema](http://www.terminalroot.com.br/2013/03/curso-certificacao-linux-lpi-102-hora-e.html)
+
+* [28-Kernel do Linux](http://www.terminalroot.com.br/2013/02/curso-certificacao-linux-lpi-102-kernel.html)
+
+* [29-Fundamentos e Serviços de Rede – TCP/IPv4] (http://terminalroot.com.br/2013/03/curso-certificacao-linux-lpi-102_3.html)
+
+* [30-Utilitários e Ferramentas do TCP/IP] (http://www.terminalroot.com.br/2013/03/curso-certificacao-linux-lpi-102_17.html)
+
+* [31-Configurando a Rede](http://www.terminalroot.com.br/2013/03/curso-certificacao-linux-lpi-102_24.html)
+
+* [32-Configurando o DHCP](http://www.terminalroot.com.br/2013/03/curso-certificacao-linux-lpi-102_26.html)
+
+* [33-Configurando Conexões PPPoE no Linux] (http://www.terminalroot.com.br/2013/04/curso-certificacao-linux-lpi-102_14.html)
+
+* [34-Serviços de Rede no Linux] (http://www.terminalroot.com.br/2013/03/curso-certificacao-linux-lpi-102_27.html)
+
+* [35-O Servidor PostFix](http://terminalroot.com.br/2013/04/curso-certificacao-linux-lpi-102_8110.html)
+
+* [36-Configurando o Apache](http://www.terminalroot.com.br/2013/04/curso-certificacao-linux-lpi-102_5.html)
+
+* [37-Compartilhamento via NFS](http://www.terminalroot.com.br/2013/04/curso-certificacao-linux-lpi-102_3.html)
+
+* [38-Compartilhamento via Samba](http://www.terminalroot.com.br/2013/04/curso-certificacao-linux-lpi-102_1.html)
+
+* [39-Configurando o DNS](http://www.terminalroot.com.br/2013/04/curso-certificacao-linux-lpi-102_2.html)
+
+* [40-Configurando o Shell Seguro OpenSSH] (http://www.terminalroot.com.br/2013/04/curso-certificacao-linux-lpi-102_4.html)
+
+* [41-Segurança](http://www.terminalroot.com.br/2013/04/curso-certificacao-linux-lpi-102_6.html)
+
+* [42-Criptografia de Dados](http://terminalroot.com.br/2013/04/curso-certificacao-linux-lpi-102_9795.html)
+
+* [43-Acessibilidade no Linux](http://terminalroot.com.br/2013/04/curso-certificacao-linux-lpi-102_7.html)
+
+* [44-Gerenciamento de dados SQL](http://terminalroot.com.br/2011/10/curso-certificacao-linux-lpi-102.html)
+
+* [Visiteo site do LPI Mundial e saiba mais. ](http://www.lpi.org/)
+* [Visite o site do LPI Brasil e saiba mais.](http://www.lpibrasil.com.br/) 
