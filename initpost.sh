@@ -119,9 +119,6 @@ echo "description:"
 echo "main-class:"
 echo "color:"
 echo "tags:"
-echo "categories:"
-echo "twitter_text:"
-echo "introduction:"
 echo "---"
 
 }
