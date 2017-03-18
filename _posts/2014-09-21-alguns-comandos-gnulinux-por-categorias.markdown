@@ -15,7 +15,7 @@ tags:
 ![Alguns comandos GNU/Linux por Categorias](/assets/img/bash/comandos-linux.jpg "Alguns comandos GNU/Linux por Categorias" ){:height="450px" width="800px"}
 
 
-### Comandos de Controle e Acesso
+## Comandos de Controle e Acesso
 
 + __exit__ ➜ Terminar a sessão, ou seja, a __shell__ (mais ajuda digitando __man sh__ ou __man csh__)
 + __logout__ ➜ Deslogar, ou seja, terminar a sessão actual, mas apenas na __C shell__ e na __bash shell__
@@ -26,7 +26,7 @@ tags:
 + __yppasswd__ ➜ Mudar a __password__ do nosso utilizador nas páginas amarelas (__yellow pages__)
 
 
-### Comandos de Comunicações
+## Comandos de Comunicações
 
 + __mail__ ➜ Enviar e receber emails
 + __mesg__ ➜ Permitir ou negar mensagens de terminal e pedidos de conversação (__talk requests__)
@@ -35,7 +35,7 @@ tags:
 + __write__ ➜ Escrever para outros utilizadores que estejam logados no momento
 
 
-### Comandos de Ajuda e Documentação
+## Comandos de Ajuda e Documentação
 
 + __apropos__ ➜ Localiza comandos por pesquisa de palavra-chave
 + __find__ ➜ Localizar ficheiros, como por exemplo: __find . -name *.txt -print__, para pesquisa de ficheiros de texto por entre os ficheiros da directoria actual
@@ -45,7 +45,7 @@ tags:
 + __whereis__ ➜ Localizar a página de ajuda (__man page__), código fonte, ou ficheiros binários, de um determinado programa
 
 
-### Comandos de Edição de Texto
+## Comandos de Edição de Texto
 
 + __emacs__ ➜ Editor de texto __screen-oriented__
 + __pico__ ➜ Editor de texto __screen-oriented__, também chamado de __nano__
@@ -54,7 +54,7 @@ tags:
 + __vim__ ➜ Editor de texto __full-screen__ melhorado (__vi improved__)
 
 
-### Comandos de Gestão de Ficheiros e Directorias
+## Comandos de Gestão de Ficheiros e Directorias
 
 + __cd__ ➜ Mudar de directoria actual, como por exemplo __cd directoria__, __cd ..__, __cd /__
 + __chmod__ ➜ Mudar a protecção de um ficheiro ou directoria, como por exemplo __chmod 777__, parecido com o __attrib__ do __MS-DOS__
@@ -92,7 +92,7 @@ de texto ou mesmo para ordenar dados de outros comandos como por exemplo
 + __wc__ ➜ Conta linhas, palavras e mesmo caracteres num ficheiro
 
 
-### Exibição ou Impressão de Ficheiros
+## Exibição ou Impressão de Ficheiros
 
 + __cat__ ➜ Mostra o conteúdo de um ficheiro, como o comando __type__ do __MD-DOS__, e é muito usado também para concatenar ficheiros, como por exemplo fazendo __cat a.txt b.txt &gt; c.txt” para juntar o ficheiro a.txt e b.txt num único de nome c.txt__
 + __fold__ ➜ Encurta, ou seja, faz um __fold__ das linhas longas para caberem no dispositivo de __output__
@@ -111,14 +111,14 @@ de texto ou mesmo para ordenar dados de outros comandos como por exemplo
 + __xpdf</b></td><td>Exibe ficheiros __pdf__, usa o __gv__
 
 
-### Comandos de Transferência de Ficheiros
+## Comandos de Transferência de Ficheiros
 
 + __ftp__ ➜ Vem de __file transfer protocol__, e permite-nos, usando o protocolo de transferência de ficheiros __ftp__, transferir ficheiros entre vários __hosts__ de uma rede, como aceder a um servidor de __ftp__ para enviar ou puxar ficheiros
 + __rsync__ ➜ Sincroniza de forma rápida e flexível dados entre dois computadores
 + __scp__ ➜ Versão segura do __rcp__
 
 
-### Comandos de Notícias ou Rede
+## Comandos de Notícias ou Rede
 
 + __netstat__ ➜ Mostra o estado da rede
 + __rsh__ ➜ Corre umam __shell__ em outros sistemas __UNIX__
@@ -128,7 +128,7 @@ de texto ou mesmo para ordenar dados de outros comandos como por exemplo
 + __ping</b></td><td>Pingar um determinado __host__, ou seja, enviar pacotes __icmp__ para um determinado __host__ e medir tempos de resposta, entre outras coisas
 
 
-### Comandos de Controlo de Processos
+## Comandos de Controlo de Processos
 
 + __kill__ ➜ Mata um processo, como por exemplo __kill -kill 100__ ou __kill -9 100__ ou __kill -9 %1__
 + __bg__ ➜ Coloca um processo suspenso em __background__
@@ -139,7 +139,7 @@ de texto ou mesmo para ordenar dados de outros comandos como por exemplo
 + __^z__ ➜ Suspende o processo actual
 
 
-### Comandos de Informação de Estado
+## Comandos de Informação de Estado
 
 + __clock__ ➜ Define a hora do processador
 + __date__ ➜ Exibe a data e hora
@@ -170,7 +170,7 @@ quando expira, etc
 + __whoami__ ➜ Diz-nos quem é o dono da __shell__
 
 
-### Comandos de Processamento de Texto
+## Comandos de Processamento de Texto
 
 + __abiword__ ➜ Processador de Texto __Open Source__
 + __addbib__ ➜ Cria ou modifica bases de dados bibliográficas
@@ -207,7 +207,7 @@ fácil e não interactiva, sem exigir por isso presença do utilizador,
 respeitando também o ficheiro __robots.txt__
 
 
-### Web
+## Web
 
 + __html2ps__ ➜ Conversor de __html__ para __ps__
 + __latex2html__ ➜ Conversor de __LaTeX__ para __html__
