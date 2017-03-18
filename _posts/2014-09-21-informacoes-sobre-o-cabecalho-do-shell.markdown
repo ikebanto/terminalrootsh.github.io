@@ -1,17 +1,12 @@
 ---
 layout: post
-title: Informações sobre o Cabeçalho do Shell (how-to)
+title: "Informações sobre o Cabeçalho do Shell (how-to)"
 date: '2014-09-21T11:23:00.000-07:00'
-description: Informações sobre o Cabeçalho do Shell (how-to)
+image: 'http://4.bp.blogspot.com/--YWY6B8OBdA/VB8WUl2-p1I/AAAAAAAAAyo/RZ1oOzxLmiE/s1600/shell.jpg'
+description: "Informações sobre o Cabeçalho do Shell (how-to)"
 main-class: 'bash'
-color: '#c2003a'
-author: Marcos Oliveira
 tags:
 - Shell Script
-modified_time: '2014-09-21T11:23:00.352-07:00'
-thumbnail: http://4.bp.blogspot.com/--YWY6B8OBdA/VB8WUl2-p1I/AAAAAAAAAyo/RZ1oOzxLmiE/s72-c/shell.jpg
-twitter_text: Informações sobre o Cabeçalho do Shell (how-to)
-introduction: Informações sobre o Cabeçalho do Shell (how-to)
 ---
 
 
