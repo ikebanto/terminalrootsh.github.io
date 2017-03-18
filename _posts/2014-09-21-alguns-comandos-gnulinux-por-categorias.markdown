@@ -12,7 +12,7 @@ tags:
 ---
 
 <div align="center">
-<img src="/assets/img/bash/comandos-linux.jpg" alt="" title="" />
+<img src="/assets/img/bash/comandos-linux.jpg" alt="Alguns comandos GNU/Linux por categorias" title="Alguns comandos GNU/Linux por categorias" width="50%" height="50%" />
 </div>
 
 <table cols="2" style="width: 450px;"><tbody>
