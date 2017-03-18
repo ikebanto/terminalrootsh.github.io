@@ -2,6 +2,7 @@
 layout: post
 title: 'Curso Certificação Linux LPI-102: A Certificação LPI'
 date: '2013-04-17T17:22:00.000-07:00'
+image: '/assets/img/lpi/lpi.png'
 description: "O Linux Professional Institute (LPI) é uma organização sem fins lucrativos, sediada na California - USA um programa de certificação em sistemas GNU/Linux."
 main-class: 'linux'
 tags:
@@ -11,12 +12,12 @@ tags:
 
 ![A Certificação LPI](/assets/img/lpi/lpi.png "A Certificação LPI")
  
-> O [Linux Professional Institute - LPI](http://www.lpi.org/) - é uma organização sem fins lucrativos, sediada na California - USA e constituída em 1999 pela comunidade Linux e desenvolve de forma acessível um programa de certificação em sistemas __GNU/Linux__ reconhecido internacionalmente por empresas, empregadores e profissionais de __TI__.
+> O [Linux Professional Institute - LPI](http://www.lpi.org/) - é uma organização sem fins lucrativos, __sediada na California - USA__ e constituída em 1999 pela comunidade Linux e desenvolve de forma acessível um programa de certificação em sistemas __GNU/Linux__ reconhecido internacionalmente por empresas, empregadores e profissionais de __TI__.
 
 Certificar-se é uma forma de atestar conhecimentos profissionais, ou seja, validar a eficiência de alguém em determinado assunto.
-A principal vantagem da LPI sobre outras certificações Linux é a neutralidade de distribuição, pois as provas do __LPI__ são baseadas no __Linux Standard Base__, um conjunto de normas que mantém a compatibilidade entre as diferentes versões e distribuições do sistema operacional. A certificação LPI é, portanto, independente de distribuição.
+__A principal vantagem da LPI sobre outras certificações Linux é a neutralidade de distribuição__, pois as provas do __LPI__ são baseadas no __Linux Standard Base__, um conjunto de normas que mantém a compatibilidade entre as diferentes versões e distribuições do sistema operacional. A certificação LPI é, portanto, independente de distribuição.
 
-> O [LPI](http://www.lpi.org/) é reconhecido como a primeira organização do mundo a defender e ajudar o uso profissional do Linux, Open Source e Free Software através de certificação profissional. Os exames de certificação do LPI são aplicados em milhares de lugares no mundo, em vários idiomas e com o apoio de empresários, fabricantes e instrutores.
+> O [LPI](http://www.lpi.org/) é reconhecido como a primeira organização do mundo a defender e ajudar o uso profissional do Linux, __Open Source e Free Software__ através de certificação profissional. Os exames de certificação do __LPI__ são aplicados em milhares de lugares no mundo, em vários idiomas e com o apoio de empresários, fabricantes e instrutores.
 
 <style>
 ul {list-style: none;}
@@ -25,18 +26,30 @@ a {text-decoration: none;}
 a:hover {text-decoration: underline; background-color: none;}
 </style>
 
+***
+
 ## Lista de Assuntos
 
-* [01-A Certificação LPI](http://www.terminalroot.com.br/2013/04/curso-certificacao-linux-lpi-102_17.html)
-* [02-Noções Fundamentais] (http://www.terminalroot.com.br/2011/11/como-utilizar-o-crontab.html)
+* [01-A Certificação LPI](http://terminalroot.com.br/2013/04/curso-certificacao-linux-lpi-102.html)
+
+* [02-Noções Fundamentais] (http://terminalroot.com.br/2014/08/historia-do-software-livre-no-brasil.html)
+
 * [03-Documentação](http://www.terminalroot.com.br/2012/09/curso-certificacao-linux-lpi-1.html)
-* [04-Arquitetura de Hardware](http://www.terminalroot.com.br/2012/11/curso-certificacao-linux-lpi-1.html)
-* [05-Instalação do Linux](http://www.terminalroot.com.br/2011/10/instalando-o-gnulinux-debian.html)
+
+* [04-Arquitetura de Hardware](http://terminalroot.com.br/2012/11/curso-certificacao-linux-lpi-1_10.html)
+
+* [05-Instalação do Linux](http://terminalroot.com.br/2011/10/curso-certificacao-linux-lpi-101.html)
+
 * [06-Filtros de Texto](http://www.terminalroot.com.br/2012/11/curso-certificacao-linux-lpi-1-filtros.html)
-* [07-Gerenciamento básico de arquivos](http://www.terminalroot.com.br/2011/10/scripts-basicos-shell-script.html)
+
+* [07-Gerenciamento básico de arquivos](http://terminalroot.com.br/2017/03/curso-de-shell-script-do-iniciante-ao-avancado-gratuito.html)
+
 * [08-Hierarquia do sistema de arquivos] (http://www.terminalroot.com.br/2012/11/curso-certificacao-linux-lpi-1_11.html)
+
 * [09-Sistemas de arquivos e dispositivos] (http://www.terminalroot.com.br/2012/11/curso-certificacao-linux-lpi-1-sistemas.html)
+
 * [10-Montando e Desmontando Sistemas de Arquivos](http://www.terminalroot.com.br/2012/11/curso-certificacao-linux-lpi-1-montagem.html)
+
 * [11-Executando, Gerenciando e Terminando Processos] (http://www.terminalroot.com.br/2012/11/curso-certificacao-linux-lpi-1_17.html)
 
 * [12-Sistema de Boot, Shutdown e Runlevels](http://terminalroot.com.br/2012/11/curso-certificacao-linux-lpi-1-sistema.html)
@@ -105,5 +118,8 @@ a:hover {text-decoration: underline; background-color: none;}
 
 * [44-Gerenciamento de dados SQL](http://terminalroot.com.br/2011/10/curso-certificacao-linux-lpi-102.html)
 
+***
+
 * [Visiteo site do LPI Mundial e saiba mais. ](http://www.lpi.org/)
+
 * [Visite o site do LPI Brasil e saiba mais.](http://www.lpibrasil.com.br/) 
