@@ -25,8 +25,6 @@ __A principal vantagem da LPI sobre outras certificações Linux é a neutralida
 
 ul {list-style: none;}
 ul li {list-style: none; font-weight: bold;}
-ul li a#externalLink {border: none;}
-ul li a#externalLink:hover {text-decoration: underline; background: none;}
 
 </style>
 
