@@ -119,7 +119,7 @@ Caso deseje, fiz esse __script__ que faz __TODAS AS ETAPAS__ acima descritas par
 #!/bin/bash
 # ./enable-cgi-apache2.sh
 # esse script habilita cgi e .sh no apache do debian jessie
-[[ $USER == 'root' ]] || echo -e "Permissão negada, é root?\nAbortar.";exit 1
+[[ $(id -u) != 0 ]] || echo -e "Permissão negada, é root?\nAbortar.";exit 1
 echo "aguarde habilitando cgi e .sh no apache..."
 VersaoApache=$(apache2 -v | sed -n 1p | awk {'print $3'} | cut -d/ -f2)
 echo "versao do apache2: $VersaoApache"
