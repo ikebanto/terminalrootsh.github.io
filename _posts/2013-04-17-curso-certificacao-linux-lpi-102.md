@@ -81,7 +81,7 @@ ul li a.externalLink:hover {text-decoration: underline; background-color: #FFF;}
 
 ***
 
-### [Visiteo site do LPI Mundial e saiba mais. ](http://www.lpi.org/)
+### [Visiteo site do __LPI Internacional__ e saiba mais. ](http://www.lpi.org/)
 
-### [Visite o site do LPI Brasil e saiba mais.](http://www.lpibrasil.com.br/)
+### [Visite o site do __LPI Brasil__ e saiba mais.](http://www.lpibrasil.com.br/)
 
