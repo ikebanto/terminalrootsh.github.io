@@ -11,6 +11,8 @@ tags:
 ---
 
 ![A Certificação LPI](/assets/img/lpi/lpi.png "A Certificação LPI")
+
+# Linux Professional Institute - LPI
  
 > O [Linux Professional Institute - LPI](http://www.lpi.org/) - é uma organização sem fins lucrativos, __sediada na California - USA__ e constituída em 1999 pela comunidade Linux e desenvolve de forma acessível um programa de certificação em sistemas __GNU/Linux__ reconhecido internacionalmente por empresas, empregadores e profissionais de __TI__.
 
@@ -76,6 +78,6 @@ ul li a:hover {text-decoration: underline; background-color: none;}
 * [44-Gerenciamento de dados SQL](http://www.terminalroot.com.br/2011/10/curso-certificacao-linux-lpi-102.html)
 ***
 
-* [Visiteo site do LPI Mundial e saiba mais. ](http://www.lpi.org/)
+### [Visiteo site do LPI Mundial e saiba mais. ](http://www.lpi.org/)
 
-* [Visite o site do LPI Brasil e saiba mais.](http://www.lpibrasil.com.br/) 
+### [Visite o site do LPI Brasil e saiba mais.](http://www.lpibrasil.com.br/) 
