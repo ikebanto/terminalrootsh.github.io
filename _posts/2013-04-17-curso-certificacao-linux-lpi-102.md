@@ -14,7 +14,7 @@ tags:
 
 # Linux Professional Institute - LPI
  
-> O [__Linux Professional Institute - LPI](http://www.lpi.org/) - é uma organização sem fins lucrativos, __sediada na California - USA__ e constituída em 1999 pela comunidade Linux e desenvolve de forma acessível um programa de certificação em sistemas __GNU/Linux__ reconhecido internacionalmente por empresas, empregadores e profissionais de __TI__.
+> O [ __Linux Professional Institute - LPI__ ](http://www.lpi.org/) - é uma organização sem fins lucrativos, __sediada na California - USA__ e constituída em 1999 pela comunidade Linux e desenvolve de forma acessível um programa de certificação em sistemas __GNU/Linux__ reconhecido internacionalmente por empresas, empregadores e profissionais de __TI__.
 
 Certificar-se é uma forma de atestar conhecimentos profissionais, ou seja, validar a eficiência de alguém em determinado assunto.
 __A principal vantagem da LPI sobre outras certificações Linux é a neutralidade de distribuição__, pois as provas do __LPI__ são baseadas no __Linux Standard Base__, um conjunto de normas que mantém a compatibilidade entre as diferentes versões e distribuições do sistema operacional. A certificação LPI é, portanto, independente de distribuição.
