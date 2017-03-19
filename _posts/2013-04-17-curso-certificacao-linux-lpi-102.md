@@ -76,6 +76,7 @@ ul li a:hover {text-decoration: underline; background-color: none;}
 * [42-Criptografia de Dados](http://www.terminalroot.com.br/2013/04/curso-certificacao-linux-lpi-102_9795.html)
 * [43-Acessibilidade no Linux](http://www.terminalroot.com.br/2013/04/curso-certificacao-linux-lpi-102_7.html)
 * [44-Gerenciamento de dados SQL](http://www.terminalroot.com.br/2011/10/curso-certificacao-linux-lpi-102.html)
+
 ***
 
 ### [Visiteo site do LPI Mundial e saiba mais. ](http://www.lpi.org/)
