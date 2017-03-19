@@ -22,10 +22,12 @@ __A principal vantagem da LPI sobre outras certificações Linux é a neutralida
 > __O [LPI](http://www.lpi.org/) é reconhecido como a primeira organização do mundo a defender e ajudar o uso profissional do Linux, __Open Source e Free Software através de certificação profissional. Os exames de certificação do LPI são aplicados em milhares de lugares no mundo, em vários idiomas e com o apoio de empresários, fabricantes e instrutores.__
 
 <style>
+
 ul {list-style: none;}
 ul li {list-style: none; font-weight: bold;}
 ul li a {text-decoration: none;}
 ul li a:hover {text-decoration: underline; background-color: none;}
+
 </style>
 
 ***
