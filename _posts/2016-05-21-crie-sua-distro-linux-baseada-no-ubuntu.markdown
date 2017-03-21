@@ -16,7 +16,7 @@ twitter_text: Crie sua distro Linux baseada no Ubuntu ou Mint com PinguyBuilder
 introduction: Crie sua distro Linux baseada no Ubuntu ou Mint com PinguyBuilder
 ---
 
-<p>
+
 <div class="separator" style="clear: both; text-align: center;"><a href="https://2.bp.blogspot.com/-cfiF8u8HMm8/VzifsYZfEQI/AAAAAAAAAo0/jRQbiXHlxGs9u3yFK1Owo8CUjJbW2J9rQCLcB/s1600/pinguy-builder-iso-ubuntu-infoidevice.jpg" imageanchor="1" style="margin-left: 1em; margin-right: 1em;"><img border="0" src="https://2.bp.blogspot.com/-cfiF8u8HMm8/VzifsYZfEQI/AAAAAAAAAo0/jRQbiXHlxGs9u3yFK1Owo8CUjJbW2J9rQCLcB/s1600/pinguy-builder-iso-ubuntu-infoidevice.jpg" /></a></div>
 
 Existem cada vez mais ferramentas que dão a possibilidade dos  utilizadores personalizarem os sistemas, antes de estes serem instalados  e até depois de instalados. No Pplware temos apresentado algumas  plataformas que permitem aos utilizadores criarem as suas próprias  distribuições tendo com base o Ubuntu, Suse, entre outras.
@@ -38,4 +38,4 @@ sudo PinguyBuilder
 FONTE: <a href="http://pplware.sapo.pt/informacao/pinguybuilder-transforme-o-seu-ubuntu-ou-mint-num-iso/" target="_blank">PPLWARE</a>
 
 
-</p>
+
