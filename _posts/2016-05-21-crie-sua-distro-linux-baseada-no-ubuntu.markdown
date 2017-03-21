@@ -27,7 +27,7 @@ Na prática o PinguyBuilder permite que os utilizadores possam fazer um <b>backu
 Com esta ferramenta é possível definir a imagem de boot inicial, aplicar temas, entre outras possibilidades.
 
 De salientar ainda que o script PinguyBuilder tem suporte para  sistemas EFI, instalação offline e suporte para MDM e GDM. Esta  ferramenta tem uma interface baseada em GTK e pode ser facilmente  executada via terminal usando o comando:
-<div class="wp_syntax"><table><tbody><tr><td class="code">
+
 
 {% highlight bash %}
 
