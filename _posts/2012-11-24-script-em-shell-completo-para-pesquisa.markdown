@@ -1,19 +1,20 @@
 ---
 layout: post
-title: Script em Shell (completo) para pesquisa
+title: "Script em Shell (completo) para pesquisa"
 date: '2012-11-24T13:37:00.000-08:00'
-description: Script em Shell (completo) para pesquisa
+image: '/assets/img/shell-script/procura-basica-shell.png'
+description: "Exercício Shell"
 main-class: 'bash'
 tags:
 - Shell Script
-image: http://2.bp.blogspot.com/-_kw03sm3n0Q/ULE9Cb5J7lI/AAAAAAAAAsc/p5xbzMLCcYA/s72-c/Captura_de_tela.png
-twitter_text: Script em Shell (completo) para pesquisa
-introduction: Script em Shell (completo) para pesquisa
 ---
-![Blog Linux](http://2.bp.blogspot.com/-_kw03sm3n0Q/ULE9Cb5J7lI/AAAAAAAAAsc/p5xbzMLCcYA/s400/Captura_de_tela.png "Blog Linux")
-Olá galera, fiz um script, pra passar o tempo, de Pesquisa(completo).Segue PasteBin e código no blog para análise e também estudo, a única coisa diferente das que vêm sendo abordadas aqui no blog é o surgimento do case.Não utilizei comentários pra não ficar muito grande, mas é tão simples e o código tão limpo que dá pra ter uma noção como o case funciona.Segue:
-PasteBin(procura):<iframe src="http://pastebin.com/raw/Z4ALGCbs" style="border:none;width:100%;"><iframe>
-Código(procura):
+![Script em Shell (completo) para pesquisa](/assets/img/shell-script/procura-basica-shell.png "Script em Shell (completo) para pesquisa")
+
+> Olá galera, fiz um script, pra passar o tempo, de Pesquisa(completo).Segue o código no blog para análise e também estudo, a única coisa diferente das que vêm sendo abordadas aqui no blog é o surgimento do __case__. Não utilizei comentários pra não ficar muito grande, mas é tão simples e o código tão limpo que dá pra ter uma noção como o case funciona.
+
+
+## Código(procura)
+
 {% highlight bash %}
 #!/bin/bash
 # procura - script que faz pesquisas completas de arquivos e/ou diretórios

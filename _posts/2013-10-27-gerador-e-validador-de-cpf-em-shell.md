@@ -1,22 +1,20 @@
 ---
 layout: post
-title: Gerador e Validador de CPF em Shell Script (Bash)
+title: "Gerador e Validador de CPF em Shell Script (Bash)"
 date: '2013-10-27T14:16:00.000-07:00'
-description: Gerador e Validador de CPF em Shell Script (Bash)
+image: '/assets/img/shell-script/cpf-shell.jpg'
+description: "Segue Script com COMENTÁRIOS."
 main-class: 'bash'
 tags:
 - Shell Script
-image: http://4.bp.blogspot.com/-3Sb91HnQWjI/Um2BK10LatI/AAAAAAAACfw/whKAAMneIQI/s72-c/cpf-shell.jpg
-twitter_text: Gerador e Validador de CPF em Shell Script (Bash)
-introduction: Gerador e Validador de CPF em Shell Script (Bash)
 ---
-![Blog Linux](http://4.bp.blogspot.com/-3Sb91HnQWjI/Um2BK10LatI/AAAAAAAACfw/whKAAMneIQI/s1600/cpf-shell.jpg "Blog Linux")
-Segue Script abaixo em 3 formatos com COMENTÁRIOS, qualquer dúvida é só comentar. 
-Código no Git Gist 
+
+![Gerador e Validador de CPF em Shell Script (Bash)](/assets/img/shell-script/cpf-shell.jpg "Gerador e Validador de CPF em Shell Script (Bash)")
+
+> Segue Script abaixo com COMENTÁRIOS. 
+
  
-PasteBin:
-<iframe src="http://pastebin.com/raw/G29vQRNp" style="border:none;width:100%;"><iframe> 
-CodeBlog:
+{% highlight bash %}
 #!/bin/bash
 # ----------------------------------------------------------------------------
 # Gerador e Validador de CPF em Shell Script (Bash)
@@ -138,4 +136,5 @@ segundoDig=$((11-$restDois))
   echo -e "\033[1;31mCPF Inválido.\nOs dois Últimos números deveriam ser:\033[1;32m $primeiroDig$segundoDig\033[0m"
  fi
  
-fi 
+fi
+{% endhighlight %}
