@@ -69,3 +69,7 @@ make install
 {% highlight bash %}
 yad
 {% endhighlight %}
+
+# Veja um vídeo sobre Yad
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/2gUIoUWHZMg" frameborder="0" allowfullscreen></iframe>
