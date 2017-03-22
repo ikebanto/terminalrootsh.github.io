@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "Como Compilar o YAD no GNU-Linux"
+title: "Como Compilar o YAD no GNU/Linux"
 date: 2017-03-22 08:19:08
 image: '/assets/img/bash/yad-color.png'
 description: "Yad é um fork do Zenity, melhorado. É uma ferramenta para criar interface gráfica para o usuário (GUI) em Shell Script."
