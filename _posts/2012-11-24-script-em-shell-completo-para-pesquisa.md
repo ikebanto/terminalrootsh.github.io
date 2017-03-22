@@ -18,7 +18,7 @@ tags:
 {% highlight bash %}
 #!/bin/bash
 # procura - script que faz pesquisas completas de arquivos e/ou diretórios
-# Autor: Marcos da Boa Morte
+# Autor: Marcos da B. M. Oliveira
 # Endereço Web - http://marcospinguim.blogspot.com
 # Facebook - fb.com/terminalroot
 echo "1 PESQUISAR POR NOME"
