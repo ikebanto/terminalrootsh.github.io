@@ -52,6 +52,7 @@ cd yad-0.38.2/
 ## Configure
 {% highlight bash %}
 ./configure
+{% endhighlight %}
 
 > Atenção: Se o __config.log__ não apresentou nenhum erro (__exit 0__), então tudo que ele precisa para ser instalado está no seu sistema
 
