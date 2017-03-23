@@ -11,6 +11,10 @@ tags:
 - tv
 ---
 
+<!-- 
+![Como Criar Sites com Shell Script, Bootstap e HTML5](/assets/img/cursoshell/12-shell-bootstrap-html5.jpg "Como Criar Sites com Shell Script, Bootstap e HTML5")
+-->
+
 ***
 
 > Shell Script é tão completo, que exatamente tudo é possível fazer com ele. Pra você que gosta de Desenvolvimento Web, essa é uma dica e tanto.
