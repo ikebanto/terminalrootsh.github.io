@@ -8,6 +8,7 @@ main-class: 'bash'
 tags:
 - Shell Script
 ---
+
 ![Script em Shell (completo) para pesquisa](/assets/img/shell-script/procura-basica-shell.png "Script em Shell (completo) para pesquisa")
 
 > Olá galera, fiz um script, pra passar o tempo, de Pesquisa(completo).Segue o código no blog para análise e também estudo, a única coisa diferente das que vêm sendo abordadas aqui no blog é o surgimento do __case__. Não utilizei comentários pra não ficar muito grande, mas é tão simples e o código tão limpo que dá pra ter uma noção como o case funciona.
