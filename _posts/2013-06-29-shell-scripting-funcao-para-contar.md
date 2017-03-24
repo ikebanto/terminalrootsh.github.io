@@ -1,21 +1,22 @@
 ---
 layout: post
-title: 'Shell Scripting: Função para contar palavra num arquivo'
+title: "Como Contar Palavras de um arquivo com Shell Script"
 date: '2013-06-29T19:07:00.002-07:00'
-description: 'Shell Scripting: Função para contar palavra num arquivo'
+image: '/assets/img/shell-script/terminal52.jpg'
+description: 'Contar quantas vezes uma determinada palavra aparece num texto (arquivo)'
 main-class: 'linux'
 tags:
 - Linux
 - Shell Script
 - SED
-image: http://2.bp.blogspot.com/-H1Jn6ZiyQDE/Uc-SiQ27ukI/AAAAAAAACFI/5kj-uQHxILQ/s72-c/shell+scripting+bash+.jpg
-twitter_text: 'Shell Scripting: Função para contar palavra num arquivo'
-introduction: 'Shell Scripting: Função para contar palavra num arquivo'
 ---
-![Blog Linux](http://2.bp.blogspot.com/-H1Jn6ZiyQDE/Uc-SiQ27ukI/AAAAAAAACFI/5kj-uQHxILQ/s720/shell+scripting+bash+.jpg "Blog Linux")
-Olá galera, acabei de criar essa função , serve pra contar quantas vezes uma determinada palavra aparece num texto(arquivo) modo de utilizar entre outros dados, no próprio cabeçalho do Script, cada linha explicada nos comentários.
-Código-PasteBin: <iframe src="http://pastebin.com/raw/460WY6cH" style="border:none;width:100%;"><iframe>
-Código-Blog:
+
+![Como Contar Palavras de um arquivo com Shell Script](/assets/img/shell-script/terminal52.jpg "Como Contar Palavras de um arquivo com Shell Script")
+
+> Olá galera, acabei de criar essa função , serve pra contar quantas vezes uma determinada palavra aparece num texto(arquivo) modo de utilizar entre outros dados, no próprio cabeçalho do Script, cada linha explicada nos comentários.
+
+
+{% highlight bash %}
 #!/bin/bash
 # ---------------------------------------------------------------
 # ./contapalavra
@@ -70,5 +71,8 @@ contapalavra(){
  # exibição intuitiva, caso queira.
  #echo "A palavra ($1) aparece: "$(sed -n 1p) " vezes no arquivo: "$2
 }
+
 # chama a função e passa os parâmetros para ela.
 contapalavra $1 $2
+
+{% endhighlight %}
