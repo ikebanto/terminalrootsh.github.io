@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "Expressões Regulares, AWK, SED e Wildcards - Curso de Shell Script Gratuito do Iniciante ao Avançado"
-date: 2017-03-20 06:45:13
+date: 2017-03-25 06:45:13
 image: '/assets/img/cursoshell/15-grep-sed-awk-wildcards.jpg'
 description: "Assista ao vídeo e dscubra dicas e técnicas incríveis sobre esses assuntos."
 main-class: 'bash'
