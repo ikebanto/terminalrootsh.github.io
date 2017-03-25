@@ -11,6 +11,10 @@ tags:
 - tv
 ---
 
+<!-- 
+![image](/assets/img/cursoshell/14-debug-parser-bashrc-tty-ps1.jpg)
+-->
+
 ***
 
 > Assista ao vídeo e dscubra dicas e técnicas incríveis sobre: __Debug__, __Parser__, __profile__, __.bashrc__, __.bash_history__, __.bash_profile__, __/etc/profile__, __bash_login/logout__, __TTY__ e as variáveis __PSx__.
