@@ -11,8 +11,10 @@ tags:
 - tv
 ---
 
-<!-- 
+<!--
+
 ![image](/assets/img/cursoshell/14-debug-parser-bashrc-tty-ps1.jpg)
+
 -->
 
 ***
