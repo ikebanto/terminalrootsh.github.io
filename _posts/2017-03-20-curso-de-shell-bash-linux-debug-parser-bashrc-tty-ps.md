@@ -2,7 +2,7 @@
 layout: post
 title: "Debug, Parser, profile, TTY e PS - Curso de Shell Script Gratuito do Iniciante ao Avançado"
 date: 2017-03-20 04:45:13
-image: '/assets/img/cursoshell/14-debug-parser-profile-tty-ps.jpg'
+image: '/assets/img/cursoshell/14-debug-parser-bashrc-tty-ps1.jpg'
 description: "Assista ao vídeo e dscubra dicas e técnicas incríveis sobre esses assuntos."
 main-class: 'bash'
 tags:
@@ -10,10 +10,6 @@ tags:
 - bash
 - tv
 ---
-
-<!-- -
-![Image](/assets/img/cursoshell/14-debug-parser-profile-tty-ps.jpg)
--->
 
 ***
 
