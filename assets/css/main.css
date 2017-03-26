@@ -689,7 +689,7 @@ footer p,footer a{text-decoration:none;font-family:'Open Sans',sans-serif;font-w
 .marketing-svg{background-image:url("../img/pre-venda.png");background-position:center center}
 .marketing h1,.marketing h2{text-shadow:3px 3px #328287}
 .marketing h2{margin-bottom:50px}
-.marketing-js{background-image:url("../img/cursos/js-tdd-bg.png");background-position:left center;background-repeat-x:no-repeat;background-color:#f7db3c;}
+.marketing-js{background-image:url("../img/cursos/js-tdd-bg.png");background-position:left center;background-repeat-x:no-repeat;background-color: transparent;}
 .marketing-js h1,.marketing-js h2{text-shadow:1px 3px 5px #000}
 .marketing .btn-marketing{background:#235b5e;color:#fff;padding:20px 40px;text-decoration:none;font-size:1.375rem;border-radius:30px;transition:all .2s;}
 .marketing .btn-marketing:hover{background:#328287}
