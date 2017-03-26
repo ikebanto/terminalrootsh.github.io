@@ -37,25 +37,14 @@ description: "Aprenda Shell Script!"
 	<iframe width="560" height="315" src="https://www.youtube.com/embed/sOSWfN6iGno" frameborder="0" allowfullscreen></iframe>
 	</div>
 	
-	<!-- Declaração do formulário -->  
-	<form method="post" target="pagseguro"  
-	action="https://pagseguro.uol.com.br/v2/checkout/payment.html">  
-		      
-		    <!-- Campos obrigatórios -->  
-		    <input name="receiverEmail" value="marcos.gnulinux@gmail.com" type="hidden">  
-		    <input name="currency" value="BRL" type="hidden">  
-	  
-		    <!-- Itens do pagamento (ao menos um item é obrigatório) -->  
-		    <input name="itemId1" value="0001" type="hidden">  
-		    <input name="itemDescription1" value="Curso de Shell Script" type="hidden">  
-		    <input name="itemAmount1" value="9.90" type="hidden">  
-		    <input name="itemQuantity1" value="1" type="hidden">
-		    	  
-		    <!-- submit do form (obrigatório) -->  
-		    <input alt="Pague com PagSeguro" name="submit"  type="image"  
-	src="https://p.simg.uol.com.br/out/pagseguro/i/botoes/pagamentos/120x53-pagar.gif"/>  
-		      
-	</form> #24809c
+	<!-- INICIO FORMULARIO BOTAO PAGSEGURO -->
+	<form action="https://pagseguro.uol.com.br/checkout/v2/cart.html?action=add" method="post">
+	<!-- NÃO EDITE OS COMANDOS DAS LINHAS ABAIXO -->
+	<input type="hidden" name="itemCode" value="46F014696F6FD47AA40A4F995C7088B0" />
+	<input type="hidden" name="iot" value="button" />
+	<input type="image" src="https://stc.pagseguro.uol.com.br/public/img/botoes/pagamentos/209x48-comprar-assina.gif" name="submit" alt="Pague com PagSeguro - é rápido, grátis e seguro!" />
+	</form>
+	<!-- FINAL FORMULARIO BOTAO PAGSEGURO -->
 
 
 </div><!-- class shell-script -->

@@ -336,30 +336,30 @@ footer p,footer a{text-decoration:none;font-family:'Open Sans',sans-serif;font-w
 .post-tv .ribbon span:before{border-left:3px solid #7d1210;border-top:3px solid #7d1210}
 .post-tv .ribbon span:after{border-right:3px solid #7d1210;border-top:3px solid #7d1210}
 .post-tv footer{background-color:#b31917}
-.post-bash .title-category{color:#3a122d}
-.post-bash .post-content h1,.post-bash .post-content h2,.post-bash .post-content h3,.post-bash .post-content h4{color:#3a122d}
-.post-bash .post-content a{color:#3a122d;border-bottom:2px dashed #3a122d;}
-.post-bash .post-content a:hover{background-color:#3a122d;color:#fff}
-.post-bash .post-content strong{color:#3a122d}
-.post-bash .post-content p code,.post-bash .post-content li code{color:#3a122d}
-.post-bash .post-content blockquote{border-left:.313rem solid #3a122d}
-.post-bash .header-post,.post-bash .header-site{background-color:#3a122d;}
+.post-bash .title-category{color:#7a1d5a}
+.post-bash .post-content h1,.post-bash .post-content h2,.post-bash .post-content h3,.post-bash .post-content h4{color:#7a1d5a}
+.post-bash .post-content a{color:#7a1d5a;border-bottom:2px dashed #7a1d5a;}
+.post-bash .post-content a:hover{background-color:#7a1d5a;color:#fff}
+.post-bash .post-content strong{color:#7a1d5a}
+.post-bash .post-content p code,.post-bash .post-content li code{color:#7a1d5a}
+.post-bash .post-content blockquote{border-left:.313rem solid #7a1d5a}
+.post-bash .header-post,.post-bash .header-site{background-color:#7a1d5a;}
 .post-bash .header-post h1,.post-bash .header-site h1{text-shadow:3px 3px #421733}
-.post-bash .bar-header .logo a{color:#3a122d}
-.post-bash .author .email{color:#3a122d}
-.post-bash .share a:hover svg{fill:#3a122d}
-@media only screen and (max-width:37.5rem){.post-bash body.search-overlay:after{background-color:#3a122d}
+.post-bash .bar-header .logo a{color:#7a1d5a}
+.post-bash .author .email{color:#7a1d5a}
+.post-bash .share a:hover svg{fill:#7a1d5a}
+@media only screen and (max-width:37.5rem){.post-bash body.search-overlay:after{background-color:#7a1d5a}
 }
-.post-bash .icon-menu{fill:#3a122d}
-.post-bash .cursos-menu{color:#3a122d}
-.post-bash .box-body h2{color:#3a122d}
-.post-bash .box-body .tags a{color:#3a122d;border:1px solid #3a122d}
-.post-bash aside{background-color:#3a122d;}
-.post-bash aside nav li a:hover{color:#3a122d}
-.post-bash .ribbon span{background-color:#3a122d;}
+.post-bash .icon-menu{fill:#7a1d5a}
+.post-bash .cursos-menu{color:#7a1d5a}
+.post-bash .box-body h2{color:#7a1d5a}
+.post-bash .box-body .tags a{color:#7a1d5a;border:1px solid #7a1d5a}
+.post-bash aside{background-color:#7a1d5a;}
+.post-bash aside nav li a:hover{color:#7a1d5a}
+.post-bash .ribbon span{background-color:#7a1d5a;}
 .post-bash .ribbon span:before{border-left:3px solid #421733;border-top:3px solid #421733}
 .post-bash .ribbon span:after{border-right:3px solid #421733;border-top:3px solid #421733}
-.post-bash footer{background-color:#3a122d}
+.post-bash footer{background-color:#7a1d5a}
 .post-gnu .title-category{color:#d6ba32}
 .post-gnu .post-content h1,.post-gnu .post-content h2,.post-gnu .post-content h3,.post-gnu .post-content h4{color:#d6ba32}
 .post-gnu .post-content a{color:#d6ba32;border-bottom:2px dashed #d6ba32;}
