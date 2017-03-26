@@ -1,7 +1,8 @@
 ---
 layout: post
-title: Jogo da Forca em Shell Script
+title: "Jogo da Forca em Shell Script"
 date: '2015-08-12T20:49:00.001-07:00'
+image: 'jogo-da-forca-shell-script.jpg'
 description: "ESSE É O PRIMEIRO JOGO QUE EU CRIEI EM SHELL SCRIPT!"
 main-class: 'bash'
 tags:
@@ -12,33 +13,41 @@ tags:
 - Open Source
 - GNU
 - Games
-image: http://3.bp.blogspot.com/-c5ez1SGkrwg/VcwPbcRnwPI/AAAAAAAABpY/a63omVorLio/s72-c/jogo-da-forca-shell-script.jpg
-twitter_text: Jogo da Forca em Shell Script
-introduction: "ESSE É O PRIMEIRO JOGO QUE EU CRIEI EM SHELL SCRIPT!"
 ---
-![Blog Linux](http://3.bp.blogspot.com/-c5ez1SGkrwg/VcwPbcRnwPI/AAAAAAAABpY/a63omVorLio/s400/jogo-da-forca-shell-script.jpg "Blog Linux")
-ESSE É O PRIMEIRO JOGO QUE EU CRIEI EM SHELL SCRIPT!
-Depois de alguns estudos e fritar a cabeça por dois dias, consegui terminar esse jogo . Apenas com meus conhecimentos básicos sobre programação, Shell Script e lógica, consegui criar esse jogo baseado no lendário Jogo Da Forca. Denominei ele de Jogo Da Forca GNU EDITION . O código é bem simples e está todo documentado e comentado linha à linha. O jogo foi aprovado pelo meu filho de 6 anos, que ficou viciado, e passou bastante tempo jogando, e acertou uma boa gama de palavras :) . Na verdade foi pensando nele que eu escrevi esse jogo , espero que seja o primeiro de vários , até eu e minha esposa também nos "viciamos" :P .
-Ele foi testado num GNU/Linux Debian Jessie 8 , mas você pode tentar no Sistema de sua utilização e/ou na sua Distribuição Linux preferida . O Shell , como descrito no cabeçalho é o Bash , ou seja, pode rodar , teoricamente no BSD, FreeBSD, Solaris, MAC OS X e até no Windows com Cygwin!
- O código é Livre para ser Modificado e Distribuído por quem desejar, basta dá um fork, um pull request e um commit, é lógico :), fiquem à vontade!
-Bom, o papo está bom , mas vamos direto ao assunto!!!
-Para instalar o Jogo Da Forca
+
+![Jogo da Forca em Shell Script](/assets/img/shell-script/jogo-da-forca-shell-script.jpg "Jogo da Forca em Shell Script")
+
+__ESSE É O PRIMEIRO JOGO QUE EU CRIEI EM SHELL SCRIPT!__
+
+Depois de alguns estudos e fritar a cabeça por dois dias, consegui terminar esse jogo . Apenas com meus conhecimentos básicos sobre programação, [Shell Script](https://goo.gl/dBqXzZ) e lógica, consegui criar esse jogo baseado no lendário [Jogo Da Forca](https://pt.wikipedia.org/wiki/Jogo_da_forca). Denominei ele de __Jogo Da Forca GNU EDITION__ . O código é bem simples e está todo documentado e comentado linha à linha. O jogo foi aprovado pelo meu filho de 6 anos, que ficou viciado, e passou bastante tempo jogando, e acertou uma boa gama de palavras :) . Na verdade foi pensando nele que eu escrevi esse jogo , espero que seja o primeiro de vários , até eu e minha esposa também nos "viciamos" :P .
+
+Ele foi testado num [GNU/Linux Debian Jessie 8](http://www.debian.org/) , mas você pode tentar no Sistema de sua utilização e/ou na sua Distribuição Linux preferida . O Shell , como descrito no cabeçalho é o Bash , ou seja, pode rodar , __teoricamente__ no BSD, FreeBSD, Solaris, MAC OS X e até no ~~Windows com Cygwin~~!
+
+__O código é Livre para ser Modificado e Distribuído por quem desejar, basta dá um fork, um pull request e um commit, é lógico :), fiquem à vontade!__
+
+> Bom, o papo está bom , mas vamos direto ao assunto!!!
+
+## Para instalar o Jogo Da Forca
+
 {% highlight bash %}
 git clone https://github.com/terminalrootsh/jogodaforca.git
 cd ~/jogodaforca/
 chmod +x jogodaforca.sh
 {% endhighlight %}
-Depois é só rodar e jogar
+
+## Depois é só rodar e jogar
 {% highlight bash %}
 ./jogodaforca.sh
 {% endhighlight %}
-Ou baixando, executando e rodando:
+
+## Ou baixando, executando e rodando
 {% highlight bash %}
 wget https://raw.githubusercontent.com/terminalrootsh/jogodaforca/master/jogodaforca.sh
 chmod +x jogodaforca.sh
 ./jogodaforca.sh
 {% endhighlight %}
-Segue o código fonte do Jogo
+
+## Segue o código fonte do Jogo
 {% highlight bash %}
 #!/bin/bash
 #
@@ -299,4 +308,5 @@ setterm -cursor on
 # sai do jogo 
 exit 0
 {% endhighlight %}
-GITHUB
+
+[GITHUB](https://github.com/terminalrootsh)
