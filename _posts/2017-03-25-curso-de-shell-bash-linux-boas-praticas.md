@@ -17,4 +17,6 @@ tags:
 
 ***
 
+[Clique aqui para acessar o Game: Jogo da Forca em Shell Script](http://terminalroot.com.br/2015/08/jogo-da-forca-em-shell-script.html)
+
 <iframe width="560" height="315" src="https://www.youtube.com/embed/2MK3CNBAAio" frameborder="0" allowfullscreen></iframe>
