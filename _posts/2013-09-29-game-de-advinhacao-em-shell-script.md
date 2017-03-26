@@ -1,17 +1,19 @@
 ---
 layout: post
-title: Game de advinhação em Shell Script
+title: "Game de advinhação em Shell Script"
 date: '2013-09-29T18:18:00.001-07:00'
-description: Game de advinhação em Shell Script
+image: '/assets/img/shell-script/terminal57.png'
+description: "Game simples para estudo básico"
 main-class: 'bash'
 tags:
 - Shell Script
 - Games
-image: http://4.bp.blogspot.com/-_gUy0yQTqZM/UkjQtOlbfaI/AAAAAAAACbY/NaIi4dzZ2Xg/s72-c/shell+script2.png
-twitter_text: Game de advinhação em Shell Script
-introduction: Game de advinhação em Shell Script
 ---
-Segue Script do Jogo
+
+![Game de advinhação em Shell Script](/assets/img/shell-script/terminal57.png "Game de advinhação em Shell Script")
+
+# Segue Script do Jogo
+
 {% highlight bash %}
 #!/bin/bash
 gameGuess(){
