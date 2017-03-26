@@ -48,6 +48,9 @@ chmod +x jogodaforca.sh
 {% endhighlight %}
 
 ## Segue o código fonte do Jogo
+
+[Clique aqui para ver o código no Github](https://github.com/terminalrootsh/jogodaforca/blob/master/jogodaforca.sh)
+
 {% highlight bash %}
 #!/bin/bash
 #
@@ -308,5 +311,3 @@ setterm -cursor on
 # sai do jogo 
 exit 0
 {% endhighlight %}
-
-[GITHUB](https://github.com/terminalrootsh)
