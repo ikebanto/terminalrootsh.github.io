@@ -27,12 +27,16 @@ links:
     url: /
   - title: Cursos
     url: /cursos
-  - title: Tags
-    url: /tags
+  - title: Shell Script
+    url: /shell
+  - title: Doe
+    url: /doe
   - title: Descubra
     url: /blog-linux
   - title: Parceiros
     url: /parceiros
+  - title: Tags
+    url: /tags
 
 collections:
   - cursos
