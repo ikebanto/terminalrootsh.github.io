@@ -208,7 +208,7 @@ main{padding-top:6.25rem}
 .post-content a{color:#444;border-bottom:2px dashed #444;font-family:'Open Sans',sans-serif;font-weight:300;font-style:normal;text-decoration:none;transition:all .3s;}
 .post-content a:hover{background:#444;color:#fff}
 .post-content .externalLink:after{display:inline-block;content:'';color:#444;background-image:url("../img/external.svg");background-size:100%;margin-left:.313rem;width:1.125rem;height:1.125rem}
-.post-content iframe{margin-top:1.875rem;width:100%}
+.post-content iframe{margin-top:1.875rem;width: 560px;}
 .post-content #twitter-widget-0,.post-content .instagram-media,.post-content .twitter-tweet{margin:20px auto !important}
 .post-content h1,.post-content h2,.post-content h3,.post-content h4,.post-content h5{font-family:'Open Sans',sans-serif;font-weight:800;font-style:normal;}
 .post-content h1{font-size:1.875rem;line-height:1.4;}
