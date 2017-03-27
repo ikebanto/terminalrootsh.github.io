@@ -1,6 +1,6 @@
 ---
-title: "Git e Github para Iniciantes"
-image: '/assets/img/cursos/git-github-cursos.jpg'
+title: "Curso Shell Script do Iniciante ao Avançado"
+image: '/assets/img/cursos/shell-bash-cursos.jpg'
 link: '/git'
 introduction: 'Tudo que você precisa para escrever seus códigos e contribuir com a comunidade Open Source.'
 main-class: 'bash'
