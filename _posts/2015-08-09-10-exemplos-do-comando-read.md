@@ -11,7 +11,7 @@ tags:
 
 ![10 exemplos do comando read](/assets/img/shell-script/read.jpg "10 exemplos do comando read")
 
-+ 1 - Ler e criar uma variável com os dados interagidos
+1. 1 - Ler e criar uma variável com os dados interagidos
 {% highlight bash %}
 echo "Informe seu nome: " ; read Nome
 {% endhighlight %}
@@ -20,7 +20,7 @@ echo "Informe seu nome: " ; read Nome
 echo -e "Seu nome é: $Nome"
 {% endhighlight %}
 
-+ 2 - Ler na mesma linha com a opção -p
+2. 2 - Ler na mesma linha com a opção -p
 {% highlight bash %}
 read -p "Terminal "; read user
 Terminal Root
