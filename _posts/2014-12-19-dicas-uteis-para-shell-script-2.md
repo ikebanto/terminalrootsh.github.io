@@ -3,7 +3,7 @@ layout: post
 title: "Dicas úteis para Shell Script 2"
 date: '2014-12-19T12:57:00.000-08:00'
 image: '/assets/img/shell-script/shell-script-logo.jpg'
-description: Dicas úteis para Shell Script 2
+description: "Continuação de dicas úteis."
 main-class: 'bash'
 tags:
 - Shell Script
@@ -16,7 +16,7 @@ Digitar Script no terminal utilizando __EOF (End Of File)__, serve para agilizar
 {% highlight bash %}
 $ cat > condicao_ternaria.sh
 #!/bin/bash
-ping -c1 www.linux.org &amp;&amp; echo 'Rede OK' || echo 'Rede Sujou.'
+ping -c1 www.linux.org && echo 'Rede OK' || echo 'Rede Sujou.'
 EOF
 {% endhighlight %}
 
@@ -25,7 +25,7 @@ utilizando o __EOS__ e uma condição ternária com somente mensagens
 {% highlight bash %}
 $ cat > condicao_ternaria_2_so_msg.sh << EOS
 #!/bin/bash
-ping -c1 www.linux.org 2>/dev/null 1>/dev/null &amp;&amp; echo 'Rede OK' ||\ echo 'Rede Sujou.'
+ping -c1 www.linux.org 2>/dev/null 1>/dev/null && echo 'Rede OK' ||\ echo 'Rede Sujou.'
 EOS
 {% endhighlight %}
 
