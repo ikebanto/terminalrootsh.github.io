@@ -123,19 +123,24 @@ readonly variavel='Isso é um teste!'
 {% endhighlight %}
 
 #### →  Utilizando o bc
+
 + Introdução
+
  O bc não é exatamente uma calculadora, mas sim uma linguagem para cálculos, que lembra vagamente a linguagem C. O que significa que podemos ter construções como 'if', 'for', 'while', que um programa pode pedir informações para um usuário, e que podemos usar "programas" escritos para o 'bc' como se usássemos um shell script. 
- 
+
 + Conhecendo o bc (modo interativo)
  
- Para chamar o bc, basta digitar numa janela de terminal, 'bc'. Para fazer um cálculo, basta digitar a expressão e dar ENTER.
- Operações definidas:
- Adição, subtração, multiplicação, divisão.
- % (resto da divisão)
- ^ (potenciação)
- sqrt(x) (raiz quadrada de x)
- last (último resultado) 
-  Para sair, basta dar 'quit'.
+Para chamar o bc, basta digitar numa janela de terminal, 'bc'. Para fazer um cálculo, basta digitar a expressão e dar ENTER.
+
+#### Operações definidas
+
+> Adição, subtração, multiplicação, divisão.
+ % | (resto da divisão)
+ ^ | (potenciação)
+ sqrt(x) | (raiz quadrada de x)
+ last | (último resultado) 
+
+> Para sair, basta dar 'quit'.
 
 {% highlight bash %}
 bc
@@ -162,6 +167,7 @@ bc
 {% endhighlight %}
 
   Você pode estar pensando, depois desse último resultado (2/3 = 0?), "Epa! Alguma coisa está errada!".
+  
   Calma, não se desespere. Você precisa carregar o bc com o parâmetro '-l', que ativa uma biblioteca de operações matemáticas.
 
 {% highlight bash %}
@@ -283,7 +289,7 @@ quit
 
 > Como podemos notar, a linguagem é bem semelhante ao C. Porém, não há nenhum elemento parecido com o 'goto' ou o 'switch', o que a torna bem limitada.
 
- quit | Só deve ser usado em modo interativo. Assim que 'quit' for encontrado, o bc sai. (ver curiosidade no item 2) Em programas devemos usar 'halt'.
+quit | Só deve ser usado em modo interativo. Assim que 'quit' for encontrado, o bc sai. (ver curiosidade no item 2) Em programas devemos usar 'halt'.
 
 + Alguns exemplos
   
@@ -297,9 +303,9 @@ if (x <= 1) return (1);
 }
 {% endhighlight %}
 
-###### Solução da equação do 2o grau
+### Solução da equação do 2o grau
 
-> (Como o bc força o retorno de apenas um valor por função, criamos 2 funções para retornar as 2 raízes da equação):
+> (Como o bc força o retorno de apenas um valor por função, criamos 2 funções para retornar as 2 raízes da equação)
 
 {% highlight bash %}
   #!/usr/bin/bc -l
@@ -325,9 +331,9 @@ if (x <= 1) return (1);
 
 > Às vezes, precisamos fazer um cálculo num shell script. O bc torna isso moleza
 
-> $ x=$(echo "358358*5824825" | bc)
+> x=$(echo "358358*5824825" | bc)
 
-> $ echo $x
+> echo $x
 
 > 2087372637350
 
@@ -336,7 +342,9 @@ Simples, não?
 A estrutura é:
 
 > variavel=$(echo "expressão" | bc)
-+ Conclusão e considerações finais
+
+## Conclusão e considerações finais
+
 > Nesse artigo, vimos como usar os comandos básicos do programa bc, que, embora aparentemente limitado, pode quebrar um bom galho como uma calculadora programável e em shell scripts.
 > Porém, ele não deve ser considerado como uma linguagem de programação completa, mas sim como uma linguagem específica para sua aplicação.
  
