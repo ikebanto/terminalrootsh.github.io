@@ -1,21 +1,24 @@
 ---
 layout: post
-title: 'Função Shell Script(Bash): Rastrear objetos via Correios'
+title: "Função Shell Script(Bash): Rastrear objetos via Correios"
 date: '2013-10-06T13:51:00.002-07:00'
-description: 'Função Shell Script(Bash): Rastrear objetos via Correios'
+image: '/assets/img/shell-script/correios-shell.jpg'
+description: "Verificar andamento do processo de um objeto pelos Correios"
 main-class: 'bash'
 tags:
 - Shell Script
 - SED
-image: http://2.bp.blogspot.com/-PpNaoqKqlTs/Um2F8-TMGyI/AAAAAAAACgE/e24KsmaIQ38/s72-c/correios-shell.jpg
-twitter_text: 'Função Shell Script(Bash): Rastrear objetos via Correios'
-introduction: 'Função Shell Script(Bash): Rastrear objetos via Correios'
 ---
-![Blog Linux](http://2.bp.blogspot.com/-PpNaoqKqlTs/Um2F8-TMGyI/AAAAAAAACgE/e24KsmaIQ38/s320/correios-shell.jpg "Blog Linux")
-Verifique o CABEÇALHO DO CÓDIGO  e os COMENTÁRIOS para entendimento do Script/Função
-PasteBin:
-<iframe src="http://pastebin.com/raw/90stK1VC" style="border:none;width:100%;"><iframe> 
-CodeBlog:
+
+![Função Shell Script(Bash): Rastrear objetos via Correios](/assets/img/shell-script/correios-shell.jpg "Função Shell Script(Bash): Rastrear objetos via Correios")
+
+Verificar andamento do processo de um objeto pelos Correios
+
+> Veja o CABEÇALHO DO CÓDIGO  e os COMENTÁRIOS para entendimento do Script/Função
+
+## Código
+
+{% highlight bash %}
 #!/bin/bash
 # --------------------------------------
 # ./rastreamento.sh
@@ -58,3 +61,4 @@ for codigo
 echo -e "\033[0m"
 }
 rastreamento $1
+{% endhighlight %}

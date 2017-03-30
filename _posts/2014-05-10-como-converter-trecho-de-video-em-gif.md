@@ -18,11 +18,11 @@ tags:
 
 ![Como converter trecho de vídeo em gif (Função Shell Scripting)](/assets/img/shell-script/video2gif-shell-script.gif "Como converter trecho de vídeo em gif (Função Shell Scripting)")
 
-Acabei de criar esse script para quem quiser criar gif de trecho de  vídeo. Há o script dessa função bash, no final desse artigo, como toda  as linhas comentadas, linhas que começam com ‘tralha'(#), no entanto,  vou explicar passo a passo
+Acabei de criar esse script para quem quiser criar gif de trecho de  vídeo. Há o script dessa função bash, no final desse artigo, como toda  as linhas comentadas, linhas que começam com ‘tralha'(#), no entanto,  vou explicar passo a passo.
 
-* Você precisa ter o [ffmpeg](https://ffmpeg.org/) e o [Image Magik](http://www.terminalroot.com.br/2015/03/tratamento-de-imagens-com-imagemagick.html) instalados, você pode adquirilos clicando nos links, fazendo o download  e compilando os pacotes, ou pode instalar via instaladores da sua  distribuição: ( __apt-get; yum; pacman;__ ).
++ Você precisa ter o [ffmpeg](https://ffmpeg.org/) e o [Image Magik](http://www.terminalroot.com.br/2015/03/tratamento-de-imagens-com-imagemagick.html) instalados, você pode adquirilos clicando nos links, fazendo o download  e compilando os pacotes, ou pode instalar via instaladores da sua  distribuição: ( __apt-get; yum; pacman;__ ).
 
-* Usamos o ffmpeg para a 1° etapa da conversão
++ Usamos o ffmpeg para a 1° etapa da conversão
 {% highlight bash %}
 ffmpeg -t 5 -ss 00:00:10 -i funny.mp4 out%04d.gif 
 {% endhighlight %}

@@ -1,26 +1,30 @@
 ---
 layout: post
-title: 'Função Shell Script(Bash): Instalar e Configurar o OpenSSH'
+title: "Função Shell Script(Bash): Instalar e Configurar o OpenSSH"
 date: '2013-11-23T15:21:00.000-08:00'
-description: 'Função Shell Script(Bash): Instalar e Configurar o OpenSSH'
+image: '/assets/img/shell-script/prompt.png'
+description: "Acesse outros computadores com Linux via Rede pelo Terminal"
 main-class: 'bash'
 tags:
 - Shell Script
 - Servidores
-image: http://1.bp.blogspot.com/-_gUy0yQTqZM/UkjQtOlbfaI/AAAAAAAACbc/bn9SFHwydy8/s72-c/shell+script2.png
-twitter_text: 'Função Shell Script(Bash): Instalar e Configurar o OpenSSH'
-introduction: 'Função Shell Script(Bash): Instalar e Configurar o OpenSSH'
 ---
-![Blog Linux](http://1.bp.blogspot.com/-_gUy0yQTqZM/UkjQtOlbfaI/AAAAAAAACbc/bn9SFHwydy8/s320/shell+script2.png "Blog Linux")
-Você (pode e deve) customizá-lo para sua instalação, por exemplo:
-o user root foi só um exemplo;
-a porta foi só um exemplo;
-o uso do apt-get é para distros Debian e Debian Like, mas você pode trocar;
-altere, caso queira ao seu gosto.
-Mais Informações: http://www.terminalroot.com.br/2011/12/utilizando-o-ssh.html
-PasteBin:
-<iframe src="http://pastebin.com/raw/NUmjYC9t" style="border:none;width:100%;"><iframe> 
-CodeBlog:
+
+![Função Shell Script(Bash): Instalar e Configurar o OpenSSH](/assets/img/shell-script/prompt.png "Função Shell Script(Bash): Instalar e Configurar o OpenSSH")
+
+Você (pode e deve) customizá-lo para sua instalação, por exemplo
+
+> o user root foi só um exemplo;
+ 
+* o uso do apt-get é para distros Debian e Debian Like, mas você pode trocar, altere, caso queira ao seu gosto.
+
+>  Uso: __./installOpenSSH__
+
+## Código
+
+{% highlight bash %}
+## Código
+
 #!/bin/bash
 # --------------------------------------
 # ./installOpenSSH
@@ -133,3 +137,4 @@ fi
   fi
 }
 installOpenSSH $1
+{% endhighlight %}

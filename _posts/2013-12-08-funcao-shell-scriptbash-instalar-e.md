@@ -1,29 +1,30 @@
 ---
 layout: post
-title: 'Função Shell Script(Bash): Instalar e Configurar o NFS'
+title: "Função Shell Script (Bash): Instalar e Configurar o NFS"
 date: '2013-12-08T14:37:00.002-08:00'
-description: 'Função Shell Script(Bash): Instalar e Configurar o NFS'
+image: '/assets/img/shell-script/prompt.png'
+description: "Acesse pastas de outros computadores com Linux via Rede"
 main-class: 'linux'
 tags:
 - Linux
 - Shell Script
 - Servidores
 - Redes
-image: http://1.bp.blogspot.com/-_gUy0yQTqZM/UkjQtOlbfaI/AAAAAAAACbc/bn9SFHwydy8/s72-c/shell+script2.png
-twitter_text: 'Função Shell Script(Bash): Instalar e Configurar o NFS'
-introduction: 'Função Shell Script(Bash): Instalar e Configurar o NFS'
 ---
-![Blog Linux](http://1.bp.blogspot.com/-_gUy0yQTqZM/UkjQtOlbfaI/AAAAAAAACbc/bn9SFHwydy8/s320/shell+script2.png "Blog Linux")
-* Função Shell Script(Bash): Instalar e Configurar o NFS
-* Você (pode e deve) customizá-lo para sua instalação, por exemplo:
-* o user root foi só um exemplo;
+![Função Shell Script (Bash): Instalar e Configurar o NFS](/assets/img/shell-script/prompt.png "Função Shell Script (Bash): Instalar e Configurar o NFS")
+
+
+Você (pode e deve) customizá-lo para sua instalação, por exemplo
+
+> o user root foi só um exemplo;
  
-* o uso do apt-get é para distros Debian e Debian Like, mas você pode trocar;
- altere, caso queira ao seu gosto.
-* Uso: ./installNFS 
-Codigo no PasteBin:
-<iframe src="http://pastebin.com/raw/kuQ8S3kJ" style="border:none;width:100%;"><iframe> 
-Código no Blog:
+* o uso do apt-get é para distros Debian e Debian Like, mas você pode trocar, altere, caso queira ao seu gosto.
+
+>  Uso: __./installNFS__
+
+## Código
+
+{% highlight bash %}
 #!/bin/bash
 # --------------------------------------
 # ./installNFS
@@ -140,4 +141,5 @@ Obs.:
    fi
   fi
 }
-installNFS $1 
+installNFS $1
+{% endhighlight %}

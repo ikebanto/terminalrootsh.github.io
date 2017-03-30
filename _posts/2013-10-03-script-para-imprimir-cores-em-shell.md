@@ -1,34 +1,44 @@
 ---
 layout: post
-title: Script para imprimir cores em Shell Script (Bash)
+title: "Script para imprimir cores em Shell Script (Bash)"
 date: '2013-10-03T18:42:00.000-07:00'
-description: Script para imprimir cores em Shell Script (Bash)
+image: '/assets/img/shell-script/prompt.png'
+description: "Atalho pra exibir cores pelo terminal"
 main-class: 'bash'
 tags:
 - Shell Script
-image: http://1.bp.blogspot.com/-_gUy0yQTqZM/UkjQtOlbfaI/AAAAAAAACbc/bn9SFHwydy8/s72-c/shell+script2.png
-twitter_text: Script para imprimir cores em Shell Script (Bash)
-introduction: Script para imprimir cores em Shell Script (Bash)
 ---
-![Blog Linux](http://1.bp.blogspot.com/-_gUy0yQTqZM/UkjQtOlbfaI/AAAAAAAACbc/bn9SFHwydy8/s320/shell+script2.png "Blog Linux")
-Olá galera esse SCRIPT é igual ao 'echo' só com cor e em português ou inglês e abreviações dos atributos.Serve pra quando você criar um script, ao invés de de você usar o comando 'echo' utilizar o comando 'cor' pré disponibilizado no seu .bashrc , para isso veja como incluí-lo no seu .bashrc e não se esqueça de ler o cabeçalho do SCRIPT.
-COMO INCLUIR NO SEU .bashrc:
-1 - Salve o arquivo no local desejado;
-2 - Dê a permissssão de execução;
-$ chmod +x cor.sh
-3 - Abra se .bashrc;
-$ vi /home/$USER/.bashrc
-4 - crie uma nova linha no final do arquivo, com o seguinte código;
+
+![Script para imprimir cores em Shell Script (Bash)](/assets/img/shell-script/prompt.png "Script para imprimir cores em Shell Script (Bash)")
+
+> Olá galera esse SCRIPT é igual ao '__echo__' só com cor e em português ou inglês e abreviações dos atributos. Serve pra quando você criar um script, ao invés de de você usar o comando '__echo__' utilizar o comando '__cor__' pré disponibilizado no seu __.bashrc__ , para isso veja como incluí-lo no seu __.bashrc__ e não se esqueça de ler o cabeçalho do __SCRIPT__ .
+
+#### COMO INCLUIR NO SEU .bashrc
+
++ 1 - Salve o arquivo no local desejado;
+
++ 2 - Dê a permissssão de execução;
+{% highlight bash %}
+chmod +x cor.sh
+{% endhighlight %}
+
++ 3 - Abra se __.bashrc__ ;
+{% highlight bash %}
+vi /home/$USER/.bashrc
+{% endhighlight %}
+
++ 4 - crie uma nova linha no final do arquivo, com o seguinte código;
 {% highlight bash %}
 alias cor="/home/$USER/cor.sh"
 {% endhighlight %}
-5 - Salve, feche e abra o terminal(se já tiver aberto, abra um novo terminal) e teste;
+
++ 5 - Salve, feche e abra o terminal(se já tiver aberto, abra um novo terminal) e teste;
 {% highlight bash %}
-$ cor "Teste imprimindo em cores" azul negrito
+cor "Teste imprimindo em cores" azul negrito
 {% endhighlight %}
-Código no PasteBin: 
-<iframe src="http://pastebin.com/raw/azeU6X1n" style="border:none;width:100%;"><iframe>
-Código no Blog:
+
+## Script
+
 {% highlight bash %}
 #!/bin/bash
 # --------------------------------------
