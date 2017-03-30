@@ -13,13 +13,13 @@ tags:
 
 > Separei algumas dicas para Shell Script, deem uma analisada
 
-→ Contar os caracteres de uma variável
+#### →  Contar os caracteres de uma variável
 
 {% highlight bash %}
 echo ${#variavel}
 {% endhighlight %}
 
-→ Usando o comando cut
+#### →  Usando o comando cut
 + Mostrar somente a 3° coluna(de cada linha) do arquivo
 
 {% highlight bash %}
@@ -49,7 +49,7 @@ cat arquivo.txt | cut -c3-6
 {% highlight bash %}
 cat arquivo.txt | cut -c3 | sort
 {% endhighlight %}
-→ Variáveis ​​locais e o comando define:
+#### →  Variáveis ​​locais e o comando define:
  Uma variável declarada como local é aquele que só é visível dentro do bloco de código em que ela aparece. Em uma função, uma variável local só tem sentido dentro desse bloco de função forma de declarar uma variável(aspas simples e colar igual(=))
 
 {% highlight bash %}
@@ -59,7 +59,7 @@ cat arquivo.txt | cut -c3 | sort
  
 {% endhighlight %}
 
-→ Comando Shift:
+#### →  Comando Shift:
  Para trabalhar com parêmtros você pode utilizar o comando shift, que desloca parâmetros
  Exemplo de como usar o shift(arquivo ./teste.sh):
 
@@ -81,14 +81,14 @@ cat arquivo.txt | cut -c3 | sort
  
 {% endhighlight %}
 
-→ A Variável RANDOM:
+#### →  A Variável RANDOM:
  gerar um número randômico(aleatório) que seja até no máximo 60
 
 {% highlight bash %}
 echo $(($RANDOM % 61))
 {% endhighlight %}
 
-→ O comando declare e o comando readonly
+#### →  O comando declare e o comando readonly
 + Use o comando 'declare' para definir atributos de variáveis ​​e funções.
  -r (readonly) # -i (integer/numeros)# -f (para criar funções somente leitura)
 
@@ -102,7 +102,7 @@ declare -r variavel
 readonly variavel='Isso é um teste!'
 {% endhighlight %}
 
-→ O comando case:
+#### →  O comando case:
  O uso do 'case' tem de usar dessa forma: o case, o in, o ;;, o ) e o esac
 
 {% highlight bash %}
@@ -122,7 +122,7 @@ readonly variavel='Isso é um teste!'
  
 {% endhighlight %}
 
-→ Utilizando o bc
+#### →  Utilizando o bc
 + Introdução
  O bc não é exatamente uma calculadora, mas sim uma linguagem para cálculos, que lembra vagamente a linguagem C. O que significa que podemos ter construções como 'if', 'for', 'while', que um programa pode pedir informações para um usuário, e que podemos usar "programas" escritos para o 'bc' como se usássemos um shell script. 
  
@@ -340,32 +340,32 @@ A estrutura é:
 > Nesse artigo, vimos como usar os comandos básicos do programa bc, que, embora aparentemente limitado, pode quebrar um bom galho como uma calculadora programável e em shell scripts.
 > Porém, ele não deve ser considerado como uma linguagem de programação completa, mas sim como uma linguagem específica para sua aplicação.
  
-→ Usando o 'sleep' e o 'clear' para programas interativos
+#### →  Usando o 'sleep' e o 'clear' para programas interativos
 
 {% highlight bash %}
  sleep 1 # tempo de 1 segundo de espera na execução
  clear #(limpa a tela)
 {% endhighlight %}
-→ o comando 'reset' 
+#### →  o comando 'reset' 
  É o mesmo que o clear, porém limpa a tela totalmente(a barra de rolagem fica integral)
-→ Mostrar hora
+#### →  Mostrar hora
 
 {% highlight bash %}
 DATA=`date +%T`
 echo $DATA
 {% endhighlight %}
-→ O comando tput
+#### →  O comando tput
   Envia a seqüência para mover o cursor para a linha 2, coluna 4 (no canto superior esquerdo da tela, geralmente conhecida como a "casa" posição do cursor).
 
 {% highlight bash %}
 cat arquivo.txt | tput cup 2 4
 {% endhighlight %}
-→ O comando diff(utilizado para para mostrar diferenças em arquivos)
+#### →  O comando diff(utilizado para para mostrar diferenças em arquivos)
 
 {% highlight bash %}
 diff hashing_site.txt hashing_sum.txt
 {% endhighlight %}
-→ Usando o Comando beep
+#### →  Usando o Comando beep
 + Instalando:
 
 {% highlight bash %}
@@ -407,7 +407,7 @@ __-c__ | Essa opção trata do processamento de entrada e saída de dados, conta
 echo zonebin | beep -c -f 100 -l 900
 {% endhighlight %}
 
-→ Passando argumentos para funções
+#### →  Passando argumentos para funções
 
 {% highlight bash %}
 #!/bin/bash
