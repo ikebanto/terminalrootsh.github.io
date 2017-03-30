@@ -1,20 +1,19 @@
 ---
 layout: post
-title: Transformando múltiplos arquivos FLV para MP3 com Shell Script
+title: "Transformando múltiplos arquivos FLV para MP3 com Shell Script"
 date: '2014-09-06T21:40:00.000-07:00'
-description: Transformando múltiplos arquivos FLV para MP3 com Shell Script
+image: '/assets/img/shell-script/flv-to-mp3-converter.jpg'
+description: "Script em Bash pra transformar vários arquivos FLV para MP3 de uma só vez."
 main-class: 'bash'
 tags:
 - Shell Script
-image: http://1.bp.blogspot.com/-_gUy0yQTqZM/UkjQtOlbfaI/AAAAAAAACbc/bn9SFHwydy8/s72-c/shell+script2.png
-twitter_text: Transformando múltiplos arquivos FLV para MP3 com Shell Script
-introduction: Transformando múltiplos arquivos FLV para MP3 com Shell Script
 ---
-![Blog Linux](http://1.bp.blogspot.com/-_gUy0yQTqZM/UkjQtOlbfaI/AAAAAAAACbc/bn9SFHwydy8/s320/shell+script2.png "Blog Linux")
-Segue Script baixo: 
-PasteBin:
-<iframe src="http://pastebin.com/raw/5EhK3MSZ" style="border:none;width:100%;"><iframe> 
-CodeBlog:
+![Transformando múltiplos arquivos FLV para MP3 com Shell Script](/assets/img/shell-script/flv-to-mp3-converter.jpg "Transformando múltiplos arquivos FLV para MP3 com Shell Script")
+
+> Script em Bash pra transformar vários arquivos FLV para MP3 de uma só vez.
+
+## Código
+{% highlight bash %}
 #!/bin/bash
 # --------------------------------------
 # ./flv2mp3.sh
@@ -68,3 +67,4 @@ fi
 preparando
 transformando
 final
+{% endhighlight %}
