@@ -2,6 +2,7 @@
 layout: post
 title: "Divirta-se colorindo seu terminal"
 date: '2015-05-30T17:41:00.001-07:00'
+image: '/assets/img/shell-script/lolcat.jpg'
 description: Divirta-se colorindo seu terminal
 main-class: 'misc'
 tags:
@@ -18,7 +19,7 @@ Para a saída do terminal ficar com as cores acima, vc precisa instalar o [LolCa
 apt-get install lolcat
 {% endhighlight %}
 
-Depois é só abrir um novo [terminal](http://terminalroot.com.br/tags#terminal), ou uma nova aba do __terminal__ e chamar um comando e redirecionar a saída para o __lolcat__
+Depois é só abrir um novo [terminal](http://www.terminalroot.com.br/tags#terminal), ou uma nova aba do __terminal__ e chamar um comando e redirecionar a saída para o __lolcat__
 
 {% highlight bash %}
 date | lolcat
