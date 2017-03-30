@@ -13,7 +13,7 @@ tags:
 
 [GNU shtool](http://www.gnu.org/software/shtool/shtool.html) é uma compilação de scripts de pequenas, mas muito estáveis ​​e portáteis shell em uma única ferramenta shell.  Todos os ingredientes estavam em uso bem sucedido ao longo de muitos anos em vários projetos de software livre.
 
-O programa shtool compilado se destina a ser utilizado dentro da árvore fonte de outros pacotes de software livre.
+O programa __shtool__ compilado se destina a ser utilizado dentro da árvore fonte de outros pacotes de software livre.
 
 > Não pode ultrapassar várias tarefas (geralmente não-portáteis) relacionados com a construção e instalação de um tal pacote.
 
