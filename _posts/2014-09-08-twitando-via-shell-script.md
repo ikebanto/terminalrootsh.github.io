@@ -1,20 +1,23 @@
 ---
 layout: post
-title: Twitando via Shell Script
+title: "Twitando via Shell Script"
 date: '2014-09-07T20:47:00.000-07:00'
-description: Twitando via Shell Script
+image: '/assets/img/shell-script/shell-scripting-bash-twitter.png'
+description: "Ele usa o comando curl."
 main-class: 'bash'
 tags:
 - Shell Script
-image: http://2.bp.blogspot.com/-11ONopObRZc/UdBtphDeo6I/AAAAAAAACFY/JENwYIj-P68/s72-c/shell+scripting+bash+twitter.png
-twitter_text: Twitando via Shell Script
-introduction: Twitando via Shell Script
 ---
-![Blog Linux](http://2.bp.blogspot.com/-11ONopObRZc/UdBtphDeo6I/AAAAAAAACFY/JENwYIj-P68/s320/shell+scripting+bash+twitter.png "Blog Linux")
-Galera adaptei esse script que vi na internet no site 360 percents para Twittar via Shell Script. Ele usa o comando curl , para mais informações sobre CURL , acesse CURL , segue o código abaixo , vejam utilização no cabeçalho do script , como não criei , só adaptei , não vou explicar , pois ainda estou estudando CURL. Precisa alterar o nome de usuário e senha no arquivo para poder utilizá-lo e funcionar.
-Código PasteBin: 
-<iframe src="http://pastebin.com/raw/ZYvPmy7i" style="border:none;width:100%;"><iframe> 
-Código Blog: 
+
+![Twitando via Shell Script](/assets/img/shell-script/shell-scripting-bash-twitter.png "Twitando via Shell Script")
+
+Galera adaptei esse script que vi na internet no site [360 percents](http://360percents.com/) para __Twittar via Shell Script__. Ele usa o comando curl, segue o código abaixo , vejam utilização no cabeçalho do script , como não criei , só adaptei , não vou explicar , pois ainda estou estudando CURL. 
+
+> __Precisa alterar o nome de usuário e senha no arquivo para poder utilizá-lo e funcionar__.
+
+
+## Código
+{% highlight bash %}
 #!/bin/bash
 # ---------------------------------------------------------------
 # ./tweet.sh
@@ -58,4 +61,6 @@ echo "⌚ deslogando..."
 deslogartoken=$(echo "$deslogarpage" | grep "authenticity_token" | sed -e 's/.*value="//' | sed -e 's/" \/>.*//' | tail -n 1)
 deslogar=$(curl -s -b "$cookie" -c "$cookie" -L --sslv3 -A "$useragent" -d "authenticity_token=$deslogartoken" "https://mobile.twitter.com/session/destroy")
 rm "$cookie"
-Fonte: 360 percents
+{% endhighlight %}
+
+Fonte: [360 percents](http://360percents.com/[)
