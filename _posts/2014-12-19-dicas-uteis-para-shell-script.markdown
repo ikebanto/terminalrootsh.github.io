@@ -377,32 +377,32 @@ apt-get install beep
 beep -l 5000
 {% endhighlight %}
 
--f frequênciaDefine a frequencia, muda o tom do som, permitindo realizar combinações muito interessantes
+__-f__ | frequênciaDefine a frequencia, muda o tom do som, permitindo realizar combinações muito interessantes
 {% highlight bash %}
 beep -l 2000 -f 100
 {% endhighlight %}
 
--r repetiçõesDefine o numero de repetições
+__-r__ | repetiçõesDefine o numero de repetições
 {% highlight bash %}
 beep -l 800 -f 100 -r 5
 {% endhighlight %}
 
--d tempo - Determina o tempo (delay) de espera de repetição entre um som e outro, usado junto com a opção -r
+__-d__ | tempo - Determina o tempo (delay) de espera de repetição entre um som e outro, usado junto com a opção -r
 {% highlight bash %}
 beep -l 500 -r 5 -d 1000
 {% endhighlight %}
 
--n - Usa uma linha de comando do beep para realizar vários sons diferentes
+__-n__ | Usa uma linha de comando do beep para realizar vários sons diferentes
 {% highlight bash %}
 beep -l 700 -f 1 -n -l 700 -f 10 -n -l 700 -f 100
 {% endhighlight %}
 
--s - Essa opção trata do processamento de entrada e saída de dados. A opção -s conta as linhas que foram redirecionadas para o beep por meio do pipe (|)
+__-s__ | Essa opção trata do processamento de entrada e saída de dados. A opção -s conta as linhas que foram redirecionadas para o beep por meio do pipe (|)
 {% highlight bash %}
 cat zonebin.txt | beep -s -f 500
 {% endhighlight %}
 
--c - Essa opção trata do processamento de entrada e saída de dados, contando os caracteres que forem redirecionados pelo pipe
+__-c__ | Essa opção trata do processamento de entrada e saída de dados, contando os caracteres que forem redirecionados pelo pipe
 {% highlight bash %}
 echo zonebin | beep -c -f 100 -l 900
 {% endhighlight %}
@@ -416,31 +416,30 @@ echo "Olá $1, vamos ser terminalroot." ;
 }
 ola Marcos
 echo '$* ou $@(argumentos da função) =' $* 'ou' $@ ', $#(número de parâmetros para função) = '$# ', $0 = '$0
- 
 {% endhighlight %}
 
 > Nota adicional para funções:
 > ao invés de criar vários aliases no .bashrc melhor criar funções em um diretório, exemplo: 
 
-- a) edite seu .bashrc somente uma vez incluindo uma linha
+- __a)__ edite seu .bashrc somente uma vez incluindo uma linha
 
 {% highlight bash %}
 echo 'alias minhasfuncoes="/home/$USER/minhasfuncoes.sh"' >> /home/$USER/.bashrc
 {% endhighlight %}
 
-- b) Crie o arquivo minhasfuncoes.sh no seu /home com o seguinte código:
+- __b)__ Crie o arquivo minhasfuncoes.sh no seu /home com o seguinte código:
 
 {% highlight bash %}
 echo '#!/bin/bash' > funcoesbosta.sh && echo '/home/$USER/funcoes/./$1' >> minhasfuncoes.sh
 {% endhighlight %}
 
-- c) Crie uma pasta 'funcoes' na sua home para salvar sua funções lá:
+- __c)__ Crie uma pasta 'funcoes' na sua home para salvar sua funções lá:
 
 {% highlight bash %}
 mkdir /home/$USER/funcoes
 {% endhighlight %}
 
-- d) Crie sua funções sem o .sh e jogue na pasta '/home/$USER/funcoes'
+- __d)__ Crie sua funções sem o .sh e jogue na pasta '/home/$USER/funcoes'
  + Exemplos:
   
 > ♠ Função bobmarley(): 
