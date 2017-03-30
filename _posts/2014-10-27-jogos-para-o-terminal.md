@@ -84,7 +84,7 @@ ou <a href="https://aur.archlinux.org/packages/bastet/" target="_blank">AUR</a>.
 
 <a href="http://gabrielecirulli.github.io/2048/" target="_blank">2048</a>
 
-Debian ou Ubuntu
+
 {% highlight bash %}
 wget https://raw.githubusercontent.com/mevdschee/2048.c/master/2048.c
 gcc -o 2048 2048.c
