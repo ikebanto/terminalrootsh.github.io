@@ -2,14 +2,14 @@
 layout: post
 title: "Twitando via Shell Script"
 date: '2014-09-07T20:47:00.000-07:00'
-image: '/assets/img/shell-script/shell-scripting-bash-twitter.png'
+image: '/assets/img/shell-script/shell-scripting-bash-twitter.jpg'
 description: "Ele usa o comando curl."
 main-class: 'bash'
 tags:
 - Shell Script
 ---
 
-![Twitando via Shell Script](/assets/img/shell-script/shell-scripting-bash-twitter.png "Twitando via Shell Script")
+![Twitando via Shell Script](/assets/img/shell-script/shell-scripting-bash-twitter.jpg "Twitando via Shell Script")
 
 Galera adaptei esse script que vi na internet no site [360 percents](http://360percents.com/) para __Twittar via Shell Script__. Ele usa o comando curl, segue o código abaixo , vejam utilização no cabeçalho do script , como não criei , só adaptei , não vou explicar , pois ainda estou estudando CURL. 
 
