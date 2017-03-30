@@ -13,6 +13,7 @@ tags:
 
 <style>
  table, td, tr {border: 1px solid silver;}
+ th {background: #a1c3f6;}
 </style>
 
 ![Atalhos da linha de comando](/assets/img/shell-script/bourne-shell.png "Atalhos da linha de comando")
