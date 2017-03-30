@@ -12,7 +12,7 @@ tags:
 ---
 
 <style>
-
+ table {border: 1px solid silver;}
 </style>
 
 ![Atalhos da linha de comando](/assets/img/shell-script/bourne-shell.png "Atalhos da linha de comando")
