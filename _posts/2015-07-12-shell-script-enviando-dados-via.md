@@ -26,14 +26,14 @@ tags:
 
  Verifique se o curl está instalado 
 {% highlight bash %}
-$ which curl
+which curl
 {% endhighlight %}
 
 Se retornar isso: 
 > /usr/bin/curl é porque está instalado, mas se não retornar nada, é porque não está instalado e você pode instalá-lo, pelo apt-get:
  
 {% highlight bash %}
-$ su
+su
 {% endhighlight %}
 
 {% highlight bash %}
@@ -44,13 +44,13 @@ Se sua distro tiver o sudo instalado e configurado para seu usuário, utilize-o 
 
 ### Para mais informações detalhadas 
 {% highlight bash %}
-$ man curl
+man curl
 {% endhighlight %}
 
 ou
 
 {% highlight bash %}
-$ man curlcurl --help
+man curlcurl --help
 {% endhighlight %}
 
 ## Como enviar dados para formulário com curl via post pelo terminal com Shell Script
@@ -66,7 +66,7 @@ Devidamente criada a página que irá receber os dados, vamos mandar os dados vi
 > O __-F__ indica o __input HTML__, e depois indicamos a __URL__, o __&& echo__ é só pra pular linha mesmo, __abra o terminal__ e envie o comando abaixo
 
 {% highlight bash %}
-curl -F 'nome=TerminalRoot' -F 'senha=gnu123' -F 'enviar=ok' http://127.0.0.1/formulario.php &amp;&amp; echo
+curl -F 'nome=TerminalRoot' -F 'senha=gnu123' -F 'enviar=ok' http://127.0.0.1/formulario.php && echo
 {% endhighlight %}
 
 Pronto, depois é verificar lá na pasta do servidor se há o arquivo banco.txt e verificar se os dados estão lá
