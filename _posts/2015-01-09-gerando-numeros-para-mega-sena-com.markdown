@@ -1,17 +1,16 @@
 ---
 layout: post
-title: Gerando Números para Mega-Sena com Shell Script
+title: "Gerando Números para Mega-Sena com Shell Script"
 date: '2015-01-09T12:29:00.000-08:00'
-description: Gerando Números para Mega-Sena com Shell Script
+description: "Script em Bash para gerar números para Mega-Sena, o Script foi melhorado e enviado por Diego Rocha."
 main-class: 'bash'
 tags:
 - Shell Script
-image: http://4.bp.blogspot.com/-ccoEm0iW6XA/UNziF4qSoXI/AAAAAAAAA5s/YSfY3voGB1Q/s72-c/megasena.png
-twitter_text: Gerando Números para Mega-Sena com Shell Script
-introduction: Gerando Números para Mega-Sena com Shell Script
 ---
-![Blog Linux](/assets/img/sh-rep-mega/blog-linux-mega-sena-bash-repub.png "Blog Linux")
-Olá galera, aqui vou mostrar um Script em Bash para gerar números para Mega-Sena, o Script foi melhorado e enviado por Diego Rocha.
+![Gerando Números para Mega-Sena com Shell Script](/assets/img/sh-rep-mega/blog-linux-mega-sena-bash-repub.png "Gerando Números para Mega-Sena com Shell Script")
+
+> Olá galera, aqui vou mostrar um Script em Bash para gerar números para __Mega-Sena__, o Script foi __melhorado__ e enviado por __Diego Rocha__.
+
 {% highlight bash %}
 #!/bin/bash
 # Autor: Diego Brum 
@@ -96,4 +95,5 @@ acertos
 echo
 exit 0
 {% endhighlight %}
+
 Dica enviada por: Diego Rocha | diego.brum@gmail.com
