@@ -12,7 +12,7 @@ tags:
 ---
 
 <style>
- table.table, table.table td, table.table tr {border: 1px solid silver;}
+ table.table, table.table td, table.table tr, table.table th {border: 1px solid silver;}
  table.table th {background: #a1c3f6;}
 </style>
 
