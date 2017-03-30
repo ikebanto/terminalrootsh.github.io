@@ -1,20 +1,19 @@
 ---
 layout: post
-title: Função Shell Script para limpar documentos recentes no Gnome Shell no Debian
+title: "Função Shell Script para limpar documentos recentes no Gnome Shell no Debian"
 date: '2014-07-12T19:47:00.002-07:00'
-description: Função Shell Script para limpar documentos recentes no Gnome Shell no Debian
+image: '/assets/img/shell-script/shell-script-gnomeshell-log-limpar-doc-rec.png'
+description: "Segue Script com cabeçalho e linhas comentadas explicando os comandos para análise."
 main-class: 'bash'
 tags:
 - Debian
 - Shell Script
-image: http://1.bp.blogspot.com/-C1bEp4xkTVA/U8Hxn3P0i_I/AAAAAAAAAMY/XwC0yEsVSFw/s72-c/shell-script-gnomeshell-log-limpar-doc-rec.png
-twitter_text: Função Shell Script para limpar documentos recentes no Gnome Shell no Debian
-introduction: Função Shell Script para limpar documentos recentes no Gnome Shell no Debian
 ---
-![Blog Linux](http://1.bp.blogspot.com/-C1bEp4xkTVA/U8Hxn3P0i_I/AAAAAAAAAMY/XwC0yEsVSFw/s1600/shell-script-gnomeshell-log-limpar-doc-rec.png "Blog Linux")
-Segue Script abaixo com cabeçalho e linhas comentadas explicando os comandos para análise:
-Código no PasteBin:
-<iframe src="http://pastebin.com/raw/7UwZBZvr" style="border:none;width:100%;"><iframe> Código no Blog:
+
+![Função Shell Script para limpar documentos recentes no Gnome Shell no Debian](/assets/img/shell-script/shell-script-gnomeshell-log-limpar-doc-rec.png "Função Shell Script para limpar documentos recentes no Gnome Shell no Debian")
+
+> Segue Script abaixo com cabeçalho e linhas comentadas explicando os comandos para análise
+
 {% highlight bash %}
 #!/bin/bash
 # ----------------------------------------------------------------------------
