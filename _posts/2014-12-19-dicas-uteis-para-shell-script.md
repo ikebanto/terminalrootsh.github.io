@@ -588,9 +588,11 @@ eric
 {% endhighlight %}
 
 #### → O comando unset(serve para apagar: variáveis, vetores/arrays e funções)
-#### → Zenity: interface gráfica para scripts
 
-## Mais infos e fontes:
+## Veja a parte 2 dos Exmplos Úteis
+### [Dicas úteis para Shell Script 2](http://terminalroot.com.br/2014/12/dicas-uteis-para-shell-script-2.html)
+
+#### Mais infos e fontes:
  
 https://help.gnome.org/users/zenity/stable/
 

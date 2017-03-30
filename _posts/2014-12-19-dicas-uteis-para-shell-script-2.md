@@ -211,5 +211,8 @@ echo ${VAR:-"eu não existo"}
 > Saída: eu existo
 
 Agora, __VAR__ não é nula, por isto mostra o conteúdo dela.
+
+## Veja a parte 1 dos Exmplos Úteis
+### [Dicas úteis para Shell Script 2](http://terminalroot.com.br/2014/12/dicas-uteis-para-shell-script.html)
  
 Fonte: <http://www.vivaolinux.com.br/dica/Truques-para-tratamento-de-variaveis-em-shell-script>
