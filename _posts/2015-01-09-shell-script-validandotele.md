@@ -1,95 +1,175 @@
 ---
 layout: post
-title: Shell Script validando com Expressões Regulares
+title: "Shell Script validando com Expressões Regulares"
 date: '2015-01-09T12:36:00.003-08:00'
-description: Shell Script validando com Expressões Regulares
+image: '/assets/img/shell-script/regex-bash.png'
+description: "grep é um utilitário de linha de comando para procurar conjuntos de dados de texto simples para as linhas que correspondem a uma expressão regular."
 main-class: 'bash'
 tags:
 - Shell Script
-image: http://1.bp.blogspot.com/-kPOTGeI3v0o/VLA69EODQMI/AAAAAAAABJQ/EvhhsFoyoZU/s72-c/regex-bash.png
-twitter_text: Shell Script validando com Expressões Regulares
-introduction: Shell Script validando com Expressões Regulares
 ---
-![Blog Linux](http://1.bp.blogspot.com/-kPOTGeI3v0o/VLA69EODQMI/AAAAAAAABJQ/EvhhsFoyoZU/s1600/regex-bash.png "Blog Linux")
-Shell Script validando(Tel,E-mail,CEP,IP,Data...) com Expressões Regulares 
-grep é um utilitário de linha de comando para procurar conjuntos de dados de texto simples para as linhas que correspondem a uma expressão regular.
-{% highlight bash %}
-grep [OPÇÕES] expressão_regular arquivo
-{% endhighlight %}
- CaracterDescrição.Qualquer letra^início da linha$final da linha[xyz]Qualquer das letras dentro dos colchetes[^xyz]Qualquer letra fora as dentro dos colchetes[t-z]Qualquer das letras entre t e zz* Letra z zero ou mais vezesz+ Letra z uma ou mais vezes?{0,1}Pode aparecer ou não (opcional)*{0,}Pode aparecer em qualquer quantidade+{1,}Deve aparecer no mínimo uma veza{2}Casa a letra 'a' duas vezesa{2,4}Casa a letra 'a' de duas a quatro vezesa{2,}Casa a letra 'a' no mínimo duas vezes.*Casa qualquer coisa, é o tudo e o nada^início da linha$final da linha[abc]casa com os caracteres a, b e c[a-c]casa com os caracteres a, b e c[^abd]não casa com os caracteres a, b e d(um|dois)casa com as palavras um e doisRepetiçõesa{2}casa com a letra “a” duas vezesa{2,5}casa com a letra “a” duas a cinco vezesa{2,}casa com a letra “a” duas vezes ou maisa?casa com “a” letra a zero vezes ou umaa*casa com a letra “a” zeros vezes ou maisa+casa com a letra “a” uma vez ou maisCuringas.casa com qualquer caracter uma vez.*casa com qualquer caracter várias vezes(esse|aquele)Casa as palavras 'esse' ou 'aquele'
+
+![Shell Script validando com Expressões Regulares](/assets/img/shell-script/regex-bash.png "Shell Script validando com Expressões Regulares")
+
+
+__grep__ é um utilitário de linha de comando para procurar conjuntos de dados de texto simples para as linhas que correspondem a uma __expressão regular__.
+
+> __grep [OPÇÕES] expressão_regular arquivo__
+
+
+
+<table border="1">
+
+<tbody>
+<tr><td><b><span style="color: blue;">Caracter</span></b><span style="background-color: #274e13;"></span></td><td><b><span style="color: blue;">Descrição</span></b></td></tr>
+<tr><td>.</td><td>Qualquer letra</td></tr>
+<tr><td>^</td><td>início da linha</td></tr>
+<tr><td>$</td><td>final da linha</td></tr>
+<tr><td>[xyz]</td><td>Qualquer das letras dentro dos colchetes</td></tr>
+<tr><td>[^xyz]</td><td>Qualquer letra fora as dentro dos colchetes</td></tr>
+<tr><td>[t-z]</td><td>Qualquer das letras entre t e z</td></tr>
+<tr><td>z* </td><td>Letra z zero ou mais vezes</td></tr>
+<tr><td>z+ </td><td>Letra z uma ou mais vezes</td></tr>
+<tr><td>?{0,1}</td><td>Pode aparecer ou não (opcional)</td></tr>
+<tr><td>*{0,}</td><td>Pode aparecer em qualquer quantidade</td></tr>
+<tr><td>+{1,}</td><td>Deve aparecer no mínimo uma vez</td></tr>
+<tr><td>a{2}</td><td>Casa a letra 'a' duas vezes</td></tr>
+<tr><td>a{2,4}</td><td>Casa a letra 'a' de duas a quatro vezes</td></tr>
+<tr><td>a{2,}</td><td>Casa a letra 'a' no mínimo duas vezes</td></tr>
+<tr><td>.*</td><td>Casa qualquer coisa, é o tudo e o nada</td></tr>
+<tr><td>^</td><td>início da linha</td></tr>
+<tr><td>$</td><td>final da linha</td></tr>
+<tr><td>[abc]</td><td>casa com os caracteres a, b e c</td></tr>
+<tr><td>[a-c]</td><td>casa com os caracteres a, b e c</td></tr>
+<tr><td>[^abd]</td><td>não casa com os caracteres a, b e d</td></tr>
+<tr><td>(um|dois)</td><td>casa com as palavras um e dois</td></tr>
+<tr><td>Repetições</td></tr>
+<tr><td>a{2}</td><td>casa com a letra “a” duas vezes</td></tr>
+<tr><td>a{2,5}</td><td>casa com a letra “a” duas a cinco vezes</td></tr>
+<tr><td>a{2,}</td><td>casa com a letra “a” duas vezes ou mais</td></tr>
+<tr><td>a?</td><td>casa com “a” letra a zero vezes ou uma</td></tr>
+<tr><td>a*</td><td>casa com a letra “a” zeros vezes ou mais</td></tr>
+<tr><td>a+</td><td>casa com a letra “a” uma vez ou mais</td></tr>
+<tr><td>Curingas</td></tr>
+<tr><td>.</td><td>casa com qualquer caracter uma vez</td></tr>
+<tr><td>.*</td><td>casa com qualquer caracter várias vezes</td></tr>
+<tr><td>(esse|aquele)</td><td>Casa as palavras 'esse' ou 'aquele'</td></tr>
+</tbody></table>
 Exs.:
 1-Procura a palavra marcos no arquivo /etc/passwd:
 {% highlight bash %}
-$ grep marcos /et/passwd
+grep marcos /et/passwd
 {% endhighlight %}
+
+
 2-Procura todas as linhas começadas pela letra u no arquivo /etc/passwd:
 {% highlight bash %}
-$ grep '^u' /et/passwd
+grep '^u' /et/passwd
 {% endhighlight %}
+
+
 3-Procura todas as linhas terminadas pela palavra false no arquivo /etc/passwd:
 {% highlight bash %}
-$ grep 'false$' /et/passwd
+grep 'false$' /et/passwd
 {% endhighlight %}
+
+
 4-Procura todas as linhas começadas pelas vogais no arquivo /etc/passwd:
 {% highlight bash %}
-$ grep '^[aeiou]' /et/passwd
+grep '^[aeiou]' /et/passwd
 {% endhighlight %}
+
+
 5-Procura todas as linhas começadas por qualquer caracter e segundo caracter seja qualquer vogal no arquivo /etc/passwd:
 {% highlight bash %}
-$ grep '^.[aeiou]' /et/passwd
+grep '^.[aeiou]' /et/passwd
 {% endhighlight %}
+
+
 6-Procura todas as linhas que contenham uma sequência de 4 números consecutivos:
 {% highlight bash %}
-$ grep '[0-9][0-9][0-9][0-9]' /et/passwd
+grep '[0-9][0-9][0-9][0-9]' /et/passwd
 {% endhighlight %}
+
+
 6-Procura todas as linhas que contenham uma sequência de 4 números consecutivos:
 {% highlight bash %}
-$ grep '[0-9][0-9][0-9][0-9]' /et/passwd
+grep '[0-9][0-9][0-9][0-9]' /et/passwd
 {% endhighlight %}
+
+
 7-Comando para encontrar linhas em branco:
 {% highlight bash %}
-$ grep '^$' /et/passwd
+grep '^$' /et/passwd
 {% endhighlight %}
+
+
 8-Encontrar e contar linhas em branco:
 {% highlight bash %}
-$ grep '^$' /et/passwd | wc -l
+grep '^$' /et/passwd | wc -l
 {% endhighlight %}
+
+
 9-Encontrar mesmo nome, porém com letra inicial minúscula e maiúscula:
 {% highlight bash %}
-$ grep '[Mm]arcos' /et/passwd
+grep '[Mm]arcos' /et/passwd
 {% endhighlight %}
+
+
 10-Encontrar 27 sequência^de 27 caracteres:
 {% highlight bash %}
-$ egrep '^.{27}$' passwd
+egrep '^.{27}$' passwd
 {% endhighlight %}
+
+
 Note que foi usado o egrep e não o grep. É porque as chaves fazem parte de um conjunto avançado de Expressões Regulares ("extended"), então o egrep lida melhor com elas. Se fosse para usar o grep normal, teria que "escapar" as chaves: {% highlight bash %}
-$ grep '^.\{27\}$' /etc/passwd
+grep '^.\{27\}$' /etc/passwd
 {% endhighlight %}
+
+
 11-Para procurar por linhas que tenham de 20 a 40 caracteres:
 {% highlight bash %}
-$ egrep '^.{20,40}$' /etc/passwd
+egrep '^.{20,40}$' /etc/passwd
 {% endhighlight %}
+
+
 12-Para obter as linhas que possuem 40 caracteres ou mais:
 {% highlight bash %}
-$ egrep '^.{40,}$' /etc/passwd
+egrep '^.{40,}$' /etc/passwd
 {% endhighlight %}
+
+
 13-Econtrar números com 3 dígitos (de 0 a 9) ou mais:
 {% highlight bash %}
-$ egrep '[0123456789]{3,}' /etc/passwd
+egrep '[0123456789]{3,}' /etc/passwd
 {% endhighlight %}
+
+
 14-Econtrar linhas que começam com 'vogal minúscula' e terminam com a palavra 'bash', usa−se o curinga ".*" para significar "qualquer coisa"(não confunda com "qualquer caracterer" somente "."):
 {% highlight bash %}
-$ egrep '^[aeiou].*bash$' /etc/passwd
+egrep '^[aeiou].*bash$' /etc/passwd
 {% endhighlight %}
+
+
 15-Procura linhas que comecem com a palavra 'eric' ou 'marcos' ou 'camila':
 {% highlight bash %}
-$ egrep '^(eric|marcos|camila)' /etc/passwd
+egrep '^(eric|marcos|camila)' /etc/passwd
 {% endhighlight %}
+
+
 16-Procura todas as linhas que NÃO comecem com a letra minúscula 'm'
 {% highlight bash %}
-$ egrep '^[^marcos]' /etc/passwd
+egrep '^[^marcos]' /etc/passwd
 {% endhighlight %}
-Script com validações de Tel,E-mail,CEP,IP,Data... 
+
+
+
+
+## Script com validações de Tel,E-mail,CEP,IP,Data...
+
+{% highlight bash %}
+#!/bin/bash
+# Script com validações de Tel,E-mail,CEP,IP,Data...
 ####################### VALIDAR TELEFONE no formato: (99)9999-9999 ################################################
 echo 'Informe o número de Telefone.Formato: (99)9999-9999';
 read TELEFONE
@@ -110,3 +190,4 @@ echo $DATA | egrep '^[0-3]{1}[0-9]{1}[/][0-1]{1}[0-9]{1}[/][0-9]{4}$' &amp;&amp;
 echo 'Informe o E-mail';
 read EMAIL
 echo $EMAIL | egrep '^([a-zA-Z0-9_-.])+@[0-9a-zA-Z.-]+\.[a-z]{2,3}$' &amp;&amp; echo -e '\033[01;32m E-mail válido! \033[0m' || echo -e '\033[01;31m NÃO é válido esse E-mail.\033[0m'
+{% endhighlight %}

@@ -14,7 +14,7 @@ tags:
 
 > Você pode deixar seu Shell mais interessante e até mesmo deixar lembretes nele, basta você editar seu .bashrc:
 
-Crie um script com __informações/lembretes/…__ que você deseja
+Crie um script com __informações/lembretes/...__ que você deseja
 
 ## Exemplo
 {% highlight bash %}
