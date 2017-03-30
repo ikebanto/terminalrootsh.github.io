@@ -442,43 +442,38 @@ mkdir /home/$USER/funcoes
 - __d)__ Crie sua funções sem o .sh e jogue na pasta '/home/$USER/funcoes'
  + Exemplos:
   
-> ♠ Função bobmarley(): 
+#### ♠ Função bobmarley()
 
 {% highlight bash %}
 echo '#!/bin/bash' > /home/$USER/funcoes/bobmarley && echo 'bobmarley(){ echo "Músico jamaicano!";}' >> /home/$USER/funcoes/bobmarley && echo 'bobmarley' >> /home/$USER/funcoes/bobmarley
 {% endhighlight %}
-> ♠ Função malcomx(): 
+
+#### ♠ Função malcomx()
 
 {% highlight bash %}
 echo '#!/bin/bash' > /home/$USER/funcoes/malcomx && echo 'malcomx(){ echo "Líder Revolucionário!";}' >> /home/$USER/funcoes/malcomx && echo 'malcomx' >> /home/$USER/funcoes/malcomx
 {% endhighlight %}
 
-> ♠ (...)
-
-- e) Depois torne tudo executável, dando as devidas permissões:
+- __e)__ Depois torne tudo executável, dando as devidas permissões:
 
 {% highlight bash %}
 chmod +x /home/$USER/minhasfuncoes.sh && chmod -R +x /home/$USER/funcoes/
 {% endhighlight %}
 
-- f) Agora basta abrir o novo terminal e chamar a função desejada para executar o desejado:
+- __f)__ Agora basta abrir o novo terminal e chamar a função desejada para executar o desejado:
 
 {% highlight bash %}
 minhasfuncoes bobmarley
-Músico jamaicano!
- 
-{% endhighlight %}
-
-- outra função,
- 
+Músico jamaicano! 
+{% endhighlight %} 
 
 {% highlight bash %}
 minhasfuncoes malcomx
-Líder Revolucionário!
- 
+Líder Revolucionário! 
 {% endhighlight %}
 
 ###### Ainda há como torná-las de leitura automática sem precisar chamar a minhasfuncoes, assim como as FunçõesZZ do Aurélio.
+
 #### → O comando exit:
 
  + A declaração de saída é usado para sair do script shell com um status de N.
@@ -542,6 +537,7 @@ seq 2 8
  echo $i
  done
  {% endhighlight %}
+ 
 ###### → O comando let
 Ele praticamente é um 'incrementador', se vc digitar isso num terminal, verá que ele incrementar +1 na variável j
 
@@ -554,8 +550,8 @@ echo $j
 let j++
 echo $j
 2
-  
 {% endhighlight %}
+
 ###### → Operações básicas com vetores/arrays
 Se há um recurso muito útil na programação, certamente é a possibilidade de agruparmos várias variáveis de um mesmo tipo em uma só. São o que chamamos de vetor, ou matriz - em inglês se diz array.
 
