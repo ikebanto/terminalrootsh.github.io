@@ -12,13 +12,13 @@ tags:
 ---
 
 <style>
- table, td, tr {border: 1px solid silver;}
+ table.table, table.table td, table.table tr {border: 1px solid silver;}
  th {background: #a1c3f6;}
 </style>
 
 ![Atalhos da linha de comando](/assets/img/shell-script/bourne-shell.png "Atalhos da linha de comando")
 
-<table align="center"><tbody>
+<table align="center" class="table"><tbody>
 <tr><th>Atalho</th> <th>Descrição</th> <th>Tecla Similar</th> </tr>
 <tr> <td>Ctrl+A</td> <td>Move o cursor para o início da linha</td> <td align="center">Home</td> </tr>
 <tr> <td>Ctrl+B</td> <td>Move o cursor uma posição à esquerda</td> <td align="center">←</td> </tr>
