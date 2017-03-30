@@ -16,7 +16,7 @@ tags:
 ## MyMan
 
 
-![Jogos para o Terminal](https://farm6.staticflickr.com/5594/13863751363_dc7e225bfa_z.jpg "Jogos para o Terminal")
+![Jogos para o Terminal](/assets/img/shell-script/13863751363_dc7e225bfa_z.jpg "Jogos para o Terminal")
 
 O clone do Pac-Man, famoso arcade dos anos 80, <a href="http://myman.sourceforge.net/" target="_blank">MyMan</a>.
 
@@ -39,7 +39,7 @@ No Archlinux, o game é avaliável em <a href="https://aur.archlinux.org/package
 ## nInvaders
 
 
-![Jogos para o Terminal](https://farm6.staticflickr.com/5318/13863722405_e14bbc91c8_z.jpg "Jogos para o Terminal")
+![Jogos para o Terminal](/assets/img/shell-script/13863722405_e14bbc91c8_z.jpg "Jogos para o Terminal")
 
 
 O Famoso Space Invaders, o clone <a href="http://ninvaders.sourceforge.net/" target="_blank">nInvaders</a>
@@ -51,7 +51,7 @@ No Archlinux, o game é avaliável <a href="https://aur.archlinux.org/packages/n
 
 ## Moon-buggy
 
-![Jogos para o Terminal](https://farm6.staticflickr.com/5522/13863751423_be17b73ace_z.jpg "Jogos para o Terminal")
+![Jogos para o Terminal](/assets/img/shell-script/13863751423_be17b73ace_z.jpg "Jogos para o Terminal")
 
 
 <a href="http://www.seehuhn.de/pages/moon-buggy" target="_blank">moon-buggy</a>.Inspirado em Moon Patrol de 1982.
@@ -65,7 +65,7 @@ no <a href="https://aur.archlinux.org/packages/moon-buggy/" target="_blank">AUR<
 
 ## Bastet
 
-![Jogos para o Terminal](https://farm4.staticflickr.com/3811/13863751683_d5f35204a0_z.jpg "Jogos para o Terminal")
+![Jogos para o Terminal](/assets/img/shell-script/13863751683_d5f35204a0_z.jpg "Jogos para o Terminal")
 
 
 Clone do Tetris <a href="http://fph.altervista.org/prog/bastet.html" target="_blank">Bastet</a>
@@ -79,7 +79,7 @@ ou <a href="https://aur.archlinux.org/packages/bastet/" target="_blank">AUR</a>.
 ## 2048.c
 
 
-![Jogos para o Terminal](https://farm3.staticflickr.com/2822/13863722885_640bf7d0a5_z.jpg "Jogos para o Terminal")
+![Jogos para o Terminal](/assets/img/shell-script/13863722885_640bf7d0a5_z.jpg "Jogos para o Terminal")
 
 
 <a href="http://gabrielecirulli.github.io/2048/" target="_blank">2048</a>
@@ -95,7 +95,7 @@ Para Archlinux <a href="https://aur.archlinux.org/packages/2048.c/" target="_bla
 
 ## Greed
 
-![Jogos para o Terminal](https://farm3.staticflickr.com/2838/13863722645_b5b131bae0_z.jpg "Jogos para o Terminal")
+![Jogos para o Terminal](/assets/img/shell-script/13863722645_b5b131bae0_z.jpg "Jogos para o Terminal")
 
 
 {% highlight bash %}
@@ -106,7 +106,7 @@ ou <a href="https://aur.archlinux.org/packages/greed/" target="_blank">AUR</a> p
 
 ## Ski
 
-![Jogos para o Terminal](https://farm3.staticflickr.com/2880/13863751173_40fb357866_z.jpg "Jogos para o Terminal")
+![Jogos para o Terminal](/assets/img/shell-script/13863751173_40fb357866_z.jpg "Jogos para o Terminal")
 
 
 <a href="http://www.catb.org/esr/ski/" target="_blank">Ski</a> 
@@ -119,7 +119,7 @@ Para Archlinux, instale de <a href="https://aur.archlinux.org/packages/ski/" tar
 
 ## NetHack
 
-![Jogos para o Terminal](https://farm3.staticflickr.com/2832/13863751533_035ef21704_z.jpg "Jogos para o Terminal")
+![Jogos para o Terminal](/assets/img/shell-script/13863751533_035ef21704_z.jpg "Jogos para o Terminal")
 
 
 <a href="http://www.nethack.org/" target="_blank">NetHack</a>
@@ -133,7 +133,7 @@ sudo pacman -S nethack
 
 ## cgames
 
-![Jogos para o Terminal](https://farm4.staticflickr.com/3827/13863751553_d1f3d9e634_z.jpg "Jogos para o Terminal")
+![Jogos para o Terminal](/assets/img/shell-script/13863751553_d1f3d9e634_z.jpg "Jogos para o Terminal")
 
 
 <a href="http://www.muppetlabs.com/%7Ebreadbox/software/cgames.html" target="_blank">cgames</a> contém <tt>csokoban</tt>, <tt>cmines</tt>, e <tt>cblocks</tt>.
@@ -153,7 +153,7 @@ ou
 
 ## BSD-Games
 
-![Jogos para o Terminal](https://farm3.staticflickr.com/2907/13863722545_ec4cf17da5_z.jpg "Jogos para o Terminal")
+![Jogos para o Terminal](/assets/img/shell-script/13863722545_ec4cf17da5_z.jpg "Jogos para o Terminal")
 
 
 <http://wiki.linuxquestions.org/wiki/BSD_games>
