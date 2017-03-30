@@ -3,7 +3,7 @@ layout: post
 title: "Aprenda VIM , jogando!"
 date: '2015-07-13T16:07:00.000-07:00'
 image: '/assets/img/shell-script/vim-adventures.png'
-description: Aprenda VIM , jogando!
+description: "Um jogo on line que te faz aprender comandos do VIM."
 main-class: 'misc'
 tags:
 - VIM
