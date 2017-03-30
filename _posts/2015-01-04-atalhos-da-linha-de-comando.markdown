@@ -12,8 +12,8 @@ tags:
 ---
 
 <style>
- table.table, table.table td, table.table tr, table.table th {border: 1px solid silver;}
- table.table th {background: #a1c3f6;}
+ table.table, table.table td, table.table tr {border: 1px solid silver;}
+ table.table th {background: #a1c3f6; border: 1px solid #555753;}
 </style>
 
 ![Atalhos da linha de comando](/assets/img/shell-script/bourne-shell.png "Atalhos da linha de comando")
