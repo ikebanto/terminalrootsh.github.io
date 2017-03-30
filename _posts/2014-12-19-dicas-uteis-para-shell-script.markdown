@@ -49,8 +49,6 @@ cat arquivo.txt | cut -c3-6
 {% highlight bash %}
 cat arquivo.txt | cut -c3 | sort
 {% endhighlight %}
-
-
 → Variáveis ​​locais e o comando define:
  Uma variável declarada como local é aquele que só é visível dentro do bloco de código em que ela aparece. Em uma função, uma variável local só tem sentido dentro desse bloco de função forma de declarar uma variável(aspas simples e colar igual(=))
 
@@ -60,8 +58,6 @@ cat arquivo.txt | cut -c3 | sort
   }
  
 {% endhighlight %}
-
-
 
 → Comando Shift:
  Para trabalhar com parêmtros você pode utilizar o comando shift, que desloca parâmetros
@@ -75,7 +71,7 @@ cat arquivo.txt | cut -c3 | sort
  
 {% endhighlight %}
 
-###### ---exemplo com saida---
+> exemplo com saida
  
 
 {% highlight bash %}
@@ -84,8 +80,6 @@ cat arquivo.txt | cut -c3 | sort
  param2 param3
  
 {% endhighlight %}
-
-
 
 → A Variável RANDOM:
  gerar um número randômico(aleatório) que seja até no máximo 60
@@ -108,8 +102,6 @@ declare -r variavel
 readonly variavel='Isso é um teste!'
 {% endhighlight %}
 
-
-
 → O comando case:
  O uso do 'case' tem de usar dessa forma: o case, o in, o ;;, o ) e o esac
 
@@ -129,8 +121,6 @@ readonly variavel='Isso é um teste!'
  esac
  
 {% endhighlight %}
-
-
 
 → Utilizando o bc
 + Introdução
@@ -198,34 +188,48 @@ bc -l
   
 + Conhecendo os comandos matemáticos do bc
   
-  Quando carregamos o bc com a opção '-l', temos alguns comandos matemáticos:
- s(x): o seno de x (x em radianos)
- c(x): o cosseno de x (x em radianos)
- a(x): o inverso da tangente de x (retorna radianos).
- Se y = tangente de x (tg x), a(y) = x
- l(x): o logaritmo natural de x. (ln x)
- e(x): a função exponencial ( e^x ) (exp x) 
-  Dessas funções aparentemente simples, podemos obter mais funções, assunto do próximo tópico.
+Quando carregamos o bc com a opção '-l', temos alguns comandos matemáticos:
+
+ s(x)| o seno de x (x em radianos)
+ c(x)| o cosseno de x (x em radianos)
+ a(x)| o inverso da tangente de x (retorna radianos).
+ 
+> Se y = tangente de x (tg x), a(y) = x
+> l(x): o logaritmo natural de x. (ln x)
+> e(x): a função exponencial ( e^x ) (exp x)
   
- + Construindo funções
++ Construindo funções
   
-> Podemos definir algumas funções extras a partir da definição matemática:
+Podemos definir algumas funções extras a partir da definição matemática
+
 > define sin(x) {return s(x)}
+
 > define cos(x) {return c(x)}
+
 > tg x = sen x / cos x:
+
 > define tan(x) {return s(x)/c(x)}
+
 > log10 x (logaritmo na base 10 de x) = ln x / ln 10:
+
 > define l10(x) {return l(x)/l(10)}
+
 > Conversão entre radianos e graus:
+
 > d2r: graus para radianos
+
 > r2d: radianos para graus
+
 > pi = 3.14159265
+
 > define d2r(n) { return n * (pi/180); }
+
 > define r2d(n) { return n / (pi/180); }
+
 > Mas é chato ficar digitando essas definições toda vez que queremos usar o 'bc'.
 > Portanto, iremos criar um script que defina essas funções automaticamente.
-> Crie, usando seu editor de texto preferido (vi, emacs, Gedit...) um arquivo com o seguinte:
->
+> Crie, usando seu editor de texto preferido (vi, emacs, Gedit...) um arquivo com o seguinte
+
 {% highlight bash %}
 #!/usr/bin/bc -l
 #
@@ -241,23 +245,17 @@ define sin(x) { return s(d2r(x)); }
 define cos(x) { return c(d2r(x)); }
 define tan(x) { return sin(x)/cos(x); } 
 {% endhighlight %}
-
-
 > Salve ele como 'define.bc' no seu diretório HOME.
 > Mude os atributos dele, tal que ele seja executável:
 
 {% highlight bash %}
 chmod a+x define.bc
 {% endhighlight %}
-
-
 > Agora, chame o arquivo:
 
 {% highlight bash %}
 ~/define.bc
 {% endhighlight %}
-
-
 > Experimente usar os comandos:
 
 {% highlight bash %}
@@ -268,32 +266,24 @@ log2(2097152)
 quit
 
 {% endhighlight %}
-
-
 > Note que ocorre um pequeno desvio nas casas decimais.
 
 + Conceitos para a criação de pequenos programas com o bc
   
 > O comando "define". Mas afinal, o que o comando faz?
+
 > Ele simplesmente define uma função.
+
 > Dentro dele podemos usar os elementos acima citados, além destes:
-> auto : define uma variável local.
-> print : mostra mensagens na tela. (equivalente ao printf em C)
-> return : retorna um valor. Deve ser usada no final do programa, para retornar o resultado final dele.
-> { } (colchetes) têm o mesmo significado que na linguagem C. Eles servem para agrupar várias operações, de modo que estas sejam executadas de uma vez só.
-> if:
-> if (expressão) operação1 else operação2
-> Se o resultado de 'expressão' não for 0, executa operação1, senão executa operação2 (se presente).
-> while:
-> while (expressão) operação
-> Enquanto a expressão não chegar a zero, executa operação. Também pode-se sair do loop executando um comando 'break' dentro dele.
-> for:
-> for (inicialização; condição; incremento) { operação }
-> inicialização é executado antes de entrar no loop.
-> condição é testada cada vez que o loop é executado. Se ela for zero, o loop quebra. Depois, incremento é executado. A operação de incremento deve modificar o valor usado no loop for.
+
++ auto : define uma variável local.
++ print : mostra mensagens na tela. (equivalente ao printf em C)
++ return : retorna um valor. Deve ser usada no final do programa, para retornar o resultado final dele.
++ { } (colchetes) têm o mesmo significado que na linguagem C. Eles servem para agrupar várias operações, de modo que estas sejam executadas de uma vez só.
+
 > Como podemos notar, a linguagem é bem semelhante ao C. Porém, não há nenhum elemento parecido com o 'goto' ou o 'switch', o que a torna bem limitada.
-> quit:
-> Só deve ser usado em modo interativo. Assim que 'quit' for encontrado, o bc sai. (ver curiosidade no item 2) Em programas devemos usar 'halt'.
+
+ quit | Só deve ser usado em modo interativo. Assim que 'quit' for encontrado, o bc sai. (ver curiosidade no item 2) Em programas devemos usar 'halt'.
 
 + Alguns exemplos
   
@@ -331,64 +321,57 @@ if (x <= 1) return (1);
    }
   }
 {% endhighlight %}
++ bc e shell scripts
 
+> Às vezes, precisamos fazer um cálculo num shell script. O bc torna isso moleza
 
- + bc e shell scripts
-> Às vezes, precisamos fazer um cálculo num shell script. O bc torna isso moleza:
 > $ x=$(echo "358358*5824825" | bc)
+
 > $ echo $x
+
 > 2087372637350
-> Simples, não?
-> A estrutura é:
+
+Simples, não?
+
+A estrutura é:
+
 > variavel=$(echo "expressão" | bc)
- + Conclusão e considerações finais
++ Conclusão e considerações finais
 > Nesse artigo, vimos como usar os comandos básicos do programa bc, que, embora aparentemente limitado, pode quebrar um bom galho como uma calculadora programável e em shell scripts.
 > Porém, ele não deve ser considerado como uma linguagem de programação completa, mas sim como uma linguagem específica para sua aplicação.
->  
+ 
 → Usando o 'sleep' e o 'clear' para programas interativos
 
 {% highlight bash %}
  sleep 1 # tempo de 1 segundo de espera na execução
  clear #(limpa a tela)
 {% endhighlight %}
-
-
 → o comando 'reset' 
  É o mesmo que o clear, porém limpa a tela totalmente(a barra de rolagem fica integral)
 → Mostrar hora
 
 {% highlight bash %}
- DATA=`date +%T`
- echo $DATA
+DATA=`date +%T`
+echo $DATA
 {% endhighlight %}
-
-
 → O comando tput
   Envia a seqüência para mover o cursor para a linha 2, coluna 4 (no canto superior esquerdo da tela, geralmente conhecida como a "casa" posição do cursor).
 
 {% highlight bash %}
 cat arquivo.txt | tput cup 2 4
 {% endhighlight %}
-
-
 → O comando diff(utilizado para para mostrar diferenças em arquivos)
 
 {% highlight bash %}
 diff hashing_site.txt hashing_sum.txt
 {% endhighlight %}
-
-
 → Usando o Comando beep
 + Instalando:
 
 {% highlight bash %}
 apt-get install beep
 {% endhighlight %}
-
-
 + Opções de uso
-
-
 
 {% highlight bash %}
 beep -l 5000
@@ -470,8 +453,6 @@ echo '#!/bin/bash' > /home/$USER/funcoes/bobmarley && echo 'bobmarley(){ echo "M
 {% highlight bash %}
 echo '#!/bin/bash' > /home/$USER/funcoes/malcomx && echo 'malcomx(){ echo "Líder Revolucionário!";}' >> /home/$USER/funcoes/malcomx && echo 'malcomx' >> /home/$USER/funcoes/malcomx
 {% endhighlight %}
-
-
 
 > ♠ (...)
 
@@ -562,8 +543,6 @@ seq 2 8
  echo $i
  done
  {% endhighlight %}
-
-
 ###### → O comando let
 Ele praticamente é um 'incrementador', se vc digitar isso num terminal, verá que ele incrementar +1 na variável j
 
@@ -578,8 +557,6 @@ echo $j
 2
   
 {% endhighlight %}
-
-
 ###### → Operações básicas com vetores/arrays
 Se há um recurso muito útil na programação, certamente é a possibilidade de agruparmos várias variáveis de um mesmo tipo em uma só. São o que chamamos de vetor, ou matriz - em inglês se diz array.
 
