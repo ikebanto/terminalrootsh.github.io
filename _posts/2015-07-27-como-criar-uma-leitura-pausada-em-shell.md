@@ -1,24 +1,23 @@
 ---
 layout: post
-title: Como criar uma leitura pausada em Shell Script
+title: "Como criar uma leitura pausada em Shell Script"
 date: '2015-07-27T18:56:00.000-07:00'
-description: Como criar uma leitura pausada em Shell Script
+image: '/assets/img/shell-script/leitura.png'
+description: "Veja o código e leia os cometários para exercitar"
 main-class: 'bash'
 tags:
 - Shell Script
-image: http://2.bp.blogspot.com/-9Bmb1Mr5B1g/Vbbf9Ij2suI/AAAAAAAABjI/l0d3HoryoUU/s72-c/leitura.png
-twitter_text: Como criar uma leitura pausada em Shell Script
-introduction: Como criar uma leitura pausada em Shell Script
 ---
-![Blog Linux](http://2.bp.blogspot.com/-9Bmb1Mr5B1g/Vbbf9Ij2suI/AAAAAAAABjI/l0d3HoryoUU/s400/leitura.png "Blog Linux")
+![Como criar uma leitura pausada em Shell Script](/assets/img/shell-script/leitura.png "Como criar uma leitura pausada em Shell Script")
  
-COMO CRIAR UMA LEITURA PAUSADA EM SHELL SCRIPT
-Acabei de fazer esse script só pra estudar comandos e quis compartilhá-lo com vocês. Basicamente ele lê um texto como na imagem do GIF abaixo, serve como aprendizado e exercício.
-Ver resultado em GIF
-No próprio script possui as explicações nos #comentários. Tente melhorar alguma coisa, ou adicionar mais funcionalidades. :)
-Por enquanto é só!
-  <iframe src="http://pastebin.com/raw/HA2nmU3H" style="border:none;width:100%;"><iframe>
- {% highlight bash %}
+
+> Acabei de fazer esse script só pra estudar comandos e quis compartilhá-lo com vocês. Basicamente ele lê um texto como na imagem do GIF abaixo, serve como aprendizado e exercício.
+
+
+No próprio script possui as explicações nos __#comentários__. Tente melhorar alguma coisa, ou adicionar mais funcionalidades. :)
+
+
+{% highlight bash %}
 #!/bin/bash
 # Como criar uma leitura pausada em Shell Script
 # http://www.terminalroot.com.br/
@@ -47,4 +46,6 @@ echo -e "\n";
 setterm -cursor on;
 exit 0
 {% endhighlight %}
-<div class= "Blog Linux")
+
+
+## Valeu!
