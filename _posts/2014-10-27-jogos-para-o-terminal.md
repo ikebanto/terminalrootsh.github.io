@@ -172,5 +172,5 @@ sudo pacman -S bsd-games
 
 <http://ttygames.wordpress.com/>
 
-*Via: http://xmodulo.com*
+*Via: <http://xmodulo.com>*
 
