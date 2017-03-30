@@ -55,7 +55,9 @@ __grep__ é um utilitário de linha de comando para procurar conjuntos de dados 
 <tr><td>.*</td><td>casa com qualquer caracter várias vezes</td></tr>
 <tr><td>(esse|aquele)</td><td>Casa as palavras 'esse' ou 'aquele'</td></tr>
 </tbody></table>
-Exs.:
+
+## Exemplos
+
 1-Procura a palavra marcos no arquivo /etc/passwd:
 {% highlight bash %}
 grep marcos /et/passwd
@@ -92,12 +94,6 @@ grep '[0-9][0-9][0-9][0-9]' /et/passwd
 {% endhighlight %}
 
 
-6-Procura todas as linhas que contenham uma sequência de 4 números consecutivos:
-{% highlight bash %}
-grep '[0-9][0-9][0-9][0-9]' /et/passwd
-{% endhighlight %}
-
-
 7-Comando para encontrar linhas em branco:
 {% highlight bash %}
 grep '^$' /et/passwd
@@ -122,7 +118,9 @@ egrep '^.{27}$' passwd
 {% endhighlight %}
 
 
-Note que foi usado o egrep e não o grep. É porque as chaves fazem parte de um conjunto avançado de Expressões Regulares ("extended"), então o egrep lida melhor com elas. Se fosse para usar o grep normal, teria que "escapar" as chaves: {% highlight bash %}
+> Note que foi usado o __egrep__ e não o __grep__. É porque as chaves fazem parte de um conjunto avançado de __Expressões Regulares__ ("__extended__"), então o __egrep__ lida melhor com elas. Se fosse para usar o grep normal, teria que "__escapar__" as chaves
+
+{% highlight bash %}
 grep '^.\{27\}$' /etc/passwd
 {% endhighlight %}
 
@@ -145,7 +143,7 @@ egrep '[0123456789]{3,}' /etc/passwd
 {% endhighlight %}
 
 
-14-Econtrar linhas que começam com 'vogal minúscula' e terminam com a palavra 'bash', usa−se o curinga ".*" para significar "qualquer coisa"(não confunda com "qualquer caracterer" somente "."):
+14-Econtrar linhas que começam com '__vogal minúscula__' e terminam com a palavra 'bash', usa−se o curinga "__.*__" para significar "qualquer coisa"(não confunda com "__qualquer caracterer__" somente "__.__"):
 {% highlight bash %}
 egrep '^[aeiou].*bash$' /etc/passwd
 {% endhighlight %}
