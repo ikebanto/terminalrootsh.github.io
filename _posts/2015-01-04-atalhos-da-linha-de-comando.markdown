@@ -1,29 +1,46 @@
 ---
 layout: post
-title: Atalhos da linha de comando
+title: "Atalhos da linha de comando"
 date: '2015-01-04T12:46:00.002-08:00'
-description: Atalhos da linha de comando
+image: '/assets/img/shell-script/bourne-shell.png'
+description: "Agilize sua produtividade no terminal usando atalhos."
 main-class: 'misc'
 tags:
 - Dicas
 - Terminal
 - Comandos
-image: http://1.bp.blogspot.com/-xAtPNrIAZmA/VDsh_jH6FUI/AAAAAAAAA2I/hd13kwJ4_9I/s72-c/new-logo-tr.png
-twitter_text: Atalhos da linha de comando
-introduction: Atalhos da linha de comando
 ---
-![Blog Linux](http://1.bp.blogspot.com/-xAtPNrIAZmA/VDsh_jH6FUI/AAAAAAAAA2I/hd13kwJ4_9I/s320/new-logo-tr.png "Blog Linux")
-Atalho Descrição Tecla Similar  Ctrl+A Move o cursor para o início da linha Home  Ctrl+B Move o cursor uma posição à esquerda ←  Ctrl+C Envia sinal EOF() para o sistema 
-  Ctrl+D Apaga um caractere à direita Delete  Ctrl+E Move o cursor para o fim da linha End  Ctrl+F Move o cursor uma posição à direita →  Ctrl+H Apaga um caractere à esquerda Backspace  Ctrl+I Completa arquivos e comandos Tab  Ctrl+J Quebra a linha Enter  Ctrl+K Recorta do cursor até o fim da linha 
-  Ctrl+L Limpa a tela (igual ao comando clear) 
-  Ctrl+N Próximo comando 
-  Ctrl+P Comando anterior 
-  Ctrl+Q Destrava a shell (veja Ctrl+S) 
-  Ctrl+R Procura no histórico de comandos 
-  Ctrl+S Trava a shell (veja Ctrl+Q) 
-  Ctrl+T Troca dois caracteres de lugar 
-  Ctrl+U Recorta a linha inteira 
-  Ctrl+V Insere caractere literal 
-  Ctrl+W Recorta a palavra à esquerda 
-  Ctrl+X Move o cursor para o início/fim da linha (2x) Home/End  Ctrl+Y Cola o trecho recortado 
-Fonte: Aurelio.net Canivete Suíço do Shell
+
+<style>
+
+</style>
+
+![Atalhos da linha de comando](/assets/img/shell-script/bourne-shell.png "Atalhos da linha de comando")
+
+<table align="center" border="1"><tbody>
+<tr><th>Atalho</th> <th>Descrição</th> <th>Tecla Similar</th> </tr>
+<tr> <td>Ctrl+A</td> <td>Move o cursor para o início da linha</td> <td align="center">Home</td> </tr>
+<tr> <td>Ctrl+B</td> <td>Move o cursor uma posição à esquerda</td> <td align="center">←</td> </tr>
+<tr> <td>Ctrl+C</td> <td>Envia sinal EOF() para o sistema</td> <td><br /></td> </tr>
+<tr> <td>Ctrl+D</td> <td>Apaga um caractere à direita</td> <td align="center">Delete</td> </tr>
+<tr> <td>Ctrl+E</td> <td>Move o cursor para o fim da linha</td> <td align="center">End</td> </tr>
+<tr> <td>Ctrl+F</td> <td>Move o cursor uma posição à direita</td> <td align="center">→</td> </tr>
+<tr> <td>Ctrl+H</td> <td>Apaga um caractere à esquerda</td> <td align="center">Backspace</td> </tr>
+<tr> <td>Ctrl+I</td> <td>Completa arquivos e comandos</td> <td align="center">Tab</td> </tr>
+<tr> <td>Ctrl+J</td> <td>Quebra a linha</td> <td align="center">Enter</td> </tr>
+<tr> <td>Ctrl+K</td> <td>Recorta do cursor até o fim da linha</td> <td><br /></td> </tr>
+<tr> <td>Ctrl+L</td> <td>Limpa a tela (igual ao comando clear)</td> <td><br /></td> </tr>
+<tr> <td>Ctrl+N</td> <td>Próximo comando</td> <td><br /></td> </tr>
+<tr> <td>Ctrl+P</td> <td>Comando anterior</td> <td><br /></td> </tr>
+<tr> <td>Ctrl+Q</td> <td>Destrava a shell (veja Ctrl+S)</td> <td><br /></td> </tr>
+<tr> <td>Ctrl+R</td> <td>Procura no histórico de comandos</td> <td><br /></td> </tr>
+<tr> <td>Ctrl+S</td> <td>Trava a shell (veja Ctrl+Q)</td> <td><br /></td> </tr>
+<tr> <td>Ctrl+T</td> <td>Troca dois caracteres de lugar</td> <td><br /></td> </tr>
+<tr> <td>Ctrl+U</td> <td>Recorta a linha inteira</td> <td><br /></td> </tr>
+<tr> <td>Ctrl+V</td> <td>Insere caractere literal</td> <td><br /></td> </tr>
+<tr> <td>Ctrl+W</td> <td>Recorta a palavra à esquerda</td> <td><br /></td> </tr>
+<tr> <td>Ctrl+X</td> <td>Move o cursor para o início/fim da linha (2x)</td> <td align="center">Home/End</td> </tr>
+<tr> <td>Ctrl+Y</td> <td>Cola o trecho recortado</td> <td><br /></td></tr>
+</tbody></table>
+  
+Fonte: [Aurelio.net Canivete Suíço do Shell](http://aurelio.net/shell/canivete/)
