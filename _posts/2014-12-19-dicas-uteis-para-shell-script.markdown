@@ -11,7 +11,7 @@ tags:
 
 ![Dicas úteis para Shell Script](/assets/img/shell-script/shell-script-logo.jpg "Dicas úteis para Shell Script")
 
-> Separei algumas dicas para Shell Script, deem uma analisada
+> Separei algumas __dicas__ para Shell Script, deem uma analisada
 
 #### →  Contar os caracteres de uma variável
 
@@ -20,37 +20,38 @@ echo ${#variavel}
 {% endhighlight %}
 
 #### →  Usando o comando cut
-+ Mostrar somente a 3° coluna(de cada linha) do arquivo
++ Mostrar somente a __3° coluna__(de cada linha) do arquivo
 
 {% highlight bash %}
 cat arquivo.txt | cut -c3
 {% endhighlight %}
 
-+ Mostrar somente a 3° coluna EM DIANTE(de cada linha) do arquivo
++ Mostrar somente a __3° coluna EM DIANTE__(de cada linha) do arquivo
 
 {% highlight bash %}
 cat arquivo.txt | cut -c3-
 {% endhighlight %}
 
-+ O comando abaixo extrai o campo 1 (field) do arquivo /etc/passwd cujo delimitador de campo é ":" (delimiter)(para caracteres especiais como '(' [parênteses] use uma barra-invertida antes '\(' ).
++ O comando abaixo extrai o __campo 1 (field)__ do arquivo __/etc/passwd__ cujo delimitador de campo é "__:__" (delimiter)(para caracteres especiais como '__(__' [parênteses] use uma __barra__ antes __'\(' )__.
 
 {% highlight bash %}
 cat /etc/passwd | cut -d: -f1
 {% endhighlight %}
 
-+ Mostrar somente da 3° até a 6° coluna(de cada linha) do arquivo
++ Mostrar somente da __3° até a 6°__ coluna(de cada linha) do arquivo
 
 {% highlight bash %}
 cat arquivo.txt | cut -c3-6
 {% endhighlight %}
 
-+ Joga a saída(stdout) do comando cat para a entrada(stdin) do cut e a saída do cut para a entrada do sort(deixando em ordem alfabética)
++ Joga a __saída(stdout)__ do comando __cat__ para a __entrada(stdin)__ do __cut__ e a saída do __cut__ para a entrada do __sort__ (deixando em ordem alfabética)
 
 {% highlight bash %}
 cat arquivo.txt | cut -c3 | sort
 {% endhighlight %}
 #### →  Variáveis ​​locais e o comando define:
- Uma variável declarada como local é aquele que só é visível dentro do bloco de código em que ela aparece. Em uma função, uma variável local só tem sentido dentro desse bloco de função forma de declarar uma variável(aspas simples e colar igual(=))
+
+Uma variável declarada como local é aquele que só é visível dentro do bloco de código em que ela aparece. Em uma função, uma variável local só tem sentido dentro desse bloco de função forma de declarar uma variável(aspas simples e colar igual(__=__))
 
 {% highlight bash %}
   hello(){
@@ -60,8 +61,10 @@ cat arquivo.txt | cut -c3 | sort
 {% endhighlight %}
 
 #### →  Comando Shift:
- Para trabalhar com parêmtros você pode utilizar o comando shift, que desloca parâmetros
- Exemplo de como usar o shift(arquivo ./teste.sh):
+
+Para trabalhar com parêmtros você pode utilizar o comando __shift__, que desloca parâmetros
+
+Exemplo de como usar o __shift__ (arquivo __./teste.sh__):
 
 {% highlight bash %}
  #!/bin/bash
@@ -72,7 +75,6 @@ cat arquivo.txt | cut -c3 | sort
 {% endhighlight %}
 
 > exemplo com saida
- 
 
 {% highlight bash %}
 ./teste.sh param1 param2 param3
@@ -82,21 +84,27 @@ cat arquivo.txt | cut -c3 | sort
 {% endhighlight %}
 
 #### →  A Variável RANDOM:
- gerar um número randômico(aleatório) que seja até no máximo 60
+
+gerar um número __randômico__ (aleatório) que seja até no máximo __60__
 
 {% highlight bash %}
 echo $(($RANDOM % 61))
 {% endhighlight %}
 
 #### →  O comando declare e o comando readonly
-+ Use o comando 'declare' para definir atributos de variáveis ​​e funções.
- -r (readonly) # -i (integer/numeros)# -f (para criar funções somente leitura)
+
++ Use o comando '__declare__' para definir atributos de variáveis ​​e funções.
+
+__-r__ (readonly)
+__-i__ (integer/numeros)
+
+__-f__ (para criar funções somente leitura)
 
 {% highlight bash %}
 declare -r variavel
 {% endhighlight %}
 
-+ Use o comando readonly para fazer as variáveis ​​e funções readonly ou seja, você não pode alterar o valor de variáveis ​​.Ou, em vez de -r, usar: readonly variavel
++ Use o comando __readonly__ para fazer as variáveis ​​e funções __readonly__ ou seja, você não pode alterar o valor de variáveis ​​.Ou, em vez de __-r__ , usar: __readonly variavel__
 
 {% highlight bash %}
 readonly variavel='Isso é um teste!'
@@ -106,31 +114,29 @@ readonly variavel='Isso é um teste!'
  O uso do 'case' tem de usar dessa forma: o case, o in, o ;;, o ) e o esac
 
 {% highlight bash %}
- opcao="$1"
- 
- case "$opcao" in
-  eric)
-  echo "Menino"
-  ;;
-  camila)
-  echo "Mulher"
-  ;;
-  marcos)
-  echo "Homem"
-  ;;
- esac
- 
+opcao="$1"
+
+case "$opcao" in
+eric)
+echo "Menino"
+;;
+camila)
+echo "Mulher"
+;;
+marcos)
+echo "Homem"
+;;
+esac 
 {% endhighlight %}
 
-#### →  Utilizando o bc
+## →  Utilizando o bc
 
-+ Introdução
+#### Introdução
 
- O bc não é exatamente uma calculadora, mas sim uma linguagem para cálculos, que lembra vagamente a linguagem C. O que significa que podemos ter construções como 'if', 'for', 'while', que um programa pode pedir informações para um usuário, e que podemos usar "programas" escritos para o 'bc' como se usássemos um shell script. 
-
-+ Conhecendo o bc (modo interativo)
+O __bc__ não é exatamente uma __calculadora__, mas sim uma linguagem para cálculos, que lembra vagamente a __linguagem C__. O que significa que podemos ter construções como __'if', 'for', 'while'__ , que um programa pode pedir informações para um usuário, e que podemos usar "programas" escritos para o '__bc__' como se usássemos um shell script.
++ Conhecendo o __bc (modo interativo)__
  
-Para chamar o bc, basta digitar numa janela de terminal, 'bc'. Para fazer um cálculo, basta digitar a expressão e dar ENTER.
+Para chamar o __bc__, basta digitar numa janela de terminal, '__bc__'. Para fazer um cálculo, basta digitar a expressão e dar __ENTER__ .
 
 #### Operações definidas
 
@@ -138,8 +144,7 @@ Para chamar o bc, basta digitar numa janela de terminal, 'bc'. Para fazer um cá
  % | (resto da divisão)
  ^ | (potenciação)
  sqrt(x) | (raiz quadrada de x)
- last | (último resultado) 
-
+ last | (último resultado)
 > Para sair, basta dar 'quit'.
 
 {% highlight bash %}
@@ -166,9 +171,9 @@ bc
   
 {% endhighlight %}
 
-  Você pode estar pensando, depois desse último resultado (2/3 = 0?), "Epa! Alguma coisa está errada!".
+Você pode estar pensando, depois desse último resultado (2/3 = 0?), "Epa! Alguma coisa está errada!".
   
-  Calma, não se desespere. Você precisa carregar o bc com o parâmetro '-l', que ativa uma biblioteca de operações matemáticas.
+Calma, não se desespere. Você precisa carregar o bc com o parâmetro '-l', que ativa uma biblioteca de operações matemáticas.
 
 {% highlight bash %}
 bc -l
@@ -187,40 +192,43 @@ bc -l
   
 {% endhighlight %}
 
-  Pequena curiosidade: o comando 'quit' é executado assim que ele é encontrado. Portanto, algo como
->  if (0==1) quit
->  mesmo 0==1 sendo impossível, vai fazer o 'bc' sair.
+Pequena curiosidade: o comando 'quit' é executado assim que ele é encontrado. Portanto, algo como
+
+>  __if (0==1) quit__
+>  mesmo __0==1__ sendo impossível, vai fazer o ' __bc__ ' __sair__.
 >  Tome cuidado com isso.
   
-+ Conhecendo os comandos matemáticos do bc
++ Conhecendo os comandos matemáticos do __bc__
   
-Quando carregamos o bc com a opção '-l', temos alguns comandos matemáticos:
+Quando carregamos o bc com a opção '__-l__', temos alguns comandos matemáticos:
 
- s(x)| o seno de x (x em radianos)
- c(x)| o cosseno de x (x em radianos)
- a(x)| o inverso da tangente de x (retorna radianos).
+ __s(x)__| o seno de x (x em radianos)
+ __c(x)__| o cosseno de x (x em radianos)
+ __a(x)__| o inverso da tangente de x (retorna radianos).
  
 > Se y = tangente de x (tg x), a(y) = x
-> l(x): o logaritmo natural de x. (ln x)
-> e(x): a função exponencial ( e^x ) (exp x)
+
+l(x) | o logaritmo natural de x. (ln x)
+e(x) | a função exponencial ( e^x ) (exp x)
   
 + Construindo funções
   
 Podemos definir algumas funções extras a partir da definição matemática
 
-> define sin(x) {return s(x)}
+> __define sin(x) {return s(x)}__
 
-> define cos(x) {return c(x)}
+> __define cos(x) {return c(x)}__
 
-> tg x = sen x / cos x:
+> __tg x = sen x / cos x__
 
-> define tan(x) {return s(x)/c(x)}
+> __define tan(x) {return s(x)/c(x)}__
 
-> log10 x (logaritmo na base 10 de x) = ln x / ln 10:
+> __log10 x (logaritmo na base 10 de x) = ln x / ln 10__
 
-> define l10(x) {return l(x)/l(10)}
+> __define l10(x) {return l(x)/l(10)}__
 
-> Conversão entre radianos e graus:
+
+## Conversão entre radianos e graus:
 
 > d2r: graus para radianos
 
@@ -232,9 +240,11 @@ Podemos definir algumas funções extras a partir da definição matemática
 
 > define r2d(n) { return n / (pi/180); }
 
-> Mas é chato ficar digitando essas definições toda vez que queremos usar o 'bc'.
-> Portanto, iremos criar um script que defina essas funções automaticamente.
-> Crie, usando seu editor de texto preferido (vi, emacs, Gedit...) um arquivo com o seguinte
+Mas é chato ficar digitando essas definições toda vez que queremos usar o 'bc'.
+
+Portanto, iremos criar um script que defina essas funções automaticamente.
+
+Crie, usando seu editor de texto preferido (__vi, emacs, Gedit...__) um arquivo com o seguinte
 
 {% highlight bash %}
 #!/usr/bin/bc -l
@@ -276,20 +286,21 @@ quit
 
 + Conceitos para a criação de pequenos programas com o bc
   
-> O comando "define". Mas afinal, o que o comando faz?
+## O comando "define". Mas afinal, o que o comando faz?
 
 > Ele simplesmente define uma função.
 
-> Dentro dele podemos usar os elementos acima citados, além destes:
+Dentro dele podemos usar os elementos acima citados, além destes:
 
-+ auto : define uma variável local.
-+ print : mostra mensagens na tela. (equivalente ao printf em C)
-+ return : retorna um valor. Deve ser usada no final do programa, para retornar o resultado final dele.
-+ { } (colchetes) têm o mesmo significado que na linguagem C. Eles servem para agrupar várias operações, de modo que estas sejam executadas de uma vez só.
++ __auto__ : define uma variável local.
++ __print__ : mostra mensagens na tela. (equivalente ao printf em C)
++ __return__ : retorna um valor. Deve ser usada no final do programa, para retornar o resultado final dele.
++ __{ } (colchetes)__ têm o mesmo significado que na linguagem C. Eles servem para agrupar várias operações, de modo que estas sejam executadas de uma vez só.
 
 > Como podemos notar, a linguagem é bem semelhante ao C. Porém, não há nenhum elemento parecido com o 'goto' ou o 'switch', o que a torna bem limitada.
 
-quit | Só deve ser usado em modo interativo. Assim que 'quit' for encontrado, o bc sai. (ver curiosidade no item 2) Em programas devemos usar 'halt'.
+quit | Só deve ser usado em modo interativo.
+> Assim que '__quit__' for encontrado, o __bc__ sai. (ver curiosidade no item 2) Em programas devemos usar '__halt__'.
 
 + Alguns exemplos
   
@@ -305,7 +316,7 @@ if (x <= 1) return (1);
 
 ### Solução da equação do 2o grau
 
-> (Como o bc força o retorno de apenas um valor por função, criamos 2 funções para retornar as 2 raízes da equação)
+Como o bc força o retorno de apenas um valor por função, criamos 2 funções para retornar as 2 raízes da equação
 
 {% highlight bash %}
   #!/usr/bin/bc -l
@@ -329,19 +340,19 @@ if (x <= 1) return (1);
 {% endhighlight %}
 + bc e shell scripts
 
-> Às vezes, precisamos fazer um cálculo num shell script. O bc torna isso moleza
+Às vezes, precisamos fazer um cálculo num shell script. O bc torna isso moleza
 
-> x=$(echo "358358*5824825" | bc)
+> __x=$(echo "358358*5824825" | bc)__
 
-> echo $x
+> __echo $x__
 
-> 2087372637350
+> __2087372637350__
 
 Simples, não?
 
-A estrutura é:
+A estrutura é
 
-> variavel=$(echo "expressão" | bc)
+> __variavel=$(echo "expressão" | bc)__
 
 ## Conclusão e considerações finais
 
@@ -354,31 +365,37 @@ A estrutura é:
  sleep 1 # tempo de 1 segundo de espera na execução
  clear #(limpa a tela)
 {% endhighlight %}
+
 #### →  o comando 'reset' 
- É o mesmo que o clear, porém limpa a tela totalmente(a barra de rolagem fica integral)
+É o mesmo que o clear, porém limpa a tela totalmente(a barra de rolagem fica integral)
+ 
 #### →  Mostrar hora
 
 {% highlight bash %}
 DATA=`date +%T`
 echo $DATA
 {% endhighlight %}
+
 #### →  O comando tput
-  Envia a seqüência para mover o cursor para a linha 2, coluna 4 (no canto superior esquerdo da tela, geralmente conhecida como a "casa" posição do cursor).
+Envia a seqüência para mover o cursor para a linha 2, coluna 4 (no canto superior esquerdo da tela, geralmente conhecida como a "casa" posição do cursor).
 
 {% highlight bash %}
 cat arquivo.txt | tput cup 2 4
 {% endhighlight %}
-#### →  O comando diff(utilizado para para mostrar diferenças em arquivos)
 
+#### →  O comando diff(utilizado para para mostrar diferenças em arquivos)
 {% highlight bash %}
 diff hashing_site.txt hashing_sum.txt
 {% endhighlight %}
+
 #### →  Usando o Comando beep
+
 + Instalando:
 
 {% highlight bash %}
 apt-get install beep
 {% endhighlight %}
+
 + Opções de uso
 
 {% highlight bash %}
@@ -386,16 +403,19 @@ beep -l 5000
 {% endhighlight %}
 
 __-f__ | frequênciaDefine a frequencia, muda o tom do som, permitindo realizar combinações muito interessantes
+
 {% highlight bash %}
 beep -l 2000 -f 100
 {% endhighlight %}
 
 __-r__ | repetiçõesDefine o numero de repetições
+
 {% highlight bash %}
 beep -l 800 -f 100 -r 5
 {% endhighlight %}
 
-__-d__ | tempo - Determina o tempo (delay) de espera de repetição entre um som e outro, usado junto com a opção -r
+__-d__ | tempo - Determina o tempo (__delay__) de espera de repetição entre um som e outro, usado junto com a opção __-r__
+
 {% highlight bash %}
 beep -l 500 -r 5 -d 1000
 {% endhighlight %}
@@ -426,9 +446,7 @@ ola Marcos
 echo '$* ou $@(argumentos da função) =' $* 'ou' $@ ', $#(número de parâmetros para função) = '$# ', $0 = '$0
 {% endhighlight %}
 
-> Nota adicional para funções:
-> ao invés de criar vários aliases no .bashrc melhor criar funções em um diretório, exemplo: 
-
+> Nota adicional para funções, ao invés de criar vários aliases no .bashrc melhor criar funções em um diretório, exemplo:
 - __a)__ edite seu .bashrc somente uma vez incluindo uma linha
 
 {% highlight bash %}
@@ -473,29 +491,28 @@ chmod +x /home/$USER/minhasfuncoes.sh && chmod -R +x /home/$USER/funcoes/
 {% highlight bash %}
 minhasfuncoes bobmarley
 Músico jamaicano! 
-{% endhighlight %} 
-
+{% endhighlight %}
 {% highlight bash %}
 minhasfuncoes malcomx
 Líder Revolucionário! 
 {% endhighlight %}
 
-###### Ainda há como torná-las de leitura automática sem precisar chamar a minhasfuncoes, assim como as FunçõesZZ do Aurélio.
+### Ainda há como torná-las de leitura automática sem precisar chamar a minhasfuncoes, assim como as FunçõesZZ do Aurélio.
 
 #### → O comando exit:
 
- + A declaração de saída é usado para sair do script shell com um status de N.
+ + A declaração de saída é usado para sair do script shell com um status de __N__.
  + Use a declaração de saída para indicar o término shell script bem ou mal sucedidas.
- + O valor de N pode ser utilizado por outros comandos ou scripts shell para levar a sua própria ação.
- + Se N for omitido, o estado de saída é o valor do último comando foi executado.
+ + O valor de __N__ pode ser utilizado por outros comandos ou scripts shell para levar a sua própria ação.
+ + Se __N__ for omitido, o estado de saída é o valor do último comando foi executado.
  + Use a declaração de saída para terminar script shell em um erro.
- + Se N é definido para 0 significa saída shell normal. Criar um script shell chamado exitcmd.sh:
+ + Se __N__ é definido para 0 significa saída shell normal. Criar um script shell chamado exitcmd.sh:
  + Cada comando Linux executado pelo script shell ou usuário, tem um status de saída.
  + O status de saída é um número inteiro.
- + As Linux homem páginas de estatísticas de estado da saída de cada comando.
  + 0 estado de saída significa que o comando foi bem sucedido sem erros.
  + A não-zero (1-255 valores) saída de comando, o estatuto foi falha.
- + Você pode usar variáveis ​​shell especial chamado? para obter o status de saída do comando anteriormente executado.Para imprimir? variável usar o comando echo
+ 
+Você pode usar variáveis ​​shell especial chamado? para obter o status de saída do comando anteriormente executado.Para imprimir? variável usar o comando echo
   
 {% highlight bash %}
 #!/bin/bash
@@ -509,8 +526,8 @@ exit 0
 {% highlight bash %}
 echo $?
 {% endhighlight %}
-+ De acordo com a página man ls - estado de saída é 0 se OK, 1 se problemas menores, se dois sérios problemas.  
 
++ De acordo com a página man ls - estado de saída é 0 se OK, 1 se problemas menores, se dois sérios problemas. 
 {% highlight bash %}
 echo $?
 date # executar o comando data
@@ -526,8 +543,7 @@ Ele é praticamente o loop for, mostra uma sequência de tal número até outro 
 seq 2 8
 {% endhighlight %}
 
-###### mesmo que:
- 
+#### mesmo que:
 
 {% highlight bash %}
  for i in {2..8}
@@ -536,22 +552,20 @@ seq 2 8
  done 
 {% endhighlight %}
 
-######  ou até mesmo(os dois aninhados):
- 
+####  ou até mesmo(os dois aninhados):
 
 {% highlight bash %}
  for i in $(seq 2 8)
  do
  echo $i
  done
- {% endhighlight %}
+{% endhighlight %}
  
-###### → O comando let
-Ele praticamente é um 'incrementador', se vc digitar isso num terminal, verá que ele incrementar +1 na variável j
+#### → O comando let
+Ele praticamente é um '__incrementador__', se vc digitar isso num terminal, verá que ele incrementar __+1__ na variável __j__
 
 {% highlight bash %}
 echo $j
-  $
 let j++
 echo $j
 1
@@ -560,8 +574,9 @@ echo $j
 2
 {% endhighlight %}
 
-###### → Operações básicas com vetores/arrays
-Se há um recurso muito útil na programação, certamente é a possibilidade de agruparmos várias variáveis de um mesmo tipo em uma só. São o que chamamos de vetor, ou matriz - em inglês se diz array.
+#### → Operações básicas com vetores/arrays
+
+Se há um recurso muito útil na programação, certamente é a possibilidade de agruparmos várias variáveis de um mesmo tipo em uma só. São o que chamamos de vetor, ou __matriz__ - em inglês se diz __array__.
 
 {% highlight bash %}
 vetor=(eric camila marcos débora)
@@ -572,8 +587,8 @@ eric
   
 {% endhighlight %}
 
-###### → O comando unset(serve para apagar: variáveis, vetores/arrays e funções)
-###### → Zenity: interface gráfica para scripts
+#### → O comando unset(serve para apagar: variáveis, vetores/arrays e funções)
+#### → Zenity: interface gráfica para scripts
 
 ## Mais infos e fontes:
  
