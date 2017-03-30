@@ -280,5 +280,5 @@ interativos
 echo "Full Script concluído com sucesso!"
 echo "Pronto."
 exit 0
-{endhighlight} 
+{% endhighlight %}
 
