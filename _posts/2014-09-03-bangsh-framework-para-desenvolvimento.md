@@ -2,7 +2,7 @@
 layout: post
 title: "Bang.sh - Framework para Shell Script"
 date: '2014-09-02T20:20:00.000-07:00'
-image: '/assets/img/shell-script/bangsh.jpg'
+image: '/assets/img/shell-script/bangsh.png'
 description: "Iniciar uma aplicações em bash script geralmente é uma tarefa trabalhosa, mas o Bang.sh pode lhe ajudar."
 main-class: 'bash'
 tags:
