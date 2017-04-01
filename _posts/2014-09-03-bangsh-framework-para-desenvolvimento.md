@@ -10,7 +10,7 @@ tags:
 - Dicas
 ---
 
-![Bang.sh - Framework para Shell Script](/assets/img/shell-script/bangsh.jpg "Bang.sh - Framework para Shell Script")
+![Bang.sh - Framework para Shell Script](/assets/img/shell-script/bangsh.png "Bang.sh - Framework para Shell Script")
 
 Iniciar uma aplicações em bash script geralmente é uma tarefa trabalhosa, mas o [Bang.sh](https://github.com/bellthoven/bangsh) pode lhe ajudar. O __framework__ , tentar trazer uma forma mais organizada de se programar em __Shell Script__ . Muitos dos scripts que são vistos por aí, acabam sendo códigos mal identados e confusos.
 
