@@ -12,6 +12,6 @@ tags:
 
 ![Como Preencher Formulário Web Pelo Terminal](/assets/img/bash/como-preencher-formulario-web-pelo-terminal.jpg "Como Preencher Formulário Web Pelo Terminal")
 
-> Além de enviar dados pelo terminal para um formulário web, também foi demonstrado como pegar o IP através do HOST, além de demonstrado como filtrar dados da internet (paǵinas web).
+> Além de enviar dados pelo terminal para um formulário web, também foi demonstrado como pegar o IP através do HOST, além de demonstrado como filtrar dados da internet (páginas web).
 
 <iframe width="560" height="315" src="https://www.youtube.com/embed/ofXt14uzFCo" frameborder="0" allowfullscreen></iframe>
