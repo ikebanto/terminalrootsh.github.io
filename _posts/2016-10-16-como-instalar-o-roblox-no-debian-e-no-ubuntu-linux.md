@@ -2,6 +2,7 @@
 layout: post
 title: "Como instalar o Roblox no Debian e no Ubuntu Linux"
 date: '2016-10-16T07:21:00.000-07:00'
+image: '/assets/img/games/como-instalar-roblox-debian-ubuntu-linux.jpg'
 description: "Passos para rodar o game no seu computador"
 main-class: 'debian'
 tags:
@@ -30,17 +31,17 @@ tar -zxvf crossover-roblox.tar.gz
  
 >  Obs.: Observe algumas coisas antes de instalar o CrossOver:
   
-* - Pelo GDebi em descrição vc verá que o pacote é para 64bits , e ele mesmo da a dica na aba descrição de rodar esse comando antes se você estiver num sistema 32bits, se não tiver o sudo utilize o root:
+- Pelo GDebi em descrição vc verá que o pacote é para 64bits , e ele mesmo da a dica na aba descrição de rodar esse comando antes se você estiver num sistema 32bits, se não tiver o sudo utilize o root:
 {% highlight bash %}
 sudo dpkg --add-architecture i386 ; sudo apt-get update
 {% endhighlight %}
       
-* - No mesmo pacote há saídas pelo Lintian, se vc não tivé-lo instalado, é bom instalar também:
+- No mesmo pacote há saídas pelo Lintian, se vc não tivé-lo instalado, é bom instalar também:
 {% highlight bash %}
 apt-get install lintian
 {% endhighlight %}
       
-* - Se no status do pacote tiver: Todas as dependências satisfeitas, então está tudo certo, caso contrário, utilize o APT pra instalar as dependências que faltam. 
+- Se no status do pacote tiver: Todas as dependências satisfeitas, então está tudo certo, caso contrário, utilize o APT pra instalar as dependências que faltam. 
 
 Estando tudo certo instale:
  
