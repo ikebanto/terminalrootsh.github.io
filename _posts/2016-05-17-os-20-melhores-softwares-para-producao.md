@@ -19,6 +19,7 @@ apt-get install lmms
 {% endhighlight %}
 
 ## Audacity
+![Audacity](/assets/img/multimidia/audacity.jpg "Audacity")
 {% highlight bash %}
 apt-get install audacity
 {% endhighlight %}
@@ -30,6 +31,7 @@ apt-get install rosegarden
 {% endhighlight %}
 
 ## Muse
+![Muse](/assets/img/multimidia/MuSe.jpg "Muse")
 {% highlight bash %}
 apt-get install muse
 {% endhighlight %}
@@ -41,6 +43,7 @@ apt-get install ardour
 {% endhighlight %}
 
 ## Traverso DAW
+![Traverso DAW](/assets/img/multimidia/Traverso-DAW.jpg "Traverso DAW")
 {% highlight bash %}
 apt-get install traverso
 {% endhighlight %}
@@ -52,6 +55,7 @@ apt-get install qtractor
 {% endhighlight %}
 
 ## Seq24
+![Seq24](/assets/img/multimidia/Seq24.jpg "Seq24")
 {% highlight bash %}
 apt-get install seq24
 {% endhighlight %}
@@ -63,6 +67,7 @@ apt-get install timidity
 {% endhighlight %}
 
 ## Bristol
+![Bristol](/assets/img/multimidia/Bristol.jpg "Bristol")
 {% highlight bash %}
 apt-get install bristol
 {% endhighlight %}
@@ -74,6 +79,7 @@ apt-get install terminatorx
 {% endhighlight %}
 
 ## ZynAddSubFX
+![ZynAddSubFX](/assets/img/multimidia/ZynAddSubFX.jpg "ZynAddSubFX")
 {% highlight bash %}
 apt-get install zynaddsubfx
 {% endhighlight %}
