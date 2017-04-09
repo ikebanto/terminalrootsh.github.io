@@ -3,8 +3,8 @@ layout: post
 title: "Comparando BSD e Linux"
 date: '2016-05-26T18:55:00.000-07:00'
 image: '/assets/img/bsd/linux_vs_bsd.jpg'
-description: "Então qual é realmente a diferença entre, digamos, o Debian GNU/Linux e o [FreeBSD](https://www.freebsd.org/) ?"
-main-class: 'linux'
+description: "Então qual é realmente a diferença entre, digamos, o Debian GNU/Linux e o FreeBSD ?"
+main-class: 'artigos'
 tags:
 - Linux
 - BSD
@@ -12,7 +12,7 @@ tags:
 
 ![Comparando BSD e Linux](/assets/img/bsd/linux_vs_bsd.jpg "Comparando BSD e Linux")
 
-> Então qual é realmente a diferença entre, digamos, o [Debian GNU/Linux](https://cse.google.com.br/cse/publicurl?cx=004473188612396442360:qs2ekmnkweq&q=debian) e o [FreeBSD](https://www.freebsd.org/)? Pra maioria dos usuários, as diferenças são surpreendentemente pequenas: Ambos são sistemas operacionais UNIX® like. Ambos são desenvolvidos por projetos não comerciais (é claro que isso não se aplica a muitas outras distribuições Linux). Na próxima seção, vamos dar uma olhada no [BSD](https://pt.wikipedia.org/wiki/BSD) e compará-lo com o [Linux](https://cse.google.com.br/cse/publicurl?cx=004473188612396442360:qs2ekmnkweq&q=linux). As descrições se aplicam mais ao [FreeBSD](https://www.freebsd.org/), que somatiza uma média estimada de 80% das instalações de sistemas [BSD](https://pt.wikipedia.org/wiki/BSD), mas as diferenças pro [NetBSD](https://www.netbsd.org/) , pro [OpenBSD](https://www.openbsd.org/) e pro DragonFlyBSD são pequenas.
+> Então qual é realmente a diferença entre, digamos, o [Debian GNU/Linux](https://cse.google.com.br/cse/publicurl?cx=004473188612396442360:qs2ekmnkweq&q=debian) e o [FreeBSD](https://www.freebsd.org/)? Pra maioria dos usuários, as diferenças são surpreendentemente pequenas: Ambos são sistemas operacionais UNIX® like. Ambos são desenvolvidos por projetos não comerciais (é claro que isso não se aplica a muitas outras distribuições Linux). Na próxima seção, vamos dar uma olhada no [BSD](https://pt.wikipedia.org/wiki/BSD) e compará-lo com o [Linux](https://cse.google.com.br/cse/publicurl?cx=004473188612396442360:qs2ekmnkweq&q=linux). As descrições se aplicam mais ao [FreeBSD](https://www.freebsd.org/), que somatiza uma média estimada de 80% das instalações de sistemas [BSD](https://pt.wikipedia.org/wiki/BSD), mas as diferenças pro [NetBSD](https://www.netbsd.org/) , pro [OpenBSD](https://www.openbsd.org/) e pro [DragonFlyBSD](https://www.dragonflybsd.org/) são pequenas.
 
 ### Quem é dono do BSD?
 
