@@ -14,7 +14,7 @@ tags:
 
 > Por padrão o __Debian 8 Jessie MATE__ vem o com o gerenciador de sessão (login) o __LightDM instalado__ (veja imagem abaixo)
 
-![Blog Linux](/assets/img/debian/lightDM.png "Blog Linux")
+![Como instalar o GDM3 ou configurar o LightDM no Debian](/assets/img/debian/lightDM.png "Como instalar o GDM3 ou configurar o LightDM no Debian")
 
 Nesse vídeo há procedimentos de o que fazer após instalação do __Debian 8 Jessie__, mas não há esa dica, você pode incluí-la
 <iframe allowfullscreen="" frameborder="0" height="300" src="https://www.youtube.com/embed/mifEI1pBx4s" width="400"></iframe>
