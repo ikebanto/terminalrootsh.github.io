@@ -12,93 +12,112 @@ tags:
 
 ![Os 20 Melhores Softwares para Produção e Edição de Áudio no Debian GNULinux](/assets/img/multimidia/producao.jpg "Os 20 Melhores Softwares para Produção e Edição de Áudio no Debian GNULinux")
 
-LMMS
+## LMMS
 ![Os 20 Melhores Softwares para Produção e Edição de Áudio no Debian GNULinux](/assets/img/multimidia/lmms.jpg "Os 20 Melhores Softwares para Produção e Edição de Áudio no Debian GNULinux")
 {% highlight bash %}
 apt-get install lmms
 {% endhighlight %}
-Audacity
+
+## Audacity
 {% highlight bash %}
 apt-get install audacity
 {% endhighlight %}
-Rosegarden
+
+## Rosegarden
 ![Os 20 Melhores Softwares para Produção e Edição de Áudio no Debian GNULinux](/assets/img/multimidia/rosegarden.jpg "Os 20 Melhores Softwares para Produção e Edição de Áudio no Debian GNULinux")
 {% highlight bash %}
 apt-get install rosegarden
 {% endhighlight %}
-Muse
+
+## Muse
 {% highlight bash %}
 apt-get install muse
 {% endhighlight %}
-Ardour
+
+## Ardour
 ![Os 20 Melhores Softwares para Produção e Edição de Áudio no Debian GNULinux](/assets/img/multimidia/ardour.jpg "Os 20 Melhores Softwares para Produção e Edição de Áudio no Debian GNULinux")
 {% highlight bash %}
 apt-get install ardour
 {% endhighlight %}
-Traverso DAW
+
+## Traverso DAW
 {% highlight bash %}
 apt-get install traverso
 {% endhighlight %}
-Qtractor
+
+## Qtractor
 ![Os 20 Melhores Softwares para Produção e Edição de Áudio no Debian GNULinux](/assets/img/multimidia/qtractor.jpg "Os 20 Melhores Softwares para Produção e Edição de Áudio no Debian GNULinux")
 {% highlight bash %}
 apt-get install qtractor
 {% endhighlight %}
-Seq24
+
+## Seq24
 {% highlight bash %}
 apt-get install seq24
 {% endhighlight %}
-TiMidity++
+
+## TiMidity++
 ![Os 20 Melhores Softwares para Produção e Edição de Áudio no Debian GNULinux](/assets/img/multimidia/TiMidity%252B%252B.jpg "Os 20 Melhores Softwares para Produção e Edição de Áudio no Debian GNULinux")
 {% highlight bash %}
 apt-get install timidity
 {% endhighlight %}
-Bristol
+
+## Bristol
 {% highlight bash %}
 apt-get install bristol
 {% endhighlight %}
-TerminatorX
+
+## TerminatorX
 ![Os 20 Melhores Softwares para Produção e Edição de Áudio no Debian GNULinux](/assets/img/multimidia/TerminatorX.jpg "Os 20 Melhores Softwares para Produção e Edição de Áudio no Debian GNULinux")
 {% highlight bash %}
 apt-get install terminatorx
 {% endhighlight %}
-ZynAddSubFX
+
+## ZynAddSubFX
 {% highlight bash %}
 apt-get install zynaddsubfx
 {% endhighlight %}
-SooperLooper
+
+## SooperLooper
 ![Os 20 Melhores Softwares para Produção e Edição de Áudio no Debian GNULinux](/assets/img/multimidia/SooperLooper.jpg "Os 20 Melhores Softwares para Produção e Edição de Áudio no Debian GNULinux")
 {% highlight bash %}
 apt-get install sooperlooper
 {% endhighlight %}
-Hydrogen
+
+## Hydrogen
 {% highlight bash %}
 apt-get install hydrogen
 {% endhighlight %}
-Mixxx
+
+## Mixxx
 ![Os 20 Melhores Softwares para Produção e Edição de Áudio no Debian GNULinux](/assets/img/multimidia/mixxx.jpg "Os 20 Melhores Softwares para Produção e Edição de Áudio no Debian GNULinux")
 {% highlight bash %}
 apt-get install mixxx
 {% endhighlight %}
-JAMin
+
+## JAMin
 {% highlight bash %}
 apt-get install jamin
 {% endhighlight %}
-LADSPA
+
+## LADSPA
 ![Os 20 Melhores Softwares para Produção e Edição de Áudio no Debian GNULinux](/assets/img/multimidia/LADSPA.jpg "Os 20 Melhores Softwares para Produção e Edição de Áudio no Debian GNULinux")
 {% highlight bash %}
 apt-get install ladspa-sdk
 {% endhighlight %}
-Jack
+
+## Jack
 {% highlight bash %}
 apt-get install jack
 {% endhighlight %}
-DSSI
+
+## DSSI
 ![Os 20 Melhores Softwares para Produção e Edição de Áudio no Debian GNULinux](/assets/img/multimidia/DSSI.jpg "Os 20 Melhores Softwares para Produção e Edição de Áudio no Debian GNULinux")
 {% highlight bash %}
 apt-get install dssi-dev
 {% endhighlight %}
-LV2
+
+## LV2
 {% highlight bash %}
 apt-get install lv2*
 {% endhighlight %}
