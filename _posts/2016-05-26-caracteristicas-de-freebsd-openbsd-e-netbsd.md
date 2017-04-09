@@ -36,7 +36,7 @@ O sistema operacional [FreeBSD](https://www.freebsd.org/) é um dos mais usados 
 
 O __FreeBSD__ "falha" quando o assunto é arquitetura. Roda apenas em plataforma __Intel 32 bits__ (que inclui processadores __AMD__), DEC Alpha, __Sparc64__ e __PowerPC__, além de ser compatível com a arquitetura de __64 bits desenvolvida pela AMD__. O destaque do __FreeBSD__ é sua excelente performance em aplicações para __servidores Web__ e de banco de dados. É recomendável usá-lo se você quiser ser um novo usuário de sistemas BSDs, principalmente pela gama de aplicativos que este sistema oferece.
 
-Site oficial: <www.freebsd.org>
+Site oficial: <http://www.freebsd.org>
 
 ## OpenBSD
 
@@ -50,7 +50,7 @@ No caso da instalação, o [OpenBSD](https://www.openbsd.org/) não é tão simp
 
 O __OpenBSD__ não é muito apropriado para quem está começando a trabalhar com __BSD__. É necessário uma certa experiência, principalmente com questões de segurança. Esse sistema é muito utilizado em computadores que servem de __roteador__, __firewall__, __backup__ e __monitoramento__.
 
-Site oficial: <www.openbsd.org>
+Site oficial: <http://www.openbsd.org>
 
 ## NetBSD
 
@@ -63,7 +63,7 @@ A instalação do [NetBSD](https://www.netbsd.org/) não é complicada, mas não
 
 Muitos estudantes de computação preferem utilizar o [NetBSD](https://www.netbsd.org/) para pesquisar sua capacidade de ser compatível com várias plataformas. No entanto, como já foi dito, muitos o utilizam para "dar vida nova" a antigos computadores, especialmente máquinas da __Apple e da Sun Microsystems__. A tão famosa plataforma Amiga também é compatível. Visite o site oficial para encontrar a lista de compatibilidade. Se você quiser utilizar um sistema __BSD__, o __NetBSD__ é uma boa opção.
 
-Site oficial: <www.netbsd.org>
+Site oficial: <http://www.netbsd.org>
 
 ## Finalizando
 
