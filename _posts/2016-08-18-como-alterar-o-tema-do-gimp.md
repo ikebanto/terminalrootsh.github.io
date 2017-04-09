@@ -9,7 +9,6 @@ tags:
 - GIMP
 - TerminalRootTV
 ---
-![Como alterar o Tema do GIMP](/assets/img/gimp/como-alterar-tema-gimp.png "Como alterar o Tema do GIMP")
 
 ### Download dos Temas
 [Clique Aqui para baixar](https://github.com/draekko/gimp-cc-themes)
