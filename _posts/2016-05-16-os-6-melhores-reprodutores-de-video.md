@@ -9,6 +9,7 @@ tags:
 - Linux
 - Multimídia
 ---
+
 ![Os 6 Melhores Reprodutores de Vídeo para Debian GNU/Linux](/assets/img/multimidia/players-video.jpg "Os 6 Melhores Reprodutores de Vídeo para Debian GNU/Linux")
 
 ## Gnome MPlayer
