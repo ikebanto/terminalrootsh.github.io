@@ -46,8 +46,7 @@ cacaview imagem.jpg
 ![Veja imagens pelo Terminal](/assets/img/shell-script/milla.png "Veja imagens pelo Terminal")
  
 ![Veja imagens pelo Terminal](/assets/img/shell-script/rms.png "Veja imagens pelo Terminal")
- 
-![Veja imagens pelo Terminal](/assets/img/shell-script/tux-cuba.png "Veja imagens pelo Terminal")
+
 
 ### Ainda tem o cacaplay, cacaserver,...
 
