@@ -19,3 +19,6 @@ Estamos falando da ferramenta online __[ExplainShell](https://explainshell.com/)
 ### Endereço do ExplainShell
 
 <https://explainshell.com/>
+
+### Aprenda Shell Script
+<http://www.terminalroot.com.br/shell/?aprenda>
