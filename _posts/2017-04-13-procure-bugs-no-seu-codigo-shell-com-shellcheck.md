@@ -4,8 +4,10 @@ title: "Procure bugs no seu Código Shell com ShellCheck"
 date: 2017-04-13 08:53:00
 image: '/assets/img/shell-script/shellcheck.jpg'
 description: "Ferramenta online que faz análise no seu código."
-main-class:
+main-class: 'bash'
 tags:
+- shell-script
+- bash
 ---
 
 ![Procure bugs no seu Código Shell com ShellCheck](/assets/img/shell-script/shellcheck.jpg "Procure bugs no seu Código Shell com ShellCheck")
