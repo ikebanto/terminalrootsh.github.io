@@ -41,7 +41,7 @@ apt-get install shellcheck
 <https://github.com/koalaman/shellcheck>
 
 ## Quer aprender Shell Script ou melhorar seus conhecimentos em Bash ?
-## Faça o Curso de Shell Script do Iniciante ao Avançado Gratuito e adquira o conteúdo adicional nesse link
+# Faça o Curso de Shell Script do Iniciante ao Avançado Gratuito e adquira o conteúdo adicional nesse link
 <http://www.terminalroot.com.br/shell/>
 
 # Valeu!
