@@ -11,6 +11,4 @@ tags:
 - TerminalRootTV
 ---
 
-![TOP 5 Melhores Distribuições GNU/Linux de Todos os Tempos](/assets/img/tv/top5-distros.jpg "TOP 5 Melhores Distribuições GNU/Linux de Todos os Tempos")
-
 <iframe allowfullscreen="" frameborder="0" height="315" src="https://www.youtube.com/embed/S01BQrTOHn8" width="560"></iframe>

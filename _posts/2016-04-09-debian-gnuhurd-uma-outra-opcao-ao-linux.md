@@ -30,5 +30,7 @@ VBoxManage convertfromraw debian-hurd-*.img debian-hurd.vdi --format vdi
 {% endhighlight %} 
 
 ### Mais informações
+
 <https://www.gnu.org/software/hurd/index.html>
+
 <https://www.debian.org/ports/hurd/>
