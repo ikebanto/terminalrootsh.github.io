@@ -22,22 +22,22 @@ tags:
 No __Debian__, se não possuir o sudo, use o __root__ e depois com o __APT__, basta rodar o comando, lembrando que você precisará do __OpenSSH__ e o __OpenSSL__ instalados
 {% highlight bash %}
 apt-get install openssh-client openssh-server openssl
-{% endhiglight %}
+{% endhighlight %}
 
 E depois instale o __Shell In A Box__
 {% highlight bash %}
 apt-get install shellinabox
-{% endhiglight %}
+{% endhighlight %}
 
 No __Ubuntu, Linux Mint e derivados__, como __sudo__
 {% highlight bash %}
 sudo apt-get install shellinabox
-{% endhiglight %}
+{% endhighlight %}
 
 Em distribuições baseadas em __RedHat__
 {% highlight bash %}
 yum install openssl shellinabox
-{% endhiglight %}
+{% endhighlight %}
 
 ## Utilização
 
@@ -61,7 +61,7 @@ Você ainda pode usar Editores de Texto pelo navegador: VI, VIM, Nano, Joe,...
 Após as alterações efetuadas no arquivo __/etc/default/shellinabox__ você precisará *restartar* o serviço pra que as alterações tenham efeito
 {% highlight bash %}
 /etc/init.d/shellinabox restart
-{% endhiglight %}
+{% endhighlight %}
 
 > Você também pode __alterar as cores de fundo e do terminal web clicando com o botão direito na página da conexão__, entre outras configurações.
 
