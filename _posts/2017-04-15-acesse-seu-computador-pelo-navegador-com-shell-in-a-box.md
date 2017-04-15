@@ -75,4 +75,4 @@ Após as alterações efetuadas no arquivo __/etc/default/shellinabox__ você pr
 
 # Valeu!
 
-![Shell In A Box Desconectado](/assets/img/shell-script/shellinabox/shellinabox-disconected "Shell In A Box Desconectado")
+![Shell In A Box Desconectado](/assets/img/shell-script/shellinabox/shellinabox-disconected.jpg "Shell In A Box Desconectado")
