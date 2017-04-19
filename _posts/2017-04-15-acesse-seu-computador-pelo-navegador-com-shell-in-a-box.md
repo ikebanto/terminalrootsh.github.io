@@ -73,6 +73,6 @@ Após as alterações efetuadas no arquivo __/etc/default/shellinabox__ você pr
 
 ## Deixe seu comentário!
 
-# Valeu!
+## Valeu!
 
 ![Shell In A Box Desconectado](/assets/img/shell-script/shellinabox/shellinabox-disconected.jpg "Shell In A Box Desconectado")
