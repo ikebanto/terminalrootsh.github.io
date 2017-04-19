@@ -17,18 +17,18 @@ Primeiramente eu sei que muita gente vai dizer: "[Terminal Root](http://terminal
 
 Muitos já sabem que a [Microsoft](https://www.microsoft.com/) integrou o [Bash](https://www.gnu.org/software/bash/) no [Windows 10](https://www.microsoft.com/pt-br/software-download/windows10) através da sua [atualização de aniversário](https://support.microsoft.com/en-us/help/12387/windows-10-update-history), muitos blogs postaram isso na época e uns gostaram e outros odiaram por vários motivos (__xiitismo, amor a linha de comando, ódio a linha de comando, frescura,... e por aê vai!__) . Na verdade, essa parceria foi entre a [Canonical](https://www.canonical.com/) e a __Microsoft__, acho que eu li em algum lugar que a [OpenSUSE](https://pt.opensuse.org/) também, mas a OpenSUSE já era parceira de longas datas, aliás a Microsoft usa OpenSUSE num dos seus servidores do [Bing](https://www.bing.com/),...
 
-Sem muitas *milongas*, vamos direto ao assunto! Antes de mais nada, você precisa saber se seus sistema possui os seguintes requisitos pra poder gerar essa façanha, são eles:
+Sem muitas *milongas*, vamos direto ao assunto! Antes de mais nada, você precisa saber se seu sistema possui os seguintes requisitos pra poder gerar essa façanha, são eles:
 
 - Ter um PC com Windows 10 , 64 bits
 - Ter a [atualização de aniversário] do Windows instalada
 
 Depois é só seguir os seguintes passos:
 
-+ 1. Ir até Definições > Atualizar e Segurança
++ 1 - Ir até Definições > Atualizar e Segurança
 
 ![Como Usar o Shell Bash no Windows](/assets/img/bash/como-usar-o-shell-bash-no-windows-0.jpg "Como Usar o Shell Bash no Windows")
 
-+ 2.  Depois escolher "Para Programadores"
++ 2 -  Depois escolher "Para Programadores"
 
 ![Como Usar o Shell Bash no Windows](/assets/img/bash/como-usar-o-shell-bash-no-windows-1.jpg "Como Usar o Shell Bash no Windows")
 
