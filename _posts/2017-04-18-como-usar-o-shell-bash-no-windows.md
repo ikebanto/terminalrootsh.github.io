@@ -75,6 +75,6 @@ Para o __Windows 7__ ou qualquer outro Windows você pode experimentar o [CygWin
 
 ## Deixe seu comentário!
 
-## Valeu!
+### Valeu!
 
 Esse post foi adaptado do original [pplware](https://pplware.sapo.pt/microsoft/como-activar-a-bash-no-windows-10-em-8-passos/)
