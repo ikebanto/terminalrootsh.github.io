@@ -46,7 +46,7 @@ Pra você saber mais sobre as ferramentas citadas, você pode cosultar os links 
 
 ## Deixe seu comentário!
 
-## Valeu!
+### Valeu!
 
 <sub>Esse post foi adapatado do livro Shell Script Profissional - Aurelio M. Jargas</sub>
 
