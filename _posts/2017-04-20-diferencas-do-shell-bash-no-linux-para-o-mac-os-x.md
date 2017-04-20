@@ -24,7 +24,7 @@ alias tac="tail -r"
 
 + O comando __seq__ - No Mac e no Unix em geral, não existe __seq__ , mas há um comando similar que é o __jot__ , mas há uma sintaxe diferente.
 
-+ O comando __dialog__ - No Mac tambḿ não há __dialog__ . Mas existem programas como o [Fink](http://finkproject.org/), [MacPorts](https://www.macports.org/) e [Rudix](http://rudix.org/), que permitem instalar no Mac da Apple, programas do Linux. O Rudix por sinal é desenvolvido por brasileiros. Existe também o [CocoaDialog](http://mstratman.github.io/cocoadialog/), que utiliza janelas gráficas do __Mac OS X__, mas as opções se diferem do __dialog__, mas é muito similiar em outras coisas.
++ O comando __dialog__ - No Mac também não há __dialog__ . Mas existem programas como o [Fink](http://finkproject.org/), [MacPorts](https://www.macports.org/) e [Rudix](http://rudix.org/), que permitem instalar no Mac da Apple, programas do Linux. O Rudix por sinal é desenvolvido por brasileiros. Existe também o [CocoaDialog](http://mstratman.github.io/cocoadialog/), que utiliza janelas gráficas do __Mac OS X__, mas as opções se diferem do __dialog__, mas é muito similiar em outras coisas.
 
 ## Links dos Projetos
 
