@@ -17,7 +17,7 @@ tags:
 Pra quem conheceu o __CrunchBang__ uma distro minimalista, baseada em Debian, interessantíssima, mas infelizmente obteve a triste notícia que de que o mesmo havia descontinuada!Não precisa ficar triste , dela surgiu a ideia do [CrunchBang Plus Plus](https://crunchbangplusplus.org/), com as mesmas características.
 ## #!++
 
-[]CrunchBang++](https://crunchbangplusplus.org/) é uma distro completamente livre , concebido como uma continuação da distribuição CrunchBang Linux, construído em torno do gerenciador de janelas [Openbox](https://pt.wikipedia.org/wiki/OpenBox). CrunchBang Plus Plus também é conhecido como __CBPP__ ou __#!++__ ou __CrunchBang++__.
+[CrunchBang++](https://crunchbangplusplus.org/) é uma distro completamente livre , concebido como uma continuação da distribuição CrunchBang Linux, construído em torno do gerenciador de janelas [Openbox](https://pt.wikipedia.org/wiki/OpenBox). CrunchBang Plus Plus também é conhecido como __CBPP__ ou __#!++__ ou __CrunchBang++__.
 
 ## Instalando o CrunchBang Plus Plus
 
