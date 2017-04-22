@@ -11,6 +11,7 @@ tags:
 - Debian-Likes
 - GNU
 ---
+
 ![Conheça a Distro CrunchBang Plus Plus](/assets/img/distros/crunchbang-plus-plus.png "Conheça a Distro CrunchBang Plus Plus")
 
 Pra quem conheceu o __CrunchBang__ uma distro minimalista, baseada em Debian, interessantíssima, mas infelizmente obteve a triste notícia que de que o mesmo havia descontinuada!Não precisa ficar triste , dela surgiu a ideia do [CrunchBang Plus Plus](https://crunchbangplusplus.org/), com as mesmas características.
