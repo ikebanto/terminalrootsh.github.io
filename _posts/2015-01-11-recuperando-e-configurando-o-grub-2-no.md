@@ -3,7 +3,7 @@ layout: post
 title: "Recuperando e configurando o Grub 2 no Debian"
 date: '2015-01-11T04:05:00.005-08:00'
 image: '/assets/img/terminal/grub.jpg'
-description: Recuperando e configurando o Grub 2 no Debian Wheezy
+description: "Veja o passo a passo para conseguir tal façanha."
 main-class: 'debian'
 tags:
 - Debian
