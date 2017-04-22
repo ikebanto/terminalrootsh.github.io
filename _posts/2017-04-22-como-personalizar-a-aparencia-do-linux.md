@@ -10,10 +10,10 @@ tags:
 - Debian
 ---
 
-Link do artigo que mostra como remover os ícones da Área de Trabalho
+### Link do artigo que mostra como remover os ícones da Área de Trabalho
 <http://terminalroot.com.br/2014/10/removendo-icones-da-area-de-trabalho-no.html>
 
-Caso você deseje, instale o Mate-Tweak ou Baixe e instale-o manualmente
+### Caso você deseje, instale o Mate-Tweak ou Baixe e instale-o manualmente
 <https://packages.debian.org/stretch/mate-tweak>
 
 ou
