@@ -15,7 +15,7 @@ tags:
 [Stella](http://stella.sourceforge.net/) é um emulador do console [Atari](https://www.atari.com/) . liberado sob a licença [GNU General Public License (GPL)](https://www.gnu.org/licenses/gpl-howto.pt-br.html). __Stella__ foi originalmente desenvolvido para __GNU/Linux__ por __Bradford W. Mott__, é atualmente mantido por __Stephen Anthony__.
 Para instalar o __Stella__ , no __Debian__ , basta usar o __apt-get__ , mas caso você possua outra distro , tente com o seu gerenciador de pacotes correspondente , ou então baixe-o e compile
 
-Para instalar no Debian
+## Para instalar no Debian
 
 {% highlight bash %}
 apt-get install stella
