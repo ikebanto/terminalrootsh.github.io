@@ -10,8 +10,6 @@ tags:
 - Debian
 ---
 
-![Como Personalizar a Aparência do Linux](/assets/img/debian/como-personalizar-a-aparencia-do-linux.jpg "Como Personalizar a Aparência do Linux")
-
 Link do artigo que mostra como remover os ícones da Área de Trabalho
 <http://terminalroot.com.br/2014/10/removendo-icones-da-area-de-trabalho-no.html>
 
@@ -24,10 +22,14 @@ ou
 apt-get install mate-tweak
 {% endhighlight %}
 
-## [Clique aqui pra baixar os Ícones](https://terminalroot.com.br/assets/inc/downloads/icons.tar.gz)
+## [Clique aqui pra baixar os Ícones](https://goo.gl/HjgJHu)
 
-## [Clique aqui pra baixar os Temas](https://terminalroot.com.br/assets/inc/downloads/themes.tar.gz)
+## [Clique aqui pra baixar os Temas](https://goo.gl/tGQ1x7)
 
-## [Clique aqui pra baixar os Papéis de Parede](https://terminalroot.com.br/assets/inc/downloads/wallpapers.tar.gz)
+## [Clique aqui pra baixar os Papéis de Parede](https://goo.gl/pl0wmn)
+
+# Veja o Vídeo
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/7GQFKbePT-k" frameborder="0" allowfullscreen></iframe>
 
 # Abraços!
