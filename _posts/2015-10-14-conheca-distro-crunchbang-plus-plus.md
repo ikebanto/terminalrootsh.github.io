@@ -25,7 +25,7 @@ Você pode baixar a versão que deseja 32 ou 64 bits, ambas disponíveis nesse l
 
 <https://crunchbangplusplus.org/download/>
 
-##Aplicações padrão que já vem instaladas
+## Aplicações padrão que já vem instaladas
 
 * Geany IDE;
 * Terminator emulator;
