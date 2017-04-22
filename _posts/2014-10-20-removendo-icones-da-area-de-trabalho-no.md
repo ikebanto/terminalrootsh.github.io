@@ -40,7 +40,9 @@ Ocultar ícone do diretório do usuário
 {% highlight bash %}
 dconf write /org/mate/caja/desktop/home-icon-visible false
 {% endhighlight %} 
-Ocultar ícone da rede: 
+
+Ocultar ícone da rede
+{% highlight bash %} 
 dconf write /org/mate/caja/desktop/network-icon-visible false
 {% endhighlight %}
 
