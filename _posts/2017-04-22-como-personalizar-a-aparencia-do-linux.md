@@ -11,7 +11,7 @@ tags:
 ---
 
 ### Link do artigo que mostra como remover os ícones da Área de Trabalho
-<http://terminalroot.com.br/2014/10/removendo-icones-da-area-de-trabalho-no.html>
+<http://www.terminalroot.com.br/2014/10/removendo-icones-da-area-de-trabalho-no.html>
 
 ### Caso você deseje, instale o Mate-Tweak ou Baixe e instale-o manualmente
 <https://packages.debian.org/stretch/mate-tweak>
